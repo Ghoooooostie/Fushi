@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142817 (8401 per locale)
+/// Strings: 143140 (8420 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6580,6 +6580,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_volume_key_paging => 'Volume keys turn pages';
   String get manga_volume_key_paging_subtitle =>
       'Use volume up and down to turn pages in the manga reader';
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  String get manga_web_chapter_next => 'Next chapter';
+  String get manga_web_chapter_prev => 'Previous chapter';
+  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
   String get manga_wide_page_solo => 'Wide pages alone';
   String get manga_wide_page_solo_subtitle =>
       'Show a double-width spread page on its own';
@@ -10319,7 +10331,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get url => 'URL';
   String get usage_stats_enabled => 'Share usage statistics';
   String get usage_stats_enabled_hint =>
-      'Once a day, sends a random install ID, the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
+      'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
   String get video_air_season_autumn => 'Fall';
   String get video_air_season_spring => 'Spring';
   String get video_air_season_summer => 'Summer';
@@ -12033,6 +12045,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get view_illustrations => 'Illustrations';
   String get volume_button_page_turning => 'Volume button page turning';
   String get volume_key_sentence_nav => 'Volume key sentence navigation';
+  String get web_browser_address_hint => 'Enter a website address';
+  String get web_browser_address_invalid => 'Not a valid website address';
+  String get web_browser_forward => 'Forward';
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  String get web_browser_site_add => 'Add to sites';
+  String get web_browser_site_added => 'Added to sites';
+  String get web_browser_site_remove => 'Remove from sites';
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  String get web_browser_sites_title => 'Sites';
+  String get web_browser_title => 'Browser';
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -22886,6 +22910,26 @@ class _StringsAr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'استخدم زري رفع وخفض الصوت لتقليب الصفحات في قارئ المانغا';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'الصفحات العريضة وحدها';
   @override
   String get manga_wide_page_solo_subtitle => 'عرض الصفحة المزدوجة العرض وحدها';
@@ -29402,7 +29446,7 @@ class _StringsAr extends _StringsEn {
   String get usage_stats_enabled => 'مشاركة إحصاءات الاستخدام';
   @override
   String get usage_stats_enabled_hint =>
-      'مرة واحدة يوميًا، يرسل معرّف تثبيت عشوائيًا وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
+      'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
   @override
   String get video_air_season_autumn => 'خريف';
   @override
@@ -32281,6 +32325,29 @@ class _StringsAr extends _StringsEn {
   String get volume_button_page_turning => 'تقليب الصفحات بأزرار الصوت';
   @override
   String get volume_key_sentence_nav => 'التنقل بين الجمل بأزرار الصوت';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -43405,6 +43472,26 @@ class _StringsDe extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Lautstärke hoch und runter zum Seitenumblättern im Manga-Reader verwenden';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Breite Seiten einzeln';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -50028,7 +50115,7 @@ class _StringsDe extends _StringsEn {
   String get usage_stats_enabled => 'Nutzungsstatistiken teilen';
   @override
   String get usage_stats_enabled_hint =>
-      'Sendet einmal täglich eine zufällige Installations-ID, die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
+      'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
   @override
   String get video_air_season_autumn => 'Herbst';
   @override
@@ -52971,6 +53058,29 @@ class _StringsDe extends _StringsEn {
       'Seitenblättern mit Lautstärketasten';
   @override
   String get volume_key_sentence_nav => 'Satznavigation mit Lautstärketasten';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -64122,6 +64232,26 @@ class _StringsEs extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Use subir y bajar volumen para pasar páginas en el lector de manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Páginas anchas solas';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -70760,7 +70890,7 @@ class _StringsEs extends _StringsEn {
   String get usage_stats_enabled => 'Compartir estadísticas de uso';
   @override
   String get usage_stats_enabled_hint =>
-      'Una vez al día, envía a fushi.moe un ID de instalación aleatorio, la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
+      'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
   @override
   String get video_air_season_autumn => 'Otoño';
   @override
@@ -73717,6 +73847,29 @@ class _StringsEs extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navegación de oraciones con teclas de volumen';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -84911,6 +85064,26 @@ class _StringsFr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Utiliser les touches volume haut et bas pour tourner les pages dans le lecteur de manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Pages larges seules';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -91566,7 +91739,7 @@ class _StringsFr extends _StringsEn {
   String get usage_stats_enabled => 'Partager les statistiques d’utilisation';
   @override
   String get usage_stats_enabled_hint =>
-      'Une fois par jour, envoie à fushi.moe un identifiant d’installation aléatoire, la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
+      'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
   @override
   String get video_air_season_autumn => 'Automne';
   @override
@@ -94544,6 +94717,29 @@ class _StringsFr extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navigation par phrase avec les touches de volume';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -105551,6 +105747,26 @@ class _StringsId extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Gunakan tombol volume naik dan turun untuk mengganti halaman di pembaca manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Halaman lebar sendiri';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -112112,7 +112328,7 @@ class _StringsId extends _StringsEn {
   String get usage_stats_enabled => 'Bagikan statistik penggunaan';
   @override
   String get usage_stats_enabled_hint =>
-      'Sekali sehari, mengirim ID instalasi acak, versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
+      'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
   @override
   String get video_air_season_autumn => 'Musim gugur';
   @override
@@ -115030,6 +115246,29 @@ class _StringsId extends _StringsEn {
   String get volume_button_page_turning => 'Tombol volume untuk ganti halaman';
   @override
   String get volume_key_sentence_nav => 'Navigasi kalimat dengan tombol volume';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -126126,6 +126365,26 @@ class _StringsIt extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Usa volume su e giù per cambiare pagina nel lettore manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Pagine larghe da sole';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -132740,7 +132999,7 @@ class _StringsIt extends _StringsEn {
   String get usage_stats_enabled => 'Condividi statistiche di utilizzo';
   @override
   String get usage_stats_enabled_hint =>
-      'Una volta al giorno invia a fushi.moe un ID di installazione casuale, la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
+      'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
   @override
   String get video_air_season_autumn => 'Autunno';
   @override
@@ -135676,6 +135935,29 @@ class _StringsIt extends _StringsEn {
   String get volume_button_page_turning => 'Cambia pagina con i tasti volume';
   @override
   String get volume_key_sentence_nav => 'Navigazione frase con tasti volume';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -146235,6 +146517,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '音量の上下ボタンでマンガリーダーのページをめくります';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '横長ページを単独表示';
   @override
   String get manga_wide_page_solo_subtitle => '見開きの横長ページを 1 画面に単独で表示します';
@@ -152556,7 +152858,7 @@ class _StringsJa extends _StringsEn {
   String get usage_stats_enabled => '利用統計を送信';
   @override
   String get usage_stats_enabled_hint =>
-      '1 日 1 回、ランダムなインストール ID・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
+      '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -155312,6 +155614,29 @@ class _StringsJa extends _StringsEn {
   String get volume_button_page_turning => '音量ボタンでページ送り';
   @override
   String get volume_key_sentence_nav => '音量キーで文ナビゲーション';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -165882,6 +166207,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '만화 리더에서 볼륨 업/다운 키로 페이지를 넘깁니다';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '넓은 페이지 단독 표시';
   @override
   String get manga_wide_page_solo_subtitle => '두 배 너비의 펼침 페이지를 단독으로 표시합니다';
@@ -172213,7 +172558,7 @@ class _StringsKo extends _StringsEn {
   String get usage_stats_enabled => '사용 통계 보내기';
   @override
   String get usage_stats_enabled_hint =>
-      '하루에 한 번 무작위 설치 ID, 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
+      '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
   @override
   String get video_air_season_autumn => '가을';
   @override
@@ -174983,6 +175328,29 @@ class _StringsKo extends _StringsEn {
   String get volume_button_page_turning => '볼륨 버튼으로 페이지 넘기기';
   @override
   String get volume_key_sentence_nav => '볼륨 키 문장 탐색';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -186042,6 +186410,26 @@ class _StringsNl extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Gebruik volume omhoog en omlaag om pagina\'s te bladeren in de mangalezer';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Brede pagina\'s alleen';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -192649,7 +193037,7 @@ class _StringsNl extends _StringsEn {
   String get usage_stats_enabled => 'Gebruiksstatistieken delen';
   @override
   String get usage_stats_enabled_hint =>
-      'Stuurt één keer per dag een willekeurige installatie-ID, de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
+      'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
   @override
   String get video_air_season_autumn => 'Herfst';
   @override
@@ -195575,6 +195963,29 @@ class _StringsNl extends _StringsEn {
       'Pagina\'s omslaan met volumeknoppen';
   @override
   String get volume_key_sentence_nav => 'Zinsnavigatie met volumeknoppen';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -206682,6 +207093,26 @@ class _StringsPtBr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Usar volume para cima e para baixo para virar páginas no leitor de mangá';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Páginas largas sozinhas';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -213291,7 +213722,7 @@ class _StringsPtBr extends _StringsEn {
   String get usage_stats_enabled => 'Compartilhar estatísticas de uso';
   @override
   String get usage_stats_enabled_hint =>
-      'Uma vez por dia, envia ao fushi.moe um ID de instalação aleatório, a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
+      'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
   @override
   String get video_air_season_autumn => 'Outono';
   @override
@@ -216240,6 +216671,29 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navegação de frases com teclas de volume';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -227300,6 +227754,26 @@ class _StringsRu extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Используйте кнопки громкости для перелистывания страниц в читалке манги';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Широкие страницы отдельно';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -233907,7 +234381,7 @@ class _StringsRu extends _StringsEn {
   String get usage_stats_enabled => 'Отправлять статистику использования';
   @override
   String get usage_stats_enabled_hint =>
-      'Раз в день отправляет на fushi.moe случайный идентификатор установки, версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
+      'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
   @override
   String get video_air_season_autumn => 'Осень';
   @override
@@ -236851,6 +237325,29 @@ class _StringsRu extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Навигация по предложениям кнопками громкости';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -247740,6 +248237,26 @@ class _StringsTh extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'ใช้ปุ่มเพิ่ม/ลดเสียงเพื่อพลิกหน้าในตัวอ่านมังงะ';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'หน้ากว้างอยู่เดี่ยว';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -254263,7 +254780,7 @@ class _StringsTh extends _StringsEn {
   String get usage_stats_enabled => 'ส่งสถิติการใช้งาน';
   @override
   String get usage_stats_enabled_hint =>
-      'วันละครั้ง จะส่ง ID การติดตั้งแบบสุ่ม เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
+      'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
   @override
   String get video_air_season_autumn => 'ฤดูใบไม้ร่วง';
   @override
@@ -257138,6 +257655,29 @@ class _StringsTh extends _StringsEn {
   String get volume_button_page_turning => 'ปุ่มเสียงเปลี่ยนหน้า';
   @override
   String get volume_key_sentence_nav => 'นำทางประโยคด้วยปุ่มเสียง';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -268151,6 +268691,26 @@ class _StringsTr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Manga okuyucusunda sayfa çevirmek için ses açma ve kısma tuşlarını kullanın';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Geniş sayfalar tek başına';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -274719,7 +275279,7 @@ class _StringsTr extends _StringsEn {
   String get usage_stats_enabled => 'Kullanım istatistiklerini paylaş';
   @override
   String get usage_stats_enabled_hint =>
-      'Günde bir kez rastgele bir kurulum kimliğini, uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
+      'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
   @override
   String get video_air_season_autumn => 'Sonbahar';
   @override
@@ -277628,6 +278188,29 @@ class _StringsTr extends _StringsEn {
   String get volume_button_page_turning => 'Ses düğmeleriyle sayfa çevirme';
   @override
   String get volume_key_sentence_nav => 'Ses Tuşuyla Cümle Gezinme';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -288605,6 +289188,26 @@ class _StringsVi extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Sử dụng phím tăng giảm âm lượng để lật trang trong trình đọc truyện tranh';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Trang rộng đứng riêng';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -295145,7 +295748,7 @@ class _StringsVi extends _StringsEn {
   String get usage_stats_enabled => 'Chia sẻ thống kê sử dụng';
   @override
   String get usage_stats_enabled_hint =>
-      'Mỗi ngày một lần, gửi ID cài đặt ngẫu nhiên, phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
+      'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
   @override
   String get video_air_season_autumn => 'Thu';
   @override
@@ -298046,6 +298649,29 @@ class _StringsVi extends _StringsEn {
   String get volume_button_page_turning => 'Lật trang bằng nút âm lượng';
   @override
   String get volume_key_sentence_nav => 'Điều hướng câu bằng phím âm lượng';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -308090,6 +308716,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '在漫画阅读器中用音量加减键翻页';
   @override
+  String get manga_web_ad_filter_off => '跳过章末二维码广告页：关';
+  @override
+  String get manga_web_ad_filter_on => '跳过章末二维码广告页：开';
+  @override
+  String get manga_web_chapter_next => '下一话';
+  @override
+  String get manga_web_chapter_prev => '上一话';
+  @override
+  String get manga_web_read_chapter => '用 Fushi 阅读本章';
+  @override
+  String get manga_web_scan_empty => '本页没有找到漫画图片，请先打开某一话的阅读页。';
+  @override
+  String get manga_web_scan_failed => '读取本页漫画失败';
+  @override
+  String get manga_web_scan_running => '正在识别本页的漫画图片…';
+  @override
   String get manga_wide_page_solo => '宽页独占一屏';
   @override
   String get manga_wide_page_solo_subtitle => '见开き页单独占一屏显示';
@@ -314113,7 +314755,7 @@ class _StringsZhCn extends _StringsEn {
   String get usage_stats_enabled => '发送使用统计';
   @override
   String get usage_stats_enabled_hint =>
-      '每天一次向 fushi.moe 发送随机安装 ID、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
+      '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -316718,6 +317360,28 @@ class _StringsZhCn extends _StringsEn {
   String get volume_button_page_turning => '音量键翻页';
   @override
   String get volume_key_sentence_nav => '音量键句子导航';
+  @override
+  String get web_browser_address_hint => '输入网址';
+  @override
+  String get web_browser_address_invalid => '不是有效的网址';
+  @override
+  String get web_browser_forward => '前进';
+  @override
+  String get web_browser_lookup_off => '点词查词：关';
+  @override
+  String get web_browser_lookup_on => '点词查词：开';
+  @override
+  String get web_browser_site_add => '加入站点';
+  @override
+  String get web_browser_site_added => '已加入站点';
+  @override
+  String get web_browser_site_remove => '从站点移除';
+  @override
+  String get web_browser_sites_empty => '还没有站点。在地址栏打开网页后，可以把它加入站点。';
+  @override
+  String get web_browser_sites_title => '站点';
+  @override
+  String get web_browser_title => '浏览器';
   @override
   String get web_hub_empty => '这台设备上暂时没有可用的浏览功能。';
   @override
@@ -326946,6 +327610,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '在漫畫閱讀器中用音量加減鍵翻頁';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '寬頁獨佔一屏';
   @override
   String get manga_wide_page_solo_subtitle => '見開き頁單獨佔一屏顯示';
@@ -333109,7 +333793,7 @@ class _StringsZhHk extends _StringsEn {
   String get usage_stats_enabled => '傳送使用統計';
   @override
   String get usage_stats_enabled_hint =>
-      '每天一次向 fushi.moe 傳送隨機安裝 ID、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
+      '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -335775,6 +336459,29 @@ class _StringsZhHk extends _StringsEn {
   String get volume_button_page_turning => '音量鍵翻頁';
   @override
   String get volume_key_sentence_nav => '音量鍵句子導覽';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -345053,6 +345760,22 @@ extension on _StringsEn {
         return 'Volume keys turn pages';
       case 'manga_volume_key_paging_subtitle':
         return 'Use volume up and down to turn pages in the manga reader';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Wide pages alone';
       case 'manga_wide_page_solo_subtitle':
@@ -350799,7 +351522,7 @@ extension on _StringsEn {
       case 'usage_stats_enabled':
         return 'Share usage statistics';
       case 'usage_stats_enabled_hint':
-        return 'Once a day, sends a random install ID, the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
+        return 'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
       case 'video_air_season_autumn':
         return 'Fall';
       case 'video_air_season_spring':
@@ -353217,6 +353940,28 @@ extension on _StringsEn {
         return 'Volume button page turning';
       case 'volume_key_sentence_nav':
         return 'Volume key sentence navigation';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -362485,6 +363230,22 @@ extension on _StringsAr {
         return 'أزرار الصوت لتقليب الصفحات';
       case 'manga_volume_key_paging_subtitle':
         return 'استخدم زري رفع وخفض الصوت لتقليب الصفحات في قارئ المانغا';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'الصفحات العريضة وحدها';
       case 'manga_wide_page_solo_subtitle':
@@ -368228,7 +368989,7 @@ extension on _StringsAr {
       case 'usage_stats_enabled':
         return 'مشاركة إحصاءات الاستخدام';
       case 'usage_stats_enabled_hint':
-        return 'مرة واحدة يوميًا، يرسل معرّف تثبيت عشوائيًا وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
+        return 'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
       case 'video_air_season_autumn':
         return 'خريف';
       case 'video_air_season_spring':
@@ -370648,6 +371409,28 @@ extension on _StringsAr {
         return 'تقليب الصفحات بأزرار الصوت';
       case 'volume_key_sentence_nav':
         return 'التنقل بين الجمل بأزرار الصوت';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -379964,6 +380747,22 @@ extension on _StringsDe {
         return 'Lautstärketasten zum Blättern';
       case 'manga_volume_key_paging_subtitle':
         return 'Lautstärke hoch und runter zum Seitenumblättern im Manga-Reader verwenden';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Breite Seiten einzeln';
       case 'manga_wide_page_solo_subtitle':
@@ -385728,7 +386527,7 @@ extension on _StringsDe {
       case 'usage_stats_enabled':
         return 'Nutzungsstatistiken teilen';
       case 'usage_stats_enabled_hint':
-        return 'Sendet einmal täglich eine zufällige Installations-ID, die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
+        return 'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
       case 'video_air_season_autumn':
         return 'Herbst';
       case 'video_air_season_spring':
@@ -388155,6 +388954,28 @@ extension on _StringsDe {
         return 'Seitenblättern mit Lautstärketasten';
       case 'volume_key_sentence_nav':
         return 'Satznavigation mit Lautstärketasten';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -397457,6 +398278,22 @@ extension on _StringsEs {
         return 'Teclas de volumen pasan páginas';
       case 'manga_volume_key_paging_subtitle':
         return 'Use subir y bajar volumen para pasar páginas en el lector de manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Páginas anchas solas';
       case 'manga_wide_page_solo_subtitle':
@@ -403219,7 +404056,7 @@ extension on _StringsEs {
       case 'usage_stats_enabled':
         return 'Compartir estadísticas de uso';
       case 'usage_stats_enabled_hint':
-        return 'Una vez al día, envía a fushi.moe un ID de instalación aleatorio, la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
+        return 'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
       case 'video_air_season_autumn':
         return 'Otoño';
       case 'video_air_season_spring':
@@ -405644,6 +406481,28 @@ extension on _StringsEs {
         return 'Pasar página con botones de volumen';
       case 'volume_key_sentence_nav':
         return 'Navegación de oraciones con teclas de volumen';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -414960,6 +415819,22 @@ extension on _StringsFr {
         return 'Touches de volume pour tourner les pages';
       case 'manga_volume_key_paging_subtitle':
         return 'Utiliser les touches volume haut et bas pour tourner les pages dans le lecteur de manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Pages larges seules';
       case 'manga_wide_page_solo_subtitle':
@@ -420724,7 +421599,7 @@ extension on _StringsFr {
       case 'usage_stats_enabled':
         return 'Partager les statistiques d’utilisation';
       case 'usage_stats_enabled_hint':
-        return 'Une fois par jour, envoie à fushi.moe un identifiant d’installation aléatoire, la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
+        return 'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
       case 'video_air_season_autumn':
         return 'Automne';
       case 'video_air_season_spring':
@@ -423151,6 +424026,28 @@ extension on _StringsFr {
         return 'Tourner les pages avec les boutons de volume';
       case 'volume_key_sentence_nav':
         return 'Navigation par phrase avec les touches de volume';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -432436,6 +433333,22 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'manga_volume_key_paging_subtitle':
         return 'Gunakan tombol volume naik dan turun untuk mengganti halaman di pembaca manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Halaman lebar sendiri';
       case 'manga_wide_page_solo_subtitle':
@@ -438182,7 +439095,7 @@ extension on _StringsId {
       case 'usage_stats_enabled':
         return 'Bagikan statistik penggunaan';
       case 'usage_stats_enabled_hint':
-        return 'Sekali sehari, mengirim ID instalasi acak, versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
+        return 'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
       case 'video_air_season_autumn':
         return 'Musim gugur';
       case 'video_air_season_spring':
@@ -440602,6 +441515,28 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'volume_key_sentence_nav':
         return 'Navigasi kalimat dengan tombol volume';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -449901,6 +450836,22 @@ extension on _StringsIt {
         return 'Tasti volume cambiano pagina';
       case 'manga_volume_key_paging_subtitle':
         return 'Usa volume su e giù per cambiare pagina nel lettore manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Pagine larghe da sole';
       case 'manga_wide_page_solo_subtitle':
@@ -455664,7 +456615,7 @@ extension on _StringsIt {
       case 'usage_stats_enabled':
         return 'Condividi statistiche di utilizzo';
       case 'usage_stats_enabled_hint':
-        return 'Una volta al giorno invia a fushi.moe un ID di installazione casuale, la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
+        return 'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
       case 'video_air_season_autumn':
         return 'Autunno';
       case 'video_air_season_spring':
@@ -458089,6 +459040,28 @@ extension on _StringsIt {
         return 'Cambia pagina con i tasti volume';
       case 'volume_key_sentence_nav':
         return 'Navigazione frase con tasti volume';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -467324,6 +468297,22 @@ extension on _StringsJa {
         return '音量キーでページめくり';
       case 'manga_volume_key_paging_subtitle':
         return '音量の上下ボタンでマンガリーダーのページをめくります';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '横長ページを単独表示';
       case 'manga_wide_page_solo_subtitle':
@@ -473046,7 +474035,7 @@ extension on _StringsJa {
       case 'usage_stats_enabled':
         return '利用統計を送信';
       case 'usage_stats_enabled_hint':
-        return '1 日 1 回、ランダムなインストール ID・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
+        return '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -475451,6 +476440,28 @@ extension on _StringsJa {
         return '音量ボタンでページ送り';
       case 'volume_key_sentence_nav':
         return '音量キーで文ナビゲーション';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -484686,6 +485697,22 @@ extension on _StringsKo {
         return '볼륨 키로 페이지 넘기기';
       case 'manga_volume_key_paging_subtitle':
         return '만화 리더에서 볼륨 업/다운 키로 페이지를 넘깁니다';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '넓은 페이지 단독 표시';
       case 'manga_wide_page_solo_subtitle':
@@ -490411,7 +491438,7 @@ extension on _StringsKo {
       case 'usage_stats_enabled':
         return '사용 통계 보내기';
       case 'usage_stats_enabled_hint':
-        return '하루에 한 번 무작위 설치 ID, 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
+        return '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
       case 'video_air_season_autumn':
         return '가을';
       case 'video_air_season_spring':
@@ -492819,6 +493846,28 @@ extension on _StringsKo {
         return '볼륨 버튼으로 페이지 넘기기';
       case 'volume_key_sentence_nav':
         return '볼륨 키 문장 탐색';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -502117,6 +503166,22 @@ extension on _StringsNl {
         return 'Volumeknoppen bladeren pagina\'s';
       case 'manga_volume_key_paging_subtitle':
         return 'Gebruik volume omhoog en omlaag om pagina\'s te bladeren in de mangalezer';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Brede pagina\'s alleen';
       case 'manga_wide_page_solo_subtitle':
@@ -507872,7 +508937,7 @@ extension on _StringsNl {
       case 'usage_stats_enabled':
         return 'Gebruiksstatistieken delen';
       case 'usage_stats_enabled_hint':
-        return 'Stuurt één keer per dag een willekeurige installatie-ID, de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
+        return 'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
       case 'video_air_season_autumn':
         return 'Herfst';
       case 'video_air_season_spring':
@@ -510298,6 +511363,28 @@ extension on _StringsNl {
         return 'Pagina\'s omslaan met volumeknoppen';
       case 'volume_key_sentence_nav':
         return 'Zinsnavigatie met volumeknoppen';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -519594,6 +520681,22 @@ extension on _StringsPtBr {
         return 'Botões de volume viram páginas';
       case 'manga_volume_key_paging_subtitle':
         return 'Usar volume para cima e para baixo para virar páginas no leitor de mangá';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Páginas largas sozinhas';
       case 'manga_wide_page_solo_subtitle':
@@ -525347,7 +526450,7 @@ extension on _StringsPtBr {
       case 'usage_stats_enabled':
         return 'Compartilhar estatísticas de uso';
       case 'usage_stats_enabled_hint':
-        return 'Uma vez por dia, envia ao fushi.moe um ID de instalação aleatório, a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
+        return 'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
       case 'video_air_season_autumn':
         return 'Outono';
       case 'video_air_season_spring':
@@ -527772,6 +528875,28 @@ extension on _StringsPtBr {
         return 'Virar página com botão de volume';
       case 'volume_key_sentence_nav':
         return 'Navegação de frases com teclas de volume';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -537075,6 +538200,22 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'manga_volume_key_paging_subtitle':
         return 'Используйте кнопки громкости для перелистывания страниц в читалке манги';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Широкие страницы отдельно';
       case 'manga_wide_page_solo_subtitle':
@@ -542829,7 +543970,7 @@ extension on _StringsRu {
       case 'usage_stats_enabled':
         return 'Отправлять статистику использования';
       case 'usage_stats_enabled_hint':
-        return 'Раз в день отправляет на fushi.moe случайный идентификатор установки, версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
+        return 'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
       case 'video_air_season_autumn':
         return 'Осень';
       case 'video_air_season_spring':
@@ -545251,6 +546392,28 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'volume_key_sentence_nav':
         return 'Навигация по предложениям кнопками громкости';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -554525,6 +555688,22 @@ extension on _StringsTh {
         return 'ปุ่มเสียงพลิกหน้า';
       case 'manga_volume_key_paging_subtitle':
         return 'ใช้ปุ่มเพิ่ม/ลดเสียงเพื่อพลิกหน้าในตัวอ่านมังงะ';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'หน้ากว้างอยู่เดี่ยว';
       case 'manga_wide_page_solo_subtitle':
@@ -560268,7 +561447,7 @@ extension on _StringsTh {
       case 'usage_stats_enabled':
         return 'ส่งสถิติการใช้งาน';
       case 'usage_stats_enabled_hint':
-        return 'วันละครั้ง จะส่ง ID การติดตั้งแบบสุ่ม เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
+        return 'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
       case 'video_air_season_autumn':
         return 'ฤดูใบไม้ร่วง';
       case 'video_air_season_spring':
@@ -562686,6 +563865,28 @@ extension on _StringsTh {
         return 'ปุ่มเสียงเปลี่ยนหน้า';
       case 'volume_key_sentence_nav':
         return 'นำทางประโยคด้วยปุ่มเสียง';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -571981,6 +573182,22 @@ extension on _StringsTr {
         return 'Ses tuşlarıyla sayfa çevirme';
       case 'manga_volume_key_paging_subtitle':
         return 'Manga okuyucusunda sayfa çevirmek için ses açma ve kısma tuşlarını kullanın';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Geniş sayfalar tek başına';
       case 'manga_wide_page_solo_subtitle':
@@ -577729,7 +578946,7 @@ extension on _StringsTr {
       case 'usage_stats_enabled':
         return 'Kullanım istatistiklerini paylaş';
       case 'usage_stats_enabled_hint':
-        return 'Günde bir kez rastgele bir kurulum kimliğini, uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
+        return 'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
       case 'video_air_season_autumn':
         return 'Sonbahar';
       case 'video_air_season_spring':
@@ -580152,6 +581369,28 @@ extension on _StringsTr {
         return 'Ses düğmeleriyle sayfa çevirme';
       case 'volume_key_sentence_nav':
         return 'Ses Tuşuyla Cümle Gezinme';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -589435,6 +590674,22 @@ extension on _StringsVi {
         return 'Phím âm lượng lật trang';
       case 'manga_volume_key_paging_subtitle':
         return 'Sử dụng phím tăng giảm âm lượng để lật trang trong trình đọc truyện tranh';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Trang rộng đứng riêng';
       case 'manga_wide_page_solo_subtitle':
@@ -595184,7 +596439,7 @@ extension on _StringsVi {
       case 'usage_stats_enabled':
         return 'Chia sẻ thống kê sử dụng';
       case 'usage_stats_enabled_hint':
-        return 'Mỗi ngày một lần, gửi ID cài đặt ngẫu nhiên, phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
+        return 'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
       case 'video_air_season_autumn':
         return 'Thu';
       case 'video_air_season_spring':
@@ -597601,6 +598856,28 @@ extension on _StringsVi {
         return 'Lật trang bằng nút âm lượng';
       case 'volume_key_sentence_nav':
         return 'Điều hướng câu bằng phím âm lượng';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -606769,6 +608046,22 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'manga_volume_key_paging_subtitle':
         return '在漫画阅读器中用音量加减键翻页';
+      case 'manga_web_ad_filter_off':
+        return '跳过章末二维码广告页：关';
+      case 'manga_web_ad_filter_on':
+        return '跳过章末二维码广告页：开';
+      case 'manga_web_chapter_next':
+        return '下一话';
+      case 'manga_web_chapter_prev':
+        return '上一话';
+      case 'manga_web_read_chapter':
+        return '用 Fushi 阅读本章';
+      case 'manga_web_scan_empty':
+        return '本页没有找到漫画图片，请先打开某一话的阅读页。';
+      case 'manga_web_scan_failed':
+        return '读取本页漫画失败';
+      case 'manga_web_scan_running':
+        return '正在识别本页的漫画图片…';
       case 'manga_wide_page_solo':
         return '宽页独占一屏';
       case 'manga_wide_page_solo_subtitle':
@@ -612455,7 +613748,7 @@ extension on _StringsZhCn {
       case 'usage_stats_enabled':
         return '发送使用统计';
       case 'usage_stats_enabled_hint':
-        return '每天一次向 fushi.moe 发送随机安装 ID、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
+        return '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -614848,6 +616141,28 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'volume_key_sentence_nav':
         return '音量键句子导航';
+      case 'web_browser_address_hint':
+        return '输入网址';
+      case 'web_browser_address_invalid':
+        return '不是有效的网址';
+      case 'web_browser_forward':
+        return '前进';
+      case 'web_browser_lookup_off':
+        return '点词查词：关';
+      case 'web_browser_lookup_on':
+        return '点词查词：开';
+      case 'web_browser_site_add':
+        return '加入站点';
+      case 'web_browser_site_added':
+        return '已加入站点';
+      case 'web_browser_site_remove':
+        return '从站点移除';
+      case 'web_browser_sites_empty':
+        return '还没有站点。在地址栏打开网页后，可以把它加入站点。';
+      case 'web_browser_sites_title':
+        return '站点';
+      case 'web_browser_title':
+        return '浏览器';
       case 'web_hub_empty':
         return '这台设备上暂时没有可用的浏览功能。';
       case 'web_hub_video_sites':
@@ -624037,6 +625352,22 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'manga_volume_key_paging_subtitle':
         return '在漫畫閱讀器中用音量加減鍵翻頁';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '寬頁獨佔一屏';
       case 'manga_wide_page_solo_subtitle':
@@ -629750,7 +631081,7 @@ extension on _StringsZhHk {
       case 'usage_stats_enabled':
         return '傳送使用統計';
       case 'usage_stats_enabled_hint':
-        return '每天一次向 fushi.moe 傳送隨機安裝 ID、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
+        return '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -632145,6 +633476,28 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'volume_key_sentence_nav':
         return '音量鍵句子導覽';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
