@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142664 (8392 per locale)
+/// Strings: 142698 (8394 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5304,6 +5304,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get hover_auto_lookup => 'Look up on hover';
   String get hover_auto_lookup_hint =>
       'Look up automatically when the mouse hovers over a character; no need to click or hold Shift. Triggers at most one popup layer. Desktop only.';
+  String get hover_lookup_modifier => 'Hover lookup key';
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
   String get icon_custom => 'Custom';
   String get icon_custom_confirm_body =>
       'This will create a home screen shortcut with your chosen image. Continue?';
@@ -20699,6 +20702,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get hover_auto_lookup_hint =>
       'البحث تلقائيًا عند تمرير مؤشر الماوس فوق حرف؛ دون الحاجة إلى النقر أو الضغط على Shift. يُظهر طبقة منبثقة واحدة كحد أقصى. لأجهزة سطح المكتب فقط.';
+  @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
   @override
   String get icon_custom => 'مخصص';
   @override
@@ -41146,6 +41154,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get hover_auto_lookup_hint =>
       'Automatisch nachschlagen, wenn die Maus über ein Zeichen fährt; ohne Klicken oder Shift zu halten. Erzeugt höchstens eine Popup-Ebene. Nur Desktop.';
+  @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
   @override
   String get icon_custom => 'Benutzerdefiniert';
   @override
@@ -61831,6 +61844,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get hover_auto_lookup_hint =>
       'Busca automáticamente al pasar el ratón sobre un carácter; sin hacer clic ni mantener Mayús. Muestra como máximo una capa de ventana emergente. Solo en escritorio.';
+  @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
   @override
   String get icon_custom => 'Personalizado';
   @override
@@ -82590,6 +82608,11 @@ class _StringsFr extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Recherche automatique lorsque la souris survole un caractère ; pas besoin de cliquer ni de maintenir Maj. Affiche au plus une fenêtre contextuelle. Bureau uniquement.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Personnalisé';
   @override
   String get icon_custom_confirm_body =>
@@ -103252,6 +103275,11 @@ class _StringsId extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Cari otomatis saat mouse diarahkan ke sebuah karakter; tanpa mengeklik atau menahan Shift. Memunculkan maksimal satu lapis popup. Hanya desktop.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Kustom';
   @override
   String get icon_custom_confirm_body =>
@@ -123781,6 +123809,11 @@ class _StringsIt extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Cerca automaticamente al passaggio del mouse su un carattere; senza fare clic né tenere premuto Maiusc. Mostra al massimo un livello di popup. Solo desktop.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Personalizzata';
   @override
   String get icon_custom_confirm_body =>
@@ -143992,6 +144025,11 @@ class _StringsJa extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'マウスを文字に重ねると自動で辞書を引きます。クリックや Shift を押す必要はありません。ポップアップは最大1層まで。デスクトップのみ。';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'カスタム';
   @override
   String get icon_custom_confirm_body => '選択した画像でホーム画面にショートカットを作成します。続行しますか？';
@@ -163605,6 +163643,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get hover_auto_lookup_hint =>
       '마우스를 글자 위에 올리면 자동으로 사전을 찾습니다. 클릭하거나 Shift를 누를 필요가 없습니다. 팝업은 최대 1개 층까지. 데스크톱 전용.';
+  @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
   @override
   String get icon_custom => '사용자 정의';
   @override
@@ -183640,6 +183683,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get hover_auto_lookup_hint =>
       'Automatisch opzoeken wanneer de muis over een teken zweeft; zonder te klikken of Shift in te drukken. Toont hooguit één popuplaag. Alleen desktop.';
+  @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
   @override
   String get icon_custom => 'Aangepast';
   @override
@@ -204253,6 +204301,11 @@ class _StringsPtBr extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Pesquisa automaticamente ao passar o mouse sobre um caractere; sem clicar ou segurar Shift. Exibe no máximo uma camada de pop-up. Apenas no desktop.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Personalizado';
   @override
   String get icon_custom_confirm_body =>
@@ -224854,6 +224907,11 @@ class _StringsRu extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Автоматический поиск слова при наведении курсора на символ; без щелчка и удержания Shift. Открывает не более одного всплывающего слоя. Только для ПК.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Своя';
   @override
   String get icon_custom_confirm_body =>
@@ -245310,6 +245368,11 @@ class _StringsTh extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'ค้นหาคำโดยอัตโนมัติเมื่อชี้เมาส์ไปที่ตัวอักษร โดยไม่ต้องคลิกหรือกด Shift ค้างไว้ แสดงป๊อปอัปได้สูงสุดหนึ่งชั้น สำหรับเดสก์ท็อปเท่านั้น';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'กำหนดเอง';
   @override
   String get icon_custom_confirm_body =>
@@ -265676,6 +265739,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get hover_auto_lookup_hint =>
       'Fare bir karakterin üzerine geldiğinde otomatik olarak ara; tıklamaya veya Shift tuşunu basılı tutmaya gerek yok. En fazla bir açılır katman gösterir. Yalnızca masaüstü.';
+  @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
   @override
   String get icon_custom => 'Özel';
   @override
@@ -286118,6 +286186,11 @@ class _StringsVi extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Tự động tra cứu khi di chuột qua một ký tự; không cần nhấp hay giữ Shift. Hiển thị tối đa một lớp cửa sổ bật lên. Chỉ trên máy tính.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Tùy chỉnh';
   @override
   String get icon_custom_confirm_body =>
@@ -305758,6 +305831,10 @@ class _StringsZhCn extends _StringsEn {
   String get hover_auto_lookup_hint =>
       '鼠标悬停在文字上即自动查词，无需点击或按住 Shift；最多触发一层弹窗。仅桌面端。';
   @override
+  String get hover_lookup_modifier => '悬停查词按键';
+  @override
+  String get hover_lookup_modifier_hint => '按住这个键把鼠标移到文字上即查词（阅读器、字幕、网页）';
+  @override
   String get icon_custom => '自定义';
   @override
   String get icon_custom_confirm_body => '将使用所选图片创建主屏幕快捷方式。是否继续？';
@@ -324566,6 +324643,10 @@ class _StringsZhHk extends _StringsEn {
   String get hover_auto_lookup_hint =>
       '滑鼠停留在文字上即自動查詞，無需點擊或按住 Shift；最多觸發一層彈窗。僅桌面版。';
   @override
+  String get hover_lookup_modifier => '懸停查詞按鍵';
+  @override
+  String get hover_lookup_modifier_hint => '按住這個鍵把滑鼠移到文字上即查詞（閱讀器、字幕、網頁）';
+  @override
   String get icon_custom => '自訂';
   @override
   String get icon_custom_confirm_body => '將使用所選圖片建立主畫面捷徑。是否繼續？';
@@ -342821,6 +342902,10 @@ extension on _StringsEn {
         return 'Look up on hover';
       case 'hover_auto_lookup_hint':
         return 'Look up automatically when the mouse hovers over a character; no need to click or hold Shift. Triggers at most one popup layer. Desktop only.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Custom';
       case 'icon_custom_confirm_body':
@@ -360238,6 +360323,10 @@ extension on _StringsAr {
         return 'البحث عند التمرير';
       case 'hover_auto_lookup_hint':
         return 'البحث تلقائيًا عند تمرير مؤشر الماوس فوق حرف؛ دون الحاجة إلى النقر أو الضغط على Shift. يُظهر طبقة منبثقة واحدة كحد أقصى. لأجهزة سطح المكتب فقط.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'مخصص';
       case 'icon_custom_confirm_body':
@@ -377684,6 +377773,10 @@ extension on _StringsDe {
         return 'Beim Überfahren nachschlagen';
       case 'hover_auto_lookup_hint':
         return 'Automatisch nachschlagen, wenn die Maus über ein Zeichen fährt; ohne Klicken oder Shift zu halten. Erzeugt höchstens eine Popup-Ebene. Nur Desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Benutzerdefiniert';
       case 'icon_custom_confirm_body':
@@ -395162,6 +395255,10 @@ extension on _StringsEs {
         return 'Buscar al pasar el cursor';
       case 'hover_auto_lookup_hint':
         return 'Busca automáticamente al pasar el ratón sobre un carácter; sin hacer clic ni mantener Mayús. Muestra como máximo una capa de ventana emergente. Solo en escritorio.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Personalizado';
       case 'icon_custom_confirm_body':
@@ -412646,6 +412743,10 @@ extension on _StringsFr {
         return 'Rechercher au survol';
       case 'hover_auto_lookup_hint':
         return 'Recherche automatique lorsque la souris survole un caractère ; pas besoin de cliquer ni de maintenir Maj. Affiche au plus une fenêtre contextuelle. Bureau uniquement.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Personnalisé';
       case 'icon_custom_confirm_body':
@@ -430108,6 +430209,10 @@ extension on _StringsId {
         return 'Cari saat hover';
       case 'hover_auto_lookup_hint':
         return 'Cari otomatis saat mouse diarahkan ke sebuah karakter; tanpa mengeklik atau menahan Shift. Memunculkan maksimal satu lapis popup. Hanya desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Kustom';
       case 'icon_custom_confirm_body':
@@ -447551,6 +447656,10 @@ extension on _StringsIt {
         return 'Cerca al passaggio';
       case 'hover_auto_lookup_hint':
         return 'Cerca automaticamente al passaggio del mouse su un carattere; senza fare clic né tenere premuto Maiusc. Mostra al massimo un livello di popup. Solo desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Personalizzata';
       case 'icon_custom_confirm_body':
@@ -464971,6 +465080,10 @@ extension on _StringsJa {
         return 'ホバーで辞書を引く';
       case 'hover_auto_lookup_hint':
         return 'マウスを文字に重ねると自動で辞書を引きます。クリックや Shift を押す必要はありません。ポップアップは最大1層まで。デスクトップのみ。';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'カスタム';
       case 'icon_custom_confirm_body':
@@ -482314,6 +482427,10 @@ extension on _StringsKo {
         return '마우스를 올리면 사전 찾기';
       case 'hover_auto_lookup_hint':
         return '마우스를 글자 위에 올리면 자동으로 사전을 찾습니다. 클릭하거나 Shift를 누를 필요가 없습니다. 팝업은 최대 1개 층까지. 데스크톱 전용.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return '사용자 정의';
       case 'icon_custom_confirm_body':
@@ -499705,6 +499822,10 @@ extension on _StringsNl {
         return 'Opzoeken bij hover';
       case 'hover_auto_lookup_hint':
         return 'Automatisch opzoeken wanneer de muis over een teken zweeft; zonder te klikken of Shift in te drukken. Toont hooguit één popuplaag. Alleen desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Aangepast';
       case 'icon_custom_confirm_body':
@@ -517167,6 +517288,10 @@ extension on _StringsPtBr {
         return 'Pesquisar ao passar o cursor';
       case 'hover_auto_lookup_hint':
         return 'Pesquisa automaticamente ao passar o mouse sobre um caractere; sem clicar ou segurar Shift. Exibe no máximo uma camada de pop-up. Apenas no desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Personalizado';
       case 'icon_custom_confirm_body':
@@ -534629,6 +534754,10 @@ extension on _StringsRu {
         return 'Поиск при наведении';
       case 'hover_auto_lookup_hint':
         return 'Автоматический поиск слова при наведении курсора на символ; без щелчка и удержания Shift. Открывает не более одного всплывающего слоя. Только для ПК.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Своя';
       case 'icon_custom_confirm_body':
@@ -552065,6 +552194,10 @@ extension on _StringsTh {
         return 'ค้นหาเมื่อชี้เมาส์';
       case 'hover_auto_lookup_hint':
         return 'ค้นหาคำโดยอัตโนมัติเมื่อชี้เมาส์ไปที่ตัวอักษร โดยไม่ต้องคลิกหรือกด Shift ค้างไว้ แสดงป๊อปอัปได้สูงสุดหนึ่งชั้น สำหรับเดสก์ท็อปเท่านั้น';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'กำหนดเอง';
       case 'icon_custom_confirm_body':
@@ -569499,6 +569632,10 @@ extension on _StringsTr {
         return 'Üzerine gelince ara';
       case 'hover_auto_lookup_hint':
         return 'Fare bir karakterin üzerine geldiğinde otomatik olarak ara; tıklamaya veya Shift tuşunu basılı tutmaya gerek yok. En fazla bir açılır katman gösterir. Yalnızca masaüstü.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Özel';
       case 'icon_custom_confirm_body':
@@ -586938,6 +587075,10 @@ extension on _StringsVi {
         return 'Tra cứu khi di chuột';
       case 'hover_auto_lookup_hint':
         return 'Tự động tra cứu khi di chuột qua một ký tự; không cần nhấp hay giữ Shift. Hiển thị tối đa một lớp cửa sổ bật lên. Chỉ trên máy tính.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Tùy chỉnh';
       case 'icon_custom_confirm_body':
@@ -604270,6 +604411,10 @@ extension on _StringsZhCn {
         return '悬停即查词';
       case 'hover_auto_lookup_hint':
         return '鼠标悬停在文字上即自动查词，无需点击或按住 Shift；最多触发一层弹窗。仅桌面端。';
+      case 'hover_lookup_modifier':
+        return '悬停查词按键';
+      case 'hover_lookup_modifier_hint':
+        return '按住这个键把鼠标移到文字上即查词（阅读器、字幕、网页）';
       case 'icon_custom':
         return '自定义';
       case 'icon_custom_confirm_body':
@@ -621518,6 +621663,10 @@ extension on _StringsZhHk {
         return '停留即查詞';
       case 'hover_auto_lookup_hint':
         return '滑鼠停留在文字上即自動查詞，無需點擊或按住 Shift；最多觸發一層彈窗。僅桌面版。';
+      case 'hover_lookup_modifier':
+        return '懸停查詞按鍵';
+      case 'hover_lookup_modifier_hint':
+        return '按住這個鍵把滑鼠移到文字上即查詞（閱讀器、字幕、網頁）';
       case 'icon_custom':
         return '自訂';
       case 'icon_custom_confirm_body':
