@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143548 (8444 per locale)
+/// Strings: 143599 (8447 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9012,6 +9012,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_import_reset_default => 'Restore default';
   String get srs_import_running => 'Importing…';
   String get srs_import_section_updates => 'Updates';
+  String get srs_import_task_cancel => 'Cancel import';
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
   String get srs_import_task_dismiss => 'Dismiss';
   String srs_import_task_done({required Object name, required Object n}) =>
       'Imported ${name}: ${n} notes added';
@@ -9083,6 +9086,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  String get srs_list_separator => ', ';
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
@@ -27191,6 +27195,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -27309,6 +27318,8 @@ class _StringsAr extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => '، ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -47929,6 +47940,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -48047,6 +48063,8 @@ class _StringsDe extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -68792,6 +68810,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -68910,6 +68933,8 @@ class _StringsEs extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -89742,6 +89767,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -89860,6 +89890,8 @@ class _StringsFr extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -110456,6 +110488,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -110574,6 +110611,8 @@ class _StringsId extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -131214,6 +131253,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -131332,6 +131376,8 @@ class _StringsIt extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -151263,6 +151309,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -151381,6 +151432,8 @@ class _StringsJa extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => '、';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -171059,6 +171112,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -171177,6 +171235,8 @@ class _StringsKo extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -191543,6 +191603,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -191661,6 +191726,8 @@ class _StringsNl extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -212330,6 +212397,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -212448,6 +212520,8 @@ class _StringsPtBr extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -233095,6 +233169,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -233213,6 +233292,8 @@ class _StringsRu extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -253611,6 +253692,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -253729,6 +253815,8 @@ class _StringsTh extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -274192,6 +274280,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -274310,6 +274403,8 @@ class _StringsTr extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -294769,6 +294864,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -294887,6 +294987,8 @@ class _StringsVi extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -314064,6 +314166,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_section_updates => '更新';
   @override
+  String get srs_import_task_cancel => '取消导入';
+  @override
+  String srs_import_task_cancelled({required Object name}) => '已取消导入 ${name}';
+  @override
   String get srs_import_task_dismiss => '关闭';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -314176,6 +314282,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_lapis_migration_nothing => '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
   @override
   String get srs_lapis_migration_title => '迁移旧 Lapis 到新模板';
+  @override
+  String get srs_list_separator => '、';
   @override
   String srs_media_missing({required Object name}) => '找不到媒体文件：${name}';
   @override
@@ -333134,6 +333242,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
   String srs_import_task_done({required Object name, required Object n}) =>
@@ -333252,6 +333365,8 @@ class _StringsZhHk extends _StringsEn {
       'Nothing to migrate: no old Lapis notes and no missed fields.';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => '、';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -351098,6 +351213,10 @@ extension on _StringsEn {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -351202,6 +351321,8 @@ extension on _StringsEn {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -368635,6 +368756,10 @@ extension on _StringsAr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -368739,6 +368864,8 @@ extension on _StringsAr {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return '، ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -386228,6 +386355,10 @@ extension on _StringsDe {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -386332,6 +386463,8 @@ extension on _StringsDe {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -403825,6 +403958,10 @@ extension on _StringsEs {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -403929,6 +404066,8 @@ extension on _StringsEs {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -421433,6 +421572,10 @@ extension on _StringsFr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -421537,6 +421680,8 @@ extension on _StringsFr {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -439001,6 +439146,10 @@ extension on _StringsId {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -439105,6 +439254,8 @@ extension on _StringsId {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -456578,6 +456729,10 @@ extension on _StringsIt {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -456682,6 +456837,8 @@ extension on _StringsIt {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -474089,6 +474246,10 @@ extension on _StringsJa {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -474193,6 +474354,8 @@ extension on _StringsJa {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return '、';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -491556,6 +491719,10 @@ extension on _StringsKo {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -491660,6 +491827,8 @@ extension on _StringsKo {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -509106,6 +509275,10 @@ extension on _StringsNl {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -509210,6 +509383,8 @@ extension on _StringsNl {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -526687,6 +526862,10 @@ extension on _StringsPtBr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -526791,6 +526970,8 @@ extension on _StringsPtBr {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -544272,6 +544453,10 @@ extension on _StringsRu {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -544376,6 +544561,8 @@ extension on _StringsRu {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -561817,6 +562004,10 @@ extension on _StringsTh {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -561921,6 +562112,8 @@ extension on _StringsTh {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -579380,6 +579573,10 @@ extension on _StringsTr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -579484,6 +579681,8 @@ extension on _StringsTr {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -596938,6 +597137,10 @@ extension on _StringsVi {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -597042,6 +597245,8 @@ extension on _StringsVi {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -614337,6 +614542,10 @@ extension on _StringsZhCn {
         return '正在导入…';
       case 'srs_import_section_updates':
         return '更新';
+      case 'srs_import_task_cancel':
+        return '取消导入';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => '已取消导入 ${name}';
       case 'srs_import_task_dismiss':
         return '关闭';
       case 'srs_import_task_done':
@@ -614438,6 +614647,8 @@ extension on _StringsZhCn {
         return '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
       case 'srs_lapis_migration_title':
         return '迁移旧 Lapis 到新模板';
+      case 'srs_list_separator':
+        return '、';
       case 'srs_media_missing':
         return ({required Object name}) => '找不到媒体文件：${name}';
       case 'srs_migrate_fushi_action':
@@ -631731,6 +631942,10 @@ extension on _StringsZhHk {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
       case 'srs_import_task_done':
@@ -631835,6 +632050,8 @@ extension on _StringsZhHk {
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return '、';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
