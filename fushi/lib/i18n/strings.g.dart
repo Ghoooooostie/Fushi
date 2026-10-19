@@ -11349,6 +11349,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Obscure secondary subtitle';
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   String get video_setting_seek_seconds => 'Seek seconds';
   String get video_setting_shortcuts_hint =>
       'View and customize the player\'s keyboard and gamepad shortcuts';
@@ -11386,9 +11390,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Choose how subtitles are obscured for listening practice: off, blurred (hover or tap to reveal), or hidden.';
   String get video_setting_subtitle_obscure_none => 'Off';
   String get video_setting_subtitle_obscure_reveal =>
-      'Reveal when paused or hovered';
+      'Primary: reveal when paused or hovered';
   String get video_setting_subtitle_obscure_reveal_hint =>
-      'While subtitles are blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+      'While the primary subtitle is blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping it reveals it temporarily. Turn this off to keep it obscured no matter what.';
   String get video_setting_subtitle_outline => 'Outline width';
   String get video_setting_subtitle_outline_color => 'Outline color';
   String get video_setting_subtitle_position => 'Vertical position';
@@ -31128,6 +31132,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'تمويه أو إخفاء الترجمة الثانوية (المترجمة)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'ثوانٍ الانتقال';
   @override
@@ -51753,6 +51763,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Den sekundären (Übersetzungs-)Untertitel weichzeichnen oder ausblenden';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Spulschritt (Sekunden)';
   @override
@@ -72453,6 +72469,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Difumina u oculta el subtítulo secundario (traducción)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Segundos de salto';
   @override
@@ -93234,6 +93256,12 @@ class _StringsFr extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Flouter ou cacher le sous-titre secondaire (traduction)';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
+  @override
   String get video_setting_seek_seconds => 'Pas d\'avance/recul (secondes)';
   @override
   String get video_setting_shortcuts_hint =>
@@ -113715,6 +113743,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Buramkan atau sembunyikan subtitle sekunder (terjemahan)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Detik lompatan';
   @override
@@ -134314,6 +134348,12 @@ class _StringsIt extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Sfoca o nascondi il sottotitolo secondario (traduzione)';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
+  @override
   String get video_setting_seek_seconds => 'Secondi di spostamento';
   @override
   String get video_setting_shortcuts_hint =>
@@ -153996,6 +154036,12 @@ class _StringsJa extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint =>
       '副字幕（翻訳）をぼかすまたは非表示にします';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
+  @override
   String get video_setting_seek_seconds => 'シークの秒数';
   @override
   String get video_setting_shortcuts_hint =>
@@ -173623,6 +173669,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       '보조(번역) 자막을 흐리게 하거나 숨깁니다';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => '이동 간격(초)';
   @override
@@ -194108,6 +194160,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Vervaag of verberg de secundaire (vertaling) ondertitel';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Spoelstap (seconden)';
   @override
@@ -214729,6 +214787,12 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Desfocar ou ocultar a legenda secundária (tradução)';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
+  @override
   String get video_setting_seek_seconds => 'Segundos para avançar/retroceder';
   @override
   String get video_setting_shortcuts_hint =>
@@ -235300,6 +235364,12 @@ class _StringsRu extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Размыть или скрыть вторичные (переводные) субтитры';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
+  @override
   String get video_setting_seek_seconds => 'Шаг перемотки (с)';
   @override
   String get video_setting_shortcuts_hint =>
@@ -255585,6 +255655,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'เบลอหรือซ่อนคำบรรยายรอง (คำแปล)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'ระยะเลื่อนเวลา (วินาที)';
   @override
@@ -276026,6 +276102,12 @@ class _StringsTr extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint =>
       'İkincil (çeviri) altyazıyı bulanıklaştır veya gizle';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
+  @override
   String get video_setting_seek_seconds => 'Sarma saniyesi';
   @override
   String get video_setting_shortcuts_hint =>
@@ -296412,6 +296494,12 @@ class _StringsVi extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Làm mờ hoặc ẩn phụ đề phụ (bản dịch)';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
+  @override
   String get video_setting_seek_seconds => 'Bước tua (giây)';
   @override
   String get video_setting_shortcuts_hint =>
@@ -315161,6 +315249,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint => '模糊或隐藏副字幕（翻译参考轨）';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal => '副字幕暂停或悬停时显形';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      '同主字幕的显形开关，只作用于副字幕（翻译参考轨）。关掉后副字幕的遮蔽始终保持，不受主字幕显形影响。';
+  @override
   String get video_setting_seek_seconds => '快进/快退步长（秒）';
   @override
   String get video_setting_shortcuts_hint => '查看并自定义播放器的键盘 / 手柄快捷键';
@@ -315217,10 +315310,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_subtitle_obscure_none => '关闭';
   @override
-  String get video_setting_subtitle_obscure_reveal => '暂停或悬停时显形';
+  String get video_setting_subtitle_obscure_reveal => '主字幕暂停或悬停时显形';
   @override
   String get video_setting_subtitle_obscure_reveal_hint =>
-      '字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
+      '主字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
   @override
   String get video_setting_subtitle_outline => '描边粗细';
   @override
@@ -334172,6 +334265,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint => '模糊或隱藏副字幕（翻譯參考軌）';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
+  @override
   String get video_setting_seek_seconds => '快進／快退步長（秒）';
   @override
   String get video_setting_shortcuts_hint => '查看並自訂播放器的鍵盤 / 手掣快捷鍵';
@@ -351667,6 +351766,10 @@ extension on _StringsEn {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Seek seconds';
       case 'video_setting_shortcuts_hint':
@@ -351720,9 +351823,9 @@ extension on _StringsEn {
       case 'video_setting_subtitle_obscure_none':
         return 'Off';
       case 'video_setting_subtitle_obscure_reveal':
-        return 'Reveal when paused or hovered';
+        return 'Primary: reveal when paused or hovered';
       case 'video_setting_subtitle_obscure_reveal_hint':
-        return 'While subtitles are blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+        return 'While the primary subtitle is blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping it reveals it temporarily. Turn this off to keep it obscured no matter what.';
       case 'video_setting_subtitle_outline':
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
@@ -369058,6 +369161,10 @@ extension on _StringsAr {
         return 'إخفاء الترجمة الثانوية';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'تمويه أو إخفاء الترجمة الثانوية (المترجمة)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'ثوانٍ الانتقال';
       case 'video_setting_shortcuts_hint':
@@ -386524,6 +386631,10 @@ extension on _StringsDe {
         return 'Sekundären Untertitel verbergen';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Den sekundären (Übersetzungs-)Untertitel weichzeichnen oder ausblenden';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Spulschritt (Sekunden)';
       case 'video_setting_shortcuts_hint':
@@ -403975,6 +404086,10 @@ extension on _StringsEs {
         return 'Ocultar subtítulo secundario';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Difumina u oculta el subtítulo secundario (traducción)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Segundos de salto';
       case 'video_setting_shortcuts_hint':
@@ -421443,6 +421558,10 @@ extension on _StringsFr {
         return 'Masquer le sous-titre secondaire';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Flouter ou cacher le sous-titre secondaire (traduction)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Pas d\'avance/recul (secondes)';
       case 'video_setting_shortcuts_hint':
@@ -438856,6 +438975,10 @@ extension on _StringsId {
         return 'Samarkan subtitle sekunder';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Buramkan atau sembunyikan subtitle sekunder (terjemahan)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Detik lompatan';
       case 'video_setting_shortcuts_hint':
@@ -456302,6 +456425,10 @@ extension on _StringsIt {
         return 'Oscura sottotitolo secondario';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Sfoca o nascondi il sottotitolo secondario (traduzione)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Secondi di spostamento';
       case 'video_setting_shortcuts_hint':
@@ -473630,6 +473757,10 @@ extension on _StringsJa {
         return '副字幕を隠す';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '副字幕（翻訳）をぼかすまたは非表示にします';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'シークの秒数';
       case 'video_setting_shortcuts_hint':
@@ -490960,6 +491091,10 @@ extension on _StringsKo {
         return '보조 자막 가리기';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '보조(번역) 자막을 흐리게 하거나 숨깁니다';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return '이동 간격(초)';
       case 'video_setting_shortcuts_hint':
@@ -508394,6 +508529,10 @@ extension on _StringsNl {
         return 'Secundaire ondertitel verbergen';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Vervaag of verberg de secundaire (vertaling) ondertitel';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Spoelstap (seconden)';
       case 'video_setting_shortcuts_hint':
@@ -525830,6 +525969,10 @@ extension on _StringsPtBr {
         return 'Ocultar legenda secundária';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Desfocar ou ocultar a legenda secundária (tradução)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Segundos para avançar/retroceder';
       case 'video_setting_shortcuts_hint':
@@ -543271,6 +543414,10 @@ extension on _StringsRu {
         return 'Скрыть вторичные субтитры';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Размыть или скрыть вторичные (переводные) субтитры';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Шаг перемотки (с)';
       case 'video_setting_shortcuts_hint':
@@ -560668,6 +560815,10 @@ extension on _StringsTh {
         return 'ซ่อนคำบรรยายรอง';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'เบลอหรือซ่อนคำบรรยายรอง (คำแปล)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'ระยะเลื่อนเวลา (วินาที)';
       case 'video_setting_shortcuts_hint':
@@ -578094,6 +578245,10 @@ extension on _StringsTr {
         return 'İkincil altyazıyı gizle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'İkincil (çeviri) altyazıyı bulanıklaştır veya gizle';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Sarma saniyesi';
       case 'video_setting_shortcuts_hint':
@@ -595506,6 +595661,10 @@ extension on _StringsVi {
         return 'Che phụ đề phụ';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Làm mờ hoặc ẩn phụ đề phụ (bản dịch)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Bước tua (giây)';
       case 'video_setting_shortcuts_hint':
@@ -612723,6 +612882,10 @@ extension on _StringsZhCn {
         return '副字幕遮蔽';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '模糊或隐藏副字幕（翻译参考轨）';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return '副字幕暂停或悬停时显形';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return '同主字幕的显形开关，只作用于副字幕（翻译参考轨）。关掉后副字幕的遮蔽始终保持，不受主字幕显形影响。';
       case 'video_setting_seek_seconds':
         return '快进/快退步长（秒）';
       case 'video_setting_shortcuts_hint':
@@ -612776,9 +612939,9 @@ extension on _StringsZhCn {
       case 'video_setting_subtitle_obscure_none':
         return '关闭';
       case 'video_setting_subtitle_obscure_reveal':
-        return '暂停或悬停时显形';
+        return '主字幕暂停或悬停时显形';
       case 'video_setting_subtitle_obscure_reveal_hint':
-        return '字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
+        return '主字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
       case 'video_setting_subtitle_outline':
         return '描边粗细';
       case 'video_setting_subtitle_outline_color':
@@ -629981,6 +630144,10 @@ extension on _StringsZhHk {
         return '副字幕遮蔽';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '模糊或隱藏副字幕（翻譯參考軌）';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return '快進／快退步長（秒）';
       case 'video_setting_shortcuts_hint':
