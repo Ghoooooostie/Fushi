@@ -10560,6 +10560,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object source,
     required Object path,
   }) => 'Detected install location (${source}): ${path}';
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
   String update_install_failure_summary({required Object summary}) =>
       'Reason: ${summary}';
   String update_install_gal_hook_holder({
@@ -10572,6 +10574,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_install_incomplete_title => 'Update did not finish';
   String update_install_installer_pid({required Object pid}) =>
       'Installer PID: ${pid}';
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi could not start the installer for version ${version}. Check the log path below.';
   String get update_install_launch_failed_title =>
@@ -30435,6 +30439,9 @@ class _StringsAr extends _StringsEn {
     required Object path,
   }) => 'موقع التثبيت المكتشف (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'السبب: ${summary}';
   @override
@@ -30451,6 +30458,9 @@ class _StringsAr extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'معرّف عملية المثبّت: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'تعذّر على Fushi بدء مثبّت الإصدار ${version}. تحقق من مسار السجل أدناه.';
@@ -52078,6 +52088,9 @@ class _StringsDe extends _StringsEn {
     required Object path,
   }) => 'Erkannter Installationsort (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Grund: ${summary}';
   @override
@@ -52094,6 +52107,9 @@ class _StringsDe extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'Installer-PID: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi konnte das Installationsprogramm für Version ${version} nicht starten. Prüfe den Protokollpfad unten.';
@@ -73829,6 +73845,9 @@ class _StringsEs extends _StringsEn {
     required Object path,
   }) => 'Ubicación de instalación detectada (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
   @override
@@ -73845,6 +73864,9 @@ class _StringsEs extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID del instalador: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi no pudo iniciar el instalador de la versión ${version}. Revisa la ruta del registro más abajo.';
@@ -95655,6 +95677,9 @@ class _StringsFr extends _StringsEn {
     required Object path,
   }) => 'Emplacement d\'installation détecté (${source}) : ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Raison : ${summary}';
   @override
@@ -95671,6 +95696,9 @@ class _StringsFr extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID de l\'installateur : ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi n\'a pas pu démarrer l\'installateur de la version ${version}. Consultez le chemin du journal ci-dessous.';
@@ -117226,6 +117254,9 @@ class _StringsId extends _StringsEn {
     required Object path,
   }) => 'Lokasi pemasangan terdeteksi (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Alasan: ${summary}';
   @override
@@ -117242,6 +117273,9 @@ class _StringsId extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID penginstal: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi tidak dapat memulai penginstal untuk versi ${version}. Periksa jalur log di bawah.';
@@ -138873,6 +138907,9 @@ class _StringsIt extends _StringsEn {
     required Object path,
   }) => 'Posizione di installazione rilevata (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
   @override
@@ -138890,6 +138927,9 @@ class _StringsIt extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID del programma di installazione: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi non è riuscito ad avviare il programma di installazione per la versione ${version}. Controlla il percorso del log qui sotto.';
@@ -159719,6 +159759,9 @@ class _StringsJa extends _StringsEn {
     required Object path,
   }) => '検出されたインストール場所（${source}）：${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
   @override
@@ -159735,6 +159778,9 @@ class _StringsJa extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'インストーラー PID：${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi はバージョン ${version} のインストーラーを起動できませんでした。下のログパスを確認してください。';
@@ -180380,6 +180426,9 @@ class _StringsKo extends _StringsEn {
     required Object path,
   }) => '감지된 설치 위치(${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       '원인: ${summary}';
   @override
@@ -180396,6 +180445,9 @@ class _StringsKo extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       '설치 프로그램 PID: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi가 ${version} 버전 설치 프로그램을 시작하지 못했습니다. 아래 로그 경로를 확인하세요.';
@@ -201827,6 +201879,9 @@ class _StringsNl extends _StringsEn {
     required Object path,
   }) => 'Gedetecteerde installatielocatie (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Reden: ${summary}';
   @override
@@ -201843,6 +201898,9 @@ class _StringsNl extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID installatieprogramma: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi kon het installatieprogramma voor versie ${version} niet starten. Bekijk het logboekpad hieronder.';
@@ -223488,6 +223546,9 @@ class _StringsPtBr extends _StringsEn {
     required Object path,
   }) => 'Local de instalação detectado (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
   @override
@@ -223505,6 +223566,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID do instalador: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'O Fushi não conseguiu iniciar o instalador da versão ${version}. Verifique o caminho do log abaixo.';
@@ -245128,6 +245192,9 @@ class _StringsRu extends _StringsEn {
     required Object path,
   }) => 'Обнаружено расположение установки (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Причина: ${summary}';
   @override
@@ -245144,6 +245211,9 @@ class _StringsRu extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID установщика: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi не удалось запустить установщик версии ${version}. Проверьте путь к журналу ниже.';
@@ -266508,6 +266578,9 @@ class _StringsTh extends _StringsEn {
     required Object path,
   }) => 'ตำแหน่งติดตั้งที่ตรวจพบ (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'สาเหตุ: ${summary}';
   @override
@@ -266524,6 +266597,9 @@ class _StringsTh extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID ตัวติดตั้ง: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi ไม่สามารถเริ่มตัวติดตั้งสำหรับเวอร์ชัน ${version} ได้ กรุณาตรวจสอบเส้นทางล็อกด้านล่าง';
@@ -287983,6 +288059,9 @@ class _StringsTr extends _StringsEn {
     required Object path,
   }) => 'Algılanan yükleme konumu (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Neden: ${summary}';
   @override
@@ -287999,6 +288078,9 @@ class _StringsTr extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'Yükleyici PID: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi, ${version} sürümünün yükleyicisini başlatamadı. Aşağıdaki günlük yolunu kontrol edin.';
@@ -309430,6 +309512,9 @@ class _StringsVi extends _StringsEn {
     required Object path,
   }) => 'Vị trí cài đặt phát hiện được (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Lý do: ${summary}';
   @override
@@ -309446,6 +309531,9 @@ class _StringsVi extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID trình cài đặt: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi không thể khởi chạy trình cài đặt cho phiên bản ${version}. Hãy xem đường dẫn nhật ký bên dưới.';
@@ -329377,6 +329465,9 @@ class _StringsZhCn extends _StringsEn {
     required Object path,
   }) => '检测到的安装位置（${source}）：${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi 装在需要管理员权限的目录，而管理员权限提示（UAC）被拒绝了，所以这次没有安装更新。请重新更新，并在提示中选择「是」。';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
   @override
@@ -329392,6 +329483,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       '安装器 PID：${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      '下载的安装包与发布方公布的校验值不符，Fushi 没有以管理员权限运行它。请重新更新以重新下载。';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi 未能启动 ${version} 版本安装器。请查看下方日志路径。';
@@ -349351,6 +349445,9 @@ class _StringsZhHk extends _StringsEn {
     required Object path,
   }) => '偵測到的安裝位置（${source}）：${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
   @override
@@ -349366,6 +349463,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       '安裝程式 PID：${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi 未能啟動 ${version} 版本的安裝程式。請查看下方的記錄路徑。';
@@ -367957,6 +368057,8 @@ extension on _StringsEn {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Detected install location (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Reason: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -367968,6 +368070,8 @@ extension on _StringsEn {
         return 'Update did not finish';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'Installer PID: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi could not start the installer for version ${version}. Check the log path below.';
@@ -386226,6 +386330,8 @@ extension on _StringsAr {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'موقع التثبيت المكتشف (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'السبب: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -386237,6 +386343,8 @@ extension on _StringsAr {
         return 'لم يكتمل التحديث';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'معرّف عملية المثبّت: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'تعذّر على Fushi بدء مثبّت الإصدار ${version}. تحقق من مسار السجل أدناه.';
@@ -404564,6 +404672,8 @@ extension on _StringsDe {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Erkannter Installationsort (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Grund: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -404575,6 +404685,8 @@ extension on _StringsDe {
         return 'Update nicht abgeschlossen';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'Installer-PID: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi konnte das Installationsprogramm für Version ${version} nicht starten. Prüfe den Protokollpfad unten.';
@@ -422893,6 +423005,8 @@ extension on _StringsEs {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Ubicación de instalación detectada (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Motivo: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -422904,6 +423018,8 @@ extension on _StringsEs {
         return 'La actualización no terminó';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID del instalador: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi no pudo iniciar el instalador de la versión ${version}. Revisa la ruta del registro más abajo.';
@@ -441236,6 +441352,8 @@ extension on _StringsFr {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Emplacement d\'installation détecté (${source}) : ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Raison : ${summary}';
       case 'update_install_gal_hook_holder':
@@ -441247,6 +441365,8 @@ extension on _StringsFr {
         return 'Mise à jour non terminée';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID de l\'installateur : ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi n\'a pas pu démarrer l\'installateur de la version ${version}. Consultez le chemin du journal ci-dessous.';
@@ -459536,6 +459656,8 @@ extension on _StringsId {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Lokasi pemasangan terdeteksi (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Alasan: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -459547,6 +459669,8 @@ extension on _StringsId {
         return 'Pembaruan tidak selesai';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID penginstal: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi tidak dapat memulai penginstal untuk versi ${version}. Periksa jalur log di bawah.';
@@ -477853,6 +477977,8 @@ extension on _StringsIt {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Posizione di installazione rilevata (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Motivo: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -477865,6 +477991,8 @@ extension on _StringsIt {
       case 'update_install_installer_pid':
         return ({required Object pid}) =>
             'PID del programma di installazione: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi non è riuscito ad avviare il programma di installazione per la versione ${version}. Controlla il percorso del log qui sotto.';
@@ -496079,6 +496207,8 @@ extension on _StringsJa {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             '検出されたインストール場所（${source}）：${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => '原因：${summary}';
       case 'update_install_gal_hook_holder':
@@ -496090,6 +496220,8 @@ extension on _StringsJa {
         return '更新が完了しませんでした';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'インストーラー PID：${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi はバージョン ${version} のインストーラーを起動できませんでした。下のログパスを確認してください。';
@@ -514276,6 +514408,8 @@ extension on _StringsKo {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             '감지된 설치 위치(${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => '원인: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -514287,6 +514421,8 @@ extension on _StringsKo {
         return '업데이트가 끝나지 않음';
       case 'update_install_installer_pid':
         return ({required Object pid}) => '설치 프로그램 PID: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi가 ${version} 버전 설치 프로그램을 시작하지 못했습니다. 아래 로그 경로를 확인하세요.';
@@ -532574,6 +532710,8 @@ extension on _StringsNl {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Gedetecteerde installatielocatie (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Reden: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -532585,6 +532723,8 @@ extension on _StringsNl {
         return 'Update niet voltooid';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID installatieprogramma: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi kon het installatieprogramma voor versie ${version} niet starten. Bekijk het logboekpad hieronder.';
@@ -550887,6 +551027,8 @@ extension on _StringsPtBr {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Local de instalação detectado (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Motivo: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -550898,6 +551040,8 @@ extension on _StringsPtBr {
         return 'A atualização não foi concluída';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID do instalador: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'O Fushi não conseguiu iniciar o instalador da versão ${version}. Verifique o caminho do log abaixo.';
@@ -569209,6 +569353,8 @@ extension on _StringsRu {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Обнаружено расположение установки (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Причина: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -569220,6 +569366,8 @@ extension on _StringsRu {
         return 'Обновление не завершено';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID установщика: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi не удалось запустить установщик версии ${version}. Проверьте путь к журналу ниже.';
@@ -587488,6 +587636,8 @@ extension on _StringsTh {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'ตำแหน่งติดตั้งที่ตรวจพบ (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'สาเหตุ: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -587499,6 +587649,8 @@ extension on _StringsTh {
         return 'อัปเดตยังไม่เสร็จ';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID ตัวติดตั้ง: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi ไม่สามารถเริ่มตัวติดตั้งสำหรับเวอร์ชัน ${version} ได้ กรุณาตรวจสอบเส้นทางล็อกด้านล่าง';
@@ -605788,6 +605940,8 @@ extension on _StringsTr {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Algılanan yükleme konumu (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Neden: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -605799,6 +605953,8 @@ extension on _StringsTr {
         return 'Güncelleme tamamlanmadı';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'Yükleyici PID: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi, ${version} sürümünün yükleyicisini başlatamadı. Aşağıdaki günlük yolunu kontrol edin.';
@@ -624081,6 +624237,8 @@ extension on _StringsVi {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Vị trí cài đặt phát hiện được (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Lý do: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -624092,6 +624250,8 @@ extension on _StringsVi {
         return 'Cập nhật chưa hoàn tất';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID trình cài đặt: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi không thể khởi chạy trình cài đặt cho phiên bản ${version}. Hãy xem đường dẫn nhật ký bên dưới.';
@@ -642184,6 +642344,8 @@ extension on _StringsZhCn {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             '检测到的安装位置（${source}）：${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi 装在需要管理员权限的目录，而管理员权限提示（UAC）被拒绝了，所以这次没有安装更新。请重新更新，并在提示中选择「是」。';
       case 'update_install_failure_summary':
         return ({required Object summary}) => '原因：${summary}';
       case 'update_install_gal_hook_holder':
@@ -642195,6 +642357,8 @@ extension on _StringsZhCn {
         return '更新未完成';
       case 'update_install_installer_pid':
         return ({required Object pid}) => '安装器 PID：${pid}';
+      case 'update_install_integrity_failed':
+        return '下载的安装包与发布方公布的校验值不符，Fushi 没有以管理员权限运行它。请重新更新以重新下载。';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi 未能启动 ${version} 版本安装器。请查看下方日志路径。';
@@ -660306,6 +660470,8 @@ extension on _StringsZhHk {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             '偵測到的安裝位置（${source}）：${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => '原因：${summary}';
       case 'update_install_gal_hook_holder':
@@ -660317,6 +660483,8 @@ extension on _StringsZhHk {
         return '更新未完成';
       case 'update_install_installer_pid':
         return ({required Object pid}) => '安裝程式 PID：${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi 未能啟動 ${version} 版本的安裝程式。請查看下方的記錄路徑。';
