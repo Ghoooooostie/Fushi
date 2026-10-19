@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 144262 (8486 per locale)
+/// Strings: 144432 (8496 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11794,6 +11794,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'the audio.cpp runtime is not downloaded';
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
@@ -11817,6 +11820,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   String get video_subtitle_ai_resume => 'Continue';
   String get video_subtitle_ai_scrape_hint =>
       'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
@@ -32049,6 +32067,11 @@ class _StringsAr extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -32083,6 +32106,29 @@ class _StringsAr extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -52963,6 +53009,11 @@ class _StringsDe extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -52997,6 +53048,29 @@ class _StringsDe extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -73948,6 +74022,11 @@ class _StringsEs extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -73982,6 +74061,29 @@ class _StringsEs extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -95007,6 +95109,11 @@ class _StringsFr extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -95041,6 +95148,29 @@ class _StringsFr extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -115743,6 +115873,11 @@ class _StringsId extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -115777,6 +115912,29 @@ class _StringsId extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -136623,6 +136781,11 @@ class _StringsIt extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -136657,6 +136820,29 @@ class _StringsIt extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -156530,6 +156716,11 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'Windows と Linux（x64）のみ対応しています';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'MOSS をダウンロード（${size}）';
   @override
@@ -156559,6 +156750,29 @@ class _StringsJa extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'プロバイダー：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => '続行';
   @override
@@ -176426,6 +176640,11 @@ class _StringsKo extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -176460,6 +176679,29 @@ class _StringsKo extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -197224,6 +197466,11 @@ class _StringsNl extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -197258,6 +197505,29 @@ class _StringsNl extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -218125,6 +218395,11 @@ class _StringsPtBr extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -218159,6 +218434,29 @@ class _StringsPtBr extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -238970,6 +239268,11 @@ class _StringsRu extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -239004,6 +239307,29 @@ class _StringsRu extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -259511,6 +259837,11 @@ class _StringsTh extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -259545,6 +259876,29 @@ class _StringsTh extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -280234,6 +280588,11 @@ class _StringsTr extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -280268,6 +280627,29 @@ class _StringsTr extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -300894,6 +301276,11 @@ class _StringsVi extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       'only available on Windows and Linux (x64)';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       'Download MOSS (${size})';
   @override
@@ -300928,6 +301315,29 @@ class _StringsVi extends _StringsEn {
     required Object name,
     required Object model,
   }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => 'Continue';
   @override
@@ -319851,6 +320261,11 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       '只支持 Windows 与 Linux（x64）';
   @override
+  String get video_subtitle_ai_moss_delete => '删除 MOSS 文件';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      '删除 MOSS 运行库与模型（${size}，含所有后端）？下次使用 MOSS 时需要重新下载。';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       '下载 MOSS（${size}）';
   @override
@@ -319880,6 +320295,27 @@ class _StringsZhCn extends _StringsEn {
     required Object name,
     required Object model,
   }) => '提供商：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'host 播放列表从第 2 集起不支持在 host 上生成字幕';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      '在 ${host} 上运行';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'host 报错：${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => '正在连接 host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      '使用 host 上为「字幕校对」指派的 AI 提供商';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint => 'MOSS 能否使用取决于 host 的显卡';
+  @override
+  String get video_subtitle_ai_remote_unreachable => '连不上这个视频所在的 host';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'host 上的 Fushi 版本不支持生成日语字幕，请先更新 host。';
   @override
   String get video_subtitle_ai_resume => '继续';
   @override
@@ -339110,6 +339546,11 @@ class _StringsZhHk extends _StringsEn {
   String get video_subtitle_ai_moss_code_unsupported_platform =>
       '僅支援 Windows 與 Linux（x64）';
   @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
   String video_subtitle_ai_moss_download({required Object size}) =>
       '下載 MOSS（${size}）';
   @override
@@ -339139,6 +339580,29 @@ class _StringsZhHk extends _StringsEn {
     required Object name,
     required Object model,
   }) => '供應商：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
   @override
   String get video_subtitle_ai_resume => '繼續';
   @override
@@ -356795,6 +357259,11 @@ extension on _StringsEn {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -356821,6 +357290,22 @@ extension on _StringsEn {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -374414,6 +374899,11 @@ extension on _StringsAr {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -374440,6 +374930,22 @@ extension on _StringsAr {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -392108,6 +392614,11 @@ extension on _StringsDe {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -392134,6 +392645,22 @@ extension on _StringsDe {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -409787,6 +410314,11 @@ extension on _StringsEs {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -409813,6 +410345,22 @@ extension on _StringsEs {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -427483,6 +428031,11 @@ extension on _StringsFr {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -427509,6 +428062,22 @@ extension on _StringsFr {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -445124,6 +445693,11 @@ extension on _StringsId {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -445150,6 +445724,22 @@ extension on _StringsId {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -462798,6 +463388,11 @@ extension on _StringsIt {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -462824,6 +463419,22 @@ extension on _StringsIt {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -480351,6 +480962,11 @@ extension on _StringsJa {
         return 'audio.cpp ランタイムがダウンロードされていません';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'Windows と Linux（x64）のみ対応しています';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'MOSS をダウンロード（${size}）';
       case 'video_subtitle_ai_moss_files':
@@ -480376,6 +480992,22 @@ extension on _StringsJa {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'プロバイダー：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return '続行';
       case 'video_subtitle_ai_scrape_hint':
@@ -497905,6 +498537,11 @@ extension on _StringsKo {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -497931,6 +498568,22 @@ extension on _StringsKo {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -515567,6 +516220,11 @@ extension on _StringsNl {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -515593,6 +516251,22 @@ extension on _StringsNl {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -533231,6 +533905,11 @@ extension on _StringsPtBr {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -533257,6 +533936,22 @@ extension on _StringsPtBr {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -550900,6 +551595,11 @@ extension on _StringsRu {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -550926,6 +551626,22 @@ extension on _StringsRu {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -568525,6 +569241,11 @@ extension on _StringsTh {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -568551,6 +569272,22 @@ extension on _StringsTh {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -586179,6 +586916,11 @@ extension on _StringsTr {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -586205,6 +586947,22 @@ extension on _StringsTr {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -603819,6 +604577,11 @@ extension on _StringsVi {
         return 'the audio.cpp runtime is not downloaded';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => 'Download MOSS (${size})';
       case 'video_subtitle_ai_moss_files':
@@ -603845,6 +604608,22 @@ extension on _StringsVi {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return 'Continue';
       case 'video_subtitle_ai_scrape_hint':
@@ -621260,6 +622039,11 @@ extension on _StringsZhCn {
         return 'audio.cpp 运行库还没下载';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return '只支持 Windows 与 Linux（x64）';
+      case 'video_subtitle_ai_moss_delete':
+        return '删除 MOSS 文件';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            '删除 MOSS 运行库与模型（${size}，含所有后端）？下次使用 MOSS 时需要重新下载。';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => '下载 MOSS（${size}）';
       case 'video_subtitle_ai_moss_files':
@@ -621285,6 +622069,22 @@ extension on _StringsZhCn {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             '提供商：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'host 播放列表从第 2 集起不支持在 host 上生成字幕';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => '在 ${host} 上运行';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'host 报错：${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return '正在连接 host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return '使用 host 上为「字幕校对」指派的 AI 提供商';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'MOSS 能否使用取决于 host 的显卡';
+      case 'video_subtitle_ai_remote_unreachable':
+        return '连不上这个视频所在的 host';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'host 上的 Fushi 版本不支持生成日语字幕，请先更新 host。';
       case 'video_subtitle_ai_resume':
         return '继续';
       case 'video_subtitle_ai_scrape_hint':
@@ -638736,6 +639536,11 @@ extension on _StringsZhHk {
         return 'audio.cpp 執行庫尚未下載';
       case 'video_subtitle_ai_moss_code_unsupported_platform':
         return '僅支援 Windows 與 Linux（x64）';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
       case 'video_subtitle_ai_moss_download':
         return ({required Object size}) => '下載 MOSS（${size}）';
       case 'video_subtitle_ai_moss_files':
@@ -638761,6 +639566,22 @@ extension on _StringsZhHk {
       case 'video_subtitle_ai_provider':
         return ({required Object name, required Object model}) =>
             '供應商：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
       case 'video_subtitle_ai_resume':
         return '繼續';
       case 'video_subtitle_ai_scrape_hint':
