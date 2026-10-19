@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149702 (8806 per locale)
+/// Strings: 149736 (8808 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9620,7 +9620,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The current sync service doesn\'t support syncing review data';
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
   String get srs_sync_done => 'Review data synced';
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   String get srs_sync_no_backend => 'No sync service is set up';
   String get srs_sync_now => 'Sync now';
   String get srs_value_no => 'No';
@@ -28784,7 +28787,12 @@ class _StringsAr extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -50430,7 +50438,12 @@ class _StringsDe extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -72201,7 +72214,12 @@ class _StringsEs extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -94059,7 +94077,12 @@ class _StringsFr extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -115681,7 +115704,12 @@ class _StringsId extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -137347,7 +137375,12 @@ class _StringsIt extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -158305,7 +158338,12 @@ class _StringsJa extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -178988,7 +179026,12 @@ class _StringsKo extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -200380,7 +200423,12 @@ class _StringsNl extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -222075,7 +222123,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -243748,7 +243801,12 @@ class _StringsRu extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -265172,7 +265230,12 @@ class _StringsTh extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -286661,7 +286724,12 @@ class _StringsTr extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -308146,7 +308214,12 @@ class _StringsVi extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -328260,7 +328333,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_clock_skew => '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
   @override
+  String get srs_sync_directory_unidentified => '暂时认不出同步目录（账号或地址还没就绪）';
+  @override
   String get srs_sync_done => '复习数据已同步';
+  @override
+  String get srs_sync_failed => '复习数据同步失败：{reason}';
   @override
   String get srs_sync_no_backend => '还没有配置同步服务';
   @override
@@ -348234,7 +348311,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -366941,8 +367023,12 @@ extension on _StringsEn {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -385235,8 +385321,12 @@ extension on _StringsAr {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -403585,8 +403675,12 @@ extension on _StringsDe {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -421939,8 +422033,12 @@ extension on _StringsEs {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -440304,8 +440402,12 @@ extension on _StringsFr {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -458629,8 +458731,12 @@ extension on _StringsId {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -476963,8 +477069,12 @@ extension on _StringsIt {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -495231,8 +495341,12 @@ extension on _StringsJa {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -513448,8 +513562,12 @@ extension on _StringsKo {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -531755,8 +531873,12 @@ extension on _StringsNl {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -550093,8 +550215,12 @@ extension on _StringsPtBr {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -568435,8 +568561,12 @@ extension on _StringsRu {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -586737,8 +586867,12 @@ extension on _StringsTh {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -605057,8 +605191,12 @@ extension on _StringsTr {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -623372,8 +623510,12 @@ extension on _StringsVi {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -641518,8 +641660,12 @@ extension on _StringsZhCn {
         return '当前同步后端不支持复习数据同步';
       case 'srs_sync_clock_skew':
         return '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
+      case 'srs_sync_directory_unidentified':
+        return '暂时认不出同步目录（账号或地址还没就绪）';
       case 'srs_sync_done':
         return '复习数据已同步';
+      case 'srs_sync_failed':
+        return '复习数据同步失败：{reason}';
       case 'srs_sync_no_backend':
         return '还没有配置同步服务';
       case 'srs_sync_now':
@@ -659660,8 +659806,12 @@ extension on _StringsZhHk {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return 'Couldn\'t sync review data: {reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
