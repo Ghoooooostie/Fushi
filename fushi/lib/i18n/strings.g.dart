@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142579 (8387 per locale)
+/// Strings: 144602 (8506 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -267,6 +267,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} set individually';
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   String get ai_feature_unset => 'Not set';
   String get ai_feature_video_identify => 'Video identification';
   String get ai_feature_video_identify_assist_summary =>
@@ -11758,6 +11761,159 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_adjust_collapse => 'Collapse';
   String get video_subtitle_adjust_expand => 'Expand';
   String get video_subtitle_adjust_title => 'Subtitle adjustments';
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  String get video_subtitle_ai_hide => 'Hide';
+  String get video_subtitle_ai_model_label => 'Speech model';
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  String get video_subtitle_ai_resume => 'Continue';
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  String get video_subtitle_ai_start => 'Start';
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  String get video_subtitle_ai_target_label => 'Target';
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
   String get video_subtitle_anchor_bottom => 'Bottom';
   String get video_subtitle_anchor_top => 'Top';
   String video_subtitle_archive_pack({required Object format}) =>
@@ -11829,6 +11985,52 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Text recognized · tap a word';
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  String get video_subtitle_glossary_add => 'Add entry';
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  String get video_subtitle_glossary_field_kind => 'Category';
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  String get video_subtitle_glossary_field_note => 'Note';
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  String get video_subtitle_glossary_open => 'Glossary';
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  String get video_subtitle_glossary_save => 'Save';
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  String get video_subtitle_glossary_title => 'Glossary';
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   String get video_subtitle_graphic_hint =>
       'Graphic subtitle · shown on video · pause to look up words (OCR)';
   String get video_subtitle_graphic_learning_hint =>
@@ -12250,6 +12452,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'غير معيّن';
   @override
@@ -31830,6 +32037,246 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'ضبط الترجمة';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'أسفل';
   @override
   String get video_subtitle_anchor_top => 'أعلى';
@@ -31938,6 +32385,82 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'ترجمة رسومية · تُعرض على الفيديو · أوقف مؤقتًا للبحث عن الكلمات (OCR)';
@@ -32533,6 +33056,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Nicht festgelegt';
   @override
@@ -52487,6 +53015,246 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Untertitel anpassen';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Unten';
   @override
   String get video_subtitle_anchor_top => 'Oben';
@@ -52597,6 +53365,82 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Grafikuntertitel · im Bild angezeigt · Nachschlagen nach Pause (OCR)';
@@ -53206,6 +54050,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Sin definir';
   @override
@@ -73215,6 +74064,246 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Ajustes de subtítulos';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Abajo';
   @override
   String get video_subtitle_anchor_top => 'Arriba';
@@ -73325,6 +74414,82 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Subtítulo gráfico · se muestra en el vídeo · consulta tras pausar (OCR)';
@@ -73934,6 +75099,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Non défini';
   @override
@@ -94017,6 +95187,246 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Réglages des sous-titres';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Bas';
   @override
   String get video_subtitle_anchor_top => 'Haut';
@@ -94127,6 +95537,82 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Sous-titre graphique · affiché sur la vidéo · recherche après pause (OCR)';
@@ -94744,6 +96230,11 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Belum diatur';
   @override
@@ -114496,6 +115987,246 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Penyesuaian subtitle';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Bawah';
   @override
   String get video_subtitle_anchor_top => 'Atas';
@@ -114606,6 +116337,82 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Subtitle grafis · ditampilkan di video · jeda untuk cari kata (OCR)';
@@ -115211,6 +117018,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Non impostato';
   @override
@@ -135119,6 +136931,246 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Regolazioni sottotitoli';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'In basso';
   @override
   String get video_subtitle_anchor_top => 'In alto';
@@ -135229,6 +137281,82 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Sottotitolo grafico · mostrato sul video · ricerca in pausa (OCR)';
@@ -135833,6 +137961,11 @@ class _StringsJa extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 件を個別に指定';
   @override
   String get ai_feature_overrides_none => 'すべての機能が既定のプロバイダーを使用';
+  @override
+  String get ai_feature_subtitle_proofread => '字幕の校正';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '音声認識で作った日本語字幕を校正します。作品の固有名詞表を作ってから、聞き違えた台詞を直します。このプロバイダーに送るのは認識したテキストと固有名詞表だけで（音声・映像は送りません）、料金はプロバイダーが請求します。';
   @override
   String get ai_feature_unset => '未設定';
   @override
@@ -154774,6 +156907,233 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => '字幕の調整';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      '別の字幕生成タスクが実行中です：${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI校正が送信するのは、音声認識で得た日本語テキストとこの作品の固有名詞表だけです。送信先は「設定 › モデル › LLM」で「字幕の校正」に割り当てたプロバイダーで、音声や映像は送信されません。料金はそのプロバイダーが請求します（ローカルの Ollama / LM Studio は端末の外に出ません）。結果はモデルに依存し、保証されません。';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'オンにする';
+  @override
+  String get video_subtitle_ai_consent_title => 'AI校正が送信する内容';
+  @override
+  String get video_subtitle_ai_entry_hint => '音声認識とAI校正（任意）。動画の隣に保存します';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      '${name} を保存しました';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      '同名の字幕があるため ${name} として保存しました';
+  @override
+  String get video_subtitle_ai_episode_pending => '待機中';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'スキップ：.ja.srt と .ja.asr.srt の両方が既にあります';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'スキップ：.ja.srt が既にあります';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'スキップ：台詞がほとんどありません（歌やクリップ）';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'スキップ：歌（OP/ED、MV）と判定されました';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'AIの返答が何度か再試行しても不完全でした';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) => '約 ${requests} 回のリクエスト、入力 約 ${input}／出力 約 ${output} トークン';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts => '（認識済みの字幕から算出）';
+  @override
+  String get video_subtitle_ai_estimate_by_duration => '（動画の長さからの概算）';
+  @override
+  String get video_subtitle_ai_estimate_nothing => '校正するものはありません';
+  @override
+  String get video_subtitle_ai_hide => '閉じる';
+  @override
+  String get video_subtitle_ai_model_label => '音声モデル';
+  @override
+  String get video_subtitle_ai_model_missing => '動画用の日本語音声モデルがダウンロードされていません';
+  @override
+  String get video_subtitle_ai_model_ready => '日本語音声モデルの準備ができました';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => '自動';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      '自動：対応する NVIDIA カード（Windows）では CUDA、Linux では Vulkan を使います';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS バックエンド';
+  @override
+  String get video_subtitle_ai_moss_checking => '確認中…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'CUDA の要件を満たす NVIDIA GPU／ドライバーがありません（ドライバー R580 以上、RTX 20 シリーズ以降）';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'MOSS モデルがダウンロードされていません';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => '使用可能な GPU が見つかりません';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'このプラットフォームには、このバックエンド用の audio.cpp ビルドがありません';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'audio.cpp ランタイムがダウンロードされていません';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'Windows と Linux（x64）のみ対応しています';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'MOSS をダウンロード（${size}）';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS ランタイムとモデル';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      '未ダウンロード（${size} をダウンロードします）';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS ランタイムとモデルの準備ができました';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS は利用できません：${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes => '処理できるローカルの動画ファイルがありません';
+  @override
+  String get video_subtitle_ai_no_provider => '「字幕の校正」に AI プロバイダーが割り当てられていません';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun => '校正済みのエピソードがまだありません';
+  @override
+  String get video_subtitle_ai_open_settings => '「設定 › モデル › LLM」で割り当てる';
+  @override
+  String get video_subtitle_ai_proofread_hint => 'AIで人名や誤認識を直します（初期設定はオフ）';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI校正';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'プロバイダー：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => '続行';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'この作品はまだスクレイピングされていないため、固有名詞表はタイトルからの推測になります。先にスクレイピングすることをおすすめします。';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) => '全 ${n} 話のうち ${skipped} 話は日本語字幕が既にあるためスキップします';
+  @override
+  String get video_subtitle_ai_season_title => 'シーズン全体の日本語字幕を生成';
+  @override
+  String get video_subtitle_ai_segmenter_auto => '自動';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS は話者ごとに分割します（NVIDIA 搭載のデスクトップ向け）。それ以外ではスライディングウィンドウを使います';
+  @override
+  String get video_subtitle_ai_segmenter_label => '分割方式';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'スライディングウィンドウ';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI校正は生成パネルでオンにします。初回は送信される内容が説明されます。';
+  @override
+  String get video_subtitle_ai_settings_summary => '動画の日本語字幕を生成するときの分割方式と MOSS';
+  @override
+  String get video_subtitle_ai_settings_title => '動画の日本語字幕';
+  @override
+  String get video_subtitle_ai_stage_consistency => '表記の統一';
+  @override
+  String get video_subtitle_ai_stage_export => '書き出し';
+  @override
+  String get video_subtitle_ai_stage_glossary => '固有名詞表の作成';
+  @override
+  String get video_subtitle_ai_stage_proofread => '校正';
+  @override
+  String get video_subtitle_ai_stage_recognize => '音声認識';
+  @override
+  String get video_subtitle_ai_stage_split => '長い行の分割';
+  @override
+  String get video_subtitle_ai_start => '開始';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'キャンセルしました。完了した段階は保持されます。続行すると再開できます。';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'キャンセル中…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      '完了：字幕ファイルを ${n} 件保存しました';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      '失敗：${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      '固有名詞表に矛盾があります。修正してから続行してください。';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      '固有名詞表が別の作品のもののようです（表の名前が音声にほとんど出てきません）。修正するか作品をスクレイピングしてから続行してください。';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      '一時停止：AI リクエストに失敗しました（${reason}）';
+  @override
+  String get video_subtitle_ai_status_starting => '開始しています…';
+  @override
+  String get video_subtitle_ai_target_label => '対象';
+  @override
+  String get video_subtitle_ai_title => '日本語字幕を生成';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}：ファイルが見つからないためスキップしました';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}：別の端末にのみあるためスキップしました（その端末で生成してください）';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI 使用量：${calls} 回のリクエスト、入力 ${input}／出力 ${output} トークン';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '（${n} 回のリクエストは使用量が報告されませんでした）';
+  @override
   String get video_subtitle_anchor_bottom => '下';
   @override
   String get video_subtitle_anchor_top => '上';
@@ -154878,6 +157238,77 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'この表をそのまま使う';
+  @override
+  String get video_subtitle_glossary_add => '項目を追加';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'この表は検証に通らなかったため、まだ保存されていません。修正する（またはそのまま使う）と、生成パネルで続行できます。';
+  @override
+  String get video_subtitle_glossary_delete => '項目を削除';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      '「${ja}」を削除しますか？固有名詞表を再生成すると、再び追加される場合があります。';
+  @override
+  String get video_subtitle_glossary_edit => '項目を編集';
+  @override
+  String get video_subtitle_glossary_empty =>
+      '項目はまだありません。固有名詞表は初回のAI校正で生成されます。手動で追加することもできます。';
+  @override
+  String get video_subtitle_glossary_entry_menu => '項目の操作';
+  @override
+  String get video_subtitle_glossary_field_ja => '正式な表記';
+  @override
+  String get video_subtitle_glossary_field_kind => '種別';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      '「人名」で始まる項目は作品の照合に使われます';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => '誤認識';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint => 'カンマで区切ります';
+  @override
+  String get video_subtitle_glossary_field_note => 'メモ';
+  @override
+  String get video_subtitle_glossary_field_reading => '読み（ひらがな）';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'AI校正で字幕をこの表記に統一します。追加・編集した項目は、再生成しても保持されます。';
+  @override
+  String get video_subtitle_glossary_ja_duplicate => 'この表記は既に表にあります';
+  @override
+  String get video_subtitle_glossary_ja_empty => '正式な表記を入力してください';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => '誤認識：${list}';
+  @override
+  String get video_subtitle_glossary_open => '固有名詞表';
+  @override
+  String get video_subtitle_glossary_regenerate => '再生成';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'AI に固有名詞表を作り直させますか？追加でリクエストが送信されます。編集した ${n} 件は保持されます。';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      '再生成しました：${n} 件';
+  @override
+  String get video_subtitle_glossary_rerun_consistency => '表記の統一だけをやり直す';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      '表記を統一しました。字幕ファイルを ${n} 件更新しました';
+  @override
+  String get video_subtitle_glossary_rerun_running => '表記の統一をやり直しています…';
+  @override
+  String get video_subtitle_glossary_save => '保存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => '固有名詞表';
+  @override
+  String get video_subtitle_glossary_user_edited => '編集済み（再生成しても保持されます）';
   @override
   String get video_subtitle_graphic_hint => '画像字幕 ・ 画面に表示 ・ 一時停止で辞書引き（OCR）';
   @override
@@ -155446,6 +157877,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => '설정 안 됨';
   @override
@@ -174426,6 +176862,246 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => '자막 조정';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => '하단';
   @override
   String get video_subtitle_anchor_top => '상단';
@@ -174529,6 +177205,82 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       '그래픽 자막 · 화면에 표시 · 일시정지 후 단어 찾기(OCR)';
@@ -175105,6 +177857,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Niet ingesteld';
   @override
@@ -194967,6 +197724,246 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Ondertitels aanpassen';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Onder';
   @override
   String get video_subtitle_anchor_top => 'Boven';
@@ -195077,6 +198074,82 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Grafische ondertitel · op video getoond · opzoeken na pauze (OCR)';
@@ -195684,6 +198757,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Não definido';
   @override
@@ -215611,6 +218689,246 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Ajustes de legenda';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Inferior';
   @override
   String get video_subtitle_anchor_top => 'Superior';
@@ -215720,6 +219038,82 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Legenda gráfica · exibida no vídeo · consulta ao pausar (OCR)';
@@ -216328,6 +219722,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Не задан';
   @override
@@ -236199,6 +239598,246 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Настройка субтитров';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Снизу';
   @override
   String get video_subtitle_anchor_top => 'Сверху';
@@ -236310,6 +239949,82 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Графические субтитры · показ на видео · поиск слов на паузе (OCR)';
@@ -236918,6 +240633,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'ยังไม่ได้ตั้ง';
   @override
@@ -256483,6 +260203,246 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'ปรับซับไตเติล';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'ด้านล่าง';
   @override
   String get video_subtitle_anchor_top => 'ด้านบน';
@@ -256593,6 +260553,82 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'คำบรรยายแบบกราฟิก · แสดงบนภาพ · หยุดชั่วคราวเพื่อค้นคำ (OCR)';
@@ -257190,6 +261226,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Ayarlanmadı';
   @override
@@ -276949,6 +280990,246 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Altyazı ayarları';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Alt';
   @override
   String get video_subtitle_anchor_top => 'Üst';
@@ -277060,6 +281341,82 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Grafik altyazı · videoda gösterilir · duraklatınca sözcük arama (OCR)';
@@ -277662,6 +282019,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Chưa đặt';
   @override
@@ -297352,6 +301714,246 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Điều chỉnh phụ đề';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Dưới';
   @override
   String get video_subtitle_anchor_top => 'Trên';
@@ -297462,6 +302064,82 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Phụ đề đồ họa · hiển thị trên hình · tạm dừng để tra từ (OCR)';
@@ -298047,6 +302725,11 @@ class _StringsZhCn extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 项已单独指定';
   @override
   String get ai_feature_overrides_none => '全部跟随默认提供商';
+  @override
+  String get ai_feature_subtitle_proofread => '字幕校对';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
   @override
   String get ai_feature_unset => '未指定';
   @override
@@ -316060,6 +320743,222 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => '字幕调整';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      '已有生成任务在进行：${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI 校对只会把语音识别出的日语文本与本作专名表，发给你在「设置 › 模型 › LLM」里为「字幕校对」指派的提供商；不发送音频与画面。请求按该提供商的价格计费，本地 Ollama / LM Studio 不出本机。效果取决于模型，不作保证。';
+  @override
+  String get video_subtitle_ai_consent_confirm => '开启';
+  @override
+  String get video_subtitle_ai_consent_title => 'AI 校对会发送什么';
+  @override
+  String get video_subtitle_ai_entry_hint => '语音识别 + 可选 AI 校对，保存在视频旁边';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      '已保存 ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      '已有同名字幕，另存为 ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => '排队中';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      '跳过：.ja.srt 与 .ja.asr.srt 都已存在';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing => '跳过：已有 .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      '跳过：几乎没有台词（歌曲或片段）';
+  @override
+  String get video_subtitle_ai_episode_skipped_song => '跳过：判定为纯歌曲（OP/ED、MV）';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete => 'AI 回复多次不完整';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) => '约 ${requests} 次请求，输入约 ${input}、输出约 ${output} token';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts => '（按识别稿估算）';
+  @override
+  String get video_subtitle_ai_estimate_by_duration => '（按时长粗估）';
+  @override
+  String get video_subtitle_ai_estimate_nothing => '没有需要校对的集';
+  @override
+  String get video_subtitle_ai_hide => '收起';
+  @override
+  String get video_subtitle_ai_model_label => '识别模型';
+  @override
+  String get video_subtitle_ai_model_missing => '视频用的日语识别模型还没下载';
+  @override
+  String get video_subtitle_ai_model_ready => '日语识别模型已就绪';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => '自动';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      '自动：Windows 合格的 NVIDIA 显卡用 CUDA，Linux 用 Vulkan';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS 后端';
+  @override
+  String get video_subtitle_ai_moss_checking => '检查中…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      '没有达到 CUDA 要求的 NVIDIA 显卡 / 驱动（驱动 R580+、RTX 20 系或更新）';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing => 'MOSS 模型还没下载';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => '没有找到可用的显卡';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      '本平台没有这个后端的 audio.cpp 构建';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing => 'audio.cpp 运行库还没下载';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      '只支持 Windows 与 Linux（x64）';
+  @override
+  String get video_subtitle_ai_moss_delete => '删除 MOSS 文件';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      '删除 MOSS 运行库与模型（${size}，含所有后端）？下次使用 MOSS 时需要重新下载。';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      '下载 MOSS（${size}）';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS 运行库与模型';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      '未下载（需下载 ${size}）';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS 运行库与模型已就绪';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS 不可用：${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes => '没有可处理的本机视频文件';
+  @override
+  String get video_subtitle_ai_no_provider => '还没有为「字幕校对」指派 AI 提供商';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun => '还没有任何一集跑过校对';
+  @override
+  String get video_subtitle_ai_open_settings => '去「设置 › 模型 › LLM」指派';
+  @override
+  String get video_subtitle_ai_proofread_hint => '用 AI 修正人名与误识（默认关）';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI 校对';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => '提供商：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'host 播放列表从第 2 集起不支持在 host 上生成字幕';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      '在 ${host} 上运行';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'host 报错：${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => '正在连接 host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      '使用 host 上为「字幕校对」指派的 AI 提供商';
+  @override
+  String get video_subtitle_ai_remote_result_missing => '电脑端任务结束了，但没有返回字幕';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint => 'MOSS 能否使用取决于 host 的显卡';
+  @override
+  String get video_subtitle_ai_remote_unreachable => '连不上这个视频所在的 host';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'host 上的 Fushi 版本不支持生成日语字幕，请先更新 host。';
+  @override
+  String get video_subtitle_ai_resume => '继续';
+  @override
+  String get video_subtitle_ai_scrape_hint => '这部作品还没刮削，专名表只能凭标题推断，建议先刮削。';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) => '共 ${n} 集，其中 ${skipped} 集已有日语字幕、会跳过';
+  @override
+  String get video_subtitle_ai_season_title => '整季生成日语字幕';
+  @override
+  String get video_subtitle_ai_segmenter_auto => '自动';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS 按说话人分段（需 NVIDIA 桌面）；其余平台用滑窗';
+  @override
+  String get video_subtitle_ai_segmenter_label => '分段方式';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => '滑窗';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI 校对在生成面板里开启，首次开启时会说明发送哪些内容。';
+  @override
+  String get video_subtitle_ai_settings_summary => '生成视频日语字幕的分段方式与 MOSS';
+  @override
+  String get video_subtitle_ai_settings_title => '视频日语字幕';
+  @override
+  String get video_subtitle_ai_stage_consistency => '写法统一';
+  @override
+  String get video_subtitle_ai_stage_export => '导出';
+  @override
+  String get video_subtitle_ai_stage_glossary => '专名表';
+  @override
+  String get video_subtitle_ai_stage_proofread => '校对';
+  @override
+  String get video_subtitle_ai_stage_recognize => '识别';
+  @override
+  String get video_subtitle_ai_stage_split => '拆分';
+  @override
+  String get video_subtitle_ai_start => '开始';
+  @override
+  String get video_subtitle_ai_status_cancelled => '已取消。已完成的阶段保留，继续即可续跑。';
+  @override
+  String get video_subtitle_ai_status_cancelling => '正在取消…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      '完成：已保存 ${n} 个字幕文件';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      '失败：${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts => '专名表自相矛盾。改好后点继续。';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      '专名表像是别的作品的（表里的人名在音频里几乎没出现）。改好或先刮削后点继续。';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      '暂停：AI 请求失败（${reason}）';
+  @override
+  String get video_subtitle_ai_status_starting => '正在开始…';
+  @override
+  String get video_subtitle_ai_target_label => '对象';
+  @override
+  String get video_subtitle_ai_title => '生成日语字幕';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}：文件不存在，跳过';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}：只在别的设备上，跳过（请在那台设备上生成）';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI 用量：${calls} 次请求，输入 ${input}、输出 ${output} token';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '（${n} 次请求未报用量）';
+  @override
   String get video_subtitle_anchor_bottom => '底部';
   @override
   String get video_subtitle_anchor_top => '顶部';
@@ -316155,6 +321054,75 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_frame_ocr_status_ready => '已识别画面文字 · 点字查词';
   @override
   String get video_subtitle_frame_ocr_status_recognizing => '正在识别画面文字…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => '原样采用此表';
+  @override
+  String get video_subtitle_glossary_add => '添加条目';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      '这张表没通过校验，尚未保存。改好（或原样采用）后回生成面板点继续。';
+  @override
+  String get video_subtitle_glossary_delete => '删除条目';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      '删除「${ja}」？重新生成专名表时它可能再次出现。';
+  @override
+  String get video_subtitle_glossary_edit => '编辑条目';
+  @override
+  String get video_subtitle_glossary_empty => '还没有条目。第一次 AI 校对时会自动生成，也可以手动添加。';
+  @override
+  String get video_subtitle_glossary_entry_menu => '条目操作';
+  @override
+  String get video_subtitle_glossary_field_ja => '正式写法';
+  @override
+  String get video_subtitle_glossary_field_kind => '类别';
+  @override
+  String get video_subtitle_glossary_field_kind_hint => '以「人名」开头的条目参与作品身份校验';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => '误写';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint => '用逗号分隔';
+  @override
+  String get video_subtitle_glossary_field_note => '说明';
+  @override
+  String get video_subtitle_glossary_field_reading => '读音（平假名）';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'AI 校对时把字幕统一成这里的写法。你添加或改过的条目在重新生成时保留。';
+  @override
+  String get video_subtitle_glossary_ja_duplicate => '表里已有这个写法';
+  @override
+  String get video_subtitle_glossary_ja_empty => '请输入正式写法';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => '误写：${list}';
+  @override
+  String get video_subtitle_glossary_open => '专名表';
+  @override
+  String get video_subtitle_glossary_regenerate => '重新生成';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      '让 AI 重新生成专名表？会再发一次请求。你编辑过的 ${n} 条会保留。';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      '已重新生成：${n} 条';
+  @override
+  String get video_subtitle_glossary_rerun_consistency => '只重跑写法统一';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      '写法已统一，更新了 ${n} 个字幕文件';
+  @override
+  String get video_subtitle_glossary_rerun_running => '正在重跑写法统一…';
+  @override
+  String get video_subtitle_glossary_save => '保存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      '专名表保存失败：${reason}';
+  @override
+  String get video_subtitle_glossary_title => '专名表';
+  @override
+  String get video_subtitle_glossary_user_edited => '你编辑过，重新生成时保留';
   @override
   String get video_subtitle_graphic_hint => '图形字幕 · 画面显示 · 暂停后可点字查词（OCR）';
   @override
@@ -316694,6 +321662,11 @@ class _StringsZhHk extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 項已單獨指定';
   @override
   String get ai_feature_overrides_none => '全部跟隨預設提供商';
+  @override
+  String get ai_feature_subtitle_proofread => '字幕校對';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '校對語音識別生成的日語字幕：先整理作品專名表，再修正聽錯的台詞。只會把識別出的文字與專名表發給該供應商（不發音訊與畫面），並由其計費。';
   @override
   String get ai_feature_unset => '未指定';
   @override
@@ -335090,6 +340063,226 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => '字幕調整';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      '已有字幕生成任務進行中：${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI 校對只會把語音識別出的日語文字與本作品的專名表，發送給你在「設定 › 模型 › LLM」中為「字幕校對」指派的供應商，不會發送音訊與畫面。請求由該供應商按其價格計費，本機的 Ollama / LM Studio 不會離開本機。效果取決於模型，不作保證。';
+  @override
+  String get video_subtitle_ai_consent_confirm => '開啟';
+  @override
+  String get video_subtitle_ai_consent_title => 'AI 校對會發送甚麼';
+  @override
+  String get video_subtitle_ai_entry_hint => '語音識別 + 可選 AI 校對，儲存在影片旁邊';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      '已儲存 ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      '已有同名字幕，另存為 ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => '等待中';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      '略過：.ja.srt 與 .ja.asr.srt 均已存在';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing => '略過：已有 .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      '略過：幾乎沒有台詞（歌曲或片段）';
+  @override
+  String get video_subtitle_ai_episode_skipped_song => '略過：判定為純歌曲（OP/ED、MV）';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete => 'AI 多次回覆均不完整';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) => '約 ${requests} 次請求，輸入約 ${input}、輸出約 ${output} token';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts => '（按識別稿估算）';
+  @override
+  String get video_subtitle_ai_estimate_by_duration => '（按片長粗略估算）';
+  @override
+  String get video_subtitle_ai_estimate_nothing => '沒有需要校對的內容';
+  @override
+  String get video_subtitle_ai_hide => '收起';
+  @override
+  String get video_subtitle_ai_model_label => '識別模型';
+  @override
+  String get video_subtitle_ai_model_missing => '影片用的日語識別模型尚未下載';
+  @override
+  String get video_subtitle_ai_model_ready => '日語識別模型已就緒';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => '自動';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      '自動：Windows 上符合條件的 NVIDIA 顯示卡使用 CUDA，Linux 使用 Vulkan';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS 後端';
+  @override
+  String get video_subtitle_ai_moss_checking => '檢查中…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      '沒有符合 CUDA 要求的 NVIDIA 顯示卡 / 驅動程式（驅動 R580+、RTX 20 系列或更新）';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing => 'MOSS 模型尚未下載';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => '找不到可用的顯示卡';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      '此平台沒有該後端的 audio.cpp 版本';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing => 'audio.cpp 執行庫尚未下載';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      '僅支援 Windows 與 Linux（x64）';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      '下載 MOSS（${size}）';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS 執行庫與模型';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      '尚未下載（需下載 ${size}）';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS 執行庫與模型已就緒';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS 無法使用：${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes => '沒有可處理的本機影片檔案';
+  @override
+  String get video_subtitle_ai_no_provider => '尚未為「字幕校對」指派 AI 供應商';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun => '尚未有任何一集進行過校對';
+  @override
+  String get video_subtitle_ai_open_settings => '前往「設定 › 模型 › LLM」指派';
+  @override
+  String get video_subtitle_ai_proofread_hint => '用 AI 修正人名與誤識（預設關閉）';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI 校對';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => '供應商：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => '繼續';
+  @override
+  String get video_subtitle_ai_scrape_hint => '這部作品尚未刮削，專名表只能憑標題推測，建議先刮削。';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) => '共 ${n} 集，其中 ${skipped} 集已有日語字幕，會略過';
+  @override
+  String get video_subtitle_ai_season_title => '整季生成日語字幕';
+  @override
+  String get video_subtitle_ai_segmenter_auto => '自動';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS 按說話者分段（需 NVIDIA 桌面電腦）；其他平台使用滑動視窗';
+  @override
+  String get video_subtitle_ai_segmenter_label => '分段方式';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => '滑動視窗';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI 校對在生成面板中開啟，首次開啟時會說明發送的內容。';
+  @override
+  String get video_subtitle_ai_settings_summary => '生成影片日語字幕的分段方式與 MOSS';
+  @override
+  String get video_subtitle_ai_settings_title => '影片日語字幕';
+  @override
+  String get video_subtitle_ai_stage_consistency => '統一寫法';
+  @override
+  String get video_subtitle_ai_stage_export => '匯出';
+  @override
+  String get video_subtitle_ai_stage_glossary => '建立專名表';
+  @override
+  String get video_subtitle_ai_stage_proofread => '校對';
+  @override
+  String get video_subtitle_ai_stage_recognize => '語音識別';
+  @override
+  String get video_subtitle_ai_stage_split => '拆分長句';
+  @override
+  String get video_subtitle_ai_start => '開始';
+  @override
+  String get video_subtitle_ai_status_cancelled => '已取消。已完成的階段會保留，按「繼續」即可接續。';
+  @override
+  String get video_subtitle_ai_status_cancelling => '正在取消…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      '完成：已儲存 ${n} 個字幕檔案';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      '失敗：${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      '專名表自相矛盾。修改後請按「繼續」。';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      '專名表似乎屬於另一部作品（表中的人名在音訊裏幾乎沒有出現）。修改或先刮削作品後，請按「繼續」。';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      '已暫停：AI 請求失敗（${reason}）';
+  @override
+  String get video_subtitle_ai_status_starting => '正在開始…';
+  @override
+  String get video_subtitle_ai_target_label => '對象';
+  @override
+  String get video_subtitle_ai_title => '生成日語字幕';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}：檔案不存在，已略過';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}：只存在於另一台裝置，已略過（請在該裝置上生成）';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI 用量：${calls} 次請求，輸入 ${input}、輸出 ${output} token';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '（${n} 次請求未回報用量）';
+  @override
   String get video_subtitle_anchor_bottom => '底部';
   @override
   String get video_subtitle_anchor_top => '頂部';
@@ -335189,6 +340382,76 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => '照原樣採用此表';
+  @override
+  String get video_subtitle_glossary_add => '新增項目';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      '這張表未通過驗證，尚未儲存。修改（或照原樣採用）後，回到生成面板按「繼續」。';
+  @override
+  String get video_subtitle_glossary_delete => '刪除項目';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      '刪除「${ja}」？重新生成專名表時，它可能會再次出現。';
+  @override
+  String get video_subtitle_glossary_edit => '編輯項目';
+  @override
+  String get video_subtitle_glossary_empty =>
+      '尚未有項目。專名表會在首次 AI 校對時自動生成，也可以手動新增。';
+  @override
+  String get video_subtitle_glossary_entry_menu => '項目操作';
+  @override
+  String get video_subtitle_glossary_field_ja => '正式寫法';
+  @override
+  String get video_subtitle_glossary_field_kind => '類別';
+  @override
+  String get video_subtitle_glossary_field_kind_hint => '以「人名」開頭的項目會用於核對作品身份';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => '誤寫';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint => '以逗號分隔';
+  @override
+  String get video_subtitle_glossary_field_note => '備註';
+  @override
+  String get video_subtitle_glossary_field_reading => '讀音（平假名）';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'AI 校對時會把字幕統一成這裏的寫法。你新增或修改過的項目，重新生成時會保留。';
+  @override
+  String get video_subtitle_glossary_ja_duplicate => '表中已有這個寫法';
+  @override
+  String get video_subtitle_glossary_ja_empty => '請輸入正式寫法';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => '誤寫：${list}';
+  @override
+  String get video_subtitle_glossary_open => '專名表';
+  @override
+  String get video_subtitle_glossary_regenerate => '重新生成';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      '要讓 AI 重新生成專名表嗎？會再發送一次請求。你編輯過的 ${n} 項會保留。';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      '已重新生成：${n} 項';
+  @override
+  String get video_subtitle_glossary_rerun_consistency => '只重跑統一寫法';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      '寫法已統一，更新了 ${n} 個字幕檔案';
+  @override
+  String get video_subtitle_glossary_rerun_running => '正在重跑統一寫法…';
+  @override
+  String get video_subtitle_glossary_save => '儲存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => '專名表';
+  @override
+  String get video_subtitle_glossary_user_edited => '你編輯過，重新生成時會保留';
   @override
   String get video_subtitle_graphic_hint => '圖形字幕 · 畫面顯示 · 暫停後可點字查詞（OCR）';
   @override
@@ -335695,6 +340958,10 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Not set';
       case 'ai_feature_video_identify':
@@ -352541,6 +357808,198 @@ extension on _StringsEn {
         return 'Expand';
       case 'video_subtitle_adjust_title':
         return 'Subtitle adjustments';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Bottom';
       case 'video_subtitle_anchor_top':
@@ -352625,6 +358084,70 @@ extension on _StringsEn {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Graphic subtitle · shown on video · pause to look up words (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -353106,6 +358629,10 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'غير معيّن';
       case 'ai_feature_video_identify':
@@ -369945,6 +375472,198 @@ extension on _StringsAr {
         return 'توسيع';
       case 'video_subtitle_adjust_title':
         return 'ضبط الترجمة';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'أسفل';
       case 'video_subtitle_anchor_top':
@@ -370029,6 +375748,70 @@ extension on _StringsAr {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'ترجمة رسومية · تُعرض على الفيديو · أوقف مؤقتًا للبحث عن الكلمات (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -370512,6 +376295,10 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Nicht festgelegt';
       case 'ai_feature_video_identify':
@@ -387424,6 +393211,198 @@ extension on _StringsDe {
         return 'Ausklappen';
       case 'video_subtitle_adjust_title':
         return 'Untertitel anpassen';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Unten';
       case 'video_subtitle_anchor_top':
@@ -387510,6 +393489,70 @@ extension on _StringsDe {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Grafikuntertitel · im Bild angezeigt · Nachschlagen nach Pause (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -387993,6 +394036,10 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Sin definir';
       case 'ai_feature_video_identify':
@@ -404888,6 +410935,198 @@ extension on _StringsEs {
         return 'Expandir';
       case 'video_subtitle_adjust_title':
         return 'Ajustes de subtítulos';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Abajo';
       case 'video_subtitle_anchor_top':
@@ -404973,6 +411212,70 @@ extension on _StringsEs {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Subtítulo gráfico · se muestra en el vídeo · consulta tras pausar (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -405457,6 +411760,10 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Non défini';
       case 'ai_feature_video_identify':
@@ -422369,6 +428676,198 @@ extension on _StringsFr {
         return 'Développer';
       case 'video_subtitle_adjust_title':
         return 'Réglages des sous-titres';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Bas';
       case 'video_subtitle_anchor_top':
@@ -422454,6 +428953,70 @@ extension on _StringsFr {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Sous-titre graphique · affiché sur la vidéo · recherche après pause (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -422936,6 +429499,10 @@ extension on _StringsId {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Belum diatur';
       case 'ai_feature_video_identify':
@@ -439795,6 +446362,198 @@ extension on _StringsId {
         return 'Perluas';
       case 'video_subtitle_adjust_title':
         return 'Penyesuaian subtitle';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Bawah';
       case 'video_subtitle_anchor_top':
@@ -439880,6 +446639,70 @@ extension on _StringsId {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Subtitle grafis · ditampilkan di video · jeda untuk cari kata (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -440362,6 +447185,10 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Non impostato';
       case 'ai_feature_video_identify':
@@ -457254,6 +464081,198 @@ extension on _StringsIt {
         return 'Espandi';
       case 'video_subtitle_adjust_title':
         return 'Regolazioni sottotitoli';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'In basso';
       case 'video_subtitle_anchor_top':
@@ -457340,6 +464359,70 @@ extension on _StringsIt {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Sottotitolo grafico · mostrato sul video · ricerca in pausa (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -457821,6 +464904,10 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} 件を個別に指定';
       case 'ai_feature_overrides_none':
         return 'すべての機能が既定のプロバイダーを使用';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕の校正';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '音声認識で作った日本語字幕を校正します。作品の固有名詞表を作ってから、聞き違えた台詞を直します。このプロバイダーに送るのは認識したテキストと固有名詞表だけで（音声・映像は送りません）、料金はプロバイダーが請求します。';
       case 'ai_feature_unset':
         return '未設定';
       case 'ai_feature_video_identify':
@@ -474595,6 +481682,192 @@ extension on _StringsJa {
         return '展開';
       case 'video_subtitle_adjust_title':
         return '字幕の調整';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) => '別の字幕生成タスクが実行中です：${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI校正が送信するのは、音声認識で得た日本語テキストとこの作品の固有名詞表だけです。送信先は「設定 › モデル › LLM」で「字幕の校正」に割り当てたプロバイダーで、音声や映像は送信されません。料金はそのプロバイダーが請求します（ローカルの Ollama / LM Studio は端末の外に出ません）。結果はモデルに依存し、保証されません。';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'オンにする';
+      case 'video_subtitle_ai_consent_title':
+        return 'AI校正が送信する内容';
+      case 'video_subtitle_ai_entry_hint':
+        return '音声認識とAI校正（任意）。動画の隣に保存します';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => '${name} を保存しました';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) => '同名の字幕があるため ${name} として保存しました';
+      case 'video_subtitle_ai_episode_pending':
+        return '待機中';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'スキップ：.ja.srt と .ja.asr.srt の両方が既にあります';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'スキップ：.ja.srt が既にあります';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'スキップ：台詞がほとんどありません（歌やクリップ）';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'スキップ：歌（OP/ED、MV）と判定されました';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'AIの返答が何度か再試行しても不完全でした';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) => '約 ${requests} 回のリクエスト、入力 約 ${input}／出力 約 ${output} トークン';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return '（認識済みの字幕から算出）';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return '（動画の長さからの概算）';
+      case 'video_subtitle_ai_estimate_nothing':
+        return '校正するものはありません';
+      case 'video_subtitle_ai_hide':
+        return '閉じる';
+      case 'video_subtitle_ai_model_label':
+        return '音声モデル';
+      case 'video_subtitle_ai_model_missing':
+        return '動画用の日本語音声モデルがダウンロードされていません';
+      case 'video_subtitle_ai_model_ready':
+        return '日本語音声モデルの準備ができました';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return '自動';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return '自動：対応する NVIDIA カード（Windows）では CUDA、Linux では Vulkan を使います';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS バックエンド';
+      case 'video_subtitle_ai_moss_checking':
+        return '確認中…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'CUDA の要件を満たす NVIDIA GPU／ドライバーがありません（ドライバー R580 以上、RTX 20 シリーズ以降）';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'MOSS モデルがダウンロードされていません';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return '使用可能な GPU が見つかりません';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'このプラットフォームには、このバックエンド用の audio.cpp ビルドがありません';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'audio.cpp ランタイムがダウンロードされていません';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'Windows と Linux（x64）のみ対応しています';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'MOSS をダウンロード（${size}）';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS ランタイムとモデル';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) => '未ダウンロード（${size} をダウンロードします）';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS ランタイムとモデルの準備ができました';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS は利用できません：${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return '処理できるローカルの動画ファイルがありません';
+      case 'video_subtitle_ai_no_provider':
+        return '「字幕の校正」に AI プロバイダーが割り当てられていません';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return '校正済みのエピソードがまだありません';
+      case 'video_subtitle_ai_open_settings':
+        return '「設定 › モデル › LLM」で割り当てる';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'AIで人名や誤認識を直します（初期設定はオフ）';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI校正';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'プロバイダー：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return '続行';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'この作品はまだスクレイピングされていないため、固有名詞表はタイトルからの推測になります。先にスクレイピングすることをおすすめします。';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '全 ${n} 話のうち ${skipped} 話は日本語字幕が既にあるためスキップします';
+      case 'video_subtitle_ai_season_title':
+        return 'シーズン全体の日本語字幕を生成';
+      case 'video_subtitle_ai_segmenter_auto':
+        return '自動';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS は話者ごとに分割します（NVIDIA 搭載のデスクトップ向け）。それ以外ではスライディングウィンドウを使います';
+      case 'video_subtitle_ai_segmenter_label':
+        return '分割方式';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'スライディングウィンドウ';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI校正は生成パネルでオンにします。初回は送信される内容が説明されます。';
+      case 'video_subtitle_ai_settings_summary':
+        return '動画の日本語字幕を生成するときの分割方式と MOSS';
+      case 'video_subtitle_ai_settings_title':
+        return '動画の日本語字幕';
+      case 'video_subtitle_ai_stage_consistency':
+        return '表記の統一';
+      case 'video_subtitle_ai_stage_export':
+        return '書き出し';
+      case 'video_subtitle_ai_stage_glossary':
+        return '固有名詞表の作成';
+      case 'video_subtitle_ai_stage_proofread':
+        return '校正';
+      case 'video_subtitle_ai_stage_recognize':
+        return '音声認識';
+      case 'video_subtitle_ai_stage_split':
+        return '長い行の分割';
+      case 'video_subtitle_ai_start':
+        return '開始';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'キャンセルしました。完了した段階は保持されます。続行すると再開できます。';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'キャンセル中…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => '完了：字幕ファイルを ${n} 件保存しました';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => '失敗：${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return '固有名詞表に矛盾があります。修正してから続行してください。';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return '固有名詞表が別の作品のもののようです（表の名前が音声にほとんど出てきません）。修正するか作品をスクレイピングしてから続行してください。';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) => '一時停止：AI リクエストに失敗しました（${reason}）';
+      case 'video_subtitle_ai_status_starting':
+        return '開始しています…';
+      case 'video_subtitle_ai_target_label':
+        return '対象';
+      case 'video_subtitle_ai_title':
+        return '日本語字幕を生成';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}：ファイルが見つからないためスキップしました';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}：別の端末にのみあるためスキップしました（その端末で生成してください）';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) => 'AI 使用量：${calls} 回のリクエスト、入力 ${input}／出力 ${output} トークン';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '（${n} 回のリクエストは使用量が報告されませんでした）';
       case 'video_subtitle_anchor_bottom':
         return '下';
       case 'video_subtitle_anchor_top':
@@ -474678,6 +481951,69 @@ extension on _StringsJa {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'この表をそのまま使う';
+      case 'video_subtitle_glossary_add':
+        return '項目を追加';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'この表は検証に通らなかったため、まだ保存されていません。修正する（またはそのまま使う）と、生成パネルで続行できます。';
+      case 'video_subtitle_glossary_delete':
+        return '項目を削除';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            '「${ja}」を削除しますか？固有名詞表を再生成すると、再び追加される場合があります。';
+      case 'video_subtitle_glossary_edit':
+        return '項目を編集';
+      case 'video_subtitle_glossary_empty':
+        return '項目はまだありません。固有名詞表は初回のAI校正で生成されます。手動で追加することもできます。';
+      case 'video_subtitle_glossary_entry_menu':
+        return '項目の操作';
+      case 'video_subtitle_glossary_field_ja':
+        return '正式な表記';
+      case 'video_subtitle_glossary_field_kind':
+        return '種別';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return '「人名」で始まる項目は作品の照合に使われます';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return '誤認識';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'カンマで区切ります';
+      case 'video_subtitle_glossary_field_note':
+        return 'メモ';
+      case 'video_subtitle_glossary_field_reading':
+        return '読み（ひらがな）';
+      case 'video_subtitle_glossary_intro':
+        return 'AI校正で字幕をこの表記に統一します。追加・編集した項目は、再生成しても保持されます。';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'この表記は既に表にあります';
+      case 'video_subtitle_glossary_ja_empty':
+        return '正式な表記を入力してください';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => '誤認識：${list}';
+      case 'video_subtitle_glossary_open':
+        return '固有名詞表';
+      case 'video_subtitle_glossary_regenerate':
+        return '再生成';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'AI に固有名詞表を作り直させますか？追加でリクエストが送信されます。編集した ${n} 件は保持されます。';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => '再生成しました：${n} 件';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return '表記の統一だけをやり直す';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) => '表記を統一しました。字幕ファイルを ${n} 件更新しました';
+      case 'video_subtitle_glossary_rerun_running':
+        return '表記の統一をやり直しています…';
+      case 'video_subtitle_glossary_save':
+        return '保存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return '固有名詞表';
+      case 'video_subtitle_glossary_user_edited':
+        return '編集済み（再生成しても保持されます）';
       case 'video_subtitle_graphic_hint':
         return '画像字幕 ・ 画面に表示 ・ 一時停止で辞書引き（OCR）';
       case 'video_subtitle_graphic_learning_hint':
@@ -475154,6 +482490,10 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return '설정 안 됨';
       case 'ai_feature_video_identify':
@@ -491938,6 +499278,198 @@ extension on _StringsKo {
         return '펼치기';
       case 'video_subtitle_adjust_title':
         return '자막 조정';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return '하단';
       case 'video_subtitle_anchor_top':
@@ -492021,6 +499553,70 @@ extension on _StringsKo {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return '그래픽 자막 · 화면에 표시 · 일시정지 후 단어 찾기(OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -492497,6 +500093,10 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Niet ingesteld';
       case 'ai_feature_video_identify':
@@ -509385,6 +516985,198 @@ extension on _StringsNl {
         return 'Uitklappen';
       case 'video_subtitle_adjust_title':
         return 'Ondertitels aanpassen';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Onder';
       case 'video_subtitle_anchor_top':
@@ -509471,6 +517263,70 @@ extension on _StringsNl {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Grafische ondertitel · op video getoond · opzoeken na pauze (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -509954,6 +517810,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Não definido';
       case 'ai_feature_video_identify':
@@ -526834,6 +534694,198 @@ extension on _StringsPtBr {
         return 'Expandir';
       case 'video_subtitle_adjust_title':
         return 'Ajustes de legenda';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Inferior';
       case 'video_subtitle_anchor_top':
@@ -526919,6 +534971,70 @@ extension on _StringsPtBr {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Legenda gráfica · exibida no vídeo · consulta ao pausar (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -527400,6 +535516,10 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Не задан';
       case 'ai_feature_video_identify':
@@ -544288,6 +552408,198 @@ extension on _StringsRu {
         return 'Развернуть';
       case 'video_subtitle_adjust_title':
         return 'Настройка субтитров';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Снизу';
       case 'video_subtitle_anchor_top':
@@ -544372,6 +552684,70 @@ extension on _StringsRu {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Графические субтитры · показ на видео · поиск слов на паузе (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -544854,6 +553230,10 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'ยังไม่ได้ตั้ง';
       case 'ai_feature_video_identify':
@@ -561698,6 +570078,198 @@ extension on _StringsTh {
         return 'ขยาย';
       case 'video_subtitle_adjust_title':
         return 'ปรับซับไตเติล';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'ด้านล่าง';
       case 'video_subtitle_anchor_top':
@@ -561782,6 +570354,70 @@ extension on _StringsTh {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'คำบรรยายแบบกราฟิก · แสดงบนภาพ · หยุดชั่วคราวเพื่อค้นคำ (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -562263,6 +570899,10 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Ayarlanmadı';
       case 'ai_feature_video_identify':
@@ -579137,6 +587777,198 @@ extension on _StringsTr {
         return 'Genişlet';
       case 'video_subtitle_adjust_title':
         return 'Altyazı ayarları';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Alt';
       case 'video_subtitle_anchor_top':
@@ -579221,6 +588053,70 @@ extension on _StringsTr {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Grafik altyazı · videoda gösterilir · duraklatınca sözcük arama (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -579702,6 +588598,10 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Chưa đặt';
       case 'ai_feature_video_identify':
@@ -596562,6 +605462,198 @@ extension on _StringsVi {
         return 'Mở rộng';
       case 'video_subtitle_adjust_title':
         return 'Điều chỉnh phụ đề';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Dưới';
       case 'video_subtitle_anchor_top':
@@ -596645,6 +605737,70 @@ extension on _StringsVi {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Phụ đề đồ họa · hiển thị trên hình · tạm dừng để tra từ (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -597125,6 +606281,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 项已单独指定';
       case 'ai_feature_overrides_none':
         return '全部跟随默认提供商';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕校对';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
       case 'ai_feature_unset':
         return '未指定';
       case 'ai_feature_video_identify':
@@ -613791,6 +622951,191 @@ extension on _StringsZhCn {
         return '展开';
       case 'video_subtitle_adjust_title':
         return '字幕调整';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) => '已有生成任务在进行：${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI 校对只会把语音识别出的日语文本与本作专名表，发给你在「设置 › 模型 › LLM」里为「字幕校对」指派的提供商；不发送音频与画面。请求按该提供商的价格计费，本地 Ollama / LM Studio 不出本机。效果取决于模型，不作保证。';
+      case 'video_subtitle_ai_consent_confirm':
+        return '开启';
+      case 'video_subtitle_ai_consent_title':
+        return 'AI 校对会发送什么';
+      case 'video_subtitle_ai_entry_hint':
+        return '语音识别 + 可选 AI 校对，保存在视频旁边';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => '已保存 ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) => '已有同名字幕，另存为 ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return '排队中';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return '跳过：.ja.srt 与 .ja.asr.srt 都已存在';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return '跳过：已有 .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return '跳过：几乎没有台词（歌曲或片段）';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return '跳过：判定为纯歌曲（OP/ED、MV）';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'AI 回复多次不完整';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) => '约 ${requests} 次请求，输入约 ${input}、输出约 ${output} token';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return '（按识别稿估算）';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return '（按时长粗估）';
+      case 'video_subtitle_ai_estimate_nothing':
+        return '没有需要校对的集';
+      case 'video_subtitle_ai_hide':
+        return '收起';
+      case 'video_subtitle_ai_model_label':
+        return '识别模型';
+      case 'video_subtitle_ai_model_missing':
+        return '视频用的日语识别模型还没下载';
+      case 'video_subtitle_ai_model_ready':
+        return '日语识别模型已就绪';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return '自动';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return '自动：Windows 合格的 NVIDIA 显卡用 CUDA，Linux 用 Vulkan';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS 后端';
+      case 'video_subtitle_ai_moss_checking':
+        return '检查中…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return '没有达到 CUDA 要求的 NVIDIA 显卡 / 驱动（驱动 R580+、RTX 20 系或更新）';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'MOSS 模型还没下载';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return '没有找到可用的显卡';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return '本平台没有这个后端的 audio.cpp 构建';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'audio.cpp 运行库还没下载';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return '只支持 Windows 与 Linux（x64）';
+      case 'video_subtitle_ai_moss_delete':
+        return '删除 MOSS 文件';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            '删除 MOSS 运行库与模型（${size}，含所有后端）？下次使用 MOSS 时需要重新下载。';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => '下载 MOSS（${size}）';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS 运行库与模型';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) => '未下载（需下载 ${size}）';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS 运行库与模型已就绪';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS 不可用：${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return '没有可处理的本机视频文件';
+      case 'video_subtitle_ai_no_provider':
+        return '还没有为「字幕校对」指派 AI 提供商';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return '还没有任何一集跑过校对';
+      case 'video_subtitle_ai_open_settings':
+        return '去「设置 › 模型 › LLM」指派';
+      case 'video_subtitle_ai_proofread_hint':
+        return '用 AI 修正人名与误识（默认关）';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI 校对';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            '提供商：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'host 播放列表从第 2 集起不支持在 host 上生成字幕';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => '在 ${host} 上运行';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'host 报错：${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return '正在连接 host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return '使用 host 上为「字幕校对」指派的 AI 提供商';
+      case 'video_subtitle_ai_remote_result_missing':
+        return '电脑端任务结束了，但没有返回字幕';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'MOSS 能否使用取决于 host 的显卡';
+      case 'video_subtitle_ai_remote_unreachable':
+        return '连不上这个视频所在的 host';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'host 上的 Fushi 版本不支持生成日语字幕，请先更新 host。';
+      case 'video_subtitle_ai_resume':
+        return '继续';
+      case 'video_subtitle_ai_scrape_hint':
+        return '这部作品还没刮削，专名表只能凭标题推断，建议先刮削。';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '共 ${n} 集，其中 ${skipped} 集已有日语字幕、会跳过';
+      case 'video_subtitle_ai_season_title':
+        return '整季生成日语字幕';
+      case 'video_subtitle_ai_segmenter_auto':
+        return '自动';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS 按说话人分段（需 NVIDIA 桌面）；其余平台用滑窗';
+      case 'video_subtitle_ai_segmenter_label':
+        return '分段方式';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return '滑窗';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI 校对在生成面板里开启，首次开启时会说明发送哪些内容。';
+      case 'video_subtitle_ai_settings_summary':
+        return '生成视频日语字幕的分段方式与 MOSS';
+      case 'video_subtitle_ai_settings_title':
+        return '视频日语字幕';
+      case 'video_subtitle_ai_stage_consistency':
+        return '写法统一';
+      case 'video_subtitle_ai_stage_export':
+        return '导出';
+      case 'video_subtitle_ai_stage_glossary':
+        return '专名表';
+      case 'video_subtitle_ai_stage_proofread':
+        return '校对';
+      case 'video_subtitle_ai_stage_recognize':
+        return '识别';
+      case 'video_subtitle_ai_stage_split':
+        return '拆分';
+      case 'video_subtitle_ai_start':
+        return '开始';
+      case 'video_subtitle_ai_status_cancelled':
+        return '已取消。已完成的阶段保留，继续即可续跑。';
+      case 'video_subtitle_ai_status_cancelling':
+        return '正在取消…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => '完成：已保存 ${n} 个字幕文件';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => '失败：${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return '专名表自相矛盾。改好后点继续。';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return '专名表像是别的作品的（表里的人名在音频里几乎没出现）。改好或先刮削后点继续。';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) => '暂停：AI 请求失败（${reason}）';
+      case 'video_subtitle_ai_status_starting':
+        return '正在开始…';
+      case 'video_subtitle_ai_target_label':
+        return '对象';
+      case 'video_subtitle_ai_title':
+        return '生成日语字幕';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}：文件不存在，跳过';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) => '${title}：只在别的设备上，跳过（请在那台设备上生成）';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) => 'AI 用量：${calls} 次请求，输入 ${input}、输出 ${output} token';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '（${n} 次请求未报用量）';
       case 'video_subtitle_anchor_bottom':
         return '底部';
       case 'video_subtitle_anchor_top':
@@ -613872,6 +623217,66 @@ extension on _StringsZhCn {
         return '已识别画面文字 · 点字查词';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return '正在识别画面文字…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return '原样采用此表';
+      case 'video_subtitle_glossary_add':
+        return '添加条目';
+      case 'video_subtitle_glossary_candidate_banner':
+        return '这张表没通过校验，尚未保存。改好（或原样采用）后回生成面板点继续。';
+      case 'video_subtitle_glossary_delete':
+        return '删除条目';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) => '删除「${ja}」？重新生成专名表时它可能再次出现。';
+      case 'video_subtitle_glossary_edit':
+        return '编辑条目';
+      case 'video_subtitle_glossary_empty':
+        return '还没有条目。第一次 AI 校对时会自动生成，也可以手动添加。';
+      case 'video_subtitle_glossary_entry_menu':
+        return '条目操作';
+      case 'video_subtitle_glossary_field_ja':
+        return '正式写法';
+      case 'video_subtitle_glossary_field_kind':
+        return '类别';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return '以「人名」开头的条目参与作品身份校验';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return '误写';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return '用逗号分隔';
+      case 'video_subtitle_glossary_field_note':
+        return '说明';
+      case 'video_subtitle_glossary_field_reading':
+        return '读音（平假名）';
+      case 'video_subtitle_glossary_intro':
+        return 'AI 校对时把字幕统一成这里的写法。你添加或改过的条目在重新生成时保留。';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return '表里已有这个写法';
+      case 'video_subtitle_glossary_ja_empty':
+        return '请输入正式写法';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => '误写：${list}';
+      case 'video_subtitle_glossary_open':
+        return '专名表';
+      case 'video_subtitle_glossary_regenerate':
+        return '重新生成';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) => '让 AI 重新生成专名表？会再发一次请求。你编辑过的 ${n} 条会保留。';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => '已重新生成：${n} 条';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return '只重跑写法统一';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) => '写法已统一，更新了 ${n} 个字幕文件';
+      case 'video_subtitle_glossary_rerun_running':
+        return '正在重跑写法统一…';
+      case 'video_subtitle_glossary_save':
+        return '保存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) => '专名表保存失败：${reason}';
+      case 'video_subtitle_glossary_title':
+        return '专名表';
+      case 'video_subtitle_glossary_user_edited':
+        return '你编辑过，重新生成时保留';
       case 'video_subtitle_graphic_hint':
         return '图形字幕 · 画面显示 · 暂停后可点字查词（OCR）';
       case 'video_subtitle_graphic_learning_hint':
@@ -614341,6 +623746,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 項已單獨指定';
       case 'ai_feature_overrides_none':
         return '全部跟隨預設提供商';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕校對';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '校對語音識別生成的日語字幕：先整理作品專名表，再修正聽錯的台詞。只會把識別出的文字與專名表發給該供應商（不發音訊與畫面），並由其計費。';
       case 'ai_feature_unset':
         return '未指定';
       case 'ai_feature_video_identify':
@@ -631062,6 +640471,191 @@ extension on _StringsZhHk {
         return '展開';
       case 'video_subtitle_adjust_title':
         return '字幕調整';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) => '已有字幕生成任務進行中：${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI 校對只會把語音識別出的日語文字與本作品的專名表，發送給你在「設定 › 模型 › LLM」中為「字幕校對」指派的供應商，不會發送音訊與畫面。請求由該供應商按其價格計費，本機的 Ollama / LM Studio 不會離開本機。效果取決於模型，不作保證。';
+      case 'video_subtitle_ai_consent_confirm':
+        return '開啟';
+      case 'video_subtitle_ai_consent_title':
+        return 'AI 校對會發送甚麼';
+      case 'video_subtitle_ai_entry_hint':
+        return '語音識別 + 可選 AI 校對，儲存在影片旁邊';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => '已儲存 ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) => '已有同名字幕，另存為 ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return '等待中';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return '略過：.ja.srt 與 .ja.asr.srt 均已存在';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return '略過：已有 .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return '略過：幾乎沒有台詞（歌曲或片段）';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return '略過：判定為純歌曲（OP/ED、MV）';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'AI 多次回覆均不完整';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) => '約 ${requests} 次請求，輸入約 ${input}、輸出約 ${output} token';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return '（按識別稿估算）';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return '（按片長粗略估算）';
+      case 'video_subtitle_ai_estimate_nothing':
+        return '沒有需要校對的內容';
+      case 'video_subtitle_ai_hide':
+        return '收起';
+      case 'video_subtitle_ai_model_label':
+        return '識別模型';
+      case 'video_subtitle_ai_model_missing':
+        return '影片用的日語識別模型尚未下載';
+      case 'video_subtitle_ai_model_ready':
+        return '日語識別模型已就緒';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return '自動';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return '自動：Windows 上符合條件的 NVIDIA 顯示卡使用 CUDA，Linux 使用 Vulkan';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS 後端';
+      case 'video_subtitle_ai_moss_checking':
+        return '檢查中…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return '沒有符合 CUDA 要求的 NVIDIA 顯示卡 / 驅動程式（驅動 R580+、RTX 20 系列或更新）';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'MOSS 模型尚未下載';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return '找不到可用的顯示卡';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return '此平台沒有該後端的 audio.cpp 版本';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'audio.cpp 執行庫尚未下載';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return '僅支援 Windows 與 Linux（x64）';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => '下載 MOSS（${size}）';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS 執行庫與模型';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) => '尚未下載（需下載 ${size}）';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS 執行庫與模型已就緒';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS 無法使用：${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return '沒有可處理的本機影片檔案';
+      case 'video_subtitle_ai_no_provider':
+        return '尚未為「字幕校對」指派 AI 供應商';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return '尚未有任何一集進行過校對';
+      case 'video_subtitle_ai_open_settings':
+        return '前往「設定 › 模型 › LLM」指派';
+      case 'video_subtitle_ai_proofread_hint':
+        return '用 AI 修正人名與誤識（預設關閉）';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI 校對';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            '供應商：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return '繼續';
+      case 'video_subtitle_ai_scrape_hint':
+        return '這部作品尚未刮削，專名表只能憑標題推測，建議先刮削。';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '共 ${n} 集，其中 ${skipped} 集已有日語字幕，會略過';
+      case 'video_subtitle_ai_season_title':
+        return '整季生成日語字幕';
+      case 'video_subtitle_ai_segmenter_auto':
+        return '自動';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS 按說話者分段（需 NVIDIA 桌面電腦）；其他平台使用滑動視窗';
+      case 'video_subtitle_ai_segmenter_label':
+        return '分段方式';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return '滑動視窗';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI 校對在生成面板中開啟，首次開啟時會說明發送的內容。';
+      case 'video_subtitle_ai_settings_summary':
+        return '生成影片日語字幕的分段方式與 MOSS';
+      case 'video_subtitle_ai_settings_title':
+        return '影片日語字幕';
+      case 'video_subtitle_ai_stage_consistency':
+        return '統一寫法';
+      case 'video_subtitle_ai_stage_export':
+        return '匯出';
+      case 'video_subtitle_ai_stage_glossary':
+        return '建立專名表';
+      case 'video_subtitle_ai_stage_proofread':
+        return '校對';
+      case 'video_subtitle_ai_stage_recognize':
+        return '語音識別';
+      case 'video_subtitle_ai_stage_split':
+        return '拆分長句';
+      case 'video_subtitle_ai_start':
+        return '開始';
+      case 'video_subtitle_ai_status_cancelled':
+        return '已取消。已完成的階段會保留，按「繼續」即可接續。';
+      case 'video_subtitle_ai_status_cancelling':
+        return '正在取消…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => '完成：已儲存 ${n} 個字幕檔案';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => '失敗：${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return '專名表自相矛盾。修改後請按「繼續」。';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return '專名表似乎屬於另一部作品（表中的人名在音訊裏幾乎沒有出現）。修改或先刮削作品後，請按「繼續」。';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) => '已暫停：AI 請求失敗（${reason}）';
+      case 'video_subtitle_ai_status_starting':
+        return '正在開始…';
+      case 'video_subtitle_ai_target_label':
+        return '對象';
+      case 'video_subtitle_ai_title':
+        return '生成日語字幕';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}：檔案不存在，已略過';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) => '${title}：只存在於另一台裝置，已略過（請在該裝置上生成）';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) => 'AI 用量：${calls} 次請求，輸入 ${input}、輸出 ${output} token';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '（${n} 次請求未回報用量）';
       case 'video_subtitle_anchor_bottom':
         return '底部';
       case 'video_subtitle_anchor_top':
@@ -631143,6 +640737,68 @@ extension on _StringsZhHk {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return '照原樣採用此表';
+      case 'video_subtitle_glossary_add':
+        return '新增項目';
+      case 'video_subtitle_glossary_candidate_banner':
+        return '這張表未通過驗證，尚未儲存。修改（或照原樣採用）後，回到生成面板按「繼續」。';
+      case 'video_subtitle_glossary_delete':
+        return '刪除項目';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) => '刪除「${ja}」？重新生成專名表時，它可能會再次出現。';
+      case 'video_subtitle_glossary_edit':
+        return '編輯項目';
+      case 'video_subtitle_glossary_empty':
+        return '尚未有項目。專名表會在首次 AI 校對時自動生成，也可以手動新增。';
+      case 'video_subtitle_glossary_entry_menu':
+        return '項目操作';
+      case 'video_subtitle_glossary_field_ja':
+        return '正式寫法';
+      case 'video_subtitle_glossary_field_kind':
+        return '類別';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return '以「人名」開頭的項目會用於核對作品身份';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return '誤寫';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return '以逗號分隔';
+      case 'video_subtitle_glossary_field_note':
+        return '備註';
+      case 'video_subtitle_glossary_field_reading':
+        return '讀音（平假名）';
+      case 'video_subtitle_glossary_intro':
+        return 'AI 校對時會把字幕統一成這裏的寫法。你新增或修改過的項目，重新生成時會保留。';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return '表中已有這個寫法';
+      case 'video_subtitle_glossary_ja_empty':
+        return '請輸入正式寫法';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => '誤寫：${list}';
+      case 'video_subtitle_glossary_open':
+        return '專名表';
+      case 'video_subtitle_glossary_regenerate':
+        return '重新生成';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            '要讓 AI 重新生成專名表嗎？會再發送一次請求。你編輯過的 ${n} 項會保留。';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => '已重新生成：${n} 項';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return '只重跑統一寫法';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) => '寫法已統一，更新了 ${n} 個字幕檔案';
+      case 'video_subtitle_glossary_rerun_running':
+        return '正在重跑統一寫法…';
+      case 'video_subtitle_glossary_save':
+        return '儲存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return '專名表';
+      case 'video_subtitle_glossary_user_edited':
+        return '你編輯過，重新生成時會保留';
       case 'video_subtitle_graphic_hint':
         return '圖形字幕 · 畫面顯示 · 暫停後可點字查詞（OCR）';
       case 'video_subtitle_graphic_learning_hint':
