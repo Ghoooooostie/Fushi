@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149515 (8795 per locale)
+/// Strings: 149549 (8797 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -147031,7 +147031,7 @@ class _StringsJa extends _StringsEn {
   String get dict_mixed_kanji_part => '用語辞書に付属の漢字';
   @override
   String get dict_mixed_kanji_part_delete_note =>
-      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+      'この漢字は用語辞書に付属するものです。削除すると辞書全体（用語の見出しも含む）が削除されます。漢字カードだけを表示しないなら、ここでオフにしてください。';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -337065,7 +337065,7 @@ class _StringsZhHk extends _StringsEn {
   String get dict_mixed_kanji_part => '術語詞典內附的漢字';
   @override
   String get dict_mixed_kanji_part_delete_note =>
-      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+      '這份漢字是術語詞典內附的：刪除會把整本詞典（連同術語詞條）一起刪掉。只想不顯示漢字卡，在這裡關掉它即可。';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -484833,7 +484833,7 @@ extension on _StringsJa {
       case 'dict_mixed_kanji_part':
         return '用語辞書に付属の漢字';
       case 'dict_mixed_kanji_part_delete_note':
-        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+        return 'この漢字は用語辞書に付属するものです。削除すると辞書全体（用語の見出しも含む）が削除されます。漢字カードだけを表示しないなら、ここでオフにしてください。';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -649119,7 +649119,7 @@ extension on _StringsZhHk {
       case 'dict_mixed_kanji_part':
         return '術語詞典內附的漢字';
       case 'dict_mixed_kanji_part_delete_note':
-        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+        return '這份漢字是術語詞典內附的：刪除會把整本詞典（連同術語詞條）一起刪掉。只想不顯示漢字卡，在這裡關掉它即可。';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
