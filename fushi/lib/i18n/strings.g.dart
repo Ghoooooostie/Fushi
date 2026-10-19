@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143412 (8436 per locale)
+/// Strings: 143548 (8444 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2728,7 +2728,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get debug_log_toggle => 'Enable debug log';
   String get decrease => 'Decrease';
   String get deduplicate_pitch_accents => 'Deduplicate pitch accents';
-  String get delete_choices_remember => 'Remember these choices';
   String get delete_collection => 'Delete collection';
   String get delete_collection_also_books => 'Also delete the books in it';
   String get delete_collection_also_videos => 'Also delete the videos';
@@ -3135,6 +3134,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_opds_allow_http => 'Allow plain HTTP';
   String get discovery_opds_allow_http_hint =>
       'Needed for a self-hosted server on your local network';
+  String get discovery_opds_api_key => 'API key (optional)';
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
   String get discovery_opds_enabled => 'Enabled';
   String get discovery_opds_name => 'Display name';
   String get discovery_opds_name_hint => 'Leave empty to use the host name';
@@ -3148,15 +3150,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connection failed: ${reason}';
   String discovery_opds_test_ok({required Object count}) =>
       'Connected. Root catalog has ${count} entries';
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
   String get discovery_opds_url => 'Catalog URL';
   String get discovery_opds_url_hint =>
-      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   String get discovery_opds_url_invalid =>
       'Enter a valid HTTP or HTTPS catalog URL';
   String get discovery_opds_url_needs_http_optin =>
       'Plain HTTP needs the switch below';
   String get discovery_opds_username => 'Username';
   String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   String get discovery_partial_failure => 'Some sources are unavailable';
   String get discovery_search_hint => 'Search online resources';
   String get discovery_source_capability_browsable =>
@@ -8804,7 +8814,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_density_standard => 'Standard';
   String get srs_card_appearance_design_skin => 'Match the design system';
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   String get srs_card_appearance_dict_unified_hint =>
       'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
@@ -10491,8 +10501,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
   String get video_bluray_stream_encrypted =>
       'This Blu-ray stream is still AACS-encrypted. Fushi does not decrypt protected discs, so it can only play unencrypted BDMV folders or video files.';
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   String get video_bottom_next_cue => 'Next subtitle (forward a bit if none)';
   String get video_bottom_play_pause => 'Play / pause';
   String get video_bottom_prev_cue => 'Previous subtitle (back a bit if none)';
@@ -10672,8 +10692,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_discovery_subscribe => 'Subscribe';
   String get video_discovery_subscription_manage => 'Manage subscription';
   String get video_discovery_subtitle_search => 'Search subtitles';
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   String get video_double_tap_next_cue => 'Next line';
@@ -11326,8 +11344,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_hdr_output => 'HDR / 10-bit output';
   String get video_setting_hdr_output_always => 'Always';
   String get video_setting_hdr_output_auto => 'Auto';
-  String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window (Dolby Vision profile 5 always uses it, since only that renderer shows its colors correctly); Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows only. Auto outputs HDR when the display is in HDR mode and the video is HDR; Always outputs every video as HDR / 10-bit; Off always shows SDR (HDR videos are tone-mapped). Video and interface are composited together either way.';
   String get video_setting_hdr_output_off => 'Off';
   String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
   String get video_setting_hdr_tone_mapping_hint =>
@@ -11442,6 +11460,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Obscure secondary subtitle';
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   String get video_setting_seek_seconds => 'Seek seconds';
   String get video_setting_shortcuts_hint =>
       'View and customize the player\'s keyboard and gamepad shortcuts';
@@ -11479,9 +11501,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Choose how subtitles are obscured for listening practice: off, blurred (hover or tap to reveal), or hidden.';
   String get video_setting_subtitle_obscure_none => 'Off';
   String get video_setting_subtitle_obscure_reveal =>
-      'Reveal when paused or hovered';
+      'Primary: reveal when paused or hovered';
   String get video_setting_subtitle_obscure_reveal_hint =>
-      'While subtitles are blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+      'While the primary subtitle is blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping it reveals it temporarily. Turn this off to keep it obscured no matter what.';
   String get video_setting_subtitle_outline => 'Outline width';
   String get video_setting_subtitle_outline_color => 'Outline color';
   String get video_setting_subtitle_position => 'Vertical position';
@@ -16409,8 +16431,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'إزالة تكرار النبرات';
   @override
-  String get delete_choices_remember => 'تذكّر هذه الخيارات';
-  @override
   String get delete_collection => 'حذف المجموعة';
   @override
   String get delete_collection_also_books => 'حذف الكتب الموجودة فيها أيضاً';
@@ -17114,6 +17134,11 @@ class _StringsAr extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'مطلوب لخادم ذاتي الاستضافة على شبكتك المحلية';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'مُفعّل';
   @override
   String get discovery_opds_name => 'الاسم المعروض';
@@ -17137,10 +17162,19 @@ class _StringsAr extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'رابط الفهرس';
   @override
   String get discovery_opds_url_hint =>
-      'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds';
+      'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'أدخل رابط فهرس HTTP أو HTTPS صالحًا';
@@ -17151,6 +17185,9 @@ class _StringsAr extends _StringsEn {
   String get discovery_opds_username => 'اسم المستخدم';
   @override
   String get discovery_opds_username_hint => 'اتركه فارغًا للفهرس العام';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'بعض المصادر غير متاحة';
   @override
@@ -25273,10 +25310,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'تلقائي';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'ثنية الصفحة';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'تظليل الفاصل بين صفحتين كأنه كتاب مفتوح (عمودان في كل صفحة)';
   @override
   String get reader_paginated => 'صفحات';
   @override
@@ -26814,7 +26851,7 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -29751,8 +29788,20 @@ class _StringsAr extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'لا يزال بث Blu-ray هذا مشفّرًا بـ AACS. لا يفك Fushi تشفير الأقراص المحمية، لذا يمكنه تشغيل مجلدات BDMV غير المشفّرة أو ملفات الفيديو فقط.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'الترجمة التالية (تقديم قليلًا إن لم توجد)';
@@ -30064,9 +30113,6 @@ class _StringsAr extends _StringsEn {
   String get video_discovery_subscription_manage => 'إدارة الاشتراك';
   @override
   String get video_discovery_subtitle_search => 'بحث عن الترجمات';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'فيديو Dolby Vision بالملف التعريفي 5: ستبدو الألوان بنفسجية أو خضراء عند تعطيل إخراج HDR / 10 بت. اضبطه على تلقائي لإصلاحها.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'فيديو Dolby Vision بالملف التعريفي 5: لا تستطيع هذه المنصة عرض ألوانه بشكل صحيح بعد، لذا قد تبدو الصورة بنفسجية أو خضراء.';
@@ -31165,8 +31211,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'تلقائي';
   @override
-  String get video_setting_hdr_output_hint =>
-      'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows فقط. «تلقائي» يُخرج HDR عندما تكون الشاشة في وضع HDR والفيديو بتقنية HDR؛ «دائمًا» يُخرج كل فيديو بتقنية HDR / 10 بت؛ «إيقاف» يعرض SDR دائمًا (تُطبَّق مطابقة الألوان على فيديوهات HDR). في كل الأحوال يُركَّب الفيديو والواجهة معًا.';
   @override
   String get video_setting_hdr_output_off => 'إيقاف';
   @override
@@ -31369,6 +31415,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'تمويه أو إخفاء الترجمة الثانوية (المترجمة)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'ثوانٍ الانتقال';
   @override
@@ -36881,8 +36933,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Tonhöhenakzente deduplizieren';
   @override
-  String get delete_choices_remember => 'Diese Auswahl merken';
-  @override
   String get delete_collection => 'Sammlung löschen';
   @override
   String get delete_collection_also_books =>
@@ -37601,6 +37651,11 @@ class _StringsDe extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Nötig für einen selbst gehosteten Server im lokalen Netzwerk';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Aktiviert';
   @override
   String get discovery_opds_name => 'Anzeigename';
@@ -37625,10 +37680,19 @@ class _StringsDe extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Verbunden. Der Stammkatalog hat ${count} Einträge';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'Katalog-URL';
   @override
   String get discovery_opds_url_hint =>
-      'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds';
+      'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Gib eine gültige HTTP- oder HTTPS-Katalog-URL ein';
@@ -37640,6 +37704,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Für einen öffentlichen Katalog leer lassen';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Einige Quellen sind nicht verfügbar';
   @override
@@ -45956,10 +46023,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automatisch';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Buchfalz';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Den Steg zwischen zwei Seiten schattieren, wie bei einem aufgeschlagenen Buch (zwei Spalten pro Seite)';
   @override
   String get reader_paginated => 'Seitenweise';
   @override
@@ -47522,7 +47589,7 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -50488,8 +50555,20 @@ class _StringsDe extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Dieser Blu-ray-Stream ist noch AACS-verschlüsselt. Fushi entschlüsselt keine geschützten Discs und kann daher nur unverschlüsselte BDMV-Ordner oder Videodateien abspielen.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Nächster Untertitel (falls keiner, etwas vor)';
@@ -50807,9 +50886,6 @@ class _StringsDe extends _StringsEn {
   String get video_discovery_subscription_manage => 'Abonnement verwalten';
   @override
   String get video_discovery_subtitle_search => 'Untertitel suchen';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby-Vision-Profil-5-Video: Die Farben sehen bei ausgeschalteter HDR-/10-Bit-Ausgabe violett oder grün aus. Stelle sie auf Automatisch, um das zu beheben.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby-Vision-Profil-5-Video: Diese Plattform kann dessen Farben noch nicht korrekt darstellen, daher kann das Bild violett oder grün aussehen.';
@@ -51933,8 +52009,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automatisch';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Nur Windows. Automatisch gibt HDR aus, wenn der Bildschirm im HDR-Modus ist und das Video HDR ist; Immer gibt jedes Video als HDR / 10 Bit aus; Aus zeigt immer SDR (HDR-Videos werden tonemapped). Video und Oberfläche werden in jedem Fall gemeinsam zusammengesetzt.';
   @override
   String get video_setting_hdr_output_off => 'Aus';
   @override
@@ -52142,6 +52218,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Den sekundären (Übersetzungs-)Untertitel weichzeichnen oder ausblenden';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Spulschritt (Sekunden)';
   @override
@@ -57695,8 +57777,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Deduplicar acentos tonales';
   @override
-  String get delete_choices_remember => 'Recordar estas opciones';
-  @override
   String get delete_collection => 'Eliminar colección';
   @override
   String get delete_collection_also_books =>
@@ -58418,6 +58498,11 @@ class _StringsEs extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Necesario para un servidor autoalojado en tu red local';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Activado';
   @override
   String get discovery_opds_name => 'Nombre visible';
@@ -58442,10 +58527,19 @@ class _StringsEs extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Conectado. El catálogo raíz tiene ${count} entradas';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL del catálogo';
   @override
   String get discovery_opds_url_hint =>
-      'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds';
+      'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Introduce una URL de catálogo HTTP o HTTPS válida';
@@ -58457,6 +58551,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Déjalo vacío para un catálogo público';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure =>
       'Algunas fuentes no están disponibles';
@@ -66780,10 +66877,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automático';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Pliegue central';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Sombrea el medianil entre dos páginas, como un libro abierto (dos columnas por página)';
   @override
   String get reader_paginated => 'Paginado';
   @override
@@ -68355,7 +68452,7 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -71332,8 +71429,20 @@ class _StringsEs extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Esta transmisión Blu-ray sigue cifrada con AACS. Fushi no descifra discos protegidos, por lo que solo puede reproducir carpetas BDMV sin cifrar o archivos de vídeo.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Subtítulo siguiente (avanza un poco si no hay)';
@@ -71657,9 +71766,6 @@ class _StringsEs extends _StringsEn {
   String get video_discovery_subscription_manage => 'Administrar suscripción';
   @override
   String get video_discovery_subtitle_search => 'Buscar subtítulos';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Vídeo Dolby Vision perfil 5: los colores se verán morados o verdes con la salida HDR / 10 bits desactivada. Ponla en Auto para corregirlo.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Vídeo Dolby Vision perfil 5: esta plataforma aún no puede mostrar sus colores correctamente, por lo que la imagen puede verse morada o verde.';
@@ -72781,8 +72887,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automático';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Solo Windows. Automático emite HDR cuando la pantalla está en modo HDR y el vídeo es HDR; Siempre emite todos los vídeos en HDR / 10 bits; Desactivado muestra siempre SDR (los vídeos HDR se mapean en tono). En cualquier caso, el vídeo y la interfaz se componen juntos.';
   @override
   String get video_setting_hdr_output_off => 'Desactivado';
   @override
@@ -72990,6 +73096,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Difumina u oculta el subtítulo secundario (traducción)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Segundos de salto';
   @override
@@ -78577,8 +78689,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Dédupliquer les accents tonaux';
   @override
-  String get delete_choices_remember => 'Mémoriser ces choix';
-  @override
   String get delete_collection => 'Supprimer la collection';
   @override
   String get delete_collection_also_books =>
@@ -79304,6 +79414,11 @@ class _StringsFr extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Nécessaire pour un serveur auto-hébergé sur votre réseau local';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Activé';
   @override
   String get discovery_opds_name => 'Nom affiché';
@@ -79328,10 +79443,19 @@ class _StringsFr extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Connecté. Le catalogue racine contient ${count} entrées';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL du catalogue';
   @override
   String get discovery_opds_url_hint =>
-      'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds';
+      'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Saisissez une URL de catalogue HTTP ou HTTPS valide';
@@ -79343,6 +79467,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Laissez vide pour un catalogue public';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure =>
       'Certaines sources sont indisponibles';
@@ -87694,10 +87821,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automatique';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Pli central';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Ombre le blanc entre deux pages, comme un livre ouvert (deux colonnes par page)';
   @override
   String get reader_paginated => 'Paginé';
   @override
@@ -89275,7 +89402,7 @@ class _StringsFr extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -92250,8 +92377,20 @@ class _StringsFr extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Ce flux Blu-ray est encore chiffré en AACS. Fushi ne déchiffre pas les disques protégés ; il ne peut donc lire que des dossiers BDMV non chiffrés ou des fichiers vidéo.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Sous-titre suivant (avancer un peu s\'il n\'y en a pas)';
@@ -92574,9 +92713,6 @@ class _StringsFr extends _StringsEn {
   String get video_discovery_subscription_manage => 'Gérer l\'abonnement';
   @override
   String get video_discovery_subtitle_search => 'Rechercher des sous-titres';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Vidéo Dolby Vision profil 5 : les couleurs paraîtront violettes ou vertes avec la sortie HDR / 10 bits désactivée. Réglez-la sur Auto pour corriger.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Vidéo Dolby Vision profil 5 : cette plateforme ne sait pas encore rendre correctement ses couleurs, l\'image peut donc paraître violette ou verte.';
@@ -93707,8 +93843,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Auto';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows uniquement. Auto produit du HDR quand l’écran est en mode HDR et que la vidéo est HDR ; Toujours sort chaque vidéo en HDR / 10 bits ; Désactivé affiche toujours en SDR (les vidéos HDR sont tone-mappées). La vidéo et l’interface sont composées ensemble dans tous les cas.';
   @override
   String get video_setting_hdr_output_off => 'Désactivé';
   @override
@@ -93918,6 +94054,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Flouter ou cacher le sous-titre secondaire (traduction)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Pas d\'avance/recul (secondes)';
   @override
@@ -99448,8 +99590,6 @@ class _StringsId extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Hapus duplikat aksen nada';
   @override
-  String get delete_choices_remember => 'Ingat pilihan ini';
-  @override
   String get delete_collection => 'Hapus koleksi';
   @override
   String get delete_collection_also_books => 'Hapus juga buku di dalamnya';
@@ -100160,6 +100300,11 @@ class _StringsId extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Diperlukan untuk server milik sendiri di jaringan lokal';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Aktif';
   @override
   String get discovery_opds_name => 'Nama tampilan';
@@ -100183,10 +100328,19 @@ class _StringsId extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Terhubung. Katalog akar berisi ${count} entri';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL katalog';
   @override
   String get discovery_opds_url_hint =>
-      'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds';
+      'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Masukkan URL katalog HTTP atau HTTPS yang valid';
@@ -100197,6 +100351,9 @@ class _StringsId extends _StringsEn {
   String get discovery_opds_username => 'Nama pengguna';
   @override
   String get discovery_opds_username_hint => 'Kosongkan untuk katalog publik';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Beberapa sumber tidak tersedia';
   @override
@@ -108409,10 +108566,10 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Otomatis';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Lipatan halaman';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Beri bayangan di celah antara dua halaman, seperti buku terbuka (dua kolom per halaman)';
   @override
   String get reader_paginated => 'Paginasi';
   @override
@@ -109959,7 +110116,7 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -112910,8 +113067,20 @@ class _StringsId extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Stream Blu-ray ini masih terenkripsi AACS. Fushi tidak mendekripsi disk yang dilindungi, sehingga hanya dapat memutar folder BDMV tanpa enkripsi atau file video.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Subtitle berikutnya (maju sedikit jika tidak ada)';
@@ -113230,9 +113399,6 @@ class _StringsId extends _StringsEn {
   String get video_discovery_subscription_manage => 'Kelola langganan';
   @override
   String get video_discovery_subtitle_search => 'Cari subtitle';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Video Dolby Vision profil 5: warna akan tampak ungu atau hijau saat output HDR / 10-bit dimatikan. Atur ke Otomatis untuk memperbaikinya.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Video Dolby Vision profil 5: platform ini belum dapat merender warnanya dengan benar, sehingga gambar mungkin tampak ungu atau hijau.';
@@ -114344,8 +114510,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Otomatis';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Hanya Windows. Otomatis mengeluarkan HDR saat layar dalam mode HDR dan videonya HDR; Selalu mengeluarkan setiap video sebagai HDR / 10-bit; Mati selalu menampilkan SDR (video HDR di-tone-map). Video dan antarmuka selalu digabungkan bersama.';
   @override
   String get video_setting_hdr_output_off => 'Mati';
   @override
@@ -114548,6 +114714,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Buramkan atau sembunyikan subtitle sekunder (terjemahan)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Detik lompatan';
   @override
@@ -120072,8 +120244,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Deduplica accenti tonali';
   @override
-  String get delete_choices_remember => 'Ricorda queste scelte';
-  @override
   String get delete_collection => 'Elimina raccolta';
   @override
   String get delete_collection_also_books => 'Elimina anche i libri contenuti';
@@ -120789,6 +120959,11 @@ class _StringsIt extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Necessario per un server self-hosted sulla rete locale';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Attivo';
   @override
   String get discovery_opds_name => 'Nome visualizzato';
@@ -120812,10 +120987,19 @@ class _StringsIt extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Connesso. Il catalogo radice ha ${count} voci';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL del catalogo';
   @override
   String get discovery_opds_url_hint =>
-      'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds';
+      'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Inserisci un URL di catalogo HTTP o HTTPS valido';
@@ -120827,6 +121011,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Lascia vuoto per un catalogo pubblico';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Alcune fonti non sono disponibili';
   @override
@@ -129112,10 +129299,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automatico';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Piega centrale';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Ombreggia il margine tra due pagine, come un libro aperto (due colonne per pagina)';
   @override
   String get reader_paginated => 'Paginato';
   @override
@@ -130687,7 +130874,7 @@ class _StringsIt extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -133647,8 +133834,20 @@ class _StringsIt extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Questo flusso Blu-ray è ancora cifrato con AACS. Fushi non decifra i dischi protetti, quindi può riprodurre solo cartelle BDMV non cifrate o file video.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Sottotitolo successivo (avanti un po\' se assente)';
@@ -133969,9 +134168,6 @@ class _StringsIt extends _StringsEn {
   String get video_discovery_subscription_manage => 'Gestisci abbonamento';
   @override
   String get video_discovery_subtitle_search => 'Cerca sottotitoli';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Video Dolby Vision profilo 5: i colori appariranno viola o verdi con l\'uscita HDR / 10 bit disattivata. Impostala su Auto per correggerli.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Video Dolby Vision profilo 5: questa piattaforma non sa ancora renderne correttamente i colori, quindi l\'immagine può apparire viola o verde.';
@@ -135084,8 +135280,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automatico';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Solo Windows. Automatico emette HDR quando lo schermo è in modalità HDR e il video è HDR; Sempre emette ogni video in HDR / 10 bit; Disattivato mostra sempre SDR (i video HDR vengono tone-mappati). Video e interfaccia vengono composti insieme in ogni caso.';
   @override
   String get video_setting_hdr_output_off => 'Disattivato';
   @override
@@ -135294,6 +135490,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Sfoca o nascondi il sottotitolo secondario (traduzione)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Secondi di spostamento';
   @override
@@ -140658,8 +140860,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'アクセント重複除外';
   @override
-  String get delete_choices_remember => 'この選択を記憶する';
-  @override
   String get delete_collection => 'コレクションを削除';
   @override
   String get delete_collection_also_books => '中の書籍も削除';
@@ -141339,6 +141539,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_opds_allow_http_hint => 'ローカルネットワークの自前サーバーに必要です';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => '有効';
   @override
   String get discovery_opds_name => '表示名';
@@ -141362,10 +141567,19 @@ class _StringsJa extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       '接続しました。ルートカタログに ${count} 件あります';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'カタログ URL';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS エンドポイント。例: https://books.example.com/api/v1/opds';
+      'OPDS エンドポイント。例: https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       '有効な HTTP または HTTPS のカタログ URL を入力してください';
@@ -141375,6 +141589,9 @@ class _StringsJa extends _StringsEn {
   String get discovery_opds_username => 'ユーザー名';
   @override
   String get discovery_opds_username_hint => '公開カタログなら空欄のままで構いません';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => '一部のソースが利用できません';
   @override
@@ -149209,10 +149426,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_page_columns_auto => '自動';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'ノドの陰影';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      '1画面2段のとき、見開きの本のように2ページの間に綴じ目の陰影を描きます';
   @override
   String get reader_paginated => 'ページ送り';
   @override
@@ -150706,7 +150923,7 @@ class _StringsJa extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -153573,8 +153790,20 @@ class _StringsJa extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'この Blu-ray ストリームはまだ AACS で暗号化されています。Fushi は保護されたディスクの復号を行わないため、暗号化されていない BDMV フォルダまたは動画ファイルのみ再生できます。';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue => '次の字幕（なければ少し進む）';
   @override
@@ -153871,9 +154100,6 @@ class _StringsJa extends _StringsEn {
   String get video_discovery_subscription_manage => '購読を管理';
   @override
   String get video_discovery_subtitle_search => '字幕を検索';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision プロファイル 5 の動画: HDR / 10-bit 出力がオフだと、色が紫や緑がかって見えます。「自動」に設定すると解消します。';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision プロファイル 5 の動画: このプラットフォームでは色をまだ正しく表示できないため、映像が紫や緑がかって見える場合があります。';
@@ -154930,8 +155156,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => '自動';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows のみ。自動：ディスプレイが HDR モードで動画が HDR のとき HDR 出力；常に：すべての動画を HDR / 10-bit で出力；オフ：常に SDR 表示（HDR 動画はトーンマッピング）。どの設定でも動画と画面は同じフレームで合成されます。';
   @override
   String get video_setting_hdr_output_off => 'オフ';
   @override
@@ -155124,6 +155350,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       '副字幕（翻訳）をぼかすまたは非表示にします';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'シークの秒数';
   @override
@@ -160398,8 +160630,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => '악센트 중복 제거';
   @override
-  String get delete_choices_remember => '이 선택 기억하기';
-  @override
   String get delete_collection => '컬렉션 삭제';
   @override
   String get delete_collection_also_books => '포함된 도서도 삭제';
@@ -161075,6 +161305,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get discovery_opds_allow_http_hint => '로컬 네트워크의 자체 호스팅 서버에 필요합니다';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => '사용';
   @override
   String get discovery_opds_name => '표시 이름';
@@ -161098,10 +161333,19 @@ class _StringsKo extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => '카탈로그 URL';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds';
+      'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid => '올바른 HTTP 또는 HTTPS 카탈로그 URL을 입력하세요';
   @override
@@ -161110,6 +161354,9 @@ class _StringsKo extends _StringsEn {
   String get discovery_opds_username => '사용자 이름';
   @override
   String get discovery_opds_username_hint => '공개 카탈로그라면 비워 두세요';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => '일부 소스를 사용할 수 없습니다';
   @override
@@ -168977,10 +169224,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_page_columns_auto => '자동';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => '가운데 접힘';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      '한 화면에 두 단일 때 펼친 책처럼 두 페이지 사이에 제본선 그림자를 그립니다';
   @override
   String get reader_paginated => '페이지 넘김';
   @override
@@ -170472,7 +170719,7 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -173341,8 +173588,20 @@ class _StringsKo extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       '이 Blu-ray 스트림은 아직 AACS로 암호화되어 있습니다. Fushi는 보호된 디스크를 복호화하지 않으므로 암호화되지 않은 BDMV 폴더 또는 비디오 파일만 재생할 수 있습니다.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue => '다음 자막(없으면 조금 앞으로)';
   @override
@@ -173641,9 +173900,6 @@ class _StringsKo extends _StringsEn {
   String get video_discovery_subscription_manage => '구독 관리';
   @override
   String get video_discovery_subtitle_search => '자막 검색';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision 프로파일 5 비디오: HDR / 10비트 출력이 꺼져 있으면 색상이 보라색이나 녹색으로 보입니다. 자동으로 설정하면 해결됩니다.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision 프로파일 5 비디오: 이 플랫폼에서는 아직 색상을 올바르게 표현할 수 없어 화면이 보라색이나 녹색으로 보일 수 있습니다.';
@@ -174704,8 +174960,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => '자동';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows 전용. 자동: 디스플레이가 HDR 모드이고 영상이 HDR이면 HDR로 출력, 항상: 모든 영상을 HDR / 10비트로 출력, 끄기: 항상 SDR로 표시(HDR 영상은 톤 매핑). 어느 경우든 영상과 인터페이스는 한 화면에서 합성됩니다.';
   @override
   String get video_setting_hdr_output_off => '끄기';
   @override
@@ -174900,6 +175156,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       '보조(번역) 자막을 흐리게 하거나 숨깁니다';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => '이동 간격(초)';
   @override
@@ -180352,8 +180614,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Toonhoogteaccenten dedupliceren';
   @override
-  String get delete_choices_remember => 'Deze keuzes onthouden';
-  @override
   String get delete_collection => 'Collectie verwijderen';
   @override
   String get delete_collection_also_books => 'Ook de boeken erin verwijderen';
@@ -181070,6 +181330,11 @@ class _StringsNl extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Nodig voor een zelfgehoste server in je lokale netwerk';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Ingeschakeld';
   @override
   String get discovery_opds_name => 'Weergavenaam';
@@ -181094,10 +181359,19 @@ class _StringsNl extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Verbonden. De hoofdcatalogus heeft ${count} items';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'Catalogus-URL';
   @override
   String get discovery_opds_url_hint =>
-      'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds';
+      'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Voer een geldige HTTP- of HTTPS-catalogus-URL in';
@@ -181109,6 +181383,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Laat leeg voor een openbare catalogus';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure =>
       'Sommige bronnen zijn niet beschikbaar';
@@ -189362,10 +189639,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automatisch';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Middenvouw';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Arceer de rug tussen twee pagina\'s, zoals bij een opengeslagen boek (twee kolommen per pagina)';
   @override
   String get reader_paginated => 'Gepagineerd';
   @override
@@ -190926,7 +191203,7 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -193891,8 +194168,20 @@ class _StringsNl extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Deze Blu-ray-stream is nog steeds AACS-versleuteld. Fushi ontsleutelt geen beveiligde schijven en kan dus alleen onversleutelde BDMV-mappen of videobestanden afspelen.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Volgende ondertitel (anders een stukje vooruit)';
@@ -194211,9 +194500,6 @@ class _StringsNl extends _StringsEn {
   String get video_discovery_subscription_manage => 'Abonnement beheren';
   @override
   String get video_discovery_subtitle_search => 'Ondertitels zoeken';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision profiel 5-video: kleuren lijken paars of groen als HDR-/10-bit-uitvoer is uitgeschakeld. Zet het op Automatisch om dit te verhelpen.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profiel 5-video: dit platform kan de kleuren nog niet correct weergeven, dus het beeld kan paars of groen lijken.';
@@ -195326,8 +195612,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automatisch';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Alleen Windows. Automatisch geeft HDR weer als het scherm in HDR-modus staat en de video HDR is; Altijd geeft elke video als HDR / 10-bit weer; Uit toont altijd SDR (HDR-video’s worden getonemapt). Video en interface worden in alle gevallen samen samengesteld.';
   @override
   String get video_setting_hdr_output_off => 'Uit';
   @override
@@ -195533,6 +195819,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Vervaag of verberg de secundaire (vertaling) ondertitel';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Spoelstap (seconden)';
   @override
@@ -201072,8 +201364,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Deduplicar acentos tonais';
   @override
-  String get delete_choices_remember => 'Lembrar estas escolhas';
-  @override
   String get delete_collection => 'Excluir coleção';
   @override
   String get delete_collection_also_books => 'Também excluir os livros nela';
@@ -201791,6 +202081,11 @@ class _StringsPtBr extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Necessário para um servidor auto-hospedado na sua rede local';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Ativado';
   @override
   String get discovery_opds_name => 'Nome exibido';
@@ -201814,10 +202109,19 @@ class _StringsPtBr extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Conectado. O catálogo raiz tem ${count} itens';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL do catálogo';
   @override
   String get discovery_opds_url_hint =>
-      'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds';
+      'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Informe uma URL de catálogo HTTP ou HTTPS válida';
@@ -201829,6 +202133,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Deixe vazio para um catálogo público';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Algumas fontes estão indisponíveis';
   @override
@@ -210118,10 +210425,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automático';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Dobra central';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Sombreia o espaço entre duas páginas, como um livro aberto (duas colunas por página)';
   @override
   String get reader_paginated => 'Paginado';
   @override
@@ -211683,7 +211990,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -214645,8 +214952,20 @@ class _StringsPtBr extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Este stream Blu-ray ainda está criptografado com AACS. O Fushi não descriptografa discos protegidos, então só consegue reproduzir pastas BDMV ou arquivos de vídeo sem criptografia.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Próxima legenda (avança um pouco se não houver)';
@@ -214967,9 +215286,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_discovery_subscription_manage => 'Gerenciar assinatura';
   @override
   String get video_discovery_subtitle_search => 'Buscar legendas';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Vídeo Dolby Vision perfil 5: as cores ficarão roxas ou verdes com a saída HDR / 10 bits desativada. Defina como Automático para corrigir.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Vídeo Dolby Vision perfil 5: esta plataforma ainda não consegue renderizar as cores corretamente, então a imagem pode ficar roxa ou verde.';
@@ -216092,8 +216408,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automático';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Somente Windows. Automático gera HDR quando a tela está no modo HDR e o vídeo é HDR; Sempre gera todo vídeo em HDR / 10 bits; Desligado mostra sempre SDR (vídeos HDR passam por mapeamento de tons). Em qualquer caso, vídeo e interface são compostos juntos.';
   @override
   String get video_setting_hdr_output_off => 'Desligado';
   @override
@@ -216301,6 +216617,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Desfocar ou ocultar a legenda secundária (tradução)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Segundos para avançar/retroceder';
   @override
@@ -221835,8 +222157,6 @@ class _StringsRu extends _StringsEn {
   String get deduplicate_pitch_accents =>
       'Удалить дубликаты тональных ударений';
   @override
-  String get delete_choices_remember => 'Запомнить этот выбор';
-  @override
   String get delete_collection => 'Удалить коллекцию';
   @override
   String get delete_collection_also_books => 'Также удалить книги из неё';
@@ -222547,6 +222867,11 @@ class _StringsRu extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Нужно для сервера, размещённого в вашей локальной сети';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Включено';
   @override
   String get discovery_opds_name => 'Отображаемое имя';
@@ -222571,10 +222896,19 @@ class _StringsRu extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Подключено. В корневом каталоге ${count} записей';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL каталога';
   @override
   String get discovery_opds_url_hint =>
-      'Точка доступа OPDS, например https://books.example.com/api/v1/opds';
+      'Точка доступа OPDS, например https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Введите корректный URL каталога по HTTP или HTTPS';
@@ -222586,6 +222920,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Для публичного каталога оставьте пустым';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Некоторые источники недоступны';
   @override
@@ -230853,10 +231190,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Авто';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Корешок';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Затенять промежуток между двумя страницами, как в раскрытой книге (две колонки на странице)';
   @override
   String get reader_paginated => 'Постраничный';
   @override
@@ -232418,7 +232755,7 @@ class _StringsRu extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -235372,8 +235709,20 @@ class _StringsRu extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Этот поток Blu-ray всё ещё зашифрован AACS. Fushi не расшифровывает защищённые диски, поэтому может воспроизводить только незашифрованные папки BDMV или видеофайлы.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Следующий субтитр (если нет — немного вперёд)';
@@ -235690,9 +236039,6 @@ class _StringsRu extends _StringsEn {
   String get video_discovery_subscription_manage => 'Управление подпиской';
   @override
   String get video_discovery_subtitle_search => 'Поиск субтитров';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Видео Dolby Vision профиля 5: при выключенном выводе HDR / 10 бит цвета будут фиолетовыми или зелёными. Установите «Авто», чтобы исправить.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Видео Dolby Vision профиля 5: эта платформа пока не может правильно отображать его цвета, поэтому картинка может выглядеть фиолетовой или зелёной.';
@@ -236814,8 +237160,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Авто';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Только Windows. «Авто» выводит HDR, когда экран в режиме HDR и видео в HDR; «Всегда» выводит любое видео как HDR / 10 бит; «Выкл.» всегда показывает SDR (HDR-видео проходит тональное отображение). В любом случае видео и интерфейс компонуются вместе.';
   @override
   String get video_setting_hdr_output_off => 'Выключено';
   @override
@@ -237020,6 +237366,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Размыть или скрыть вторичные (переводные) субтитры';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Шаг перемотки (с)';
   @override
@@ -242492,8 +242844,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'ลบสำเนียงซ้ำ';
   @override
-  String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
-  @override
   String get delete_collection => 'ลบคอลเลกชัน';
   @override
   String get delete_collection_also_books => 'ลบหนังสือในนั้นด้วย';
@@ -243201,6 +243551,11 @@ class _StringsTh extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'จำเป็นสำหรับเซิร์ฟเวอร์ที่โฮสต์เองในเครือข่ายภายใน';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'เปิดใช้งาน';
   @override
   String get discovery_opds_name => 'ชื่อที่แสดง';
@@ -243224,10 +243579,19 @@ class _StringsTh extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL แคตตาล็อก';
   @override
   String get discovery_opds_url_hint =>
-      'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds';
+      'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'กรอก URL แคตตาล็อกแบบ HTTP หรือ HTTPS ที่ถูกต้อง';
@@ -243239,6 +243603,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'เว้นว่างไว้สำหรับแคตตาล็อกสาธารณะ';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'แหล่งบางแห่งไม่พร้อมใช้งาน';
   @override
@@ -251363,10 +251730,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'อัตโนมัติ';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'รอยพับกลางหน้า';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'แรเงาช่องว่างระหว่างสองหน้าให้เหมือนหนังสือที่เปิดอยู่ (สองคอลัมน์ต่อหน้า)';
   @override
   String get reader_paginated => 'แบ่งหน้า';
   @override
@@ -252904,7 +253271,7 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -255841,8 +256208,20 @@ class _StringsTh extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'สตรีม Blu-ray นี้ยังเข้ารหัส AACS อยู่ Fushi ไม่ถอดรหัสแผ่นที่มีการป้องกัน จึงเล่นได้เฉพาะโฟลเดอร์ BDMV หรือไฟล์วิดีโอที่ไม่เข้ารหัส';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'คำบรรยายถัดไป (เดินหน้าเล็กน้อยถ้าไม่มี)';
@@ -256156,9 +256535,6 @@ class _StringsTh extends _StringsEn {
   String get video_discovery_subscription_manage => 'จัดการการติดตาม';
   @override
   String get video_discovery_subtitle_search => 'ค้นหาคำบรรยาย';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'วิดีโอ Dolby Vision โปรไฟล์ 5: สีจะออกม่วงหรือเขียวเมื่อปิดเอาต์พุต HDR / 10 บิต ตั้งเป็น อัตโนมัติ เพื่อแก้ไข';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'วิดีโอ Dolby Vision โปรไฟล์ 5: แพลตฟอร์มนี้ยังแสดงสีได้ไม่ถูกต้อง ภาพจึงอาจออกม่วงหรือเขียว';
@@ -257252,8 +257628,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'อัตโนมัติ';
   @override
-  String get video_setting_hdr_output_hint =>
-      'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
+  String get video_setting_hdr_output_mode_hint =>
+      'เฉพาะ Windows อัตโนมัติ: ส่งออก HDR เมื่อจอแสดงผลอยู่ในโหมด HDR และวิดีโอเป็น HDR; เสมอ: ส่งออกทุกวิดีโอเป็น HDR / 10 บิต; ปิด: แสดงเป็น SDR เสมอ (วิดีโอ HDR จะถูกโทนแมป) ไม่ว่าแบบใด วิดีโอและอินเทอร์เฟซจะถูกรวมภาพพร้อมกัน';
   @override
   String get video_setting_hdr_output_off => 'ปิด';
   @override
@@ -257454,6 +257830,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'เบลอหรือซ่อนคำบรรยายรอง (คำแปล)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'ระยะเลื่อนเวลา (วินาที)';
   @override
@@ -262935,8 +263317,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Ton vurgularını tekrarsızlaştır';
   @override
-  String get delete_choices_remember => 'Bu seçimleri hatırla';
-  @override
   String get delete_collection => 'Koleksiyonu sil';
   @override
   String get delete_collection_also_books => 'İçindeki kitapları da sil';
@@ -263649,6 +264029,11 @@ class _StringsTr extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Yerel ağdaki kendi sunucun için gerekli';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Etkin';
   @override
   String get discovery_opds_name => 'Görünen ad';
@@ -263673,10 +264058,19 @@ class _StringsTr extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Bağlanıldı. Kök katalogda ${count} girdi var';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'Katalog URL\'si';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds';
+      'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Geçerli bir HTTP veya HTTPS katalog URL\'si gir';
@@ -263688,6 +264082,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Herkese açık katalog için boş bırak';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Bazı kaynaklar kullanılamıyor';
   @override
@@ -271905,10 +272302,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Otomatik';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Orta kıvrım';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'İki sayfa arasındaki boşluğu açık bir kitap gibi gölgelendir (sayfa başına iki sütun)';
   @override
   String get reader_paginated => 'Sayfalı';
   @override
@@ -273455,7 +273852,7 @@ class _StringsTr extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -276408,8 +276805,20 @@ class _StringsTr extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Bu Blu-ray akışı hâlâ AACS ile şifreli. Fushi korumalı diskleri çözmez, bu yüzden yalnızca şifresiz BDMV klasörlerini veya video dosyalarını oynatabilir.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue => 'Sonraki altyazı (yoksa biraz ileri)';
   @override
@@ -276723,9 +277132,6 @@ class _StringsTr extends _StringsEn {
   String get video_discovery_subscription_manage => 'Aboneliği yönet';
   @override
   String get video_discovery_subtitle_search => 'Altyazı ara';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision profil 5 videosu: HDR / 10 bit çıkışı kapalıyken renkler mor veya yeşil görünür. Düzeltmek için Otomatik olarak ayarlayın.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profil 5 videosu: bu platform renklerini henüz doğru işleyemiyor, bu yüzden görüntü mor veya yeşil görünebilir.';
@@ -277835,8 +278241,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Otomatik';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Yalnızca Windows. Otomatik, ekran HDR modundayken ve video HDR ise HDR çıkış verir; Her zaman her videoyu HDR / 10 bit olarak verir; Kapalı her zaman SDR gösterir (HDR videolar ton eşlenir). Her durumda video ve arayüz birlikte birleştirilir.';
   @override
   String get video_setting_hdr_output_off => 'Kapalı';
   @override
@@ -278042,6 +278448,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'İkincil (çeviri) altyazıyı bulanıklaştır veya gizle';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Sarma saniyesi';
   @override
@@ -283526,8 +283938,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Loại bỏ trùng lặp thanh điệu';
   @override
-  String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
-  @override
   String get delete_collection => 'Xóa bộ sưu tập';
   @override
   String get delete_collection_also_books => 'Đồng thời xóa sách trong đó';
@@ -284238,6 +284648,11 @@ class _StringsVi extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Cần thiết cho máy chủ tự dựng trong mạng nội bộ';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Đã bật';
   @override
   String get discovery_opds_name => 'Tên hiển thị';
@@ -284261,10 +284676,19 @@ class _StringsVi extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Đã kết nối. Danh mục gốc có ${count} mục';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL danh mục';
   @override
   String get discovery_opds_url_hint =>
-      'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds';
+      'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Nhập URL danh mục HTTP hoặc HTTPS hợp lệ';
@@ -284276,6 +284700,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Để trống nếu là danh mục công khai';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Một số nguồn không khả dụng';
   @override
@@ -292456,10 +292883,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Tự động';
   @override
-  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease => 'Nếp gấp giữa trang';
   @override
   String get reader_page_crease_subtitle =>
-      'Shade the gutter between two pages, like an open book (two columns per page)';
+      'Tô bóng khe giữa hai trang như một cuốn sách đang mở (hai cột mỗi trang)';
   @override
   String get reader_paginated => 'Phân trang';
   @override
@@ -294002,7 +294429,7 @@ class _StringsVi extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -296947,8 +297374,20 @@ class _StringsVi extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Luồng Blu-ray này vẫn bị mã hóa AACS. Fushi không giải mã đĩa được bảo vệ, nên chỉ phát được thư mục BDMV chưa mã hóa hoặc tệp video.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Câu phụ đề sau (tới một chút nếu không có)';
@@ -297262,9 +297701,6 @@ class _StringsVi extends _StringsEn {
   String get video_discovery_subscription_manage => 'Quản lý đăng ký';
   @override
   String get video_discovery_subtitle_search => 'Tìm phụ đề';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Video Dolby Vision profile 5: màu sẽ ngả tím hoặc xanh lục khi đầu ra HDR / 10-bit bị tắt. Hãy đặt thành Tự động để khắc phục.';
   @override
   String get video_dolby_vision_colors_unsupported =>
       'Video Dolby Vision profile 5: nền tảng này chưa thể hiển thị đúng màu của nó nên hình ảnh có thể ngả tím hoặc xanh lục.';
@@ -298373,8 +298809,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Tự động';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Chỉ Windows. Tự động xuất HDR khi màn hình ở chế độ HDR và video là HDR; Luôn luôn xuất mọi video dưới dạng HDR / 10-bit; Tắt luôn hiển thị SDR (video HDR được ánh xạ tông màu). Dù chọn gì, video và giao diện đều được ghép chung trên cùng khung hình.';
   @override
   String get video_setting_hdr_output_off => 'Tắt';
   @override
@@ -298576,6 +299012,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Làm mờ hoặc ẩn phụ đề phụ (bản dịch)';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => 'Bước tua (giây)';
   @override
@@ -303686,8 +304128,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => '音调去重';
   @override
-  String get delete_choices_remember => '记住这些选择';
-  @override
   String get delete_collection => '删除合集';
   @override
   String get delete_collection_also_books => '同时删除其中的书';
@@ -304345,6 +304785,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get discovery_opds_allow_http_hint => '局域网自建服务器需要打开';
   @override
+  String get discovery_opds_api_key => 'API key（可选）';
+  @override
+  String get discovery_opds_api_key_hint =>
+      '以 X-API-Key 请求头发送；Komga 可用它代替用户名和密码';
+  @override
   String get discovery_opds_enabled => '启用';
   @override
   String get discovery_opds_name => '显示名';
@@ -304368,10 +304813,19 @@ class _StringsZhCn extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       '连接成功，根目录有 ${count} 个条目';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      '已连接。在另一个地址找到了目录并已保存。根目录有 ${count} 个条目';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      '服务器拒绝了凭据。Komga 的用户名要填登录邮箱，或改用 API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      '这个地址是网页，不是 OPDS 目录。请填目录地址，例如 Komga 的 …/opds/v2/catalog';
+  @override
   String get discovery_opds_url => '目录地址';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS 端点，例如 https://books.example.com/api/v1/opds';
+      'OPDS 端点，例如 https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid => '请填写有效的 HTTP 或 HTTPS 目录地址';
   @override
@@ -304380,6 +304834,8 @@ class _StringsZhCn extends _StringsEn {
   String get discovery_opds_username => '用户名';
   @override
   String get discovery_opds_username_hint => '公开目录留空即可';
+  @override
+  String get discovery_opds_username_komga_hint => 'Komga：填登录邮箱';
   @override
   String get discovery_partial_failure => '部分源不可用';
   @override
@@ -313286,7 +313742,7 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_design_skin => '卡面跟随设计系统';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      '用应用当前的 M3E / 苹果风样式覆盖导入牌组与自建模板的外观（背景、边框、文字与链接颜色、字体），模板的布局与内容不变。关闭则完全按模板原样显示。';
+      '用应用当前的 Material / 苹果风样式覆盖导入牌组与自建模板的外观（背景、边框、文字与链接颜色、字体），模板的布局与内容不变。关闭则完全按模板原样显示。';
   @override
   String get srs_card_appearance_dict_unified => '统一词典样式';
   @override
@@ -316003,8 +316459,20 @@ class _StringsZhCn extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       '这张盘使用的保护格式尚不支持。目前支持具有匹配播放配置的 AACS 1 蓝光盘。';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      '该蓝光码流已损坏：${name} 第 ${offset} 字节处的数据读不出来。是光盘或其拷贝损坏（例如读盘错误被填零），不是播放配置的问题。请清洁光盘或重新抓取后重试。';
+  @override
   String get video_bluray_stream_encrypted =>
       '该蓝光码流仍处于 AACS 加密状态。Fushi 不解密受保护的光盘，只能播放未加密的 BDMV 目录或视频文件。';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      '无法解密 ${name} 第 ${offset} 字节处的数据：KEYDB.cfg 中的密钥与这张盘不匹配，或数据已损坏。请先检查 KEYDB.cfg；如果这张盘的其它标题能正常播放，多半是拷贝损坏。';
   @override
   String get video_bottom_next_cue => '下一句字幕（无字幕则前进一段）';
   @override
@@ -316283,9 +316751,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_discovery_subscription_manage => '管理订阅';
   @override
   String get video_discovery_subtitle_search => '搜索字幕';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      '杜比视界 Profile 5 片源：HDR / 10-bit 输出关闭时颜色会偏紫或偏绿，改成「自动」即可正常显示。';
   @override
   String get video_dolby_vision_colors_unsupported =>
       '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
@@ -317272,8 +317737,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => '自动';
   @override
-  String get video_setting_hdr_output_hint =>
-      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通（杜比视界 Profile 5 片源不论显示器都走它，只有它能正确还原颜色）；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+  String get video_setting_hdr_output_mode_hint =>
+      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时输出 HDR；始终：所有视频都按 HDR / 10-bit 输出；关闭：始终按 SDR 显示（HDR 片源经色调映射）。无论哪种，视频与界面都在同一画面里合成。';
   @override
   String get video_setting_hdr_output_off => '关闭';
   @override
@@ -317461,6 +317926,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_secondary_subtitle_obscure_hint => '模糊或隐藏副字幕（翻译参考轨）';
   @override
+  String get video_setting_secondary_subtitle_obscure_reveal => '副字幕暂停或悬停时显形';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      '同主字幕的显形开关，只作用于副字幕（翻译参考轨）。关掉后副字幕的遮蔽始终保持，不受主字幕显形影响。';
+  @override
   String get video_setting_seek_seconds => '快进/快退步长（秒）';
   @override
   String get video_setting_shortcuts_hint => '查看并自定义播放器的键盘 / 手柄快捷键';
@@ -317517,10 +317987,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_subtitle_obscure_none => '关闭';
   @override
-  String get video_setting_subtitle_obscure_reveal => '暂停或悬停时显形';
+  String get video_setting_subtitle_obscure_reveal => '主字幕暂停或悬停时显形';
   @override
   String get video_setting_subtitle_obscure_reveal_hint =>
-      '字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
+      '主字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
   @override
   String get video_setting_subtitle_outline => '描边粗细';
   @override
@@ -322570,8 +323040,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => '音調重複去除';
   @override
-  String get delete_choices_remember => '記住這些選擇';
-  @override
   String get delete_collection => '刪除合集';
   @override
   String get delete_collection_also_books => '同時刪除其中的書';
@@ -323238,6 +323706,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_opds_allow_http_hint => '區域網絡自建伺服器需要開啟';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => '啟用';
   @override
   String get discovery_opds_name => '顯示名稱';
@@ -323261,10 +323734,19 @@ class _StringsZhHk extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       '連線成功，根目錄有 ${count} 個項目';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => '目錄地址';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS 端點，例如 https://books.example.com/api/v1/opds';
+      'OPDS 端點，例如 https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid => '請填寫有效的 HTTP 或 HTTPS 目錄地址';
   @override
@@ -323273,6 +323755,9 @@ class _StringsZhHk extends _StringsEn {
   String get discovery_opds_username => '使用者名稱';
   @override
   String get discovery_opds_username_hint => '公開目錄留空即可';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => '部分源不可用';
   @override
@@ -332309,7 +332794,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_card_appearance_design_skin => 'Match the design system';
   @override
   String get srs_card_appearance_design_skin_hint =>
-      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
@@ -335117,8 +335602,20 @@ class _StringsZhHk extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       '該藍光碼流仍處於 AACS 加密狀態。Fushi 不解密受保護的光盤，只能播放未加密的 BDMV 目錄或影片檔案。';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue => '下一句字幕（無字幕則前進一段）';
   @override
@@ -335403,9 +335900,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_discovery_subscription_manage => '管理訂閱';
   @override
   String get video_discovery_subtitle_search => '搜索字幕';
-  @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      '杜比視界 Profile 5 片源：HDR / 10-bit 輸出關閉時顏色會偏紫或偏綠，改成「自動」即可正常顯示。';
   @override
   String get video_dolby_vision_colors_unsupported =>
       '杜比視界 Profile 5 片源：本平台暫時無法正確還原它的顏色，畫面可能偏紫或偏綠。';
@@ -336431,8 +336925,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => '自動';
   @override
-  String get video_setting_hdr_output_hint =>
-      '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
+  String get video_setting_hdr_output_mode_hint =>
+      '僅 Windows。自動：顯示器開著 HDR 且片源是 HDR 時輸出 HDR；始終：所有影片都按 HDR / 10-bit 輸出；關閉：始終按 SDR 顯示（HDR 片源經色調映射）。無論哪種，影片與介面都在同一畫面裡合成。';
   @override
   String get video_setting_hdr_output_off => '關閉';
   @override
@@ -336619,6 +337113,12 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure => '副字幕遮蔽';
   @override
   String get video_setting_secondary_subtitle_obscure_hint => '模糊或隱藏副字幕（翻譯參考軌）';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal =>
+      'Secondary: reveal when paused or hovered';
+  @override
+  String get video_setting_secondary_subtitle_obscure_reveal_hint =>
+      'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
   @override
   String get video_setting_seek_seconds => '快進／快退步長（秒）';
   @override
@@ -341273,8 +341773,6 @@ extension on _StringsEn {
         return 'Decrease';
       case 'deduplicate_pitch_accents':
         return 'Deduplicate pitch accents';
-      case 'delete_choices_remember':
-        return 'Remember these choices';
       case 'delete_collection':
         return 'Delete collection';
       case 'delete_collection_also_books':
@@ -341900,6 +342398,10 @@ extension on _StringsEn {
         return 'Allow plain HTTP';
       case 'discovery_opds_allow_http_hint':
         return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Enabled';
       case 'discovery_opds_name':
@@ -341921,10 +342423,17 @@ extension on _StringsEn {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'Catalog URL';
       case 'discovery_opds_url_hint':
-        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Enter a valid HTTP or HTTPS catalog URL';
       case 'discovery_opds_url_needs_http_optin':
@@ -341933,6 +342442,8 @@ extension on _StringsEn {
         return 'Username';
       case 'discovery_opds_username_hint':
         return 'Leave empty for a public catalog';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Some sources are unavailable';
       case 'discovery_search_hint':
@@ -350279,7 +350790,7 @@ extension on _StringsEn {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -352869,8 +353380,14 @@ extension on _StringsEn {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'This Blu-ray stream is still AACS-encrypted. Fushi does not decrypt protected discs, so it can only play unencrypted BDMV folders or video files.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Next subtitle (forward a bit if none)';
       case 'video_bottom_play_pause':
@@ -353139,8 +353656,6 @@ extension on _StringsEn {
         return 'Manage subscription';
       case 'video_discovery_subtitle_search':
         return 'Search subtitles';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_double_tap_next_cue':
@@ -354063,8 +354578,8 @@ extension on _StringsEn {
         return 'Always';
       case 'video_setting_hdr_output_auto':
         return 'Auto';
-      case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window (Dolby Vision profile 5 always uses it, since only that renderer shows its colors correctly); Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows only. Auto outputs HDR when the display is in HDR mode and the video is HDR; Always outputs every video as HDR / 10-bit; Off always shows SDR (HDR videos are tone-mapped). Video and interface are composited together either way.';
       case 'video_setting_hdr_output_off':
         return 'Off';
       case 'video_setting_hdr_tone_mapping':
@@ -354239,6 +354754,10 @@ extension on _StringsEn {
         return 'Obscure secondary subtitle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Blur or hide the secondary (translation) subtitle';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Seek seconds';
       case 'video_setting_shortcuts_hint':
@@ -354292,9 +354811,9 @@ extension on _StringsEn {
       case 'video_setting_subtitle_obscure_none':
         return 'Off';
       case 'video_setting_subtitle_obscure_reveal':
-        return 'Reveal when paused or hovered';
+        return 'Primary: reveal when paused or hovered';
       case 'video_setting_subtitle_obscure_reveal_hint':
-        return 'While subtitles are blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+        return 'While the primary subtitle is blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping it reveals it temporarily. Turn this off to keep it obscured no matter what.';
       case 'video_setting_subtitle_outline':
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
@@ -358796,8 +359315,6 @@ extension on _StringsAr {
         return 'تقليل';
       case 'deduplicate_pitch_accents':
         return 'إزالة تكرار النبرات';
-      case 'delete_choices_remember':
-        return 'تذكّر هذه الخيارات';
       case 'delete_collection':
         return 'حذف المجموعة';
       case 'delete_collection_also_books':
@@ -359423,6 +359940,10 @@ extension on _StringsAr {
         return 'السماح بـ HTTP غير المشفّر';
       case 'discovery_opds_allow_http_hint':
         return 'مطلوب لخادم ذاتي الاستضافة على شبكتك المحلية';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'مُفعّل';
       case 'discovery_opds_name':
@@ -359444,10 +359965,17 @@ extension on _StringsAr {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'رابط الفهرس';
       case 'discovery_opds_url_hint':
-        return 'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds';
+        return 'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'أدخل رابط فهرس HTTP أو HTTPS صالحًا';
       case 'discovery_opds_url_needs_http_optin':
@@ -359456,6 +359984,8 @@ extension on _StringsAr {
         return 'اسم المستخدم';
       case 'discovery_opds_username_hint':
         return 'اتركه فارغًا للفهرس العام';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'بعض المصادر غير متاحة';
       case 'discovery_search_hint':
@@ -366405,9 +366935,9 @@ extension on _StringsAr {
       case 'reader_page_columns_auto':
         return 'تلقائي';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'ثنية الصفحة';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'تظليل الفاصل بين صفحتين كأنه كتاب مفتوح (عمودان في كل صفحة)';
       case 'reader_paginated':
         return 'صفحات';
       case 'reader_panel_lyrics_exit_hint':
@@ -367797,7 +368327,7 @@ extension on _StringsAr {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -370384,8 +370914,14 @@ extension on _StringsAr {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'لا يزال بث Blu-ray هذا مشفّرًا بـ AACS. لا يفك Fushi تشفير الأقراص المحمية، لذا يمكنه تشغيل مجلدات BDMV غير المشفّرة أو ملفات الفيديو فقط.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'الترجمة التالية (تقديم قليلًا إن لم توجد)';
       case 'video_bottom_play_pause':
@@ -370654,8 +371190,6 @@ extension on _StringsAr {
         return 'إدارة الاشتراك';
       case 'video_discovery_subtitle_search':
         return 'بحث عن الترجمات';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'فيديو Dolby Vision بالملف التعريفي 5: ستبدو الألوان بنفسجية أو خضراء عند تعطيل إخراج HDR / 10 بت. اضبطه على تلقائي لإصلاحها.';
       case 'video_dolby_vision_colors_unsupported':
         return 'فيديو Dolby Vision بالملف التعريفي 5: لا تستطيع هذه المنصة عرض ألوانه بشكل صحيح بعد، لذا قد تبدو الصورة بنفسجية أو خضراء.';
       case 'video_double_tap_next_cue':
@@ -371578,8 +372112,8 @@ extension on _StringsAr {
         return 'دائمًا';
       case 'video_setting_hdr_output_auto':
         return 'تلقائي';
-      case 'video_setting_hdr_output_hint':
-        return 'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows فقط. «تلقائي» يُخرج HDR عندما تكون الشاشة في وضع HDR والفيديو بتقنية HDR؛ «دائمًا» يُخرج كل فيديو بتقنية HDR / 10 بت؛ «إيقاف» يعرض SDR دائمًا (تُطبَّق مطابقة الألوان على فيديوهات HDR). في كل الأحوال يُركَّب الفيديو والواجهة معًا.';
       case 'video_setting_hdr_output_off':
         return 'إيقاف';
       case 'video_setting_hdr_tone_mapping':
@@ -371754,6 +372288,10 @@ extension on _StringsAr {
         return 'إخفاء الترجمة الثانوية';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'تمويه أو إخفاء الترجمة الثانوية (المترجمة)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'ثوانٍ الانتقال';
       case 'video_setting_shortcuts_hint':
@@ -376334,8 +376872,6 @@ extension on _StringsDe {
         return 'Verringern';
       case 'deduplicate_pitch_accents':
         return 'Tonhöhenakzente deduplizieren';
-      case 'delete_choices_remember':
-        return 'Diese Auswahl merken';
       case 'delete_collection':
         return 'Sammlung löschen';
       case 'delete_collection_also_books':
@@ -376967,6 +377503,10 @@ extension on _StringsDe {
         return 'Unverschlüsseltes HTTP erlauben';
       case 'discovery_opds_allow_http_hint':
         return 'Nötig für einen selbst gehosteten Server im lokalen Netzwerk';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Aktiviert';
       case 'discovery_opds_name':
@@ -376989,10 +377529,17 @@ extension on _StringsDe {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Verbunden. Der Stammkatalog hat ${count} Einträge';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'Katalog-URL';
       case 'discovery_opds_url_hint':
-        return 'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds';
+        return 'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Gib eine gültige HTTP- oder HTTPS-Katalog-URL ein';
       case 'discovery_opds_url_needs_http_optin':
@@ -377001,6 +377548,8 @@ extension on _StringsDe {
         return 'Benutzername';
       case 'discovery_opds_username_hint':
         return 'Für einen öffentlichen Katalog leer lassen';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Einige Quellen sind nicht verfügbar';
       case 'discovery_search_hint':
@@ -383979,9 +384528,9 @@ extension on _StringsDe {
       case 'reader_page_columns_auto':
         return 'Automatisch';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Buchfalz';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Den Steg zwischen zwei Seiten schattieren, wie bei einem aufgeschlagenen Buch (zwei Spalten pro Seite)';
       case 'reader_paginated':
         return 'Seitenweise';
       case 'reader_panel_lyrics_exit_hint':
@@ -385371,7 +385920,7 @@ extension on _StringsDe {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -387969,8 +388518,14 @@ extension on _StringsDe {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Dieser Blu-ray-Stream ist noch AACS-verschlüsselt. Fushi entschlüsselt keine geschützten Discs und kann daher nur unverschlüsselte BDMV-Ordner oder Videodateien abspielen.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Nächster Untertitel (falls keiner, etwas vor)';
       case 'video_bottom_play_pause':
@@ -388240,8 +388795,6 @@ extension on _StringsDe {
         return 'Abonnement verwalten';
       case 'video_discovery_subtitle_search':
         return 'Untertitel suchen';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby-Vision-Profil-5-Video: Die Farben sehen bei ausgeschalteter HDR-/10-Bit-Ausgabe violett oder grün aus. Stelle sie auf Automatisch, um das zu beheben.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby-Vision-Profil-5-Video: Diese Plattform kann dessen Farben noch nicht korrekt darstellen, daher kann das Bild violett oder grün aussehen.';
       case 'video_double_tap_next_cue':
@@ -389168,8 +389721,8 @@ extension on _StringsDe {
         return 'Immer';
       case 'video_setting_hdr_output_auto':
         return 'Automatisch';
-      case 'video_setting_hdr_output_hint':
-        return 'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Nur Windows. Automatisch gibt HDR aus, wenn der Bildschirm im HDR-Modus ist und das Video HDR ist; Immer gibt jedes Video als HDR / 10 Bit aus; Aus zeigt immer SDR (HDR-Videos werden tonemapped). Video und Oberfläche werden in jedem Fall gemeinsam zusammengesetzt.';
       case 'video_setting_hdr_output_off':
         return 'Aus';
       case 'video_setting_hdr_tone_mapping':
@@ -389344,6 +389897,10 @@ extension on _StringsDe {
         return 'Sekundären Untertitel verbergen';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Den sekundären (Übersetzungs-)Untertitel weichzeichnen oder ausblenden';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Spulschritt (Sekunden)';
       case 'video_setting_shortcuts_hint':
@@ -393921,8 +394478,6 @@ extension on _StringsEs {
         return 'Disminuir';
       case 'deduplicate_pitch_accents':
         return 'Deduplicar acentos tonales';
-      case 'delete_choices_remember':
-        return 'Recordar estas opciones';
       case 'delete_collection':
         return 'Eliminar colección';
       case 'delete_collection_also_books':
@@ -394550,6 +395105,10 @@ extension on _StringsEs {
         return 'Permitir HTTP sin cifrar';
       case 'discovery_opds_allow_http_hint':
         return 'Necesario para un servidor autoalojado en tu red local';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Activado';
       case 'discovery_opds_name':
@@ -394571,10 +395130,17 @@ extension on _StringsEs {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Conectado. El catálogo raíz tiene ${count} entradas';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL del catálogo';
       case 'discovery_opds_url_hint':
-        return 'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds';
+        return 'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Introduce una URL de catálogo HTTP o HTTPS válida';
       case 'discovery_opds_url_needs_http_optin':
@@ -394583,6 +395149,8 @@ extension on _StringsEs {
         return 'Usuario';
       case 'discovery_opds_username_hint':
         return 'Déjalo vacío para un catálogo público';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Algunas fuentes no están disponibles';
       case 'discovery_search_hint':
@@ -401557,9 +402125,9 @@ extension on _StringsEs {
       case 'reader_page_columns_auto':
         return 'Automático';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Pliegue central';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Sombrea el medianil entre dos páginas, como un libro abierto (dos columnas por página)';
       case 'reader_paginated':
         return 'Paginado';
       case 'reader_panel_lyrics_exit_hint':
@@ -402949,7 +403517,7 @@ extension on _StringsEs {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -405546,8 +406114,14 @@ extension on _StringsEs {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Esta transmisión Blu-ray sigue cifrada con AACS. Fushi no descifra discos protegidos, por lo que solo puede reproducir carpetas BDMV sin cifrar o archivos de vídeo.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Subtítulo siguiente (avanza un poco si no hay)';
       case 'video_bottom_play_pause':
@@ -405817,8 +406391,6 @@ extension on _StringsEs {
         return 'Administrar suscripción';
       case 'video_discovery_subtitle_search':
         return 'Buscar subtítulos';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Vídeo Dolby Vision perfil 5: los colores se verán morados o verdes con la salida HDR / 10 bits desactivada. Ponla en Auto para corregirlo.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Vídeo Dolby Vision perfil 5: esta plataforma aún no puede mostrar sus colores correctamente, por lo que la imagen puede verse morada o verde.';
       case 'video_double_tap_next_cue':
@@ -406743,8 +407315,8 @@ extension on _StringsEs {
         return 'Siempre';
       case 'video_setting_hdr_output_auto':
         return 'Automático';
-      case 'video_setting_hdr_output_hint':
-        return 'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Solo Windows. Automático emite HDR cuando la pantalla está en modo HDR y el vídeo es HDR; Siempre emite todos los vídeos en HDR / 10 bits; Desactivado muestra siempre SDR (los vídeos HDR se mapean en tono). En cualquier caso, el vídeo y la interfaz se componen juntos.';
       case 'video_setting_hdr_output_off':
         return 'Desactivado';
       case 'video_setting_hdr_tone_mapping':
@@ -406919,6 +407491,10 @@ extension on _StringsEs {
         return 'Ocultar subtítulo secundario';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Difumina u oculta el subtítulo secundario (traducción)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Segundos de salto';
       case 'video_setting_shortcuts_hint':
@@ -411500,8 +412076,6 @@ extension on _StringsFr {
         return 'Diminuer';
       case 'deduplicate_pitch_accents':
         return 'Dédupliquer les accents tonaux';
-      case 'delete_choices_remember':
-        return 'Mémoriser ces choix';
       case 'delete_collection':
         return 'Supprimer la collection';
       case 'delete_collection_also_books':
@@ -412134,6 +412708,10 @@ extension on _StringsFr {
         return 'Autoriser le HTTP en clair';
       case 'discovery_opds_allow_http_hint':
         return 'Nécessaire pour un serveur auto-hébergé sur votre réseau local';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Activé';
       case 'discovery_opds_name':
@@ -412156,10 +412734,17 @@ extension on _StringsFr {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Connecté. Le catalogue racine contient ${count} entrées';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL du catalogue';
       case 'discovery_opds_url_hint':
-        return 'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds';
+        return 'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Saisissez une URL de catalogue HTTP ou HTTPS valide';
       case 'discovery_opds_url_needs_http_optin':
@@ -412168,6 +412753,8 @@ extension on _StringsFr {
         return 'Nom d\'utilisateur';
       case 'discovery_opds_username_hint':
         return 'Laissez vide pour un catalogue public';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Certaines sources sont indisponibles';
       case 'discovery_search_hint':
@@ -419146,9 +419733,9 @@ extension on _StringsFr {
       case 'reader_page_columns_auto':
         return 'Automatique';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Pli central';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Ombre le blanc entre deux pages, comme un livre ouvert (deux colonnes par page)';
       case 'reader_paginated':
         return 'Paginé';
       case 'reader_panel_lyrics_exit_hint':
@@ -420538,7 +421125,7 @@ extension on _StringsFr {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -423136,8 +423723,14 @@ extension on _StringsFr {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Ce flux Blu-ray est encore chiffré en AACS. Fushi ne déchiffre pas les disques protégés ; il ne peut donc lire que des dossiers BDMV non chiffrés ou des fichiers vidéo.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Sous-titre suivant (avancer un peu s\'il n\'y en a pas)';
       case 'video_bottom_play_pause':
@@ -423407,8 +424000,6 @@ extension on _StringsFr {
         return 'Gérer l\'abonnement';
       case 'video_discovery_subtitle_search':
         return 'Rechercher des sous-titres';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Vidéo Dolby Vision profil 5 : les couleurs paraîtront violettes ou vertes avec la sortie HDR / 10 bits désactivée. Réglez-la sur Auto pour corriger.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Vidéo Dolby Vision profil 5 : cette plateforme ne sait pas encore rendre correctement ses couleurs, l\'image peut donc paraître violette ou verte.';
       case 'video_double_tap_next_cue':
@@ -424335,8 +424926,8 @@ extension on _StringsFr {
         return 'Toujours';
       case 'video_setting_hdr_output_auto':
         return 'Auto';
-      case 'video_setting_hdr_output_hint':
-        return 'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows uniquement. Auto produit du HDR quand l’écran est en mode HDR et que la vidéo est HDR ; Toujours sort chaque vidéo en HDR / 10 bits ; Désactivé affiche toujours en SDR (les vidéos HDR sont tone-mappées). La vidéo et l’interface sont composées ensemble dans tous les cas.';
       case 'video_setting_hdr_output_off':
         return 'Désactivé';
       case 'video_setting_hdr_tone_mapping':
@@ -424511,6 +425102,10 @@ extension on _StringsFr {
         return 'Masquer le sous-titre secondaire';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Flouter ou cacher le sous-titre secondaire (traduction)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Pas d\'avance/recul (secondes)';
       case 'video_setting_shortcuts_hint':
@@ -429078,8 +429673,6 @@ extension on _StringsId {
         return 'Kurangi';
       case 'deduplicate_pitch_accents':
         return 'Hapus duplikat aksen nada';
-      case 'delete_choices_remember':
-        return 'Ingat pilihan ini';
       case 'delete_collection':
         return 'Hapus koleksi';
       case 'delete_collection_also_books':
@@ -429706,6 +430299,10 @@ extension on _StringsId {
         return 'Izinkan HTTP polos';
       case 'discovery_opds_allow_http_hint':
         return 'Diperlukan untuk server milik sendiri di jaringan lokal';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Aktif';
       case 'discovery_opds_name':
@@ -429727,10 +430324,17 @@ extension on _StringsId {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Terhubung. Katalog akar berisi ${count} entri';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL katalog';
       case 'discovery_opds_url_hint':
-        return 'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds';
+        return 'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Masukkan URL katalog HTTP atau HTTPS yang valid';
       case 'discovery_opds_url_needs_http_optin':
@@ -429739,6 +430343,8 @@ extension on _StringsId {
         return 'Nama pengguna';
       case 'discovery_opds_username_hint':
         return 'Kosongkan untuk katalog publik';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Beberapa sumber tidak tersedia';
       case 'discovery_search_hint':
@@ -436695,9 +437301,9 @@ extension on _StringsId {
       case 'reader_page_columns_auto':
         return 'Otomatis';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Lipatan halaman';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Beri bayangan di celah antara dua halaman, seperti buku terbuka (dua kolom per halaman)';
       case 'reader_paginated':
         return 'Paginasi';
       case 'reader_panel_lyrics_exit_hint':
@@ -438087,7 +438693,7 @@ extension on _StringsId {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -440678,8 +441284,14 @@ extension on _StringsId {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Stream Blu-ray ini masih terenkripsi AACS. Fushi tidak mendekripsi disk yang dilindungi, sehingga hanya dapat memutar folder BDMV tanpa enkripsi atau file video.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Subtitle berikutnya (maju sedikit jika tidak ada)';
       case 'video_bottom_play_pause':
@@ -440948,8 +441560,6 @@ extension on _StringsId {
         return 'Kelola langganan';
       case 'video_discovery_subtitle_search':
         return 'Cari subtitle';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Video Dolby Vision profil 5: warna akan tampak ungu atau hijau saat output HDR / 10-bit dimatikan. Atur ke Otomatis untuk memperbaikinya.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Video Dolby Vision profil 5: platform ini belum dapat merender warnanya dengan benar, sehingga gambar mungkin tampak ungu atau hijau.';
       case 'video_double_tap_next_cue':
@@ -441872,8 +442482,8 @@ extension on _StringsId {
         return 'Selalu';
       case 'video_setting_hdr_output_auto':
         return 'Otomatis';
-      case 'video_setting_hdr_output_hint':
-        return 'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Hanya Windows. Otomatis mengeluarkan HDR saat layar dalam mode HDR dan videonya HDR; Selalu mengeluarkan setiap video sebagai HDR / 10-bit; Mati selalu menampilkan SDR (video HDR di-tone-map). Video dan antarmuka selalu digabungkan bersama.';
       case 'video_setting_hdr_output_off':
         return 'Mati';
       case 'video_setting_hdr_tone_mapping':
@@ -442048,6 +442658,10 @@ extension on _StringsId {
         return 'Samarkan subtitle sekunder';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Buramkan atau sembunyikan subtitle sekunder (terjemahan)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Detik lompatan';
       case 'video_setting_shortcuts_hint':
@@ -446620,8 +447234,6 @@ extension on _StringsIt {
         return 'Diminuisci';
       case 'deduplicate_pitch_accents':
         return 'Deduplica accenti tonali';
-      case 'delete_choices_remember':
-        return 'Ricorda queste scelte';
       case 'delete_collection':
         return 'Elimina raccolta';
       case 'delete_collection_also_books':
@@ -447251,6 +447863,10 @@ extension on _StringsIt {
         return 'Consenti HTTP in chiaro';
       case 'discovery_opds_allow_http_hint':
         return 'Necessario per un server self-hosted sulla rete locale';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Attivo';
       case 'discovery_opds_name':
@@ -447273,10 +447889,17 @@ extension on _StringsIt {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Connesso. Il catalogo radice ha ${count} voci';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL del catalogo';
       case 'discovery_opds_url_hint':
-        return 'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds';
+        return 'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Inserisci un URL di catalogo HTTP o HTTPS valido';
       case 'discovery_opds_url_needs_http_optin':
@@ -447285,6 +447908,8 @@ extension on _StringsIt {
         return 'Nome utente';
       case 'discovery_opds_username_hint':
         return 'Lascia vuoto per un catalogo pubblico';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Alcune fonti non sono disponibili';
       case 'discovery_search_hint':
@@ -454253,9 +454878,9 @@ extension on _StringsIt {
       case 'reader_page_columns_auto':
         return 'Automatico';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Piega centrale';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Ombreggia il margine tra due pagine, come un libro aperto (due colonne per pagina)';
       case 'reader_paginated':
         return 'Paginato';
       case 'reader_panel_lyrics_exit_hint':
@@ -455645,7 +456270,7 @@ extension on _StringsIt {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -458246,8 +458871,14 @@ extension on _StringsIt {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Questo flusso Blu-ray è ancora cifrato con AACS. Fushi non decifra i dischi protetti, quindi può riprodurre solo cartelle BDMV non cifrate o file video.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Sottotitolo successivo (avanti un po\' se assente)';
       case 'video_bottom_play_pause':
@@ -458517,8 +459148,6 @@ extension on _StringsIt {
         return 'Gestisci abbonamento';
       case 'video_discovery_subtitle_search':
         return 'Cerca sottotitoli';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Video Dolby Vision profilo 5: i colori appariranno viola o verdi con l\'uscita HDR / 10 bit disattivata. Impostala su Auto per correggerli.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Video Dolby Vision profilo 5: questa piattaforma non sa ancora renderne correttamente i colori, quindi l\'immagine può apparire viola o verde.';
       case 'video_double_tap_next_cue':
@@ -459442,8 +460071,8 @@ extension on _StringsIt {
         return 'Sempre';
       case 'video_setting_hdr_output_auto':
         return 'Automatico';
-      case 'video_setting_hdr_output_hint':
-        return 'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Solo Windows. Automatico emette HDR quando lo schermo è in modalità HDR e il video è HDR; Sempre emette ogni video in HDR / 10 bit; Disattivato mostra sempre SDR (i video HDR vengono tone-mappati). Video e interfaccia vengono composti insieme in ogni caso.';
       case 'video_setting_hdr_output_off':
         return 'Disattivato';
       case 'video_setting_hdr_tone_mapping':
@@ -459618,6 +460247,10 @@ extension on _StringsIt {
         return 'Oscura sottotitolo secondario';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Sfoca o nascondi il sottotitolo secondario (traduzione)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Secondi di spostamento';
       case 'video_setting_shortcuts_hint':
@@ -464160,8 +464793,6 @@ extension on _StringsJa {
         return '減少';
       case 'deduplicate_pitch_accents':
         return 'アクセント重複除外';
-      case 'delete_choices_remember':
-        return 'この選択を記憶する';
       case 'delete_collection':
         return 'コレクションを削除';
       case 'delete_collection_also_books':
@@ -464786,6 +465417,10 @@ extension on _StringsJa {
         return '平文 HTTP を許可';
       case 'discovery_opds_allow_http_hint':
         return 'ローカルネットワークの自前サーバーに必要です';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return '有効';
       case 'discovery_opds_name':
@@ -464806,10 +465441,17 @@ extension on _StringsJa {
         return ({required Object reason}) => '接続に失敗しました: ${reason}';
       case 'discovery_opds_test_ok':
         return ({required Object count}) => '接続しました。ルートカタログに ${count} 件あります';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'カタログ URL';
       case 'discovery_opds_url_hint':
-        return 'OPDS エンドポイント。例: https://books.example.com/api/v1/opds';
+        return 'OPDS エンドポイント。例: https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return '有効な HTTP または HTTPS のカタログ URL を入力してください';
       case 'discovery_opds_url_needs_http_optin':
@@ -464818,6 +465460,8 @@ extension on _StringsJa {
         return 'ユーザー名';
       case 'discovery_opds_username_hint':
         return '公開カタログなら空欄のままで構いません';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return '一部のソースが利用できません';
       case 'discovery_search_hint':
@@ -471746,9 +472390,9 @@ extension on _StringsJa {
       case 'reader_page_columns_auto':
         return '自動';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'ノドの陰影';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return '1画面2段のとき、見開きの本のように2ページの間に綴じ目の陰影を描きます';
       case 'reader_paginated':
         return 'ページ送り';
       case 'reader_panel_lyrics_exit_hint':
@@ -473137,7 +473781,7 @@ extension on _StringsJa {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -475711,8 +476355,14 @@ extension on _StringsJa {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'この Blu-ray ストリームはまだ AACS で暗号化されています。Fushi は保護されたディスクの復号を行わないため、暗号化されていない BDMV フォルダまたは動画ファイルのみ再生できます。';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return '次の字幕（なければ少し進む）';
       case 'video_bottom_play_pause':
@@ -475979,8 +476629,6 @@ extension on _StringsJa {
         return '購読を管理';
       case 'video_discovery_subtitle_search':
         return '字幕を検索';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision プロファイル 5 の動画: HDR / 10-bit 出力がオフだと、色が紫や緑がかって見えます。「自動」に設定すると解消します。';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision プロファイル 5 の動画: このプラットフォームでは色をまだ正しく表示できないため、映像が紫や緑がかって見える場合があります。';
       case 'video_double_tap_next_cue':
@@ -476894,8 +477542,8 @@ extension on _StringsJa {
         return '常に';
       case 'video_setting_hdr_output_auto':
         return '自動';
-      case 'video_setting_hdr_output_hint':
-        return 'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows のみ。自動：ディスプレイが HDR モードで動画が HDR のとき HDR 出力；常に：すべての動画を HDR / 10-bit で出力；オフ：常に SDR 表示（HDR 動画はトーンマッピング）。どの設定でも動画と画面は同じフレームで合成されます。';
       case 'video_setting_hdr_output_off':
         return 'オフ';
       case 'video_setting_hdr_tone_mapping':
@@ -477070,6 +477718,10 @@ extension on _StringsJa {
         return '副字幕を隠す';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '副字幕（翻訳）をぼかすまたは非表示にします';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'シークの秒数';
       case 'video_setting_shortcuts_hint':
@@ -481605,8 +482257,6 @@ extension on _StringsKo {
         return '감소';
       case 'deduplicate_pitch_accents':
         return '악센트 중복 제거';
-      case 'delete_choices_remember':
-        return '이 선택 기억하기';
       case 'delete_collection':
         return '컬렉션 삭제';
       case 'delete_collection_also_books':
@@ -482231,6 +482881,10 @@ extension on _StringsKo {
         return '일반 HTTP 허용';
       case 'discovery_opds_allow_http_hint':
         return '로컬 네트워크의 자체 호스팅 서버에 필요합니다';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return '사용';
       case 'discovery_opds_name':
@@ -482252,10 +482906,17 @@ extension on _StringsKo {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return '카탈로그 URL';
       case 'discovery_opds_url_hint':
-        return 'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds';
+        return 'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return '올바른 HTTP 또는 HTTPS 카탈로그 URL을 입력하세요';
       case 'discovery_opds_url_needs_http_optin':
@@ -482264,6 +482925,8 @@ extension on _StringsKo {
         return '사용자 이름';
       case 'discovery_opds_username_hint':
         return '공개 카탈로그라면 비워 두세요';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return '일부 소스를 사용할 수 없습니다';
       case 'discovery_search_hint':
@@ -489193,9 +489856,9 @@ extension on _StringsKo {
       case 'reader_page_columns_auto':
         return '자동';
       case 'reader_page_crease':
-        return 'Page crease';
+        return '가운데 접힘';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return '한 화면에 두 단일 때 펼친 책처럼 두 페이지 사이에 제본선 그림자를 그립니다';
       case 'reader_paginated':
         return '페이지 넘김';
       case 'reader_panel_lyrics_exit_hint':
@@ -490585,7 +491248,7 @@ extension on _StringsKo {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -493161,8 +493824,14 @@ extension on _StringsKo {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return '이 Blu-ray 스트림은 아직 AACS로 암호화되어 있습니다. Fushi는 보호된 디스크를 복호화하지 않으므로 암호화되지 않은 BDMV 폴더 또는 비디오 파일만 재생할 수 있습니다.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return '다음 자막(없으면 조금 앞으로)';
       case 'video_bottom_play_pause':
@@ -493429,8 +494098,6 @@ extension on _StringsKo {
         return '구독 관리';
       case 'video_discovery_subtitle_search':
         return '자막 검색';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision 프로파일 5 비디오: HDR / 10비트 출력이 꺼져 있으면 색상이 보라색이나 녹색으로 보입니다. 자동으로 설정하면 해결됩니다.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision 프로파일 5 비디오: 이 플랫폼에서는 아직 색상을 올바르게 표현할 수 없어 화면이 보라색이나 녹색으로 보일 수 있습니다.';
       case 'video_double_tap_next_cue':
@@ -494348,8 +495015,8 @@ extension on _StringsKo {
         return '항상';
       case 'video_setting_hdr_output_auto':
         return '자동';
-      case 'video_setting_hdr_output_hint':
-        return 'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows 전용. 자동: 디스플레이가 HDR 모드이고 영상이 HDR이면 HDR로 출력, 항상: 모든 영상을 HDR / 10비트로 출력, 끄기: 항상 SDR로 표시(HDR 영상은 톤 매핑). 어느 경우든 영상과 인터페이스는 한 화면에서 합성됩니다.';
       case 'video_setting_hdr_output_off':
         return '끄기';
       case 'video_setting_hdr_tone_mapping':
@@ -494524,6 +495191,10 @@ extension on _StringsKo {
         return '보조 자막 가리기';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '보조(번역) 자막을 흐리게 하거나 숨깁니다';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return '이동 간격(초)';
       case 'video_setting_shortcuts_hint':
@@ -499088,8 +499759,6 @@ extension on _StringsNl {
         return 'Verlagen';
       case 'deduplicate_pitch_accents':
         return 'Toonhoogteaccenten dedupliceren';
-      case 'delete_choices_remember':
-        return 'Deze keuzes onthouden';
       case 'delete_collection':
         return 'Collectie verwijderen';
       case 'delete_collection_also_books':
@@ -499720,6 +500389,10 @@ extension on _StringsNl {
         return 'Onversleutelde HTTP toestaan';
       case 'discovery_opds_allow_http_hint':
         return 'Nodig voor een zelfgehoste server in je lokale netwerk';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Ingeschakeld';
       case 'discovery_opds_name':
@@ -499741,10 +500414,17 @@ extension on _StringsNl {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Verbonden. De hoofdcatalogus heeft ${count} items';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'Catalogus-URL';
       case 'discovery_opds_url_hint':
-        return 'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds';
+        return 'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Voer een geldige HTTP- of HTTPS-catalogus-URL in';
       case 'discovery_opds_url_needs_http_optin':
@@ -499753,6 +500433,8 @@ extension on _StringsNl {
         return 'Gebruikersnaam';
       case 'discovery_opds_username_hint':
         return 'Laat leeg voor een openbare catalogus';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Sommige bronnen zijn niet beschikbaar';
       case 'discovery_search_hint':
@@ -506724,9 +507406,9 @@ extension on _StringsNl {
       case 'reader_page_columns_auto':
         return 'Automatisch';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Middenvouw';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Arceer de rug tussen twee pagina\'s, zoals bij een opengeslagen boek (twee kolommen per pagina)';
       case 'reader_paginated':
         return 'Gepagineerd';
       case 'reader_panel_lyrics_exit_hint':
@@ -508116,7 +508798,7 @@ extension on _StringsNl {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -510708,8 +511390,14 @@ extension on _StringsNl {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Deze Blu-ray-stream is nog steeds AACS-versleuteld. Fushi ontsleutelt geen beveiligde schijven en kan dus alleen onversleutelde BDMV-mappen of videobestanden afspelen.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Volgende ondertitel (anders een stukje vooruit)';
       case 'video_bottom_play_pause':
@@ -510979,8 +511667,6 @@ extension on _StringsNl {
         return 'Abonnement beheren';
       case 'video_discovery_subtitle_search':
         return 'Ondertitels zoeken';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision profiel 5-video: kleuren lijken paars of groen als HDR-/10-bit-uitvoer is uitgeschakeld. Zet het op Automatisch om dit te verhelpen.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profiel 5-video: dit platform kan de kleuren nog niet correct weergeven, dus het beeld kan paars of groen lijken.';
       case 'video_double_tap_next_cue':
@@ -511906,8 +512592,8 @@ extension on _StringsNl {
         return 'Altijd';
       case 'video_setting_hdr_output_auto':
         return 'Automatisch';
-      case 'video_setting_hdr_output_hint':
-        return 'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Alleen Windows. Automatisch geeft HDR weer als het scherm in HDR-modus staat en de video HDR is; Altijd geeft elke video als HDR / 10-bit weer; Uit toont altijd SDR (HDR-video’s worden getonemapt). Video en interface worden in alle gevallen samen samengesteld.';
       case 'video_setting_hdr_output_off':
         return 'Uit';
       case 'video_setting_hdr_tone_mapping':
@@ -512082,6 +512768,10 @@ extension on _StringsNl {
         return 'Secundaire ondertitel verbergen';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Vervaag of verberg de secundaire (vertaling) ondertitel';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Spoelstap (seconden)';
       case 'video_setting_shortcuts_hint':
@@ -516656,8 +517346,6 @@ extension on _StringsPtBr {
         return 'Diminuir';
       case 'deduplicate_pitch_accents':
         return 'Deduplicar acentos tonais';
-      case 'delete_choices_remember':
-        return 'Lembrar estas escolhas';
       case 'delete_collection':
         return 'Excluir coleção';
       case 'delete_collection_also_books':
@@ -517286,6 +517974,10 @@ extension on _StringsPtBr {
         return 'Permitir HTTP sem criptografia';
       case 'discovery_opds_allow_http_hint':
         return 'Necessário para um servidor auto-hospedado na sua rede local';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Ativado';
       case 'discovery_opds_name':
@@ -517307,10 +517999,17 @@ extension on _StringsPtBr {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Conectado. O catálogo raiz tem ${count} itens';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL do catálogo';
       case 'discovery_opds_url_hint':
-        return 'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds';
+        return 'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Informe uma URL de catálogo HTTP ou HTTPS válida';
       case 'discovery_opds_url_needs_http_optin':
@@ -517319,6 +518018,8 @@ extension on _StringsPtBr {
         return 'Usuário';
       case 'discovery_opds_username_hint':
         return 'Deixe vazio para um catálogo público';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Algumas fontes estão indisponíveis';
       case 'discovery_search_hint':
@@ -524286,9 +524987,9 @@ extension on _StringsPtBr {
       case 'reader_page_columns_auto':
         return 'Automático';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Dobra central';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Sombreia o espaço entre duas páginas, como um livro aberto (duas colunas por página)';
       case 'reader_paginated':
         return 'Paginado';
       case 'reader_panel_lyrics_exit_hint':
@@ -525678,7 +526379,7 @@ extension on _StringsPtBr {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -528268,8 +528969,14 @@ extension on _StringsPtBr {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Este stream Blu-ray ainda está criptografado com AACS. O Fushi não descriptografa discos protegidos, então só consegue reproduzir pastas BDMV ou arquivos de vídeo sem criptografia.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Próxima legenda (avança um pouco se não houver)';
       case 'video_bottom_play_pause':
@@ -528539,8 +529246,6 @@ extension on _StringsPtBr {
         return 'Gerenciar assinatura';
       case 'video_discovery_subtitle_search':
         return 'Buscar legendas';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Vídeo Dolby Vision perfil 5: as cores ficarão roxas ou verdes com a saída HDR / 10 bits desativada. Defina como Automático para corrigir.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Vídeo Dolby Vision perfil 5: esta plataforma ainda não consegue renderizar as cores corretamente, então a imagem pode ficar roxa ou verde.';
       case 'video_double_tap_next_cue':
@@ -529466,8 +530171,8 @@ extension on _StringsPtBr {
         return 'Sempre';
       case 'video_setting_hdr_output_auto':
         return 'Automático';
-      case 'video_setting_hdr_output_hint':
-        return 'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Somente Windows. Automático gera HDR quando a tela está no modo HDR e o vídeo é HDR; Sempre gera todo vídeo em HDR / 10 bits; Desligado mostra sempre SDR (vídeos HDR passam por mapeamento de tons). Em qualquer caso, vídeo e interface são compostos juntos.';
       case 'video_setting_hdr_output_off':
         return 'Desligado';
       case 'video_setting_hdr_tone_mapping':
@@ -529642,6 +530347,10 @@ extension on _StringsPtBr {
         return 'Ocultar legenda secundária';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Desfocar ou ocultar a legenda secundária (tradução)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Segundos para avançar/retroceder';
       case 'video_setting_shortcuts_hint':
@@ -534219,8 +534928,6 @@ extension on _StringsRu {
         return 'Уменьшить';
       case 'deduplicate_pitch_accents':
         return 'Удалить дубликаты тональных ударений';
-      case 'delete_choices_remember':
-        return 'Запомнить этот выбор';
       case 'delete_collection':
         return 'Удалить коллекцию';
       case 'delete_collection_also_books':
@@ -534850,6 +535557,10 @@ extension on _StringsRu {
         return 'Разрешить обычный HTTP';
       case 'discovery_opds_allow_http_hint':
         return 'Нужно для сервера, размещённого в вашей локальной сети';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Включено';
       case 'discovery_opds_name':
@@ -534872,10 +535583,17 @@ extension on _StringsRu {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Подключено. В корневом каталоге ${count} записей';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL каталога';
       case 'discovery_opds_url_hint':
-        return 'Точка доступа OPDS, например https://books.example.com/api/v1/opds';
+        return 'Точка доступа OPDS, например https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Введите корректный URL каталога по HTTP или HTTPS';
       case 'discovery_opds_url_needs_http_optin':
@@ -534884,6 +535602,8 @@ extension on _StringsRu {
         return 'Имя пользователя';
       case 'discovery_opds_username_hint':
         return 'Для публичного каталога оставьте пустым';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Некоторые источники недоступны';
       case 'discovery_search_hint':
@@ -541852,9 +542572,9 @@ extension on _StringsRu {
       case 'reader_page_columns_auto':
         return 'Авто';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Корешок';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Затенять промежуток между двумя страницами, как в раскрытой книге (две колонки на странице)';
       case 'reader_paginated':
         return 'Постраничный';
       case 'reader_panel_lyrics_exit_hint':
@@ -543244,7 +543964,7 @@ extension on _StringsRu {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -545836,8 +546556,14 @@ extension on _StringsRu {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Этот поток Blu-ray всё ещё зашифрован AACS. Fushi не расшифровывает защищённые диски, поэтому может воспроизводить только незашифрованные папки BDMV или видеофайлы.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Следующий субтитр (если нет — немного вперёд)';
       case 'video_bottom_play_pause':
@@ -546107,8 +546833,6 @@ extension on _StringsRu {
         return 'Управление подпиской';
       case 'video_discovery_subtitle_search':
         return 'Поиск субтитров';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Видео Dolby Vision профиля 5: при выключенном выводе HDR / 10 бит цвета будут фиолетовыми или зелёными. Установите «Авто», чтобы исправить.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Видео Dolby Vision профиля 5: эта платформа пока не может правильно отображать его цвета, поэтому картинка может выглядеть фиолетовой или зелёной.';
       case 'video_double_tap_next_cue':
@@ -547031,8 +547755,8 @@ extension on _StringsRu {
         return 'Всегда';
       case 'video_setting_hdr_output_auto':
         return 'Авто';
-      case 'video_setting_hdr_output_hint':
-        return 'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Только Windows. «Авто» выводит HDR, когда экран в режиме HDR и видео в HDR; «Всегда» выводит любое видео как HDR / 10 бит; «Выкл.» всегда показывает SDR (HDR-видео проходит тональное отображение). В любом случае видео и интерфейс компонуются вместе.';
       case 'video_setting_hdr_output_off':
         return 'Выключено';
       case 'video_setting_hdr_tone_mapping':
@@ -547207,6 +547931,10 @@ extension on _StringsRu {
         return 'Скрыть вторичные субтитры';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Размыть или скрыть вторичные (переводные) субтитры';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Шаг перемотки (с)';
       case 'video_setting_shortcuts_hint':
@@ -551764,8 +552492,6 @@ extension on _StringsTh {
         return 'ลด';
       case 'deduplicate_pitch_accents':
         return 'ลบสำเนียงซ้ำ';
-      case 'delete_choices_remember':
-        return 'จดจำตัวเลือกเหล่านี้';
       case 'delete_collection':
         return 'ลบคอลเลกชัน';
       case 'delete_collection_also_books':
@@ -552391,6 +553117,10 @@ extension on _StringsTh {
         return 'อนุญาต HTTP แบบไม่เข้ารหัส';
       case 'discovery_opds_allow_http_hint':
         return 'จำเป็นสำหรับเซิร์ฟเวอร์ที่โฮสต์เองในเครือข่ายภายใน';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'เปิดใช้งาน';
       case 'discovery_opds_name':
@@ -552412,10 +553142,17 @@ extension on _StringsTh {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL แคตตาล็อก';
       case 'discovery_opds_url_hint':
-        return 'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds';
+        return 'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'กรอก URL แคตตาล็อกแบบ HTTP หรือ HTTPS ที่ถูกต้อง';
       case 'discovery_opds_url_needs_http_optin':
@@ -552424,6 +553161,8 @@ extension on _StringsTh {
         return 'ชื่อผู้ใช้';
       case 'discovery_opds_username_hint':
         return 'เว้นว่างไว้สำหรับแคตตาล็อกสาธารณะ';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'แหล่งบางแห่งไม่พร้อมใช้งาน';
       case 'discovery_search_hint':
@@ -559378,9 +560117,9 @@ extension on _StringsTh {
       case 'reader_page_columns_auto':
         return 'อัตโนมัติ';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'รอยพับกลางหน้า';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'แรเงาช่องว่างระหว่างสองหน้าให้เหมือนหนังสือที่เปิดอยู่ (สองคอลัมน์ต่อหน้า)';
       case 'reader_paginated':
         return 'แบ่งหน้า';
       case 'reader_panel_lyrics_exit_hint':
@@ -560770,7 +561509,7 @@ extension on _StringsTh {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -563360,8 +564099,14 @@ extension on _StringsTh {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'สตรีม Blu-ray นี้ยังเข้ารหัส AACS อยู่ Fushi ไม่ถอดรหัสแผ่นที่มีการป้องกัน จึงเล่นได้เฉพาะโฟลเดอร์ BDMV หรือไฟล์วิดีโอที่ไม่เข้ารหัส';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'คำบรรยายถัดไป (เดินหน้าเล็กน้อยถ้าไม่มี)';
       case 'video_bottom_play_pause':
@@ -563630,8 +564375,6 @@ extension on _StringsTh {
         return 'จัดการการติดตาม';
       case 'video_discovery_subtitle_search':
         return 'ค้นหาคำบรรยาย';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'วิดีโอ Dolby Vision โปรไฟล์ 5: สีจะออกม่วงหรือเขียวเมื่อปิดเอาต์พุต HDR / 10 บิต ตั้งเป็น อัตโนมัติ เพื่อแก้ไข';
       case 'video_dolby_vision_colors_unsupported':
         return 'วิดีโอ Dolby Vision โปรไฟล์ 5: แพลตฟอร์มนี้ยังแสดงสีได้ไม่ถูกต้อง ภาพจึงอาจออกม่วงหรือเขียว';
       case 'video_double_tap_next_cue':
@@ -564552,8 +565295,8 @@ extension on _StringsTh {
         return 'เสมอ';
       case 'video_setting_hdr_output_auto':
         return 'อัตโนมัติ';
-      case 'video_setting_hdr_output_hint':
-        return 'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'เฉพาะ Windows อัตโนมัติ: ส่งออก HDR เมื่อจอแสดงผลอยู่ในโหมด HDR และวิดีโอเป็น HDR; เสมอ: ส่งออกทุกวิดีโอเป็น HDR / 10 บิต; ปิด: แสดงเป็น SDR เสมอ (วิดีโอ HDR จะถูกโทนแมป) ไม่ว่าแบบใด วิดีโอและอินเทอร์เฟซจะถูกรวมภาพพร้อมกัน';
       case 'video_setting_hdr_output_off':
         return 'ปิด';
       case 'video_setting_hdr_tone_mapping':
@@ -564728,6 +565471,10 @@ extension on _StringsTh {
         return 'ซ่อนคำบรรยายรอง';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'เบลอหรือซ่อนคำบรรยายรอง (คำแปล)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'ระยะเลื่อนเวลา (วินาที)';
       case 'video_setting_shortcuts_hint':
@@ -569300,8 +570047,6 @@ extension on _StringsTr {
         return 'Azalt';
       case 'deduplicate_pitch_accents':
         return 'Ton vurgularını tekrarsızlaştır';
-      case 'delete_choices_remember':
-        return 'Bu seçimleri hatırla';
       case 'delete_collection':
         return 'Koleksiyonu sil';
       case 'delete_collection_also_books':
@@ -569928,6 +570673,10 @@ extension on _StringsTr {
         return 'Şifresiz HTTP\'ye izin ver';
       case 'discovery_opds_allow_http_hint':
         return 'Yerel ağdaki kendi sunucun için gerekli';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Etkin';
       case 'discovery_opds_name':
@@ -569949,10 +570698,17 @@ extension on _StringsTr {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Bağlanıldı. Kök katalogda ${count} girdi var';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'Katalog URL\'si';
       case 'discovery_opds_url_hint':
-        return 'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds';
+        return 'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Geçerli bir HTTP veya HTTPS katalog URL\'si gir';
       case 'discovery_opds_url_needs_http_optin':
@@ -569961,6 +570717,8 @@ extension on _StringsTr {
         return 'Kullanıcı adı';
       case 'discovery_opds_username_hint':
         return 'Herkese açık katalog için boş bırak';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Bazı kaynaklar kullanılamıyor';
       case 'discovery_search_hint':
@@ -576922,9 +577680,9 @@ extension on _StringsTr {
       case 'reader_page_columns_auto':
         return 'Otomatik';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Orta kıvrım';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'İki sayfa arasındaki boşluğu açık bir kitap gibi gölgelendir (sayfa başına iki sütun)';
       case 'reader_paginated':
         return 'Sayfalı';
       case 'reader_panel_lyrics_exit_hint':
@@ -578314,7 +579072,7 @@ extension on _StringsTr {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -580906,8 +581664,14 @@ extension on _StringsTr {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Bu Blu-ray akışı hâlâ AACS ile şifreli. Fushi korumalı diskleri çözmez, bu yüzden yalnızca şifresiz BDMV klasörlerini veya video dosyalarını oynatabilir.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Sonraki altyazı (yoksa biraz ileri)';
       case 'video_bottom_play_pause':
@@ -581177,8 +581941,6 @@ extension on _StringsTr {
         return 'Aboneliği yönet';
       case 'video_discovery_subtitle_search':
         return 'Altyazı ara';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision profil 5 videosu: HDR / 10 bit çıkışı kapalıyken renkler mor veya yeşil görünür. Düzeltmek için Otomatik olarak ayarlayın.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profil 5 videosu: bu platform renklerini henüz doğru işleyemiyor, bu yüzden görüntü mor veya yeşil görünebilir.';
       case 'video_double_tap_next_cue':
@@ -582102,8 +582864,8 @@ extension on _StringsTr {
         return 'Her zaman';
       case 'video_setting_hdr_output_auto':
         return 'Otomatik';
-      case 'video_setting_hdr_output_hint':
-        return 'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Yalnızca Windows. Otomatik, ekran HDR modundayken ve video HDR ise HDR çıkış verir; Her zaman her videoyu HDR / 10 bit olarak verir; Kapalı her zaman SDR gösterir (HDR videolar ton eşlenir). Her durumda video ve arayüz birlikte birleştirilir.';
       case 'video_setting_hdr_output_off':
         return 'Kapalı';
       case 'video_setting_hdr_tone_mapping':
@@ -582278,6 +583040,10 @@ extension on _StringsTr {
         return 'İkincil altyazıyı gizle';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'İkincil (çeviri) altyazıyı bulanıklaştır veya gizle';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Sarma saniyesi';
       case 'video_setting_shortcuts_hint':
@@ -586842,8 +587608,6 @@ extension on _StringsVi {
         return 'Giảm';
       case 'deduplicate_pitch_accents':
         return 'Loại bỏ trùng lặp thanh điệu';
-      case 'delete_choices_remember':
-        return 'Ghi nhớ các lựa chọn này';
       case 'delete_collection':
         return 'Xóa bộ sưu tập';
       case 'delete_collection_also_books':
@@ -587471,6 +588235,10 @@ extension on _StringsVi {
         return 'Cho phép HTTP không mã hóa';
       case 'discovery_opds_allow_http_hint':
         return 'Cần thiết cho máy chủ tự dựng trong mạng nội bộ';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Đã bật';
       case 'discovery_opds_name':
@@ -587492,10 +588260,17 @@ extension on _StringsVi {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Đã kết nối. Danh mục gốc có ${count} mục';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL danh mục';
       case 'discovery_opds_url_hint':
-        return 'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds';
+        return 'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Nhập URL danh mục HTTP hoặc HTTPS hợp lệ';
       case 'discovery_opds_url_needs_http_optin':
@@ -587504,6 +588279,8 @@ extension on _StringsVi {
         return 'Tên đăng nhập';
       case 'discovery_opds_username_hint':
         return 'Để trống nếu là danh mục công khai';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Một số nguồn không khả dụng';
       case 'discovery_search_hint':
@@ -594461,9 +595238,9 @@ extension on _StringsVi {
       case 'reader_page_columns_auto':
         return 'Tự động';
       case 'reader_page_crease':
-        return 'Page crease';
+        return 'Nếp gấp giữa trang';
       case 'reader_page_crease_subtitle':
-        return 'Shade the gutter between two pages, like an open book (two columns per page)';
+        return 'Tô bóng khe giữa hai trang như một cuốn sách đang mở (hai cột mỗi trang)';
       case 'reader_paginated':
         return 'Phân trang';
       case 'reader_panel_lyrics_exit_hint':
@@ -595853,7 +596630,7 @@ extension on _StringsVi {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -598446,8 +599223,14 @@ extension on _StringsVi {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Luồng Blu-ray này vẫn bị mã hóa AACS. Fushi không giải mã đĩa được bảo vệ, nên chỉ phát được thư mục BDMV chưa mã hóa hoặc tệp video.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Câu phụ đề sau (tới một chút nếu không có)';
       case 'video_bottom_play_pause':
@@ -598715,8 +599498,6 @@ extension on _StringsVi {
         return 'Quản lý đăng ký';
       case 'video_discovery_subtitle_search':
         return 'Tìm phụ đề';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Video Dolby Vision profile 5: màu sẽ ngả tím hoặc xanh lục khi đầu ra HDR / 10-bit bị tắt. Hãy đặt thành Tự động để khắc phục.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Video Dolby Vision profile 5: nền tảng này chưa thể hiển thị đúng màu của nó nên hình ảnh có thể ngả tím hoặc xanh lục.';
       case 'video_double_tap_next_cue':
@@ -599638,8 +600419,8 @@ extension on _StringsVi {
         return 'Luôn luôn';
       case 'video_setting_hdr_output_auto':
         return 'Tự động';
-      case 'video_setting_hdr_output_hint':
-        return 'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Chỉ Windows. Tự động xuất HDR khi màn hình ở chế độ HDR và video là HDR; Luôn luôn xuất mọi video dưới dạng HDR / 10-bit; Tắt luôn hiển thị SDR (video HDR được ánh xạ tông màu). Dù chọn gì, video và giao diện đều được ghép chung trên cùng khung hình.';
       case 'video_setting_hdr_output_off':
         return 'Tắt';
       case 'video_setting_hdr_tone_mapping':
@@ -599814,6 +600595,10 @@ extension on _StringsVi {
         return 'Che phụ đề phụ';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return 'Làm mờ hoặc ẩn phụ đề phụ (bản dịch)';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return 'Bước tua (giây)';
       case 'video_setting_shortcuts_hint':
@@ -604318,8 +605103,6 @@ extension on _StringsZhCn {
         return '减少';
       case 'deduplicate_pitch_accents':
         return '音调去重';
-      case 'delete_choices_remember':
-        return '记住这些选择';
       case 'delete_collection':
         return '删除合集';
       case 'delete_collection_also_books':
@@ -604938,6 +605721,10 @@ extension on _StringsZhCn {
         return '允许明文 HTTP';
       case 'discovery_opds_allow_http_hint':
         return '局域网自建服务器需要打开';
+      case 'discovery_opds_api_key':
+        return 'API key（可选）';
+      case 'discovery_opds_api_key_hint':
+        return '以 X-API-Key 请求头发送；Komga 可用它代替用户名和密码';
       case 'discovery_opds_enabled':
         return '启用';
       case 'discovery_opds_name':
@@ -604958,10 +605745,17 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '连接失败：${reason}';
       case 'discovery_opds_test_ok':
         return ({required Object count}) => '连接成功，根目录有 ${count} 个条目';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            '已连接。在另一个地址找到了目录并已保存。根目录有 ${count} 个条目';
+      case 'discovery_opds_test_unauthorized':
+        return '服务器拒绝了凭据。Komga 的用户名要填登录邮箱，或改用 API key';
+      case 'discovery_opds_test_web_page':
+        return '这个地址是网页，不是 OPDS 目录。请填目录地址，例如 Komga 的 …/opds/v2/catalog';
       case 'discovery_opds_url':
         return '目录地址';
       case 'discovery_opds_url_hint':
-        return 'OPDS 端点，例如 https://books.example.com/api/v1/opds';
+        return 'OPDS 端点，例如 https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return '请填写有效的 HTTP 或 HTTPS 目录地址';
       case 'discovery_opds_url_needs_http_optin':
@@ -604970,6 +605764,8 @@ extension on _StringsZhCn {
         return '用户名';
       case 'discovery_opds_username_hint':
         return '公开目录留空即可';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga：填登录邮箱';
       case 'discovery_partial_failure':
         return '部分源不可用';
       case 'discovery_search_hint':
@@ -613247,7 +614043,7 @@ extension on _StringsZhCn {
       case 'srs_card_appearance_design_skin':
         return '卡面跟随设计系统';
       case 'srs_card_appearance_design_skin_hint':
-        return '用应用当前的 M3E / 苹果风样式覆盖导入牌组与自建模板的外观（背景、边框、文字与链接颜色、字体），模板的布局与内容不变。关闭则完全按模板原样显示。';
+        return '用应用当前的 Material / 苹果风样式覆盖导入牌组与自建模板的外观（背景、边框、文字与链接颜色、字体），模板的布局与内容不变。关闭则完全按模板原样显示。';
       case 'srs_card_appearance_dict_unified':
         return '统一词典样式';
       case 'srs_card_appearance_dict_unified_hint':
@@ -615796,8 +616592,14 @@ extension on _StringsZhCn {
         return '未找到这张盘的匹配播放配置，请提供更新的 KEYDB.cfg 后重试。';
       case 'video_bluray_protection_unsupported':
         return '这张盘使用的保护格式尚不支持。目前支持具有匹配播放配置的 AACS 1 蓝光盘。';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            '该蓝光码流已损坏：${name} 第 ${offset} 字节处的数据读不出来。是光盘或其拷贝损坏（例如读盘错误被填零），不是播放配置的问题。请清洁光盘或重新抓取后重试。';
       case 'video_bluray_stream_encrypted':
         return '该蓝光码流仍处于 AACS 加密状态。Fushi 不解密受保护的光盘，只能播放未加密的 BDMV 目录或视频文件。';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            '无法解密 ${name} 第 ${offset} 字节处的数据：KEYDB.cfg 中的密钥与这张盘不匹配，或数据已损坏。请先检查 KEYDB.cfg；如果这张盘的其它标题能正常播放，多半是拷贝损坏。';
       case 'video_bottom_next_cue':
         return '下一句字幕（无字幕则前进一段）';
       case 'video_bottom_play_pause':
@@ -616063,8 +616865,6 @@ extension on _StringsZhCn {
         return '管理订阅';
       case 'video_discovery_subtitle_search':
         return '搜索字幕';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return '杜比视界 Profile 5 片源：HDR / 10-bit 输出关闭时颜色会偏紫或偏绿，改成「自动」即可正常显示。';
       case 'video_dolby_vision_colors_unsupported':
         return '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
       case 'video_double_tap_next_cue':
@@ -616975,8 +617775,8 @@ extension on _StringsZhCn {
         return '始终';
       case 'video_setting_hdr_output_auto':
         return '自动';
-      case 'video_setting_hdr_output_hint':
-        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通（杜比视界 Profile 5 片源不论显示器都走它，只有它能正确还原颜色）；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+      case 'video_setting_hdr_output_mode_hint':
+        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时输出 HDR；始终：所有视频都按 HDR / 10-bit 输出；关闭：始终按 SDR 显示（HDR 片源经色调映射）。无论哪种，视频与界面都在同一画面里合成。';
       case 'video_setting_hdr_output_off':
         return '关闭';
       case 'video_setting_hdr_tone_mapping':
@@ -617151,6 +617951,10 @@ extension on _StringsZhCn {
         return '副字幕遮蔽';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '模糊或隐藏副字幕（翻译参考轨）';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return '副字幕暂停或悬停时显形';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return '同主字幕的显形开关，只作用于副字幕（翻译参考轨）。关掉后副字幕的遮蔽始终保持，不受主字幕显形影响。';
       case 'video_setting_seek_seconds':
         return '快进/快退步长（秒）';
       case 'video_setting_shortcuts_hint':
@@ -617204,9 +618008,9 @@ extension on _StringsZhCn {
       case 'video_setting_subtitle_obscure_none':
         return '关闭';
       case 'video_setting_subtitle_obscure_reveal':
-        return '暂停或悬停时显形';
+        return '主字幕暂停或悬停时显形';
       case 'video_setting_subtitle_obscure_reveal_hint':
-        return '字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
+        return '主字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
       case 'video_setting_subtitle_outline':
         return '描边粗细';
       case 'video_setting_subtitle_outline_color':
@@ -621651,8 +622455,6 @@ extension on _StringsZhHk {
         return '減少';
       case 'deduplicate_pitch_accents':
         return '音調重複去除';
-      case 'delete_choices_remember':
-        return '記住這些選擇';
       case 'delete_collection':
         return '刪除合集';
       case 'delete_collection_also_books':
@@ -622275,6 +623077,10 @@ extension on _StringsZhHk {
         return '允許明文 HTTP';
       case 'discovery_opds_allow_http_hint':
         return '區域網絡自建伺服器需要開啟';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return '啟用';
       case 'discovery_opds_name':
@@ -622295,10 +623101,17 @@ extension on _StringsZhHk {
         return ({required Object reason}) => '連線失敗：${reason}';
       case 'discovery_opds_test_ok':
         return ({required Object count}) => '連線成功，根目錄有 ${count} 個項目';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return '目錄地址';
       case 'discovery_opds_url_hint':
-        return 'OPDS 端點，例如 https://books.example.com/api/v1/opds';
+        return 'OPDS 端點，例如 https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return '請填寫有效的 HTTP 或 HTTPS 目錄地址';
       case 'discovery_opds_url_needs_http_optin':
@@ -622307,6 +623120,8 @@ extension on _StringsZhHk {
         return '使用者名稱';
       case 'discovery_opds_username_hint':
         return '公開目錄留空即可';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return '部分源不可用';
       case 'discovery_search_hint':
@@ -630608,7 +631423,7 @@ extension on _StringsZhHk {
       case 'srs_card_appearance_design_skin':
         return 'Match the design system';
       case 'srs_card_appearance_design_skin_hint':
-        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -633177,8 +633992,14 @@ extension on _StringsZhHk {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return '該藍光碼流仍處於 AACS 加密狀態。Fushi 不解密受保護的光盤，只能播放未加密的 BDMV 目錄或影片檔案。';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return '下一句字幕（無字幕則前進一段）';
       case 'video_bottom_play_pause':
@@ -633444,8 +634265,6 @@ extension on _StringsZhHk {
         return '管理訂閱';
       case 'video_discovery_subtitle_search':
         return '搜索字幕';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return '杜比視界 Profile 5 片源：HDR / 10-bit 輸出關閉時顏色會偏紫或偏綠，改成「自動」即可正常顯示。';
       case 'video_dolby_vision_colors_unsupported':
         return '杜比視界 Profile 5 片源：本平台暫時無法正確還原它的顏色，畫面可能偏紫或偏綠。';
       case 'video_double_tap_next_cue':
@@ -634357,8 +635176,8 @@ extension on _StringsZhHk {
         return '始終';
       case 'video_setting_hdr_output_auto':
         return '自動';
-      case 'video_setting_hdr_output_hint':
-        return '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
+      case 'video_setting_hdr_output_mode_hint':
+        return '僅 Windows。自動：顯示器開著 HDR 且片源是 HDR 時輸出 HDR；始終：所有影片都按 HDR / 10-bit 輸出；關閉：始終按 SDR 顯示（HDR 片源經色調映射）。無論哪種，影片與介面都在同一畫面裡合成。';
       case 'video_setting_hdr_output_off':
         return '關閉';
       case 'video_setting_hdr_tone_mapping':
@@ -634533,6 +635352,10 @@ extension on _StringsZhHk {
         return '副字幕遮蔽';
       case 'video_setting_secondary_subtitle_obscure_hint':
         return '模糊或隱藏副字幕（翻譯參考軌）';
+      case 'video_setting_secondary_subtitle_obscure_reveal':
+        return 'Secondary: reveal when paused or hovered';
+      case 'video_setting_secondary_subtitle_obscure_reveal_hint':
+        return 'Same as the primary subtitle switch, but for the secondary (translation) subtitle. Turn it off to keep the translation obscured even while the primary subtitle is revealed.';
       case 'video_setting_seek_seconds':
         return '快進／快退步長（秒）';
       case 'video_setting_shortcuts_hint':
