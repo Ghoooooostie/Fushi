@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149515 (8795 per locale)
+/// Strings: 149702 (8806 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2927,6 +2927,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_language_tooltip => 'Content language';
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   String get dict_order_bottom_move => 'Move to bottom';
   String dict_order_position_clamped({required Object n}) =>
       'Out of range — will move to position ${n}';
@@ -11337,6 +11340,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The video for this favorite is no longer available';
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   String video_remote_error_invalid_request({required Object code}) =>
@@ -11367,6 +11372,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_remote_error_unreachable => 'Can\'t reach the computer';
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
   String get video_remote_expression => 'Expression';
   String get video_remote_favorites => 'Favorites';
   String get video_remote_favorites_empty => 'No favorites yet';
@@ -11381,6 +11388,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} selected';
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  String get video_remote_library_no_match => 'No matching videos';
+  String get video_remote_library_now_playing => 'Playing';
+  String get video_remote_library_pick => 'Choose a video';
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  String get video_remote_library_title => 'Play a video';
   String get video_remote_line_actions => 'Line actions';
   String get video_remote_meaning => 'Meaning';
   String get video_remote_mine => 'Preview and create card';
@@ -17302,6 +17319,11 @@ class _StringsAr extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -31735,6 +31757,9 @@ class _StringsAr extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -31781,6 +31806,9 @@ class _StringsAr extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -31804,6 +31832,23 @@ class _StringsAr extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -38690,6 +38735,11 @@ class _StringsDe extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -53402,6 +53452,9 @@ class _StringsDe extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -53448,6 +53501,9 @@ class _StringsDe extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -53471,6 +53527,23 @@ class _StringsDe extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -60416,6 +60489,11 @@ class _StringsEs extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -75160,6 +75238,9 @@ class _StringsEs extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -75206,6 +75287,9 @@ class _StringsEs extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -75229,6 +75313,23 @@ class _StringsEs extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -82209,6 +82310,11 @@ class _StringsFr extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -96994,6 +97100,9 @@ class _StringsFr extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -97040,6 +97149,9 @@ class _StringsFr extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -97063,6 +97175,23 @@ class _StringsFr extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -103983,6 +104112,11 @@ class _StringsId extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -118549,6 +118683,9 @@ class _StringsId extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -118595,6 +118732,9 @@ class _StringsId extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -118618,6 +118758,23 @@ class _StringsId extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -125518,6 +125675,11 @@ class _StringsIt extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -140196,6 +140358,9 @@ class _StringsIt extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -140242,6 +140407,9 @@ class _StringsIt extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -140265,6 +140433,23 @@ class _StringsIt extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -146994,6 +147179,11 @@ class _StringsJa extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => '用語辞書に付属の漢字';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'この漢字は用語辞書に付属するものです。削除すると辞書全体（用語の見出しも含む）が削除されます。漢字カードだけを表示しないなら、ここでオフにしてください。';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -160974,6 +161164,9 @@ class _StringsJa extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'パソコン側でダイアログが開いているため動画を切り替えられません。閉じてからもう一度お試しください';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -161020,6 +161213,8 @@ class _StringsJa extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing => 'この動画はもうパソコンのライブラリにありません';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -161043,6 +161238,20 @@ class _StringsJa extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty => 'パソコンの動画ライブラリは空です';
+  @override
+  String get video_remote_library_no_match => '一致する動画がありません';
+  @override
+  String get video_remote_library_now_playing => '再生中';
+  @override
+  String get video_remote_library_pick => '動画を選ぶ';
+  @override
+  String video_remote_library_resume({required Object time}) => '${time} から再開';
+  @override
+  String get video_remote_library_search_hint => 'パソコンの動画を検索';
+  @override
+  String get video_remote_library_title => '動画を選んで再生';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -167627,6 +167836,11 @@ class _StringsKo extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -181640,6 +181854,9 @@ class _StringsKo extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -181686,6 +181903,9 @@ class _StringsKo extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -181709,6 +181929,23 @@ class _StringsKo extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -188513,6 +188750,11 @@ class _StringsNl extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -203153,6 +203395,9 @@ class _StringsNl extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -203199,6 +203444,9 @@ class _StringsNl extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -203222,6 +203470,23 @@ class _StringsNl extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -210144,6 +210409,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -224825,6 +225095,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -224871,6 +225144,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -224894,6 +225170,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -231813,6 +232106,11 @@ class _StringsRu extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -246458,6 +246756,9 @@ class _StringsRu extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -246504,6 +246805,9 @@ class _StringsRu extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -246527,6 +246831,23 @@ class _StringsRu extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -253379,6 +253700,11 @@ class _StringsTh extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -267816,6 +268142,9 @@ class _StringsTh extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -267862,6 +268191,9 @@ class _StringsTh extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -267885,6 +268217,23 @@ class _StringsTh extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -274734,6 +275083,11 @@ class _StringsTr extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -289301,6 +289655,9 @@ class _StringsTr extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -289347,6 +289704,9 @@ class _StringsTr extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -289370,6 +289730,23 @@ class _StringsTr extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -296235,6 +296612,11 @@ class _StringsVi extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -310753,6 +311135,9 @@ class _StringsVi extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -310799,6 +311184,9 @@ class _StringsVi extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -310822,6 +311210,23 @@ class _StringsVi extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -317275,6 +317680,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '共 ${n} 本 · 已启用 ${m} 本';
+  @override
+  String get dict_mixed_kanji_part => '术语词典内附的汉字';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      '这份汉字是术语词典内附的：删除会把整本词典（连同术语词条）一起删掉。只想不显示汉字卡，在这里关掉它即可。';
   @override
   String get dict_order_bottom_move => '移到最后';
   @override
@@ -330568,6 +330978,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_remote_error_favorite_subtitle_missing => '视频里找不到这条收藏对应的字幕';
   @override
+  String get video_remote_error_host_busy => '电脑上有窗口挡着，暂时换不了视频，关掉后再试';
+  @override
   String get video_remote_error_internal_error => '电脑端出错';
   @override
   String video_remote_error_invalid_request({required Object code}) =>
@@ -330602,6 +331014,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       '电脑无法为卡片提取音频或画面';
   @override
+  String get video_remote_error_video_missing => '电脑库里已经没有这个视频了';
+  @override
   String get video_remote_expression => '词语';
   @override
   String get video_remote_favorites => '收藏';
@@ -330621,6 +331035,20 @@ class _StringsZhCn extends _StringsEn {
   String video_remote_favorites_selected({required Object n}) => '已选 ${n} 条';
   @override
   String video_remote_host_connected({required Object name}) => '已连接 ${name}';
+  @override
+  String get video_remote_library_empty => '电脑的视频库里还没有视频';
+  @override
+  String get video_remote_library_no_match => '没有匹配的视频';
+  @override
+  String get video_remote_library_now_playing => '正在播放';
+  @override
+  String get video_remote_library_pick => '选个视频';
+  @override
+  String video_remote_library_resume({required Object time}) => '从 ${time} 继续';
+  @override
+  String get video_remote_library_search_hint => '搜索电脑上的视频';
+  @override
+  String get video_remote_library_title => '点播';
   @override
   String get video_remote_line_actions => '句子操作';
   @override
@@ -336983,6 +337411,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => '術語詞典內附的漢字';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      '這份漢字是術語詞典內附的：刪除會把整本詞典（連同術語詞條）一起刪掉。只想不顯示漢字卡，在這裡關掉它即可。';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -350569,6 +351002,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy => '電腦上有視窗擋著，暫時換不了影片，關掉後再試';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -350613,6 +351048,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing => '電腦庫裡已經沒有這個影片了';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -350636,6 +351073,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty => '電腦的影片庫裡還沒有影片';
+  @override
+  String get video_remote_library_no_match => '沒有相符的影片';
+  @override
+  String get video_remote_library_now_playing => '正在播放';
+  @override
+  String get video_remote_library_pick => '揀個影片';
+  @override
+  String video_remote_library_resume({required Object time}) => '從 ${time} 繼續';
+  @override
+  String get video_remote_library_search_hint => '搜尋電腦上的影片';
+  @override
+  String get video_remote_library_title => '點播';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -356555,6 +357006,10 @@ extension on _StringsEn {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -369054,6 +369509,8 @@ extension on _StringsEn {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -369087,6 +369544,8 @@ extension on _StringsEn {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -369107,6 +369566,20 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -374832,6 +375305,10 @@ extension on _StringsAr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -387322,6 +387799,8 @@ extension on _StringsAr {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -387355,6 +387834,8 @@ extension on _StringsAr {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -387375,6 +387856,20 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -393127,6 +393622,10 @@ extension on _StringsDe {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -405666,6 +406165,8 @@ extension on _StringsDe {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -405699,6 +406200,8 @@ extension on _StringsDe {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -405719,6 +406222,20 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -411467,6 +411984,10 @@ extension on _StringsEs {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -423995,6 +424516,8 @@ extension on _StringsEs {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -424028,6 +424551,8 @@ extension on _StringsEs {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -424048,6 +424573,20 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -429803,6 +430342,10 @@ extension on _StringsFr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -442340,6 +442883,8 @@ extension on _StringsFr {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -442373,6 +442918,8 @@ extension on _StringsFr {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -442393,6 +442940,20 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -448131,6 +448692,10 @@ extension on _StringsId {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -460633,6 +461198,8 @@ extension on _StringsId {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -460666,6 +461233,8 @@ extension on _StringsId {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -460686,6 +461255,20 @@ extension on _StringsId {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -466427,6 +467010,10 @@ extension on _StringsIt {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -478956,6 +479543,8 @@ extension on _StringsIt {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -478989,6 +479578,8 @@ extension on _StringsIt {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -479009,6 +479600,20 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -484719,6 +485324,10 @@ extension on _StringsJa {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return '用語辞書に付属の漢字';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'この漢字は用語辞書に付属するものです。削除すると辞書全体（用語の見出しも含む）が削除されます。漢字カードだけを表示しないなら、ここでオフにしてください。';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -497164,6 +497773,8 @@ extension on _StringsJa {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'パソコン側でダイアログが開いているため動画を切り替えられません。閉じてからもう一度お試しください';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -497197,6 +497808,8 @@ extension on _StringsJa {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'この動画はもうパソコンのライブラリにありません';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -497217,6 +497830,20 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'パソコンの動画ライブラリは空です';
+      case 'video_remote_library_no_match':
+        return '一致する動画がありません';
+      case 'video_remote_library_now_playing':
+        return '再生中';
+      case 'video_remote_library_pick':
+        return '動画を選ぶ';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => '${time} から再開';
+      case 'video_remote_library_search_hint':
+        return 'パソコンの動画を検索';
+      case 'video_remote_library_title':
+        return '動画を選んで再生';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -502911,6 +503538,10 @@ extension on _StringsKo {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -515366,6 +515997,8 @@ extension on _StringsKo {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -515399,6 +516032,8 @@ extension on _StringsKo {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -515419,6 +516054,20 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -521153,6 +521802,10 @@ extension on _StringsNl {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -533674,6 +534327,8 @@ extension on _StringsNl {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -533707,6 +534362,8 @@ extension on _StringsNl {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -533727,6 +534384,20 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -539473,6 +540144,10 @@ extension on _StringsPtBr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -551989,6 +552664,8 @@ extension on _StringsPtBr {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -552022,6 +552699,8 @@ extension on _StringsPtBr {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -552042,6 +552721,20 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -557790,6 +558483,10 @@ extension on _StringsRu {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -570308,6 +571005,8 @@ extension on _StringsRu {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -570341,6 +571040,8 @@ extension on _StringsRu {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -570361,6 +571062,20 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -576087,6 +576802,10 @@ extension on _StringsTh {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -588584,6 +589303,8 @@ extension on _StringsTh {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -588617,6 +589338,8 @@ extension on _StringsTh {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -588637,6 +589360,20 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -594377,6 +595114,10 @@ extension on _StringsTr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -606886,6 +607627,8 @@ extension on _StringsTr {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -606919,6 +607662,8 @@ extension on _StringsTr {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -606939,6 +607684,20 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -612674,6 +613433,10 @@ extension on _StringsVi {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -625177,6 +625940,8 @@ extension on _StringsVi {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -625210,6 +625975,8 @@ extension on _StringsVi {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -625230,6 +625997,20 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -630899,6 +631680,10 @@ extension on _StringsZhCn {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '共 ${n} 本 · 已启用 ${m} 本';
+      case 'dict_mixed_kanji_part':
+        return '术语词典内附的汉字';
+      case 'dict_mixed_kanji_part_delete_note':
+        return '这份汉字是术语词典内附的：删除会把整本词典（连同术语词条）一起删掉。只想不显示汉字卡，在这里关掉它即可。';
       case 'dict_order_bottom_move':
         return '移到最后';
       case 'dict_order_position_clamped':
@@ -643267,6 +644052,8 @@ extension on _StringsZhCn {
         return '这条收藏对应的视频已不可用';
       case 'video_remote_error_favorite_subtitle_missing':
         return '视频里找不到这条收藏对应的字幕';
+      case 'video_remote_error_host_busy':
+        return '电脑上有窗口挡着，暂时换不了视频，关掉后再试';
       case 'video_remote_error_internal_error':
         return '电脑端出错';
       case 'video_remote_error_invalid_request':
@@ -643300,6 +644087,8 @@ extension on _StringsZhCn {
         return '连接不到电脑';
       case 'video_remote_error_video_extraction_unavailable':
         return '电脑无法为卡片提取音频或画面';
+      case 'video_remote_error_video_missing':
+        return '电脑库里已经没有这个视频了';
       case 'video_remote_expression':
         return '词语';
       case 'video_remote_favorites':
@@ -643320,6 +644109,20 @@ extension on _StringsZhCn {
         return ({required Object n}) => '已选 ${n} 条';
       case 'video_remote_host_connected':
         return ({required Object name}) => '已连接 ${name}';
+      case 'video_remote_library_empty':
+        return '电脑的视频库里还没有视频';
+      case 'video_remote_library_no_match':
+        return '没有匹配的视频';
+      case 'video_remote_library_now_playing':
+        return '正在播放';
+      case 'video_remote_library_pick':
+        return '选个视频';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => '从 ${time} 继续';
+      case 'video_remote_library_search_hint':
+        return '搜索电脑上的视频';
+      case 'video_remote_library_title':
+        return '点播';
       case 'video_remote_line_actions':
         return '句子操作';
       case 'video_remote_meaning':
@@ -648969,6 +649772,10 @@ extension on _StringsZhHk {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return '術語詞典內附的漢字';
+      case 'dict_mixed_kanji_part_delete_note':
+        return '這份漢字是術語詞典內附的：刪除會把整本詞典（連同術語詞條）一起刪掉。只想不顯示漢字卡，在這裡關掉它即可。';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -661389,6 +662196,8 @@ extension on _StringsZhHk {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return '電腦上有視窗擋著，暫時換不了影片，關掉後再試';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -661422,6 +662231,8 @@ extension on _StringsZhHk {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return '電腦庫裡已經沒有這個影片了';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -661442,6 +662253,20 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return '電腦的影片庫裡還沒有影片';
+      case 'video_remote_library_no_match':
+        return '沒有相符的影片';
+      case 'video_remote_library_now_playing':
+        return '正在播放';
+      case 'video_remote_library_pick':
+        return '揀個影片';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => '從 ${time} 繼續';
+      case 'video_remote_library_search_hint':
+        return '搜尋電腦上的影片';
+      case 'video_remote_library_title':
+        return '點播';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
