@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149855 (8815 per locale)
+/// Strings: 149889 (8817 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8982,6 +8982,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_menu => 'More actions';
   String get srs_deck_move => 'Move to…';
+  String get srs_deck_move_down => 'Move down';
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   String get srs_deck_move_into_own_subdeck =>
@@ -8989,6 +8990,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_deck_move_name_taken =>
       'A deck with the same name is already there';
   String get srs_deck_move_top_level => 'Top level';
+  String get srs_deck_move_up => 'Move up';
   String get srs_deck_name => 'Deck name';
   String get srs_deck_name_invalid => 'A deck name cannot contain ::';
   String get srs_deck_new => 'New deck';
@@ -27705,6 +27707,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -27715,6 +27719,8 @@ class _StringsAr extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -49376,6 +49382,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -49386,6 +49394,8 @@ class _StringsDe extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -71172,6 +71182,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -71182,6 +71194,8 @@ class _StringsEs extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -93055,6 +93069,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -93065,6 +93081,8 @@ class _StringsFr extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -114702,6 +114720,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -114712,6 +114732,8 @@ class _StringsId extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -136393,6 +136415,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -136403,6 +136427,8 @@ class _StringsIt extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -157376,6 +157402,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -157386,6 +157414,8 @@ class _StringsJa extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -178084,6 +178114,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -178094,6 +178126,8 @@ class _StringsKo extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -199501,6 +199535,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -199511,6 +199547,8 @@ class _StringsNl extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -221221,6 +221259,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -221231,6 +221271,8 @@ class _StringsPtBr extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -242919,6 +242961,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -242929,6 +242973,8 @@ class _StringsRu extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -264368,6 +264414,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -264378,6 +264426,8 @@ class _StringsTh extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -285882,6 +285932,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -285892,6 +285944,8 @@ class _StringsTr extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -307392,6 +307446,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -307402,6 +307458,8 @@ class _StringsVi extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -327619,6 +327677,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_deck_move => '移动到…';
   @override
+  String get srs_deck_move_down => '下移';
+  @override
   String get srs_deck_move_drop_top_level => '拖到这里，移到顶层';
   @override
   String get srs_deck_move_into_own_subdeck => '不能移到它自己的子牌组里';
@@ -327626,6 +327686,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_deck_move_name_taken => '那里已经有同名牌组';
   @override
   String get srs_deck_move_top_level => '顶层';
+  @override
+  String get srs_deck_move_up => '上移';
   @override
   String get srs_deck_name => '牌组名称';
   @override
@@ -347524,6 +347586,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_deck_move => 'Move to…';
   @override
+  String get srs_deck_move_down => 'Move down';
+  @override
   String get srs_deck_move_drop_top_level =>
       'Drop here to move to the top level';
   @override
@@ -347534,6 +347598,8 @@ class _StringsZhHk extends _StringsEn {
       'A deck with the same name is already there';
   @override
   String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -366386,6 +366452,8 @@ extension on _StringsEn {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -366394,6 +366462,8 @@ extension on _StringsEn {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -384697,6 +384767,8 @@ extension on _StringsAr {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -384705,6 +384777,8 @@ extension on _StringsAr {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -403064,6 +403138,8 @@ extension on _StringsDe {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -403072,6 +403148,8 @@ extension on _StringsDe {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -421435,6 +421513,8 @@ extension on _StringsEs {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -421443,6 +421523,8 @@ extension on _StringsEs {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -439817,6 +439899,8 @@ extension on _StringsFr {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -439825,6 +439909,8 @@ extension on _StringsFr {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -458159,6 +458245,8 @@ extension on _StringsId {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -458167,6 +458255,8 @@ extension on _StringsId {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -476510,6 +476600,8 @@ extension on _StringsIt {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -476518,6 +476610,8 @@ extension on _StringsIt {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -494795,6 +494889,8 @@ extension on _StringsJa {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -494803,6 +494899,8 @@ extension on _StringsJa {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -513029,6 +513127,8 @@ extension on _StringsKo {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -513037,6 +513137,8 @@ extension on _StringsKo {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -531353,6 +531455,8 @@ extension on _StringsNl {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -531361,6 +531465,8 @@ extension on _StringsNl {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -549708,6 +549814,8 @@ extension on _StringsPtBr {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -549716,6 +549824,8 @@ extension on _StringsPtBr {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -568067,6 +568177,8 @@ extension on _StringsRu {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -568075,6 +568187,8 @@ extension on _StringsRu {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -586386,6 +586500,8 @@ extension on _StringsTh {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -586394,6 +586510,8 @@ extension on _StringsTh {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -604723,6 +604841,8 @@ extension on _StringsTr {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -604731,6 +604851,8 @@ extension on _StringsTr {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -623055,6 +623177,8 @@ extension on _StringsVi {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -623063,6 +623187,8 @@ extension on _StringsVi {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -641237,6 +641363,8 @@ extension on _StringsZhCn {
         return '更多操作';
       case 'srs_deck_move':
         return '移动到…';
+      case 'srs_deck_move_down':
+        return '下移';
       case 'srs_deck_move_drop_top_level':
         return '拖到这里，移到顶层';
       case 'srs_deck_move_into_own_subdeck':
@@ -641245,6 +641373,8 @@ extension on _StringsZhCn {
         return '那里已经有同名牌组';
       case 'srs_deck_move_top_level':
         return '顶层';
+      case 'srs_deck_move_up':
+        return '上移';
       case 'srs_deck_name':
         return '牌组名称';
       case 'srs_deck_name_invalid':
@@ -659377,6 +659507,8 @@ extension on _StringsZhHk {
         return 'More actions';
       case 'srs_deck_move':
         return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
       case 'srs_deck_move_drop_top_level':
         return 'Drop here to move to the top level';
       case 'srs_deck_move_into_own_subdeck':
@@ -659385,6 +659517,8 @@ extension on _StringsZhHk {
         return 'A deck with the same name is already there';
       case 'srs_deck_move_top_level':
         return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
