@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 147084 (8652 per locale)
+/// Strings: 147101 (8653 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6640,6 +6640,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   String get media_privacy_marked_toast => 'Marked private';
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
   String get media_privacy_switch => 'Keep this private';
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -23411,6 +23413,9 @@ class _StringsAr extends _StringsEn {
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
   @override
   String get media_privacy_switch => 'Keep this private';
   @override
@@ -44609,6 +44614,9 @@ class _StringsDe extends _StringsEn {
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
   @override
   String get media_privacy_switch => 'Keep this private';
   @override
@@ -66003,6 +66011,9 @@ class _StringsEs extends _StringsEn {
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
   @override
   String get media_privacy_switch => 'Keep this private';
   @override
@@ -87468,6 +87479,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -108783,6 +108797,9 @@ class _StringsId extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -130034,6 +130051,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -150817,6 +150837,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -171121,6 +171144,9 @@ class _StringsKo extends _StringsEn {
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
   @override
   String get media_privacy_switch => 'Keep this private';
   @override
@@ -191959,6 +191985,9 @@ class _StringsNl extends _StringsEn {
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
   @override
   String get media_privacy_switch => 'Keep this private';
   @override
@@ -213278,6 +213307,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -234571,6 +234603,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -255685,6 +255720,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -276771,6 +276809,9 @@ class _StringsTr extends _StringsEn {
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
   @override
   String get media_privacy_switch => 'Keep this private';
   @override
@@ -297902,6 +297943,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -318057,6 +318101,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_privacy_marked_toast => '已设为私密';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      '私密设置失败：${reason}';
+  @override
   String get media_privacy_switch => '设为私密';
   @override
   String get media_server_browse_by_folder => '按文件夹浏览';
@@ -337531,6 +337578,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
   String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
@@ -356275,6 +356325,9 @@ extension on _StringsEn {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -374254,6 +374307,9 @@ extension on _StringsAr {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -392280,6 +392336,9 @@ extension on _StringsDe {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -410320,6 +410379,9 @@ extension on _StringsEs {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -428370,6 +428432,9 @@ extension on _StringsFr {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -446393,6 +446458,9 @@ extension on _StringsId {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -464405,6 +464473,9 @@ extension on _StringsIt {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -482375,6 +482446,9 @@ extension on _StringsJa {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -500277,6 +500351,9 @@ extension on _StringsKo {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -518255,6 +518332,9 @@ extension on _StringsNl {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -536279,6 +536359,9 @@ extension on _StringsPtBr {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -554307,6 +554390,9 @@ extension on _StringsRu {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -572304,6 +572390,9 @@ extension on _StringsTh {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -590307,6 +590396,9 @@ extension on _StringsTr {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -608308,6 +608400,9 @@ extension on _StringsVi {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
@@ -626187,6 +626282,8 @@ extension on _StringsZhCn {
         return '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
       case 'media_privacy_marked_toast':
         return '已设为私密';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) => '私密设置失败：${reason}';
       case 'media_privacy_switch':
         return '设为私密';
       case 'media_server_browse_by_folder':
@@ -643986,6 +644083,9 @@ extension on _StringsZhHk {
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
       case 'media_privacy_switch':
         return 'Keep this private';
       case 'media_server_browse_by_folder':
