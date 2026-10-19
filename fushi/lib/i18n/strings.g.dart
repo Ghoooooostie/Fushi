@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149702 (8806 per locale)
+/// Strings: 149787 (8811 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9237,12 +9237,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object n,
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   String srs_lapis_migration_fallback({required Object n}) =>
       '${n} notes fill an empty field from another field with the same meaning';
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   String get srs_lapis_migration_kind_fields => 'Recognized by fields';
   String get srs_lapis_migration_kind_named => 'Recognized by name';
@@ -9253,6 +9256,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_lapis_migration_notes({required Object n}) => '${n} notes';
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   String get srs_list_separator => ', ';
   String srs_media_missing({required Object name}) =>
@@ -28109,6 +28116,9 @@ class _StringsAr extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -28117,6 +28127,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -28135,6 +28147,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -49755,6 +49774,9 @@ class _StringsDe extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -49763,6 +49785,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -49781,6 +49805,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -71526,6 +71557,9 @@ class _StringsEs extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -71534,6 +71568,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -71552,6 +71588,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -93384,6 +93427,9 @@ class _StringsFr extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -93392,6 +93438,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -93410,6 +93458,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -115006,6 +115061,9 @@ class _StringsId extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -115014,6 +115072,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -115032,6 +115092,13 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -136672,6 +136739,9 @@ class _StringsIt extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -136680,6 +136750,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -136698,6 +136770,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -157630,6 +157709,9 @@ class _StringsJa extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -157638,6 +157720,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -157656,6 +157740,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -178313,6 +178404,9 @@ class _StringsKo extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -178321,6 +178415,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -178339,6 +178435,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -199705,6 +199808,9 @@ class _StringsNl extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -199713,6 +199819,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -199731,6 +199839,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -221400,6 +221515,9 @@ class _StringsPtBr extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -221408,6 +221526,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -221426,6 +221546,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -243073,6 +243200,9 @@ class _StringsRu extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -243081,6 +243211,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -243099,6 +243231,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -264497,6 +264636,9 @@ class _StringsTh extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -264505,6 +264647,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -264523,6 +264667,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -285986,6 +286137,9 @@ class _StringsTr extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -285994,6 +286148,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -286012,6 +286168,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -307471,6 +307634,9 @@ class _StringsVi extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -307479,6 +307645,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -307497,6 +307665,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -327635,6 +327810,9 @@ class _StringsZhCn extends _StringsEn {
     required Object n,
   }) => '将「${name}」的 ${n} 条笔记迁移到 Fushi 卡片？';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      '卡片将移到「${deck}」。';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} 条笔记可迁移或有遗漏字段可补';
   @override
@@ -327643,6 +327821,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       '把旧 Lapis 笔记类型（内置、从 Anki 导入或改过名的）迁到 Fushi 卡片。字段按含义对应，复习历史随卡迁移，确认后才写入。';
+  @override
+  String get srs_lapis_migration_keep_deck => '保持原牌组';
   @override
   String get srs_lapis_migration_kind_builtin => '内置 Lapis';
   @override
@@ -327660,6 +327840,12 @@ class _StringsZhCn extends _StringsEn {
   String srs_lapis_migration_notes({required Object n}) => '${n} 条笔记';
   @override
   String get srs_lapis_migration_nothing => '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => '不再提醒';
+  @override
+  String get srs_lapis_migration_reminder_title => '把旧 Lapis 笔记迁到 Fushi 卡片';
+  @override
+  String get srs_lapis_migration_target_deck => '迁移后放到牌组';
   @override
   String get srs_lapis_migration_title => '迁移旧 Lapis 到新模板';
   @override
@@ -347559,6 +347745,9 @@ class _StringsZhHk extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -347567,6 +347756,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -347585,6 +347776,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -366334,6 +366532,8 @@ extension on _StringsEn {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -366342,6 +366542,8 @@ extension on _StringsEn {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -366359,6 +366561,12 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -384628,6 +384836,8 @@ extension on _StringsAr {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -384636,6 +384846,8 @@ extension on _StringsAr {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -384653,6 +384865,12 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -402978,6 +403196,8 @@ extension on _StringsDe {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -402986,6 +403206,8 @@ extension on _StringsDe {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -403003,6 +403225,12 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -421332,6 +421560,8 @@ extension on _StringsEs {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -421340,6 +421570,8 @@ extension on _StringsEs {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -421357,6 +421589,12 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -439697,6 +439935,8 @@ extension on _StringsFr {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -439705,6 +439945,8 @@ extension on _StringsFr {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -439722,6 +439964,12 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -458022,6 +458270,8 @@ extension on _StringsId {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -458030,6 +458280,8 @@ extension on _StringsId {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -458047,6 +458299,12 @@ extension on _StringsId {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -476356,6 +476614,8 @@ extension on _StringsIt {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -476364,6 +476624,8 @@ extension on _StringsIt {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -476381,6 +476643,12 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -494624,6 +494892,8 @@ extension on _StringsJa {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -494632,6 +494902,8 @@ extension on _StringsJa {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -494649,6 +494921,12 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -512841,6 +513119,8 @@ extension on _StringsKo {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -512849,6 +513129,8 @@ extension on _StringsKo {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -512866,6 +513148,12 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -531148,6 +531436,8 @@ extension on _StringsNl {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -531156,6 +531446,8 @@ extension on _StringsNl {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -531173,6 +531465,12 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -549486,6 +549784,8 @@ extension on _StringsPtBr {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -549494,6 +549794,8 @@ extension on _StringsPtBr {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -549511,6 +549813,12 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -567828,6 +568136,8 @@ extension on _StringsRu {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -567836,6 +568146,8 @@ extension on _StringsRu {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -567853,6 +568165,12 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -586130,6 +586448,8 @@ extension on _StringsTh {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -586138,6 +586458,8 @@ extension on _StringsTh {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -586155,6 +586477,12 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -604450,6 +604778,8 @@ extension on _StringsTr {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -604458,6 +604788,8 @@ extension on _StringsTr {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -604475,6 +604807,12 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -622765,6 +623103,8 @@ extension on _StringsVi {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -622773,6 +623113,8 @@ extension on _StringsVi {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -622790,6 +623132,12 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -640915,12 +641263,16 @@ extension on _StringsZhCn {
       case 'srs_lapis_migration_confirm':
         return ({required Object name, required Object n}) =>
             '将「${name}」的 ${n} 条笔记迁移到 Fushi 卡片？';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => '卡片将移到「${deck}」。';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) => '${n} 条笔记可迁移或有遗漏字段可补';
       case 'srs_lapis_migration_fallback':
         return ({required Object n}) => '${n} 条笔记的空字段会从同含义的其它字段补上';
       case 'srs_lapis_migration_intro':
         return '把旧 Lapis 笔记类型（内置、从 Anki 导入或改过名的）迁到 Fushi 卡片。字段按含义对应，复习历史随卡迁移，确认后才写入。';
+      case 'srs_lapis_migration_keep_deck':
+        return '保持原牌组';
       case 'srs_lapis_migration_kind_builtin':
         return '内置 Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -640938,6 +641290,12 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 条笔记';
       case 'srs_lapis_migration_nothing':
         return '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return '不再提醒';
+      case 'srs_lapis_migration_reminder_title':
+        return '把旧 Lapis 笔记迁到 Fushi 卡片';
+      case 'srs_lapis_migration_target_deck':
+        return '迁移后放到牌组';
       case 'srs_lapis_migration_title':
         return '迁移旧 Lapis 到新模板';
       case 'srs_list_separator':
@@ -659053,6 +659411,8 @@ extension on _StringsZhHk {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -659061,6 +659421,8 @@ extension on _StringsZhHk {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -659078,6 +659440,12 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
