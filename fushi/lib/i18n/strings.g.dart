@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 147118 (8654 per locale)
+/// Strings: 147135 (8655 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6641,6 +6641,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
   String get media_privacy_marked_toast => 'Marked private';
   String media_privacy_save_failed({required Object reason}) =>
       'Could not change privacy: ${reason}';
@@ -23416,6 +23418,9 @@ class _StringsAr extends _StringsEn {
   @override
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -44620,6 +44625,9 @@ class _StringsDe extends _StringsEn {
   @override
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -66020,6 +66028,9 @@ class _StringsEs extends _StringsEn {
   @override
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -87491,6 +87502,9 @@ class _StringsFr extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -108812,6 +108826,9 @@ class _StringsId extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -130069,6 +130086,9 @@ class _StringsIt extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -150858,6 +150878,9 @@ class _StringsJa extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -171168,6 +171191,9 @@ class _StringsKo extends _StringsEn {
   @override
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -192012,6 +192038,9 @@ class _StringsNl extends _StringsEn {
   @override
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -213337,6 +213366,9 @@ class _StringsPtBr extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -234636,6 +234668,9 @@ class _StringsRu extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -255756,6 +255791,9 @@ class _StringsTh extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -276848,6 +276886,9 @@ class _StringsTr extends _StringsEn {
   @override
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -297985,6 +298026,9 @@ class _StringsVi extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -318146,6 +318190,9 @@ class _StringsZhCn extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      '读取私密状态失败，暂时无法修改：${reason}';
+  @override
   String get media_privacy_marked_toast => '已设为私密';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -337626,6 +337673,9 @@ class _StringsZhHk extends _StringsEn {
   String media_privacy_inherited_note({required Object collections}) =>
       'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -356376,6 +356426,9 @@ extension on _StringsEn {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -374361,6 +374414,9 @@ extension on _StringsAr {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -392393,6 +392449,9 @@ extension on _StringsDe {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -410439,6 +410498,9 @@ extension on _StringsEs {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -428495,6 +428557,9 @@ extension on _StringsFr {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -446524,6 +446589,9 @@ extension on _StringsId {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -464542,6 +464610,9 @@ extension on _StringsIt {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -482518,6 +482589,9 @@ extension on _StringsJa {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -500426,6 +500500,9 @@ extension on _StringsKo {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -518410,6 +518487,9 @@ extension on _StringsNl {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -536440,6 +536520,9 @@ extension on _StringsPtBr {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -554474,6 +554557,9 @@ extension on _StringsRu {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -572477,6 +572563,9 @@ extension on _StringsTh {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -590486,6 +590575,9 @@ extension on _StringsTr {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -608493,6 +608585,9 @@ extension on _StringsVi {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -626378,6 +626473,8 @@ extension on _StringsZhCn {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) => '读取私密状态失败，暂时无法修改：${reason}';
       case 'media_privacy_marked_toast':
         return '已设为私密';
       case 'media_privacy_save_failed':
@@ -644182,6 +644279,9 @@ extension on _StringsZhHk {
       case 'media_privacy_inherited_note':
         return ({required Object collections}) =>
             'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
