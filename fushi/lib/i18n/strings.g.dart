@@ -9623,7 +9623,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_sync_directory_unidentified =>
       'The sync folder can\'t be identified yet (account or address not ready)';
   String get srs_sync_done => 'Review data synced';
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   String get srs_sync_no_backend => 'No sync service is set up';
   String get srs_sync_now => 'Sync now';
   String get srs_value_no => 'No';
@@ -28792,7 +28793,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -50443,7 +50445,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -72219,7 +72222,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -94082,7 +94086,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -115709,7 +115714,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -137380,7 +137386,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -158343,7 +158350,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -179031,7 +179039,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -200428,7 +200437,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -222128,7 +222138,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -243806,7 +243817,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -265235,7 +265247,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -286729,7 +286742,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -308219,7 +308233,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -328337,7 +328352,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_done => '复习数据已同步';
   @override
-  String get srs_sync_failed => '复习数据同步失败：{reason}';
+  String srs_sync_failed({required Object reason}) => '复习数据同步失败：${reason}';
   @override
   String get srs_sync_no_backend => '还没有配置同步服务';
   @override
@@ -348316,7 +348331,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_sync_done => 'Review data synced';
   @override
-  String get srs_sync_failed => 'Couldn\'t sync review data: {reason}';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
@@ -367028,7 +367044,8 @@ extension on _StringsEn {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -385326,7 +385343,8 @@ extension on _StringsAr {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -403680,7 +403698,8 @@ extension on _StringsDe {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -422038,7 +422057,8 @@ extension on _StringsEs {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -440407,7 +440427,8 @@ extension on _StringsFr {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -458736,7 +458757,8 @@ extension on _StringsId {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -477074,7 +477096,8 @@ extension on _StringsIt {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -495346,7 +495369,8 @@ extension on _StringsJa {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -513567,7 +513591,8 @@ extension on _StringsKo {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -531878,7 +531903,8 @@ extension on _StringsNl {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -550220,7 +550246,8 @@ extension on _StringsPtBr {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -568566,7 +568593,8 @@ extension on _StringsRu {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -586872,7 +586900,8 @@ extension on _StringsTh {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -605196,7 +605225,8 @@ extension on _StringsTr {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -623515,7 +623545,8 @@ extension on _StringsVi {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
@@ -641665,7 +641696,7 @@ extension on _StringsZhCn {
       case 'srs_sync_done':
         return '复习数据已同步';
       case 'srs_sync_failed':
-        return '复习数据同步失败：{reason}';
+        return ({required Object reason}) => '复习数据同步失败：${reason}';
       case 'srs_sync_no_backend':
         return '还没有配置同步服务';
       case 'srs_sync_now':
@@ -659811,7 +659842,8 @@ extension on _StringsZhHk {
       case 'srs_sync_done':
         return 'Review data synced';
       case 'srs_sync_failed':
-        return 'Couldn\'t sync review data: {reason}';
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
