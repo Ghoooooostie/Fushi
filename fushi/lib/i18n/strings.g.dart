@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149515 (8795 per locale)
+/// Strings: 149532 (8796 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8970,6 +8970,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_day_boundary_body({required Object hour}) =>
       'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
   String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   String get srs_deck_collapse => 'Collapse subdecks';
   String get srs_deck_delete => 'Delete deck';
   String srs_deck_delete_confirm({required Object name}) =>
@@ -27650,6 +27651,8 @@ class _StringsAr extends _StringsEn {
       'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
   @override
   String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -49268,6 +49271,8 @@ class _StringsDe extends _StringsEn {
       'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
   @override
   String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -71011,6 +71016,8 @@ class _StringsEs extends _StringsEn {
       'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
   @override
   String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -92842,6 +92849,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_day_boundary_title => 'When does the day start';
   @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
+  @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
   String get srs_deck_delete => 'Delete deck';
@@ -114435,6 +114444,8 @@ class _StringsId extends _StringsEn {
       'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
   @override
   String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -136074,6 +136085,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_day_boundary_title => 'When does the day start';
   @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
+  @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
   String get srs_deck_delete => 'Delete deck';
@@ -157004,6 +157017,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_day_boundary_title => 'When does the day start';
   @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
+  @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
   String get srs_deck_delete => 'Delete deck';
@@ -177662,6 +177677,8 @@ class _StringsKo extends _StringsEn {
       'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
   @override
   String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -199026,6 +199043,8 @@ class _StringsNl extends _StringsEn {
       'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
   @override
   String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -220694,6 +220713,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_day_boundary_title => 'When does the day start';
   @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
+  @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
   String get srs_deck_delete => 'Delete deck';
@@ -242339,6 +242360,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_day_boundary_title => 'When does the day start';
   @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
+  @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
   String get srs_deck_delete => 'Delete deck';
@@ -263734,6 +263757,8 @@ class _StringsTh extends _StringsEn {
       'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
   @override
   String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -285196,6 +285221,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_day_boundary_title => 'When does the day start';
   @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
+  @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
   String get srs_deck_delete => 'Delete deck';
@@ -306653,6 +306680,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_day_boundary_title => 'When does the day start';
   @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
+  @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
   String get srs_deck_delete => 'Delete deck';
@@ -326828,6 +326857,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_day_boundary_title => '复习的「今天」从几点开始';
   @override
+  String get srs_deck_browse_cards => '浏览此牌组的卡片';
+  @override
   String get srs_deck_collapse => '收起子牌组';
   @override
   String get srs_deck_delete => '删除牌组';
@@ -346690,6 +346721,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_day_boundary_title => 'When does the day start';
   @override
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
+  @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
   String get srs_deck_delete => 'Delete deck';
@@ -365507,6 +365540,8 @@ extension on _StringsEn {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -383779,6 +383814,8 @@ extension on _StringsAr {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -402107,6 +402144,8 @@ extension on _StringsDe {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -420439,6 +420478,8 @@ extension on _StringsEs {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -438782,6 +438823,8 @@ extension on _StringsFr {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -457085,6 +457128,8 @@ extension on _StringsId {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -475397,6 +475442,8 @@ extension on _StringsIt {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -493643,6 +493690,8 @@ extension on _StringsJa {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -511838,6 +511887,8 @@ extension on _StringsKo {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -530123,6 +530174,8 @@ extension on _StringsNl {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -548439,6 +548492,8 @@ extension on _StringsPtBr {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -566759,6 +566814,8 @@ extension on _StringsRu {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -585039,6 +585096,8 @@ extension on _StringsTh {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -603337,6 +603396,8 @@ extension on _StringsTr {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -621630,6 +621691,8 @@ extension on _StringsVi {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -639773,6 +639836,8 @@ extension on _StringsZhCn {
             '复习的「今天」在每天 ${hour} 点切换，与统计页共用同一个日界（在统计页的设置按钮里修改）。在这个时刻之前做的复习算前一天。';
       case 'srs_day_boundary_title':
         return '复习的「今天」从几点开始';
+      case 'srs_deck_browse_cards':
+        return '浏览此牌组的卡片';
       case 'srs_deck_collapse':
         return '收起子牌组';
       case 'srs_deck_delete':
@@ -657874,6 +657939,8 @@ extension on _StringsZhHk {
             'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
       case 'srs_day_boundary_title':
         return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
