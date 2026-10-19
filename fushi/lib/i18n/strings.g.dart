@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149209 (8777 per locale)
+/// Strings: 149345 (8785 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9416,6 +9416,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_review_done_detail({required Object n}) =>
       'Reviewed ${n} cards in this session';
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  String get srs_review_layout_replay_end => 'Right';
+  String get srs_review_layout_replay_off => 'Off';
+  String get srs_review_layout_replay_start => 'Left';
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  String get srs_review_layout_title => 'Review layout';
   String get srs_review_pending_decision => 'Needs your decision';
   String get srs_review_replay_audio => 'Replay audio';
   String get srs_review_show_answer => 'Show answer';
@@ -28379,6 +28390,25 @@ class _StringsAr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -49952,6 +49982,25 @@ class _StringsDe extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -71650,6 +71699,25 @@ class _StringsEs extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -93436,6 +93504,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -114984,6 +115071,25 @@ class _StringsId extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -136578,6 +136684,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -157463,6 +157588,25 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => '「Hard」と「Easy」ボタンを隠す';
   @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -178076,6 +178220,25 @@ class _StringsKo extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -199395,6 +199558,25 @@ class _StringsNl extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -221018,6 +221200,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -242618,6 +242819,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -263968,6 +264188,25 @@ class _StringsTh extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -285385,6 +285624,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -306797,6 +307055,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -326863,6 +327140,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => '隐藏「困难」和「简单」按钮';
   @override
+  String get srs_review_layout_replay_button => '底部重播键';
+  @override
+  String get srs_review_layout_replay_button_hint => '手机刷卡时拇指够得到；顶栏的重播照旧保留';
+  @override
+  String get srs_review_layout_replay_end => '右侧';
+  @override
+  String get srs_review_layout_replay_off => '不放';
+  @override
+  String get srs_review_layout_replay_start => '左侧';
+  @override
+  String get srs_review_layout_show_intervals => '评分按钮显示下次间隔';
+  @override
+  String get srs_review_layout_show_intervals_hint => '评价下方的小字，误按或排程异常一眼可见';
+  @override
+  String get srs_review_layout_title => '复习布局';
+  @override
   String get srs_review_pending_decision => '待你决定';
   @override
   String get srs_review_replay_audio => '重播音频';
@@ -346747,6 +347040,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -365420,6 +365732,22 @@ extension on _StringsEn {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -383653,6 +383981,22 @@ extension on _StringsAr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -401942,6 +402286,22 @@ extension on _StringsDe {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -420235,6 +420595,22 @@ extension on _StringsEs {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -438539,6 +438915,22 @@ extension on _StringsFr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -456803,6 +457195,22 @@ extension on _StringsId {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -475076,6 +475484,22 @@ extension on _StringsIt {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -493283,6 +493707,22 @@ extension on _StringsJa {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return '「Hard」と「Easy」ボタンを隠す';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -511439,6 +511879,22 @@ extension on _StringsKo {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -529685,6 +530141,22 @@ extension on _StringsNl {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -547962,6 +548434,22 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -566243,6 +566731,22 @@ extension on _StringsRu {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -584484,6 +584988,22 @@ extension on _StringsTh {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -602743,6 +603263,22 @@ extension on _StringsTr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -620997,6 +621533,22 @@ extension on _StringsVi {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -639086,6 +639638,22 @@ extension on _StringsZhCn {
         return ({required Object n}) => '本次复习了 ${n} 张';
       case 'srs_review_hide_hard_easy':
         return '隐藏「困难」和「简单」按钮';
+      case 'srs_review_layout_replay_button':
+        return '底部重播键';
+      case 'srs_review_layout_replay_button_hint':
+        return '手机刷卡时拇指够得到；顶栏的重播照旧保留';
+      case 'srs_review_layout_replay_end':
+        return '右侧';
+      case 'srs_review_layout_replay_off':
+        return '不放';
+      case 'srs_review_layout_replay_start':
+        return '左侧';
+      case 'srs_review_layout_show_intervals':
+        return '评分按钮显示下次间隔';
+      case 'srs_review_layout_show_intervals_hint':
+        return '评价下方的小字，误按或排程异常一眼可见';
+      case 'srs_review_layout_title':
+        return '复习布局';
       case 'srs_review_pending_decision':
         return '待你决定';
       case 'srs_review_replay_audio':
@@ -657165,6 +657733,22 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
