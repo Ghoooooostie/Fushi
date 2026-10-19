@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 146982 (8646 per locale)
+/// Strings: 146999 (8647 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9068,6 +9068,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Waiting to import ${name}';
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   String get srs_import_update_always => 'Always';
   String get srs_import_update_if_newer => 'If newer';
   String get srs_import_update_never => 'Never';
@@ -27598,6 +27600,9 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -48856,6 +48861,9 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -70239,6 +70247,9 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -91710,6 +91721,9 @@ class _StringsFr extends _StringsEn {
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -112943,6 +112957,9 @@ class _StringsId extends _StringsEn {
   @override
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -134222,6 +134239,9 @@ class _StringsIt extends _StringsEn {
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -154792,6 +154812,9 @@ class _StringsJa extends _StringsEn {
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -175090,6 +175113,9 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -196094,6 +196120,9 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -217402,6 +217431,9 @@ class _StringsPtBr extends _StringsEn {
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -238687,6 +238719,9 @@ class _StringsRu extends _StringsEn {
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -259722,6 +259757,9 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -280824,6 +280862,9 @@ class _StringsTr extends _StringsEn {
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -301921,6 +301962,9 @@ class _StringsVi extends _StringsEn {
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -321724,6 +321768,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_import_task_running({required Object name}) => '正在导入 ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      '正在停止导入 ${name}…（已导入的笔记会保留）';
+  @override
   String get srs_import_update_always => '始终';
   @override
   String get srs_import_update_if_newer => '较新时';
@@ -341277,6 +341324,9 @@ class _StringsZhHk extends _StringsEn {
   String srs_import_task_running({required Object name}) =>
       'Importing ${name}…';
   @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -359716,6 +359766,9 @@ extension on _StringsEn {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -377683,6 +377736,9 @@ extension on _StringsAr {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -395706,6 +395762,9 @@ extension on _StringsDe {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -413733,6 +413792,9 @@ extension on _StringsEs {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -431771,6 +431833,9 @@ extension on _StringsFr {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -449769,6 +449834,9 @@ extension on _StringsId {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -467776,6 +467844,9 @@ extension on _StringsIt {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -485717,6 +485788,9 @@ extension on _StringsJa {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -503607,6 +503681,9 @@ extension on _StringsKo {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -521587,6 +521664,9 @@ extension on _StringsNl {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -539598,6 +539678,9 @@ extension on _StringsPtBr {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -557613,6 +557696,9 @@ extension on _StringsRu {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -575588,6 +575674,9 @@ extension on _StringsTh {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -593581,6 +593670,9 @@ extension on _StringsTr {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -611569,6 +611661,9 @@ extension on _StringsVi {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -629396,6 +629491,8 @@ extension on _StringsZhCn {
         return ({required Object name}) => '等待导入 ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => '正在导入 ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) => '正在停止导入 ${name}…（已导入的笔记会保留）';
       case 'srs_import_update_always':
         return '始终';
       case 'srs_import_update_if_newer':
@@ -647208,6 +647305,9 @@ extension on _StringsZhHk {
         return ({required Object name}) => 'Waiting to import ${name}';
       case 'srs_import_task_running':
         return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
