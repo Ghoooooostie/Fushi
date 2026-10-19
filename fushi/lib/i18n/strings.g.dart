@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 145962 (8586 per locale)
+/// Strings: 146999 (8647 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8652,6 +8652,59 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get spread_off => 'Off';
   String get spread_on => 'On';
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  String get srs_anki_migrate => 'Migrate from Anki';
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  String get srs_anki_migrate_rescan => 'Scan again';
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  String get srs_anki_migrate_start => 'Migrate';
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   String get srs_ankiconnect_generate_key => 'Generate key';
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -8803,6 +8856,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_density_comfortable => 'Comfortable';
   String get srs_card_appearance_density_compact => 'Compact';
   String get srs_card_appearance_density_standard => 'Standard';
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   String get srs_card_appearance_dict_unified_hint =>
       'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
@@ -8828,6 +8884,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_section_content => 'Card content';
   String get srs_card_appearance_section_fonts => 'Fonts';
   String get srs_card_appearance_section_layout => 'Layout';
+  String get srs_card_appearance_section_other => 'Other card types';
   String get srs_card_appearance_section_text => 'Text';
   String get srs_card_appearance_sentence_furigana =>
       'Always show sentence furigana';
@@ -8902,6 +8959,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_deck_delete => 'Delete deck';
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_deleting => 'Deleting…';
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_menu => 'More actions';
   String get srs_deck_name => 'Deck name';
@@ -8941,6 +8999,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   String get srs_import => 'Import';
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   String srs_import_failed({required Object error}) =>
@@ -8996,6 +9056,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_import_reset_default => 'Restore default';
   String get srs_import_running => 'Importing…';
   String get srs_import_section_updates => 'Updates';
+  String get srs_import_task_cancel => 'Cancel import';
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  String get srs_import_task_dismiss => 'Dismiss';
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
   String get srs_import_update_always => 'Always';
   String get srs_import_update_if_newer => 'If newer';
   String get srs_import_update_never => 'Never';
@@ -9024,6 +9098,41 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_key_parent => 'Parent deck';
   String get srs_key_rollover => 'Day start';
   String get srs_key_steps => 'Learning steps';
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  String get srs_lapis_migration_migrate => 'Migrate';
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  String get srs_list_separator => ', ';
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
@@ -26778,6 +26887,87 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -27049,6 +27239,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -27096,6 +27291,8 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -27227,6 +27424,8 @@ class _StringsAr extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -27295,6 +27494,9 @@ class _StringsAr extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -27380,6 +27582,28 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -27431,6 +27655,61 @@ class _StringsAr extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => '، ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -47869,6 +48148,87 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -48140,6 +48500,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -48187,6 +48552,8 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -48318,6 +48685,8 @@ class _StringsDe extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -48386,6 +48755,9 @@ class _StringsDe extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -48471,6 +48843,28 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -48522,6 +48916,61 @@ class _StringsDe extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -69085,6 +69534,87 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -69356,6 +69886,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -69403,6 +69938,8 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -69534,6 +70071,8 @@ class _StringsEs extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -69602,6 +70141,9 @@ class _StringsEs extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -69687,6 +70229,28 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -69738,6 +70302,61 @@ class _StringsEs extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -90388,6 +91007,87 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -90659,6 +91359,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -90706,6 +91411,8 @@ class _StringsFr extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -90837,6 +91544,8 @@ class _StringsFr extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -90905,6 +91614,9 @@ class _StringsFr extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -90990,6 +91702,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -91041,6 +91775,61 @@ class _StringsFr extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -111455,6 +112244,87 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -111726,6 +112596,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -111773,6 +112648,8 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -111904,6 +112781,8 @@ class _StringsId extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -111972,6 +112851,9 @@ class _StringsId extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -112057,6 +112939,28 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -112108,6 +113012,61 @@ class _StringsId extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -132566,6 +133525,87 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -132837,6 +133877,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -132884,6 +133929,8 @@ class _StringsIt extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -133015,6 +134062,8 @@ class _StringsIt extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -133083,6 +134132,9 @@ class _StringsIt extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -133168,6 +134220,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -133219,6 +134293,61 @@ class _StringsIt extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -152969,6 +154098,87 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'キーを生成';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -153240,6 +154450,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -153287,6 +154502,8 @@ class _StringsJa extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -153418,6 +154635,8 @@ class _StringsJa extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -153486,6 +154705,9 @@ class _StringsJa extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -153571,6 +154793,28 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -153622,6 +154866,61 @@ class _StringsJa extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => '、';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -173101,6 +174400,87 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -173372,6 +174752,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -173419,6 +174804,8 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -173550,6 +174937,8 @@ class _StringsKo extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -173618,6 +175007,9 @@ class _StringsKo extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -173703,6 +175095,28 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -173754,6 +175168,61 @@ class _StringsKo extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -193938,6 +195407,87 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -194209,6 +195759,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -194256,6 +195811,8 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -194387,6 +195944,8 @@ class _StringsNl extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -194455,6 +196014,9 @@ class _StringsNl extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -194540,6 +196102,28 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -194591,6 +196175,61 @@ class _StringsNl extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -215078,6 +216717,87 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -215349,6 +217069,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -215396,6 +217121,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -215527,6 +217254,8 @@ class _StringsPtBr extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -215595,6 +217324,9 @@ class _StringsPtBr extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -215680,6 +217412,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -215731,6 +217485,61 @@ class _StringsPtBr extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -236196,6 +238005,87 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -236467,6 +238357,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -236514,6 +238409,8 @@ class _StringsRu extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -236645,6 +238542,8 @@ class _StringsRu extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -236713,6 +238612,9 @@ class _StringsRu extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -236798,6 +238700,28 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -236849,6 +238773,61 @@ class _StringsRu extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -257065,6 +259044,87 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -257336,6 +259396,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -257383,6 +259448,8 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -257514,6 +259581,8 @@ class _StringsTh extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -257582,6 +259651,9 @@ class _StringsTh extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -257667,6 +259739,28 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -257718,6 +259812,61 @@ class _StringsTh extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -277999,6 +280148,87 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -278270,6 +280500,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -278317,6 +280552,8 @@ class _StringsTr extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -278448,6 +280685,8 @@ class _StringsTr extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -278516,6 +280755,9 @@ class _StringsTr extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -278601,6 +280843,28 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -278652,6 +280916,61 @@ class _StringsTr extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -298929,6 +301248,87 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -299200,6 +301600,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -299247,6 +301652,8 @@ class _StringsVi extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -299378,6 +301785,8 @@ class _StringsVi extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -299446,6 +301855,9 @@ class _StringsVi extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -299531,6 +301943,28 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -299582,6 +302016,61 @@ class _StringsVi extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => ', ';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -318605,6 +321094,80 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_action_failed => '操作没有成功，请重试';
   @override
+  String get srs_anki_migrate => '从 Anki 迁移';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 起把集合放在其他 app 读不到的私有目录。请在 AnkiDroid 里选「导出 → 集合包（.colpkg）」，勾选包含排程与媒体，再在这里选择该文件。';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '将导入 ${notes} 条笔记、${cards} 张卡片、${reviews} 条复习记录，连同排程、笔记类型和媒体。Fushi 现有数据会保留，重复迁移不会产生重复。';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '「${name}」将连同排程、笔记类型和媒体一起导入。Fushi 现有数据会保留，重复迁移不会产生重复。';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      '迁移「${name}」？';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      '迁移前请先关闭 Anki。Fushi 读取的是集合的副本，不会改动 Anki。';
+  @override
+  String get srs_anki_migrate_error_changed => '读取期间 Anki 改动了集合。请关闭 Anki 后再试。';
+  @override
+  String get srs_anki_migrate_error_corrupt => '这份集合读取不了（已损坏或不是 Anki 集合）。';
+  @override
+  String get srs_anki_migrate_error_locked => '读取不了集合。请关闭 Anki 后再试。';
+  @override
+  String get srs_anki_migrate_error_missing => '集合已经不在了，请重新查找。';
+  @override
+  String get srs_anki_migrate_found => '本机找到的 Anki 集合';
+  @override
+  String get srs_anki_migrate_grant_access => '授予文件访问权限以查找 AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      '把 Anki 的牌组、笔记、笔记类型、复习进度和媒体一次搬过来。只读取 Anki 数据，不会改动它。';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      '请在 AnkiMobile 或 Anki 里导出集合包（.colpkg），勾选包含排程与媒体，存到「文件」后在这里选择。';
+  @override
+  String get srs_anki_migrate_kind_folder => '所选文件夹';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      '该文件夹及其子文件夹里没有 collection.anki2。';
+  @override
+  String get srs_anki_migrate_none_found => '本机没有找到 Anki 集合。';
+  @override
+  String get srs_anki_migrate_open_ankidroid => '打开 AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki 似乎正开着。先关闭 Anki（或同步一次），最新的复习才会带过来。';
+  @override
+  String get srs_anki_migrate_other_ways => '其他方式';
+  @override
+  String get srs_anki_migrate_pick_file => '选择导出的文件（.colpkg / .apkg）';
+  @override
+  String get srs_anki_migrate_pick_folder => '选择 Anki 数据文件夹';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · 最后修改 ${time}';
+  @override
+  String get srs_anki_migrate_rescan => '重新查找';
+  @override
+  String get srs_anki_migrate_scanning => '正在查找 Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      '会迁移：牌组、笔记、笔记类型与模板、卡片排程、复习记录、牌组选项和媒体。不会迁移：插件、筛选牌组（卡片回到原牌组）以及 Anki 自身的偏好设置。';
+  @override
+  String get srs_anki_migrate_start => '开始迁移';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      '有些文件夹读取不了：${paths}';
+  @override
   String get srs_ankiconnect_generate_key => '生成密钥';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -318864,6 +321427,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => '标准';
   @override
+  String get srs_card_appearance_design_skin => '卡面跟随设计系统';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      '用应用当前的 Material / 苹果风样式覆盖导入牌组与自建模板的外观（背景、边框、文字与链接颜色、字体），模板的布局与内容不变。关闭则完全按模板原样显示。';
+  @override
   String get srs_card_appearance_dict_unified => '统一词典样式';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -318910,6 +321478,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_section_fonts => '字体';
   @override
   String get srs_card_appearance_section_layout => '布局';
+  @override
+  String get srs_card_appearance_section_other => '其它卡片类型';
   @override
   String get srs_card_appearance_section_text => '文字';
   @override
@@ -319034,6 +321604,8 @@ class _StringsZhCn extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
   @override
+  String get srs_deck_deleting => '正在删除…';
+  @override
   String get srs_deck_expand => '展开子牌组';
   @override
   String get srs_deck_menu => '更多操作';
@@ -319098,6 +321670,8 @@ class _StringsZhCn extends _StringsEn {
   }) => '已导入 ${n} 条，跳过 ${skipped} 条';
   @override
   String get srs_import => '导入';
+  @override
+  String get srs_import_background_started => '正在后台导入，可以继续使用 Fushi。';
   @override
   String get srs_import_colpkg_note =>
       '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
@@ -319178,6 +321752,25 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_section_updates => '更新';
   @override
+  String get srs_import_task_cancel => '取消导入';
+  @override
+  String srs_import_task_cancelled({required Object name}) => '已取消导入 ${name}';
+  @override
+  String get srs_import_task_dismiss => '关闭';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      '已导入 ${name}：新增 ${n} 条笔记';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      '导入 ${name} 失败，点按查看原因。';
+  @override
+  String srs_import_task_queued({required Object name}) => '等待导入 ${name}';
+  @override
+  String srs_import_task_running({required Object name}) => '正在导入 ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      '正在停止导入 ${name}…（已导入的笔记会保留）';
+  @override
   String get srs_import_update_always => '始终';
   @override
   String get srs_import_update_if_newer => '较新时';
@@ -319228,6 +321821,58 @@ class _StringsZhCn extends _StringsEn {
   String get srs_key_rollover => '每日起点';
   @override
   String get srs_key_steps => '学习步长';
+  @override
+  String get srs_lapis_migration_backfill_action => '补迁';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      '已为 ${n} 条笔记补上遗漏字段';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} 条已迁移的笔记有空字段，而迁移前的旧字段仍有内容。只补空字段，已有内容绝不覆盖。';
+  @override
+  String get srs_lapis_migration_backfill_title => '补迁旧版迁移遗漏的字段';
+  @override
+  String get srs_lapis_migration_by_synonym => '按同义名';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) => '${linked} 张卡继承复习历史，${dropped} 张卡不再出现';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object name,
+    required Object n,
+  }) => '将「${name}」的 ${n} 条笔记迁移到 Fushi 卡片？';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} 条笔记可迁移或有遗漏字段可补';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} 条笔记的空字段会从同含义的其它字段补上';
+  @override
+  String get srs_lapis_migration_intro =>
+      '把旧 Lapis 笔记类型（内置、从 Anki 导入或改过名的）迁到 Fushi 卡片。字段按含义对应，复习历史随卡迁移，确认后才写入。';
+  @override
+  String get srs_lapis_migration_kind_builtin => '内置 Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => '按字段识别';
+  @override
+  String get srs_lapis_migration_kind_named => '按名称识别';
+  @override
+  String get srs_lapis_migration_left_empty => '留空';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'Fushi 卡片里没有对应字段（内容留在笔记上，不迁移）：${fields}';
+  @override
+  String get srs_lapis_migration_migrate => '迁移';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} 条笔记';
+  @override
+  String get srs_lapis_migration_nothing => '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
+  @override
+  String get srs_lapis_migration_title => '迁移旧 Lapis 到新模板';
+  @override
+  String get srs_list_separator => '、';
   @override
   String srs_media_missing({required Object name}) => '找不到媒体文件：${name}';
   @override
@@ -337965,6 +340610,87 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => '產生金鑰';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -338236,6 +340962,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -338283,6 +341014,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -338414,6 +341147,8 @@ class _StringsZhHk extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -338482,6 +341217,9 @@ class _StringsZhHk extends _StringsEn {
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
   String get srs_import => 'Import';
+  @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
@@ -338567,6 +341305,28 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_section_updates => 'Updates';
   @override
+  String get srs_import_task_cancel => 'Cancel import';
+  @override
+  String srs_import_task_cancelled({required Object name}) =>
+      'Cancelled import of ${name}';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
+  @override
+  String srs_import_task_stopping({required Object name}) =>
+      'Stopping import of ${name}… (already imported notes are kept)';
+  @override
   String get srs_import_update_always => 'Always';
   @override
   String get srs_import_update_if_newer => 'If newer';
@@ -338618,6 +341378,61 @@ class _StringsZhHk extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
+  String get srs_list_separator => '、';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -356309,6 +359124,70 @@ extension on _StringsEn {
         return 'On';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -356560,6 +359439,10 @@ extension on _StringsEn {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -356606,6 +359489,8 @@ extension on _StringsEn {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -356724,6 +359609,8 @@ extension on _StringsEn {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -356787,6 +359674,8 @@ extension on _StringsEn {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -356861,6 +359750,25 @@ extension on _StringsEn {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -356909,6 +359817,52 @@ extension on _StringsEn {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -374140,6 +377094,70 @@ extension on _StringsAr {
         return 'تشغيل';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -374391,6 +377409,10 @@ extension on _StringsAr {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -374437,6 +377459,8 @@ extension on _StringsAr {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -374555,6 +377579,8 @@ extension on _StringsAr {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -374618,6 +377644,8 @@ extension on _StringsAr {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -374692,6 +377720,25 @@ extension on _StringsAr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -374740,6 +377787,52 @@ extension on _StringsAr {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return '، ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -392027,6 +395120,70 @@ extension on _StringsDe {
         return 'Ein';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -392278,6 +395435,10 @@ extension on _StringsDe {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -392324,6 +395485,8 @@ extension on _StringsDe {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -392442,6 +395605,8 @@ extension on _StringsDe {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -392505,6 +395670,8 @@ extension on _StringsDe {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -392579,6 +395746,25 @@ extension on _StringsDe {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -392627,6 +395813,52 @@ extension on _StringsDe {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -409918,6 +413150,70 @@ extension on _StringsEs {
         return 'Activado';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -410169,6 +413465,10 @@ extension on _StringsEs {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -410215,6 +413515,8 @@ extension on _StringsEs {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -410333,6 +413635,8 @@ extension on _StringsEs {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -410396,6 +413700,8 @@ extension on _StringsEs {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -410470,6 +413776,25 @@ extension on _StringsEs {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -410518,6 +413843,52 @@ extension on _StringsEs {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -427820,6 +431191,70 @@ extension on _StringsFr {
         return 'Activé';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -428071,6 +431506,10 @@ extension on _StringsFr {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -428117,6 +431556,8 @@ extension on _StringsFr {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -428235,6 +431676,8 @@ extension on _StringsFr {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -428298,6 +431741,8 @@ extension on _StringsFr {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -428372,6 +431817,25 @@ extension on _StringsFr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -428420,6 +431884,52 @@ extension on _StringsFr {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -445682,6 +449192,70 @@ extension on _StringsId {
         return 'Nyala';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -445933,6 +449507,10 @@ extension on _StringsId {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -445979,6 +449557,8 @@ extension on _StringsId {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -446097,6 +449677,8 @@ extension on _StringsId {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -446160,6 +449742,8 @@ extension on _StringsId {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -446234,6 +449818,25 @@ extension on _StringsId {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -446282,6 +449885,52 @@ extension on _StringsId {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -463553,6 +467202,70 @@ extension on _StringsIt {
         return 'Attivato';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -463804,6 +467517,10 @@ extension on _StringsIt {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -463850,6 +467567,8 @@ extension on _StringsIt {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -463968,6 +467687,8 @@ extension on _StringsIt {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -464031,6 +467752,8 @@ extension on _StringsIt {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -464105,6 +467828,25 @@ extension on _StringsIt {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -464153,6 +467895,52 @@ extension on _StringsIt {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -481358,6 +485146,70 @@ extension on _StringsJa {
         return 'オン';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'キーを生成';
       case 'srs_ankiconnect_hint':
@@ -481609,6 +485461,10 @@ extension on _StringsJa {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -481655,6 +485511,8 @@ extension on _StringsJa {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -481773,6 +485631,8 @@ extension on _StringsJa {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -481836,6 +485696,8 @@ extension on _StringsJa {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -481910,6 +485772,25 @@ extension on _StringsJa {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -481958,6 +485839,52 @@ extension on _StringsJa {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return '、';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -499112,6 +503039,70 @@ extension on _StringsKo {
         return '켜기';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -499363,6 +503354,10 @@ extension on _StringsKo {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -499409,6 +503404,8 @@ extension on _StringsKo {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -499527,6 +503524,8 @@ extension on _StringsKo {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -499590,6 +503589,8 @@ extension on _StringsKo {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -499664,6 +503665,25 @@ extension on _StringsKo {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -499712,6 +503732,52 @@ extension on _StringsKo {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -516956,6 +521022,70 @@ extension on _StringsNl {
         return 'Aan';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -517207,6 +521337,10 @@ extension on _StringsNl {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -517253,6 +521387,8 @@ extension on _StringsNl {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -517371,6 +521507,8 @@ extension on _StringsNl {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -517434,6 +521572,8 @@ extension on _StringsNl {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -517508,6 +521648,25 @@ extension on _StringsNl {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -517556,6 +521715,52 @@ extension on _StringsNl {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -534831,6 +539036,70 @@ extension on _StringsPtBr {
         return 'Ativado';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -535082,6 +539351,10 @@ extension on _StringsPtBr {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -535128,6 +539401,8 @@ extension on _StringsPtBr {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -535246,6 +539521,8 @@ extension on _StringsPtBr {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -535309,6 +539586,8 @@ extension on _StringsPtBr {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -535383,6 +539662,25 @@ extension on _StringsPtBr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -535431,6 +539729,52 @@ extension on _StringsPtBr {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -552710,6 +557054,70 @@ extension on _StringsRu {
         return 'Вкл';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -552961,6 +557369,10 @@ extension on _StringsRu {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -553007,6 +557419,8 @@ extension on _StringsRu {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -553125,6 +557539,8 @@ extension on _StringsRu {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -553188,6 +557604,8 @@ extension on _StringsRu {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -553262,6 +557680,25 @@ extension on _StringsRu {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -553310,6 +557747,52 @@ extension on _StringsRu {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -570549,6 +575032,70 @@ extension on _StringsTh {
         return 'เปิด';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -570800,6 +575347,10 @@ extension on _StringsTh {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -570846,6 +575397,8 @@ extension on _StringsTh {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -570964,6 +575517,8 @@ extension on _StringsTh {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -571027,6 +575582,8 @@ extension on _StringsTh {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -571101,6 +575658,25 @@ extension on _StringsTh {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -571149,6 +575725,52 @@ extension on _StringsTh {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -588406,6 +593028,70 @@ extension on _StringsTr {
         return 'Açık';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -588657,6 +593343,10 @@ extension on _StringsTr {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -588703,6 +593393,8 @@ extension on _StringsTr {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -588821,6 +593513,8 @@ extension on _StringsTr {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -588884,6 +593578,8 @@ extension on _StringsTr {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -588958,6 +593654,25 @@ extension on _StringsTr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -589006,6 +593721,52 @@ extension on _StringsTr {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -606258,6 +611019,70 @@ extension on _StringsVi {
         return 'Bật';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -606509,6 +611334,10 @@ extension on _StringsVi {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -606555,6 +611384,8 @@ extension on _StringsVi {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -606673,6 +611504,8 @@ extension on _StringsVi {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -606736,6 +611569,8 @@ extension on _StringsVi {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -606810,6 +611645,25 @@ extension on _StringsVi {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -606858,6 +611712,52 @@ extension on _StringsVi {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return ', ';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -623969,6 +628869,69 @@ extension on _StringsZhCn {
         return '开启';
       case 'srs_action_failed':
         return '操作没有成功，请重试';
+      case 'srs_anki_migrate':
+        return '从 Anki 迁移';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 起把集合放在其他 app 读不到的私有目录。请在 AnkiDroid 里选「导出 → 集合包（.colpkg）」，勾选包含排程与媒体，再在这里选择该文件。';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '将导入 ${notes} 条笔记、${cards} 张卡片、${reviews} 条复习记录，连同排程、笔记类型和媒体。Fushi 现有数据会保留，重复迁移不会产生重复。';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '「${name}」将连同排程、笔记类型和媒体一起导入。Fushi 现有数据会保留，重复迁移不会产生重复。';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => '迁移「${name}」？';
+      case 'srs_anki_migrate_desktop_hint':
+        return '迁移前请先关闭 Anki。Fushi 读取的是集合的副本，不会改动 Anki。';
+      case 'srs_anki_migrate_error_changed':
+        return '读取期间 Anki 改动了集合。请关闭 Anki 后再试。';
+      case 'srs_anki_migrate_error_corrupt':
+        return '这份集合读取不了（已损坏或不是 Anki 集合）。';
+      case 'srs_anki_migrate_error_locked':
+        return '读取不了集合。请关闭 Anki 后再试。';
+      case 'srs_anki_migrate_error_missing':
+        return '集合已经不在了，请重新查找。';
+      case 'srs_anki_migrate_found':
+        return '本机找到的 Anki 集合';
+      case 'srs_anki_migrate_grant_access':
+        return '授予文件访问权限以查找 AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return '把 Anki 的牌组、笔记、笔记类型、复习进度和媒体一次搬过来。只读取 Anki 数据，不会改动它。';
+      case 'srs_anki_migrate_ios_hint':
+        return '请在 AnkiMobile 或 Anki 里导出集合包（.colpkg），勾选包含排程与媒体，存到「文件」后在这里选择。';
+      case 'srs_anki_migrate_kind_folder':
+        return '所选文件夹';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return '该文件夹及其子文件夹里没有 collection.anki2。';
+      case 'srs_anki_migrate_none_found':
+        return '本机没有找到 Anki 集合。';
+      case 'srs_anki_migrate_open_ankidroid':
+        return '打开 AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki 似乎正开着。先关闭 Anki（或同步一次），最新的复习才会带过来。';
+      case 'srs_anki_migrate_other_ways':
+        return '其他方式';
+      case 'srs_anki_migrate_pick_file':
+        return '选择导出的文件（.colpkg / .apkg）';
+      case 'srs_anki_migrate_pick_folder':
+        return '选择 Anki 数据文件夹';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · 最后修改 ${time}';
+      case 'srs_anki_migrate_rescan':
+        return '重新查找';
+      case 'srs_anki_migrate_scanning':
+        return '正在查找 Anki…';
+      case 'srs_anki_migrate_scope':
+        return '会迁移：牌组、笔记、笔记类型与模板、卡片排程、复习记录、牌组选项和媒体。不会迁移：插件、筛选牌组（卡片回到原牌组）以及 Anki 自身的偏好设置。';
+      case 'srs_anki_migrate_start':
+        return '开始迁移';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) => '有些文件夹读取不了：${paths}';
       case 'srs_ankiconnect_generate_key':
         return '生成密钥';
       case 'srs_ankiconnect_hint':
@@ -624216,6 +629179,10 @@ extension on _StringsZhCn {
         return '紧凑';
       case 'srs_card_appearance_density_standard':
         return '标准';
+      case 'srs_card_appearance_design_skin':
+        return '卡面跟随设计系统';
+      case 'srs_card_appearance_design_skin_hint':
+        return '用应用当前的 Material / 苹果风样式覆盖导入牌组与自建模板的外观（背景、边框、文字与链接颜色、字体），模板的布局与内容不变。关闭则完全按模板原样显示。';
       case 'srs_card_appearance_dict_unified':
         return '统一词典样式';
       case 'srs_card_appearance_dict_unified_hint':
@@ -624262,6 +629229,8 @@ extension on _StringsZhCn {
         return '字体';
       case 'srs_card_appearance_section_layout':
         return '布局';
+      case 'srs_card_appearance_section_other':
+        return '其它卡片类型';
       case 'srs_card_appearance_section_text':
         return '文字';
       case 'srs_card_appearance_sentence_furigana':
@@ -624378,6 +629347,8 @@ extension on _StringsZhCn {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
+      case 'srs_deck_deleting':
+        return '正在删除…';
       case 'srs_deck_expand':
         return '展开子牌组';
       case 'srs_deck_menu':
@@ -624440,6 +629411,8 @@ extension on _StringsZhCn {
             '已导入 ${n} 条，跳过 ${skipped} 条';
       case 'srs_import':
         return '导入';
+      case 'srs_import_background_started':
+        return '正在后台导入，可以继续使用 Fushi。';
       case 'srs_import_colpkg_note':
         return '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
       case 'srs_import_failed':
@@ -624503,6 +629476,23 @@ extension on _StringsZhCn {
         return '正在导入…';
       case 'srs_import_section_updates':
         return '更新';
+      case 'srs_import_task_cancel':
+        return '取消导入';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => '已取消导入 ${name}';
+      case 'srs_import_task_dismiss':
+        return '关闭';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            '已导入 ${name}：新增 ${n} 条笔记';
+      case 'srs_import_task_failed':
+        return ({required Object name}) => '导入 ${name} 失败，点按查看原因。';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => '等待导入 ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => '正在导入 ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) => '正在停止导入 ${name}…（已导入的笔记会保留）';
       case 'srs_import_update_always':
         return '始终';
       case 'srs_import_update_if_newer':
@@ -624551,6 +629541,50 @@ extension on _StringsZhCn {
         return '每日起点';
       case 'srs_key_steps':
         return '学习步长';
+      case 'srs_lapis_migration_backfill_action':
+        return '补迁';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => '已为 ${n} 条笔记补上遗漏字段';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} 条已迁移的笔记有空字段，而迁移前的旧字段仍有内容。只补空字段，已有内容绝不覆盖。';
+      case 'srs_lapis_migration_backfill_title':
+        return '补迁旧版迁移遗漏的字段';
+      case 'srs_lapis_migration_by_synonym':
+        return '按同义名';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} 张卡继承复习历史，${dropped} 张卡不再出现';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object name, required Object n}) =>
+            '将「${name}」的 ${n} 条笔记迁移到 Fushi 卡片？';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) => '${n} 条笔记可迁移或有遗漏字段可补';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) => '${n} 条笔记的空字段会从同含义的其它字段补上';
+      case 'srs_lapis_migration_intro':
+        return '把旧 Lapis 笔记类型（内置、从 Anki 导入或改过名的）迁到 Fushi 卡片。字段按含义对应，复习历史随卡迁移，确认后才写入。';
+      case 'srs_lapis_migration_kind_builtin':
+        return '内置 Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return '按字段识别';
+      case 'srs_lapis_migration_kind_named':
+        return '按名称识别';
+      case 'srs_lapis_migration_left_empty':
+        return '留空';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'Fushi 卡片里没有对应字段（内容留在笔记上，不迁移）：${fields}';
+      case 'srs_lapis_migration_migrate':
+        return '迁移';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} 条笔记';
+      case 'srs_lapis_migration_nothing':
+        return '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
+      case 'srs_lapis_migration_title':
+        return '迁移旧 Lapis 到新模板';
+      case 'srs_list_separator':
+        return '、';
       case 'srs_media_missing':
         return ({required Object name}) => '找不到媒体文件：${name}';
       case 'srs_migrate_fushi_action':
@@ -641629,6 +646663,70 @@ extension on _StringsZhHk {
         return '開啟';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return '產生金鑰';
       case 'srs_ankiconnect_hint':
@@ -641880,6 +646978,10 @@ extension on _StringsZhHk {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s Material or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -641926,6 +647028,8 @@ extension on _StringsZhHk {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -642044,6 +647148,8 @@ extension on _StringsZhHk {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -642107,6 +647213,8 @@ extension on _StringsZhHk {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -642181,6 +647289,25 @@ extension on _StringsZhHk {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_cancel':
+        return 'Cancel import';
+      case 'srs_import_task_cancelled':
+        return ({required Object name}) => 'Cancelled import of ${name}';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
+      case 'srs_import_task_stopping':
+        return ({required Object name}) =>
+            'Stopping import of ${name}… (already imported notes are kept)';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -642229,6 +647356,52 @@ extension on _StringsZhHk {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
+      case 'srs_list_separator':
+        return '、';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
