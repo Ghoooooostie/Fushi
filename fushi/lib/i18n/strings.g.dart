@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 147135 (8655 per locale)
+/// Strings: 149345 (8785 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -267,6 +267,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} set individually';
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  String get ai_feature_srs_template => 'Review card template';
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   String get ai_feature_subtitle_proofread_summary =>
       'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
@@ -8983,6 +8986,110 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_export_failed => 'Export failed';
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  String get srs_field_info_ai => 'Let AI write it';
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  String get srs_field_info_description => 'Description';
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  String get srs_field_info_expression_name => 'Word';
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  String get srs_field_info_expression_reading_name => 'Reading';
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  String get srs_field_info_frequency_name => 'Frequency';
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  String get srs_field_info_glossary_name => 'All definitions';
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  String get srs_field_info_hint_name => 'Hint';
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  String get srs_field_info_main_definition_name => 'Main definition';
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  String get srs_field_info_misc_info_name => 'Source';
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  String get srs_field_info_picture_name => 'Picture';
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  String get srs_field_info_sentence_name => 'Sentence';
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  String get srs_field_info_title => 'Field';
+  String get srs_field_info_usage => 'How it is filled and used';
+  String get srs_field_info_where => 'Where it shows';
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  String get srs_field_kind_audio => 'Audio';
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  String get srs_field_kind_image => 'Image';
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  String get srs_field_kind_text => 'Text';
   String get srs_flag_blue => 'Blue';
   String get srs_flag_green => 'Green';
   String get srs_flag_none => 'No flag';
@@ -9503,6 +9610,81 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_sync_now => 'Sync now';
   String get srs_value_no => 'No';
   String get srs_value_yes => 'Yes';
+  String get srs_visual_add_field => 'Add field';
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  String get srs_visual_ai_run => 'Generate';
+  String get srs_visual_align_center => 'Center';
+  String get srs_visual_align_end => 'Right';
+  String get srs_visual_align_start => 'Left';
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  String get srs_visual_convert_title => 'This template is written in code';
+  String get srs_visual_delete => 'Remove block';
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  String get srs_visual_field_missing => 'Field removed';
+  String get srs_visual_filter_cloze => 'Cloze';
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  String get srs_visual_filter_furigana => 'Furigana';
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  String get srs_visual_filter_kana => 'Reading only';
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  String get srs_visual_filter_kanji => 'Kanji only';
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  String get srs_visual_filter_plain => 'As is';
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  String get srs_visual_generate => 'Generate from fields';
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  String get srs_visual_kind_divider => 'Divider';
+  String get srs_visual_kind_front_side => 'Front side';
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  String get srs_visual_kind_text => 'Text';
+  String get srs_visual_move_down => 'Move down';
+  String get srs_visual_move_up => 'Move up';
+  String get srs_visual_pick_field => 'Choose a field';
+  String get srs_visual_prop_align => 'Alignment';
+  String get srs_visual_prop_bold => 'Bold';
+  String get srs_visual_prop_boxed => 'Tinted box';
+  String get srs_visual_prop_field => 'Field';
+  String get srs_visual_prop_filter => 'Display as';
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  String get srs_visual_prop_label => 'Caption';
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  String get srs_visual_prop_size => 'Size';
+  String get srs_visual_prop_text => 'Text';
+  String get srs_visual_prop_tone => 'Colour';
+  String get srs_visual_replace => 'Replace';
+  String get srs_visual_size_body => 'Normal';
+  String get srs_visual_size_display => 'Huge';
+  String get srs_visual_size_small => 'Small';
+  String get srs_visual_size_title => 'Large';
+  String get srs_visual_tab => 'Visual';
+  String get srs_visual_text_default => 'Text';
+  String get srs_visual_tone_accent => 'Accent';
+  String get srs_visual_tone_muted => 'Muted';
+  String get srs_visual_tone_normal => 'Normal';
   String get srt_audio_unresolved => 'Audio file not found — please re-attach';
   String get srt_book_reimport => 'Re-import';
   String get srt_book_reimport_body_rebuilt =>
@@ -11490,7 +11672,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   String get video_setting_pause_ocr_scope_off => 'Off';
   String get video_setting_picture_fit => 'Picture scaling';
   String get video_setting_picture_fit_contain =>
@@ -12684,6 +12866,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -27478,6 +27665,179 @@ class _StringsAr extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -28375,6 +28735,140 @@ class _StringsAr extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'لم يتم العثور على ملف الصوت — يرجى إعادة الإرفاق';
@@ -31793,7 +32287,7 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -33669,6 +34163,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -48758,6 +49257,179 @@ class _StringsDe extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -49655,6 +50327,140 @@ class _StringsDe extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'Audiodatei nicht gefunden — bitte erneut anhängen';
@@ -53137,7 +53943,7 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -55044,6 +55850,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -70163,6 +70974,179 @@ class _StringsEs extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -71060,6 +72044,140 @@ class _StringsEs extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'Archivo de audio no encontrado — por favor vuelve a adjuntarlo';
@@ -74557,7 +75675,7 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -76474,6 +77592,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -91655,6 +92778,179 @@ class _StringsFr extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -92552,6 +93848,140 @@ class _StringsFr extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'Fichier audio introuvable — veuillez le rattacher';
@@ -96055,7 +97485,7 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -97986,6 +99416,11 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -112911,6 +114346,179 @@ class _StringsId extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -113808,6 +115416,140 @@ class _StringsId extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'File audio tidak ditemukan — silakan lampirkan ulang';
@@ -117259,7 +119001,7 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -119155,6 +120897,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -134211,6 +135958,179 @@ class _StringsIt extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -135108,6 +137028,140 @@ class _StringsIt extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => 'File audio non trovato — ricollegare';
   @override
@@ -138576,7 +140630,7 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -140479,6 +142533,11 @@ class _StringsJa extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 件を個別に指定';
   @override
   String get ai_feature_overrides_none => 'すべての機能が既定のプロバイダーを使用';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => '字幕の校正';
   @override
@@ -154803,6 +156862,179 @@ class _StringsJa extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -155700,6 +157932,140 @@ class _StringsJa extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => '音声ファイルが見つかりません。再紐付けしてください';
   @override
@@ -158985,7 +161351,7 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。Fushi が表示しているテキスト字幕がある場合はそちらを優先します。';
+      '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。テキスト字幕の有無には影響されません。';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
   @override
@@ -160777,6 +163143,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -175124,6 +177495,179 @@ class _StringsKo extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -176021,6 +178565,140 @@ class _StringsKo extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => '오디오 파일을 찾을 수 없습니다 — 다시 연결하세요';
   @override
@@ -179316,7 +181994,7 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -181139,6 +183817,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -196150,6 +198833,179 @@ class _StringsNl extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -197047,6 +199903,140 @@ class _StringsNl extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'Audiobestand niet gevonden — koppel opnieuw';
@@ -200514,7 +203504,7 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -202420,6 +205410,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -217479,6 +220474,179 @@ class _StringsPtBr extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -218376,6 +221544,140 @@ class _StringsPtBr extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'Arquivo de áudio não encontrado — reanexe-o';
@@ -221855,7 +225157,7 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -223766,6 +227068,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -238786,6 +242093,179 @@ class _StringsRu extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -239683,6 +243163,140 @@ class _StringsRu extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => 'Аудиофайл не найден — привяжите заново';
   @override
@@ -243149,7 +246763,7 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -245058,6 +248672,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -259844,6 +263463,179 @@ class _StringsTh extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -260741,6 +264533,140 @@ class _StringsTh extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => 'ไม่พบไฟล์เสียง กรุณาแนบใหม่';
   @override
@@ -264157,7 +268083,7 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -266032,6 +269958,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -280967,6 +284898,179 @@ class _StringsTr extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -281864,6 +285968,140 @@ class _StringsTr extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'Ses dosyası bulunamadı — lütfen yeniden bağlayın';
@@ -285313,7 +289551,7 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -287206,6 +291444,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
   @override
@@ -302086,6 +306329,179 @@ class _StringsVi extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -302983,6 +307399,140 @@ class _StringsVi extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved =>
       'Không tìm thấy tệp âm thanh — vui lòng gắn lại';
@@ -306422,7 +310972,7 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -308293,6 +312843,10 @@ class _StringsZhCn extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 项已单独指定';
   @override
   String get ai_feature_overrides_none => '全部跟随默认提供商';
+  @override
+  String get ai_feature_srs_template => '复习卡片模板';
+  @override
+  String get ai_feature_srs_template_summary => '让 AI 按描述摆好复习卡片的布局，并给字段写说明';
   @override
   String get ai_feature_subtitle_proofread => '字幕校对';
   @override
@@ -321920,6 +326474,156 @@ class _StringsZhCn extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
   @override
+  String get srs_field_info_ai => '让 AI 写说明';
+  @override
+  String get srs_field_info_ai_busy => 'AI 正在写…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      '只给字段「${name}」写一句说明（它装什么、在卡面哪里出现），不要改布局。';
+  @override
+  String get srs_field_info_definition_picture_desc => '放在释义旁边的图片，需要时自己填。';
+  @override
+  String get srs_field_info_definition_picture_name => '释义图片';
+  @override
+  String get srs_field_info_description => '说明';
+  @override
+  String get srs_field_info_description_hint =>
+      '这个字段装什么、在卡面哪里出现？写了之后列出字段的地方都会显示。';
+  @override
+  String get srs_field_info_description_override_hint => '写自己的说明会替换上面的内置说明';
+  @override
+  String srs_field_info_example({required Object value}) => '示例：${value}';
+  @override
+  String get srs_field_info_example_from_catalog => '这个笔记类型还没有卡片，示例是内置样例。';
+  @override
+  String get srs_field_info_expression_audio_desc => '单词的发音音频，卡面上显示为播放按钮。';
+  @override
+  String get srs_field_info_expression_audio_name => '单词发音';
+  @override
+  String get srs_field_info_expression_desc =>
+      '要记的词本身（写法），正面通常只显示它。制卡时自动填入查到的词。';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      '同一个词，用「漢字[かな]」格式写上读音，卡面会把假名标在汉字上方。';
+  @override
+  String get srs_field_info_expression_furigana_name => '词条（带注音）';
+  @override
+  String get srs_field_info_expression_name => '词条';
+  @override
+  String get srs_field_info_expression_reading_desc => '词的假名读法，例如「たべる」。';
+  @override
+  String get srs_field_info_expression_reading_name => '读音';
+  @override
+  String get srs_field_info_freq_sort_desc => '按词频排序用的单个数字（调和平均排名），不直接显示。';
+  @override
+  String get srs_field_info_freq_sort_name => '词频排序值';
+  @override
+  String get srs_field_info_frequency_desc => '各词频词典给出的排名，数字越小越常用。';
+  @override
+  String get srs_field_info_frequency_name => '词频';
+  @override
+  String get srs_field_info_glossary_desc => '所有词典给出的完整释义，通常折叠在主释义下面。';
+  @override
+  String get srs_field_info_glossary_name => '全部释义';
+  @override
+  String get srs_field_info_hint_desc => '给正面的一点提示，点一下才显示。';
+  @override
+  String get srs_field_info_hint_name => '提示';
+  @override
+  String get srs_field_info_is_audio_card_desc => '填任意字符即开启：正面只放音频，考听力。';
+  @override
+  String get srs_field_info_is_audio_card_name => '开关：听音卡';
+  @override
+  String get srs_field_info_is_click_card_desc => '填任意字符即开启：正面显示例句，点一下才露出目标词。';
+  @override
+  String get srs_field_info_is_click_card_name => '开关：点击卡';
+  @override
+  String get srs_field_info_is_sentence_card_desc => '填任意字符即开启：正面只显示例句，考整句理解。';
+  @override
+  String get srs_field_info_is_sentence_card_name => '开关：句子卡';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      '填任意字符（如 x）即开启：正面同时显示单词和例句。Fushi 制卡默认开启。';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name => '开关：词 + 句卡';
+  @override
+  String get srs_field_info_main_definition_desc => '主要的那条释义（默认取第一部词典的第一条）。';
+  @override
+  String get srs_field_info_main_definition_name => '主释义';
+  @override
+  String srs_field_info_mining({required Object slot}) => '制卡时自动填入：${slot}';
+  @override
+  String get srs_field_info_mining_none => '制卡时不会自动填写，需要时在笔记编辑里自己填。';
+  @override
+  String get srs_field_info_misc_info_desc => '这张卡来自哪里：作品名（可点击跳回原处）和时间点。';
+  @override
+  String get srs_field_info_misc_info_name => '来源';
+  @override
+  String get srs_field_info_picture_desc => '截图或配图，显示在卡面上帮助回忆。';
+  @override
+  String get srs_field_info_picture_name => '图片';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      '平板 / 头高 / 中高 / 尾高等类型名，模板用来给读音上色。';
+  @override
+  String get srs_field_info_pitch_categories_name => '音调类型';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      '音调核的位置数字（如 0、2），模板用它画音调线，不直接显示。';
+  @override
+  String get srs_field_info_pitch_position_name => '音调位置';
+  @override
+  String srs_field_info_raw_name({required Object name}) => '字段名：${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      '查词时在词典里选中的那段文字；有它时卡面优先显示它，而不是整条释义。';
+  @override
+  String get srs_field_info_selection_text_name => '选中的释义';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      '例句的录音（视频 / 有声书片段），卡面上显示为播放按钮。';
+  @override
+  String get srs_field_info_sentence_audio_name => '例句音频';
+  @override
+  String get srs_field_info_sentence_desc => '遇到这个词时的原句，目标词会被加粗。';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      '例句的注音版，格式同上；一般留空，需要时手动填。';
+  @override
+  String get srs_field_info_sentence_furigana_name => '例句（带注音）';
+  @override
+  String get srs_field_info_sentence_name => '例句';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      '例句的译文（Fushi 卡片的扩展字段，为空时整块不显示）。';
+  @override
+  String get srs_field_info_sentence_translation_name => '例句翻译';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      '用到它的卡片模板：${names}';
+  @override
+  String get srs_field_info_templates_none => '目前没有卡片模板显示这个字段。';
+  @override
+  String get srs_field_info_title => '字段';
+  @override
+  String get srs_field_info_usage => '怎么填、在哪用';
+  @override
+  String get srs_field_info_where => '在卡面的位置';
+  @override
+  String get srs_field_info_where_hint => '虚线框出的就是这个字段的内容。';
+  @override
+  String get srs_field_kind_audio => '音频';
+  @override
+  String get srs_field_kind_data => '给模板用的数据，一般不直接显示';
+  @override
+  String get srs_field_kind_flag => '开关：填任意字符即开启，本身不显示';
+  @override
+  String get srs_field_kind_image => '图片';
+  @override
+  String get srs_field_kind_rich => '带格式的文字（词典内容）';
+  @override
+  String get srs_field_kind_text => '文字';
+  @override
   String get srs_flag_blue => '蓝';
   @override
   String get srs_flag_green => '绿';
@@ -322755,6 +327459,128 @@ class _StringsZhCn extends _StringsEn {
   String get srs_value_no => '否';
   @override
   String get srs_value_yes => '是';
+  @override
+  String get srs_visual_add_field => '添加字段';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI 还给 ${count} 个字段写了说明，保存模板时一起写入。';
+  @override
+  String get srs_visual_ai_hint => '例如：正面大字显示单词，下面放例句；背面放读音、发音和释义';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI 给的布局会替换用代码写的（或手改过的）模板。点保存之前不会写入，仍可放弃。';
+  @override
+  String get srs_visual_ai_run => '生成';
+  @override
+  String get srs_visual_align_center => '居中';
+  @override
+  String get srs_visual_align_end => '靠右';
+  @override
+  String get srs_visual_align_start => '靠左';
+  @override
+  String get srs_visual_convert_body =>
+      '多半来自 Anki 或旧版本。可以按字段自动生成一个可视化布局，之后用拖块的方式改；点保存之前随时可以放弃。';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      '这是内置笔记类型：模板一旦改动，复习时就按模板渲染，不再使用 Fushi 原生卡面。';
+  @override
+  String get srs_visual_convert_title => '这个模板是用代码写的';
+  @override
+  String get srs_visual_delete => '删除这块';
+  @override
+  String get srs_visual_edited_warning => '这一面的代码被手动改过，在这里再改会重新生成代码，手改的部分会丢失。';
+  @override
+  String get srs_visual_empty => '这一面还是空的，先添加一个字段。';
+  @override
+  String get srs_visual_field_missing => '字段已删除';
+  @override
+  String get srs_visual_filter_cloze => '填空';
+  @override
+  String get srs_visual_filter_cloze_hint => '把 {{c1::…}} 标出的部分在正面挖成空。';
+  @override
+  String get srs_visual_filter_furigana => '注音';
+  @override
+  String get srs_visual_filter_furigana_hint => '「漢字[かな]」格式的内容会把假名标在汉字上方。';
+  @override
+  String get srs_visual_filter_hint => '点击才显示';
+  @override
+  String get srs_visual_filter_hint_hint => '折叠成一个链接，复习时点一下才展开。';
+  @override
+  String get srs_visual_filter_kana => '只显示读音';
+  @override
+  String get srs_visual_filter_kana_hint => '只显示「漢字[かな]」里的读音。';
+  @override
+  String get srs_visual_filter_kanji => '只显示汉字';
+  @override
+  String get srs_visual_filter_kanji_hint => '去掉方括号里的读音，只留写法。';
+  @override
+  String get srs_visual_filter_plain => '原样';
+  @override
+  String get srs_visual_filter_plain_hint => '按字段内容原样显示。';
+  @override
+  String get srs_visual_generate => '按字段自动生成';
+  @override
+  String get srs_visual_generate_confirm_body => '正反两面会按字段重新生成。点保存之前不会写入，仍可放弃。';
+  @override
+  String get srs_visual_generate_confirm_title => '替换当前模板？';
+  @override
+  String get srs_visual_kind_divider => '分隔线';
+  @override
+  String get srs_visual_kind_front_side => '正面内容';
+  @override
+  String get srs_visual_kind_front_side_hint => '在这里重复显示整个正面';
+  @override
+  String get srs_visual_kind_text => '文字';
+  @override
+  String get srs_visual_move_down => '下移';
+  @override
+  String get srs_visual_move_up => '上移';
+  @override
+  String get srs_visual_pick_field => '选择字段';
+  @override
+  String get srs_visual_prop_align => '对齐';
+  @override
+  String get srs_visual_prop_bold => '粗体';
+  @override
+  String get srs_visual_prop_boxed => '加底框';
+  @override
+  String get srs_visual_prop_field => '字段';
+  @override
+  String get srs_visual_prop_filter => '显示方式';
+  @override
+  String get srs_visual_prop_hide_empty => '为空时隐藏';
+  @override
+  String get srs_visual_prop_hide_empty_hint => '字段为空时整块（连同小标题）都不出现。';
+  @override
+  String get srs_visual_prop_label => '小标题';
+  @override
+  String get srs_visual_prop_label_hint => '可选，例如「例句」';
+  @override
+  String get srs_visual_prop_size => '字号';
+  @override
+  String get srs_visual_prop_text => '文字';
+  @override
+  String get srs_visual_prop_tone => '颜色';
+  @override
+  String get srs_visual_replace => '替换';
+  @override
+  String get srs_visual_size_body => '正文';
+  @override
+  String get srs_visual_size_display => '特大';
+  @override
+  String get srs_visual_size_small => '小';
+  @override
+  String get srs_visual_size_title => '大';
+  @override
+  String get srs_visual_tab => '可视化';
+  @override
+  String get srs_visual_text_default => '文字';
+  @override
+  String get srs_visual_tone_accent => '强调色';
+  @override
+  String get srs_visual_tone_muted => '淡化';
+  @override
+  String get srs_visual_tone_normal => '正常';
   @override
   String get srt_audio_unresolved => '未找到音频文件 — 请重新附加';
   @override
@@ -325870,7 +330696,7 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      '暂停时对画面做文字识别，识别出的字可直接点按查词。画面上已有 Fushi 显示的文字字幕时以字幕为准。';
+      '暂停时对画面做文字识别，识别出的字可直接点按查词。与是否显示文字字幕无关。';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
   @override
@@ -327577,6 +332403,11 @@ class _StringsZhHk extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 項已單獨指定';
   @override
   String get ai_feature_overrides_none => '全部跟隨預設提供商';
+  @override
+  String get ai_feature_srs_template => 'Review card template';
+  @override
+  String get ai_feature_srs_template_summary =>
+      'Let AI lay out review cards from a description and explain fields';
   @override
   String get ai_feature_subtitle_proofread => '字幕校對';
   @override
@@ -341483,6 +346314,179 @@ class _StringsZhHk extends _StringsEn {
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   @override
+  String get srs_field_info_ai => 'Let AI write it';
+  @override
+  String get srs_field_info_ai_busy => 'AI is writing…';
+  @override
+  String srs_field_info_ai_request({required Object name}) =>
+      'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+  @override
+  String get srs_field_info_definition_picture_desc =>
+      'A picture shown next to the definition; fill it yourself if you like.';
+  @override
+  String get srs_field_info_definition_picture_name => 'Definition picture';
+  @override
+  String get srs_field_info_description => 'Description';
+  @override
+  String get srs_field_info_description_hint =>
+      'What does this field hold, and where does it show? Shown wherever this field is listed.';
+  @override
+  String get srs_field_info_description_override_hint =>
+      'Write your own to replace the built-in description';
+  @override
+  String srs_field_info_example({required Object value}) => 'Example: ${value}';
+  @override
+  String get srs_field_info_example_from_catalog =>
+      'No cards of this note type yet, so the example is a built-in sample.';
+  @override
+  String get srs_field_info_expression_audio_desc =>
+      'Pronunciation audio of the word; shown as a play button.';
+  @override
+  String get srs_field_info_expression_audio_name => 'Word audio';
+  @override
+  String get srs_field_info_expression_desc =>
+      'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+  @override
+  String get srs_field_info_expression_furigana_desc =>
+      'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+  @override
+  String get srs_field_info_expression_furigana_name => 'Word with furigana';
+  @override
+  String get srs_field_info_expression_name => 'Word';
+  @override
+  String get srs_field_info_expression_reading_desc =>
+      'The kana reading of the word, e.g. たべる.';
+  @override
+  String get srs_field_info_expression_reading_name => 'Reading';
+  @override
+  String get srs_field_info_freq_sort_desc =>
+      'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+  @override
+  String get srs_field_info_freq_sort_name => 'Frequency sort value';
+  @override
+  String get srs_field_info_frequency_desc =>
+      'Rankings from your frequency dictionaries; smaller means more common.';
+  @override
+  String get srs_field_info_frequency_name => 'Frequency';
+  @override
+  String get srs_field_info_glossary_desc =>
+      'The full definitions from every dictionary, usually folded under the main definition.';
+  @override
+  String get srs_field_info_glossary_name => 'All definitions';
+  @override
+  String get srs_field_info_hint_desc =>
+      'A small hint for the front, revealed when tapped.';
+  @override
+  String get srs_field_info_hint_name => 'Hint';
+  @override
+  String get srs_field_info_is_audio_card_desc =>
+      'Type any character to turn it on: the front only plays audio, testing listening.';
+  @override
+  String get srs_field_info_is_audio_card_name => 'Switch: audio card';
+  @override
+  String get srs_field_info_is_click_card_desc =>
+      'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+  @override
+  String get srs_field_info_is_click_card_name => 'Switch: click card';
+  @override
+  String get srs_field_info_is_sentence_card_desc =>
+      'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+  @override
+  String get srs_field_info_is_sentence_card_name => 'Switch: sentence card';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_desc =>
+      'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+  @override
+  String get srs_field_info_is_word_and_sentence_card_name =>
+      'Switch: word + sentence card';
+  @override
+  String get srs_field_info_main_definition_desc =>
+      'The main definition (by default the first entry of the first dictionary).';
+  @override
+  String get srs_field_info_main_definition_name => 'Main definition';
+  @override
+  String srs_field_info_mining({required Object slot}) =>
+      'When mining a card it is filled with: ${slot}';
+  @override
+  String get srs_field_info_mining_none =>
+      'Not filled automatically when mining; fill it yourself in the note editor.';
+  @override
+  String get srs_field_info_misc_info_desc =>
+      'Where the card came from: the work title (tap to jump back) and the timestamp.';
+  @override
+  String get srs_field_info_misc_info_name => 'Source';
+  @override
+  String get srs_field_info_picture_desc =>
+      'A screenshot or picture shown on the card to help you remember.';
+  @override
+  String get srs_field_info_picture_name => 'Picture';
+  @override
+  String get srs_field_info_pitch_categories_desc =>
+      'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+  @override
+  String get srs_field_info_pitch_categories_name => 'Pitch accent type';
+  @override
+  String get srs_field_info_pitch_position_desc =>
+      'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+  @override
+  String get srs_field_info_pitch_position_name => 'Pitch accent position';
+  @override
+  String srs_field_info_raw_name({required Object name}) =>
+      'Field name: ${name}';
+  @override
+  String get srs_field_info_selection_text_desc =>
+      'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+  @override
+  String get srs_field_info_selection_text_name => 'Selected definition';
+  @override
+  String get srs_field_info_sentence_audio_desc =>
+      'A recording of the sentence (from the video or audiobook); shown as a play button.';
+  @override
+  String get srs_field_info_sentence_audio_name => 'Sentence audio';
+  @override
+  String get srs_field_info_sentence_desc =>
+      'The sentence you met the word in; the word itself is bolded.';
+  @override
+  String get srs_field_info_sentence_furigana_desc =>
+      'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+  @override
+  String get srs_field_info_sentence_furigana_name => 'Sentence with furigana';
+  @override
+  String get srs_field_info_sentence_name => 'Sentence';
+  @override
+  String get srs_field_info_sentence_translation_desc =>
+      'A translation of the sentence (a Fushi card field; hidden when empty).';
+  @override
+  String get srs_field_info_sentence_translation_name => 'Sentence translation';
+  @override
+  String srs_field_info_templates({required Object names}) =>
+      'Used by card templates: ${names}';
+  @override
+  String get srs_field_info_templates_none =>
+      'No card template shows this field yet.';
+  @override
+  String get srs_field_info_title => 'Field';
+  @override
+  String get srs_field_info_usage => 'How it is filled and used';
+  @override
+  String get srs_field_info_where => 'Where it shows';
+  @override
+  String get srs_field_info_where_hint =>
+      'The dashed box marks this field\'s content.';
+  @override
+  String get srs_field_kind_audio => 'Audio';
+  @override
+  String get srs_field_kind_data => 'Data for the template, usually not shown';
+  @override
+  String get srs_field_kind_flag =>
+      'Switch: any character turns it on, not shown itself';
+  @override
+  String get srs_field_kind_image => 'Image';
+  @override
+  String get srs_field_kind_rich => 'Formatted text (dictionary HTML)';
+  @override
+  String get srs_field_kind_text => 'Text';
+  @override
   String get srs_flag_blue => 'Blue';
   @override
   String get srs_flag_green => 'Green';
@@ -342380,6 +347384,140 @@ class _StringsZhHk extends _StringsEn {
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
+  @override
+  String get srs_visual_add_field => 'Add field';
+  @override
+  String srs_visual_ai_descriptions_pending({required Object count}) =>
+      'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+  @override
+  String get srs_visual_ai_hint =>
+      'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_ai_run => 'Generate';
+  @override
+  String get srs_visual_align_center => 'Center';
+  @override
+  String get srs_visual_align_end => 'Right';
+  @override
+  String get srs_visual_align_start => 'Left';
+  @override
+  String get srs_visual_convert_body =>
+      'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+  @override
+  String get srs_visual_convert_builtin_note =>
+      'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+  @override
+  String get srs_visual_convert_title => 'This template is written in code';
+  @override
+  String get srs_visual_delete => 'Remove block';
+  @override
+  String get srs_visual_edited_warning =>
+      'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+  @override
+  String get srs_visual_empty =>
+      'Nothing on this side yet. Add a field to start.';
+  @override
+  String get srs_visual_field_missing => 'Field removed';
+  @override
+  String get srs_visual_filter_cloze => 'Cloze';
+  @override
+  String get srs_visual_filter_cloze_hint =>
+      'Show {{c1::…}} cloze deletions as blanks on the front.';
+  @override
+  String get srs_visual_filter_furigana => 'Furigana';
+  @override
+  String get srs_visual_filter_furigana_hint =>
+      'Content in 漢字[かな] form shows the kana above the kanji.';
+  @override
+  String get srs_visual_filter_hint => 'Tap to reveal';
+  @override
+  String get srs_visual_filter_hint_hint =>
+      'Folded into a link; tap it during review to reveal.';
+  @override
+  String get srs_visual_filter_kana => 'Reading only';
+  @override
+  String get srs_visual_filter_kana_hint =>
+      'Show only the readings of 漢字[かな] content.';
+  @override
+  String get srs_visual_filter_kanji => 'Kanji only';
+  @override
+  String get srs_visual_filter_kanji_hint =>
+      'Drop the [reading] parts and show only the written form.';
+  @override
+  String get srs_visual_filter_plain => 'As is';
+  @override
+  String get srs_visual_filter_plain_hint =>
+      'Show the field content unchanged.';
+  @override
+  String get srs_visual_generate => 'Generate from fields';
+  @override
+  String get srs_visual_generate_confirm_body =>
+      'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+  @override
+  String get srs_visual_generate_confirm_title =>
+      'Replace the current template?';
+  @override
+  String get srs_visual_kind_divider => 'Divider';
+  @override
+  String get srs_visual_kind_front_side => 'Front side';
+  @override
+  String get srs_visual_kind_front_side_hint => 'Repeats the whole front here';
+  @override
+  String get srs_visual_kind_text => 'Text';
+  @override
+  String get srs_visual_move_down => 'Move down';
+  @override
+  String get srs_visual_move_up => 'Move up';
+  @override
+  String get srs_visual_pick_field => 'Choose a field';
+  @override
+  String get srs_visual_prop_align => 'Alignment';
+  @override
+  String get srs_visual_prop_bold => 'Bold';
+  @override
+  String get srs_visual_prop_boxed => 'Tinted box';
+  @override
+  String get srs_visual_prop_field => 'Field';
+  @override
+  String get srs_visual_prop_filter => 'Display as';
+  @override
+  String get srs_visual_prop_hide_empty => 'Hide when empty';
+  @override
+  String get srs_visual_prop_hide_empty_hint =>
+      'The whole block, caption included, disappears when the field is empty.';
+  @override
+  String get srs_visual_prop_label => 'Caption';
+  @override
+  String get srs_visual_prop_label_hint => 'Optional, e.g. Sentence';
+  @override
+  String get srs_visual_prop_size => 'Size';
+  @override
+  String get srs_visual_prop_text => 'Text';
+  @override
+  String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
+  @override
+  String get srs_visual_size_body => 'Normal';
+  @override
+  String get srs_visual_size_display => 'Huge';
+  @override
+  String get srs_visual_size_small => 'Small';
+  @override
+  String get srs_visual_size_title => 'Large';
+  @override
+  String get srs_visual_tab => 'Visual';
+  @override
+  String get srs_visual_text_default => 'Text';
+  @override
+  String get srs_visual_tone_accent => 'Accent';
+  @override
+  String get srs_visual_tone_muted => 'Muted';
+  @override
+  String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => '未找到音訊檔案 — 請重新附加';
   @override
@@ -345561,7 +350699,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。畫面上已有 Fushi 顯示的文字字幕時以字幕為準。';
+      '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。與是否顯示文字字幕無關。';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
   @override
@@ -347253,6 +352391,10 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -359960,6 +365102,146 @@ extension on _StringsEn {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -360763,6 +366045,125 @@ extension on _StringsEn {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audio file not found — please re-attach';
       case 'srt_book_reimport':
@@ -363700,7 +369101,7 @@ extension on _StringsEn {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -365243,6 +370644,10 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -377946,6 +383351,146 @@ extension on _StringsAr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -378749,6 +384294,125 @@ extension on _StringsAr {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'لم يتم العثور على ملف الصوت — يرجى إعادة الإرفاق';
       case 'srt_book_reimport':
@@ -381683,7 +387347,7 @@ extension on _StringsAr {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -383228,6 +388892,10 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -395988,6 +401656,146 @@ extension on _StringsDe {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -396791,6 +402599,125 @@ extension on _StringsDe {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audiodatei nicht gefunden — bitte erneut anhängen';
       case 'srt_book_reimport':
@@ -399741,7 +405668,7 @@ extension on _StringsDe {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -401288,6 +407215,10 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -414034,6 +419965,146 @@ extension on _StringsEs {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -414837,6 +420908,125 @@ extension on _StringsEs {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Archivo de audio no encontrado — por favor vuelve a adjuntarlo';
       case 'srt_book_reimport':
@@ -417784,7 +423974,7 @@ extension on _StringsEs {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -419331,6 +425521,10 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -432091,6 +438285,146 @@ extension on _StringsFr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -432894,6 +439228,125 @@ extension on _StringsFr {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Fichier audio introuvable — veuillez le rattacher';
       case 'srt_book_reimport':
@@ -435844,7 +442297,7 @@ extension on _StringsFr {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -437389,6 +443842,10 @@ extension on _StringsId {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -450108,6 +456565,146 @@ extension on _StringsId {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -450911,6 +457508,125 @@ extension on _StringsId {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'File audio tidak ditemukan — silakan lampirkan ulang';
       case 'srt_book_reimport':
@@ -453849,7 +460565,7 @@ extension on _StringsId {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -455394,6 +462110,10 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -468134,6 +474854,146 @@ extension on _StringsIt {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -468937,6 +475797,125 @@ extension on _StringsIt {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'File audio non trovato — ricollegare';
       case 'srt_book_reimport':
@@ -471887,7 +478866,7 @@ extension on _StringsIt {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -473432,6 +480411,10 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} 件を個別に指定';
       case 'ai_feature_overrides_none':
         return 'すべての機能が既定のプロバイダーを使用';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return '字幕の校正';
       case 'ai_feature_subtitle_proofread_summary':
@@ -486094,6 +493077,146 @@ extension on _StringsJa {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -486897,6 +494020,125 @@ extension on _StringsJa {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return '音声ファイルが見つかりません。再紐付けしてください';
       case 'srt_book_reimport':
@@ -489807,7 +497049,7 @@ extension on _StringsJa {
       case 'video_setting_pause_ocr_scope_graphic':
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_hint':
-        return '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。Fushi が表示しているテキスト字幕がある場合はそちらを優先します。';
+        return '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。テキスト字幕の有無には影響されません。';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
       case 'video_setting_picture_fit':
@@ -491337,6 +498579,10 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -504003,6 +511249,146 @@ extension on _StringsKo {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -504806,6 +512192,125 @@ extension on _StringsKo {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return '오디오 파일을 찾을 수 없습니다 — 다시 연결하세요';
       case 'srt_book_reimport':
@@ -507722,7 +515227,7 @@ extension on _StringsKo {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -509259,6 +516764,10 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -522002,6 +529511,146 @@ extension on _StringsNl {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -522805,6 +530454,125 @@ extension on _StringsNl {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audiobestand niet gevonden — koppel opnieuw';
       case 'srt_book_reimport':
@@ -525748,7 +533516,7 @@ extension on _StringsNl {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -527295,6 +535063,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -540032,6 +547804,146 @@ extension on _StringsPtBr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -540835,6 +548747,125 @@ extension on _StringsPtBr {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Arquivo de áudio não encontrado — reanexe-o';
       case 'srt_book_reimport':
@@ -543776,7 +551807,7 @@ extension on _StringsPtBr {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -545320,6 +553351,10 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -558066,6 +566101,146 @@ extension on _StringsRu {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -558869,6 +567044,125 @@ extension on _StringsRu {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Аудиофайл не найден — привяжите заново';
       case 'srt_book_reimport':
@@ -561809,7 +570103,7 @@ extension on _StringsRu {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -563353,6 +571647,10 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -576060,6 +584358,146 @@ extension on _StringsTh {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -576863,6 +585301,125 @@ extension on _StringsTh {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'ไม่พบไฟล์เสียง กรุณาแนบใหม่';
       case 'srt_book_reimport':
@@ -579798,7 +588355,7 @@ extension on _StringsTh {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -581341,6 +589898,10 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -594072,6 +602633,146 @@ extension on _StringsTr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -594875,6 +603576,125 @@ extension on _StringsTr {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Ses dosyası bulunamadı — lütfen yeniden bağlayın';
       case 'srt_book_reimport':
@@ -597816,7 +606636,7 @@ extension on _StringsTr {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -599359,6 +608179,10 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return 'Subtitle proofreading';
       case 'ai_feature_subtitle_proofread_summary':
@@ -612079,6 +620903,146 @@ extension on _StringsVi {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -612882,6 +621846,125 @@ extension on _StringsVi {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return 'Không tìm thấy tệp âm thanh — vui lòng gắn lại';
       case 'srt_book_reimport':
@@ -615820,7 +624903,7 @@ extension on _StringsVi {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -617361,6 +626444,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 项已单独指定';
       case 'ai_feature_overrides_none':
         return '全部跟随默认提供商';
+      case 'ai_feature_srs_template':
+        return '复习卡片模板';
+      case 'ai_feature_srs_template_summary':
+        return '让 AI 按描述摆好复习卡片的布局，并给字段写说明';
       case 'ai_feature_subtitle_proofread':
         return '字幕校对';
       case 'ai_feature_subtitle_proofread_summary':
@@ -629937,6 +639024,145 @@ extension on _StringsZhCn {
         return '导出失败';
       case 'srs_export_fsrs7_note':
         return 'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
+      case 'srs_field_info_ai':
+        return '让 AI 写说明';
+      case 'srs_field_info_ai_busy':
+        return 'AI 正在写…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            '只给字段「${name}」写一句说明（它装什么、在卡面哪里出现），不要改布局。';
+      case 'srs_field_info_definition_picture_desc':
+        return '放在释义旁边的图片，需要时自己填。';
+      case 'srs_field_info_definition_picture_name':
+        return '释义图片';
+      case 'srs_field_info_description':
+        return '说明';
+      case 'srs_field_info_description_hint':
+        return '这个字段装什么、在卡面哪里出现？写了之后列出字段的地方都会显示。';
+      case 'srs_field_info_description_override_hint':
+        return '写自己的说明会替换上面的内置说明';
+      case 'srs_field_info_example':
+        return ({required Object value}) => '示例：${value}';
+      case 'srs_field_info_example_from_catalog':
+        return '这个笔记类型还没有卡片，示例是内置样例。';
+      case 'srs_field_info_expression_audio_desc':
+        return '单词的发音音频，卡面上显示为播放按钮。';
+      case 'srs_field_info_expression_audio_name':
+        return '单词发音';
+      case 'srs_field_info_expression_desc':
+        return '要记的词本身（写法），正面通常只显示它。制卡时自动填入查到的词。';
+      case 'srs_field_info_expression_furigana_desc':
+        return '同一个词，用「漢字[かな]」格式写上读音，卡面会把假名标在汉字上方。';
+      case 'srs_field_info_expression_furigana_name':
+        return '词条（带注音）';
+      case 'srs_field_info_expression_name':
+        return '词条';
+      case 'srs_field_info_expression_reading_desc':
+        return '词的假名读法，例如「たべる」。';
+      case 'srs_field_info_expression_reading_name':
+        return '读音';
+      case 'srs_field_info_freq_sort_desc':
+        return '按词频排序用的单个数字（调和平均排名），不直接显示。';
+      case 'srs_field_info_freq_sort_name':
+        return '词频排序值';
+      case 'srs_field_info_frequency_desc':
+        return '各词频词典给出的排名，数字越小越常用。';
+      case 'srs_field_info_frequency_name':
+        return '词频';
+      case 'srs_field_info_glossary_desc':
+        return '所有词典给出的完整释义，通常折叠在主释义下面。';
+      case 'srs_field_info_glossary_name':
+        return '全部释义';
+      case 'srs_field_info_hint_desc':
+        return '给正面的一点提示，点一下才显示。';
+      case 'srs_field_info_hint_name':
+        return '提示';
+      case 'srs_field_info_is_audio_card_desc':
+        return '填任意字符即开启：正面只放音频，考听力。';
+      case 'srs_field_info_is_audio_card_name':
+        return '开关：听音卡';
+      case 'srs_field_info_is_click_card_desc':
+        return '填任意字符即开启：正面显示例句，点一下才露出目标词。';
+      case 'srs_field_info_is_click_card_name':
+        return '开关：点击卡';
+      case 'srs_field_info_is_sentence_card_desc':
+        return '填任意字符即开启：正面只显示例句，考整句理解。';
+      case 'srs_field_info_is_sentence_card_name':
+        return '开关：句子卡';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return '填任意字符（如 x）即开启：正面同时显示单词和例句。Fushi 制卡默认开启。';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return '开关：词 + 句卡';
+      case 'srs_field_info_main_definition_desc':
+        return '主要的那条释义（默认取第一部词典的第一条）。';
+      case 'srs_field_info_main_definition_name':
+        return '主释义';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) => '制卡时自动填入：${slot}';
+      case 'srs_field_info_mining_none':
+        return '制卡时不会自动填写，需要时在笔记编辑里自己填。';
+      case 'srs_field_info_misc_info_desc':
+        return '这张卡来自哪里：作品名（可点击跳回原处）和时间点。';
+      case 'srs_field_info_misc_info_name':
+        return '来源';
+      case 'srs_field_info_picture_desc':
+        return '截图或配图，显示在卡面上帮助回忆。';
+      case 'srs_field_info_picture_name':
+        return '图片';
+      case 'srs_field_info_pitch_categories_desc':
+        return '平板 / 头高 / 中高 / 尾高等类型名，模板用来给读音上色。';
+      case 'srs_field_info_pitch_categories_name':
+        return '音调类型';
+      case 'srs_field_info_pitch_position_desc':
+        return '音调核的位置数字（如 0、2），模板用它画音调线，不直接显示。';
+      case 'srs_field_info_pitch_position_name':
+        return '音调位置';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => '字段名：${name}';
+      case 'srs_field_info_selection_text_desc':
+        return '查词时在词典里选中的那段文字；有它时卡面优先显示它，而不是整条释义。';
+      case 'srs_field_info_selection_text_name':
+        return '选中的释义';
+      case 'srs_field_info_sentence_audio_desc':
+        return '例句的录音（视频 / 有声书片段），卡面上显示为播放按钮。';
+      case 'srs_field_info_sentence_audio_name':
+        return '例句音频';
+      case 'srs_field_info_sentence_desc':
+        return '遇到这个词时的原句，目标词会被加粗。';
+      case 'srs_field_info_sentence_furigana_desc':
+        return '例句的注音版，格式同上；一般留空，需要时手动填。';
+      case 'srs_field_info_sentence_furigana_name':
+        return '例句（带注音）';
+      case 'srs_field_info_sentence_name':
+        return '例句';
+      case 'srs_field_info_sentence_translation_desc':
+        return '例句的译文（Fushi 卡片的扩展字段，为空时整块不显示）。';
+      case 'srs_field_info_sentence_translation_name':
+        return '例句翻译';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => '用到它的卡片模板：${names}';
+      case 'srs_field_info_templates_none':
+        return '目前没有卡片模板显示这个字段。';
+      case 'srs_field_info_title':
+        return '字段';
+      case 'srs_field_info_usage':
+        return '怎么填、在哪用';
+      case 'srs_field_info_where':
+        return '在卡面的位置';
+      case 'srs_field_info_where_hint':
+        return '虚线框出的就是这个字段的内容。';
+      case 'srs_field_kind_audio':
+        return '音频';
+      case 'srs_field_kind_data':
+        return '给模板用的数据，一般不直接显示';
+      case 'srs_field_kind_flag':
+        return '开关：填任意字符即开启，本身不显示';
+      case 'srs_field_kind_image':
+        return '图片';
+      case 'srs_field_kind_rich':
+        return '带格式的文字（词典内容）';
+      case 'srs_field_kind_text':
+        return '文字';
       case 'srs_flag_blue':
         return '蓝';
       case 'srs_flag_green':
@@ -630723,6 +639949,124 @@ extension on _StringsZhCn {
         return '否';
       case 'srs_value_yes':
         return '是';
+      case 'srs_visual_add_field':
+        return '添加字段';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) => 'AI 还给 ${count} 个字段写了说明，保存模板时一起写入。';
+      case 'srs_visual_ai_hint':
+        return '例如：正面大字显示单词，下面放例句；背面放读音、发音和释义';
+      case 'srs_visual_ai_replace_body':
+        return 'AI 给的布局会替换用代码写的（或手改过的）模板。点保存之前不会写入，仍可放弃。';
+      case 'srs_visual_ai_run':
+        return '生成';
+      case 'srs_visual_align_center':
+        return '居中';
+      case 'srs_visual_align_end':
+        return '靠右';
+      case 'srs_visual_align_start':
+        return '靠左';
+      case 'srs_visual_convert_body':
+        return '多半来自 Anki 或旧版本。可以按字段自动生成一个可视化布局，之后用拖块的方式改；点保存之前随时可以放弃。';
+      case 'srs_visual_convert_builtin_note':
+        return '这是内置笔记类型：模板一旦改动，复习时就按模板渲染，不再使用 Fushi 原生卡面。';
+      case 'srs_visual_convert_title':
+        return '这个模板是用代码写的';
+      case 'srs_visual_delete':
+        return '删除这块';
+      case 'srs_visual_edited_warning':
+        return '这一面的代码被手动改过，在这里再改会重新生成代码，手改的部分会丢失。';
+      case 'srs_visual_empty':
+        return '这一面还是空的，先添加一个字段。';
+      case 'srs_visual_field_missing':
+        return '字段已删除';
+      case 'srs_visual_filter_cloze':
+        return '填空';
+      case 'srs_visual_filter_cloze_hint':
+        return '把 {{c1::…}} 标出的部分在正面挖成空。';
+      case 'srs_visual_filter_furigana':
+        return '注音';
+      case 'srs_visual_filter_furigana_hint':
+        return '「漢字[かな]」格式的内容会把假名标在汉字上方。';
+      case 'srs_visual_filter_hint':
+        return '点击才显示';
+      case 'srs_visual_filter_hint_hint':
+        return '折叠成一个链接，复习时点一下才展开。';
+      case 'srs_visual_filter_kana':
+        return '只显示读音';
+      case 'srs_visual_filter_kana_hint':
+        return '只显示「漢字[かな]」里的读音。';
+      case 'srs_visual_filter_kanji':
+        return '只显示汉字';
+      case 'srs_visual_filter_kanji_hint':
+        return '去掉方括号里的读音，只留写法。';
+      case 'srs_visual_filter_plain':
+        return '原样';
+      case 'srs_visual_filter_plain_hint':
+        return '按字段内容原样显示。';
+      case 'srs_visual_generate':
+        return '按字段自动生成';
+      case 'srs_visual_generate_confirm_body':
+        return '正反两面会按字段重新生成。点保存之前不会写入，仍可放弃。';
+      case 'srs_visual_generate_confirm_title':
+        return '替换当前模板？';
+      case 'srs_visual_kind_divider':
+        return '分隔线';
+      case 'srs_visual_kind_front_side':
+        return '正面内容';
+      case 'srs_visual_kind_front_side_hint':
+        return '在这里重复显示整个正面';
+      case 'srs_visual_kind_text':
+        return '文字';
+      case 'srs_visual_move_down':
+        return '下移';
+      case 'srs_visual_move_up':
+        return '上移';
+      case 'srs_visual_pick_field':
+        return '选择字段';
+      case 'srs_visual_prop_align':
+        return '对齐';
+      case 'srs_visual_prop_bold':
+        return '粗体';
+      case 'srs_visual_prop_boxed':
+        return '加底框';
+      case 'srs_visual_prop_field':
+        return '字段';
+      case 'srs_visual_prop_filter':
+        return '显示方式';
+      case 'srs_visual_prop_hide_empty':
+        return '为空时隐藏';
+      case 'srs_visual_prop_hide_empty_hint':
+        return '字段为空时整块（连同小标题）都不出现。';
+      case 'srs_visual_prop_label':
+        return '小标题';
+      case 'srs_visual_prop_label_hint':
+        return '可选，例如「例句」';
+      case 'srs_visual_prop_size':
+        return '字号';
+      case 'srs_visual_prop_text':
+        return '文字';
+      case 'srs_visual_prop_tone':
+        return '颜色';
+      case 'srs_visual_replace':
+        return '替换';
+      case 'srs_visual_size_body':
+        return '正文';
+      case 'srs_visual_size_display':
+        return '特大';
+      case 'srs_visual_size_small':
+        return '小';
+      case 'srs_visual_size_title':
+        return '大';
+      case 'srs_visual_tab':
+        return '可视化';
+      case 'srs_visual_text_default':
+        return '文字';
+      case 'srs_visual_tone_accent':
+        return '强调色';
+      case 'srs_visual_tone_muted':
+        return '淡化';
+      case 'srs_visual_tone_normal':
+        return '正常';
       case 'srt_audio_unresolved':
         return '未找到音频文件 — 请重新附加';
       case 'srt_book_reimport':
@@ -633623,7 +642967,7 @@ extension on _StringsZhCn {
       case 'video_setting_pause_ocr_scope_graphic':
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_hint':
-        return '暂停时对画面做文字识别，识别出的字可直接点按查词。画面上已有 Fushi 显示的文字字幕时以字幕为准。';
+        return '暂停时对画面做文字识别，识别出的字可直接点按查词。与是否显示文字字幕无关。';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
       case 'video_setting_picture_fit':
@@ -635137,6 +644481,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 項已單獨指定';
       case 'ai_feature_overrides_none':
         return '全部跟隨預設提供商';
+      case 'ai_feature_srs_template':
+        return 'Review card template';
+      case 'ai_feature_srs_template_summary':
+        return 'Let AI lay out review cards from a description and explain fields';
       case 'ai_feature_subtitle_proofread':
         return '字幕校對';
       case 'ai_feature_subtitle_proofread_summary':
@@ -647755,6 +657103,146 @@ extension on _StringsZhHk {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_field_info_ai':
+        return 'Let AI write it';
+      case 'srs_field_info_ai_busy':
+        return 'AI is writing…';
+      case 'srs_field_info_ai_request':
+        return ({required Object name}) =>
+            'Only write a one-sentence description for the field "${name}" (what it holds and where it shows on the card). Do not change the layout.';
+      case 'srs_field_info_definition_picture_desc':
+        return 'A picture shown next to the definition; fill it yourself if you like.';
+      case 'srs_field_info_definition_picture_name':
+        return 'Definition picture';
+      case 'srs_field_info_description':
+        return 'Description';
+      case 'srs_field_info_description_hint':
+        return 'What does this field hold, and where does it show? Shown wherever this field is listed.';
+      case 'srs_field_info_description_override_hint':
+        return 'Write your own to replace the built-in description';
+      case 'srs_field_info_example':
+        return ({required Object value}) => 'Example: ${value}';
+      case 'srs_field_info_example_from_catalog':
+        return 'No cards of this note type yet, so the example is a built-in sample.';
+      case 'srs_field_info_expression_audio_desc':
+        return 'Pronunciation audio of the word; shown as a play button.';
+      case 'srs_field_info_expression_audio_name':
+        return 'Word audio';
+      case 'srs_field_info_expression_desc':
+        return 'The word you are learning, as written. The front usually shows only this. Filled with the looked-up word when mining.';
+      case 'srs_field_info_expression_furigana_desc':
+        return 'The same word with readings in 漢字[かな] form; the card shows the kana above the kanji.';
+      case 'srs_field_info_expression_furigana_name':
+        return 'Word with furigana';
+      case 'srs_field_info_expression_name':
+        return 'Word';
+      case 'srs_field_info_expression_reading_desc':
+        return 'The kana reading of the word, e.g. たべる.';
+      case 'srs_field_info_expression_reading_name':
+        return 'Reading';
+      case 'srs_field_info_freq_sort_desc':
+        return 'A single number (harmonic mean rank) for sorting by frequency; not shown directly.';
+      case 'srs_field_info_freq_sort_name':
+        return 'Frequency sort value';
+      case 'srs_field_info_frequency_desc':
+        return 'Rankings from your frequency dictionaries; smaller means more common.';
+      case 'srs_field_info_frequency_name':
+        return 'Frequency';
+      case 'srs_field_info_glossary_desc':
+        return 'The full definitions from every dictionary, usually folded under the main definition.';
+      case 'srs_field_info_glossary_name':
+        return 'All definitions';
+      case 'srs_field_info_hint_desc':
+        return 'A small hint for the front, revealed when tapped.';
+      case 'srs_field_info_hint_name':
+        return 'Hint';
+      case 'srs_field_info_is_audio_card_desc':
+        return 'Type any character to turn it on: the front only plays audio, testing listening.';
+      case 'srs_field_info_is_audio_card_name':
+        return 'Switch: audio card';
+      case 'srs_field_info_is_click_card_desc':
+        return 'Type any character to turn it on: the front shows the sentence and the word is revealed on tap.';
+      case 'srs_field_info_is_click_card_name':
+        return 'Switch: click card';
+      case 'srs_field_info_is_sentence_card_desc':
+        return 'Type any character to turn it on: the front shows only the sentence, testing the whole sentence.';
+      case 'srs_field_info_is_sentence_card_name':
+        return 'Switch: sentence card';
+      case 'srs_field_info_is_word_and_sentence_card_desc':
+        return 'Type any character (e.g. x) to turn it on: the front shows both the word and the sentence. On by default for cards mined in Fushi.';
+      case 'srs_field_info_is_word_and_sentence_card_name':
+        return 'Switch: word + sentence card';
+      case 'srs_field_info_main_definition_desc':
+        return 'The main definition (by default the first entry of the first dictionary).';
+      case 'srs_field_info_main_definition_name':
+        return 'Main definition';
+      case 'srs_field_info_mining':
+        return ({required Object slot}) =>
+            'When mining a card it is filled with: ${slot}';
+      case 'srs_field_info_mining_none':
+        return 'Not filled automatically when mining; fill it yourself in the note editor.';
+      case 'srs_field_info_misc_info_desc':
+        return 'Where the card came from: the work title (tap to jump back) and the timestamp.';
+      case 'srs_field_info_misc_info_name':
+        return 'Source';
+      case 'srs_field_info_picture_desc':
+        return 'A screenshot or picture shown on the card to help you remember.';
+      case 'srs_field_info_picture_name':
+        return 'Picture';
+      case 'srs_field_info_pitch_categories_desc':
+        return 'Type names such as heiban / atamadaka / nakadaka / odaka, used to colour the reading.';
+      case 'srs_field_info_pitch_categories_name':
+        return 'Pitch accent type';
+      case 'srs_field_info_pitch_position_desc':
+        return 'The pitch accent position number (e.g. 0, 2); the template draws the pitch line from it and does not show it directly.';
+      case 'srs_field_info_pitch_position_name':
+        return 'Pitch accent position';
+      case 'srs_field_info_raw_name':
+        return ({required Object name}) => 'Field name: ${name}';
+      case 'srs_field_info_selection_text_desc':
+        return 'The text you selected in the dictionary while looking up. When present, the card shows it instead of the whole definition.';
+      case 'srs_field_info_selection_text_name':
+        return 'Selected definition';
+      case 'srs_field_info_sentence_audio_desc':
+        return 'A recording of the sentence (from the video or audiobook); shown as a play button.';
+      case 'srs_field_info_sentence_audio_name':
+        return 'Sentence audio';
+      case 'srs_field_info_sentence_desc':
+        return 'The sentence you met the word in; the word itself is bolded.';
+      case 'srs_field_info_sentence_furigana_desc':
+        return 'The sentence with readings in 漢字[かな] form. Usually left empty; fill it by hand when needed.';
+      case 'srs_field_info_sentence_furigana_name':
+        return 'Sentence with furigana';
+      case 'srs_field_info_sentence_name':
+        return 'Sentence';
+      case 'srs_field_info_sentence_translation_desc':
+        return 'A translation of the sentence (a Fushi card field; hidden when empty).';
+      case 'srs_field_info_sentence_translation_name':
+        return 'Sentence translation';
+      case 'srs_field_info_templates':
+        return ({required Object names}) => 'Used by card templates: ${names}';
+      case 'srs_field_info_templates_none':
+        return 'No card template shows this field yet.';
+      case 'srs_field_info_title':
+        return 'Field';
+      case 'srs_field_info_usage':
+        return 'How it is filled and used';
+      case 'srs_field_info_where':
+        return 'Where it shows';
+      case 'srs_field_info_where_hint':
+        return 'The dashed box marks this field\'s content.';
+      case 'srs_field_kind_audio':
+        return 'Audio';
+      case 'srs_field_kind_data':
+        return 'Data for the template, usually not shown';
+      case 'srs_field_kind_flag':
+        return 'Switch: any character turns it on, not shown itself';
+      case 'srs_field_kind_image':
+        return 'Image';
+      case 'srs_field_kind_rich':
+        return 'Formatted text (dictionary HTML)';
+      case 'srs_field_kind_text':
+        return 'Text';
       case 'srs_flag_blue':
         return 'Blue';
       case 'srs_flag_green':
@@ -648558,6 +658046,125 @@ extension on _StringsZhHk {
         return 'No';
       case 'srs_value_yes':
         return 'Yes';
+      case 'srs_visual_add_field':
+        return 'Add field';
+      case 'srs_visual_ai_descriptions_pending':
+        return ({required Object count}) =>
+            'AI also wrote descriptions for ${count} fields; they are saved with the template.';
+      case 'srs_visual_ai_hint':
+        return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_ai_run':
+        return 'Generate';
+      case 'srs_visual_align_center':
+        return 'Center';
+      case 'srs_visual_align_end':
+        return 'Right';
+      case 'srs_visual_align_start':
+        return 'Left';
+      case 'srs_visual_convert_body':
+        return 'It probably came from Anki or an older version. Generate a visual layout from the fields to edit it by dragging blocks; the code is replaced only after you save.';
+      case 'srs_visual_convert_builtin_note':
+        return 'This is a built-in note type: once its template is changed, reviews render it from the template instead of Fushi\'s native card view.';
+      case 'srs_visual_convert_title':
+        return 'This template is written in code';
+      case 'srs_visual_delete':
+        return 'Remove block';
+      case 'srs_visual_edited_warning':
+        return 'The code of this side was edited by hand. Changing it here regenerates the code and drops those hand edits.';
+      case 'srs_visual_empty':
+        return 'Nothing on this side yet. Add a field to start.';
+      case 'srs_visual_field_missing':
+        return 'Field removed';
+      case 'srs_visual_filter_cloze':
+        return 'Cloze';
+      case 'srs_visual_filter_cloze_hint':
+        return 'Show {{c1::…}} cloze deletions as blanks on the front.';
+      case 'srs_visual_filter_furigana':
+        return 'Furigana';
+      case 'srs_visual_filter_furigana_hint':
+        return 'Content in 漢字[かな] form shows the kana above the kanji.';
+      case 'srs_visual_filter_hint':
+        return 'Tap to reveal';
+      case 'srs_visual_filter_hint_hint':
+        return 'Folded into a link; tap it during review to reveal.';
+      case 'srs_visual_filter_kana':
+        return 'Reading only';
+      case 'srs_visual_filter_kana_hint':
+        return 'Show only the readings of 漢字[かな] content.';
+      case 'srs_visual_filter_kanji':
+        return 'Kanji only';
+      case 'srs_visual_filter_kanji_hint':
+        return 'Drop the [reading] parts and show only the written form.';
+      case 'srs_visual_filter_plain':
+        return 'As is';
+      case 'srs_visual_filter_plain_hint':
+        return 'Show the field content unchanged.';
+      case 'srs_visual_generate':
+        return 'Generate from fields';
+      case 'srs_visual_generate_confirm_body':
+        return 'Both sides are regenerated from the fields. Nothing is saved until you tap Save, and you can still discard.';
+      case 'srs_visual_generate_confirm_title':
+        return 'Replace the current template?';
+      case 'srs_visual_kind_divider':
+        return 'Divider';
+      case 'srs_visual_kind_front_side':
+        return 'Front side';
+      case 'srs_visual_kind_front_side_hint':
+        return 'Repeats the whole front here';
+      case 'srs_visual_kind_text':
+        return 'Text';
+      case 'srs_visual_move_down':
+        return 'Move down';
+      case 'srs_visual_move_up':
+        return 'Move up';
+      case 'srs_visual_pick_field':
+        return 'Choose a field';
+      case 'srs_visual_prop_align':
+        return 'Alignment';
+      case 'srs_visual_prop_bold':
+        return 'Bold';
+      case 'srs_visual_prop_boxed':
+        return 'Tinted box';
+      case 'srs_visual_prop_field':
+        return 'Field';
+      case 'srs_visual_prop_filter':
+        return 'Display as';
+      case 'srs_visual_prop_hide_empty':
+        return 'Hide when empty';
+      case 'srs_visual_prop_hide_empty_hint':
+        return 'The whole block, caption included, disappears when the field is empty.';
+      case 'srs_visual_prop_label':
+        return 'Caption';
+      case 'srs_visual_prop_label_hint':
+        return 'Optional, e.g. Sentence';
+      case 'srs_visual_prop_size':
+        return 'Size';
+      case 'srs_visual_prop_text':
+        return 'Text';
+      case 'srs_visual_prop_tone':
+        return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
+      case 'srs_visual_size_body':
+        return 'Normal';
+      case 'srs_visual_size_display':
+        return 'Huge';
+      case 'srs_visual_size_small':
+        return 'Small';
+      case 'srs_visual_size_title':
+        return 'Large';
+      case 'srs_visual_tab':
+        return 'Visual';
+      case 'srs_visual_text_default':
+        return 'Text';
+      case 'srs_visual_tone_accent':
+        return 'Accent';
+      case 'srs_visual_tone_muted':
+        return 'Muted';
+      case 'srs_visual_tone_normal':
+        return 'Normal';
       case 'srt_audio_unresolved':
         return '未找到音訊檔案 — 請重新附加';
       case 'srt_book_reimport':
@@ -651460,7 +661067,7 @@ extension on _StringsZhHk {
       case 'video_setting_pause_ocr_scope_graphic':
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_hint':
-        return '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。畫面上已有 Fushi 顯示的文字字幕時以字幕為準。';
+        return '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。與是否顯示文字字幕無關。';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
       case 'video_setting_picture_fit':
