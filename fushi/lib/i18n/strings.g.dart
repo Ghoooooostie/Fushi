@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 146999 (8647 per locale)
+/// Strings: 147084 (8652 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6635,6 +6635,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_import_segment_extensions => 'Extensions';
   String get media_import_segment_sources => 'Sources';
   String get media_import_segment_stores => 'Stores';
+  String get media_privacy_action => 'Privacy';
+  String get media_privacy_cleared_toast => 'No longer private';
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  String get media_privacy_marked_toast => 'Marked private';
+  String get media_privacy_switch => 'Keep this private';
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
   String get media_server_item_folder => 'Folder';
@@ -23396,6 +23402,17 @@ class _StringsAr extends _StringsEn {
   String get media_import_segment_sources => 'المصادر';
   @override
   String get media_import_segment_stores => 'المستودعات';
+  @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
@@ -44583,6 +44600,17 @@ class _StringsDe extends _StringsEn {
   String get media_import_segment_sources => 'Quellen';
   @override
   String get media_import_segment_stores => 'Repositorys';
+  @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
@@ -65966,6 +65994,17 @@ class _StringsEs extends _StringsEn {
   String get media_import_segment_sources => 'Fuentes';
   @override
   String get media_import_segment_stores => 'Repositorios';
+  @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
@@ -87420,6 +87459,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Dépôts';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -108724,6 +108774,17 @@ class _StringsId extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositori';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -129964,6 +130025,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repository';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -150736,6 +150808,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_import_segment_stores => 'リポジトリ';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -171029,6 +171112,17 @@ class _StringsKo extends _StringsEn {
   String get media_import_segment_sources => '소스';
   @override
   String get media_import_segment_stores => '저장소';
+  @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
@@ -191856,6 +191950,17 @@ class _StringsNl extends _StringsEn {
   String get media_import_segment_sources => 'Bronnen';
   @override
   String get media_import_segment_stores => 'Repository\'s';
+  @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
@@ -213164,6 +213269,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositórios';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -234446,6 +234562,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Репозитории';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -255549,6 +255676,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_import_segment_stores => 'ที่เก็บ';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -276624,6 +276762,17 @@ class _StringsTr extends _StringsEn {
   String get media_import_segment_sources => 'Kaynaklar';
   @override
   String get media_import_segment_stores => 'Depolar';
+  @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
   @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
@@ -297744,6 +297893,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Kho';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -317888,6 +318048,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_import_segment_stores => '仓库';
   @override
+  String get media_privacy_action => '私密';
+  @override
+  String get media_privacy_cleared_toast => '已取消私密';
+  @override
+  String get media_privacy_hint =>
+      '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+  @override
+  String get media_privacy_marked_toast => '已设为私密';
+  @override
+  String get media_privacy_switch => '设为私密';
+  @override
   String get media_server_browse_by_folder => '按文件夹浏览';
   @override
   String get media_server_browse_by_title => '按作品浏览';
@@ -337351,6 +337522,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_import_segment_stores => '倉庫';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -356085,6 +356267,16 @@ extension on _StringsEn {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Stores';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -374054,6 +374246,16 @@ extension on _StringsAr {
         return 'المصادر';
       case 'media_import_segment_stores':
         return 'المستودعات';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -392070,6 +392272,16 @@ extension on _StringsDe {
         return 'Quellen';
       case 'media_import_segment_stores':
         return 'Repositorys';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -410100,6 +410312,16 @@ extension on _StringsEs {
         return 'Fuentes';
       case 'media_import_segment_stores':
         return 'Repositorios';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -428140,6 +428362,16 @@ extension on _StringsFr {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Dépôts';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -446153,6 +446385,16 @@ extension on _StringsId {
         return 'Sumber';
       case 'media_import_segment_stores':
         return 'Repositori';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -464155,6 +464397,16 @@ extension on _StringsIt {
         return 'Fonti';
       case 'media_import_segment_stores':
         return 'Repository';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -482115,6 +482367,16 @@ extension on _StringsJa {
         return 'ソース';
       case 'media_import_segment_stores':
         return 'リポジトリ';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -500007,6 +500269,16 @@ extension on _StringsKo {
         return '소스';
       case 'media_import_segment_stores':
         return '저장소';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -517975,6 +518247,16 @@ extension on _StringsNl {
         return 'Bronnen';
       case 'media_import_segment_stores':
         return 'Repository\'s';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -535989,6 +536271,16 @@ extension on _StringsPtBr {
         return 'Fontes';
       case 'media_import_segment_stores':
         return 'Repositórios';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -554007,6 +554299,16 @@ extension on _StringsRu {
         return 'Источники';
       case 'media_import_segment_stores':
         return 'Репозитории';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -571994,6 +572296,16 @@ extension on _StringsTh {
         return 'แหล่งที่มา';
       case 'media_import_segment_stores':
         return 'ที่เก็บ';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -589987,6 +590299,16 @@ extension on _StringsTr {
         return 'Kaynaklar';
       case 'media_import_segment_stores':
         return 'Depolar';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -607978,6 +608300,16 @@ extension on _StringsVi {
         return 'Nguồn';
       case 'media_import_segment_stores':
         return 'Kho';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -625847,6 +626179,16 @@ extension on _StringsZhCn {
         return '在线源';
       case 'media_import_segment_stores':
         return '仓库';
+      case 'media_privacy_action':
+        return '私密';
+      case 'media_privacy_cleared_toast':
+        return '已取消私密';
+      case 'media_privacy_hint':
+        return '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+      case 'media_privacy_marked_toast':
+        return '已设为私密';
+      case 'media_privacy_switch':
+        return '设为私密';
       case 'media_server_browse_by_folder':
         return '按文件夹浏览';
       case 'media_server_browse_by_title':
@@ -643636,6 +643978,16 @@ extension on _StringsZhHk {
         return '線上源';
       case 'media_import_segment_stores':
         return '倉庫';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
