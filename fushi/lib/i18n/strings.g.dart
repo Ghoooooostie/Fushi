@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143871 (8463 per locale)
+/// Strings: 143888 (8464 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7287,6 +7287,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Turn lookups into cards and choose where to review them';
   String get onboarding_feature_video => 'Video';
   String get onboarding_feature_video_hint => 'Subtitle lookup and card mining';
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   String get onboarding_features_modules_hint =>
@@ -24172,6 +24174,9 @@ class _StringsAr extends _StringsEn {
   String get onboarding_feature_video => 'الفيديو';
   @override
   String get onboarding_feature_video_hint => 'بحث في الترجمات وإنشاء بطاقات';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
@@ -44876,6 +44881,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Untertitel nachschlagen und Karten erstellen';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
@@ -65751,6 +65759,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Consulta en subtítulos y creación de tarjetas';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
@@ -86709,6 +86720,9 @@ class _StringsFr extends _StringsEn {
   String get onboarding_feature_video_hint =>
       'Recherche dans les sous-titres et création de cartes';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -107494,6 +107508,9 @@ class _StringsId extends _StringsEn {
   String get onboarding_feature_video_hint =>
       'Pencarian pada takarir dan pembuatan kartu';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -128238,6 +128255,9 @@ class _StringsIt extends _StringsEn {
   String get onboarding_feature_video_hint =>
       'Ricerca sui sottotitoli e creazione di carte';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -148442,6 +148462,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_feature_video_hint => '字幕から調べてカードを作る';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -168257,6 +168280,9 @@ class _StringsKo extends _StringsEn {
   String get onboarding_feature_video => '동영상';
   @override
   String get onboarding_feature_video_hint => '자막에서 단어 찾고 카드 만들기';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
@@ -188633,6 +188659,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Opzoeken in ondertitels en kaarten maken';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
@@ -209440,6 +209469,9 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_feature_video_hint =>
       'Consulta em legendas e criação de cartões';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -230221,6 +230253,9 @@ class _StringsRu extends _StringsEn {
   String get onboarding_feature_video_hint =>
       'Поиск по субтитрам и создание карточек';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -250804,6 +250839,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_feature_video_hint => 'ค้นคำจากคำบรรยายและสร้างการ์ด';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -271384,6 +271422,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Altyazıda arama ve kart oluşturma';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
@@ -291993,6 +292034,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_feature_video_hint => 'Tra từ trên phụ đề và tạo thẻ';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -311531,6 +311575,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_feature_video_hint => '字幕查词与制卡';
   @override
+  String get onboarding_feature_web_basic_hint => '在 Fushi 里直接浏览网站，任何网页都能查词。';
+  @override
   String get onboarding_feature_web_hint =>
       '在 Fushi 里直接浏览网站：视频站点用 Fushi 播放器看、网页漫画用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
   @override
@@ -330549,6 +330595,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_feature_video_hint => '字幕查詞與製卡';
   @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
@@ -348732,6 +348781,8 @@ extension on _StringsEn {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Subtitle lookup and card mining';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -366295,6 +366346,8 @@ extension on _StringsAr {
         return 'الفيديو';
       case 'onboarding_feature_video_hint':
         return 'بحث في الترجمات وإنشاء بطاقات';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -383911,6 +383964,8 @@ extension on _StringsDe {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Untertitel nachschlagen und Karten erstellen';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -401533,6 +401588,8 @@ extension on _StringsEs {
         return 'Vídeo';
       case 'onboarding_feature_video_hint':
         return 'Consulta en subtítulos y creación de tarjetas';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -419167,6 +419224,8 @@ extension on _StringsFr {
         return 'Vidéo';
       case 'onboarding_feature_video_hint':
         return 'Recherche dans les sous-titres et création de cartes';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -436765,6 +436824,8 @@ extension on _StringsId {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Pencarian pada takarir dan pembuatan kartu';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -454366,6 +454427,8 @@ extension on _StringsIt {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Ricerca sui sottotitoli e creazione di carte';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -471908,6 +471971,8 @@ extension on _StringsJa {
         return '動画';
       case 'onboarding_feature_video_hint':
         return '字幕から調べてカードを作る';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -489400,6 +489465,8 @@ extension on _StringsKo {
         return '동영상';
       case 'onboarding_feature_video_hint':
         return '자막에서 단어 찾고 카드 만들기';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -506972,6 +507039,8 @@ extension on _StringsNl {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Opzoeken in ondertitels en kaarten maken';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -524579,6 +524648,8 @@ extension on _StringsPtBr {
         return 'Vídeo';
       case 'onboarding_feature_video_hint':
         return 'Consulta em legendas e criação de cartões';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -542190,6 +542261,8 @@ extension on _StringsRu {
         return 'Видео';
       case 'onboarding_feature_video_hint':
         return 'Поиск по субтитрам и создание карточек';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -559763,6 +559836,8 @@ extension on _StringsTh {
         return 'วิดีโอ';
       case 'onboarding_feature_video_hint':
         return 'ค้นคำจากคำบรรยายและสร้างการ์ด';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -577352,6 +577427,8 @@ extension on _StringsTr {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Altyazıda arama ve kart oluşturma';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -594934,6 +595011,8 @@ extension on _StringsVi {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Tra từ trên phụ đề và tạo thẻ';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
@@ -612386,6 +612465,8 @@ extension on _StringsZhCn {
         return '视频';
       case 'onboarding_feature_video_hint':
         return '字幕查词与制卡';
+      case 'onboarding_feature_web_basic_hint':
+        return '在 Fushi 里直接浏览网站，任何网页都能查词。';
       case 'onboarding_feature_web_hint':
         return '在 Fushi 里直接浏览网站：视频站点用 Fushi 播放器看、网页漫画用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
       case 'onboarding_features_modules_hint':
@@ -629786,6 +629867,8 @@ extension on _StringsZhHk {
         return '影片';
       case 'onboarding_feature_video_hint':
         return '字幕查詞與製卡';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
