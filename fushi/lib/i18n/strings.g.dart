@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 147101 (8653 per locale)
+/// Strings: 147118 (8654 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6639,6 +6639,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_privacy_cleared_toast => 'No longer private';
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   String get media_privacy_marked_toast => 'Marked private';
   String media_privacy_save_failed({required Object reason}) =>
       'Could not change privacy: ${reason}';
@@ -23411,6 +23413,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -44612,6 +44617,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -66009,6 +66017,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -87477,6 +87488,9 @@ class _StringsFr extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -108795,6 +108809,9 @@ class _StringsId extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -130049,6 +130066,9 @@ class _StringsIt extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -150835,6 +150855,9 @@ class _StringsJa extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -171142,6 +171165,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -191983,6 +192009,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -213305,6 +213334,9 @@ class _StringsPtBr extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -234601,6 +234633,9 @@ class _StringsRu extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -255718,6 +255753,9 @@ class _StringsTh extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -276807,6 +276845,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
   @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
@@ -297941,6 +297982,9 @@ class _StringsVi extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -318099,6 +318143,9 @@ class _StringsZhCn extends _StringsEn {
   String get media_privacy_hint =>
       '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
+  @override
   String get media_privacy_marked_toast => '已设为私密';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -337576,6 +337623,9 @@ class _StringsZhHk extends _StringsEn {
   String get media_privacy_hint =>
       'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
   @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
   String get media_privacy_marked_toast => 'Marked private';
   @override
   String media_privacy_save_failed({required Object reason}) =>
@@ -356323,6 +356373,9 @@ extension on _StringsEn {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -374305,6 +374358,9 @@ extension on _StringsAr {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -392334,6 +392390,9 @@ extension on _StringsDe {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -410377,6 +410436,9 @@ extension on _StringsEs {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -428430,6 +428492,9 @@ extension on _StringsFr {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -446456,6 +446521,9 @@ extension on _StringsId {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -464471,6 +464539,9 @@ extension on _StringsIt {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -482444,6 +482515,9 @@ extension on _StringsJa {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -500349,6 +500423,9 @@ extension on _StringsKo {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -518330,6 +518407,9 @@ extension on _StringsNl {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -536357,6 +536437,9 @@ extension on _StringsPtBr {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -554388,6 +554471,9 @@ extension on _StringsRu {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -572388,6 +572474,9 @@ extension on _StringsTh {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -590394,6 +590483,9 @@ extension on _StringsTr {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -608398,6 +608490,9 @@ extension on _StringsVi {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
@@ -626280,6 +626375,9 @@ extension on _StringsZhCn {
         return '已取消私密';
       case 'media_privacy_hint':
         return '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
       case 'media_privacy_marked_toast':
         return '已设为私密';
       case 'media_privacy_save_failed':
@@ -644081,6 +644179,9 @@ extension on _StringsZhHk {
         return 'No longer private';
       case 'media_privacy_hint':
         return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
       case 'media_privacy_marked_toast':
         return 'Marked private';
       case 'media_privacy_save_failed':
