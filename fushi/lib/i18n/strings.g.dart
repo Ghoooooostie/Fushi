@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149175 (8775 per locale)
+/// Strings: 149209 (8777 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9604,6 +9604,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AI also wrote descriptions for ${count} fields; they are saved with the template.';
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
   String get srs_visual_ai_run => 'Generate';
   String get srs_visual_align_center => 'Center';
   String get srs_visual_align_end => 'Right';
@@ -9662,6 +9664,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_prop_size => 'Size';
   String get srs_visual_prop_text => 'Text';
   String get srs_visual_prop_tone => 'Colour';
+  String get srs_visual_replace => 'Replace';
   String get srs_visual_size_body => 'Normal';
   String get srs_visual_size_display => 'Huge';
   String get srs_visual_size_small => 'Small';
@@ -28711,6 +28714,9 @@ class _StringsAr extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -28813,6 +28819,8 @@ class _StringsAr extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -50279,6 +50287,9 @@ class _StringsDe extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -50381,6 +50392,8 @@ class _StringsDe extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -71972,6 +71985,9 @@ class _StringsEs extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -72074,6 +72090,8 @@ class _StringsEs extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -93752,6 +93770,9 @@ class _StringsFr extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -93854,6 +93875,8 @@ class _StringsFr extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -115296,6 +115319,9 @@ class _StringsId extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -115398,6 +115424,8 @@ class _StringsId extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -136884,6 +136912,9 @@ class _StringsIt extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -136986,6 +137017,8 @@ class _StringsIt extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -157764,6 +157797,9 @@ class _StringsJa extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -157866,6 +157902,8 @@ class _StringsJa extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -178373,6 +178411,9 @@ class _StringsKo extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -178475,6 +178516,8 @@ class _StringsKo extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -199687,6 +199730,9 @@ class _StringsNl extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -199789,6 +199835,8 @@ class _StringsNl extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -221304,6 +221352,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -221406,6 +221457,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -242899,6 +242952,9 @@ class _StringsRu extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -243001,6 +243057,8 @@ class _StringsRu extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -264245,6 +264303,9 @@ class _StringsTh extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -264347,6 +264408,8 @@ class _StringsTh extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -285656,6 +285719,9 @@ class _StringsTr extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -285758,6 +285824,8 @@ class _StringsTr extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -307063,6 +307131,9 @@ class _StringsVi extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -307165,6 +307236,8 @@ class _StringsVi extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -327101,6 +327174,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_visual_ai_hint => '例如：正面大字显示单词，下面放例句；背面放读音、发音和释义';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI 给的布局会替换用代码写的（或手改过的）模板。点保存之前不会写入，仍可放弃。';
+  @override
   String get srs_visual_ai_run => '生成';
   @override
   String get srs_visual_align_center => '居中';
@@ -327192,6 +327268,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_visual_prop_text => '文字';
   @override
   String get srs_visual_prop_tone => '颜色';
+  @override
+  String get srs_visual_replace => '替换';
   @override
   String get srs_visual_size_body => '正文';
   @override
@@ -347003,6 +347081,9 @@ class _StringsZhHk extends _StringsEn {
   String get srs_visual_ai_hint =>
       'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
   @override
+  String get srs_visual_ai_replace_body =>
+      'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
+  @override
   String get srs_visual_ai_run => 'Generate';
   @override
   String get srs_visual_align_center => 'Center';
@@ -347105,6 +347186,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_visual_prop_text => 'Text';
   @override
   String get srs_visual_prop_tone => 'Colour';
+  @override
+  String get srs_visual_replace => 'Replace';
   @override
   String get srs_visual_size_body => 'Normal';
   @override
@@ -365641,6 +365724,8 @@ extension on _StringsEn {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -365731,6 +365816,8 @@ extension on _StringsEn {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -383870,6 +383957,8 @@ extension on _StringsAr {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -383960,6 +384049,8 @@ extension on _StringsAr {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -402155,6 +402246,8 @@ extension on _StringsDe {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -402245,6 +402338,8 @@ extension on _StringsDe {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -420444,6 +420539,8 @@ extension on _StringsEs {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -420534,6 +420631,8 @@ extension on _StringsEs {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -438744,6 +438843,8 @@ extension on _StringsFr {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -438834,6 +438935,8 @@ extension on _StringsFr {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -457004,6 +457107,8 @@ extension on _StringsId {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -457094,6 +457199,8 @@ extension on _StringsId {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -475273,6 +475380,8 @@ extension on _StringsIt {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -475363,6 +475472,8 @@ extension on _StringsIt {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -493476,6 +493587,8 @@ extension on _StringsJa {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -493566,6 +493679,8 @@ extension on _StringsJa {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -511628,6 +511743,8 @@ extension on _StringsKo {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -511718,6 +511835,8 @@ extension on _StringsKo {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -529870,6 +529989,8 @@ extension on _StringsNl {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -529960,6 +530081,8 @@ extension on _StringsNl {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -548143,6 +548266,8 @@ extension on _StringsPtBr {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -548233,6 +548358,8 @@ extension on _StringsPtBr {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -566420,6 +566547,8 @@ extension on _StringsRu {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -566510,6 +566639,8 @@ extension on _StringsRu {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -584657,6 +584788,8 @@ extension on _StringsTh {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -584747,6 +584880,8 @@ extension on _StringsTh {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -602912,6 +603047,8 @@ extension on _StringsTr {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -603002,6 +603139,8 @@ extension on _StringsTr {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -621162,6 +621301,8 @@ extension on _StringsVi {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -621252,6 +621393,8 @@ extension on _StringsVi {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
@@ -639244,6 +639387,8 @@ extension on _StringsZhCn {
         return ({required Object count}) => 'AI 还给 ${count} 个字段写了说明，保存模板时一起写入。';
       case 'srs_visual_ai_hint':
         return '例如：正面大字显示单词，下面放例句；背面放读音、发音和释义';
+      case 'srs_visual_ai_replace_body':
+        return 'AI 给的布局会替换用代码写的（或手改过的）模板。点保存之前不会写入，仍可放弃。';
       case 'srs_visual_ai_run':
         return '生成';
       case 'srs_visual_align_center':
@@ -639334,6 +639479,8 @@ extension on _StringsZhCn {
         return '文字';
       case 'srs_visual_prop_tone':
         return '颜色';
+      case 'srs_visual_replace':
+        return '替换';
       case 'srs_visual_size_body':
         return '正文';
       case 'srs_visual_size_display':
@@ -657322,6 +657469,8 @@ extension on _StringsZhHk {
             'AI also wrote descriptions for ${count} fields; they are saved with the template.';
       case 'srs_visual_ai_hint':
         return 'e.g. Put the word big in the middle, sentence below, reading and audio on the back';
+      case 'srs_visual_ai_replace_body':
+        return 'AI\'s layout replaces a template written in code (or edited by hand). Nothing is saved until you tap Save, and you can still discard.';
       case 'srs_visual_ai_run':
         return 'Generate';
       case 'srs_visual_align_center':
@@ -657412,6 +657561,8 @@ extension on _StringsZhHk {
         return 'Text';
       case 'srs_visual_prop_tone':
         return 'Colour';
+      case 'srs_visual_replace':
+        return 'Replace';
       case 'srs_visual_size_body':
         return 'Normal';
       case 'srs_visual_size_display':
