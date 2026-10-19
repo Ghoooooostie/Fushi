@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142443 (8379 per locale)
+/// Strings: 142477 (8381 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -267,6 +267,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} set individually';
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   String get ai_feature_unset => 'Not set';
   String get ai_feature_video_identify => 'Video identification';
   String get ai_feature_video_identify_assist_summary =>
@@ -12228,6 +12231,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'غير معيّن';
   @override
@@ -32481,6 +32489,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Nicht festgelegt';
   @override
@@ -53124,6 +53137,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Sin definir';
   @override
@@ -73822,6 +73840,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Non défini';
   @override
@@ -94603,6 +94626,11 @@ class _StringsId extends _StringsEn {
   String get ai_feature_overrides_none =>
       'All features use the default provider';
   @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
+  @override
   String get ai_feature_unset => 'Belum diatur';
   @override
   String get ai_feature_video_identify => 'Identifikasi video';
@@ -115039,6 +115067,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Non impostato';
   @override
@@ -135632,6 +135665,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_feature_overrides_none => 'すべての機能が既定のプロバイダーを使用';
   @override
+  String get ai_feature_subtitle_proofread => '字幕の校正';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '音声認識で作った日本語字幕を校正します。作品の固有名詞表を作ってから、聞き違えた台詞を直します。このプロバイダーに送るのは認識したテキストと固有名詞表だけで（音声・映像は送りません）、料金はプロバイダーが請求します。';
+  @override
   String get ai_feature_unset => '未設定';
   @override
   String get ai_feature_video_identify => '動画作品の識別';
@@ -155214,6 +155252,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => '설정 안 됨';
   @override
@@ -174843,6 +174886,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Niet ingesteld';
   @override
@@ -195392,6 +195440,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Não definido';
   @override
@@ -216007,6 +216060,11 @@ class _StringsRu extends _StringsEn {
   String get ai_feature_overrides_none =>
       'All features use the default provider';
   @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
+  @override
   String get ai_feature_unset => 'Не задан';
   @override
   String get ai_feature_video_identify => 'Определение видео';
@@ -236567,6 +236625,11 @@ class _StringsTh extends _StringsEn {
   String get ai_feature_overrides_none =>
       'All features use the default provider';
   @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
+  @override
   String get ai_feature_unset => 'ยังไม่ได้ตั้ง';
   @override
   String get ai_feature_video_identify => 'การระบุวิดีโอ';
@@ -256808,6 +256871,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Ayarlanmadı';
   @override
@@ -277251,6 +277319,11 @@ class _StringsVi extends _StringsEn {
   String get ai_feature_overrides_none =>
       'All features use the default provider';
   @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
+  @override
   String get ai_feature_unset => 'Chưa đặt';
   @override
   String get ai_feature_video_identify => 'Nhận diện video';
@@ -297606,6 +297679,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_feature_overrides_none => '全部跟随默认提供商';
   @override
+  String get ai_feature_subtitle_proofread => '字幕校对';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
+  @override
   String get ai_feature_unset => '未指定';
   @override
   String get ai_feature_video_identify => '视频作品识别';
@@ -316224,6 +316302,11 @@ class _StringsZhHk extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 項已單獨指定';
   @override
   String get ai_feature_overrides_none => '全部跟隨預設提供商';
+  @override
+  String get ai_feature_subtitle_proofread => '字幕校對';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '校對語音識別生成的日語字幕：先整理作品專名表，再修正聽錯的台詞。只會把識別出的文字與專名表發給該供應商（不發音訊與畫面），並由其計費。';
   @override
   String get ai_feature_unset => '未指定';
   @override
@@ -335195,6 +335278,10 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Not set';
       case 'ai_feature_video_identify':
@@ -352587,6 +352674,10 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'غير معيّن';
       case 'ai_feature_video_identify':
@@ -369974,6 +370065,10 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Nicht festgelegt';
       case 'ai_feature_video_identify':
@@ -387436,6 +387531,10 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Sin definir';
       case 'ai_feature_video_identify':
@@ -404881,6 +404980,10 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Non défini';
       case 'ai_feature_video_identify':
@@ -422341,6 +422444,10 @@ extension on _StringsId {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Belum diatur';
       case 'ai_feature_video_identify':
@@ -439748,6 +439855,10 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Non impostato';
       case 'ai_feature_video_identify':
@@ -457188,6 +457299,10 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} 件を個別に指定';
       case 'ai_feature_overrides_none':
         return 'すべての機能が既定のプロバイダーを使用';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕の校正';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '音声認識で作った日本語字幕を校正します。作品の固有名詞表を作ってから、聞き違えた台詞を直します。このプロバイダーに送るのは認識したテキストと固有名詞表だけで（音声・映像は送りません）、料金はプロバイダーが請求します。';
       case 'ai_feature_unset':
         return '未設定';
       case 'ai_feature_video_identify':
@@ -474502,6 +474617,10 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return '설정 안 됨';
       case 'ai_feature_video_identify':
@@ -491826,6 +491945,10 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Niet ingesteld';
       case 'ai_feature_video_identify':
@@ -509264,6 +509387,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Não definido';
       case 'ai_feature_video_identify':
@@ -526691,6 +526818,10 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Не задан';
       case 'ai_feature_video_identify':
@@ -544126,6 +544257,10 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'ยังไม่ได้ตั้ง';
       case 'ai_feature_video_identify':
@@ -561516,6 +561651,10 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Ayarlanmadı';
       case 'ai_feature_video_identify':
@@ -578936,6 +579075,10 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Chưa đặt';
       case 'ai_feature_video_identify':
@@ -596340,6 +596483,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 项已单独指定';
       case 'ai_feature_overrides_none':
         return '全部跟随默认提供商';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕校对';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
       case 'ai_feature_unset':
         return '未指定';
       case 'ai_feature_video_identify':
@@ -613537,6 +613684,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 項已單獨指定';
       case 'ai_feature_overrides_none':
         return '全部跟隨預設提供商';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕校對';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '校對語音識別生成的日語字幕：先整理作品專名表，再修正聽錯的台詞。只會把識別出的文字與專名表發給該供應商（不發音訊與畫面），並由其計費。';
       case 'ai_feature_unset':
         return '未指定';
       case 'ai_feature_video_identify':
