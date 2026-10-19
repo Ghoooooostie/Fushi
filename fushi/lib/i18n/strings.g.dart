@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142443 (8379 per locale)
+/// Strings: 142545 (8385 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3135,6 +3135,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_opds_allow_http => 'Allow plain HTTP';
   String get discovery_opds_allow_http_hint =>
       'Needed for a self-hosted server on your local network';
+  String get discovery_opds_api_key => 'API key (optional)';
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
   String get discovery_opds_enabled => 'Enabled';
   String get discovery_opds_name => 'Display name';
   String get discovery_opds_name_hint => 'Leave empty to use the host name';
@@ -3148,15 +3151,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Connection failed: ${reason}';
   String discovery_opds_test_ok({required Object count}) =>
       'Connected. Root catalog has ${count} entries';
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
   String get discovery_opds_url => 'Catalog URL';
   String get discovery_opds_url_hint =>
-      'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+      'The OPDS endpoint, for example https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   String get discovery_opds_url_invalid =>
       'Enter a valid HTTP or HTTPS catalog URL';
   String get discovery_opds_url_needs_http_optin =>
       'Plain HTTP needs the switch below';
   String get discovery_opds_username => 'Username';
   String get discovery_opds_username_hint => 'Leave empty for a public catalog';
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   String get discovery_partial_failure => 'Some sources are unavailable';
   String get discovery_search_hint => 'Search online resources';
   String get discovery_source_capability_browsable =>
@@ -17011,6 +17022,11 @@ class _StringsAr extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'مطلوب لخادم ذاتي الاستضافة على شبكتك المحلية';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'مُفعّل';
   @override
   String get discovery_opds_name => 'الاسم المعروض';
@@ -17034,10 +17050,19 @@ class _StringsAr extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'رابط الفهرس';
   @override
   String get discovery_opds_url_hint =>
-      'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds';
+      'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'أدخل رابط فهرس HTTP أو HTTPS صالحًا';
@@ -17048,6 +17073,9 @@ class _StringsAr extends _StringsEn {
   String get discovery_opds_username => 'اسم المستخدم';
   @override
   String get discovery_opds_username_hint => 'اتركه فارغًا للفهرس العام';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'بعض المصادر غير متاحة';
   @override
@@ -37338,6 +37366,11 @@ class _StringsDe extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Nötig für einen selbst gehosteten Server im lokalen Netzwerk';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Aktiviert';
   @override
   String get discovery_opds_name => 'Anzeigename';
@@ -37362,10 +37395,19 @@ class _StringsDe extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Verbunden. Der Stammkatalog hat ${count} Einträge';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'Katalog-URL';
   @override
   String get discovery_opds_url_hint =>
-      'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds';
+      'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Gib eine gültige HTTP- oder HTTPS-Katalog-URL ein';
@@ -37377,6 +37419,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Für einen öffentlichen Katalog leer lassen';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Einige Quellen sind nicht verfügbar';
   @override
@@ -57995,6 +58040,11 @@ class _StringsEs extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Necesario para un servidor autoalojado en tu red local';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Activado';
   @override
   String get discovery_opds_name => 'Nombre visible';
@@ -58019,10 +58069,19 @@ class _StringsEs extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Conectado. El catálogo raíz tiene ${count} entradas';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL del catálogo';
   @override
   String get discovery_opds_url_hint =>
-      'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds';
+      'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Introduce una URL de catálogo HTTP o HTTPS válida';
@@ -58034,6 +58093,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Déjalo vacío para un catálogo público';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure =>
       'Algunas fuentes no están disponibles';
@@ -78721,6 +78783,11 @@ class _StringsFr extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Nécessaire pour un serveur auto-hébergé sur votre réseau local';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Activé';
   @override
   String get discovery_opds_name => 'Nom affiché';
@@ -78745,10 +78812,19 @@ class _StringsFr extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Connecté. Le catalogue racine contient ${count} entrées';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL du catalogue';
   @override
   String get discovery_opds_url_hint =>
-      'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds';
+      'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Saisissez une URL de catalogue HTTP ou HTTPS valide';
@@ -78760,6 +78836,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Laissez vide pour un catalogue public';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure =>
       'Certaines sources sont indisponibles';
@@ -99417,6 +99496,11 @@ class _StringsId extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Diperlukan untuk server milik sendiri di jaringan lokal';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Aktif';
   @override
   String get discovery_opds_name => 'Nama tampilan';
@@ -99440,10 +99524,19 @@ class _StringsId extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Terhubung. Katalog akar berisi ${count} entri';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL katalog';
   @override
   String get discovery_opds_url_hint =>
-      'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds';
+      'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Masukkan URL katalog HTTP atau HTTPS yang valid';
@@ -99454,6 +99547,9 @@ class _StringsId extends _StringsEn {
   String get discovery_opds_username => 'Nama pengguna';
   @override
   String get discovery_opds_username_hint => 'Kosongkan untuk katalog publik';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Beberapa sumber tidak tersedia';
   @override
@@ -119886,6 +119982,11 @@ class _StringsIt extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Necessario per un server self-hosted sulla rete locale';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Attivo';
   @override
   String get discovery_opds_name => 'Nome visualizzato';
@@ -119909,10 +120010,19 @@ class _StringsIt extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Connesso. Il catalogo radice ha ${count} voci';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL del catalogo';
   @override
   String get discovery_opds_url_hint =>
-      'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds';
+      'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Inserisci un URL di catalogo HTTP o HTTPS valido';
@@ -119924,6 +120034,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Lascia vuoto per un catalogo pubblico';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Alcune fonti non sono disponibili';
   @override
@@ -140276,6 +140389,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_opds_allow_http_hint => 'ローカルネットワークの自前サーバーに必要です';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => '有効';
   @override
   String get discovery_opds_name => '表示名';
@@ -140299,10 +140417,19 @@ class _StringsJa extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       '接続しました。ルートカタログに ${count} 件あります';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'カタログ URL';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS エンドポイント。例: https://books.example.com/api/v1/opds';
+      'OPDS エンドポイント。例: https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       '有効な HTTP または HTTPS のカタログ URL を入力してください';
@@ -140312,6 +140439,9 @@ class _StringsJa extends _StringsEn {
   String get discovery_opds_username => 'ユーザー名';
   @override
   String get discovery_opds_username_hint => '公開カタログなら空欄のままで構いません';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => '一部のソースが利用できません';
   @override
@@ -159852,6 +159982,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get discovery_opds_allow_http_hint => '로컬 네트워크의 자체 호스팅 서버에 필요합니다';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => '사용';
   @override
   String get discovery_opds_name => '표시 이름';
@@ -159875,10 +160010,19 @@ class _StringsKo extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => '카탈로그 URL';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds';
+      'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid => '올바른 HTTP 또는 HTTPS 카탈로그 URL을 입력하세요';
   @override
@@ -159887,6 +160031,9 @@ class _StringsKo extends _StringsEn {
   String get discovery_opds_username => '사용자 이름';
   @override
   String get discovery_opds_username_hint => '공개 카탈로그라면 비워 두세요';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => '일부 소스를 사용할 수 없습니다';
   @override
@@ -179687,6 +179834,11 @@ class _StringsNl extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Nodig voor een zelfgehoste server in je lokale netwerk';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Ingeschakeld';
   @override
   String get discovery_opds_name => 'Weergavenaam';
@@ -179711,10 +179863,19 @@ class _StringsNl extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Verbonden. De hoofdcatalogus heeft ${count} items';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'Catalogus-URL';
   @override
   String get discovery_opds_url_hint =>
-      'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds';
+      'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Voer een geldige HTTP- of HTTPS-catalogus-URL in';
@@ -179726,6 +179887,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Laat leeg voor een openbare catalogus';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure =>
       'Sommige bronnen zijn niet beschikbaar';
@@ -200248,6 +200412,11 @@ class _StringsPtBr extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Necessário para um servidor auto-hospedado na sua rede local';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Ativado';
   @override
   String get discovery_opds_name => 'Nome exibido';
@@ -200271,10 +200440,19 @@ class _StringsPtBr extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Conectado. O catálogo raiz tem ${count} itens';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL do catálogo';
   @override
   String get discovery_opds_url_hint =>
-      'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds';
+      'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Informe uma URL de catálogo HTTP ou HTTPS válida';
@@ -200286,6 +200464,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Deixe vazio para um catálogo público';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Algumas fontes estão indisponíveis';
   @override
@@ -220844,6 +221025,11 @@ class _StringsRu extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Нужно для сервера, размещённого в вашей локальной сети';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Включено';
   @override
   String get discovery_opds_name => 'Отображаемое имя';
@@ -220868,10 +221054,19 @@ class _StringsRu extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Подключено. В корневом каталоге ${count} записей';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL каталога';
   @override
   String get discovery_opds_url_hint =>
-      'Точка доступа OPDS, например https://books.example.com/api/v1/opds';
+      'Точка доступа OPDS, например https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Введите корректный URL каталога по HTTP или HTTPS';
@@ -220883,6 +221078,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Для публичного каталога оставьте пустым';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Некоторые источники недоступны';
   @override
@@ -241338,6 +241536,11 @@ class _StringsTh extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'จำเป็นสำหรับเซิร์ฟเวอร์ที่โฮสต์เองในเครือข่ายภายใน';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'เปิดใช้งาน';
   @override
   String get discovery_opds_name => 'ชื่อที่แสดง';
@@ -241361,10 +241564,19 @@ class _StringsTh extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL แคตตาล็อก';
   @override
   String get discovery_opds_url_hint =>
-      'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds';
+      'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'กรอก URL แคตตาล็อกแบบ HTTP หรือ HTTPS ที่ถูกต้อง';
@@ -241376,6 +241588,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'เว้นว่างไว้สำหรับแคตตาล็อกสาธารณะ';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'แหล่งบางแห่งไม่พร้อมใช้งาน';
   @override
@@ -261626,6 +261841,11 @@ class _StringsTr extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Yerel ağdaki kendi sunucun için gerekli';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Etkin';
   @override
   String get discovery_opds_name => 'Görünen ad';
@@ -261650,10 +261870,19 @@ class _StringsTr extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Bağlanıldı. Kök katalogda ${count} girdi var';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'Katalog URL\'si';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds';
+      'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Geçerli bir HTTP veya HTTPS katalog URL\'si gir';
@@ -261665,6 +261894,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Herkese açık katalog için boş bırak';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Bazı kaynaklar kullanılamıyor';
   @override
@@ -282055,6 +282287,11 @@ class _StringsVi extends _StringsEn {
   String get discovery_opds_allow_http_hint =>
       'Cần thiết cho máy chủ tự dựng trong mạng nội bộ';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => 'Đã bật';
   @override
   String get discovery_opds_name => 'Tên hiển thị';
@@ -282078,10 +282315,19 @@ class _StringsVi extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       'Đã kết nối. Danh mục gốc có ${count} mục';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => 'URL danh mục';
   @override
   String get discovery_opds_url_hint =>
-      'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds';
+      'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid =>
       'Nhập URL danh mục HTTP hoặc HTTPS hợp lệ';
@@ -282093,6 +282339,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get discovery_opds_username_hint =>
       'Để trống nếu là danh mục công khai';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => 'Một số nguồn không khả dụng';
   @override
@@ -302002,6 +302251,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get discovery_opds_allow_http_hint => '局域网自建服务器需要打开';
   @override
+  String get discovery_opds_api_key => 'API key（可选）';
+  @override
+  String get discovery_opds_api_key_hint =>
+      '以 X-API-Key 请求头发送；Komga 可用它代替用户名和密码';
+  @override
   String get discovery_opds_enabled => '启用';
   @override
   String get discovery_opds_name => '显示名';
@@ -302025,10 +302279,19 @@ class _StringsZhCn extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       '连接成功，根目录有 ${count} 个条目';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      '已连接。在另一个地址找到了目录并已保存。根目录有 ${count} 个条目';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      '服务器拒绝了凭据。Komga 的用户名要填登录邮箱，或改用 API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      '这个地址是网页，不是 OPDS 目录。请填目录地址，例如 Komga 的 …/opds/v2/catalog';
+  @override
   String get discovery_opds_url => '目录地址';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS 端点，例如 https://books.example.com/api/v1/opds';
+      'OPDS 端点，例如 https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid => '请填写有效的 HTTP 或 HTTPS 目录地址';
   @override
@@ -302037,6 +302300,8 @@ class _StringsZhCn extends _StringsEn {
   String get discovery_opds_username => '用户名';
   @override
   String get discovery_opds_username_hint => '公开目录留空即可';
+  @override
+  String get discovery_opds_username_komga_hint => 'Komga：填登录邮箱';
   @override
   String get discovery_partial_failure => '部分源不可用';
   @override
@@ -320748,6 +321013,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_opds_allow_http_hint => '區域網絡自建伺服器需要開啟';
   @override
+  String get discovery_opds_api_key => 'API key (optional)';
+  @override
+  String get discovery_opds_api_key_hint =>
+      'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
+  @override
   String get discovery_opds_enabled => '啟用';
   @override
   String get discovery_opds_name => '顯示名稱';
@@ -320771,10 +321041,19 @@ class _StringsZhHk extends _StringsEn {
   String discovery_opds_test_ok({required Object count}) =>
       '連線成功，根目錄有 ${count} 個項目';
   @override
+  String discovery_opds_test_ok_resolved({required Object count}) =>
+      'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+  @override
+  String get discovery_opds_test_unauthorized =>
+      'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+  @override
+  String get discovery_opds_test_web_page =>
+      'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
+  @override
   String get discovery_opds_url => '目錄地址';
   @override
   String get discovery_opds_url_hint =>
-      'OPDS 端點，例如 https://books.example.com/api/v1/opds';
+      'OPDS 端點，例如 https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
   @override
   String get discovery_opds_url_invalid => '請填寫有效的 HTTP 或 HTTPS 目錄地址';
   @override
@@ -320783,6 +321062,9 @@ class _StringsZhHk extends _StringsEn {
   String get discovery_opds_username => '使用者名稱';
   @override
   String get discovery_opds_username_hint => '公開目錄留空即可';
+  @override
+  String get discovery_opds_username_komga_hint =>
+      'Komga: use your login email';
   @override
   String get discovery_partial_failure => '部分源不可用';
   @override
@@ -339250,6 +339532,10 @@ extension on _StringsEn {
         return 'Allow plain HTTP';
       case 'discovery_opds_allow_http_hint':
         return 'Needed for a self-hosted server on your local network';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Enabled';
       case 'discovery_opds_name':
@@ -339271,10 +339557,17 @@ extension on _StringsEn {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Connected. Root catalog has ${count} entries';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'Catalog URL';
       case 'discovery_opds_url_hint':
-        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds';
+        return 'The OPDS endpoint, for example https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Enter a valid HTTP or HTTPS catalog URL';
       case 'discovery_opds_url_needs_http_optin':
@@ -339283,6 +339576,8 @@ extension on _StringsEn {
         return 'Username';
       case 'discovery_opds_username_hint':
         return 'Leave empty for a public catalog';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Some sources are unavailable';
       case 'discovery_search_hint':
@@ -356643,6 +356938,10 @@ extension on _StringsAr {
         return 'السماح بـ HTTP غير المشفّر';
       case 'discovery_opds_allow_http_hint':
         return 'مطلوب لخادم ذاتي الاستضافة على شبكتك المحلية';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'مُفعّل';
       case 'discovery_opds_name':
@@ -356664,10 +356963,17 @@ extension on _StringsAr {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'تم الاتصال. يحتوي الفهرس الجذر على ${count} عنصرًا';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'رابط الفهرس';
       case 'discovery_opds_url_hint':
-        return 'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds';
+        return 'نقطة نهاية OPDS، مثال https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'أدخل رابط فهرس HTTP أو HTTPS صالحًا';
       case 'discovery_opds_url_needs_http_optin':
@@ -356676,6 +356982,8 @@ extension on _StringsAr {
         return 'اسم المستخدم';
       case 'discovery_opds_username_hint':
         return 'اتركه فارغًا للفهرس العام';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'بعض المصادر غير متاحة';
       case 'discovery_search_hint':
@@ -374057,6 +374365,10 @@ extension on _StringsDe {
         return 'Unverschlüsseltes HTTP erlauben';
       case 'discovery_opds_allow_http_hint':
         return 'Nötig für einen selbst gehosteten Server im lokalen Netzwerk';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Aktiviert';
       case 'discovery_opds_name':
@@ -374079,10 +374391,17 @@ extension on _StringsDe {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Verbunden. Der Stammkatalog hat ${count} Einträge';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'Katalog-URL';
       case 'discovery_opds_url_hint':
-        return 'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds';
+        return 'Der OPDS-Endpunkt, zum Beispiel https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Gib eine gültige HTTP- oder HTTPS-Katalog-URL ein';
       case 'discovery_opds_url_needs_http_optin':
@@ -374091,6 +374410,8 @@ extension on _StringsDe {
         return 'Benutzername';
       case 'discovery_opds_username_hint':
         return 'Für einen öffentlichen Katalog leer lassen';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Einige Quellen sind nicht verfügbar';
       case 'discovery_search_hint':
@@ -391510,6 +391831,10 @@ extension on _StringsEs {
         return 'Permitir HTTP sin cifrar';
       case 'discovery_opds_allow_http_hint':
         return 'Necesario para un servidor autoalojado en tu red local';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Activado';
       case 'discovery_opds_name':
@@ -391531,10 +391856,17 @@ extension on _StringsEs {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Conectado. El catálogo raíz tiene ${count} entradas';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL del catálogo';
       case 'discovery_opds_url_hint':
-        return 'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds';
+        return 'El punto de acceso OPDS, por ejemplo https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Introduce una URL de catálogo HTTP o HTTPS válida';
       case 'discovery_opds_url_needs_http_optin':
@@ -391543,6 +391875,8 @@ extension on _StringsEs {
         return 'Usuario';
       case 'discovery_opds_username_hint':
         return 'Déjalo vacío para un catálogo público';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Algunas fuentes no están disponibles';
       case 'discovery_search_hint':
@@ -408964,6 +409298,10 @@ extension on _StringsFr {
         return 'Autoriser le HTTP en clair';
       case 'discovery_opds_allow_http_hint':
         return 'Nécessaire pour un serveur auto-hébergé sur votre réseau local';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Activé';
       case 'discovery_opds_name':
@@ -408986,10 +409324,17 @@ extension on _StringsFr {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Connecté. Le catalogue racine contient ${count} entrées';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL du catalogue';
       case 'discovery_opds_url_hint':
-        return 'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds';
+        return 'Le point d\'accès OPDS, par exemple https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Saisissez une URL de catalogue HTTP ou HTTPS valide';
       case 'discovery_opds_url_needs_http_optin':
@@ -408998,6 +409343,8 @@ extension on _StringsFr {
         return 'Nom d\'utilisateur';
       case 'discovery_opds_username_hint':
         return 'Laissez vide pour un catalogue public';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Certaines sources sont indisponibles';
       case 'discovery_search_hint':
@@ -426406,6 +426753,10 @@ extension on _StringsId {
         return 'Izinkan HTTP polos';
       case 'discovery_opds_allow_http_hint':
         return 'Diperlukan untuk server milik sendiri di jaringan lokal';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Aktif';
       case 'discovery_opds_name':
@@ -426427,10 +426778,17 @@ extension on _StringsId {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Terhubung. Katalog akar berisi ${count} entri';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL katalog';
       case 'discovery_opds_url_hint':
-        return 'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds';
+        return 'Endpoint OPDS, misalnya https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Masukkan URL katalog HTTP atau HTTPS yang valid';
       case 'discovery_opds_url_needs_http_optin':
@@ -426439,6 +426797,8 @@ extension on _StringsId {
         return 'Nama pengguna';
       case 'discovery_opds_username_hint':
         return 'Kosongkan untuk katalog publik';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Beberapa sumber tidak tersedia';
       case 'discovery_search_hint':
@@ -443821,6 +444181,10 @@ extension on _StringsIt {
         return 'Consenti HTTP in chiaro';
       case 'discovery_opds_allow_http_hint':
         return 'Necessario per un server self-hosted sulla rete locale';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Attivo';
       case 'discovery_opds_name':
@@ -443843,10 +444207,17 @@ extension on _StringsIt {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Connesso. Il catalogo radice ha ${count} voci';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL del catalogo';
       case 'discovery_opds_url_hint':
-        return 'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds';
+        return 'L\'endpoint OPDS, ad esempio https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Inserisci un URL di catalogo HTTP o HTTPS valido';
       case 'discovery_opds_url_needs_http_optin':
@@ -443855,6 +444226,8 @@ extension on _StringsIt {
         return 'Nome utente';
       case 'discovery_opds_username_hint':
         return 'Lascia vuoto per un catalogo pubblico';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Alcune fonti non sono disponibili';
       case 'discovery_search_hint':
@@ -461226,6 +461599,10 @@ extension on _StringsJa {
         return '平文 HTTP を許可';
       case 'discovery_opds_allow_http_hint':
         return 'ローカルネットワークの自前サーバーに必要です';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return '有効';
       case 'discovery_opds_name':
@@ -461246,10 +461623,17 @@ extension on _StringsJa {
         return ({required Object reason}) => '接続に失敗しました: ${reason}';
       case 'discovery_opds_test_ok':
         return ({required Object count}) => '接続しました。ルートカタログに ${count} 件あります';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'カタログ URL';
       case 'discovery_opds_url_hint':
-        return 'OPDS エンドポイント。例: https://books.example.com/api/v1/opds';
+        return 'OPDS エンドポイント。例: https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return '有効な HTTP または HTTPS のカタログ URL を入力してください';
       case 'discovery_opds_url_needs_http_optin':
@@ -461258,6 +461642,8 @@ extension on _StringsJa {
         return 'ユーザー名';
       case 'discovery_opds_username_hint':
         return '公開カタログなら空欄のままで構いません';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return '一部のソースが利用できません';
       case 'discovery_search_hint':
@@ -478541,6 +478927,10 @@ extension on _StringsKo {
         return '일반 HTTP 허용';
       case 'discovery_opds_allow_http_hint':
         return '로컬 네트워크의 자체 호스팅 서버에 필요합니다';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return '사용';
       case 'discovery_opds_name':
@@ -478562,10 +478952,17 @@ extension on _StringsKo {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             '연결되었습니다. 루트 카탈로그에 ${count}개 항목이 있습니다';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return '카탈로그 URL';
       case 'discovery_opds_url_hint':
-        return 'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds';
+        return 'OPDS 엔드포인트. 예: https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return '올바른 HTTP 또는 HTTPS 카탈로그 URL을 입력하세요';
       case 'discovery_opds_url_needs_http_optin':
@@ -478574,6 +478971,8 @@ extension on _StringsKo {
         return '사용자 이름';
       case 'discovery_opds_username_hint':
         return '공개 카탈로그라면 비워 두세요';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return '일부 소스를 사용할 수 없습니다';
       case 'discovery_search_hint':
@@ -495900,6 +496299,10 @@ extension on _StringsNl {
         return 'Onversleutelde HTTP toestaan';
       case 'discovery_opds_allow_http_hint':
         return 'Nodig voor een zelfgehoste server in je lokale netwerk';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Ingeschakeld';
       case 'discovery_opds_name':
@@ -495921,10 +496324,17 @@ extension on _StringsNl {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Verbonden. De hoofdcatalogus heeft ${count} items';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'Catalogus-URL';
       case 'discovery_opds_url_hint':
-        return 'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds';
+        return 'Het OPDS-eindpunt, bijvoorbeeld https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Voer een geldige HTTP- of HTTPS-catalogus-URL in';
       case 'discovery_opds_url_needs_http_optin':
@@ -495933,6 +496343,8 @@ extension on _StringsNl {
         return 'Gebruikersnaam';
       case 'discovery_opds_username_hint':
         return 'Laat leeg voor een openbare catalogus';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Sommige bronnen zijn niet beschikbaar';
       case 'discovery_search_hint':
@@ -513336,6 +513748,10 @@ extension on _StringsPtBr {
         return 'Permitir HTTP sem criptografia';
       case 'discovery_opds_allow_http_hint':
         return 'Necessário para um servidor auto-hospedado na sua rede local';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Ativado';
       case 'discovery_opds_name':
@@ -513357,10 +513773,17 @@ extension on _StringsPtBr {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Conectado. O catálogo raiz tem ${count} itens';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL do catálogo';
       case 'discovery_opds_url_hint':
-        return 'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds';
+        return 'O endpoint OPDS, por exemplo https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Informe uma URL de catálogo HTTP ou HTTPS válida';
       case 'discovery_opds_url_needs_http_optin':
@@ -513369,6 +513792,8 @@ extension on _StringsPtBr {
         return 'Usuário';
       case 'discovery_opds_username_hint':
         return 'Deixe vazio para um catálogo público';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Algumas fontes estão indisponíveis';
       case 'discovery_search_hint':
@@ -530770,6 +531195,10 @@ extension on _StringsRu {
         return 'Разрешить обычный HTTP';
       case 'discovery_opds_allow_http_hint':
         return 'Нужно для сервера, размещённого в вашей локальной сети';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Включено';
       case 'discovery_opds_name':
@@ -530792,10 +531221,17 @@ extension on _StringsRu {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Подключено. В корневом каталоге ${count} записей';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL каталога';
       case 'discovery_opds_url_hint':
-        return 'Точка доступа OPDS, например https://books.example.com/api/v1/opds';
+        return 'Точка доступа OPDS, например https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Введите корректный URL каталога по HTTP или HTTPS';
       case 'discovery_opds_url_needs_http_optin':
@@ -530804,6 +531240,8 @@ extension on _StringsRu {
         return 'Имя пользователя';
       case 'discovery_opds_username_hint':
         return 'Для публичного каталога оставьте пустым';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Некоторые источники недоступны';
       case 'discovery_search_hint':
@@ -548181,6 +548619,10 @@ extension on _StringsTh {
         return 'อนุญาต HTTP แบบไม่เข้ารหัส';
       case 'discovery_opds_allow_http_hint':
         return 'จำเป็นสำหรับเซิร์ฟเวอร์ที่โฮสต์เองในเครือข่ายภายใน';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'เปิดใช้งาน';
       case 'discovery_opds_name':
@@ -548202,10 +548644,17 @@ extension on _StringsTh {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'เชื่อมต่อแล้ว แคตตาล็อกรากมี ${count} รายการ';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL แคตตาล็อก';
       case 'discovery_opds_url_hint':
-        return 'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds';
+        return 'ปลายทาง OPDS เช่น https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'กรอก URL แคตตาล็อกแบบ HTTP หรือ HTTPS ที่ถูกต้อง';
       case 'discovery_opds_url_needs_http_optin':
@@ -548214,6 +548663,8 @@ extension on _StringsTh {
         return 'ชื่อผู้ใช้';
       case 'discovery_opds_username_hint':
         return 'เว้นว่างไว้สำหรับแคตตาล็อกสาธารณะ';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'แหล่งบางแห่งไม่พร้อมใช้งาน';
       case 'discovery_search_hint':
@@ -565588,6 +566039,10 @@ extension on _StringsTr {
         return 'Şifresiz HTTP\'ye izin ver';
       case 'discovery_opds_allow_http_hint':
         return 'Yerel ağdaki kendi sunucun için gerekli';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Etkin';
       case 'discovery_opds_name':
@@ -565609,10 +566064,17 @@ extension on _StringsTr {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Bağlanıldı. Kök katalogda ${count} girdi var';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'Katalog URL\'si';
       case 'discovery_opds_url_hint':
-        return 'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds';
+        return 'OPDS uç noktası, örneğin https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Geçerli bir HTTP veya HTTPS katalog URL\'si gir';
       case 'discovery_opds_url_needs_http_optin':
@@ -565621,6 +566083,8 @@ extension on _StringsTr {
         return 'Kullanıcı adı';
       case 'discovery_opds_username_hint':
         return 'Herkese açık katalog için boş bırak';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Bazı kaynaklar kullanılamıyor';
       case 'discovery_search_hint':
@@ -583001,6 +583465,10 @@ extension on _StringsVi {
         return 'Cho phép HTTP không mã hóa';
       case 'discovery_opds_allow_http_hint':
         return 'Cần thiết cho máy chủ tự dựng trong mạng nội bộ';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return 'Đã bật';
       case 'discovery_opds_name':
@@ -583022,10 +583490,17 @@ extension on _StringsVi {
       case 'discovery_opds_test_ok':
         return ({required Object count}) =>
             'Đã kết nối. Danh mục gốc có ${count} mục';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return 'URL danh mục';
       case 'discovery_opds_url_hint':
-        return 'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds';
+        return 'Điểm cuối OPDS, ví dụ https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return 'Nhập URL danh mục HTTP hoặc HTTPS hợp lệ';
       case 'discovery_opds_url_needs_http_optin':
@@ -583034,6 +583509,8 @@ extension on _StringsVi {
         return 'Tên đăng nhập';
       case 'discovery_opds_username_hint':
         return 'Để trống nếu là danh mục công khai';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return 'Một số nguồn không khả dụng';
       case 'discovery_search_hint':
@@ -600338,6 +600815,10 @@ extension on _StringsZhCn {
         return '允许明文 HTTP';
       case 'discovery_opds_allow_http_hint':
         return '局域网自建服务器需要打开';
+      case 'discovery_opds_api_key':
+        return 'API key（可选）';
+      case 'discovery_opds_api_key_hint':
+        return '以 X-API-Key 请求头发送；Komga 可用它代替用户名和密码';
       case 'discovery_opds_enabled':
         return '启用';
       case 'discovery_opds_name':
@@ -600358,10 +600839,17 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '连接失败：${reason}';
       case 'discovery_opds_test_ok':
         return ({required Object count}) => '连接成功，根目录有 ${count} 个条目';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            '已连接。在另一个地址找到了目录并已保存。根目录有 ${count} 个条目';
+      case 'discovery_opds_test_unauthorized':
+        return '服务器拒绝了凭据。Komga 的用户名要填登录邮箱，或改用 API key';
+      case 'discovery_opds_test_web_page':
+        return '这个地址是网页，不是 OPDS 目录。请填目录地址，例如 Komga 的 …/opds/v2/catalog';
       case 'discovery_opds_url':
         return '目录地址';
       case 'discovery_opds_url_hint':
-        return 'OPDS 端点，例如 https://books.example.com/api/v1/opds';
+        return 'OPDS 端点，例如 https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return '请填写有效的 HTTP 或 HTTPS 目录地址';
       case 'discovery_opds_url_needs_http_optin':
@@ -600370,6 +600858,8 @@ extension on _StringsZhCn {
         return '用户名';
       case 'discovery_opds_username_hint':
         return '公开目录留空即可';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga：填登录邮箱';
       case 'discovery_partial_failure':
         return '部分源不可用';
       case 'discovery_search_hint':
@@ -617549,6 +618039,10 @@ extension on _StringsZhHk {
         return '允許明文 HTTP';
       case 'discovery_opds_allow_http_hint':
         return '區域網絡自建伺服器需要開啟';
+      case 'discovery_opds_api_key':
+        return 'API key (optional)';
+      case 'discovery_opds_api_key_hint':
+        return 'Sent as the X-API-Key header. Komga accepts it instead of a username and password';
       case 'discovery_opds_enabled':
         return '啟用';
       case 'discovery_opds_name':
@@ -617569,10 +618063,17 @@ extension on _StringsZhHk {
         return ({required Object reason}) => '連線失敗：${reason}';
       case 'discovery_opds_test_ok':
         return ({required Object count}) => '連線成功，根目錄有 ${count} 個項目';
+      case 'discovery_opds_test_ok_resolved':
+        return ({required Object count}) =>
+            'Connected. Found the catalog at another address and saved it. Root catalog has ${count} entries';
+      case 'discovery_opds_test_unauthorized':
+        return 'The server rejected the credentials. Komga needs your login email as the username, or an API key';
+      case 'discovery_opds_test_web_page':
+        return 'This address is a web page, not an OPDS catalog. Enter the catalog URL, for example …/opds/v2/catalog for Komga';
       case 'discovery_opds_url':
         return '目錄地址';
       case 'discovery_opds_url_hint':
-        return 'OPDS 端點，例如 https://books.example.com/api/v1/opds';
+        return 'OPDS 端點，例如 https://books.example.com/api/v1/opds · Komga: http://host:25600/opds/v2/catalog';
       case 'discovery_opds_url_invalid':
         return '請填寫有效的 HTTP 或 HTTPS 目錄地址';
       case 'discovery_opds_url_needs_http_optin':
@@ -617581,6 +618082,8 @@ extension on _StringsZhHk {
         return '使用者名稱';
       case 'discovery_opds_username_hint':
         return '公開目錄留空即可';
+      case 'discovery_opds_username_komga_hint':
+        return 'Komga: use your login email';
       case 'discovery_partial_failure':
         return '部分源不可用';
       case 'discovery_search_hint':
