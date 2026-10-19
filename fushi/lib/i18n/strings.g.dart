@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149345 (8785 per locale)
+/// Strings: 149481 (8793 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6638,6 +6638,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_import_segment_extensions => 'Extensions';
   String get media_import_segment_sources => 'Sources';
   String get media_import_segment_stores => 'Stores';
+  String get media_privacy_action => 'Privacy';
+  String get media_privacy_cleared_toast => 'No longer private';
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  String get media_privacy_marked_toast => 'Marked private';
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  String get media_privacy_switch => 'Keep this private';
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
   String get media_server_item_folder => 'Folder';
@@ -7000,7 +7012,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_clip_format_mp4_h264 =>
       'MP4 · H.264 (Anki\'s own player; use for AnkiMobile)';
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9; desktop only)';
+      'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9)';
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (plays inside the card, recommended)';
   String get mining_image_quality => 'Image / GIF quality';
@@ -23595,6 +23607,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'المستودعات';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -24203,7 +24235,7 @@ class _StringsAr extends _StringsEn {
       'MP4 · H.264 (مشغّل Anki نفسه؛ استخدمه مع AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9؛ لسطح المكتب فقط)';
+      'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (يُشغَّل داخل البطاقة، موصى به)';
@@ -45113,6 +45145,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositorys';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -45736,7 +45788,7 @@ class _StringsDe extends _StringsEn {
       'MP4 · H.264 (eigener Player von Anki; für AnkiMobile verwenden)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9; nur Desktop)';
+      'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (wird in der Karte abgespielt, empfohlen)';
@@ -66827,6 +66879,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositorios';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -67447,7 +67519,7 @@ class _StringsEs extends _StringsEn {
       'MP4 · H.264 (reproductor propio de Anki; úsalo para AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9; solo escritorio)';
+      'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (se reproduce dentro de la tarjeta, recomendado)';
@@ -88611,6 +88683,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Dépôts';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -89235,7 +89327,7 @@ class _StringsFr extends _StringsEn {
       'MP4 · H.264 (lecteur propre d\'Anki ; à utiliser pour AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9 ; ordinateur uniquement)';
+      'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (lu dans la carte, recommandé)';
@@ -110246,6 +110338,26 @@ class _StringsId extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositori';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -110860,7 +110972,7 @@ class _StringsId extends _StringsEn {
       'MP4 · H.264 (pemutar Anki sendiri; gunakan untuk AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9; hanya desktop)';
+      'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (diputar di dalam kartu, direkomendasikan)';
@@ -131817,6 +131929,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repository';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -132439,7 +132571,7 @@ class _StringsIt extends _StringsEn {
       'MP4 · H.264 (lettore di Anki; da usare per AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9; solo desktop)';
+      'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (si riproduce dentro la carta, consigliato)';
@@ -152920,6 +153052,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_import_segment_stores => 'リポジトリ';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -153501,7 +153653,7 @@ class _StringsJa extends _StringsEn {
       'MP4 · H.264（Anki 独自のプレーヤー。AnkiMobile 向け）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間。デスクトップのみ）';
+      'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（カード内で再生、推奨）';
   @override
@@ -173545,6 +173697,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_import_segment_stores => '저장소';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -174127,7 +174299,7 @@ class _StringsKo extends _StringsEn {
       'MP4 · H.264 (Anki 자체 플레이어, AnkiMobile용)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배, 데스크톱 전용)';
+      'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배)';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9 (카드 안에서 재생, 권장)';
   @override
@@ -194703,6 +194875,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repository\'s';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -195321,7 +195513,7 @@ class _StringsNl extends _StringsEn {
       'MP4 · H.264 (eigen speler van Anki; gebruik voor AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9; alleen desktop)';
+      'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (speelt binnen de kaart af, aanbevolen)';
@@ -216341,6 +216533,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositórios';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -216961,7 +217173,7 @@ class _StringsPtBr extends _StringsEn {
       'MP4 · H.264 (player do próprio Anki; use para o AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9; somente desktop)';
+      'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (reproduz dentro do cartão, recomendado)';
@@ -237954,6 +238166,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Репозитории';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -238574,7 +238806,7 @@ class _StringsRu extends _StringsEn {
       'MP4 · H.264 (встроенный плеер Anki; для AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9; только на компьютере)';
+      'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (воспроизводится внутри карточки, рекомендуется)';
@@ -259388,6 +259620,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_import_segment_stores => 'ที่เก็บ';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -260000,7 +260252,7 @@ class _StringsTh extends _StringsEn {
       'MP4 · H.264 (เครื่องเล่นของ Anki เอง ใช้กับ AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9 เฉพาะเดสก์ท็อป)';
+      'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9)';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9 (เล่นในการ์ด แนะนำ)';
   @override
@@ -280795,6 +281047,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Depolar';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -281411,7 +281683,7 @@ class _StringsTr extends _StringsEn {
       'MP4 · H.264 (Anki\'nin kendi oynatıcısı; AnkiMobile için kullanın)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi; yalnızca masaüstü)';
+      'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (kartın içinde oynar, önerilir)';
@@ -302245,6 +302517,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Kho';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -302857,7 +303149,7 @@ class _StringsVi extends _StringsEn {
       'MP4 · H.264 (trình phát riêng của Anki; dùng cho AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9; chỉ máy tính)';
+      'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (phát trong thẻ, khuyến nghị)';
@@ -322719,6 +323011,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_import_segment_stores => '仓库';
   @override
+  String get media_privacy_action => '私密';
+  @override
+  String get media_privacy_cleared_toast => '已取消私密';
+  @override
+  String get media_privacy_hint =>
+      '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      '读取私密状态失败，暂时无法修改：${reason}';
+  @override
+  String get media_privacy_marked_toast => '已设为私密';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      '私密设置失败：${reason}';
+  @override
+  String get media_privacy_switch => '设为私密';
+  @override
   String get media_server_browse_by_folder => '按文件夹浏览';
   @override
   String get media_server_browse_by_title => '按作品浏览';
@@ -323272,7 +323584,7 @@ class _StringsZhCn extends _StringsEn {
       'MP4 · H.264（Anki 自带播放器；AnkiMobile 用这个）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍；仅桌面端）';
+      'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（卡片内播放，推荐）';
   @override
@@ -342475,6 +342787,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_import_segment_stores => '倉庫';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -343031,7 +343363,7 @@ class _StringsZhHk extends _StringsEn {
       'MP4 · H.264（Anki 自帶播放器；AnkiMobile 用這個）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍；僅桌面端）';
+      'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（卡片內播放，推薦）';
   @override
@@ -361539,6 +361871,25 @@ extension on _StringsEn {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Stores';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -362070,7 +362421,7 @@ extension on _StringsEn {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki\'s own player; use for AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9; desktop only)';
+        return 'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (plays inside the card, recommended)';
       case 'mining_image_quality':
@@ -379787,6 +380138,25 @@ extension on _StringsAr {
         return 'المصادر';
       case 'media_import_segment_stores':
         return 'المستودعات';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -380318,7 +380688,7 @@ extension on _StringsAr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (مشغّل Anki نفسه؛ استخدمه مع AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9؛ لسطح المكتب فقط)';
+        return 'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (يُشغَّل داخل البطاقة، موصى به)';
       case 'mining_image_quality':
@@ -398082,6 +398452,25 @@ extension on _StringsDe {
         return 'Quellen';
       case 'media_import_segment_stores':
         return 'Repositorys';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -398617,7 +399006,7 @@ extension on _StringsDe {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (eigener Player von Anki; für AnkiMobile verwenden)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9; nur Desktop)';
+        return 'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (wird in der Karte abgespielt, empfohlen)';
       case 'mining_image_quality':
@@ -416391,6 +416780,25 @@ extension on _StringsEs {
         return 'Fuentes';
       case 'media_import_segment_stores':
         return 'Repositorios';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -416926,7 +417334,7 @@ extension on _StringsEs {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (reproductor propio de Anki; úsalo para AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9; solo escritorio)';
+        return 'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (se reproduce dentro de la tarjeta, recomendado)';
       case 'mining_image_quality':
@@ -434710,6 +435118,25 @@ extension on _StringsFr {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Dépôts';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -435245,7 +435672,7 @@ extension on _StringsFr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (lecteur propre d\'Anki ; à utiliser pour AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9 ; ordinateur uniquement)';
+        return 'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (lu dans la carte, recommandé)';
       case 'mining_image_quality':
@@ -453002,6 +453429,25 @@ extension on _StringsId {
         return 'Sumber';
       case 'media_import_segment_stores':
         return 'Repositori';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -453533,7 +453979,7 @@ extension on _StringsId {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (pemutar Anki sendiri; gunakan untuk AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9; hanya desktop)';
+        return 'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (diputar di dalam kartu, direkomendasikan)';
       case 'mining_image_quality':
@@ -471283,6 +471729,25 @@ extension on _StringsIt {
         return 'Fonti';
       case 'media_import_segment_stores':
         return 'Repository';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -471818,7 +472283,7 @@ extension on _StringsIt {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (lettore di Anki; da usare per AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9; solo desktop)';
+        return 'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (si riproduce dentro la carta, consigliato)';
       case 'mining_image_quality':
@@ -489522,6 +489987,25 @@ extension on _StringsJa {
         return 'ソース';
       case 'media_import_segment_stores':
         return 'リポジトリ';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -490051,7 +490535,7 @@ extension on _StringsJa {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 独自のプレーヤー。AnkiMobile 向け）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間。デスクトップのみ）';
+        return 'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（カード内で再生、推奨）';
       case 'mining_image_quality':
@@ -507693,6 +508177,25 @@ extension on _StringsKo {
         return '소스';
       case 'media_import_segment_stores':
         return '저장소';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -508221,7 +508724,7 @@ extension on _StringsKo {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki 자체 플레이어, AnkiMobile용)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배, 데스크톱 전용)';
+        return 'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (카드 안에서 재생, 권장)';
       case 'mining_image_quality':
@@ -525940,6 +526443,25 @@ extension on _StringsNl {
         return 'Bronnen';
       case 'media_import_segment_stores':
         return 'Repository\'s';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -526475,7 +526997,7 @@ extension on _StringsNl {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (eigen speler van Anki; gebruik voor AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9; alleen desktop)';
+        return 'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (speelt binnen de kaart af, aanbevolen)';
       case 'mining_image_quality':
@@ -544233,6 +544755,25 @@ extension on _StringsPtBr {
         return 'Fontes';
       case 'media_import_segment_stores':
         return 'Repositórios';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -544768,7 +545309,7 @@ extension on _StringsPtBr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (player do próprio Anki; use para o AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9; somente desktop)';
+        return 'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (reproduz dentro do cartão, recomendado)';
       case 'mining_image_quality':
@@ -562530,6 +563071,25 @@ extension on _StringsRu {
         return 'Источники';
       case 'media_import_segment_stores':
         return 'Репозитории';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -563065,7 +563625,7 @@ extension on _StringsRu {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (встроенный плеер Anki; для AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9; только на компьютере)';
+        return 'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (воспроизводится внутри карточки, рекомендуется)';
       case 'mining_image_quality':
@@ -580796,6 +581356,25 @@ extension on _StringsTh {
         return 'แหล่งที่มา';
       case 'media_import_segment_stores':
         return 'ที่เก็บ';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -581327,7 +581906,7 @@ extension on _StringsTh {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (เครื่องเล่นของ Anki เอง ใช้กับ AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9 เฉพาะเดสก์ท็อป)';
+        return 'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (เล่นในการ์ด แนะนำ)';
       case 'mining_image_quality':
@@ -599068,6 +599647,25 @@ extension on _StringsTr {
         return 'Kaynaklar';
       case 'media_import_segment_stores':
         return 'Depolar';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -599602,7 +600200,7 @@ extension on _StringsTr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki\'nin kendi oynatıcısı; AnkiMobile için kullanın)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi; yalnızca masaüstü)';
+        return 'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (kartın içinde oynar, önerilir)';
       case 'mining_image_quality':
@@ -617338,6 +617936,25 @@ extension on _StringsVi {
         return 'Nguồn';
       case 'media_import_segment_stores':
         return 'Kho';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -617869,7 +618486,7 @@ extension on _StringsVi {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (trình phát riêng của Anki; dùng cho AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9; chỉ máy tính)';
+        return 'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (phát trong thẻ, khuyến nghị)';
       case 'mining_image_quality':
@@ -635486,6 +636103,23 @@ extension on _StringsZhCn {
         return '在线源';
       case 'media_import_segment_stores':
         return '仓库';
+      case 'media_privacy_action':
+        return '私密';
+      case 'media_privacy_cleared_toast':
+        return '已取消私密';
+      case 'media_privacy_hint':
+        return '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) => '读取私密状态失败，暂时无法修改：${reason}';
+      case 'media_privacy_marked_toast':
+        return '已设为私密';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) => '私密设置失败：${reason}';
+      case 'media_privacy_switch':
+        return '设为私密';
       case 'media_server_browse_by_folder':
         return '按文件夹浏览';
       case 'media_server_browse_by_title':
@@ -636011,7 +636645,7 @@ extension on _StringsZhCn {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 自带播放器；AnkiMobile 用这个）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍；仅桌面端）';
+        return 'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（卡片内播放，推荐）';
       case 'mining_image_quality':
@@ -653552,6 +654186,25 @@ extension on _StringsZhHk {
         return '線上源';
       case 'media_import_segment_stores':
         return '倉庫';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -654078,7 +654731,7 @@ extension on _StringsZhHk {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 自帶播放器；AnkiMobile 用這個）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍；僅桌面端）';
+        return 'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（卡片內播放，推薦）';
       case 'mining_image_quality':
