@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142443 (8379 per locale)
+/// Strings: 142477 (8381 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10388,8 +10388,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
   String get video_bluray_stream_encrypted =>
       'This Blu-ray stream is still AACS-encrypted. Fushi does not decrypt protected discs, so it can only play unencrypted BDMV folders or video files.';
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   String get video_bottom_next_cue => 'Next subtitle (forward a bit if none)';
   String get video_bottom_play_pause => 'Play / pause';
   String get video_bottom_prev_cue => 'Previous subtitle (back a bit if none)';
@@ -29488,8 +29498,20 @@ class _StringsAr extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'لا يزال بث Blu-ray هذا مشفّرًا بـ AACS. لا يفك Fushi تشفير الأقراص المحمية، لذا يمكنه تشغيل مجلدات BDMV غير المشفّرة أو ملفات الفيديو فقط.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'الترجمة التالية (تقديم قليلًا إن لم توجد)';
@@ -50065,8 +50087,20 @@ class _StringsDe extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Dieser Blu-ray-Stream ist noch AACS-verschlüsselt. Fushi entschlüsselt keine geschützten Discs und kann daher nur unverschlüsselte BDMV-Ordner oder Videodateien abspielen.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Nächster Untertitel (falls keiner, etwas vor)';
@@ -70749,8 +70783,20 @@ class _StringsEs extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Esta transmisión Blu-ray sigue cifrada con AACS. Fushi no descifra discos protegidos, por lo que solo puede reproducir carpetas BDMV sin cifrar o archivos de vídeo.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Subtítulo siguiente (avanza un poco si no hay)';
@@ -91507,8 +91553,20 @@ class _StringsFr extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Ce flux Blu-ray est encore chiffré en AACS. Fushi ne déchiffre pas les disques protégés ; il ne peut donc lire que des dossiers BDMV non chiffrés ou des fichiers vidéo.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Sous-titre suivant (avancer un peu s\'il n\'y en a pas)';
@@ -112007,8 +112065,20 @@ class _StringsId extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Stream Blu-ray ini masih terenkripsi AACS. Fushi tidak mendekripsi disk yang dilindungi, sehingga hanya dapat memutar folder BDMV tanpa enkripsi atau file video.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Subtitle berikutnya (maju sedikit jika tidak ada)';
@@ -132584,8 +132654,20 @@ class _StringsIt extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Questo flusso Blu-ray è ancora cifrato con AACS. Fushi non decifra i dischi protetti, quindi può riprodurre solo cartelle BDMV non cifrate o file video.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Sottotitolo successivo (avanti un po\' se assente)';
@@ -152350,8 +152432,20 @@ class _StringsJa extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'この Blu-ray ストリームはまだ AACS で暗号化されています。Fushi は保護されたディスクの復号を行わないため、暗号化されていない BDMV フォルダまたは動画ファイルのみ再生できます。';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue => '次の字幕（なければ少し進む）';
   @override
@@ -171958,8 +172052,20 @@ class _StringsKo extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       '이 Blu-ray 스트림은 아직 AACS로 암호화되어 있습니다. Fushi는 보호된 디스크를 복호화하지 않으므로 암호화되지 않은 BDMV 폴더 또는 비디오 파일만 재생할 수 있습니다.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue => '다음 자막(없으면 조금 앞으로)';
   @override
@@ -192348,8 +192454,20 @@ class _StringsNl extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Deze Blu-ray-stream is nog steeds AACS-versleuteld. Fushi ontsleutelt geen beveiligde schijven en kan dus alleen onversleutelde BDMV-mappen of videobestanden afspelen.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Volgende ondertitel (anders een stukje vooruit)';
@@ -212942,8 +213060,20 @@ class _StringsPtBr extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Este stream Blu-ray ainda está criptografado com AACS. O Fushi não descriptografa discos protegidos, então só consegue reproduzir pastas BDMV ou arquivos de vídeo sem criptografia.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Próxima legenda (avança um pouco se não houver)';
@@ -233509,8 +233639,20 @@ class _StringsRu extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Этот поток Blu-ray всё ещё зашифрован AACS. Fushi не расшифровывает защищённые диски, поэтому может воспроизводить только незашифрованные папки BDMV или видеофайлы.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Следующий субтитр (если нет — немного вперёд)';
@@ -253818,8 +253960,20 @@ class _StringsTh extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'สตรีม Blu-ray นี้ยังเข้ารหัส AACS อยู่ Fushi ไม่ถอดรหัสแผ่นที่มีการป้องกัน จึงเล่นได้เฉพาะโฟลเดอร์ BDMV หรือไฟล์วิดีโอที่ไม่เข้ารหัส';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'คำบรรยายถัดไป (เดินหน้าเล็กน้อยถ้าไม่มี)';
@@ -274225,8 +274379,20 @@ class _StringsTr extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Bu Blu-ray akışı hâlâ AACS ile şifreli. Fushi korumalı diskleri çözmez, bu yüzden yalnızca şifresiz BDMV klasörlerini veya video dosyalarını oynatabilir.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue => 'Sonraki altyazı (yoksa biraz ileri)';
   @override
@@ -294604,8 +294770,20 @@ class _StringsVi extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       'Luồng Blu-ray này vẫn bị mã hóa AACS. Fushi không giải mã đĩa được bảo vệ, nên chỉ phát được thư mục BDMV chưa mã hóa hoặc tệp video.';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue =>
       'Câu phụ đề sau (tới một chút nếu không có)';
@@ -313513,8 +313691,20 @@ class _StringsZhCn extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       '这张盘使用的保护格式尚不支持。目前支持具有匹配播放配置的 AACS 1 蓝光盘。';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      '该蓝光码流已损坏：${name} 第 ${offset} 字节处的数据读不出来。是光盘或其拷贝损坏（例如读盘错误被填零），不是播放配置的问题。请清洁光盘或重新抓取后重试。';
+  @override
   String get video_bluray_stream_encrypted =>
       '该蓝光码流仍处于 AACS 加密状态。Fushi 不解密受保护的光盘，只能播放未加密的 BDMV 目录或视频文件。';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      '无法解密 ${name} 第 ${offset} 字节处的数据：KEYDB.cfg 中的密钥与这张盘不匹配，或数据已损坏。请先检查 KEYDB.cfg；如果这张盘的其它标题能正常播放，多半是拷贝损坏。';
   @override
   String get video_bottom_next_cue => '下一句字幕（无字幕则前进一段）';
   @override
@@ -332467,8 +332657,20 @@ class _StringsZhHk extends _StringsEn {
   String get video_bluray_protection_unsupported =>
       'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
   @override
+  String video_bluray_stream_corrupt({
+    required Object name,
+    required Object offset,
+  }) =>
+      'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
+  @override
   String get video_bluray_stream_encrypted =>
       '該藍光碼流仍處於 AACS 加密狀態。Fushi 不解密受保護的光盤，只能播放未加密的 BDMV 目錄或影片檔案。';
+  @override
+  String video_bluray_stream_undecryptable({
+    required Object name,
+    required Object offset,
+  }) =>
+      'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
   @override
   String get video_bottom_next_cue => '下一句字幕（無字幕則前進一段）';
   @override
@@ -350089,8 +350291,14 @@ extension on _StringsEn {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'This Blu-ray stream is still AACS-encrypted. Fushi does not decrypt protected discs, so it can only play unencrypted BDMV folders or video files.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Next subtitle (forward a bit if none)';
       case 'video_bottom_play_pause':
@@ -367474,8 +367682,14 @@ extension on _StringsAr {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'لا يزال بث Blu-ray هذا مشفّرًا بـ AACS. لا يفك Fushi تشفير الأقراص المحمية، لذا يمكنه تشغيل مجلدات BDMV غير المشفّرة أو ملفات الفيديو فقط.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'الترجمة التالية (تقديم قليلًا إن لم توجد)';
       case 'video_bottom_play_pause':
@@ -384929,8 +385143,14 @@ extension on _StringsDe {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Dieser Blu-ray-Stream ist noch AACS-verschlüsselt. Fushi entschlüsselt keine geschützten Discs und kann daher nur unverschlüsselte BDMV-Ordner oder Videodateien abspielen.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Nächster Untertitel (falls keiner, etwas vor)';
       case 'video_bottom_play_pause':
@@ -402376,8 +402596,14 @@ extension on _StringsEs {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Esta transmisión Blu-ray sigue cifrada con AACS. Fushi no descifra discos protegidos, por lo que solo puede reproducir carpetas BDMV sin cifrar o archivos de vídeo.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Subtítulo siguiente (avanza un poco si no hay)';
       case 'video_bottom_play_pause':
@@ -419836,8 +420062,14 @@ extension on _StringsFr {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Ce flux Blu-ray est encore chiffré en AACS. Fushi ne déchiffre pas les disques protégés ; il ne peut donc lire que des dossiers BDMV non chiffrés ou des fichiers vidéo.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Sous-titre suivant (avancer un peu s\'il n\'y en a pas)';
       case 'video_bottom_play_pause':
@@ -437248,8 +437480,14 @@ extension on _StringsId {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Stream Blu-ray ini masih terenkripsi AACS. Fushi tidak mendekripsi disk yang dilindungi, sehingga hanya dapat memutar folder BDMV tanpa enkripsi atau file video.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Subtitle berikutnya (maju sedikit jika tidak ada)';
       case 'video_bottom_play_pause':
@@ -454686,8 +454924,14 @@ extension on _StringsIt {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Questo flusso Blu-ray è ancora cifrato con AACS. Fushi non decifra i dischi protetti, quindi può riprodurre solo cartelle BDMV non cifrate o file video.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Sottotitolo successivo (avanti un po\' se assente)';
       case 'video_bottom_play_pause':
@@ -472021,8 +472265,14 @@ extension on _StringsJa {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'この Blu-ray ストリームはまだ AACS で暗号化されています。Fushi は保護されたディスクの復号を行わないため、暗号化されていない BDMV フォルダまたは動画ファイルのみ再生できます。';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return '次の字幕（なければ少し進む）';
       case 'video_bottom_play_pause':
@@ -489341,8 +489591,14 @@ extension on _StringsKo {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return '이 Blu-ray 스트림은 아직 AACS로 암호화되어 있습니다. Fushi는 보호된 디스크를 복호화하지 않으므로 암호화되지 않은 BDMV 폴더 또는 비디오 파일만 재생할 수 있습니다.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return '다음 자막(없으면 조금 앞으로)';
       case 'video_bottom_play_pause':
@@ -506758,8 +507014,14 @@ extension on _StringsNl {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Deze Blu-ray-stream is nog steeds AACS-versleuteld. Fushi ontsleutelt geen beveiligde schijven en kan dus alleen onversleutelde BDMV-mappen of videobestanden afspelen.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Volgende ondertitel (anders een stukje vooruit)';
       case 'video_bottom_play_pause':
@@ -524188,8 +524450,14 @@ extension on _StringsPtBr {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Este stream Blu-ray ainda está criptografado com AACS. O Fushi não descriptografa discos protegidos, então só consegue reproduzir pastas BDMV ou arquivos de vídeo sem criptografia.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Próxima legenda (avança um pouco se não houver)';
       case 'video_bottom_play_pause':
@@ -541626,8 +541894,14 @@ extension on _StringsRu {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Этот поток Blu-ray всё ещё зашифрован AACS. Fushi не расшифровывает защищённые диски, поэтому может воспроизводить только незашифрованные папки BDMV или видеофайлы.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Следующий субтитр (если нет — немного вперёд)';
       case 'video_bottom_play_pause':
@@ -559020,8 +559294,14 @@ extension on _StringsTh {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'สตรีม Blu-ray นี้ยังเข้ารหัส AACS อยู่ Fushi ไม่ถอดรหัสแผ่นที่มีการป้องกัน จึงเล่นได้เฉพาะโฟลเดอร์ BDMV หรือไฟล์วิดีโอที่ไม่เข้ารหัส';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'คำบรรยายถัดไป (เดินหน้าเล็กน้อยถ้าไม่มี)';
       case 'video_bottom_play_pause':
@@ -576436,8 +576716,14 @@ extension on _StringsTr {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Bu Blu-ray akışı hâlâ AACS ile şifreli. Fushi korumalı diskleri çözmez, bu yüzden yalnızca şifresiz BDMV klasörlerini veya video dosyalarını oynatabilir.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Sonraki altyazı (yoksa biraz ileri)';
       case 'video_bottom_play_pause':
@@ -593846,8 +594132,14 @@ extension on _StringsVi {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return 'Luồng Blu-ray này vẫn bị mã hóa AACS. Fushi không giải mã đĩa được bảo vệ, nên chỉ phát được thư mục BDMV chưa mã hóa hoặc tệp video.';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return 'Câu phụ đề sau (tới một chút nếu không có)';
       case 'video_bottom_play_pause':
@@ -611070,8 +611362,14 @@ extension on _StringsZhCn {
         return '未找到这张盘的匹配播放配置，请提供更新的 KEYDB.cfg 后重试。';
       case 'video_bluray_protection_unsupported':
         return '这张盘使用的保护格式尚不支持。目前支持具有匹配播放配置的 AACS 1 蓝光盘。';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            '该蓝光码流已损坏：${name} 第 ${offset} 字节处的数据读不出来。是光盘或其拷贝损坏（例如读盘错误被填零），不是播放配置的问题。请清洁光盘或重新抓取后重试。';
       case 'video_bluray_stream_encrypted':
         return '该蓝光码流仍处于 AACS 加密状态。Fushi 不解密受保护的光盘，只能播放未加密的 BDMV 目录或视频文件。';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            '无法解密 ${name} 第 ${offset} 字节处的数据：KEYDB.cfg 中的密钥与这张盘不匹配，或数据已损坏。请先检查 KEYDB.cfg；如果这张盘的其它标题能正常播放，多半是拷贝损坏。';
       case 'video_bottom_next_cue':
         return '下一句字幕（无字幕则前进一段）';
       case 'video_bottom_play_pause':
@@ -628321,8 +628619,14 @@ extension on _StringsZhHk {
         return 'No matching playback configuration was found for this disc. Provide an updated KEYDB.cfg and retry.';
       case 'video_bluray_protection_unsupported':
         return 'This disc uses an unsupported protection format. AACS 1 with a matching playback configuration is supported.';
+      case 'video_bluray_stream_corrupt':
+        return ({required Object name, required Object offset}) =>
+            'This Blu-ray stream is damaged: ${name} cannot be read at byte ${offset}. The disc or its copy is bad (for example a read error filled with zeros); the playback configuration is not at fault. Clean or re-rip the disc and retry.';
       case 'video_bluray_stream_encrypted':
         return '該藍光碼流仍處於 AACS 加密狀態。Fushi 不解密受保護的光盤，只能播放未加密的 BDMV 目錄或影片檔案。';
+      case 'video_bluray_stream_undecryptable':
+        return ({required Object name, required Object offset}) =>
+            'Could not decrypt ${name} at byte ${offset}: the KEYDB.cfg key does not match this disc, or the data is damaged. Check KEYDB.cfg first; if other titles on this disc play, the copy is likely damaged.';
       case 'video_bottom_next_cue':
         return '下一句字幕（無字幕則前進一段）';
       case 'video_bottom_play_pause':
