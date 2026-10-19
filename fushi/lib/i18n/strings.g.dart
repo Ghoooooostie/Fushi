@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142579 (8387 per locale)
+/// Strings: 145962 (8586 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -267,6 +267,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} set individually';
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   String get ai_feature_unset => 'Not set';
   String get ai_feature_video_identify => 'Video identification';
   String get ai_feature_video_identify_assist_summary =>
@@ -5314,6 +5317,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get hover_auto_lookup => 'Look up on hover';
   String get hover_auto_lookup_hint =>
       'Look up automatically when the mouse hovers over a character; no need to click or hold Shift. Triggers at most one popup layer. Desktop only.';
+  String get hover_lookup_modifier => 'Hover lookup key';
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
   String get icon_custom => 'Custom';
   String get icon_custom_confirm_body =>
       'This will create a home screen shortcut with your chosen image. Continue?';
@@ -6587,6 +6593,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_volume_key_paging => 'Volume keys turn pages';
   String get manga_volume_key_paging_subtitle =>
       'Use volume up and down to turn pages in the manga reader';
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  String get manga_web_chapter_next => 'Next chapter';
+  String get manga_web_chapter_prev => 'Previous chapter';
+  String get manga_web_chapter_read => 'Read in Fushi';
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
   String get manga_wide_page_solo => 'Wide pages alone';
   String get manga_wide_page_solo_subtitle =>
       'Show a double-width spread page on its own';
@@ -7014,7 +7032,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This feature module is turned off in Settings > Appearance > Feature modules.';
   String get module_downloads_hidden_hint =>
       'The Browse tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
-  String get module_extension_label => 'Browser extension';
   String get move_down => 'Move down';
   String get move_up => 'Move up';
   String get name => 'Name';
@@ -7026,6 +7043,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get nav_lookup => 'Lookup';
   String get nav_srs => 'Review';
   String get nav_video => 'Video';
+  String get nav_web => 'Browser';
   String get network_proxy_address_hint =>
       'HTTP proxy server used by all public internet requests';
   String get network_proxy_auto_hint =>
@@ -7123,6 +7141,26 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
   String get novel_store_empty =>
       'No plugin repositories yet. Fushi doesn\'t include any — add the index URL of an LNReader plugin repository you trust.';
+  String get novel_web_chapter_next => 'Next chapter';
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  String get novel_web_preview_read => 'Read';
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   String get now_listening_label => 'Now listening';
   String get ocr_llm_default_accept => 'Turn on';
   String ocr_llm_default_body({required Object provider}) =>
@@ -7230,8 +7268,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'EPUB reading with lookup and audiobook sync';
   String get onboarding_feature_browse_hint =>
       'Online sources, extensions, discovery and downloads';
-  String get onboarding_feature_extension_hint =>
-      'Look up words on any web page (desktop only)';
   String get onboarding_feature_fonts => 'Custom fonts';
   String get onboarding_feature_fonts_hint =>
       'Use your own fonts for the interface, book text and dictionary';
@@ -7254,6 +7290,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Turn lookups into cards and choose where to review them';
   String get onboarding_feature_video => 'Video';
   String get onboarding_feature_video_hint => 'Subtitle lookup and card mining';
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   String get onboarding_features_modules_hint =>
       'Unchecked pages are hidden from the navigation bar. Change anytime in Settings → Appearance.';
   String get onboarding_features_modules_title => 'Library pages';
@@ -11758,6 +11802,159 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_adjust_collapse => 'Collapse';
   String get video_subtitle_adjust_expand => 'Expand';
   String get video_subtitle_adjust_title => 'Subtitle adjustments';
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  String get video_subtitle_ai_hide => 'Hide';
+  String get video_subtitle_ai_model_label => 'Speech model';
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  String get video_subtitle_ai_resume => 'Continue';
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  String get video_subtitle_ai_start => 'Start';
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  String get video_subtitle_ai_target_label => 'Target';
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
   String get video_subtitle_anchor_bottom => 'Bottom';
   String get video_subtitle_anchor_top => 'Top';
   String video_subtitle_archive_pack({required Object format}) =>
@@ -11829,6 +12026,52 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Text recognized · tap a word';
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  String get video_subtitle_glossary_add => 'Add entry';
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  String get video_subtitle_glossary_field_kind => 'Category';
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  String get video_subtitle_glossary_field_note => 'Note';
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  String get video_subtitle_glossary_open => 'Glossary';
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  String get video_subtitle_glossary_save => 'Save';
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  String get video_subtitle_glossary_title => 'Glossary';
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   String get video_subtitle_graphic_hint =>
       'Graphic subtitle · shown on video · pause to look up words (OCR)';
   String get video_subtitle_graphic_learning_hint =>
@@ -12054,6 +12297,52 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get view_illustrations => 'Illustrations';
   String get volume_button_page_turning => 'Volume button page turning';
   String get volume_key_sentence_nav => 'Volume key sentence navigation';
+  String get web_adblock_allowlist => 'Sites not to block';
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  String get web_adblock_section_title => 'Web ad blocking';
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  String get web_adblock_update_done => 'Filter lists updated';
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  String get web_adblock_update_now => 'Update filter lists now';
+  String get web_browser_address_hint => 'Enter a website address';
+  String get web_browser_address_invalid => 'Not a valid website address';
+  String get web_browser_forward => 'Forward';
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  String get web_browser_site_add => 'Add to sites';
+  String get web_browser_site_added => 'Added to sites';
+  String get web_browser_site_remove => 'Remove from sites';
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  String get web_browser_sites_title => 'Sites';
+  String get web_browser_title => 'Browser';
+  String get web_hub_browse => 'Web';
+  String get web_hub_video_sites => 'Video sites';
+  String get web_video_ad_skipping => 'Skipping ad…';
+  String get web_video_address_hint => 'Search or enter address';
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  String get web_video_chapter_credits => 'Credits';
+  String get web_video_chapter_intro => 'Intro';
+  String get web_video_chapter_main => 'Episode';
+  String get web_video_chapter_recap => 'Recap';
   String get web_video_hide_native_subtitles => 'Hide site subtitles';
   String get web_video_hosting_builtin =>
       'Built-in (1080p; super-resolution, screenshots and cards available)';
@@ -12062,6 +12351,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Native window (4K, hardware DRM; cards are queued for later)';
   String get web_video_import_hint =>
       'This is a web page (not a direct stream). It will open in the built-in web player.';
+  String get web_video_login_import => 'Import login from browser';
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   String get web_video_mine_queue_empty => 'No queued cards';
   String web_video_mine_queue_finished({
     required Object ok,
@@ -12077,11 +12373,29 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Queued for card creation (${count} pending)';
   String web_video_mine_switch_builtin({required Object count}) =>
       'Switch to built-in mode to create ${count} queued cards';
+  String get web_video_nav_close => 'Close';
+  String get web_video_nav_forward => 'Forward';
   String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_page_show => 'Back to web page';
+  String get web_video_player_open => 'Watch in player';
   String get web_video_player_unavailable =>
       'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
+  String get web_video_site_add => 'Add site';
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  String get web_video_site_address_invalid => 'Not a web address';
+  String get web_video_site_name_hint => 'Name (optional)';
+  String get web_video_site_open => 'Open';
+  String get web_video_site_remove => 'Remove';
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_loading => 'Loading…';
   String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_site => 'Site subtitles: select to load';
   String get wheel_page_turn_interval => 'Mouse wheel page-turn interval';
   String get window_caption_maximize => 'Maximize';
   String get window_caption_minimize => 'Minimize';
@@ -12250,6 +12564,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'غير معيّن';
   @override
@@ -20724,6 +21043,11 @@ class _StringsAr extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'البحث تلقائيًا عند تمرير مؤشر الماوس فوق حرف؛ دون الحاجة إلى النقر أو الضغط على Shift. يُظهر طبقة منبثقة واحدة كحد أقصى. لأجهزة سطح المكتب فقط.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'مخصص';
   @override
   String get icon_custom_confirm_body =>
@@ -22892,6 +23216,26 @@ class _StringsAr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'استخدم زري رفع وخفض الصوت لتقليب الصفحات في قارئ المانغا';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'الصفحات العريضة وحدها';
   @override
   String get manga_wide_page_solo_subtitle => 'عرض الصفحة المزدوجة العرض وحدها';
@@ -23612,8 +23956,6 @@ class _StringsAr extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'تبويب التصفح مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
   @override
-  String get module_extension_label => 'إضافة المتصفح';
-  @override
   String get move_down => 'تحريك لأسفل';
   @override
   String get move_up => 'تحريك لأعلى';
@@ -23635,6 +23977,8 @@ class _StringsAr extends _StringsEn {
   String get nav_srs => 'المراجعة';
   @override
   String get nav_video => 'فيديو';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'خادم وكيل HTTP تستخدمه كل طلبات الإنترنت العامة';
@@ -23799,6 +24143,38 @@ class _StringsAr extends _StringsEn {
   @override
   String get novel_store_empty =>
       'لا توجد مستودعات إضافات بعد. لا يتضمن Fushi أي مستودع — أضف رابط فهرس مستودع إضافات LNReader تثق به.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'يُستمع الآن';
   @override
@@ -23974,9 +24350,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'المصادر عبر الإنترنت والإضافات والاكتشاف والتنزيلات';
   @override
-  String get onboarding_feature_extension_hint =>
-      'ابحث عن الكلمات في أي صفحة ويب (سطح المكتب فقط)';
-  @override
   String get onboarding_feature_fonts => 'خطوط مخصّصة';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -24015,6 +24388,18 @@ class _StringsAr extends _StringsEn {
   String get onboarding_feature_video => 'الفيديو';
   @override
   String get onboarding_feature_video_hint => 'بحث في الترجمات وإنشاء بطاقات';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'الصفحات غير المحدّدة تُخفى من شريط التنقل. يمكنك تغيير ذلك في أي وقت من الإعدادات → المظهر.';
@@ -31830,6 +32215,246 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'ضبط الترجمة';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'أسفل';
   @override
   String get video_subtitle_anchor_top => 'أعلى';
@@ -31938,6 +32563,82 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'ترجمة رسومية · تُعرض على الفيديو · أوقف مؤقتًا للبحث عن الكلمات (OCR)';
@@ -32306,6 +33007,88 @@ class _StringsAr extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'التنقل بين الجمل بأزرار الصوت';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'إخفاء ترجمة الموقع';
   @override
   String get web_video_hosting_builtin =>
@@ -32318,6 +33101,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'لا توجد بطاقات في قائمة الانتظار';
   @override
@@ -32341,14 +33135,47 @@ class _StringsAr extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'لم يتم التقاط أي ترجمة بعد';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'ترجمة مباشرة (مأخوذة من الصفحة)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'مسار الترجمة';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'فترة قلب الصفحة بعجلة الفأرة';
   @override
@@ -32533,6 +33360,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Nicht festgelegt';
   @override
@@ -41175,6 +42007,11 @@ class _StringsDe extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Automatisch nachschlagen, wenn die Maus über ein Zeichen fährt; ohne Klicken oder Shift zu halten. Erzeugt höchstens eine Popup-Ebene. Nur Desktop.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Benutzerdefiniert';
   @override
   String get icon_custom_confirm_body =>
@@ -43393,6 +44230,26 @@ class _StringsDe extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Lautstärke hoch und runter zum Seitenumblättern im Manga-Reader verwenden';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Breite Seiten einzeln';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -44131,8 +44988,6 @@ class _StringsDe extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Der Tab „Durchsuchen“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
   @override
-  String get module_extension_label => 'Browser-Erweiterung';
-  @override
   String get move_down => 'Nach unten';
   @override
   String get move_up => 'Nach oben';
@@ -44154,6 +45009,8 @@ class _StringsDe extends _StringsEn {
   String get nav_srs => 'Wiederholen';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'HTTP-Proxyserver für alle Anfragen ins öffentliche Internet';
@@ -44320,6 +45177,38 @@ class _StringsDe extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Noch keine Plugin-Repositories. Fushi enthält keine – fügen Sie die Index-URL eines LNReader-Plugin-Repositorys hinzu, dem Sie vertrauen.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Wird gerade gehört';
   @override
@@ -44497,9 +45386,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Online-Quellen, Erweiterungen, Entdecken und Downloads';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Wörter auf beliebigen Webseiten nachschlagen (nur Desktop)';
-  @override
   String get onboarding_feature_fonts => 'Eigene Schriften';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -44540,6 +45426,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Untertitel nachschlagen und Karten erstellen';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Nicht angehakte Seiten werden in der Navigationsleiste ausgeblendet. Jederzeit änderbar unter Einstellungen → Erscheinungsbild.';
@@ -52487,6 +53385,246 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Untertitel anpassen';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Unten';
   @override
   String get video_subtitle_anchor_top => 'Oben';
@@ -52597,6 +53735,82 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Grafikuntertitel · im Bild angezeigt · Nachschlagen nach Pause (OCR)';
@@ -52978,6 +54192,88 @@ class _StringsDe extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Satznavigation mit Lautstärketasten';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Website-Untertitel ausblenden';
   @override
   String get web_video_hosting_builtin =>
@@ -52990,6 +54286,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Keine wartenden Karten';
   @override
@@ -53013,14 +54320,47 @@ class _StringsDe extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Noch keine Untertitel erfasst';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'Live-Untertitel (von der Seite erfasst)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Untertitelspur';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'Mausrad-Blätterintervall';
   @override
@@ -53206,6 +54546,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Sin definir';
   @override
@@ -61864,6 +63209,11 @@ class _StringsEs extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Busca automáticamente al pasar el ratón sobre un carácter; sin hacer clic ni mantener Mayús. Muestra como máximo una capa de ventana emergente. Solo en escritorio.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Personalizado';
   @override
   String get icon_custom_confirm_body =>
@@ -64092,6 +65442,26 @@ class _StringsEs extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Use subir y bajar volumen para pasar páginas en el lector de manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Páginas anchas solas';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -64828,8 +66198,6 @@ class _StringsEs extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'La pestaña Explorar está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
   @override
-  String get module_extension_label => 'Extensión del navegador';
-  @override
   String get move_down => 'Mover abajo';
   @override
   String get move_up => 'Mover arriba';
@@ -64851,6 +66219,8 @@ class _StringsEs extends _StringsEn {
   String get nav_srs => 'Repaso';
   @override
   String get nav_video => 'Vídeo';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Servidor proxy HTTP usado por todas las solicitudes a Internet público';
@@ -65017,6 +66387,38 @@ class _StringsEs extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Aún no hay repositorios de plugins. Fushi no incluye ninguno: agregue la URL del índice de un repositorio de plugins de LNReader en el que confíe.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Escuchando ahora';
   @override
@@ -65194,9 +66596,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Fuentes en línea, extensiones, descubrimiento y descargas';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Busque palabras en cualquier página web (solo escritorio)';
-  @override
   String get onboarding_feature_fonts => 'Fuentes personalizadas';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -65236,6 +66635,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Consulta en subtítulos y creación de tarjetas';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Las páginas sin marcar se ocultan de la barra de navegación. Puede cambiarlo cuando quiera en Ajustes → Apariencia.';
@@ -73215,6 +74626,246 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Ajustes de subtítulos';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Abajo';
   @override
   String get video_subtitle_anchor_top => 'Arriba';
@@ -73325,6 +74976,82 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Subtítulo gráfico · se muestra en el vídeo · consulta tras pausar (OCR)';
@@ -73706,6 +75433,88 @@ class _StringsEs extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Navegación de oraciones con teclas de volumen';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Ocultar subtítulos del sitio';
   @override
   String get web_video_hosting_builtin =>
@@ -73718,6 +75527,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'No hay tarjetas en cola';
   @override
@@ -73741,15 +75561,48 @@ class _StringsEs extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Cambiar al modo integrado para crear ${count} tarjetas en cola';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Aún no se han capturado subtítulos';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live =>
       'Subtítulos en vivo (capturados de la página)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Pista de subtítulos';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Intervalo de pasar página con la rueda';
@@ -73934,6 +75787,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Non défini';
   @override
@@ -82626,6 +84484,11 @@ class _StringsFr extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Recherche automatique lorsque la souris survole un caractère ; pas besoin de cliquer ni de maintenir Maj. Affiche au plus une fenêtre contextuelle. Bureau uniquement.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Personnalisé';
   @override
   String get icon_custom_confirm_body =>
@@ -84863,6 +86726,26 @@ class _StringsFr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Utiliser les touches volume haut et bas pour tourner les pages dans le lecteur de manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Pages larges seules';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -85602,8 +87485,6 @@ class _StringsFr extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'L\'onglet Parcourir est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
   @override
-  String get module_extension_label => 'Extension navigateur';
-  @override
   String get move_down => 'Descendre';
   @override
   String get move_up => 'Monter';
@@ -85625,6 +87506,8 @@ class _StringsFr extends _StringsEn {
   String get nav_srs => 'Révision';
   @override
   String get nav_video => 'Vidéo';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Serveur proxy HTTP utilisé par toutes les requêtes vers Internet public';
@@ -85793,6 +87676,38 @@ class _StringsFr extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Aucun dépôt de plugins pour l\'instant. Fushi n\'en inclut aucun : ajoutez l\'URL d\'index d\'un dépôt de plugins LNReader de confiance.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Écoute en cours';
   @override
@@ -85971,9 +87886,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Sources en ligne, extensions, découverte et téléchargements';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Rechercher des mots sur n\'importe quelle page web (ordinateur uniquement)';
-  @override
   String get onboarding_feature_fonts => 'Polices personnalisées';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -86014,6 +87926,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Recherche dans les sous-titres et création de cartes';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Les pages non cochées sont masquées de la barre de navigation. Modifiable à tout moment dans Paramètres → Apparence.';
@@ -94017,6 +95941,246 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Réglages des sous-titres';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Bas';
   @override
   String get video_subtitle_anchor_top => 'Haut';
@@ -94127,6 +96291,82 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Sous-titre graphique · affiché sur la vidéo · recherche après pause (OCR)';
@@ -94515,6 +96755,88 @@ class _StringsFr extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Navigation par phrase avec les touches de volume';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles =>
       'Masquer les sous-titres du site';
   @override
@@ -94528,6 +96850,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Aucune carte en attente';
   @override
@@ -94551,15 +96884,48 @@ class _StringsFr extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Passer en mode intégré pour créer ${count} cartes en attente';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Aucun sous-titre capturé pour l’instant';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live =>
       'Sous-titres en direct (capturés sur la page)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Piste de sous-titres';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Intervalle de changement de page à la molette';
@@ -94744,6 +97110,11 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Belum diatur';
   @override
@@ -103292,6 +105663,11 @@ class _StringsId extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Cari otomatis saat mouse diarahkan ke sebuah karakter; tanpa mengeklik atau menahan Shift. Memunculkan maksimal satu lapis popup. Hanya desktop.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Kustom';
   @override
   String get icon_custom_confirm_body =>
@@ -105485,6 +107861,26 @@ class _StringsId extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Gunakan tombol volume naik dan turun untuk mengganti halaman di pembaca manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Halaman lebar sendiri';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -106213,8 +108609,6 @@ class _StringsId extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Tab Jelajah disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
   @override
-  String get module_extension_label => 'Ekstensi browser';
-  @override
   String get move_down => 'Turunkan';
   @override
   String get move_up => 'Naikkan';
@@ -106236,6 +108630,8 @@ class _StringsId extends _StringsEn {
   String get nav_srs => 'Ulasan';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Server proxy HTTP yang dipakai semua permintaan internet publik';
@@ -106402,6 +108798,38 @@ class _StringsId extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Belum ada repositori plugin. Fushi tidak menyertakan satu pun — tambahkan URL indeks repositori plugin LNReader yang Anda percayai.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Sedang mendengarkan';
   @override
@@ -106579,9 +109007,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Sumber online, ekstensi, penemuan, dan unduhan';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Cari kata di halaman web mana pun (hanya desktop)';
-  @override
   String get onboarding_feature_fonts => 'Font kustom';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -106620,6 +109045,18 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Pencarian pada takarir dan pembuatan kartu';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Halaman yang tidak dicentang disembunyikan dari bilah navigasi. Bisa diubah kapan saja di Pengaturan → Tampilan.';
@@ -114496,6 +116933,246 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Penyesuaian subtitle';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Bawah';
   @override
   String get video_subtitle_anchor_top => 'Atas';
@@ -114606,6 +117283,82 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Subtitle grafis · ditampilkan di video · jeda untuk cari kata (OCR)';
@@ -114983,6 +117736,88 @@ class _StringsId extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Navigasi kalimat dengan tombol volume';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Sembunyikan subtitel situs';
   @override
   String get web_video_hosting_builtin =>
@@ -114995,6 +117830,17 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Tidak ada kartu yang antre';
   @override
@@ -115018,14 +117864,47 @@ class _StringsId extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Belum ada subtitel yang ditangkap';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'Teks langsung (diambil dari halaman)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Trek subtitel';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'Interval ganti halaman roda mouse';
   @override
@@ -115211,6 +118090,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Non impostato';
   @override
@@ -123825,6 +126709,11 @@ class _StringsIt extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Cerca automaticamente al passaggio del mouse su un carattere; senza fare clic né tenere premuto Maiusc. Mostra al massimo un livello di popup. Solo desktop.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Personalizzata';
   @override
   String get icon_custom_confirm_body =>
@@ -126042,6 +128931,26 @@ class _StringsIt extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Usa volume su e giù per cambiare pagina nel lettore manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Pagine larghe da sole';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -126778,8 +129687,6 @@ class _StringsIt extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'La scheda Sfoglia è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
   @override
-  String get module_extension_label => 'Estensione browser';
-  @override
   String get move_down => 'Sposta giù';
   @override
   String get move_up => 'Sposta su';
@@ -126801,6 +129708,8 @@ class _StringsIt extends _StringsEn {
   String get nav_srs => 'Ripasso';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Server proxy HTTP usato da tutte le richieste verso Internet pubblico';
@@ -126967,6 +129876,38 @@ class _StringsIt extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Nessun repository di plugin. Fushi non ne include nessuno: aggiungi l\'URL dell\'indice di un repository di plugin LNReader di cui ti fidi.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'In ascolto';
   @override
@@ -127144,9 +130085,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Fonti online, estensioni, scoperta e download';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Cerca parole su qualsiasi pagina web (solo desktop)';
-  @override
   String get onboarding_feature_fonts => 'Font personalizzati';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -127185,6 +130123,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Ricerca sui sottotitoli e creazione di carte';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Le pagine non selezionate vengono nascoste dalla barra di navigazione. Puoi cambiarle quando vuoi in Impostazioni → Aspetto.';
@@ -135119,6 +138069,246 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Regolazioni sottotitoli';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'In basso';
   @override
   String get video_subtitle_anchor_top => 'In alto';
@@ -135229,6 +138419,82 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Sottotitolo grafico · mostrato sul video · ricerca in pausa (OCR)';
@@ -135611,6 +138877,88 @@ class _StringsIt extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Navigazione frase con tasti volume';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles =>
       'Nascondi i sottotitoli del sito';
   @override
@@ -135624,6 +138972,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Nessuna carta in coda';
   @override
@@ -135647,15 +139006,48 @@ class _StringsIt extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Passa alla modalità integrata per creare ${count} carte in coda';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Nessun sottotitolo acquisito ancora';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live =>
       'Sottotitoli live (campionati dalla pagina)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Traccia sottotitoli';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Intervallo cambio pagina con la rotellina';
@@ -135833,6 +139225,11 @@ class _StringsJa extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 件を個別に指定';
   @override
   String get ai_feature_overrides_none => 'すべての機能が既定のプロバイダーを使用';
+  @override
+  String get ai_feature_subtitle_proofread => '字幕の校正';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '音声認識で作った日本語字幕を校正します。作品の固有名詞表を作ってから、聞き違えた台詞を直します。このプロバイダーに送るのは認識したテキストと固有名詞表だけで（音声・映像は送りません）、料金はプロバイダーが請求します。';
   @override
   String get ai_feature_unset => '未設定';
   @override
@@ -144040,6 +147437,11 @@ class _StringsJa extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'マウスを文字に重ねると自動で辞書を引きます。クリックや Shift を押す必要はありません。ポップアップは最大1層まで。デスクトップのみ。';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'カスタム';
   @override
   String get icon_custom_confirm_body => '選択した画像でホーム画面にショートカットを作成します。続行しますか？';
@@ -146133,6 +149535,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '音量の上下ボタンでマンガリーダーのページをめくります';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '横長ページを単独表示';
   @override
   String get manga_wide_page_solo_subtitle => '見開きの横長ページを 1 画面に単独で表示します';
@@ -146823,8 +150245,6 @@ class _StringsJa extends _StringsEn {
   String get module_downloads_hidden_hint =>
       '「ブラウズ」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
   @override
-  String get module_extension_label => 'ブラウザ拡張機能';
-  @override
   String get move_down => '下に移動';
   @override
   String get move_up => '上に移動';
@@ -146846,6 +150266,8 @@ class _StringsJa extends _StringsEn {
   String get nav_srs => '復習';
   @override
   String get nav_video => '動画';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint => 'すべての公開インターネット通信で使う HTTP プロキシサーバー';
   @override
@@ -147004,6 +150426,38 @@ class _StringsJa extends _StringsEn {
   @override
   String get novel_store_empty =>
       'プラグインリポジトリがまだありません。Fushi にはリポジトリが同梱されていません。信頼できる LNReader プラグインリポジトリのインデックス URL を追加してください。';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => '再生中';
   @override
@@ -147174,8 +150628,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_feature_browse_hint => 'オンラインソース、拡張機能、発見、ダウンロード';
   @override
-  String get onboarding_feature_extension_hint => '任意のWebページで単語を検索（デスクトップのみ）';
-  @override
   String get onboarding_feature_fonts => 'カスタムフォント';
   @override
   String get onboarding_feature_fonts_hint => 'UI・本文・辞書に好きなフォントを使う';
@@ -147209,6 +150661,18 @@ class _StringsJa extends _StringsEn {
   String get onboarding_feature_video => '動画';
   @override
   String get onboarding_feature_video_hint => '字幕から調べてカードを作る';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'チェックを外したページはナビゲーションバーに表示されません。設定 → 外観でいつでも変更できます。';
@@ -154774,6 +158238,233 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => '字幕の調整';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      '別の字幕生成タスクが実行中です：${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI校正が送信するのは、音声認識で得た日本語テキストとこの作品の固有名詞表だけです。送信先は「設定 › モデル › LLM」で「字幕の校正」に割り当てたプロバイダーで、音声や映像は送信されません。料金はそのプロバイダーが請求します（ローカルの Ollama / LM Studio は端末の外に出ません）。結果はモデルに依存し、保証されません。';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'オンにする';
+  @override
+  String get video_subtitle_ai_consent_title => 'AI校正が送信する内容';
+  @override
+  String get video_subtitle_ai_entry_hint => '音声認識とAI校正（任意）。動画の隣に保存します';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      '${name} を保存しました';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      '同名の字幕があるため ${name} として保存しました';
+  @override
+  String get video_subtitle_ai_episode_pending => '待機中';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'スキップ：.ja.srt と .ja.asr.srt の両方が既にあります';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'スキップ：.ja.srt が既にあります';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'スキップ：台詞がほとんどありません（歌やクリップ）';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'スキップ：歌（OP/ED、MV）と判定されました';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'AIの返答が何度か再試行しても不完全でした';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) => '約 ${requests} 回のリクエスト、入力 約 ${input}／出力 約 ${output} トークン';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts => '（認識済みの字幕から算出）';
+  @override
+  String get video_subtitle_ai_estimate_by_duration => '（動画の長さからの概算）';
+  @override
+  String get video_subtitle_ai_estimate_nothing => '校正するものはありません';
+  @override
+  String get video_subtitle_ai_hide => '閉じる';
+  @override
+  String get video_subtitle_ai_model_label => '音声モデル';
+  @override
+  String get video_subtitle_ai_model_missing => '動画用の日本語音声モデルがダウンロードされていません';
+  @override
+  String get video_subtitle_ai_model_ready => '日本語音声モデルの準備ができました';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => '自動';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      '自動：対応する NVIDIA カード（Windows）では CUDA、Linux では Vulkan を使います';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS バックエンド';
+  @override
+  String get video_subtitle_ai_moss_checking => '確認中…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'CUDA の要件を満たす NVIDIA GPU／ドライバーがありません（ドライバー R580 以上、RTX 20 シリーズ以降）';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'MOSS モデルがダウンロードされていません';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => '使用可能な GPU が見つかりません';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'このプラットフォームには、このバックエンド用の audio.cpp ビルドがありません';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'audio.cpp ランタイムがダウンロードされていません';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'Windows と Linux（x64）のみ対応しています';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'MOSS をダウンロード（${size}）';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS ランタイムとモデル';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      '未ダウンロード（${size} をダウンロードします）';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS ランタイムとモデルの準備ができました';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS は利用できません：${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes => '処理できるローカルの動画ファイルがありません';
+  @override
+  String get video_subtitle_ai_no_provider => '「字幕の校正」に AI プロバイダーが割り当てられていません';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun => '校正済みのエピソードがまだありません';
+  @override
+  String get video_subtitle_ai_open_settings => '「設定 › モデル › LLM」で割り当てる';
+  @override
+  String get video_subtitle_ai_proofread_hint => 'AIで人名や誤認識を直します（初期設定はオフ）';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI校正';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'プロバイダー：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => '続行';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'この作品はまだスクレイピングされていないため、固有名詞表はタイトルからの推測になります。先にスクレイピングすることをおすすめします。';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) => '全 ${n} 話のうち ${skipped} 話は日本語字幕が既にあるためスキップします';
+  @override
+  String get video_subtitle_ai_season_title => 'シーズン全体の日本語字幕を生成';
+  @override
+  String get video_subtitle_ai_segmenter_auto => '自動';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS は話者ごとに分割します（NVIDIA 搭載のデスクトップ向け）。それ以外ではスライディングウィンドウを使います';
+  @override
+  String get video_subtitle_ai_segmenter_label => '分割方式';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'スライディングウィンドウ';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI校正は生成パネルでオンにします。初回は送信される内容が説明されます。';
+  @override
+  String get video_subtitle_ai_settings_summary => '動画の日本語字幕を生成するときの分割方式と MOSS';
+  @override
+  String get video_subtitle_ai_settings_title => '動画の日本語字幕';
+  @override
+  String get video_subtitle_ai_stage_consistency => '表記の統一';
+  @override
+  String get video_subtitle_ai_stage_export => '書き出し';
+  @override
+  String get video_subtitle_ai_stage_glossary => '固有名詞表の作成';
+  @override
+  String get video_subtitle_ai_stage_proofread => '校正';
+  @override
+  String get video_subtitle_ai_stage_recognize => '音声認識';
+  @override
+  String get video_subtitle_ai_stage_split => '長い行の分割';
+  @override
+  String get video_subtitle_ai_start => '開始';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'キャンセルしました。完了した段階は保持されます。続行すると再開できます。';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'キャンセル中…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      '完了：字幕ファイルを ${n} 件保存しました';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      '失敗：${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      '固有名詞表に矛盾があります。修正してから続行してください。';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      '固有名詞表が別の作品のもののようです（表の名前が音声にほとんど出てきません）。修正するか作品をスクレイピングしてから続行してください。';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      '一時停止：AI リクエストに失敗しました（${reason}）';
+  @override
+  String get video_subtitle_ai_status_starting => '開始しています…';
+  @override
+  String get video_subtitle_ai_target_label => '対象';
+  @override
+  String get video_subtitle_ai_title => '日本語字幕を生成';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}：ファイルが見つからないためスキップしました';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}：別の端末にのみあるためスキップしました（その端末で生成してください）';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI 使用量：${calls} 回のリクエスト、入力 ${input}／出力 ${output} トークン';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '（${n} 回のリクエストは使用量が報告されませんでした）';
+  @override
   String get video_subtitle_anchor_bottom => '下';
   @override
   String get video_subtitle_anchor_top => '上';
@@ -154878,6 +158569,77 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'この表をそのまま使う';
+  @override
+  String get video_subtitle_glossary_add => '項目を追加';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'この表は検証に通らなかったため、まだ保存されていません。修正する（またはそのまま使う）と、生成パネルで続行できます。';
+  @override
+  String get video_subtitle_glossary_delete => '項目を削除';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      '「${ja}」を削除しますか？固有名詞表を再生成すると、再び追加される場合があります。';
+  @override
+  String get video_subtitle_glossary_edit => '項目を編集';
+  @override
+  String get video_subtitle_glossary_empty =>
+      '項目はまだありません。固有名詞表は初回のAI校正で生成されます。手動で追加することもできます。';
+  @override
+  String get video_subtitle_glossary_entry_menu => '項目の操作';
+  @override
+  String get video_subtitle_glossary_field_ja => '正式な表記';
+  @override
+  String get video_subtitle_glossary_field_kind => '種別';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      '「人名」で始まる項目は作品の照合に使われます';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => '誤認識';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint => 'カンマで区切ります';
+  @override
+  String get video_subtitle_glossary_field_note => 'メモ';
+  @override
+  String get video_subtitle_glossary_field_reading => '読み（ひらがな）';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'AI校正で字幕をこの表記に統一します。追加・編集した項目は、再生成しても保持されます。';
+  @override
+  String get video_subtitle_glossary_ja_duplicate => 'この表記は既に表にあります';
+  @override
+  String get video_subtitle_glossary_ja_empty => '正式な表記を入力してください';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => '誤認識：${list}';
+  @override
+  String get video_subtitle_glossary_open => '固有名詞表';
+  @override
+  String get video_subtitle_glossary_regenerate => '再生成';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'AI に固有名詞表を作り直させますか？追加でリクエストが送信されます。編集した ${n} 件は保持されます。';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      '再生成しました：${n} 件';
+  @override
+  String get video_subtitle_glossary_rerun_consistency => '表記の統一だけをやり直す';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      '表記を統一しました。字幕ファイルを ${n} 件更新しました';
+  @override
+  String get video_subtitle_glossary_rerun_running => '表記の統一をやり直しています…';
+  @override
+  String get video_subtitle_glossary_save => '保存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => '固有名詞表';
+  @override
+  String get video_subtitle_glossary_user_edited => '編集済み（再生成しても保持されます）';
   @override
   String get video_subtitle_graphic_hint => '画像字幕 ・ 画面に表示 ・ 一時停止で辞書引き（OCR）';
   @override
@@ -155228,6 +158990,88 @@ class _StringsJa extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '音量キーで文ナビゲーション';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'サイトの字幕を隠す';
   @override
   String get web_video_hosting_builtin => '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
@@ -155239,6 +159083,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'キューにカードはありません';
   @override
@@ -155262,14 +159117,47 @@ class _StringsJa extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '内蔵モードに切り替えて ${count} 件のカードを作成';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => '字幕はまだ取得されていません';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'ライブ字幕（ページから取得）';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => '字幕トラック';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'マウスホイールのページめくり間隔';
   @override
@@ -155446,6 +159334,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => '설정 안 됨';
   @override
@@ -163658,6 +167551,11 @@ class _StringsKo extends _StringsEn {
   String get hover_auto_lookup_hint =>
       '마우스를 글자 위에 올리면 자동으로 사전을 찾습니다. 클릭하거나 Shift를 누를 필요가 없습니다. 팝업은 최대 1개 층까지. 데스크톱 전용.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => '사용자 정의';
   @override
   String get icon_custom_confirm_body => '선택한 이미지로 홈 화면 바로가기를 만듭니다. 계속하시겠습니까?';
@@ -165761,6 +169659,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '만화 리더에서 볼륨 업/다운 키로 페이지를 넘깁니다';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '넓은 페이지 단독 표시';
   @override
   String get manga_wide_page_solo_subtitle => '두 배 너비의 펼침 페이지를 단독으로 표시합니다';
@@ -166453,8 +170371,6 @@ class _StringsKo extends _StringsEn {
   String get module_downloads_hidden_hint =>
       '‘탐색’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
   @override
-  String get module_extension_label => '브라우저 확장';
-  @override
   String get move_down => '아래로 이동';
   @override
   String get move_up => '위로 이동';
@@ -166476,6 +170392,8 @@ class _StringsKo extends _StringsEn {
   String get nav_srs => '복습';
   @override
   String get nav_video => '비디오';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint => '모든 공용 인터넷 요청에 사용되는 HTTP 프록시 서버';
   @override
@@ -166636,6 +170554,38 @@ class _StringsKo extends _StringsEn {
   @override
   String get novel_store_empty =>
       '플러그인 저장소가 아직 없습니다. Fushi에는 기본 저장소가 포함되어 있지 않습니다. 신뢰하는 LNReader 플러그인 저장소의 인덱스 URL을 추가하세요.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => '현재 듣는 중';
   @override
@@ -166808,8 +170758,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_feature_browse_hint => '온라인 소스, 확장 프로그램, 발견, 다운로드';
   @override
-  String get onboarding_feature_extension_hint => '모든 웹 페이지에서 단어 검색 (데스크톱 전용)';
-  @override
   String get onboarding_feature_fonts => '사용자 지정 글꼴';
   @override
   String get onboarding_feature_fonts_hint => '인터페이스, 책 본문, 사전에 원하는 글꼴 사용';
@@ -166845,6 +170793,18 @@ class _StringsKo extends _StringsEn {
   String get onboarding_feature_video => '동영상';
   @override
   String get onboarding_feature_video_hint => '자막에서 단어 찾고 카드 만들기';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       '선택하지 않은 페이지는 내비게이션 바에서 숨겨집니다. 설정 → 외관에서 언제든 바꿀 수 있습니다.';
@@ -174426,6 +178386,246 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => '자막 조정';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => '하단';
   @override
   String get video_subtitle_anchor_top => '상단';
@@ -174529,6 +178729,82 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       '그래픽 자막 · 화면에 표시 · 일시정지 후 단어 찾기(OCR)';
@@ -174880,6 +179156,88 @@ class _StringsKo extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '볼륨 키 문장 탐색';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => '사이트 자막 숨기기';
   @override
   String get web_video_hosting_builtin => '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
@@ -174890,6 +179248,17 @@ class _StringsKo extends _StringsEn {
       '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
   @override
   String get web_video_import_hint => '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => '대기 중인 카드가 없습니다';
   @override
@@ -174913,14 +179282,47 @@ class _StringsKo extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => '아직 수집된 자막이 없습니다';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => '실시간 자막(페이지에서 수집)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => '자막 트랙';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => '마우스 휠 페이지 넘김 간격';
   @override
@@ -175105,6 +179507,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Niet ingesteld';
   @override
@@ -183697,6 +188104,11 @@ class _StringsNl extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Automatisch opzoeken wanneer de muis over een teken zweeft; zonder te klikken of Shift in te drukken. Toont hooguit één popuplaag. Alleen desktop.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Aangepast';
   @override
   String get icon_custom_confirm_body =>
@@ -185902,6 +190314,26 @@ class _StringsNl extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Gebruik volume omhoog en omlaag om pagina\'s te bladeren in de mangalezer';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Brede pagina\'s alleen';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -186634,8 +191066,6 @@ class _StringsNl extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Het tabblad Bladeren is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
   @override
-  String get module_extension_label => 'Browserextensie';
-  @override
   String get move_down => 'Omlaag';
   @override
   String get move_up => 'Omhoog';
@@ -186657,6 +191087,8 @@ class _StringsNl extends _StringsEn {
   String get nav_srs => 'Herhalen';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'HTTP-proxyserver die door alle verzoeken naar het publieke internet wordt gebruikt';
@@ -186823,6 +191255,38 @@ class _StringsNl extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Nog geen plug-inrepositories. Fushi bevat er geen — voeg de index-URL toe van een LNReader-plug-inrepository die je vertrouwt.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Nu aan het luisteren';
   @override
@@ -187000,9 +191464,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Online bronnen, extensies, ontdekken en downloads';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Zoek woorden op op elke webpagina (alleen desktop)';
-  @override
   String get onboarding_feature_fonts => 'Eigen lettertypen';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -187042,6 +191503,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Opzoeken in ondertitels en kaarten maken';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Niet-aangevinkte pagina\'s worden verborgen in de navigatiebalk. Later aan te passen via Instellingen → Uiterlijk.';
@@ -194967,6 +199440,246 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Ondertitels aanpassen';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Onder';
   @override
   String get video_subtitle_anchor_top => 'Boven';
@@ -195077,6 +199790,82 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Grafische ondertitel · op video getoond · opzoeken na pauze (OCR)';
@@ -195454,6 +200243,88 @@ class _StringsNl extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Zinsnavigatie met volumeknoppen';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles =>
       'Ondertitels van de site verbergen';
   @override
@@ -195467,6 +200338,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Geen wachtende kaarten';
   @override
@@ -195490,14 +200372,47 @@ class _StringsNl extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Nog geen ondertitels vastgelegd';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'Live-ondertitels (van de pagina)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Ondertitelspoor';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'Interval voor bladeren met muiswiel';
   @override
@@ -195684,6 +200599,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Não definido';
   @override
@@ -204313,6 +209233,11 @@ class _StringsPtBr extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Pesquisa automaticamente ao passar o mouse sobre um caractere; sem clicar ou segurar Shift. Exibe no máximo uma camada de pop-up. Apenas no desktop.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Personalizado';
   @override
   String get icon_custom_confirm_body =>
@@ -206524,6 +211449,26 @@ class _StringsPtBr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Usar volume para cima e para baixo para virar páginas no leitor de mangá';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Páginas largas sozinhas';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -207260,8 +212205,6 @@ class _StringsPtBr extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'A aba Navegar está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
   @override
-  String get module_extension_label => 'Extensão do navegador';
-  @override
   String get move_down => 'Mover para baixo';
   @override
   String get move_up => 'Mover para cima';
@@ -207283,6 +212226,8 @@ class _StringsPtBr extends _StringsEn {
   String get nav_srs => 'Revisão';
   @override
   String get nav_video => 'Vídeo';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Servidor proxy HTTP usado por todas as requisições à internet pública';
@@ -207449,6 +212394,38 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Nenhum repositório de plugins ainda. O Fushi não inclui nenhum — adicione a URL do índice de um repositório de plugins do LNReader em que você confia.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Ouvindo agora';
   @override
@@ -207627,9 +212604,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Fontes online, extensões, descoberta e downloads';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Consulte palavras em qualquer página web (apenas desktop)';
-  @override
   String get onboarding_feature_fonts => 'Fontes personalizadas';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -207669,6 +212643,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Consulta em legendas e criação de cartões';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Páginas não marcadas ficam ocultas na barra de navegação. Dá para mudar quando quiser em Configurações → Aparência.';
@@ -215611,6 +220597,246 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Ajustes de legenda';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Inferior';
   @override
   String get video_subtitle_anchor_top => 'Superior';
@@ -215720,6 +220946,82 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Legenda gráfica · exibida no vídeo · consulta ao pausar (OCR)';
@@ -216101,6 +221403,88 @@ class _StringsPtBr extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Navegação de frases com teclas de volume';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Ocultar legendas do site';
   @override
   String get web_video_hosting_builtin =>
@@ -216113,6 +221497,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Nenhum cartão na fila';
   @override
@@ -216136,14 +221531,47 @@ class _StringsPtBr extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Mudar para o modo integrado para criar ${count} cartões na fila';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Nenhuma legenda capturada ainda';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'Legendas ao vivo (capturadas da página)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Faixa de legendas';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Intervalo de virada de página com a roda do mouse';
@@ -216328,6 +221756,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Не задан';
   @override
@@ -224918,6 +230351,11 @@ class _StringsRu extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Автоматический поиск слова при наведении курсора на символ; без щелчка и удержания Shift. Открывает не более одного всплывающего слоя. Только для ПК.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Своя';
   @override
   String get icon_custom_confirm_body =>
@@ -227124,6 +232562,26 @@ class _StringsRu extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Используйте кнопки громкости для перелистывания страниц в читалке манги';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Широкие страницы отдельно';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -227859,8 +233317,6 @@ class _StringsRu extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Вкладка «Обзор» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
   @override
-  String get module_extension_label => 'Расширение для браузера';
-  @override
   String get move_down => 'Вниз';
   @override
   String get move_up => 'Вверх';
@@ -227882,6 +233338,8 @@ class _StringsRu extends _StringsEn {
   String get nav_srs => 'Повторение';
   @override
   String get nav_video => 'Видео';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'HTTP-прокси, через который идут все запросы в публичный интернет';
@@ -228050,6 +233508,38 @@ class _StringsRu extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Репозиториев плагинов пока нет. Fushi не содержит встроенных репозиториев — добавьте URL индекса репозитория плагинов LNReader, которому вы доверяете.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Сейчас слушаете';
   @override
@@ -228229,9 +233719,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Онлайн-источники, расширения, поиск контента и загрузки';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Ищите слова на любой веб-странице (только десктоп)';
-  @override
   String get onboarding_feature_fonts => 'Свои шрифты';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -228271,6 +233758,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Поиск по субтитрам и создание карточек';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Неотмеченные страницы скрываются из панели навигации. Изменить можно в любой момент: Настройки → Внешний вид.';
@@ -236199,6 +241698,246 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Настройка субтитров';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Снизу';
   @override
   String get video_subtitle_anchor_top => 'Сверху';
@@ -236310,6 +242049,82 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Графические субтитры · показ на видео · поиск слов на паузе (OCR)';
@@ -236694,6 +242509,88 @@ class _StringsRu extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Навигация по предложениям кнопками громкости';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Скрыть субтитры сайта';
   @override
   String get web_video_hosting_builtin =>
@@ -236706,6 +242603,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Очередь карточек пуста';
   @override
@@ -236729,14 +242637,47 @@ class _StringsRu extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Субтитры пока не получены';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'Живые субтитры (с страницы)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Дорожка субтитров';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'Интервал перелистывания колёсиком';
   @override
@@ -236918,6 +242859,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'ยังไม่ได้ตั้ง';
   @override
@@ -245378,6 +251324,11 @@ class _StringsTh extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'ค้นหาคำโดยอัตโนมัติเมื่อชี้เมาส์ไปที่ตัวอักษร โดยไม่ต้องคลิกหรือกด Shift ค้างไว้ แสดงป๊อปอัปได้สูงสุดหนึ่งชั้น สำหรับเดสก์ท็อปเท่านั้น';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'กำหนดเอง';
   @override
   String get icon_custom_confirm_body =>
@@ -247546,6 +253497,26 @@ class _StringsTh extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'ใช้ปุ่มเพิ่ม/ลดเสียงเพื่อพลิกหน้าในตัวอ่านมังงะ';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'หน้ากว้างอยู่เดี่ยว';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -248270,8 +254241,6 @@ class _StringsTh extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'แท็บเรียกดูถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
   @override
-  String get module_extension_label => 'ส่วนขยายเบราว์เซอร์';
-  @override
   String get move_down => 'เลื่อนลง';
   @override
   String get move_up => 'เลื่อนขึ้น';
@@ -248293,6 +254262,8 @@ class _StringsTh extends _StringsEn {
   String get nav_srs => 'ทบทวน';
   @override
   String get nav_video => 'วิดีโอ';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'เซิร์ฟเวอร์พร็อกซี HTTP ที่ใช้กับคำขออินเทอร์เน็ตสาธารณะทั้งหมด';
@@ -248458,6 +254429,38 @@ class _StringsTh extends _StringsEn {
   @override
   String get novel_store_empty =>
       'ยังไม่มีที่เก็บปลั๊กอิน Fushi ไม่ได้รวมที่เก็บใดไว้ — เพิ่ม URL ดัชนีของที่เก็บปลั๊กอิน LNReader ที่คุณเชื่อถือ';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'กำลังฟังอยู่';
   @override
@@ -248635,9 +254638,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'แหล่งออนไลน์ ส่วนขยาย การค้นพบ และการดาวน์โหลด';
   @override
-  String get onboarding_feature_extension_hint =>
-      'ค้นหาคำศัพท์บนเว็บเพจใดก็ได้ (เดสก์ท็อปเท่านั้น)';
-  @override
   String get onboarding_feature_fonts => 'ฟอนต์กำหนดเอง';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -248675,6 +254675,18 @@ class _StringsTh extends _StringsEn {
   String get onboarding_feature_video => 'วิดีโอ';
   @override
   String get onboarding_feature_video_hint => 'ค้นคำจากคำบรรยายและสร้างการ์ด';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'หน้าที่ไม่ได้เลือกจะถูกซ่อนจากแถบนำทาง เปลี่ยนได้ทุกเมื่อที่ การตั้งค่า → รูปลักษณ์';
@@ -256483,6 +262495,246 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'ปรับซับไตเติล';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'ด้านล่าง';
   @override
   String get video_subtitle_anchor_top => 'ด้านบน';
@@ -256593,6 +262845,82 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'คำบรรยายแบบกราฟิก · แสดงบนภาพ · หยุดชั่วคราวเพื่อค้นคำ (OCR)';
@@ -256963,6 +263291,88 @@ class _StringsTh extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'นำทางประโยคด้วยปุ่มเสียง';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'ซ่อนคำบรรยายของเว็บไซต์';
   @override
   String get web_video_hosting_builtin =>
@@ -256975,6 +263385,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'ไม่มีการ์ดในคิว';
   @override
@@ -256998,14 +263419,47 @@ class _StringsTh extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'ยังไม่ได้เก็บคำบรรยาย';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'แทร็กคำบรรยาย';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'ระยะเวลาเลื่อนหน้าด้วยล้อเมาส์';
   @override
@@ -257190,6 +263644,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Ayarlanmadı';
   @override
@@ -265749,6 +272208,11 @@ class _StringsTr extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Fare bir karakterin üzerine geldiğinde otomatik olarak ara; tıklamaya veya Shift tuşunu basılı tutmaya gerek yok. En fazla bir açılır katman gösterir. Yalnızca masaüstü.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Özel';
   @override
   String get icon_custom_confirm_body =>
@@ -267939,6 +274403,26 @@ class _StringsTr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Manga okuyucusunda sayfa çevirmek için ses açma ve kısma tuşlarını kullanın';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Geniş sayfalar tek başına';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -268668,8 +275152,6 @@ class _StringsTr extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Göz at sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
   @override
-  String get module_extension_label => 'Tarayıcı eklentisi';
-  @override
   String get move_down => 'Aşağı taşı';
   @override
   String get move_up => 'Yukarı taşı';
@@ -268691,6 +275173,8 @@ class _StringsTr extends _StringsEn {
   String get nav_srs => 'Tekrar';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Tüm genel internet isteklerinde kullanılan HTTP proxy sunucusu';
@@ -268857,6 +275341,38 @@ class _StringsTr extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Henüz eklenti deposu yok. Fushi hiçbir depo içermez; güvendiğiniz bir LNReader eklenti deposunun dizin URL\'sini ekleyin.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Şimdi dinleniyor';
   @override
@@ -269035,9 +275551,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Çevrimiçi kaynaklar, eklentiler, keşif ve indirmeler';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Herhangi bir web sayfasında kelime arayın (yalnızca masaüstü)';
-  @override
   String get onboarding_feature_fonts => 'Özel yazı tipleri';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -269077,6 +275590,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Altyazıda arama ve kart oluşturma';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'İşaretlenmeyen sayfalar gezinme çubuğunda gizlenir. İstediğiniz zaman Ayarlar → Görünüm\'den değiştirebilirsiniz.';
@@ -276949,6 +283474,246 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Altyazı ayarları';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Alt';
   @override
   String get video_subtitle_anchor_top => 'Üst';
@@ -277060,6 +283825,82 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Grafik altyazı · videoda gösterilir · duraklatınca sözcük arama (OCR)';
@@ -277435,6 +284276,88 @@ class _StringsTr extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Ses Tuşuyla Cümle Gezinme';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Site altyazılarını gizle';
   @override
   String get web_video_hosting_builtin =>
@@ -277447,6 +284370,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Sırada kart yok';
   @override
@@ -277470,14 +284404,47 @@ class _StringsTr extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Henüz altyazı yakalanmadı';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'Canlı altyazılar (sayfadan alınan)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Altyazı parçası';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Fare tekerleğiyle sayfa çevirme aralığı';
@@ -277662,6 +284629,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_subtitle_proofread => 'Subtitle proofreading';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
   @override
   String get ai_feature_unset => 'Chưa đặt';
   @override
@@ -286194,6 +293166,11 @@ class _StringsVi extends _StringsEn {
   String get hover_auto_lookup_hint =>
       'Tự động tra cứu khi di chuột qua một ký tự; không cần nhấp hay giữ Shift. Hiển thị tối đa một lớp cửa sổ bật lên. Chỉ trên máy tính.';
   @override
+  String get hover_lookup_modifier => 'Hover lookup key';
+  @override
+  String get hover_lookup_modifier_hint =>
+      'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
+  @override
   String get icon_custom => 'Tùy chỉnh';
   @override
   String get icon_custom_confirm_body =>
@@ -288375,6 +295352,26 @@ class _StringsVi extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Sử dụng phím tăng giảm âm lượng để lật trang trong trình đọc truyện tranh';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Trang rộng đứng riêng';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -289100,8 +296097,6 @@ class _StringsVi extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Tab Duyệt đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
   @override
-  String get module_extension_label => 'Tiện ích mở rộng trình duyệt';
-  @override
   String get move_down => 'Di chuyển xuống';
   @override
   String get move_up => 'Di chuyển lên';
@@ -289123,6 +296118,8 @@ class _StringsVi extends _StringsEn {
   String get nav_srs => 'Ôn tập';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Máy chủ proxy HTTP dùng cho mọi yêu cầu ra Internet công cộng';
@@ -289289,6 +296286,38 @@ class _StringsVi extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Chưa có kho plugin. Fushi không kèm sẵn kho nào — hãy thêm URL chỉ mục của một kho plugin LNReader mà bạn tin tưởng.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => 'Đang nghe';
   @override
@@ -289465,9 +296494,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Nguồn trực tuyến, tiện ích, khám phá và tải xuống';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Tra từ trên bất kỳ trang web nào (chỉ trên máy tính)';
-  @override
   String get onboarding_feature_fonts => 'Phông chữ tùy chỉnh';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -289506,6 +296532,18 @@ class _StringsVi extends _StringsEn {
   String get onboarding_feature_video => 'Video';
   @override
   String get onboarding_feature_video_hint => 'Tra từ trên phụ đề và tạo thẻ';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Những trang không đánh dấu sẽ bị ẩn khỏi thanh điều hướng. Đổi lại bất cứ lúc nào ở Cài đặt → Giao diện.';
@@ -297352,6 +304390,246 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => 'Điều chỉnh phụ đề';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      'Another subtitle job is running: ${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+  @override
+  String get video_subtitle_ai_consent_confirm => 'Turn on';
+  @override
+  String get video_subtitle_ai_consent_title => 'What AI proofreading sends';
+  @override
+  String get video_subtitle_ai_entry_hint =>
+      'Speech recognition + optional AI proofreading, saved next to the video';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      'Saved ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      'A subtitle with that name exists; saved ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => 'Waiting';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      'Skipped: both .ja.srt and .ja.asr.srt already exist';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing =>
+      'Skipped: already has a .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      'Skipped: almost no dialogue (song or clip)';
+  @override
+  String get video_subtitle_ai_episode_skipped_song =>
+      'Skipped: judged to be a song (OP/ED, MV)';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete =>
+      'the AI reply was incomplete after several retries';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) =>
+      'About ${requests} requests, ~${input} input / ~${output} output tokens';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts =>
+      ' (from recognized subtitles)';
+  @override
+  String get video_subtitle_ai_estimate_by_duration =>
+      ' (rough, from video length)';
+  @override
+  String get video_subtitle_ai_estimate_nothing => 'Nothing left to proofread';
+  @override
+  String get video_subtitle_ai_hide => 'Hide';
+  @override
+  String get video_subtitle_ai_model_label => 'Speech model';
+  @override
+  String get video_subtitle_ai_model_missing =>
+      'The Japanese speech model for videos is not downloaded';
+  @override
+  String get video_subtitle_ai_model_ready => 'Japanese speech model ready';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS backend';
+  @override
+  String get video_subtitle_ai_moss_checking => 'Checking…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing =>
+      'the MOSS model is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => 'no usable GPU found';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      'there is no audio.cpp build for this backend on this platform';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing =>
+      'the audio.cpp runtime is not downloaded';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      'only available on Windows and Linux (x64)';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      'Download MOSS (${size})';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS runtime and model';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      'Not downloaded (${size} to download)';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS runtime and model ready';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS not available: ${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes =>
+      'No local video file to process';
+  @override
+  String get video_subtitle_ai_no_provider =>
+      'No AI provider is assigned to "Subtitle proofreading"';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun =>
+      'No episode has been proofread yet';
+  @override
+  String get video_subtitle_ai_open_settings =>
+      'Assign in Settings › Models › LLM';
+  @override
+  String get video_subtitle_ai_proofread_hint =>
+      'Fix names and misrecognitions with AI (off by default)';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI proofreading';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => 'Provider: ${name} (${model})';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => 'Continue';
+  @override
+  String get video_subtitle_ai_scrape_hint =>
+      'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) =>
+      '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+  @override
+  String get video_subtitle_ai_season_title =>
+      'Generate Japanese subtitles for the season';
+  @override
+  String get video_subtitle_ai_segmenter_auto => 'Auto';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+  @override
+  String get video_subtitle_ai_segmenter_label => 'Segmentation';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => 'Sliding window';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+  @override
+  String get video_subtitle_ai_settings_summary =>
+      'Segmentation and MOSS for Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_settings_title => 'Japanese video subtitles';
+  @override
+  String get video_subtitle_ai_stage_consistency => 'Unifying spellings';
+  @override
+  String get video_subtitle_ai_stage_export => 'Exporting';
+  @override
+  String get video_subtitle_ai_stage_glossary => 'Building glossary';
+  @override
+  String get video_subtitle_ai_stage_proofread => 'Proofreading';
+  @override
+  String get video_subtitle_ai_stage_recognize => 'Recognizing speech';
+  @override
+  String get video_subtitle_ai_stage_split => 'Splitting long lines';
+  @override
+  String get video_subtitle_ai_start => 'Start';
+  @override
+  String get video_subtitle_ai_status_cancelled =>
+      'Cancelled. Finished stages are kept; continue to resume.';
+  @override
+  String get video_subtitle_ai_status_cancelling => 'Cancelling…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      'Done: ${n} subtitle files saved';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      'The glossary contradicts itself. Fix it, then continue.';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      'Paused: AI request failed (${reason})';
+  @override
+  String get video_subtitle_ai_status_starting => 'Starting…';
+  @override
+  String get video_subtitle_ai_target_label => 'Target';
+  @override
+  String get video_subtitle_ai_title => 'Generate Japanese subtitles';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}: file not found, skipped';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}: only on another device, skipped (generate it on that device)';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '(${n} requests reported no usage)';
+  @override
   String get video_subtitle_anchor_bottom => 'Dưới';
   @override
   String get video_subtitle_anchor_top => 'Trên';
@@ -297462,6 +304740,82 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => 'Use this table as is';
+  @override
+  String get video_subtitle_glossary_add => 'Add entry';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+  @override
+  String get video_subtitle_glossary_delete => 'Delete entry';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      'Delete "${ja}"? It may come back when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_edit => 'Edit entry';
+  @override
+  String get video_subtitle_glossary_empty =>
+      'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+  @override
+  String get video_subtitle_glossary_entry_menu => 'Entry actions';
+  @override
+  String get video_subtitle_glossary_field_ja => 'Official spelling';
+  @override
+  String get video_subtitle_glossary_field_kind => 'Category';
+  @override
+  String get video_subtitle_glossary_field_kind_hint =>
+      'Entries starting with 人名 are used to check the work\'s identity';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => 'Misrecognitions';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint =>
+      'Separate with commas';
+  @override
+  String get video_subtitle_glossary_field_note => 'Note';
+  @override
+  String get video_subtitle_glossary_field_reading => 'Reading (hiragana)';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+  @override
+  String get video_subtitle_glossary_ja_duplicate =>
+      'This spelling is already in the table';
+  @override
+  String get video_subtitle_glossary_ja_empty => 'Enter the official spelling';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => 'misheard: ${list}';
+  @override
+  String get video_subtitle_glossary_open => 'Glossary';
+  @override
+  String get video_subtitle_glossary_regenerate => 'Regenerate';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      'Glossary regenerated: ${n} entries';
+  @override
+  String get video_subtitle_glossary_rerun_consistency =>
+      'Re-run spelling unification only';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      'Spelling unified; ${n} subtitle files updated';
+  @override
+  String get video_subtitle_glossary_rerun_running =>
+      'Re-running spelling unification…';
+  @override
+  String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => 'Glossary';
+  @override
+  String get video_subtitle_glossary_user_edited =>
+      'Edited by you; kept when regenerating';
   @override
   String get video_subtitle_graphic_hint =>
       'Phụ đề đồ họa · hiển thị trên hình · tạm dừng để tra từ (OCR)';
@@ -297835,6 +305189,88 @@ class _StringsVi extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Điều hướng câu bằng phím âm lượng';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Ẩn phụ đề của trang';
   @override
   String get web_video_hosting_builtin =>
@@ -297847,6 +305283,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   @override
   String get web_video_mine_queue_empty => 'Không có thẻ nào đang chờ';
   @override
@@ -297870,14 +305317,47 @@ class _StringsVi extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
   @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
+  @override
   String get web_video_no_tracks => 'Chưa bắt được phụ đề nào';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
   @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => 'Phụ đề trực tiếp (lấy từ trang)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Rãnh phụ đề';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Khoảng cách lật trang bằng con lăn chuột';
@@ -298047,6 +305527,11 @@ class _StringsZhCn extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 项已单独指定';
   @override
   String get ai_feature_overrides_none => '全部跟随默认提供商';
+  @override
+  String get ai_feature_subtitle_proofread => '字幕校对';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
   @override
   String get ai_feature_unset => '未指定';
   @override
@@ -305837,6 +313322,10 @@ class _StringsZhCn extends _StringsEn {
   String get hover_auto_lookup_hint =>
       '鼠标悬停在文字上即自动查词，无需点击或按住 Shift；最多触发一层弹窗。仅桌面端。';
   @override
+  String get hover_lookup_modifier => '悬停查词按键';
+  @override
+  String get hover_lookup_modifier_hint => '按住这个键把鼠标移到文字上即查词（阅读器、字幕、网页）';
+  @override
   String get icon_custom => '自定义';
   @override
   String get icon_custom_confirm_body => '将使用所选图片创建主屏幕快捷方式。是否继续？';
@@ -307842,6 +315331,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '在漫画阅读器中用音量加减键翻页';
   @override
+  String get manga_web_ad_filter_off => '跳过章末二维码广告页：关';
+  @override
+  String get manga_web_ad_filter_on => '跳过章末二维码广告页：开';
+  @override
+  String get manga_web_chapter_next => '下一话';
+  @override
+  String get manga_web_chapter_prev => '上一话';
+  @override
+  String get manga_web_chapter_read => '用 Fushi 阅读本章';
+  @override
+  String get manga_web_scan_empty => '本页没有找到漫画图片，请先打开某一话的阅读页。';
+  @override
+  String get manga_web_scan_failed => '读取本页漫画失败';
+  @override
+  String get manga_web_scan_running => '正在识别本页的漫画图片…';
+  @override
   String get manga_wide_page_solo => '宽页独占一屏';
   @override
   String get manga_wide_page_solo_subtitle => '见开き页单独占一屏显示';
@@ -308499,8 +316004,6 @@ class _StringsZhCn extends _StringsEn {
   String get module_downloads_hidden_hint =>
       '「浏览」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
   @override
-  String get module_extension_label => '浏览器扩展';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -308522,6 +316025,8 @@ class _StringsZhCn extends _StringsEn {
   String get nav_srs => '复习';
   @override
   String get nav_video => '视频';
+  @override
+  String get nav_web => '浏览器';
   @override
   String get network_proxy_address_hint => '供应用全部公网请求使用的 HTTP 代理服务器';
   @override
@@ -308675,6 +316180,34 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get novel_store_empty =>
       '还没有插件仓库。Fushi 不内置任何仓库——请添加你信任的 LNReader 插件仓库的索引地址。';
+  @override
+  String get novel_web_chapter_next => '下一章';
+  @override
+  String get novel_web_chapter_pending =>
+      '读到这一页时会从网站取回下一章。取不到时，请先在 Fushi 浏览器里打开一次原网页再回来。';
+  @override
+  String get novel_web_extract_empty => '这一页没有识别到小说正文';
+  @override
+  String novel_web_extract_failed({required Object error}) => '提取正文失败：${error}';
+  @override
+  String get novel_web_extract_running => '正在提取正文…';
+  @override
+  String get novel_web_page_read => '用 Fushi 阅读（小说）';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => '将并入书架上的《${title}》（已有 ${count} 章）。';
+  @override
+  String get novel_web_preview_new => '将作为新书加入书架。';
+  @override
+  String get novel_web_preview_next_found => '已找到下一章：读到末尾会自动取回。';
+  @override
+  String get novel_web_preview_next_missing => '这一页没有找到下一章链接。';
+  @override
+  String get novel_web_preview_read => '阅读';
+  @override
+  String get novel_web_preview_title => '用 Fushi 阅读这一章';
   @override
   String get now_listening_label => '正在听书';
   @override
@@ -308840,8 +316373,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_feature_browse_hint => '在线来源、扩展、发现与下载';
   @override
-  String get onboarding_feature_extension_hint => '在任意网页查词（仅桌面）';
-  @override
   String get onboarding_feature_fonts => '自定义字体';
   @override
   String get onboarding_feature_fonts_hint => '界面、正文、词典各用自己喜欢的字体';
@@ -308873,6 +316404,17 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_feature_video => '视频';
   @override
   String get onboarding_feature_video_hint => '字幕查词与制卡';
+  @override
+  String get onboarding_feature_web_basic_hint => '在 Fushi 里直接浏览网站，任何网页都能查词。';
+  @override
+  String get onboarding_feature_web_hint =>
+      '在 Fushi 里直接浏览网站：视频站点用 Fushi 播放器看、网页漫画用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      '在 Fushi 里直接浏览网站：网页漫画和网页小说用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      '在 Fushi 里直接浏览网站：网页漫画和网页小说用 Fushi 阅读器读，任何网页都能查词。';
   @override
   String get onboarding_features_modules_hint =>
       '未勾选的页面不显示在导航栏，之后可在「设置 → 外观」改回。';
@@ -316060,6 +323602,222 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => '字幕调整';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      '已有生成任务在进行：${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI 校对只会把语音识别出的日语文本与本作专名表，发给你在「设置 › 模型 › LLM」里为「字幕校对」指派的提供商；不发送音频与画面。请求按该提供商的价格计费，本地 Ollama / LM Studio 不出本机。效果取决于模型，不作保证。';
+  @override
+  String get video_subtitle_ai_consent_confirm => '开启';
+  @override
+  String get video_subtitle_ai_consent_title => 'AI 校对会发送什么';
+  @override
+  String get video_subtitle_ai_entry_hint => '语音识别 + 可选 AI 校对，保存在视频旁边';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      '已保存 ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      '已有同名字幕，另存为 ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => '排队中';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      '跳过：.ja.srt 与 .ja.asr.srt 都已存在';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing => '跳过：已有 .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      '跳过：几乎没有台词（歌曲或片段）';
+  @override
+  String get video_subtitle_ai_episode_skipped_song => '跳过：判定为纯歌曲（OP/ED、MV）';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete => 'AI 回复多次不完整';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) => '约 ${requests} 次请求，输入约 ${input}、输出约 ${output} token';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts => '（按识别稿估算）';
+  @override
+  String get video_subtitle_ai_estimate_by_duration => '（按时长粗估）';
+  @override
+  String get video_subtitle_ai_estimate_nothing => '没有需要校对的集';
+  @override
+  String get video_subtitle_ai_hide => '收起';
+  @override
+  String get video_subtitle_ai_model_label => '识别模型';
+  @override
+  String get video_subtitle_ai_model_missing => '视频用的日语识别模型还没下载';
+  @override
+  String get video_subtitle_ai_model_ready => '日语识别模型已就绪';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => '自动';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      '自动：Windows 合格的 NVIDIA 显卡用 CUDA，Linux 用 Vulkan';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS 后端';
+  @override
+  String get video_subtitle_ai_moss_checking => '检查中…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      '没有达到 CUDA 要求的 NVIDIA 显卡 / 驱动（驱动 R580+、RTX 20 系或更新）';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing => 'MOSS 模型还没下载';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => '没有找到可用的显卡';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      '本平台没有这个后端的 audio.cpp 构建';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing => 'audio.cpp 运行库还没下载';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      '只支持 Windows 与 Linux（x64）';
+  @override
+  String get video_subtitle_ai_moss_delete => '删除 MOSS 文件';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      '删除 MOSS 运行库与模型（${size}，含所有后端）？下次使用 MOSS 时需要重新下载。';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      '下载 MOSS（${size}）';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS 运行库与模型';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      '未下载（需下载 ${size}）';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS 运行库与模型已就绪';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS 不可用：${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes => '没有可处理的本机视频文件';
+  @override
+  String get video_subtitle_ai_no_provider => '还没有为「字幕校对」指派 AI 提供商';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun => '还没有任何一集跑过校对';
+  @override
+  String get video_subtitle_ai_open_settings => '去「设置 › 模型 › LLM」指派';
+  @override
+  String get video_subtitle_ai_proofread_hint => '用 AI 修正人名与误识（默认关）';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI 校对';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => '提供商：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'host 播放列表从第 2 集起不支持在 host 上生成字幕';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      '在 ${host} 上运行';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'host 报错：${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => '正在连接 host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      '使用 host 上为「字幕校对」指派的 AI 提供商';
+  @override
+  String get video_subtitle_ai_remote_result_missing => '电脑端任务结束了，但没有返回字幕';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint => 'MOSS 能否使用取决于 host 的显卡';
+  @override
+  String get video_subtitle_ai_remote_unreachable => '连不上这个视频所在的 host';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'host 上的 Fushi 版本不支持生成日语字幕，请先更新 host。';
+  @override
+  String get video_subtitle_ai_resume => '继续';
+  @override
+  String get video_subtitle_ai_scrape_hint => '这部作品还没刮削，专名表只能凭标题推断，建议先刮削。';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) => '共 ${n} 集，其中 ${skipped} 集已有日语字幕、会跳过';
+  @override
+  String get video_subtitle_ai_season_title => '整季生成日语字幕';
+  @override
+  String get video_subtitle_ai_segmenter_auto => '自动';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS 按说话人分段（需 NVIDIA 桌面）；其余平台用滑窗';
+  @override
+  String get video_subtitle_ai_segmenter_label => '分段方式';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => '滑窗';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI 校对在生成面板里开启，首次开启时会说明发送哪些内容。';
+  @override
+  String get video_subtitle_ai_settings_summary => '生成视频日语字幕的分段方式与 MOSS';
+  @override
+  String get video_subtitle_ai_settings_title => '视频日语字幕';
+  @override
+  String get video_subtitle_ai_stage_consistency => '写法统一';
+  @override
+  String get video_subtitle_ai_stage_export => '导出';
+  @override
+  String get video_subtitle_ai_stage_glossary => '专名表';
+  @override
+  String get video_subtitle_ai_stage_proofread => '校对';
+  @override
+  String get video_subtitle_ai_stage_recognize => '识别';
+  @override
+  String get video_subtitle_ai_stage_split => '拆分';
+  @override
+  String get video_subtitle_ai_start => '开始';
+  @override
+  String get video_subtitle_ai_status_cancelled => '已取消。已完成的阶段保留，继续即可续跑。';
+  @override
+  String get video_subtitle_ai_status_cancelling => '正在取消…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      '完成：已保存 ${n} 个字幕文件';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      '失败：${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts => '专名表自相矛盾。改好后点继续。';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      '专名表像是别的作品的（表里的人名在音频里几乎没出现）。改好或先刮削后点继续。';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      '暂停：AI 请求失败（${reason}）';
+  @override
+  String get video_subtitle_ai_status_starting => '正在开始…';
+  @override
+  String get video_subtitle_ai_target_label => '对象';
+  @override
+  String get video_subtitle_ai_title => '生成日语字幕';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}：文件不存在，跳过';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}：只在别的设备上，跳过（请在那台设备上生成）';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI 用量：${calls} 次请求，输入 ${input}、输出 ${output} token';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '（${n} 次请求未报用量）';
+  @override
   String get video_subtitle_anchor_bottom => '底部';
   @override
   String get video_subtitle_anchor_top => '顶部';
@@ -316155,6 +323913,75 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_frame_ocr_status_ready => '已识别画面文字 · 点字查词';
   @override
   String get video_subtitle_frame_ocr_status_recognizing => '正在识别画面文字…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => '原样采用此表';
+  @override
+  String get video_subtitle_glossary_add => '添加条目';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      '这张表没通过校验，尚未保存。改好（或原样采用）后回生成面板点继续。';
+  @override
+  String get video_subtitle_glossary_delete => '删除条目';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      '删除「${ja}」？重新生成专名表时它可能再次出现。';
+  @override
+  String get video_subtitle_glossary_edit => '编辑条目';
+  @override
+  String get video_subtitle_glossary_empty => '还没有条目。第一次 AI 校对时会自动生成，也可以手动添加。';
+  @override
+  String get video_subtitle_glossary_entry_menu => '条目操作';
+  @override
+  String get video_subtitle_glossary_field_ja => '正式写法';
+  @override
+  String get video_subtitle_glossary_field_kind => '类别';
+  @override
+  String get video_subtitle_glossary_field_kind_hint => '以「人名」开头的条目参与作品身份校验';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => '误写';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint => '用逗号分隔';
+  @override
+  String get video_subtitle_glossary_field_note => '说明';
+  @override
+  String get video_subtitle_glossary_field_reading => '读音（平假名）';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'AI 校对时把字幕统一成这里的写法。你添加或改过的条目在重新生成时保留。';
+  @override
+  String get video_subtitle_glossary_ja_duplicate => '表里已有这个写法';
+  @override
+  String get video_subtitle_glossary_ja_empty => '请输入正式写法';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => '误写：${list}';
+  @override
+  String get video_subtitle_glossary_open => '专名表';
+  @override
+  String get video_subtitle_glossary_regenerate => '重新生成';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      '让 AI 重新生成专名表？会再发一次请求。你编辑过的 ${n} 条会保留。';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      '已重新生成：${n} 条';
+  @override
+  String get video_subtitle_glossary_rerun_consistency => '只重跑写法统一';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      '写法已统一，更新了 ${n} 个字幕文件';
+  @override
+  String get video_subtitle_glossary_rerun_running => '正在重跑写法统一…';
+  @override
+  String get video_subtitle_glossary_save => '保存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      '专名表保存失败：${reason}';
+  @override
+  String get video_subtitle_glossary_title => '专名表';
+  @override
+  String get video_subtitle_glossary_user_edited => '你编辑过，重新生成时保留';
   @override
   String get video_subtitle_graphic_hint => '图形字幕 · 画面显示 · 暂停后可点字查词（OCR）';
   @override
@@ -316487,6 +324314,83 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '音量键句子导航';
   @override
+  String get web_adblock_allowlist => '不拦截的网站';
+  @override
+  String get web_adblock_allowlist_hint => '用逗号或空格分隔域名，包含子域名';
+  @override
+  String get web_adblock_enabled => '拦截网页广告与跟踪器';
+  @override
+  String get web_adblock_enabled_basic_hint => '作用于应用内的网页浏览。过滤列表会自动下载并定期更新。';
+  @override
+  String get web_adblock_enabled_hint =>
+      '作用于应用内的网页浏览，例如网页漫画、视频站点和在线源登录页。过滤列表会自动下载并定期更新。';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      '作用于应用内的网页浏览，例如网页漫画、网页小说和在线源登录页。过滤列表会自动下载并定期更新。';
+  @override
+  String get web_adblock_section_title => '网页广告拦截';
+  @override
+  String get web_adblock_status_failed => '过滤列表下载失败，稍后会重试';
+  @override
+  String get web_adblock_status_loading => '正在加载过滤列表…';
+  @override
+  String get web_adblock_status_never => '过滤列表尚未下载';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      '过滤列表更新于 ${time}';
+  @override
+  String get web_adblock_update_done => '过滤列表已更新';
+  @override
+  String get web_adblock_update_failed => '过滤列表更新失败';
+  @override
+  String get web_adblock_update_now => '立即更新过滤列表';
+  @override
+  String get web_browser_address_hint => '输入网址';
+  @override
+  String get web_browser_address_invalid => '不是有效的网址';
+  @override
+  String get web_browser_forward => '前进';
+  @override
+  String get web_browser_lookup_off => '点词查词：关';
+  @override
+  String get web_browser_lookup_on => '点词查词：开';
+  @override
+  String get web_browser_site_add => '加入站点';
+  @override
+  String get web_browser_site_added => '已加入站点';
+  @override
+  String get web_browser_site_remove => '从站点移除';
+  @override
+  String get web_browser_sites_empty => '还没有站点。在地址栏打开网页后，可以把它加入站点。';
+  @override
+  String get web_browser_sites_title => '站点';
+  @override
+  String get web_browser_title => '浏览器';
+  @override
+  String get web_hub_browse => '网页';
+  @override
+  String get web_hub_video_sites => '视频站点';
+  @override
+  String get web_video_ad_skipping => '正在跳过广告…';
+  @override
+  String get web_video_address_hint => '搜索或输入网址';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      '站点报告播放错误（${code}），已切回网页，请在页面上处理。';
+  @override
+  String get web_video_blocked_error_generic => '站点报告播放错误，已切回网页，请在页面上处理。';
+  @override
+  String get web_video_blocked_interrupt =>
+      '站点暂停了播放并在页面上询问你。请在网页上处理，处理完会自动回到播放器。';
+  @override
+  String get web_video_chapter_credits => '片尾';
+  @override
+  String get web_video_chapter_intro => '片头';
+  @override
+  String get web_video_chapter_main => '正片';
+  @override
+  String get web_video_chapter_recap => '前情回顾';
+  @override
   String get web_video_hide_native_subtitles => '隐藏站点字幕';
   @override
   String get web_video_hosting_builtin => '内置（1080p；可超分、可截图制卡）';
@@ -316496,6 +324400,16 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_hosting_windowed => '原生窗口（4K 硬件 DRM；制卡先排队）';
   @override
   String get web_video_import_hint => '这是网页地址（非直链），将用内置网页播放器打开。';
+  @override
+  String get web_video_login_import => '从浏览器导入登录';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      '已从浏览器导入 ${count} 条登录信息';
+  @override
+  String get web_video_login_import_waiting =>
+      '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
+  @override
+  String get web_video_mine_background => '正在后台制卡（直接从 YouTube 视频流截取）';
   @override
   String get web_video_mine_queue_empty => '制卡队列为空';
   @override
@@ -316519,13 +324433,44 @@ class _StringsZhCn extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '切到内置模式制作 ${count} 张排队卡片';
   @override
+  String get web_video_nav_close => '关闭';
+  @override
+  String get web_video_nav_forward => '前进';
+  @override
   String get web_video_no_tracks => '尚未采集到字幕';
+  @override
+  String get web_video_page_show => '回到网页';
+  @override
+  String get web_video_player_open => '在播放器里看';
   @override
   String get web_video_player_unavailable => '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
   @override
+  String get web_video_site_add => '添加网站';
+  @override
+  String get web_video_site_address_hint => '网址，比如 netflix.com';
+  @override
+  String get web_video_site_address_invalid => '不是有效的网址';
+  @override
+  String get web_video_site_name_hint => '名称（可选）';
+  @override
+  String get web_video_site_open => '打开';
+  @override
+  String get web_video_site_remove => '移除';
+  @override
+  String get web_video_sites_hint =>
+      '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
+  @override
+  String get web_video_track_failed => '未能截获这条字幕，点选重试';
+  @override
+  String get web_video_track_image => '图片字幕：由站点显示，不可查词';
+  @override
   String get web_video_track_live => '实时采集（页面字幕）';
   @override
+  String get web_video_track_loading => '正在加载…';
+  @override
   String get web_video_track_menu => '字幕轨';
+  @override
+  String get web_video_track_site => '站点字幕，点选加载';
   @override
   String get wheel_page_turn_interval => '滚轮翻页间隔';
   @override
@@ -316694,6 +324639,11 @@ class _StringsZhHk extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 項已單獨指定';
   @override
   String get ai_feature_overrides_none => '全部跟隨預設提供商';
+  @override
+  String get ai_feature_subtitle_proofread => '字幕校對';
+  @override
+  String get ai_feature_subtitle_proofread_summary =>
+      '校對語音識別生成的日語字幕：先整理作品專名表，再修正聽錯的台詞。只會把識別出的文字與專名表發給該供應商（不發音訊與畫面），並由其計費。';
   @override
   String get ai_feature_unset => '未指定';
   @override
@@ -324648,6 +332598,10 @@ class _StringsZhHk extends _StringsEn {
   String get hover_auto_lookup_hint =>
       '滑鼠停留在文字上即自動查詞，無需點擊或按住 Shift；最多觸發一層彈窗。僅桌面版。';
   @override
+  String get hover_lookup_modifier => '懸停查詞按鍵';
+  @override
+  String get hover_lookup_modifier_hint => '按住這個鍵把滑鼠移到文字上即查詞（閱讀器、字幕、網頁）';
+  @override
   String get icon_custom => '自訂';
   @override
   String get icon_custom_confirm_body => '將使用所選圖片建立主畫面捷徑。是否繼續？';
@@ -326680,6 +334634,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '在漫畫閱讀器中用音量加減鍵翻頁';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_chapter_read => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '寬頁獨佔一屏';
   @override
   String get manga_wide_page_solo_subtitle => '見開き頁單獨佔一屏顯示';
@@ -327343,8 +335317,6 @@ class _StringsZhHk extends _StringsEn {
   String get module_downloads_hidden_hint =>
       '「瀏覽」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
   @override
-  String get module_extension_label => '瀏覽器擴展';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -327366,6 +335338,8 @@ class _StringsZhHk extends _StringsEn {
   String get nav_srs => '複習';
   @override
   String get nav_video => '影片';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint => '所有公網請求都會使用的 HTTP 代理伺服器';
   @override
@@ -327519,6 +335493,38 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get novel_store_empty =>
       '還沒有插件倉庫。Fushi 不內置任何倉庫——請添加你信任的 LNReader 插件倉庫的索引地址。';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
   @override
   String get now_listening_label => '正在聽書';
   @override
@@ -327685,8 +335691,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_feature_browse_hint => '線上來源、擴展、發現與下載';
   @override
-  String get onboarding_feature_extension_hint => '網頁查詞（僅桌面）';
-  @override
   String get onboarding_feature_fonts => '自定義字體';
   @override
   String get onboarding_feature_fonts_hint => '界面、正文、詞典各用自己喜歡的字體';
@@ -327719,6 +335723,18 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_feature_video => '影片';
   @override
   String get onboarding_feature_video_hint => '字幕查詞與製卡';
+  @override
+  String get onboarding_feature_web_basic_hint =>
+      'Browse sites inside Fushi and look up words on any page.';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       '未勾選的頁面不顯示在導航欄，之後可在「設定 → 外觀」改回。';
@@ -335090,6 +343106,226 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_adjust_title => '字幕調整';
   @override
+  String video_subtitle_ai_busy({required Object title}) =>
+      '已有字幕生成任務進行中：${title}';
+  @override
+  String get video_subtitle_ai_consent_body =>
+      'AI 校對只會把語音識別出的日語文字與本作品的專名表，發送給你在「設定 › 模型 › LLM」中為「字幕校對」指派的供應商，不會發送音訊與畫面。請求由該供應商按其價格計費，本機的 Ollama / LM Studio 不會離開本機。效果取決於模型，不作保證。';
+  @override
+  String get video_subtitle_ai_consent_confirm => '開啟';
+  @override
+  String get video_subtitle_ai_consent_title => 'AI 校對會發送甚麼';
+  @override
+  String get video_subtitle_ai_entry_hint => '語音識別 + 可選 AI 校對，儲存在影片旁邊';
+  @override
+  String video_subtitle_ai_episode_exported({required Object name}) =>
+      '已儲存 ${name}';
+  @override
+  String video_subtitle_ai_episode_exported_asr({required Object name}) =>
+      '已有同名字幕，另存為 ${name}';
+  @override
+  String get video_subtitle_ai_episode_pending => '等待中';
+  @override
+  String get video_subtitle_ai_episode_skipped_both =>
+      '略過：.ja.srt 與 .ja.asr.srt 均已存在';
+  @override
+  String get video_subtitle_ai_episode_skipped_existing => '略過：已有 .ja.srt';
+  @override
+  String get video_subtitle_ai_episode_skipped_no_dialogue =>
+      '略過：幾乎沒有台詞（歌曲或片段）';
+  @override
+  String get video_subtitle_ai_episode_skipped_song => '略過：判定為純歌曲（OP/ED、MV）';
+  @override
+  String get video_subtitle_ai_error_reply_incomplete => 'AI 多次回覆均不完整';
+  @override
+  String video_subtitle_ai_estimate({
+    required Object requests,
+    required Object input,
+    required Object output,
+  }) => '約 ${requests} 次請求，輸入約 ${input}、輸出約 ${output} token';
+  @override
+  String get video_subtitle_ai_estimate_by_drafts => '（按識別稿估算）';
+  @override
+  String get video_subtitle_ai_estimate_by_duration => '（按片長粗略估算）';
+  @override
+  String get video_subtitle_ai_estimate_nothing => '沒有需要校對的內容';
+  @override
+  String get video_subtitle_ai_hide => '收起';
+  @override
+  String get video_subtitle_ai_model_label => '識別模型';
+  @override
+  String get video_subtitle_ai_model_missing => '影片用的日語識別模型尚未下載';
+  @override
+  String get video_subtitle_ai_model_ready => '日語識別模型已就緒';
+  @override
+  String get video_subtitle_ai_moss_backend_auto => '自動';
+  @override
+  String get video_subtitle_ai_moss_backend_hint =>
+      '自動：Windows 上符合條件的 NVIDIA 顯示卡使用 CUDA，Linux 使用 Vulkan';
+  @override
+  String get video_subtitle_ai_moss_backend_label => 'MOSS 後端';
+  @override
+  String get video_subtitle_ai_moss_checking => '檢查中…';
+  @override
+  String get video_subtitle_ai_moss_code_cuda_unavailable =>
+      '沒有符合 CUDA 要求的 NVIDIA 顯示卡 / 驅動程式（驅動 R580+、RTX 20 系列或更新）';
+  @override
+  String get video_subtitle_ai_moss_code_model_missing => 'MOSS 模型尚未下載';
+  @override
+  String get video_subtitle_ai_moss_code_no_gpu => '找不到可用的顯示卡';
+  @override
+  String get video_subtitle_ai_moss_code_no_runtime_for_backend =>
+      '此平台沒有該後端的 audio.cpp 版本';
+  @override
+  String get video_subtitle_ai_moss_code_runtime_missing => 'audio.cpp 執行庫尚未下載';
+  @override
+  String get video_subtitle_ai_moss_code_unsupported_platform =>
+      '僅支援 Windows 與 Linux（x64）';
+  @override
+  String get video_subtitle_ai_moss_delete => 'Delete MOSS files';
+  @override
+  String video_subtitle_ai_moss_delete_confirm({required Object size}) =>
+      'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+  @override
+  String video_subtitle_ai_moss_download({required Object size}) =>
+      '下載 MOSS（${size}）';
+  @override
+  String get video_subtitle_ai_moss_files => 'MOSS 執行庫與模型';
+  @override
+  String video_subtitle_ai_moss_missing({required Object size}) =>
+      '尚未下載（需下載 ${size}）';
+  @override
+  String get video_subtitle_ai_moss_ready => 'MOSS 執行庫與模型已就緒';
+  @override
+  String video_subtitle_ai_moss_unavailable({required Object reason}) =>
+      'MOSS 無法使用：${reason}';
+  @override
+  String get video_subtitle_ai_no_local_episodes => '沒有可處理的本機影片檔案';
+  @override
+  String get video_subtitle_ai_no_provider => '尚未為「字幕校對」指派 AI 供應商';
+  @override
+  String get video_subtitle_ai_nothing_to_rerun => '尚未有任何一集進行過校對';
+  @override
+  String get video_subtitle_ai_open_settings => '前往「設定 › 模型 › LLM」指派';
+  @override
+  String get video_subtitle_ai_proofread_hint => '用 AI 修正人名與誤識（預設關閉）';
+  @override
+  String get video_subtitle_ai_proofread_label => 'AI 校對';
+  @override
+  String video_subtitle_ai_provider({
+    required Object name,
+    required Object model,
+  }) => '供應商：${name}（${model}）';
+  @override
+  String get video_subtitle_ai_remote_episode_unsupported =>
+      'Generating on the host only works for the first episode of a host playlist';
+  @override
+  String video_subtitle_ai_remote_host({required Object host}) =>
+      'Runs on ${host}';
+  @override
+  String video_subtitle_ai_remote_host_error({required Object reason}) =>
+      'Host error: ${reason}';
+  @override
+  String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
+  @override
+  String get video_subtitle_ai_remote_proofread_hint =>
+      'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
+  String get video_subtitle_ai_remote_segmenter_hint =>
+      'Whether MOSS can be used depends on the host\'s GPU';
+  @override
+  String get video_subtitle_ai_remote_unreachable =>
+      'Can\'t reach the host this video is on';
+  @override
+  String get video_subtitle_ai_remote_unsupported =>
+      'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+  @override
+  String get video_subtitle_ai_resume => '繼續';
+  @override
+  String get video_subtitle_ai_scrape_hint => '這部作品尚未刮削，專名表只能憑標題推測，建議先刮削。';
+  @override
+  String video_subtitle_ai_season_summary({
+    required Object n,
+    required Object skipped,
+  }) => '共 ${n} 集，其中 ${skipped} 集已有日語字幕，會略過';
+  @override
+  String get video_subtitle_ai_season_title => '整季生成日語字幕';
+  @override
+  String get video_subtitle_ai_segmenter_auto => '自動';
+  @override
+  String get video_subtitle_ai_segmenter_hint =>
+      'MOSS 按說話者分段（需 NVIDIA 桌面電腦）；其他平台使用滑動視窗';
+  @override
+  String get video_subtitle_ai_segmenter_label => '分段方式';
+  @override
+  String get video_subtitle_ai_segmenter_moss => 'MOSS';
+  @override
+  String get video_subtitle_ai_segmenter_window => '滑動視窗';
+  @override
+  String get video_subtitle_ai_settings_footer =>
+      'AI 校對在生成面板中開啟，首次開啟時會說明發送的內容。';
+  @override
+  String get video_subtitle_ai_settings_summary => '生成影片日語字幕的分段方式與 MOSS';
+  @override
+  String get video_subtitle_ai_settings_title => '影片日語字幕';
+  @override
+  String get video_subtitle_ai_stage_consistency => '統一寫法';
+  @override
+  String get video_subtitle_ai_stage_export => '匯出';
+  @override
+  String get video_subtitle_ai_stage_glossary => '建立專名表';
+  @override
+  String get video_subtitle_ai_stage_proofread => '校對';
+  @override
+  String get video_subtitle_ai_stage_recognize => '語音識別';
+  @override
+  String get video_subtitle_ai_stage_split => '拆分長句';
+  @override
+  String get video_subtitle_ai_start => '開始';
+  @override
+  String get video_subtitle_ai_status_cancelled => '已取消。已完成的階段會保留，按「繼續」即可接續。';
+  @override
+  String get video_subtitle_ai_status_cancelling => '正在取消…';
+  @override
+  String video_subtitle_ai_status_done({required Object n}) =>
+      '完成：已儲存 ${n} 個字幕檔案';
+  @override
+  String video_subtitle_ai_status_failed({required Object reason}) =>
+      '失敗：${reason}';
+  @override
+  String get video_subtitle_ai_status_glossary_conflicts =>
+      '專名表自相矛盾。修改後請按「繼續」。';
+  @override
+  String get video_subtitle_ai_status_glossary_wrong_work =>
+      '專名表似乎屬於另一部作品（表中的人名在音訊裏幾乎沒有出現）。修改或先刮削作品後，請按「繼續」。';
+  @override
+  String video_subtitle_ai_status_paused({required Object reason}) =>
+      '已暫停：AI 請求失敗（${reason}）';
+  @override
+  String get video_subtitle_ai_status_starting => '正在開始…';
+  @override
+  String get video_subtitle_ai_target_label => '對象';
+  @override
+  String get video_subtitle_ai_title => '生成日語字幕';
+  @override
+  String video_subtitle_ai_unavailable_missing({required Object title}) =>
+      '${title}：檔案不存在，已略過';
+  @override
+  String video_subtitle_ai_unavailable_remote({required Object title}) =>
+      '${title}：只存在於另一台裝置，已略過（請在該裝置上生成）';
+  @override
+  String video_subtitle_ai_usage({
+    required Object calls,
+    required Object input,
+    required Object output,
+  }) => 'AI 用量：${calls} 次請求，輸入 ${input}、輸出 ${output} token';
+  @override
+  String video_subtitle_ai_usage_unknown({required Object n}) =>
+      '（${n} 次請求未回報用量）';
+  @override
   String get video_subtitle_anchor_bottom => '底部';
   @override
   String get video_subtitle_anchor_top => '頂部';
@@ -335189,6 +343425,76 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_frame_ocr_status_recognizing =>
       'Reading on-screen text…';
+  @override
+  String get video_subtitle_glossary_accept_candidate => '照原樣採用此表';
+  @override
+  String get video_subtitle_glossary_add => '新增項目';
+  @override
+  String get video_subtitle_glossary_candidate_banner =>
+      '這張表未通過驗證，尚未儲存。修改（或照原樣採用）後，回到生成面板按「繼續」。';
+  @override
+  String get video_subtitle_glossary_delete => '刪除項目';
+  @override
+  String video_subtitle_glossary_delete_confirm({required Object ja}) =>
+      '刪除「${ja}」？重新生成專名表時，它可能會再次出現。';
+  @override
+  String get video_subtitle_glossary_edit => '編輯項目';
+  @override
+  String get video_subtitle_glossary_empty =>
+      '尚未有項目。專名表會在首次 AI 校對時自動生成，也可以手動新增。';
+  @override
+  String get video_subtitle_glossary_entry_menu => '項目操作';
+  @override
+  String get video_subtitle_glossary_field_ja => '正式寫法';
+  @override
+  String get video_subtitle_glossary_field_kind => '類別';
+  @override
+  String get video_subtitle_glossary_field_kind_hint => '以「人名」開頭的項目會用於核對作品身份';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions => '誤寫';
+  @override
+  String get video_subtitle_glossary_field_misrecognitions_hint => '以逗號分隔';
+  @override
+  String get video_subtitle_glossary_field_note => '備註';
+  @override
+  String get video_subtitle_glossary_field_reading => '讀音（平假名）';
+  @override
+  String get video_subtitle_glossary_intro =>
+      'AI 校對時會把字幕統一成這裏的寫法。你新增或修改過的項目，重新生成時會保留。';
+  @override
+  String get video_subtitle_glossary_ja_duplicate => '表中已有這個寫法';
+  @override
+  String get video_subtitle_glossary_ja_empty => '請輸入正式寫法';
+  @override
+  String video_subtitle_glossary_misrecognitions_short({
+    required Object list,
+  }) => '誤寫：${list}';
+  @override
+  String get video_subtitle_glossary_open => '專名表';
+  @override
+  String get video_subtitle_glossary_regenerate => '重新生成';
+  @override
+  String video_subtitle_glossary_regenerate_confirm({required Object n}) =>
+      '要讓 AI 重新生成專名表嗎？會再發送一次請求。你編輯過的 ${n} 項會保留。';
+  @override
+  String video_subtitle_glossary_regenerated({required Object n}) =>
+      '已重新生成：${n} 項';
+  @override
+  String get video_subtitle_glossary_rerun_consistency => '只重跑統一寫法';
+  @override
+  String video_subtitle_glossary_rerun_done({required Object n}) =>
+      '寫法已統一，更新了 ${n} 個字幕檔案';
+  @override
+  String get video_subtitle_glossary_rerun_running => '正在重跑統一寫法…';
+  @override
+  String get video_subtitle_glossary_save => '儲存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
+  @override
+  String get video_subtitle_glossary_title => '專名表';
+  @override
+  String get video_subtitle_glossary_user_edited => '你編輯過，重新生成時會保留';
   @override
   String get video_subtitle_graphic_hint => '圖形字幕 · 畫面顯示 · 暫停後可點字查詞（OCR）';
   @override
@@ -335527,6 +343833,88 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '音量鍵句子導覽';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
+  @override
+  String get web_hub_video_sites => 'Video sites';
+  @override
+  String get web_video_ad_skipping => '正在略過廣告…';
+  @override
+  String get web_video_address_hint => '搜尋或輸入網址';
+  @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => '隱藏網站字幕';
   @override
   String get web_video_hosting_builtin => '內建（1080p；可超解析、截圖、製卡）';
@@ -335536,6 +343924,16 @@ class _StringsZhHk extends _StringsEn {
   String get web_video_hosting_windowed => '原生視窗（4K 硬體 DRM；製卡先排隊）';
   @override
   String get web_video_import_hint => '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
+  @override
+  String get web_video_login_import => '從瀏覽器匯入登入';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      '已從瀏覽器匯入 ${count} 條登入資訊';
+  @override
+  String get web_video_login_import_waiting =>
+      '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
+  @override
+  String get web_video_mine_background => '正在背景製卡（直接從 YouTube 影片串流擷取）';
   @override
   String get web_video_mine_queue_empty => '佇列中沒有卡片';
   @override
@@ -335559,13 +343957,46 @@ class _StringsZhHk extends _StringsEn {
   String web_video_mine_switch_builtin({required Object count}) =>
       '切換到內建模式製作 ${count} 張排隊卡片';
   @override
+  String get web_video_nav_close => '關閉';
+  @override
+  String get web_video_nav_forward => '前進';
+  @override
   String get web_video_no_tracks => '尚未擷取到字幕';
+  @override
+  String get web_video_page_show => '回到網頁';
+  @override
+  String get web_video_player_open => '在播放器裡看';
   @override
   String get web_video_player_unavailable => '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
   @override
+  String get web_video_site_add => '新增網站';
+  @override
+  String get web_video_site_address_hint => '網址，例如 netflix.com';
+  @override
+  String get web_video_site_address_invalid => '不是有效的網址';
+  @override
+  String get web_video_site_name_hint => '名稱（可選）';
+  @override
+  String get web_video_site_open => '開啟';
+  @override
+  String get web_video_site_remove => '移除';
+  @override
+  String get web_video_sites_hint =>
+      '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
+  @override
   String get web_video_track_live => '即時字幕（從頁面取樣）';
   @override
+  String get web_video_track_loading => '正在載入…';
+  @override
   String get web_video_track_menu => '字幕軌';
+  @override
+  String get web_video_track_site => '站點字幕，點選載入';
   @override
   String get wheel_page_turn_interval => '滑鼠滾輪翻頁間隔';
   @override
@@ -335695,6 +344126,10 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Not set';
       case 'ai_feature_video_identify':
@@ -342903,6 +351338,10 @@ extension on _StringsEn {
         return 'Look up on hover';
       case 'hover_auto_lookup_hint':
         return 'Look up automatically when the mouse hovers over a character; no need to click or hold Shift. Triggers at most one popup layer. Desktop only.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Custom';
       case 'icon_custom_confirm_body':
@@ -344766,6 +353205,22 @@ extension on _StringsEn {
         return 'Volume keys turn pages';
       case 'manga_volume_key_paging_subtitle':
         return 'Use volume up and down to turn pages in the manga reader';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Wide pages alone';
       case 'manga_wide_page_solo_subtitle':
@@ -345395,8 +353850,6 @@ extension on _StringsEn {
         return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'The Browse tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
-      case 'module_extension_label':
-        return 'Browser extension';
       case 'move_down':
         return 'Move down';
       case 'move_up':
@@ -345419,6 +353872,8 @@ extension on _StringsEn {
         return 'Review';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'HTTP proxy server used by all public internet requests';
       case 'network_proxy_auto_hint':
@@ -345563,6 +354018,32 @@ extension on _StringsEn {
         return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
       case 'novel_store_empty':
         return 'No plugin repositories yet. Fushi doesn\'t include any — add the index URL of an LNReader plugin repository you trust.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Now listening';
       case 'ocr_llm_default_accept':
@@ -345701,8 +354182,6 @@ extension on _StringsEn {
         return 'EPUB reading with lookup and audiobook sync';
       case 'onboarding_feature_browse_hint':
         return 'Online sources, extensions, discovery and downloads';
-      case 'onboarding_feature_extension_hint':
-        return 'Look up words on any web page (desktop only)';
       case 'onboarding_feature_fonts':
         return 'Custom fonts';
       case 'onboarding_feature_fonts_hint':
@@ -345735,6 +354214,14 @@ extension on _StringsEn {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Subtitle lookup and card mining';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Unchecked pages are hidden from the navigation bar. Change anytime in Settings → Appearance.';
       case 'onboarding_features_modules_title':
@@ -352541,6 +361028,198 @@ extension on _StringsEn {
         return 'Expand';
       case 'video_subtitle_adjust_title':
         return 'Subtitle adjustments';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Bottom';
       case 'video_subtitle_anchor_top':
@@ -352625,6 +361304,70 @@ extension on _StringsEn {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Graphic subtitle · shown on video · pause to look up words (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -352940,6 +361683,79 @@ extension on _StringsEn {
         return 'Volume button page turning';
       case 'volume_key_sentence_nav':
         return 'Volume key sentence navigation';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Hide site subtitles';
       case 'web_video_hosting_builtin':
@@ -352950,6 +361766,15 @@ extension on _StringsEn {
         return 'Native window (4K, hardware DRM; cards are queued for later)';
       case 'web_video_import_hint':
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'No queued cards';
       case 'web_video_mine_queue_finished':
@@ -352968,14 +361793,44 @@ extension on _StringsEn {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Switch to built-in mode to create ${count} queued cards';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'No subtitles captured yet';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Live captions (sampled from page)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Subtitle track';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Mouse wheel page-turn interval';
       case 'window_caption_maximize':
@@ -353106,6 +361961,10 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'غير معيّن';
       case 'ai_feature_video_identify':
@@ -360313,6 +369172,10 @@ extension on _StringsAr {
         return 'البحث عند التمرير';
       case 'hover_auto_lookup_hint':
         return 'البحث تلقائيًا عند تمرير مؤشر الماوس فوق حرف؛ دون الحاجة إلى النقر أو الضغط على Shift. يُظهر طبقة منبثقة واحدة كحد أقصى. لأجهزة سطح المكتب فقط.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'مخصص';
       case 'icon_custom_confirm_body':
@@ -362172,6 +371035,22 @@ extension on _StringsAr {
         return 'أزرار الصوت لتقليب الصفحات';
       case 'manga_volume_key_paging_subtitle':
         return 'استخدم زري رفع وخفض الصوت لتقليب الصفحات في قارئ المانغا';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'الصفحات العريضة وحدها';
       case 'manga_wide_page_solo_subtitle':
@@ -362801,8 +371680,6 @@ extension on _StringsAr {
         return 'وحدة الميزة هذه معطّلة في الإعدادات > المظهر > وحدات الميزات.';
       case 'module_downloads_hidden_hint':
         return 'تبويب التصفح مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
-      case 'module_extension_label':
-        return 'إضافة المتصفح';
       case 'move_down':
         return 'تحريك لأسفل';
       case 'move_up':
@@ -362825,6 +371702,8 @@ extension on _StringsAr {
         return 'المراجعة';
       case 'nav_video':
         return 'فيديو';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'خادم وكيل HTTP تستخدمه كل طلبات الإنترنت العامة';
       case 'network_proxy_auto_hint':
@@ -362969,6 +371848,32 @@ extension on _StringsAr {
         return 'إضافات LNReader نصوص برمجية من جهات خارجية تجلب المحتوى من مواقع الويب. أضف المستودعات التي تثق بها فقط.';
       case 'novel_store_empty':
         return 'لا توجد مستودعات إضافات بعد. لا يتضمن Fushi أي مستودع — أضف رابط فهرس مستودع إضافات LNReader تثق به.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'يُستمع الآن';
       case 'ocr_llm_default_accept':
@@ -363108,8 +372013,6 @@ extension on _StringsAr {
         return 'قراءة EPUB مع البحث ومزامنة الكتب الصوتية';
       case 'onboarding_feature_browse_hint':
         return 'المصادر عبر الإنترنت والإضافات والاكتشاف والتنزيلات';
-      case 'onboarding_feature_extension_hint':
-        return 'ابحث عن الكلمات في أي صفحة ويب (سطح المكتب فقط)';
       case 'onboarding_feature_fonts':
         return 'خطوط مخصّصة';
       case 'onboarding_feature_fonts_hint':
@@ -363142,6 +372045,14 @@ extension on _StringsAr {
         return 'الفيديو';
       case 'onboarding_feature_video_hint':
         return 'بحث في الترجمات وإنشاء بطاقات';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'الصفحات غير المحدّدة تُخفى من شريط التنقل. يمكنك تغيير ذلك في أي وقت من الإعدادات → المظهر.';
       case 'onboarding_features_modules_title':
@@ -369945,6 +378856,198 @@ extension on _StringsAr {
         return 'توسيع';
       case 'video_subtitle_adjust_title':
         return 'ضبط الترجمة';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'أسفل';
       case 'video_subtitle_anchor_top':
@@ -370029,6 +379132,70 @@ extension on _StringsAr {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'ترجمة رسومية · تُعرض على الفيديو · أوقف مؤقتًا للبحث عن الكلمات (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -370345,6 +379512,79 @@ extension on _StringsAr {
         return 'تقليب الصفحات بأزرار الصوت';
       case 'volume_key_sentence_nav':
         return 'التنقل بين الجمل بأزرار الصوت';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'إخفاء ترجمة الموقع';
       case 'web_video_hosting_builtin':
@@ -370355,6 +379595,15 @@ extension on _StringsAr {
         return 'نافذة أصلية (4K، DRM عتادي؛ تُوضع البطاقات في قائمة الانتظار)';
       case 'web_video_import_hint':
         return 'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'لا توجد بطاقات في قائمة الانتظار';
       case 'web_video_mine_queue_finished':
@@ -370373,14 +379622,44 @@ extension on _StringsAr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'لم يتم التقاط أي ترجمة بعد';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'ترجمة مباشرة (مأخوذة من الصفحة)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'مسار الترجمة';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'فترة قلب الصفحة بعجلة الفأرة';
       case 'window_caption_maximize':
@@ -370512,6 +379791,10 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Nicht festgelegt';
       case 'ai_feature_video_identify':
@@ -377752,6 +387035,10 @@ extension on _StringsDe {
         return 'Beim Überfahren nachschlagen';
       case 'hover_auto_lookup_hint':
         return 'Automatisch nachschlagen, wenn die Maus über ein Zeichen fährt; ohne Klicken oder Shift zu halten. Erzeugt höchstens eine Popup-Ebene. Nur Desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Benutzerdefiniert';
       case 'icon_custom_confirm_body':
@@ -379625,6 +388912,22 @@ extension on _StringsDe {
         return 'Lautstärketasten zum Blättern';
       case 'manga_volume_key_paging_subtitle':
         return 'Lautstärke hoch und runter zum Seitenumblättern im Manga-Reader verwenden';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Breite Seiten einzeln';
       case 'manga_wide_page_solo_subtitle':
@@ -380258,8 +389561,6 @@ extension on _StringsDe {
         return 'Dieses Funktionsmodul ist unter Einstellungen > Darstellung > Funktionsmodule deaktiviert.';
       case 'module_downloads_hidden_hint':
         return 'Der Tab „Durchsuchen“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
-      case 'module_extension_label':
-        return 'Browser-Erweiterung';
       case 'move_down':
         return 'Nach unten';
       case 'move_up':
@@ -380282,6 +389583,8 @@ extension on _StringsDe {
         return 'Wiederholen';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'HTTP-Proxyserver für alle Anfragen ins öffentliche Internet';
       case 'network_proxy_auto_hint':
@@ -380428,6 +389731,32 @@ extension on _StringsDe {
         return 'LNReader-Plugins sind Skripte von Drittanbietern, die Inhalte von Websites abrufen. Füge nur Repositories hinzu, denen du vertraust.';
       case 'novel_store_empty':
         return 'Noch keine Plugin-Repositories. Fushi enthält keine – fügen Sie die Index-URL eines LNReader-Plugin-Repositorys hinzu, dem Sie vertrauen.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Wird gerade gehört';
       case 'ocr_llm_default_accept':
@@ -380568,8 +389897,6 @@ extension on _StringsDe {
         return 'EPUB lesen mit Nachschlagen und Hörbuch-Synchronisation';
       case 'onboarding_feature_browse_hint':
         return 'Online-Quellen, Erweiterungen, Entdecken und Downloads';
-      case 'onboarding_feature_extension_hint':
-        return 'Wörter auf beliebigen Webseiten nachschlagen (nur Desktop)';
       case 'onboarding_feature_fonts':
         return 'Eigene Schriften';
       case 'onboarding_feature_fonts_hint':
@@ -380602,6 +389929,14 @@ extension on _StringsDe {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Untertitel nachschlagen und Karten erstellen';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Nicht angehakte Seiten werden in der Navigationsleiste ausgeblendet. Jederzeit änderbar unter Einstellungen → Erscheinungsbild.';
       case 'onboarding_features_modules_title':
@@ -387424,6 +396759,198 @@ extension on _StringsDe {
         return 'Ausklappen';
       case 'video_subtitle_adjust_title':
         return 'Untertitel anpassen';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Unten';
       case 'video_subtitle_anchor_top':
@@ -387510,6 +397037,70 @@ extension on _StringsDe {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Grafikuntertitel · im Bild angezeigt · Nachschlagen nach Pause (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -387826,6 +397417,79 @@ extension on _StringsDe {
         return 'Seitenblättern mit Lautstärketasten';
       case 'volume_key_sentence_nav':
         return 'Satznavigation mit Lautstärketasten';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Website-Untertitel ausblenden';
       case 'web_video_hosting_builtin':
@@ -387836,6 +397500,15 @@ extension on _StringsDe {
         return 'Natives Fenster (4K, Hardware-DRM; Karten werden später erstellt)';
       case 'web_video_import_hint':
         return 'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Keine wartenden Karten';
       case 'web_video_mine_queue_finished':
@@ -387854,14 +397527,44 @@ extension on _StringsDe {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Noch keine Untertitel erfasst';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Live-Untertitel (von der Seite erfasst)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Untertitelspur';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Mausrad-Blätterintervall';
       case 'window_caption_maximize':
@@ -387993,6 +397696,10 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Sin definir';
       case 'ai_feature_video_identify':
@@ -395223,6 +404930,10 @@ extension on _StringsEs {
         return 'Buscar al pasar el cursor';
       case 'hover_auto_lookup_hint':
         return 'Busca automáticamente al pasar el ratón sobre un carácter; sin hacer clic ni mantener Mayús. Muestra como máximo una capa de ventana emergente. Solo en escritorio.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Personalizado';
       case 'icon_custom_confirm_body':
@@ -397092,6 +406803,22 @@ extension on _StringsEs {
         return 'Teclas de volumen pasan páginas';
       case 'manga_volume_key_paging_subtitle':
         return 'Use subir y bajar volumen para pasar páginas en el lector de manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Páginas anchas solas';
       case 'manga_wide_page_solo_subtitle':
@@ -397725,8 +407452,6 @@ extension on _StringsEs {
         return 'Este módulo de funciones está desactivado en Ajustes > Apariencia > Módulos de funciones.';
       case 'module_downloads_hidden_hint':
         return 'La pestaña Explorar está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
-      case 'module_extension_label':
-        return 'Extensión del navegador';
       case 'move_down':
         return 'Mover abajo';
       case 'move_up':
@@ -397749,6 +407474,8 @@ extension on _StringsEs {
         return 'Repaso';
       case 'nav_video':
         return 'Vídeo';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Servidor proxy HTTP usado por todas las solicitudes a Internet público';
       case 'network_proxy_auto_hint':
@@ -397894,6 +407621,32 @@ extension on _StringsEs {
         return 'Los plugins de LNReader son scripts de terceros que obtienen contenido de sitios web. Añade solo repositorios en los que confíes.';
       case 'novel_store_empty':
         return 'Aún no hay repositorios de plugins. Fushi no incluye ninguno: agregue la URL del índice de un repositorio de plugins de LNReader en el que confíe.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Escuchando ahora';
       case 'ocr_llm_default_accept':
@@ -398034,8 +407787,6 @@ extension on _StringsEs {
         return 'Lectura de EPUB con consulta y sincronización de audiolibro';
       case 'onboarding_feature_browse_hint':
         return 'Fuentes en línea, extensiones, descubrimiento y descargas';
-      case 'onboarding_feature_extension_hint':
-        return 'Busque palabras en cualquier página web (solo escritorio)';
       case 'onboarding_feature_fonts':
         return 'Fuentes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -398068,6 +407819,14 @@ extension on _StringsEs {
         return 'Vídeo';
       case 'onboarding_feature_video_hint':
         return 'Consulta en subtítulos y creación de tarjetas';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Las páginas sin marcar se ocultan de la barra de navegación. Puede cambiarlo cuando quiera en Ajustes → Apariencia.';
       case 'onboarding_features_modules_title':
@@ -404888,6 +414647,198 @@ extension on _StringsEs {
         return 'Expandir';
       case 'video_subtitle_adjust_title':
         return 'Ajustes de subtítulos';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Abajo';
       case 'video_subtitle_anchor_top':
@@ -404973,6 +414924,70 @@ extension on _StringsEs {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Subtítulo gráfico · se muestra en el vídeo · consulta tras pausar (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -405289,6 +415304,79 @@ extension on _StringsEs {
         return 'Pasar página con botones de volumen';
       case 'volume_key_sentence_nav':
         return 'Navegación de oraciones con teclas de volumen';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar subtítulos del sitio';
       case 'web_video_hosting_builtin':
@@ -405299,6 +415387,15 @@ extension on _StringsEs {
         return 'Ventana nativa (4K, DRM por hardware; las tarjetas se ponen en cola)';
       case 'web_video_import_hint':
         return 'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'No hay tarjetas en cola';
       case 'web_video_mine_queue_finished':
@@ -405317,14 +415414,44 @@ extension on _StringsEs {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Cambiar al modo integrado para crear ${count} tarjetas en cola';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Aún no se han capturado subtítulos';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Subtítulos en vivo (capturados de la página)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Pista de subtítulos';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Intervalo de pasar página con la rueda';
       case 'window_caption_maximize':
@@ -405457,6 +415584,10 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Non défini';
       case 'ai_feature_video_identify':
@@ -412700,6 +422831,10 @@ extension on _StringsFr {
         return 'Rechercher au survol';
       case 'hover_auto_lookup_hint':
         return 'Recherche automatique lorsque la souris survole un caractère ; pas besoin de cliquer ni de maintenir Maj. Affiche au plus une fenêtre contextuelle. Bureau uniquement.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Personnalisé';
       case 'icon_custom_confirm_body':
@@ -414569,6 +424704,22 @@ extension on _StringsFr {
         return 'Touches de volume pour tourner les pages';
       case 'manga_volume_key_paging_subtitle':
         return 'Utiliser les touches volume haut et bas pour tourner les pages dans le lecteur de manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Pages larges seules';
       case 'manga_wide_page_solo_subtitle':
@@ -415202,8 +425353,6 @@ extension on _StringsFr {
         return 'Ce module est désactivé dans Réglages > Apparence > Modules de fonctionnalités.';
       case 'module_downloads_hidden_hint':
         return 'L\'onglet Parcourir est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
-      case 'module_extension_label':
-        return 'Extension navigateur';
       case 'move_down':
         return 'Descendre';
       case 'move_up':
@@ -415226,6 +425375,8 @@ extension on _StringsFr {
         return 'Révision';
       case 'nav_video':
         return 'Vidéo';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Serveur proxy HTTP utilisé par toutes les requêtes vers Internet public';
       case 'network_proxy_auto_hint':
@@ -415372,6 +425523,32 @@ extension on _StringsFr {
         return 'Les plugins LNReader sont des scripts tiers qui récupèrent du contenu sur des sites web. N\'ajoutez que des dépôts de confiance.';
       case 'novel_store_empty':
         return 'Aucun dépôt de plugins pour l\'instant. Fushi n\'en inclut aucun : ajoutez l\'URL d\'index d\'un dépôt de plugins LNReader de confiance.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Écoute en cours';
       case 'ocr_llm_default_accept':
@@ -415512,8 +425689,6 @@ extension on _StringsFr {
         return 'Lecture EPUB avec recherche et synchronisation des livres audio';
       case 'onboarding_feature_browse_hint':
         return 'Sources en ligne, extensions, découverte et téléchargements';
-      case 'onboarding_feature_extension_hint':
-        return 'Rechercher des mots sur n\'importe quelle page web (ordinateur uniquement)';
       case 'onboarding_feature_fonts':
         return 'Polices personnalisées';
       case 'onboarding_feature_fonts_hint':
@@ -415546,6 +425721,14 @@ extension on _StringsFr {
         return 'Vidéo';
       case 'onboarding_feature_video_hint':
         return 'Recherche dans les sous-titres et création de cartes';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Les pages non cochées sont masquées de la barre de navigation. Modifiable à tout moment dans Paramètres → Apparence.';
       case 'onboarding_features_modules_title':
@@ -422369,6 +432552,198 @@ extension on _StringsFr {
         return 'Développer';
       case 'video_subtitle_adjust_title':
         return 'Réglages des sous-titres';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Bas';
       case 'video_subtitle_anchor_top':
@@ -422454,6 +432829,70 @@ extension on _StringsFr {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Sous-titre graphique · affiché sur la vidéo · recherche après pause (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -422770,6 +433209,79 @@ extension on _StringsFr {
         return 'Tourner les pages avec les boutons de volume';
       case 'volume_key_sentence_nav':
         return 'Navigation par phrase avec les touches de volume';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Masquer les sous-titres du site';
       case 'web_video_hosting_builtin':
@@ -422780,6 +433292,15 @@ extension on _StringsFr {
         return 'Fenêtre native (4K, DRM matériel ; les cartes sont mises en attente)';
       case 'web_video_import_hint':
         return 'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Aucune carte en attente';
       case 'web_video_mine_queue_finished':
@@ -422798,14 +433319,44 @@ extension on _StringsFr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Passer en mode intégré pour créer ${count} cartes en attente';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Aucun sous-titre capturé pour l’instant';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Sous-titres en direct (capturés sur la page)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Piste de sous-titres';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Intervalle de changement de page à la molette';
       case 'window_caption_maximize':
@@ -422936,6 +433487,10 @@ extension on _StringsId {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Belum diatur';
       case 'ai_feature_video_identify':
@@ -430155,6 +440710,10 @@ extension on _StringsId {
         return 'Cari saat hover';
       case 'hover_auto_lookup_hint':
         return 'Cari otomatis saat mouse diarahkan ke sebuah karakter; tanpa mengeklik atau menahan Shift. Memunculkan maksimal satu lapis popup. Hanya desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Kustom';
       case 'icon_custom_confirm_body':
@@ -432019,6 +442578,22 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'manga_volume_key_paging_subtitle':
         return 'Gunakan tombol volume naik dan turun untuk mengganti halaman di pembaca manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Halaman lebar sendiri';
       case 'manga_wide_page_solo_subtitle':
@@ -432648,8 +443223,6 @@ extension on _StringsId {
         return 'Modul fitur ini dimatikan di Pengaturan > Tampilan > Modul fitur.';
       case 'module_downloads_hidden_hint':
         return 'Tab Jelajah disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
-      case 'module_extension_label':
-        return 'Ekstensi browser';
       case 'move_down':
         return 'Turunkan';
       case 'move_up':
@@ -432672,6 +443245,8 @@ extension on _StringsId {
         return 'Ulasan';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Server proxy HTTP yang dipakai semua permintaan internet publik';
       case 'network_proxy_auto_hint':
@@ -432816,6 +443391,32 @@ extension on _StringsId {
         return 'Plugin LNReader adalah skrip pihak ketiga yang mengambil konten dari situs web. Tambahkan hanya repositori yang Anda percayai.';
       case 'novel_store_empty':
         return 'Belum ada repositori plugin. Fushi tidak menyertakan satu pun — tambahkan URL indeks repositori plugin LNReader yang Anda percayai.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Sedang mendengarkan';
       case 'ocr_llm_default_accept':
@@ -432954,8 +443555,6 @@ extension on _StringsId {
         return 'Baca EPUB dengan pencarian kata dan sinkronisasi buku audio';
       case 'onboarding_feature_browse_hint':
         return 'Sumber online, ekstensi, penemuan, dan unduhan';
-      case 'onboarding_feature_extension_hint':
-        return 'Cari kata di halaman web mana pun (hanya desktop)';
       case 'onboarding_feature_fonts':
         return 'Font kustom';
       case 'onboarding_feature_fonts_hint':
@@ -432988,6 +443587,14 @@ extension on _StringsId {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Pencarian pada takarir dan pembuatan kartu';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Halaman yang tidak dicentang disembunyikan dari bilah navigasi. Bisa diubah kapan saja di Pengaturan → Tampilan.';
       case 'onboarding_features_modules_title':
@@ -439795,6 +450402,198 @@ extension on _StringsId {
         return 'Perluas';
       case 'video_subtitle_adjust_title':
         return 'Penyesuaian subtitle';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Bawah';
       case 'video_subtitle_anchor_top':
@@ -439880,6 +450679,70 @@ extension on _StringsId {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Subtitle grafis · ditampilkan di video · jeda untuk cari kata (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -440195,6 +451058,79 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'volume_key_sentence_nav':
         return 'Navigasi kalimat dengan tombol volume';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Sembunyikan subtitel situs';
       case 'web_video_hosting_builtin':
@@ -440205,6 +451141,15 @@ extension on _StringsId {
         return 'Jendela native (4K, DRM perangkat keras; kartu diantrekan dulu)';
       case 'web_video_import_hint':
         return 'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Tidak ada kartu yang antre';
       case 'web_video_mine_queue_finished':
@@ -440223,14 +451168,44 @@ extension on _StringsId {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Belum ada subtitel yang ditangkap';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Teks langsung (diambil dari halaman)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Trek subtitel';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Interval ganti halaman roda mouse';
       case 'window_caption_maximize':
@@ -440362,6 +451337,10 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Non impostato';
       case 'ai_feature_video_identify':
@@ -447591,6 +458570,10 @@ extension on _StringsIt {
         return 'Cerca al passaggio';
       case 'hover_auto_lookup_hint':
         return 'Cerca automaticamente al passaggio del mouse su un carattere; senza fare clic né tenere premuto Maiusc. Mostra al massimo un livello di popup. Solo desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Personalizzata';
       case 'icon_custom_confirm_body':
@@ -449458,6 +460441,22 @@ extension on _StringsIt {
         return 'Tasti volume cambiano pagina';
       case 'manga_volume_key_paging_subtitle':
         return 'Usa volume su e giù per cambiare pagina nel lettore manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Pagine larghe da sole';
       case 'manga_wide_page_solo_subtitle':
@@ -450091,8 +461090,6 @@ extension on _StringsIt {
         return 'Questo modulo funzionale è disattivato in Impostazioni > Aspetto > Moduli funzionali.';
       case 'module_downloads_hidden_hint':
         return 'La scheda Sfoglia è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
-      case 'module_extension_label':
-        return 'Estensione browser';
       case 'move_down':
         return 'Sposta giù';
       case 'move_up':
@@ -450115,6 +461112,8 @@ extension on _StringsIt {
         return 'Ripasso';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Server proxy HTTP usato da tutte le richieste verso Internet pubblico';
       case 'network_proxy_auto_hint':
@@ -450260,6 +461259,32 @@ extension on _StringsIt {
         return 'I plugin LNReader sono script di terze parti che recuperano contenuti dai siti web. Aggiungi solo repository di cui ti fidi.';
       case 'novel_store_empty':
         return 'Nessun repository di plugin. Fushi non ne include nessuno: aggiungi l\'URL dell\'indice di un repository di plugin LNReader di cui ti fidi.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'In ascolto';
       case 'ocr_llm_default_accept':
@@ -450399,8 +461424,6 @@ extension on _StringsIt {
         return 'Lettura EPUB con ricerca e sincronizzazione audiolibri';
       case 'onboarding_feature_browse_hint':
         return 'Fonti online, estensioni, scoperta e download';
-      case 'onboarding_feature_extension_hint':
-        return 'Cerca parole su qualsiasi pagina web (solo desktop)';
       case 'onboarding_feature_fonts':
         return 'Font personalizzati';
       case 'onboarding_feature_fonts_hint':
@@ -450433,6 +461456,14 @@ extension on _StringsIt {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Ricerca sui sottotitoli e creazione di carte';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Le pagine non selezionate vengono nascoste dalla barra di navigazione. Puoi cambiarle quando vuoi in Impostazioni → Aspetto.';
       case 'onboarding_features_modules_title':
@@ -457254,6 +468285,198 @@ extension on _StringsIt {
         return 'Espandi';
       case 'video_subtitle_adjust_title':
         return 'Regolazioni sottotitoli';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'In basso';
       case 'video_subtitle_anchor_top':
@@ -457340,6 +468563,70 @@ extension on _StringsIt {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Sottotitolo grafico · mostrato sul video · ricerca in pausa (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -457656,6 +468943,79 @@ extension on _StringsIt {
         return 'Cambia pagina con i tasti volume';
       case 'volume_key_sentence_nav':
         return 'Navigazione frase con tasti volume';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Nascondi i sottotitoli del sito';
       case 'web_video_hosting_builtin':
@@ -457666,6 +469026,15 @@ extension on _StringsIt {
         return 'Finestra nativa (4K, DRM hardware; le carte vengono messe in coda)';
       case 'web_video_import_hint':
         return 'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Nessuna carta in coda';
       case 'web_video_mine_queue_finished':
@@ -457684,14 +469053,44 @@ extension on _StringsIt {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Passa alla modalità integrata per creare ${count} carte in coda';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Nessun sottotitolo acquisito ancora';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Sottotitoli live (campionati dalla pagina)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Traccia sottotitoli';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Intervallo cambio pagina con la rotellina';
       case 'window_caption_maximize':
@@ -457821,6 +469220,10 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} 件を個別に指定';
       case 'ai_feature_overrides_none':
         return 'すべての機能が既定のプロバイダーを使用';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕の校正';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '音声認識で作った日本語字幕を校正します。作品の固有名詞表を作ってから、聞き違えた台詞を直します。このプロバイダーに送るのは認識したテキストと固有名詞表だけで（音声・映像は送りません）、料金はプロバイダーが請求します。';
       case 'ai_feature_unset':
         return '未設定';
       case 'ai_feature_video_identify':
@@ -465004,6 +476407,10 @@ extension on _StringsJa {
         return 'ホバーで辞書を引く';
       case 'hover_auto_lookup_hint':
         return 'マウスを文字に重ねると自動で辞書を引きます。クリックや Shift を押す必要はありません。ポップアップは最大1層まで。デスクトップのみ。';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'カスタム';
       case 'icon_custom_confirm_body':
@@ -466855,6 +478262,22 @@ extension on _StringsJa {
         return '音量キーでページめくり';
       case 'manga_volume_key_paging_subtitle':
         return '音量の上下ボタンでマンガリーダーのページをめくります';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '横長ページを単独表示';
       case 'manga_wide_page_solo_subtitle':
@@ -467482,8 +478905,6 @@ extension on _StringsJa {
         return 'この機能モジュールは「設定 > 外観 > 機能モジュール」でオフになっています。';
       case 'module_downloads_hidden_hint':
         return '「ブラウズ」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
-      case 'module_extension_label':
-        return 'ブラウザ拡張機能';
       case 'move_down':
         return '下に移動';
       case 'move_up':
@@ -467506,6 +478927,8 @@ extension on _StringsJa {
         return '復習';
       case 'nav_video':
         return '動画';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'すべての公開インターネット通信で使う HTTP プロキシサーバー';
       case 'network_proxy_auto_hint':
@@ -467648,6 +479071,32 @@ extension on _StringsJa {
         return 'LNReader プラグインは Web サイトからコンテンツを取得するサードパーティのスクリプトです。信頼できるリポジトリだけを追加してください。';
       case 'novel_store_empty':
         return 'プラグインリポジトリがまだありません。Fushi にはリポジトリが同梱されていません。信頼できる LNReader プラグインリポジトリのインデックス URL を追加してください。';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return '再生中';
       case 'ocr_llm_default_accept':
@@ -467785,8 +479234,6 @@ extension on _StringsJa {
         return 'EPUB を読みながら辞書検索とオーディオブック同期';
       case 'onboarding_feature_browse_hint':
         return 'オンラインソース、拡張機能、発見、ダウンロード';
-      case 'onboarding_feature_extension_hint':
-        return '任意のWebページで単語を検索（デスクトップのみ）';
       case 'onboarding_feature_fonts':
         return 'カスタムフォント';
       case 'onboarding_feature_fonts_hint':
@@ -467819,6 +479266,14 @@ extension on _StringsJa {
         return '動画';
       case 'onboarding_feature_video_hint':
         return '字幕から調べてカードを作る';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'チェックを外したページはナビゲーションバーに表示されません。設定 → 外観でいつでも変更できます。';
       case 'onboarding_features_modules_title':
@@ -474595,6 +486050,192 @@ extension on _StringsJa {
         return '展開';
       case 'video_subtitle_adjust_title':
         return '字幕の調整';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) => '別の字幕生成タスクが実行中です：${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI校正が送信するのは、音声認識で得た日本語テキストとこの作品の固有名詞表だけです。送信先は「設定 › モデル › LLM」で「字幕の校正」に割り当てたプロバイダーで、音声や映像は送信されません。料金はそのプロバイダーが請求します（ローカルの Ollama / LM Studio は端末の外に出ません）。結果はモデルに依存し、保証されません。';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'オンにする';
+      case 'video_subtitle_ai_consent_title':
+        return 'AI校正が送信する内容';
+      case 'video_subtitle_ai_entry_hint':
+        return '音声認識とAI校正（任意）。動画の隣に保存します';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => '${name} を保存しました';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) => '同名の字幕があるため ${name} として保存しました';
+      case 'video_subtitle_ai_episode_pending':
+        return '待機中';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'スキップ：.ja.srt と .ja.asr.srt の両方が既にあります';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'スキップ：.ja.srt が既にあります';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'スキップ：台詞がほとんどありません（歌やクリップ）';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'スキップ：歌（OP/ED、MV）と判定されました';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'AIの返答が何度か再試行しても不完全でした';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) => '約 ${requests} 回のリクエスト、入力 約 ${input}／出力 約 ${output} トークン';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return '（認識済みの字幕から算出）';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return '（動画の長さからの概算）';
+      case 'video_subtitle_ai_estimate_nothing':
+        return '校正するものはありません';
+      case 'video_subtitle_ai_hide':
+        return '閉じる';
+      case 'video_subtitle_ai_model_label':
+        return '音声モデル';
+      case 'video_subtitle_ai_model_missing':
+        return '動画用の日本語音声モデルがダウンロードされていません';
+      case 'video_subtitle_ai_model_ready':
+        return '日本語音声モデルの準備ができました';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return '自動';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return '自動：対応する NVIDIA カード（Windows）では CUDA、Linux では Vulkan を使います';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS バックエンド';
+      case 'video_subtitle_ai_moss_checking':
+        return '確認中…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'CUDA の要件を満たす NVIDIA GPU／ドライバーがありません（ドライバー R580 以上、RTX 20 シリーズ以降）';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'MOSS モデルがダウンロードされていません';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return '使用可能な GPU が見つかりません';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'このプラットフォームには、このバックエンド用の audio.cpp ビルドがありません';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'audio.cpp ランタイムがダウンロードされていません';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'Windows と Linux（x64）のみ対応しています';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'MOSS をダウンロード（${size}）';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS ランタイムとモデル';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) => '未ダウンロード（${size} をダウンロードします）';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS ランタイムとモデルの準備ができました';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS は利用できません：${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return '処理できるローカルの動画ファイルがありません';
+      case 'video_subtitle_ai_no_provider':
+        return '「字幕の校正」に AI プロバイダーが割り当てられていません';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return '校正済みのエピソードがまだありません';
+      case 'video_subtitle_ai_open_settings':
+        return '「設定 › モデル › LLM」で割り当てる';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'AIで人名や誤認識を直します（初期設定はオフ）';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI校正';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'プロバイダー：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return '続行';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'この作品はまだスクレイピングされていないため、固有名詞表はタイトルからの推測になります。先にスクレイピングすることをおすすめします。';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '全 ${n} 話のうち ${skipped} 話は日本語字幕が既にあるためスキップします';
+      case 'video_subtitle_ai_season_title':
+        return 'シーズン全体の日本語字幕を生成';
+      case 'video_subtitle_ai_segmenter_auto':
+        return '自動';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS は話者ごとに分割します（NVIDIA 搭載のデスクトップ向け）。それ以外ではスライディングウィンドウを使います';
+      case 'video_subtitle_ai_segmenter_label':
+        return '分割方式';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'スライディングウィンドウ';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI校正は生成パネルでオンにします。初回は送信される内容が説明されます。';
+      case 'video_subtitle_ai_settings_summary':
+        return '動画の日本語字幕を生成するときの分割方式と MOSS';
+      case 'video_subtitle_ai_settings_title':
+        return '動画の日本語字幕';
+      case 'video_subtitle_ai_stage_consistency':
+        return '表記の統一';
+      case 'video_subtitle_ai_stage_export':
+        return '書き出し';
+      case 'video_subtitle_ai_stage_glossary':
+        return '固有名詞表の作成';
+      case 'video_subtitle_ai_stage_proofread':
+        return '校正';
+      case 'video_subtitle_ai_stage_recognize':
+        return '音声認識';
+      case 'video_subtitle_ai_stage_split':
+        return '長い行の分割';
+      case 'video_subtitle_ai_start':
+        return '開始';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'キャンセルしました。完了した段階は保持されます。続行すると再開できます。';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'キャンセル中…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => '完了：字幕ファイルを ${n} 件保存しました';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => '失敗：${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return '固有名詞表に矛盾があります。修正してから続行してください。';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return '固有名詞表が別の作品のもののようです（表の名前が音声にほとんど出てきません）。修正するか作品をスクレイピングしてから続行してください。';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) => '一時停止：AI リクエストに失敗しました（${reason}）';
+      case 'video_subtitle_ai_status_starting':
+        return '開始しています…';
+      case 'video_subtitle_ai_target_label':
+        return '対象';
+      case 'video_subtitle_ai_title':
+        return '日本語字幕を生成';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}：ファイルが見つからないためスキップしました';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}：別の端末にのみあるためスキップしました（その端末で生成してください）';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) => 'AI 使用量：${calls} 回のリクエスト、入力 ${input}／出力 ${output} トークン';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '（${n} 回のリクエストは使用量が報告されませんでした）';
       case 'video_subtitle_anchor_bottom':
         return '下';
       case 'video_subtitle_anchor_top':
@@ -474678,6 +486319,69 @@ extension on _StringsJa {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'この表をそのまま使う';
+      case 'video_subtitle_glossary_add':
+        return '項目を追加';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'この表は検証に通らなかったため、まだ保存されていません。修正する（またはそのまま使う）と、生成パネルで続行できます。';
+      case 'video_subtitle_glossary_delete':
+        return '項目を削除';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            '「${ja}」を削除しますか？固有名詞表を再生成すると、再び追加される場合があります。';
+      case 'video_subtitle_glossary_edit':
+        return '項目を編集';
+      case 'video_subtitle_glossary_empty':
+        return '項目はまだありません。固有名詞表は初回のAI校正で生成されます。手動で追加することもできます。';
+      case 'video_subtitle_glossary_entry_menu':
+        return '項目の操作';
+      case 'video_subtitle_glossary_field_ja':
+        return '正式な表記';
+      case 'video_subtitle_glossary_field_kind':
+        return '種別';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return '「人名」で始まる項目は作品の照合に使われます';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return '誤認識';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'カンマで区切ります';
+      case 'video_subtitle_glossary_field_note':
+        return 'メモ';
+      case 'video_subtitle_glossary_field_reading':
+        return '読み（ひらがな）';
+      case 'video_subtitle_glossary_intro':
+        return 'AI校正で字幕をこの表記に統一します。追加・編集した項目は、再生成しても保持されます。';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'この表記は既に表にあります';
+      case 'video_subtitle_glossary_ja_empty':
+        return '正式な表記を入力してください';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => '誤認識：${list}';
+      case 'video_subtitle_glossary_open':
+        return '固有名詞表';
+      case 'video_subtitle_glossary_regenerate':
+        return '再生成';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'AI に固有名詞表を作り直させますか？追加でリクエストが送信されます。編集した ${n} 件は保持されます。';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => '再生成しました：${n} 件';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return '表記の統一だけをやり直す';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) => '表記を統一しました。字幕ファイルを ${n} 件更新しました';
+      case 'video_subtitle_glossary_rerun_running':
+        return '表記の統一をやり直しています…';
+      case 'video_subtitle_glossary_save':
+        return '保存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return '固有名詞表';
+      case 'video_subtitle_glossary_user_edited':
+        return '編集済み（再生成しても保持されます）';
       case 'video_subtitle_graphic_hint':
         return '画像字幕 ・ 画面に表示 ・ 一時停止で辞書引き（OCR）';
       case 'video_subtitle_graphic_learning_hint':
@@ -474992,6 +486696,79 @@ extension on _StringsJa {
         return '音量ボタンでページ送り';
       case 'volume_key_sentence_nav':
         return '音量キーで文ナビゲーション';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'サイトの字幕を隠す';
       case 'web_video_hosting_builtin':
@@ -475002,6 +486779,15 @@ extension on _StringsJa {
         return 'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
       case 'web_video_import_hint':
         return 'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'キューにカードはありません';
       case 'web_video_mine_queue_finished':
@@ -475018,14 +486804,44 @@ extension on _StringsJa {
         return ({required Object count}) => 'カード作成のキューに追加しました（残り ${count} 件）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return '字幕はまだ取得されていません';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'ライブ字幕（ページから取得）';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return '字幕トラック';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'マウスホイールのページめくり間隔';
       case 'window_caption_maximize':
@@ -475154,6 +486970,10 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return '설정 안 됨';
       case 'ai_feature_video_identify':
@@ -482340,6 +494160,10 @@ extension on _StringsKo {
         return '마우스를 올리면 사전 찾기';
       case 'hover_auto_lookup_hint':
         return '마우스를 글자 위에 올리면 자동으로 사전을 찾습니다. 클릭하거나 Shift를 누를 필요가 없습니다. 팝업은 최대 1개 층까지. 데스크톱 전용.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return '사용자 정의';
       case 'icon_custom_confirm_body':
@@ -484191,6 +496015,22 @@ extension on _StringsKo {
         return '볼륨 키로 페이지 넘기기';
       case 'manga_volume_key_paging_subtitle':
         return '만화 리더에서 볼륨 업/다운 키로 페이지를 넘깁니다';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '넓은 페이지 단독 표시';
       case 'manga_wide_page_solo_subtitle':
@@ -484817,8 +496657,6 @@ extension on _StringsKo {
         return '이 기능 모듈은 설정 > 모양 > 기능 모듈에서 꺼져 있습니다.';
       case 'module_downloads_hidden_hint':
         return '‘탐색’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
-      case 'module_extension_label':
-        return '브라우저 확장';
       case 'move_down':
         return '아래로 이동';
       case 'move_up':
@@ -484841,6 +496679,8 @@ extension on _StringsKo {
         return '복습';
       case 'nav_video':
         return '비디오';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return '모든 공용 인터넷 요청에 사용되는 HTTP 프록시 서버';
       case 'network_proxy_auto_hint':
@@ -484983,6 +496823,32 @@ extension on _StringsKo {
         return 'LNReader 플러그인은 웹사이트에서 콘텐츠를 가져오는 서드파티 스크립트입니다. 신뢰할 수 있는 저장소만 추가하세요.';
       case 'novel_store_empty':
         return '플러그인 저장소가 아직 없습니다. Fushi에는 기본 저장소가 포함되어 있지 않습니다. 신뢰하는 LNReader 플러그인 저장소의 인덱스 URL을 추가하세요.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return '현재 듣는 중';
       case 'ocr_llm_default_accept':
@@ -485121,8 +496987,6 @@ extension on _StringsKo {
         return 'EPUB 읽기, 단어 찾기, 오디오북 동기화';
       case 'onboarding_feature_browse_hint':
         return '온라인 소스, 확장 프로그램, 발견, 다운로드';
-      case 'onboarding_feature_extension_hint':
-        return '모든 웹 페이지에서 단어 검색 (데스크톱 전용)';
       case 'onboarding_feature_fonts':
         return '사용자 지정 글꼴';
       case 'onboarding_feature_fonts_hint':
@@ -485155,6 +497019,14 @@ extension on _StringsKo {
         return '동영상';
       case 'onboarding_feature_video_hint':
         return '자막에서 단어 찾고 카드 만들기';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return '선택하지 않은 페이지는 내비게이션 바에서 숨겨집니다. 설정 → 외관에서 언제든 바꿀 수 있습니다.';
       case 'onboarding_features_modules_title':
@@ -491938,6 +503810,198 @@ extension on _StringsKo {
         return '펼치기';
       case 'video_subtitle_adjust_title':
         return '자막 조정';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return '하단';
       case 'video_subtitle_anchor_top':
@@ -492021,6 +504085,70 @@ extension on _StringsKo {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return '그래픽 자막 · 화면에 표시 · 일시정지 후 단어 찾기(OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -492334,6 +504462,79 @@ extension on _StringsKo {
         return '볼륨 버튼으로 페이지 넘기기';
       case 'volume_key_sentence_nav':
         return '볼륨 키 문장 탐색';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return '사이트 자막 숨기기';
       case 'web_video_hosting_builtin':
@@ -492344,6 +504545,15 @@ extension on _StringsKo {
         return '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
       case 'web_video_import_hint':
         return '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return '대기 중인 카드가 없습니다';
       case 'web_video_mine_queue_finished':
@@ -492361,14 +504571,44 @@ extension on _StringsKo {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return '아직 수집된 자막이 없습니다';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return '실시간 자막(페이지에서 수집)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return '자막 트랙';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return '마우스 휠 페이지 넘김 간격';
       case 'window_caption_maximize':
@@ -492497,6 +504737,10 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Niet ingesteld';
       case 'ai_feature_video_identify':
@@ -499724,6 +511968,10 @@ extension on _StringsNl {
         return 'Opzoeken bij hover';
       case 'hover_auto_lookup_hint':
         return 'Automatisch opzoeken wanneer de muis over een teken zweeft; zonder te klikken of Shift in te drukken. Toont hooguit één popuplaag. Alleen desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Aangepast';
       case 'icon_custom_confirm_body':
@@ -501596,6 +513844,22 @@ extension on _StringsNl {
         return 'Volumeknoppen bladeren pagina\'s';
       case 'manga_volume_key_paging_subtitle':
         return 'Gebruik volume omhoog en omlaag om pagina\'s te bladeren in de mangalezer';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Brede pagina\'s alleen';
       case 'manga_wide_page_solo_subtitle':
@@ -502229,8 +514493,6 @@ extension on _StringsNl {
         return 'Deze functiemodule is uitgeschakeld in Instellingen > Weergave > Functiemodules.';
       case 'module_downloads_hidden_hint':
         return 'Het tabblad Bladeren is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
-      case 'module_extension_label':
-        return 'Browserextensie';
       case 'move_down':
         return 'Omlaag';
       case 'move_up':
@@ -502253,6 +514515,8 @@ extension on _StringsNl {
         return 'Herhalen';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'HTTP-proxyserver die door alle verzoeken naar het publieke internet wordt gebruikt';
       case 'network_proxy_auto_hint':
@@ -502398,6 +514662,32 @@ extension on _StringsNl {
         return 'LNReader-plug-ins zijn scripts van derden die inhoud van websites ophalen. Voeg alleen repositories toe die je vertrouwt.';
       case 'novel_store_empty':
         return 'Nog geen plug-inrepositories. Fushi bevat er geen — voeg de index-URL toe van een LNReader-plug-inrepository die je vertrouwt.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Nu aan het luisteren';
       case 'ocr_llm_default_accept':
@@ -502537,8 +514827,6 @@ extension on _StringsNl {
         return 'EPUB lezen met opzoeken en luisterboekafstemming';
       case 'onboarding_feature_browse_hint':
         return 'Online bronnen, extensies, ontdekken en downloads';
-      case 'onboarding_feature_extension_hint':
-        return 'Zoek woorden op op elke webpagina (alleen desktop)';
       case 'onboarding_feature_fonts':
         return 'Eigen lettertypen';
       case 'onboarding_feature_fonts_hint':
@@ -502571,6 +514859,14 @@ extension on _StringsNl {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Opzoeken in ondertitels en kaarten maken';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Niet-aangevinkte pagina\'s worden verborgen in de navigatiebalk. Later aan te passen via Instellingen → Uiterlijk.';
       case 'onboarding_features_modules_title':
@@ -509385,6 +521681,198 @@ extension on _StringsNl {
         return 'Uitklappen';
       case 'video_subtitle_adjust_title':
         return 'Ondertitels aanpassen';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Onder';
       case 'video_subtitle_anchor_top':
@@ -509471,6 +521959,70 @@ extension on _StringsNl {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Grafische ondertitel · op video getoond · opzoeken na pauze (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -509787,6 +522339,79 @@ extension on _StringsNl {
         return 'Pagina\'s omslaan met volumeknoppen';
       case 'volume_key_sentence_nav':
         return 'Zinsnavigatie met volumeknoppen';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Ondertitels van de site verbergen';
       case 'web_video_hosting_builtin':
@@ -509797,6 +522422,15 @@ extension on _StringsNl {
         return 'Native venster (4K, hardware-DRM; kaarten komen in de wachtrij)';
       case 'web_video_import_hint':
         return 'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Geen wachtende kaarten';
       case 'web_video_mine_queue_finished':
@@ -509815,14 +522449,44 @@ extension on _StringsNl {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Nog geen ondertitels vastgelegd';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Live-ondertitels (van de pagina)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Ondertitelspoor';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Interval voor bladeren met muiswiel';
       case 'window_caption_maximize':
@@ -509954,6 +522618,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Não definido';
       case 'ai_feature_video_identify':
@@ -517179,6 +529847,10 @@ extension on _StringsPtBr {
         return 'Pesquisar ao passar o cursor';
       case 'hover_auto_lookup_hint':
         return 'Pesquisa automaticamente ao passar o mouse sobre um caractere; sem clicar ou segurar Shift. Exibe no máximo uma camada de pop-up. Apenas no desktop.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Personalizado';
       case 'icon_custom_confirm_body':
@@ -519047,6 +531719,22 @@ extension on _StringsPtBr {
         return 'Botões de volume viram páginas';
       case 'manga_volume_key_paging_subtitle':
         return 'Usar volume para cima e para baixo para virar páginas no leitor de mangá';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Páginas largas sozinhas';
       case 'manga_wide_page_solo_subtitle':
@@ -519680,8 +532368,6 @@ extension on _StringsPtBr {
         return 'Este módulo de recursos está desativado em Configurações > Aparência > Módulos de recursos.';
       case 'module_downloads_hidden_hint':
         return 'A aba Navegar está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
-      case 'module_extension_label':
-        return 'Extensão do navegador';
       case 'move_down':
         return 'Mover para baixo';
       case 'move_up':
@@ -519704,6 +532390,8 @@ extension on _StringsPtBr {
         return 'Revisão';
       case 'nav_video':
         return 'Vídeo';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Servidor proxy HTTP usado por todas as requisições à internet pública';
       case 'network_proxy_auto_hint':
@@ -519849,6 +532537,32 @@ extension on _StringsPtBr {
         return 'Os plugins do LNReader são scripts de terceiros que buscam conteúdo em sites. Adicione apenas repositórios em que você confia.';
       case 'novel_store_empty':
         return 'Nenhum repositório de plugins ainda. O Fushi não inclui nenhum — adicione a URL do índice de um repositório de plugins do LNReader em que você confia.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Ouvindo agora';
       case 'ocr_llm_default_accept':
@@ -519988,8 +532702,6 @@ extension on _StringsPtBr {
         return 'Leitura de EPUB com consulta e sincronização de audiolivro';
       case 'onboarding_feature_browse_hint':
         return 'Fontes online, extensões, descoberta e downloads';
-      case 'onboarding_feature_extension_hint':
-        return 'Consulte palavras em qualquer página web (apenas desktop)';
       case 'onboarding_feature_fonts':
         return 'Fontes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -520022,6 +532734,14 @@ extension on _StringsPtBr {
         return 'Vídeo';
       case 'onboarding_feature_video_hint':
         return 'Consulta em legendas e criação de cartões';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Páginas não marcadas ficam ocultas na barra de navegação. Dá para mudar quando quiser em Configurações → Aparência.';
       case 'onboarding_features_modules_title':
@@ -526834,6 +539554,198 @@ extension on _StringsPtBr {
         return 'Expandir';
       case 'video_subtitle_adjust_title':
         return 'Ajustes de legenda';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Inferior';
       case 'video_subtitle_anchor_top':
@@ -526919,6 +539831,70 @@ extension on _StringsPtBr {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Legenda gráfica · exibida no vídeo · consulta ao pausar (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -527235,6 +540211,79 @@ extension on _StringsPtBr {
         return 'Virar página com botão de volume';
       case 'volume_key_sentence_nav':
         return 'Navegação de frases com teclas de volume';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar legendas do site';
       case 'web_video_hosting_builtin':
@@ -527245,6 +540294,15 @@ extension on _StringsPtBr {
         return 'Janela nativa (4K, DRM por hardware; cartões ficam na fila)';
       case 'web_video_import_hint':
         return 'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Nenhum cartão na fila';
       case 'web_video_mine_queue_finished':
@@ -527263,14 +540321,44 @@ extension on _StringsPtBr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Mudar para o modo integrado para criar ${count} cartões na fila';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Nenhuma legenda capturada ainda';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Legendas ao vivo (capturadas da página)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Faixa de legendas';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Intervalo de virada de página com a roda do mouse';
       case 'window_caption_maximize':
@@ -527400,6 +540488,10 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Не задан';
       case 'ai_feature_video_identify':
@@ -534634,6 +547726,10 @@ extension on _StringsRu {
         return 'Поиск при наведении';
       case 'hover_auto_lookup_hint':
         return 'Автоматический поиск слова при наведении курсора на символ; без щелчка и удержания Shift. Открывает не более одного всплывающего слоя. Только для ПК.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Своя';
       case 'icon_custom_confirm_body':
@@ -536502,6 +549598,22 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'manga_volume_key_paging_subtitle':
         return 'Используйте кнопки громкости для перелистывания страниц в читалке манги';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Широкие страницы отдельно';
       case 'manga_wide_page_solo_subtitle':
@@ -537135,8 +550247,6 @@ extension on _StringsRu {
         return 'Этот модуль отключён в разделе Настройки > Внешний вид > Функциональные модули.';
       case 'module_downloads_hidden_hint':
         return 'Вкладка «Обзор» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
-      case 'module_extension_label':
-        return 'Расширение для браузера';
       case 'move_down':
         return 'Вниз';
       case 'move_up':
@@ -537159,6 +550269,8 @@ extension on _StringsRu {
         return 'Повторение';
       case 'nav_video':
         return 'Видео';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'HTTP-прокси, через который идут все запросы в публичный интернет';
       case 'network_proxy_auto_hint':
@@ -537304,6 +550416,32 @@ extension on _StringsRu {
         return 'Плагины LNReader — это сторонние скрипты, получающие содержимое с сайтов. Добавляйте только те репозитории, которым доверяете.';
       case 'novel_store_empty':
         return 'Репозиториев плагинов пока нет. Fushi не содержит встроенных репозиториев — добавьте URL индекса репозитория плагинов LNReader, которому вы доверяете.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Сейчас слушаете';
       case 'ocr_llm_default_accept':
@@ -537443,8 +550581,6 @@ extension on _StringsRu {
         return 'Чтение EPUB с поиском по словарю и синхронизацией аудиокниг';
       case 'onboarding_feature_browse_hint':
         return 'Онлайн-источники, расширения, поиск контента и загрузки';
-      case 'onboarding_feature_extension_hint':
-        return 'Ищите слова на любой веб-странице (только десктоп)';
       case 'onboarding_feature_fonts':
         return 'Свои шрифты';
       case 'onboarding_feature_fonts_hint':
@@ -537477,6 +550613,14 @@ extension on _StringsRu {
         return 'Видео';
       case 'onboarding_feature_video_hint':
         return 'Поиск по субтитрам и создание карточек';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Неотмеченные страницы скрываются из панели навигации. Изменить можно в любой момент: Настройки → Внешний вид.';
       case 'onboarding_features_modules_title':
@@ -544288,6 +557432,198 @@ extension on _StringsRu {
         return 'Развернуть';
       case 'video_subtitle_adjust_title':
         return 'Настройка субтитров';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Снизу';
       case 'video_subtitle_anchor_top':
@@ -544372,6 +557708,70 @@ extension on _StringsRu {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Графические субтитры · показ на видео · поиск слов на паузе (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -544688,6 +558088,79 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'volume_key_sentence_nav':
         return 'Навигация по предложениям кнопками громкости';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Скрыть субтитры сайта';
       case 'web_video_hosting_builtin':
@@ -544698,6 +558171,15 @@ extension on _StringsRu {
         return 'Нативное окно (4K, аппаратный DRM; карточки ставятся в очередь)';
       case 'web_video_import_hint':
         return 'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Очередь карточек пуста';
       case 'web_video_mine_queue_finished':
@@ -544716,14 +558198,44 @@ extension on _StringsRu {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Субтитры пока не получены';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Живые субтитры (с страницы)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Дорожка субтитров';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Интервал перелистывания колёсиком';
       case 'window_caption_maximize':
@@ -544854,6 +558366,10 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'ยังไม่ได้ตั้ง';
       case 'ai_feature_video_identify':
@@ -552063,6 +565579,10 @@ extension on _StringsTh {
         return 'ค้นหาเมื่อชี้เมาส์';
       case 'hover_auto_lookup_hint':
         return 'ค้นหาคำโดยอัตโนมัติเมื่อชี้เมาส์ไปที่ตัวอักษร โดยไม่ต้องคลิกหรือกด Shift ค้างไว้ แสดงป๊อปอัปได้สูงสุดหนึ่งชั้น สำหรับเดสก์ท็อปเท่านั้น';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'กำหนดเอง';
       case 'icon_custom_confirm_body':
@@ -553926,6 +567446,22 @@ extension on _StringsTh {
         return 'ปุ่มเสียงพลิกหน้า';
       case 'manga_volume_key_paging_subtitle':
         return 'ใช้ปุ่มเพิ่ม/ลดเสียงเพื่อพลิกหน้าในตัวอ่านมังงะ';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'หน้ากว้างอยู่เดี่ยว';
       case 'manga_wide_page_solo_subtitle':
@@ -554555,8 +568091,6 @@ extension on _StringsTh {
         return 'ฟีเจอร์โมดูลนี้ปิดอยู่ใน การตั้งค่า › การแสดงผล › โมดูลฟีเจอร์';
       case 'module_downloads_hidden_hint':
         return 'แท็บเรียกดูถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
-      case 'module_extension_label':
-        return 'ส่วนขยายเบราว์เซอร์';
       case 'move_down':
         return 'เลื่อนลง';
       case 'move_up':
@@ -554579,6 +568113,8 @@ extension on _StringsTh {
         return 'ทบทวน';
       case 'nav_video':
         return 'วิดีโอ';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'เซิร์ฟเวอร์พร็อกซี HTTP ที่ใช้กับคำขออินเทอร์เน็ตสาธารณะทั้งหมด';
       case 'network_proxy_auto_hint':
@@ -554722,6 +568258,32 @@ extension on _StringsTh {
         return 'ปลั๊กอิน LNReader เป็นสคริปต์ของบุคคลที่สามที่ดึงเนื้อหาจากเว็บไซต์ เพิ่มเฉพาะที่เก็บที่คุณเชื่อถือ';
       case 'novel_store_empty':
         return 'ยังไม่มีที่เก็บปลั๊กอิน Fushi ไม่ได้รวมที่เก็บใดไว้ — เพิ่ม URL ดัชนีของที่เก็บปลั๊กอิน LNReader ที่คุณเชื่อถือ';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'กำลังฟังอยู่';
       case 'ocr_llm_default_accept':
@@ -554860,8 +568422,6 @@ extension on _StringsTh {
         return 'อ่าน EPUB พร้อมค้นคำและซิงค์หนังสือเสียง';
       case 'onboarding_feature_browse_hint':
         return 'แหล่งออนไลน์ ส่วนขยาย การค้นพบ และการดาวน์โหลด';
-      case 'onboarding_feature_extension_hint':
-        return 'ค้นหาคำศัพท์บนเว็บเพจใดก็ได้ (เดสก์ท็อปเท่านั้น)';
       case 'onboarding_feature_fonts':
         return 'ฟอนต์กำหนดเอง';
       case 'onboarding_feature_fonts_hint':
@@ -554894,6 +568454,14 @@ extension on _StringsTh {
         return 'วิดีโอ';
       case 'onboarding_feature_video_hint':
         return 'ค้นคำจากคำบรรยายและสร้างการ์ด';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'หน้าที่ไม่ได้เลือกจะถูกซ่อนจากแถบนำทาง เปลี่ยนได้ทุกเมื่อที่ การตั้งค่า → รูปลักษณ์';
       case 'onboarding_features_modules_title':
@@ -561698,6 +575266,198 @@ extension on _StringsTh {
         return 'ขยาย';
       case 'video_subtitle_adjust_title':
         return 'ปรับซับไตเติล';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'ด้านล่าง';
       case 'video_subtitle_anchor_top':
@@ -561782,6 +575542,70 @@ extension on _StringsTh {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'คำบรรยายแบบกราฟิก · แสดงบนภาพ · หยุดชั่วคราวเพื่อค้นคำ (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -562097,6 +575921,79 @@ extension on _StringsTh {
         return 'ปุ่มเสียงเปลี่ยนหน้า';
       case 'volume_key_sentence_nav':
         return 'นำทางประโยคด้วยปุ่มเสียง';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'ซ่อนคำบรรยายของเว็บไซต์';
       case 'web_video_hosting_builtin':
@@ -562107,6 +576004,15 @@ extension on _StringsTh {
         return 'หน้าต่างเนทีฟ (4K, DRM ฮาร์ดแวร์; การ์ดจะเข้าคิวไว้ก่อน)';
       case 'web_video_import_hint':
         return 'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'ไม่มีการ์ดในคิว';
       case 'web_video_mine_queue_finished':
@@ -562125,14 +576031,44 @@ extension on _StringsTh {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'ยังไม่ได้เก็บคำบรรยาย';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'แทร็กคำบรรยาย';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'ระยะเวลาเลื่อนหน้าด้วยล้อเมาส์';
       case 'window_caption_maximize':
@@ -562263,6 +576199,10 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Ayarlanmadı';
       case 'ai_feature_video_identify':
@@ -569490,6 +583430,10 @@ extension on _StringsTr {
         return 'Üzerine gelince ara';
       case 'hover_auto_lookup_hint':
         return 'Fare bir karakterin üzerine geldiğinde otomatik olarak ara; tıklamaya veya Shift tuşunu basılı tutmaya gerek yok. En fazla bir açılır katman gösterir. Yalnızca masaüstü.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Özel';
       case 'icon_custom_confirm_body':
@@ -571356,6 +585300,22 @@ extension on _StringsTr {
         return 'Ses tuşlarıyla sayfa çevirme';
       case 'manga_volume_key_paging_subtitle':
         return 'Manga okuyucusunda sayfa çevirmek için ses açma ve kısma tuşlarını kullanın';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Geniş sayfalar tek başına';
       case 'manga_wide_page_solo_subtitle':
@@ -571988,8 +585948,6 @@ extension on _StringsTr {
         return 'Bu özellik modülü Ayarlar > Görünüm > Özellik modülleri bölümünde kapatılmış.';
       case 'module_downloads_hidden_hint':
         return 'Göz at sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
-      case 'module_extension_label':
-        return 'Tarayıcı eklentisi';
       case 'move_down':
         return 'Aşağı taşı';
       case 'move_up':
@@ -572012,6 +585970,8 @@ extension on _StringsTr {
         return 'Tekrar';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Tüm genel internet isteklerinde kullanılan HTTP proxy sunucusu';
       case 'network_proxy_auto_hint':
@@ -572155,6 +586115,32 @@ extension on _StringsTr {
         return 'LNReader eklentileri, web sitelerinden içerik getiren üçüncü taraf betiklerdir. Yalnızca güvendiğiniz depoları ekleyin.';
       case 'novel_store_empty':
         return 'Henüz eklenti deposu yok. Fushi hiçbir depo içermez; güvendiğiniz bir LNReader eklenti deposunun dizin URL\'sini ekleyin.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Şimdi dinleniyor';
       case 'ocr_llm_default_accept':
@@ -572293,8 +586279,6 @@ extension on _StringsTr {
         return 'Kelime araması ve sesli kitap eşitlemesiyle EPUB okuma';
       case 'onboarding_feature_browse_hint':
         return 'Çevrimiçi kaynaklar, eklentiler, keşif ve indirmeler';
-      case 'onboarding_feature_extension_hint':
-        return 'Herhangi bir web sayfasında kelime arayın (yalnızca masaüstü)';
       case 'onboarding_feature_fonts':
         return 'Özel yazı tipleri';
       case 'onboarding_feature_fonts_hint':
@@ -572327,6 +586311,14 @@ extension on _StringsTr {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Altyazıda arama ve kart oluşturma';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'İşaretlenmeyen sayfalar gezinme çubuğunda gizlenir. İstediğiniz zaman Ayarlar → Görünüm\'den değiştirebilirsiniz.';
       case 'onboarding_features_modules_title':
@@ -579137,6 +593129,198 @@ extension on _StringsTr {
         return 'Genişlet';
       case 'video_subtitle_adjust_title':
         return 'Altyazı ayarları';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Alt';
       case 'video_subtitle_anchor_top':
@@ -579221,6 +593405,70 @@ extension on _StringsTr {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Grafik altyazı · videoda gösterilir · duraklatınca sözcük arama (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -579537,6 +593785,79 @@ extension on _StringsTr {
         return 'Ses düğmeleriyle sayfa çevirme';
       case 'volume_key_sentence_nav':
         return 'Ses Tuşuyla Cümle Gezinme';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Site altyazılarını gizle';
       case 'web_video_hosting_builtin':
@@ -579547,6 +593868,15 @@ extension on _StringsTr {
         return 'Yerel pencere (4K, donanımsal DRM; kartlar sonra sıraya alınır)';
       case 'web_video_import_hint':
         return 'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Sırada kart yok';
       case 'web_video_mine_queue_finished':
@@ -579565,14 +593895,44 @@ extension on _StringsTr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Henüz altyazı yakalanmadı';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Canlı altyazılar (sayfadan alınan)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Altyazı parçası';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Fare tekerleğiyle sayfa çevirme aralığı';
       case 'window_caption_maximize':
@@ -579702,6 +594062,10 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_subtitle_proofread':
+        return 'Subtitle proofreading';
+      case 'ai_feature_subtitle_proofread_summary':
+        return 'Fixes speech-recognition Japanese subtitles: builds a name list for the work, then corrects misheard lines. Only the recognized text and the name list are sent to this provider (no audio or video) and billed by it.';
       case 'ai_feature_unset':
         return 'Chưa đặt';
       case 'ai_feature_video_identify':
@@ -586922,6 +601286,10 @@ extension on _StringsVi {
         return 'Tra cứu khi di chuột';
       case 'hover_auto_lookup_hint':
         return 'Tự động tra cứu khi di chuột qua một ký tự; không cần nhấp hay giữ Shift. Hiển thị tối đa một lớp cửa sổ bật lên. Chỉ trên máy tính.';
+      case 'hover_lookup_modifier':
+        return 'Hover lookup key';
+      case 'hover_lookup_modifier_hint':
+        return 'Hold this key and move the mouse over text to look it up (readers, subtitles, web pages)';
       case 'icon_custom':
         return 'Tùy chỉnh';
       case 'icon_custom_confirm_body':
@@ -588784,6 +603152,22 @@ extension on _StringsVi {
         return 'Phím âm lượng lật trang';
       case 'manga_volume_key_paging_subtitle':
         return 'Sử dụng phím tăng giảm âm lượng để lật trang trong trình đọc truyện tranh';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Trang rộng đứng riêng';
       case 'manga_wide_page_solo_subtitle':
@@ -589413,8 +603797,6 @@ extension on _StringsVi {
         return 'Mô-đun tính năng này đang tắt trong Cài đặt > Giao diện > Mô-đun tính năng.';
       case 'module_downloads_hidden_hint':
         return 'Tab Duyệt đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
-      case 'module_extension_label':
-        return 'Tiện ích mở rộng trình duyệt';
       case 'move_down':
         return 'Di chuyển xuống';
       case 'move_up':
@@ -589437,6 +603819,8 @@ extension on _StringsVi {
         return 'Ôn tập';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Máy chủ proxy HTTP dùng cho mọi yêu cầu ra Internet công cộng';
       case 'network_proxy_auto_hint':
@@ -589580,6 +603964,32 @@ extension on _StringsVi {
         return 'Plugin LNReader là các tập lệnh của bên thứ ba lấy nội dung từ trang web. Chỉ thêm các kho mà bạn tin tưởng.';
       case 'novel_store_empty':
         return 'Chưa có kho plugin. Fushi không kèm sẵn kho nào — hãy thêm URL chỉ mục của một kho plugin LNReader mà bạn tin tưởng.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return 'Đang nghe';
       case 'ocr_llm_default_accept':
@@ -589719,8 +604129,6 @@ extension on _StringsVi {
         return 'Đọc EPUB kèm tra từ và đồng bộ sách nói';
       case 'onboarding_feature_browse_hint':
         return 'Nguồn trực tuyến, tiện ích, khám phá và tải xuống';
-      case 'onboarding_feature_extension_hint':
-        return 'Tra từ trên bất kỳ trang web nào (chỉ trên máy tính)';
       case 'onboarding_feature_fonts':
         return 'Phông chữ tùy chỉnh';
       case 'onboarding_feature_fonts_hint':
@@ -589753,6 +604161,14 @@ extension on _StringsVi {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Tra từ trên phụ đề và tạo thẻ';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Những trang không đánh dấu sẽ bị ẩn khỏi thanh điều hướng. Đổi lại bất cứ lúc nào ở Cài đặt → Giao diện.';
       case 'onboarding_features_modules_title':
@@ -596562,6 +610978,198 @@ extension on _StringsVi {
         return 'Mở rộng';
       case 'video_subtitle_adjust_title':
         return 'Điều chỉnh phụ đề';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) =>
+            'Another subtitle job is running: ${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI proofreading sends only the Japanese text recognized from the audio, plus this work\'s glossary, to the provider assigned to "Subtitle proofreading" in Settings › Models › LLM. Audio and video frames are never sent. Requests are billed by that provider; local Ollama / LM Studio stays on this device. Results are not guaranteed and depend on the model.';
+      case 'video_subtitle_ai_consent_confirm':
+        return 'Turn on';
+      case 'video_subtitle_ai_consent_title':
+        return 'What AI proofreading sends';
+      case 'video_subtitle_ai_entry_hint':
+        return 'Speech recognition + optional AI proofreading, saved next to the video';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => 'Saved ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) =>
+            'A subtitle with that name exists; saved ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return 'Waiting';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return 'Skipped: both .ja.srt and .ja.asr.srt already exist';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return 'Skipped: already has a .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return 'Skipped: almost no dialogue (song or clip)';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return 'Skipped: judged to be a song (OP/ED, MV)';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'the AI reply was incomplete after several retries';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) =>
+            'About ${requests} requests, ~${input} input / ~${output} output tokens';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return ' (from recognized subtitles)';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return ' (rough, from video length)';
+      case 'video_subtitle_ai_estimate_nothing':
+        return 'Nothing left to proofread';
+      case 'video_subtitle_ai_hide':
+        return 'Hide';
+      case 'video_subtitle_ai_model_label':
+        return 'Speech model';
+      case 'video_subtitle_ai_model_missing':
+        return 'The Japanese speech model for videos is not downloaded';
+      case 'video_subtitle_ai_model_ready':
+        return 'Japanese speech model ready';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return 'Auto uses CUDA on supported NVIDIA cards (Windows) or Vulkan (Linux)';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS backend';
+      case 'video_subtitle_ai_moss_checking':
+        return 'Checking…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return 'no NVIDIA GPU / driver that meets the CUDA requirement (driver R580+, RTX 20 series or newer)';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'the MOSS model is not downloaded';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return 'no usable GPU found';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return 'there is no audio.cpp build for this backend on this platform';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'the audio.cpp runtime is not downloaded';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return 'only available on Windows and Linux (x64)';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => 'Download MOSS (${size})';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS runtime and model';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) =>
+            'Not downloaded (${size} to download)';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS runtime and model ready';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS not available: ${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return 'No local video file to process';
+      case 'video_subtitle_ai_no_provider':
+        return 'No AI provider is assigned to "Subtitle proofreading"';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return 'No episode has been proofread yet';
+      case 'video_subtitle_ai_open_settings':
+        return 'Assign in Settings › Models › LLM';
+      case 'video_subtitle_ai_proofread_hint':
+        return 'Fix names and misrecognitions with AI (off by default)';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI proofreading';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            'Provider: ${name} (${model})';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return 'Continue';
+      case 'video_subtitle_ai_scrape_hint':
+        return 'This work has not been scraped; the glossary can only guess from the title. Scraping it first is recommended.';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '${n} episodes, ${skipped} already have Japanese subtitles and will be skipped';
+      case 'video_subtitle_ai_season_title':
+        return 'Generate Japanese subtitles for the season';
+      case 'video_subtitle_ai_segmenter_auto':
+        return 'Auto';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS segments by speaker on NVIDIA desktops; elsewhere a sliding window is used';
+      case 'video_subtitle_ai_segmenter_label':
+        return 'Segmentation';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return 'Sliding window';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI proofreading is turned on in the generate panel, where it first explains what is sent.';
+      case 'video_subtitle_ai_settings_summary':
+        return 'Segmentation and MOSS for Japanese video subtitles';
+      case 'video_subtitle_ai_settings_title':
+        return 'Japanese video subtitles';
+      case 'video_subtitle_ai_stage_consistency':
+        return 'Unifying spellings';
+      case 'video_subtitle_ai_stage_export':
+        return 'Exporting';
+      case 'video_subtitle_ai_stage_glossary':
+        return 'Building glossary';
+      case 'video_subtitle_ai_stage_proofread':
+        return 'Proofreading';
+      case 'video_subtitle_ai_stage_recognize':
+        return 'Recognizing speech';
+      case 'video_subtitle_ai_stage_split':
+        return 'Splitting long lines';
+      case 'video_subtitle_ai_start':
+        return 'Start';
+      case 'video_subtitle_ai_status_cancelled':
+        return 'Cancelled. Finished stages are kept; continue to resume.';
+      case 'video_subtitle_ai_status_cancelling':
+        return 'Cancelling…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => 'Done: ${n} subtitle files saved';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return 'The glossary contradicts itself. Fix it, then continue.';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return 'The glossary seems to be for a different work (its names are not heard in the audio). Fix it or scrape the work, then continue.';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) =>
+            'Paused: AI request failed (${reason})';
+      case 'video_subtitle_ai_status_starting':
+        return 'Starting…';
+      case 'video_subtitle_ai_target_label':
+        return 'Target';
+      case 'video_subtitle_ai_title':
+        return 'Generate Japanese subtitles';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}: file not found, skipped';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) =>
+            '${title}: only on another device, skipped (generate it on that device)';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) =>
+            'AI usage: ${calls} requests, ${input} input / ${output} output tokens';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '(${n} requests reported no usage)';
       case 'video_subtitle_anchor_bottom':
         return 'Dưới';
       case 'video_subtitle_anchor_top':
@@ -596645,6 +611253,70 @@ extension on _StringsVi {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return 'Use this table as is';
+      case 'video_subtitle_glossary_add':
+        return 'Add entry';
+      case 'video_subtitle_glossary_candidate_banner':
+        return 'This table failed validation and is not saved yet. Edit it (or use it as is), then continue in the generate panel.';
+      case 'video_subtitle_glossary_delete':
+        return 'Delete entry';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) =>
+            'Delete "${ja}"? It may come back when the glossary is regenerated.';
+      case 'video_subtitle_glossary_edit':
+        return 'Edit entry';
+      case 'video_subtitle_glossary_empty':
+        return 'No entries yet. The glossary is generated on the first AI-proofread run, or add entries yourself.';
+      case 'video_subtitle_glossary_entry_menu':
+        return 'Entry actions';
+      case 'video_subtitle_glossary_field_ja':
+        return 'Official spelling';
+      case 'video_subtitle_glossary_field_kind':
+        return 'Category';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return 'Entries starting with 人名 are used to check the work\'s identity';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return 'Misrecognitions';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return 'Separate with commas';
+      case 'video_subtitle_glossary_field_note':
+        return 'Note';
+      case 'video_subtitle_glossary_field_reading':
+        return 'Reading (hiragana)';
+      case 'video_subtitle_glossary_intro':
+        return 'Names and terms the AI unifies subtitles to. Entries you add or edit are kept when the glossary is regenerated.';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return 'This spelling is already in the table';
+      case 'video_subtitle_glossary_ja_empty':
+        return 'Enter the official spelling';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => 'misheard: ${list}';
+      case 'video_subtitle_glossary_open':
+        return 'Glossary';
+      case 'video_subtitle_glossary_regenerate':
+        return 'Regenerate';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            'Ask the AI to rebuild the glossary? This sends another request. The ${n} entries you edited are kept.';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => 'Glossary regenerated: ${n} entries';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return 'Re-run spelling unification only';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) =>
+            'Spelling unified; ${n} subtitle files updated';
+      case 'video_subtitle_glossary_rerun_running':
+        return 'Re-running spelling unification…';
+      case 'video_subtitle_glossary_save':
+        return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return 'Glossary';
+      case 'video_subtitle_glossary_user_edited':
+        return 'Edited by you; kept when regenerating';
       case 'video_subtitle_graphic_hint':
         return 'Phụ đề đồ họa · hiển thị trên hình · tạm dừng để tra từ (OCR)';
       case 'video_subtitle_graphic_learning_hint':
@@ -596960,6 +611632,79 @@ extension on _StringsVi {
         return 'Lật trang bằng nút âm lượng';
       case 'volume_key_sentence_nav':
         return 'Điều hướng câu bằng phím âm lượng';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Ẩn phụ đề của trang';
       case 'web_video_hosting_builtin':
@@ -596970,6 +611715,15 @@ extension on _StringsVi {
         return 'Cửa sổ gốc (4K, DRM phần cứng; thẻ được xếp hàng để làm sau)';
       case 'web_video_import_hint':
         return 'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Không có thẻ nào đang chờ';
       case 'web_video_mine_queue_finished':
@@ -596988,14 +611742,44 @@ extension on _StringsVi {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Chưa bắt được phụ đề nào';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Phụ đề trực tiếp (lấy từ trang)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Rãnh phụ đề';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Khoảng cách lật trang bằng con lăn chuột';
       case 'window_caption_maximize':
@@ -597125,6 +611909,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 项已单独指定';
       case 'ai_feature_overrides_none':
         return '全部跟随默认提供商';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕校对';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '校对语音识别生成的日语字幕：先整理作品专名表，再修正听错的台词。只会把识别出的文字与专名表发给该提供商（不发音频与画面），并由其计费。';
       case 'ai_feature_unset':
         return '未指定';
       case 'ai_feature_video_identify':
@@ -604247,6 +619035,10 @@ extension on _StringsZhCn {
         return '悬停即查词';
       case 'hover_auto_lookup_hint':
         return '鼠标悬停在文字上即自动查词，无需点击或按住 Shift；最多触发一层弹窗。仅桌面端。';
+      case 'hover_lookup_modifier':
+        return '悬停查词按键';
+      case 'hover_lookup_modifier_hint':
+        return '按住这个键把鼠标移到文字上即查词（阅读器、字幕、网页）';
       case 'icon_custom':
         return '自定义';
       case 'icon_custom_confirm_body':
@@ -606092,6 +620884,22 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'manga_volume_key_paging_subtitle':
         return '在漫画阅读器中用音量加减键翻页';
+      case 'manga_web_ad_filter_off':
+        return '跳过章末二维码广告页：关';
+      case 'manga_web_ad_filter_on':
+        return '跳过章末二维码广告页：开';
+      case 'manga_web_chapter_next':
+        return '下一话';
+      case 'manga_web_chapter_prev':
+        return '上一话';
+      case 'manga_web_chapter_read':
+        return '用 Fushi 阅读本章';
+      case 'manga_web_scan_empty':
+        return '本页没有找到漫画图片，请先打开某一话的阅读页。';
+      case 'manga_web_scan_failed':
+        return '读取本页漫画失败';
+      case 'manga_web_scan_running':
+        return '正在识别本页的漫画图片…';
       case 'manga_wide_page_solo':
         return '宽页独占一屏';
       case 'manga_wide_page_solo_subtitle':
@@ -606713,8 +621521,6 @@ extension on _StringsZhCn {
         return '该功能模块已在「设置 → 外观 → 功能模块」中关闭。';
       case 'module_downloads_hidden_hint':
         return '「浏览」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
-      case 'module_extension_label':
-        return '浏览器扩展';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -606737,6 +621543,8 @@ extension on _StringsZhCn {
         return '复习';
       case 'nav_video':
         return '视频';
+      case 'nav_web':
+        return '浏览器';
       case 'network_proxy_address_hint':
         return '供应用全部公网请求使用的 HTTP 代理服务器';
       case 'network_proxy_auto_hint':
@@ -606879,6 +621687,31 @@ extension on _StringsZhCn {
         return 'LNReader 插件是从网站抓取内容的第三方脚本。只添加你信任的仓库。';
       case 'novel_store_empty':
         return '还没有插件仓库。Fushi 不内置任何仓库——请添加你信任的 LNReader 插件仓库的索引地址。';
+      case 'novel_web_chapter_next':
+        return '下一章';
+      case 'novel_web_chapter_pending':
+        return '读到这一页时会从网站取回下一章。取不到时，请先在 Fushi 浏览器里打开一次原网页再回来。';
+      case 'novel_web_extract_empty':
+        return '这一页没有识别到小说正文';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) => '提取正文失败：${error}';
+      case 'novel_web_extract_running':
+        return '正在提取正文…';
+      case 'novel_web_page_read':
+        return '用 Fushi 阅读（小说）';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            '将并入书架上的《${title}》（已有 ${count} 章）。';
+      case 'novel_web_preview_new':
+        return '将作为新书加入书架。';
+      case 'novel_web_preview_next_found':
+        return '已找到下一章：读到末尾会自动取回。';
+      case 'novel_web_preview_next_missing':
+        return '这一页没有找到下一章链接。';
+      case 'novel_web_preview_read':
+        return '阅读';
+      case 'novel_web_preview_title':
+        return '用 Fushi 阅读这一章';
       case 'now_listening_label':
         return '正在听书';
       case 'ocr_llm_default_accept':
@@ -607016,8 +621849,6 @@ extension on _StringsZhCn {
         return '读 EPUB，点词查词，有声书同步';
       case 'onboarding_feature_browse_hint':
         return '在线来源、扩展、发现与下载';
-      case 'onboarding_feature_extension_hint':
-        return '在任意网页查词（仅桌面）';
       case 'onboarding_feature_fonts':
         return '自定义字体';
       case 'onboarding_feature_fonts_hint':
@@ -607050,6 +621881,14 @@ extension on _StringsZhCn {
         return '视频';
       case 'onboarding_feature_video_hint':
         return '字幕查词与制卡';
+      case 'onboarding_feature_web_basic_hint':
+        return '在 Fushi 里直接浏览网站，任何网页都能查词。';
+      case 'onboarding_feature_web_hint':
+        return '在 Fushi 里直接浏览网站：视频站点用 Fushi 播放器看、网页漫画用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return '在 Fushi 里直接浏览网站：网页漫画和网页小说用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
+      case 'onboarding_feature_web_reader_hint':
+        return '在 Fushi 里直接浏览网站：网页漫画和网页小说用 Fushi 阅读器读，任何网页都能查词。';
       case 'onboarding_features_modules_hint':
         return '未勾选的页面不显示在导航栏，之后可在「设置 → 外观」改回。';
       case 'onboarding_features_modules_title':
@@ -613791,6 +628630,191 @@ extension on _StringsZhCn {
         return '展开';
       case 'video_subtitle_adjust_title':
         return '字幕调整';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) => '已有生成任务在进行：${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI 校对只会把语音识别出的日语文本与本作专名表，发给你在「设置 › 模型 › LLM」里为「字幕校对」指派的提供商；不发送音频与画面。请求按该提供商的价格计费，本地 Ollama / LM Studio 不出本机。效果取决于模型，不作保证。';
+      case 'video_subtitle_ai_consent_confirm':
+        return '开启';
+      case 'video_subtitle_ai_consent_title':
+        return 'AI 校对会发送什么';
+      case 'video_subtitle_ai_entry_hint':
+        return '语音识别 + 可选 AI 校对，保存在视频旁边';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => '已保存 ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) => '已有同名字幕，另存为 ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return '排队中';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return '跳过：.ja.srt 与 .ja.asr.srt 都已存在';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return '跳过：已有 .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return '跳过：几乎没有台词（歌曲或片段）';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return '跳过：判定为纯歌曲（OP/ED、MV）';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'AI 回复多次不完整';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) => '约 ${requests} 次请求，输入约 ${input}、输出约 ${output} token';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return '（按识别稿估算）';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return '（按时长粗估）';
+      case 'video_subtitle_ai_estimate_nothing':
+        return '没有需要校对的集';
+      case 'video_subtitle_ai_hide':
+        return '收起';
+      case 'video_subtitle_ai_model_label':
+        return '识别模型';
+      case 'video_subtitle_ai_model_missing':
+        return '视频用的日语识别模型还没下载';
+      case 'video_subtitle_ai_model_ready':
+        return '日语识别模型已就绪';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return '自动';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return '自动：Windows 合格的 NVIDIA 显卡用 CUDA，Linux 用 Vulkan';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS 后端';
+      case 'video_subtitle_ai_moss_checking':
+        return '检查中…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return '没有达到 CUDA 要求的 NVIDIA 显卡 / 驱动（驱动 R580+、RTX 20 系或更新）';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'MOSS 模型还没下载';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return '没有找到可用的显卡';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return '本平台没有这个后端的 audio.cpp 构建';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'audio.cpp 运行库还没下载';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return '只支持 Windows 与 Linux（x64）';
+      case 'video_subtitle_ai_moss_delete':
+        return '删除 MOSS 文件';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            '删除 MOSS 运行库与模型（${size}，含所有后端）？下次使用 MOSS 时需要重新下载。';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => '下载 MOSS（${size}）';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS 运行库与模型';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) => '未下载（需下载 ${size}）';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS 运行库与模型已就绪';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS 不可用：${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return '没有可处理的本机视频文件';
+      case 'video_subtitle_ai_no_provider':
+        return '还没有为「字幕校对」指派 AI 提供商';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return '还没有任何一集跑过校对';
+      case 'video_subtitle_ai_open_settings':
+        return '去「设置 › 模型 › LLM」指派';
+      case 'video_subtitle_ai_proofread_hint':
+        return '用 AI 修正人名与误识（默认关）';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI 校对';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            '提供商：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'host 播放列表从第 2 集起不支持在 host 上生成字幕';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => '在 ${host} 上运行';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'host 报错：${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return '正在连接 host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return '使用 host 上为「字幕校对」指派的 AI 提供商';
+      case 'video_subtitle_ai_remote_result_missing':
+        return '电脑端任务结束了，但没有返回字幕';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'MOSS 能否使用取决于 host 的显卡';
+      case 'video_subtitle_ai_remote_unreachable':
+        return '连不上这个视频所在的 host';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'host 上的 Fushi 版本不支持生成日语字幕，请先更新 host。';
+      case 'video_subtitle_ai_resume':
+        return '继续';
+      case 'video_subtitle_ai_scrape_hint':
+        return '这部作品还没刮削，专名表只能凭标题推断，建议先刮削。';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '共 ${n} 集，其中 ${skipped} 集已有日语字幕、会跳过';
+      case 'video_subtitle_ai_season_title':
+        return '整季生成日语字幕';
+      case 'video_subtitle_ai_segmenter_auto':
+        return '自动';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS 按说话人分段（需 NVIDIA 桌面）；其余平台用滑窗';
+      case 'video_subtitle_ai_segmenter_label':
+        return '分段方式';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return '滑窗';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI 校对在生成面板里开启，首次开启时会说明发送哪些内容。';
+      case 'video_subtitle_ai_settings_summary':
+        return '生成视频日语字幕的分段方式与 MOSS';
+      case 'video_subtitle_ai_settings_title':
+        return '视频日语字幕';
+      case 'video_subtitle_ai_stage_consistency':
+        return '写法统一';
+      case 'video_subtitle_ai_stage_export':
+        return '导出';
+      case 'video_subtitle_ai_stage_glossary':
+        return '专名表';
+      case 'video_subtitle_ai_stage_proofread':
+        return '校对';
+      case 'video_subtitle_ai_stage_recognize':
+        return '识别';
+      case 'video_subtitle_ai_stage_split':
+        return '拆分';
+      case 'video_subtitle_ai_start':
+        return '开始';
+      case 'video_subtitle_ai_status_cancelled':
+        return '已取消。已完成的阶段保留，继续即可续跑。';
+      case 'video_subtitle_ai_status_cancelling':
+        return '正在取消…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => '完成：已保存 ${n} 个字幕文件';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => '失败：${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return '专名表自相矛盾。改好后点继续。';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return '专名表像是别的作品的（表里的人名在音频里几乎没出现）。改好或先刮削后点继续。';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) => '暂停：AI 请求失败（${reason}）';
+      case 'video_subtitle_ai_status_starting':
+        return '正在开始…';
+      case 'video_subtitle_ai_target_label':
+        return '对象';
+      case 'video_subtitle_ai_title':
+        return '生成日语字幕';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}：文件不存在，跳过';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) => '${title}：只在别的设备上，跳过（请在那台设备上生成）';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) => 'AI 用量：${calls} 次请求，输入 ${input}、输出 ${output} token';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '（${n} 次请求未报用量）';
       case 'video_subtitle_anchor_bottom':
         return '底部';
       case 'video_subtitle_anchor_top':
@@ -613872,6 +628896,66 @@ extension on _StringsZhCn {
         return '已识别画面文字 · 点字查词';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return '正在识别画面文字…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return '原样采用此表';
+      case 'video_subtitle_glossary_add':
+        return '添加条目';
+      case 'video_subtitle_glossary_candidate_banner':
+        return '这张表没通过校验，尚未保存。改好（或原样采用）后回生成面板点继续。';
+      case 'video_subtitle_glossary_delete':
+        return '删除条目';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) => '删除「${ja}」？重新生成专名表时它可能再次出现。';
+      case 'video_subtitle_glossary_edit':
+        return '编辑条目';
+      case 'video_subtitle_glossary_empty':
+        return '还没有条目。第一次 AI 校对时会自动生成，也可以手动添加。';
+      case 'video_subtitle_glossary_entry_menu':
+        return '条目操作';
+      case 'video_subtitle_glossary_field_ja':
+        return '正式写法';
+      case 'video_subtitle_glossary_field_kind':
+        return '类别';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return '以「人名」开头的条目参与作品身份校验';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return '误写';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return '用逗号分隔';
+      case 'video_subtitle_glossary_field_note':
+        return '说明';
+      case 'video_subtitle_glossary_field_reading':
+        return '读音（平假名）';
+      case 'video_subtitle_glossary_intro':
+        return 'AI 校对时把字幕统一成这里的写法。你添加或改过的条目在重新生成时保留。';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return '表里已有这个写法';
+      case 'video_subtitle_glossary_ja_empty':
+        return '请输入正式写法';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => '误写：${list}';
+      case 'video_subtitle_glossary_open':
+        return '专名表';
+      case 'video_subtitle_glossary_regenerate':
+        return '重新生成';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) => '让 AI 重新生成专名表？会再发一次请求。你编辑过的 ${n} 条会保留。';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => '已重新生成：${n} 条';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return '只重跑写法统一';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) => '写法已统一，更新了 ${n} 个字幕文件';
+      case 'video_subtitle_glossary_rerun_running':
+        return '正在重跑写法统一…';
+      case 'video_subtitle_glossary_save':
+        return '保存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) => '专名表保存失败：${reason}';
+      case 'video_subtitle_glossary_title':
+        return '专名表';
+      case 'video_subtitle_glossary_user_edited':
+        return '你编辑过，重新生成时保留';
       case 'video_subtitle_graphic_hint':
         return '图形字幕 · 画面显示 · 暂停后可点字查词（OCR）';
       case 'video_subtitle_graphic_learning_hint':
@@ -614181,6 +629265,78 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'volume_key_sentence_nav':
         return '音量键句子导航';
+      case 'web_adblock_allowlist':
+        return '不拦截的网站';
+      case 'web_adblock_allowlist_hint':
+        return '用逗号或空格分隔域名，包含子域名';
+      case 'web_adblock_enabled':
+        return '拦截网页广告与跟踪器';
+      case 'web_adblock_enabled_basic_hint':
+        return '作用于应用内的网页浏览。过滤列表会自动下载并定期更新。';
+      case 'web_adblock_enabled_hint':
+        return '作用于应用内的网页浏览，例如网页漫画、视频站点和在线源登录页。过滤列表会自动下载并定期更新。';
+      case 'web_adblock_enabled_sources_hint':
+        return '作用于应用内的网页浏览，例如网页漫画、网页小说和在线源登录页。过滤列表会自动下载并定期更新。';
+      case 'web_adblock_section_title':
+        return '网页广告拦截';
+      case 'web_adblock_status_failed':
+        return '过滤列表下载失败，稍后会重试';
+      case 'web_adblock_status_loading':
+        return '正在加载过滤列表…';
+      case 'web_adblock_status_never':
+        return '过滤列表尚未下载';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => '过滤列表更新于 ${time}';
+      case 'web_adblock_update_done':
+        return '过滤列表已更新';
+      case 'web_adblock_update_failed':
+        return '过滤列表更新失败';
+      case 'web_adblock_update_now':
+        return '立即更新过滤列表';
+      case 'web_browser_address_hint':
+        return '输入网址';
+      case 'web_browser_address_invalid':
+        return '不是有效的网址';
+      case 'web_browser_forward':
+        return '前进';
+      case 'web_browser_lookup_off':
+        return '点词查词：关';
+      case 'web_browser_lookup_on':
+        return '点词查词：开';
+      case 'web_browser_site_add':
+        return '加入站点';
+      case 'web_browser_site_added':
+        return '已加入站点';
+      case 'web_browser_site_remove':
+        return '从站点移除';
+      case 'web_browser_sites_empty':
+        return '还没有站点。在地址栏打开网页后，可以把它加入站点。';
+      case 'web_browser_sites_title':
+        return '站点';
+      case 'web_browser_title':
+        return '浏览器';
+      case 'web_hub_browse':
+        return '网页';
+      case 'web_hub_video_sites':
+        return '视频站点';
+      case 'web_video_ad_skipping':
+        return '正在跳过广告…';
+      case 'web_video_address_hint':
+        return '搜索或输入网址';
+      case 'web_video_blocked_error':
+        return ({required Object code}) => '站点报告播放错误（${code}），已切回网页，请在页面上处理。';
+      case 'web_video_blocked_error_generic':
+        return '站点报告播放错误，已切回网页，请在页面上处理。';
+      case 'web_video_blocked_interrupt':
+        return '站点暂停了播放并在页面上询问你。请在网页上处理，处理完会自动回到播放器。';
+      case 'web_video_chapter_credits':
+        return '片尾';
+      case 'web_video_chapter_intro':
+        return '片头';
+      case 'web_video_chapter_main':
+        return '正片';
+      case 'web_video_chapter_recap':
+        return '前情回顾';
       case 'web_video_hide_native_subtitles':
         return '隐藏站点字幕';
       case 'web_video_hosting_builtin':
@@ -614191,6 +629347,14 @@ extension on _StringsZhCn {
         return '原生窗口（4K 硬件 DRM；制卡先排队）';
       case 'web_video_import_hint':
         return '这是网页地址（非直链），将用内置网页播放器打开。';
+      case 'web_video_login_import':
+        return '从浏览器导入登录';
+      case 'web_video_login_import_received':
+        return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
+      case 'web_video_login_import_waiting':
+        return '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
+      case 'web_video_mine_background':
+        return '正在后台制卡（直接从 YouTube 视频流截取）';
       case 'web_video_mine_queue_empty':
         return '制卡队列为空';
       case 'web_video_mine_queue_finished':
@@ -614207,14 +629371,44 @@ extension on _StringsZhCn {
         return ({required Object count}) => '已加入制卡队列（待制 ${count} 张）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
+      case 'web_video_nav_close':
+        return '关闭';
+      case 'web_video_nav_forward':
+        return '前进';
       case 'web_video_no_tracks':
         return '尚未采集到字幕';
+      case 'web_video_page_show':
+        return '回到网页';
+      case 'web_video_player_open':
+        return '在播放器里看';
       case 'web_video_player_unavailable':
         return '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
+      case 'web_video_site_add':
+        return '添加网站';
+      case 'web_video_site_address_hint':
+        return '网址，比如 netflix.com';
+      case 'web_video_site_address_invalid':
+        return '不是有效的网址';
+      case 'web_video_site_name_hint':
+        return '名称（可选）';
+      case 'web_video_site_open':
+        return '打开';
+      case 'web_video_site_remove':
+        return '移除';
+      case 'web_video_sites_hint':
+        return '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
+      case 'web_video_track_failed':
+        return '未能截获这条字幕，点选重试';
+      case 'web_video_track_image':
+        return '图片字幕：由站点显示，不可查词';
       case 'web_video_track_live':
         return '实时采集（页面字幕）';
+      case 'web_video_track_loading':
+        return '正在加载…';
       case 'web_video_track_menu':
         return '字幕轨';
+      case 'web_video_track_site':
+        return '站点字幕，点选加载';
       case 'wheel_page_turn_interval':
         return '滚轮翻页间隔';
       case 'window_caption_maximize':
@@ -614341,6 +629535,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 項已單獨指定';
       case 'ai_feature_overrides_none':
         return '全部跟隨預設提供商';
+      case 'ai_feature_subtitle_proofread':
+        return '字幕校對';
+      case 'ai_feature_subtitle_proofread_summary':
+        return '校對語音識別生成的日語字幕：先整理作品專名表，再修正聽錯的台詞。只會把識別出的文字與專名表發給該供應商（不發音訊與畫面），並由其計費。';
       case 'ai_feature_unset':
         return '未指定';
       case 'ai_feature_video_identify':
@@ -621488,6 +636686,10 @@ extension on _StringsZhHk {
         return '停留即查詞';
       case 'hover_auto_lookup_hint':
         return '滑鼠停留在文字上即自動查詞，無需點擊或按住 Shift；最多觸發一層彈窗。僅桌面版。';
+      case 'hover_lookup_modifier':
+        return '懸停查詞按鍵';
+      case 'hover_lookup_modifier_hint':
+        return '按住這個鍵把滑鼠移到文字上即查詞（閱讀器、字幕、網頁）';
       case 'icon_custom':
         return '自訂';
       case 'icon_custom_confirm_body':
@@ -623335,6 +638537,22 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'manga_volume_key_paging_subtitle':
         return '在漫畫閱讀器中用音量加減鍵翻頁';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_chapter_read':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '寬頁獨佔一屏';
       case 'manga_wide_page_solo_subtitle':
@@ -623959,8 +639177,6 @@ extension on _StringsZhHk {
         return '該功能模塊已在「設定 → 外觀 → 功能模塊」中關閉。';
       case 'module_downloads_hidden_hint':
         return '「瀏覽」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
-      case 'module_extension_label':
-        return '瀏覽器擴展';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -623983,6 +639199,8 @@ extension on _StringsZhHk {
         return '複習';
       case 'nav_video':
         return '影片';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return '所有公網請求都會使用的 HTTP 代理伺服器';
       case 'network_proxy_auto_hint':
@@ -624125,6 +639343,32 @@ extension on _StringsZhHk {
         return 'LNReader 插件是從網站抓取內容的第三方腳本。只新增你信任的倉庫。';
       case 'novel_store_empty':
         return '還沒有插件倉庫。Fushi 不內置任何倉庫——請添加你信任的 LNReader 插件倉庫的索引地址。';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
       case 'now_listening_label':
         return '正在聽書';
       case 'ocr_llm_default_accept':
@@ -624262,8 +639506,6 @@ extension on _StringsZhHk {
         return '讀 EPUB，點詞查詞，有聲書同步';
       case 'onboarding_feature_browse_hint':
         return '線上來源、擴展、發現與下載';
-      case 'onboarding_feature_extension_hint':
-        return '網頁查詞（僅桌面）';
       case 'onboarding_feature_fonts':
         return '自定義字體';
       case 'onboarding_feature_fonts_hint':
@@ -624296,6 +639538,14 @@ extension on _StringsZhHk {
         return '影片';
       case 'onboarding_feature_video_hint':
         return '字幕查詞與製卡';
+      case 'onboarding_feature_web_basic_hint':
+        return 'Browse sites inside Fushi and look up words on any page.';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return '未勾選的頁面不顯示在導航欄，之後可在「設定 → 外觀」改回。';
       case 'onboarding_features_modules_title':
@@ -631062,6 +646312,191 @@ extension on _StringsZhHk {
         return '展開';
       case 'video_subtitle_adjust_title':
         return '字幕調整';
+      case 'video_subtitle_ai_busy':
+        return ({required Object title}) => '已有字幕生成任務進行中：${title}';
+      case 'video_subtitle_ai_consent_body':
+        return 'AI 校對只會把語音識別出的日語文字與本作品的專名表，發送給你在「設定 › 模型 › LLM」中為「字幕校對」指派的供應商，不會發送音訊與畫面。請求由該供應商按其價格計費，本機的 Ollama / LM Studio 不會離開本機。效果取決於模型，不作保證。';
+      case 'video_subtitle_ai_consent_confirm':
+        return '開啟';
+      case 'video_subtitle_ai_consent_title':
+        return 'AI 校對會發送甚麼';
+      case 'video_subtitle_ai_entry_hint':
+        return '語音識別 + 可選 AI 校對，儲存在影片旁邊';
+      case 'video_subtitle_ai_episode_exported':
+        return ({required Object name}) => '已儲存 ${name}';
+      case 'video_subtitle_ai_episode_exported_asr':
+        return ({required Object name}) => '已有同名字幕，另存為 ${name}';
+      case 'video_subtitle_ai_episode_pending':
+        return '等待中';
+      case 'video_subtitle_ai_episode_skipped_both':
+        return '略過：.ja.srt 與 .ja.asr.srt 均已存在';
+      case 'video_subtitle_ai_episode_skipped_existing':
+        return '略過：已有 .ja.srt';
+      case 'video_subtitle_ai_episode_skipped_no_dialogue':
+        return '略過：幾乎沒有台詞（歌曲或片段）';
+      case 'video_subtitle_ai_episode_skipped_song':
+        return '略過：判定為純歌曲（OP/ED、MV）';
+      case 'video_subtitle_ai_error_reply_incomplete':
+        return 'AI 多次回覆均不完整';
+      case 'video_subtitle_ai_estimate':
+        return ({
+          required Object requests,
+          required Object input,
+          required Object output,
+        }) => '約 ${requests} 次請求，輸入約 ${input}、輸出約 ${output} token';
+      case 'video_subtitle_ai_estimate_by_drafts':
+        return '（按識別稿估算）';
+      case 'video_subtitle_ai_estimate_by_duration':
+        return '（按片長粗略估算）';
+      case 'video_subtitle_ai_estimate_nothing':
+        return '沒有需要校對的內容';
+      case 'video_subtitle_ai_hide':
+        return '收起';
+      case 'video_subtitle_ai_model_label':
+        return '識別模型';
+      case 'video_subtitle_ai_model_missing':
+        return '影片用的日語識別模型尚未下載';
+      case 'video_subtitle_ai_model_ready':
+        return '日語識別模型已就緒';
+      case 'video_subtitle_ai_moss_backend_auto':
+        return '自動';
+      case 'video_subtitle_ai_moss_backend_hint':
+        return '自動：Windows 上符合條件的 NVIDIA 顯示卡使用 CUDA，Linux 使用 Vulkan';
+      case 'video_subtitle_ai_moss_backend_label':
+        return 'MOSS 後端';
+      case 'video_subtitle_ai_moss_checking':
+        return '檢查中…';
+      case 'video_subtitle_ai_moss_code_cuda_unavailable':
+        return '沒有符合 CUDA 要求的 NVIDIA 顯示卡 / 驅動程式（驅動 R580+、RTX 20 系列或更新）';
+      case 'video_subtitle_ai_moss_code_model_missing':
+        return 'MOSS 模型尚未下載';
+      case 'video_subtitle_ai_moss_code_no_gpu':
+        return '找不到可用的顯示卡';
+      case 'video_subtitle_ai_moss_code_no_runtime_for_backend':
+        return '此平台沒有該後端的 audio.cpp 版本';
+      case 'video_subtitle_ai_moss_code_runtime_missing':
+        return 'audio.cpp 執行庫尚未下載';
+      case 'video_subtitle_ai_moss_code_unsupported_platform':
+        return '僅支援 Windows 與 Linux（x64）';
+      case 'video_subtitle_ai_moss_delete':
+        return 'Delete MOSS files';
+      case 'video_subtitle_ai_moss_delete_confirm':
+        return ({required Object size}) =>
+            'Delete the MOSS runtime and model (${size}, all backends)? They will be downloaded again the next time MOSS is used.';
+      case 'video_subtitle_ai_moss_download':
+        return ({required Object size}) => '下載 MOSS（${size}）';
+      case 'video_subtitle_ai_moss_files':
+        return 'MOSS 執行庫與模型';
+      case 'video_subtitle_ai_moss_missing':
+        return ({required Object size}) => '尚未下載（需下載 ${size}）';
+      case 'video_subtitle_ai_moss_ready':
+        return 'MOSS 執行庫與模型已就緒';
+      case 'video_subtitle_ai_moss_unavailable':
+        return ({required Object reason}) => 'MOSS 無法使用：${reason}';
+      case 'video_subtitle_ai_no_local_episodes':
+        return '沒有可處理的本機影片檔案';
+      case 'video_subtitle_ai_no_provider':
+        return '尚未為「字幕校對」指派 AI 供應商';
+      case 'video_subtitle_ai_nothing_to_rerun':
+        return '尚未有任何一集進行過校對';
+      case 'video_subtitle_ai_open_settings':
+        return '前往「設定 › 模型 › LLM」指派';
+      case 'video_subtitle_ai_proofread_hint':
+        return '用 AI 修正人名與誤識（預設關閉）';
+      case 'video_subtitle_ai_proofread_label':
+        return 'AI 校對';
+      case 'video_subtitle_ai_provider':
+        return ({required Object name, required Object model}) =>
+            '供應商：${name}（${model}）';
+      case 'video_subtitle_ai_remote_episode_unsupported':
+        return 'Generating on the host only works for the first episode of a host playlist';
+      case 'video_subtitle_ai_remote_host':
+        return ({required Object host}) => 'Runs on ${host}';
+      case 'video_subtitle_ai_remote_host_error':
+        return ({required Object reason}) => 'Host error: ${reason}';
+      case 'video_subtitle_ai_remote_probing':
+        return 'Connecting to the host…';
+      case 'video_subtitle_ai_remote_proofread_hint':
+        return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
+      case 'video_subtitle_ai_remote_segmenter_hint':
+        return 'Whether MOSS can be used depends on the host\'s GPU';
+      case 'video_subtitle_ai_remote_unreachable':
+        return 'Can\'t reach the host this video is on';
+      case 'video_subtitle_ai_remote_unsupported':
+        return 'The host\'s Fushi version does not support generating Japanese subtitles. Update Fushi on the host first.';
+      case 'video_subtitle_ai_resume':
+        return '繼續';
+      case 'video_subtitle_ai_scrape_hint':
+        return '這部作品尚未刮削，專名表只能憑標題推測，建議先刮削。';
+      case 'video_subtitle_ai_season_summary':
+        return ({required Object n, required Object skipped}) =>
+            '共 ${n} 集，其中 ${skipped} 集已有日語字幕，會略過';
+      case 'video_subtitle_ai_season_title':
+        return '整季生成日語字幕';
+      case 'video_subtitle_ai_segmenter_auto':
+        return '自動';
+      case 'video_subtitle_ai_segmenter_hint':
+        return 'MOSS 按說話者分段（需 NVIDIA 桌面電腦）；其他平台使用滑動視窗';
+      case 'video_subtitle_ai_segmenter_label':
+        return '分段方式';
+      case 'video_subtitle_ai_segmenter_moss':
+        return 'MOSS';
+      case 'video_subtitle_ai_segmenter_window':
+        return '滑動視窗';
+      case 'video_subtitle_ai_settings_footer':
+        return 'AI 校對在生成面板中開啟，首次開啟時會說明發送的內容。';
+      case 'video_subtitle_ai_settings_summary':
+        return '生成影片日語字幕的分段方式與 MOSS';
+      case 'video_subtitle_ai_settings_title':
+        return '影片日語字幕';
+      case 'video_subtitle_ai_stage_consistency':
+        return '統一寫法';
+      case 'video_subtitle_ai_stage_export':
+        return '匯出';
+      case 'video_subtitle_ai_stage_glossary':
+        return '建立專名表';
+      case 'video_subtitle_ai_stage_proofread':
+        return '校對';
+      case 'video_subtitle_ai_stage_recognize':
+        return '語音識別';
+      case 'video_subtitle_ai_stage_split':
+        return '拆分長句';
+      case 'video_subtitle_ai_start':
+        return '開始';
+      case 'video_subtitle_ai_status_cancelled':
+        return '已取消。已完成的階段會保留，按「繼續」即可接續。';
+      case 'video_subtitle_ai_status_cancelling':
+        return '正在取消…';
+      case 'video_subtitle_ai_status_done':
+        return ({required Object n}) => '完成：已儲存 ${n} 個字幕檔案';
+      case 'video_subtitle_ai_status_failed':
+        return ({required Object reason}) => '失敗：${reason}';
+      case 'video_subtitle_ai_status_glossary_conflicts':
+        return '專名表自相矛盾。修改後請按「繼續」。';
+      case 'video_subtitle_ai_status_glossary_wrong_work':
+        return '專名表似乎屬於另一部作品（表中的人名在音訊裏幾乎沒有出現）。修改或先刮削作品後，請按「繼續」。';
+      case 'video_subtitle_ai_status_paused':
+        return ({required Object reason}) => '已暫停：AI 請求失敗（${reason}）';
+      case 'video_subtitle_ai_status_starting':
+        return '正在開始…';
+      case 'video_subtitle_ai_target_label':
+        return '對象';
+      case 'video_subtitle_ai_title':
+        return '生成日語字幕';
+      case 'video_subtitle_ai_unavailable_missing':
+        return ({required Object title}) => '${title}：檔案不存在，已略過';
+      case 'video_subtitle_ai_unavailable_remote':
+        return ({required Object title}) => '${title}：只存在於另一台裝置，已略過（請在該裝置上生成）';
+      case 'video_subtitle_ai_usage':
+        return ({
+          required Object calls,
+          required Object input,
+          required Object output,
+        }) => 'AI 用量：${calls} 次請求，輸入 ${input}、輸出 ${output} token';
+      case 'video_subtitle_ai_usage_unknown':
+        return ({required Object n}) => '（${n} 次請求未回報用量）';
       case 'video_subtitle_anchor_bottom':
         return '底部';
       case 'video_subtitle_anchor_top':
@@ -631143,6 +646578,68 @@ extension on _StringsZhHk {
         return 'Text recognized · tap a word';
       case 'video_subtitle_frame_ocr_status_recognizing':
         return 'Reading on-screen text…';
+      case 'video_subtitle_glossary_accept_candidate':
+        return '照原樣採用此表';
+      case 'video_subtitle_glossary_add':
+        return '新增項目';
+      case 'video_subtitle_glossary_candidate_banner':
+        return '這張表未通過驗證，尚未儲存。修改（或照原樣採用）後，回到生成面板按「繼續」。';
+      case 'video_subtitle_glossary_delete':
+        return '刪除項目';
+      case 'video_subtitle_glossary_delete_confirm':
+        return ({required Object ja}) => '刪除「${ja}」？重新生成專名表時，它可能會再次出現。';
+      case 'video_subtitle_glossary_edit':
+        return '編輯項目';
+      case 'video_subtitle_glossary_empty':
+        return '尚未有項目。專名表會在首次 AI 校對時自動生成，也可以手動新增。';
+      case 'video_subtitle_glossary_entry_menu':
+        return '項目操作';
+      case 'video_subtitle_glossary_field_ja':
+        return '正式寫法';
+      case 'video_subtitle_glossary_field_kind':
+        return '類別';
+      case 'video_subtitle_glossary_field_kind_hint':
+        return '以「人名」開頭的項目會用於核對作品身份';
+      case 'video_subtitle_glossary_field_misrecognitions':
+        return '誤寫';
+      case 'video_subtitle_glossary_field_misrecognitions_hint':
+        return '以逗號分隔';
+      case 'video_subtitle_glossary_field_note':
+        return '備註';
+      case 'video_subtitle_glossary_field_reading':
+        return '讀音（平假名）';
+      case 'video_subtitle_glossary_intro':
+        return 'AI 校對時會把字幕統一成這裏的寫法。你新增或修改過的項目，重新生成時會保留。';
+      case 'video_subtitle_glossary_ja_duplicate':
+        return '表中已有這個寫法';
+      case 'video_subtitle_glossary_ja_empty':
+        return '請輸入正式寫法';
+      case 'video_subtitle_glossary_misrecognitions_short':
+        return ({required Object list}) => '誤寫：${list}';
+      case 'video_subtitle_glossary_open':
+        return '專名表';
+      case 'video_subtitle_glossary_regenerate':
+        return '重新生成';
+      case 'video_subtitle_glossary_regenerate_confirm':
+        return ({required Object n}) =>
+            '要讓 AI 重新生成專名表嗎？會再發送一次請求。你編輯過的 ${n} 項會保留。';
+      case 'video_subtitle_glossary_regenerated':
+        return ({required Object n}) => '已重新生成：${n} 項';
+      case 'video_subtitle_glossary_rerun_consistency':
+        return '只重跑統一寫法';
+      case 'video_subtitle_glossary_rerun_done':
+        return ({required Object n}) => '寫法已統一，更新了 ${n} 個字幕檔案';
+      case 'video_subtitle_glossary_rerun_running':
+        return '正在重跑統一寫法…';
+      case 'video_subtitle_glossary_save':
+        return '儲存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
+      case 'video_subtitle_glossary_title':
+        return '專名表';
+      case 'video_subtitle_glossary_user_edited':
+        return '你編輯過，重新生成時會保留';
       case 'video_subtitle_graphic_hint':
         return '圖形字幕 · 畫面顯示 · 暫停後可點字查詞（OCR）';
       case 'video_subtitle_graphic_learning_hint':
@@ -631453,6 +646950,79 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'volume_key_sentence_nav':
         return '音量鍵句子導覽';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
+      case 'web_hub_video_sites':
+        return 'Video sites';
+      case 'web_video_ad_skipping':
+        return '正在略過廣告…';
+      case 'web_video_address_hint':
+        return '搜尋或輸入網址';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return '隱藏網站字幕';
       case 'web_video_hosting_builtin':
@@ -631463,6 +647033,14 @@ extension on _StringsZhHk {
         return '原生視窗（4K 硬體 DRM；製卡先排隊）';
       case 'web_video_import_hint':
         return '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
+      case 'web_video_login_import':
+        return '從瀏覽器匯入登入';
+      case 'web_video_login_import_received':
+        return ({required Object count}) => '已從瀏覽器匯入 ${count} 條登入資訊';
+      case 'web_video_login_import_waiting':
+        return '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
+      case 'web_video_mine_background':
+        return '正在背景製卡（直接從 YouTube 影片串流擷取）';
       case 'web_video_mine_queue_empty':
         return '佇列中沒有卡片';
       case 'web_video_mine_queue_finished':
@@ -631479,14 +647057,44 @@ extension on _StringsZhHk {
         return ({required Object count}) => '已加入製卡佇列（待製 ${count} 張）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
+      case 'web_video_nav_close':
+        return '關閉';
+      case 'web_video_nav_forward':
+        return '前進';
       case 'web_video_no_tracks':
         return '尚未擷取到字幕';
+      case 'web_video_page_show':
+        return '回到網頁';
+      case 'web_video_player_open':
+        return '在播放器裡看';
       case 'web_video_player_unavailable':
         return '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
+      case 'web_video_site_add':
+        return '新增網站';
+      case 'web_video_site_address_hint':
+        return '網址，例如 netflix.com';
+      case 'web_video_site_address_invalid':
+        return '不是有效的網址';
+      case 'web_video_site_name_hint':
+        return '名稱（可選）';
+      case 'web_video_site_open':
+        return '開啟';
+      case 'web_video_site_remove':
+        return '移除';
+      case 'web_video_sites_hint':
+        return '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return '即時字幕（從頁面取樣）';
+      case 'web_video_track_loading':
+        return '正在載入…';
       case 'web_video_track_menu':
         return '字幕軌';
+      case 'web_video_track_site':
+        return '站點字幕，點選載入';
       case 'wheel_page_turn_interval':
         return '滑鼠滾輪翻頁間隔';
       case 'window_caption_maximize':
