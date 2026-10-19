@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149209 (8777 per locale)
+/// Strings: 149481 (8793 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6638,6 +6638,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_import_segment_extensions => 'Extensions';
   String get media_import_segment_sources => 'Sources';
   String get media_import_segment_stores => 'Stores';
+  String get media_privacy_action => 'Privacy';
+  String get media_privacy_cleared_toast => 'No longer private';
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  String get media_privacy_marked_toast => 'Marked private';
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  String get media_privacy_switch => 'Keep this private';
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
   String get media_server_item_folder => 'Folder';
@@ -9416,6 +9428,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_review_done_detail({required Object n}) =>
       'Reviewed ${n} cards in this session';
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  String get srs_review_layout_replay_end => 'Right';
+  String get srs_review_layout_replay_off => 'Off';
+  String get srs_review_layout_replay_start => 'Left';
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  String get srs_review_layout_title => 'Review layout';
   String get srs_review_pending_decision => 'Needs your decision';
   String get srs_review_replay_audio => 'Replay audio';
   String get srs_review_show_answer => 'Show answer';
@@ -23584,6 +23607,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'المستودعات';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -28379,6 +28422,25 @@ class _StringsAr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -45083,6 +45145,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositorys';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -49952,6 +50034,25 @@ class _StringsDe extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -66778,6 +66879,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositorios';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -71650,6 +71771,25 @@ class _StringsEs extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -88543,6 +88683,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Dépôts';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -93435,6 +93595,25 @@ class _StringsFr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -110159,6 +110338,26 @@ class _StringsId extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositori';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -114984,6 +115183,25 @@ class _StringsId extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -131711,6 +131929,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repository';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -136577,6 +136815,25 @@ class _StringsIt extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -152795,6 +153052,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_import_segment_stores => 'リポジトリ';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -157462,6 +157739,25 @@ class _StringsJa extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => '「Hard」と「Easy」ボタンを隠す';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -173401,6 +173697,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_import_segment_stores => '저장소';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -178076,6 +178392,25 @@ class _StringsKo extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -194540,6 +194875,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repository\'s';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -199395,6 +199750,25 @@ class _StringsNl extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -216159,6 +216533,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositórios';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -221017,6 +221411,25 @@ class _StringsPtBr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -237753,6 +238166,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Репозитории';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -242617,6 +243050,25 @@ class _StringsRu extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -259168,6 +259620,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_import_segment_stores => 'ที่เก็บ';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -263968,6 +264440,25 @@ class _StringsTh extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -280556,6 +281047,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Depolar';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -285384,6 +285895,25 @@ class _StringsTr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -301987,6 +302517,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Kho';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -306796,6 +307346,25 @@ class _StringsVi extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -322442,6 +323011,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_import_segment_stores => '仓库';
   @override
+  String get media_privacy_action => '私密';
+  @override
+  String get media_privacy_cleared_toast => '已取消私密';
+  @override
+  String get media_privacy_hint =>
+      '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      '读取私密状态失败，暂时无法修改：${reason}';
+  @override
+  String get media_privacy_marked_toast => '已设为私密';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      '私密设置失败：${reason}';
+  @override
+  String get media_privacy_switch => '设为私密';
+  @override
   String get media_server_browse_by_folder => '按文件夹浏览';
   @override
   String get media_server_browse_by_title => '按作品浏览';
@@ -326862,6 +327451,22 @@ class _StringsZhCn extends _StringsEn {
   String srs_review_done_detail({required Object n}) => '本次复习了 ${n} 张';
   @override
   String get srs_review_hide_hard_easy => '隐藏「困难」和「简单」按钮';
+  @override
+  String get srs_review_layout_replay_button => '底部重播键';
+  @override
+  String get srs_review_layout_replay_button_hint => '手机刷卡时拇指够得到；顶栏的重播照旧保留';
+  @override
+  String get srs_review_layout_replay_end => '右侧';
+  @override
+  String get srs_review_layout_replay_off => '不放';
+  @override
+  String get srs_review_layout_replay_start => '左侧';
+  @override
+  String get srs_review_layout_show_intervals => '评分按钮显示下次间隔';
+  @override
+  String get srs_review_layout_show_intervals_hint => '评价下方的小字，误按或排程异常一眼可见';
+  @override
+  String get srs_review_layout_title => '复习布局';
   @override
   String get srs_review_pending_decision => '待你决定';
   @override
@@ -342182,6 +342787,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_import_segment_stores => '倉庫';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -346746,6 +347371,25 @@ class _StringsZhHk extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get srs_review_layout_replay_button => 'Replay button at the bottom';
+  @override
+  String get srs_review_layout_replay_button_hint =>
+      'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+  @override
+  String get srs_review_layout_replay_end => 'Right';
+  @override
+  String get srs_review_layout_replay_off => 'Off';
+  @override
+  String get srs_review_layout_replay_start => 'Left';
+  @override
+  String get srs_review_layout_show_intervals =>
+      'Show next interval on rating buttons';
+  @override
+  String get srs_review_layout_show_intervals_hint =>
+      'A small label under each rating, so a mis-tap or an odd schedule stands out';
+  @override
+  String get srs_review_layout_title => 'Review layout';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -361227,6 +361871,25 @@ extension on _StringsEn {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Stores';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -365420,6 +366083,22 @@ extension on _StringsEn {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -379459,6 +380138,25 @@ extension on _StringsAr {
         return 'المصادر';
       case 'media_import_segment_stores':
         return 'المستودعات';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -383653,6 +384351,22 @@ extension on _StringsAr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -397738,6 +398452,25 @@ extension on _StringsDe {
         return 'Quellen';
       case 'media_import_segment_stores':
         return 'Repositorys';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -401942,6 +402675,22 @@ extension on _StringsDe {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -416031,6 +416780,25 @@ extension on _StringsEs {
         return 'Fuentes';
       case 'media_import_segment_stores':
         return 'Repositorios';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -420235,6 +421003,22 @@ extension on _StringsEs {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -434334,6 +435118,25 @@ extension on _StringsFr {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Dépôts';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -438539,6 +439342,22 @@ extension on _StringsFr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -452610,6 +453429,25 @@ extension on _StringsId {
         return 'Sumber';
       case 'media_import_segment_stores':
         return 'Repositori';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -456803,6 +457641,22 @@ extension on _StringsId {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -470875,6 +471729,25 @@ extension on _StringsIt {
         return 'Fonti';
       case 'media_import_segment_stores':
         return 'Repository';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -475076,6 +475949,22 @@ extension on _StringsIt {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -489098,6 +489987,25 @@ extension on _StringsJa {
         return 'ソース';
       case 'media_import_segment_stores':
         return 'リポジトリ';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -493283,6 +494191,22 @@ extension on _StringsJa {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return '「Hard」と「Easy」ボタンを隠す';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -507253,6 +508177,25 @@ extension on _StringsKo {
         return '소스';
       case 'media_import_segment_stores':
         return '저장소';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -511439,6 +512382,22 @@ extension on _StringsKo {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -525484,6 +526443,25 @@ extension on _StringsNl {
         return 'Bronnen';
       case 'media_import_segment_stores':
         return 'Repository\'s';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -529685,6 +530663,22 @@ extension on _StringsNl {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -543761,6 +544755,25 @@ extension on _StringsPtBr {
         return 'Fontes';
       case 'media_import_segment_stores':
         return 'Repositórios';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -547962,6 +548975,22 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -562042,6 +563071,25 @@ extension on _StringsRu {
         return 'Источники';
       case 'media_import_segment_stores':
         return 'Репозитории';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -566243,6 +567291,22 @@ extension on _StringsRu {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -580292,6 +581356,25 @@ extension on _StringsTh {
         return 'แหล่งที่มา';
       case 'media_import_segment_stores':
         return 'ที่เก็บ';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -584484,6 +585567,22 @@ extension on _StringsTh {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -598548,6 +599647,25 @@ extension on _StringsTr {
         return 'Kaynaklar';
       case 'media_import_segment_stores':
         return 'Depolar';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -602743,6 +603861,22 @@ extension on _StringsTr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -616802,6 +617936,25 @@ extension on _StringsVi {
         return 'Nguồn';
       case 'media_import_segment_stores':
         return 'Kho';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -620997,6 +622150,22 @@ extension on _StringsVi {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -634934,6 +636103,23 @@ extension on _StringsZhCn {
         return '在线源';
       case 'media_import_segment_stores':
         return '仓库';
+      case 'media_privacy_action':
+        return '私密';
+      case 'media_privacy_cleared_toast':
+        return '已取消私密';
+      case 'media_privacy_hint':
+        return '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) => '读取私密状态失败，暂时无法修改：${reason}';
+      case 'media_privacy_marked_toast':
+        return '已设为私密';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) => '私密设置失败：${reason}';
+      case 'media_privacy_switch':
+        return '设为私密';
       case 'media_server_browse_by_folder':
         return '按文件夹浏览';
       case 'media_server_browse_by_title':
@@ -639086,6 +640272,22 @@ extension on _StringsZhCn {
         return ({required Object n}) => '本次复习了 ${n} 张';
       case 'srs_review_hide_hard_easy':
         return '隐藏「困难」和「简单」按钮';
+      case 'srs_review_layout_replay_button':
+        return '底部重播键';
+      case 'srs_review_layout_replay_button_hint':
+        return '手机刷卡时拇指够得到；顶栏的重播照旧保留';
+      case 'srs_review_layout_replay_end':
+        return '右侧';
+      case 'srs_review_layout_replay_off':
+        return '不放';
+      case 'srs_review_layout_replay_start':
+        return '左侧';
+      case 'srs_review_layout_show_intervals':
+        return '评分按钮显示下次间隔';
+      case 'srs_review_layout_show_intervals_hint':
+        return '评价下方的小字，误按或排程异常一眼可见';
+      case 'srs_review_layout_title':
+        return '复习布局';
       case 'srs_review_pending_decision':
         return '待你决定';
       case 'srs_review_replay_audio':
@@ -652984,6 +654186,25 @@ extension on _StringsZhHk {
         return '線上源';
       case 'media_import_segment_stores':
         return '倉庫';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -657165,6 +658386,22 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_layout_replay_button':
+        return 'Replay button at the bottom';
+      case 'srs_review_layout_replay_button_hint':
+        return 'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
+      case 'srs_review_layout_replay_end':
+        return 'Right';
+      case 'srs_review_layout_replay_off':
+        return 'Off';
+      case 'srs_review_layout_replay_start':
+        return 'Left';
+      case 'srs_review_layout_show_intervals':
+        return 'Show next interval on rating buttons';
+      case 'srs_review_layout_show_intervals_hint':
+        return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
+      case 'srs_review_layout_title':
+        return 'Review layout';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
