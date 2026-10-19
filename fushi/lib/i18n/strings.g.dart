@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149345 (8785 per locale)
+/// Strings: 149702 (8806 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2927,6 +2927,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_language_tooltip => 'Content language';
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   String get dict_order_bottom_move => 'Move to bottom';
   String dict_order_position_clamped({required Object n}) =>
       'Out of range — will move to position ${n}';
@@ -6638,6 +6641,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_import_segment_extensions => 'Extensions';
   String get media_import_segment_sources => 'Sources';
   String get media_import_segment_stores => 'Stores';
+  String get media_privacy_action => 'Privacy';
+  String get media_privacy_cleared_toast => 'No longer private';
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  String get media_privacy_marked_toast => 'Marked private';
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  String get media_privacy_switch => 'Keep this private';
   String get media_server_browse_by_folder => 'Browse by folder';
   String get media_server_browse_by_title => 'Browse shows and movies';
   String get media_server_item_folder => 'Folder';
@@ -7000,7 +7015,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_clip_format_mp4_h264 =>
       'MP4 · H.264 (Anki\'s own player; use for AnkiMobile)';
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9; desktop only)';
+      'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9)';
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (plays inside the card, recommended)';
   String get mining_image_quality => 'Image / GIF quality';
@@ -10545,6 +10560,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object source,
     required Object path,
   }) => 'Detected install location (${source}): ${path}';
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
   String update_install_failure_summary({required Object summary}) =>
       'Reason: ${summary}';
   String update_install_gal_hook_holder({
@@ -10557,6 +10574,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_install_incomplete_title => 'Update did not finish';
   String update_install_installer_pid({required Object pid}) =>
       'Installer PID: ${pid}';
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi could not start the installer for version ${version}. Check the log path below.';
   String get update_install_launch_failed_title =>
@@ -11321,6 +11340,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The video for this favorite is no longer available';
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   String video_remote_error_invalid_request({required Object code}) =>
@@ -11351,6 +11372,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_remote_error_unreachable => 'Can\'t reach the computer';
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
   String get video_remote_expression => 'Expression';
   String get video_remote_favorites => 'Favorites';
   String get video_remote_favorites_empty => 'No favorites yet';
@@ -11365,6 +11388,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} selected';
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  String get video_remote_library_no_match => 'No matching videos';
+  String get video_remote_library_now_playing => 'Playing';
+  String get video_remote_library_pick => 'Choose a video';
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  String get video_remote_library_title => 'Play a video';
   String get video_remote_line_actions => 'Line actions';
   String get video_remote_meaning => 'Meaning';
   String get video_remote_mine => 'Preview and create card';
@@ -17286,6 +17319,11 @@ class _StringsAr extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -23595,6 +23633,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'المستودعات';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -24203,7 +24261,7 @@ class _StringsAr extends _StringsEn {
       'MP4 · H.264 (مشغّل Anki نفسه؛ استخدمه مع AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9؛ لسطح المكتب فقط)';
+      'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (يُشغَّل داخل البطاقة، موصى به)';
@@ -30395,6 +30453,9 @@ class _StringsAr extends _StringsEn {
     required Object path,
   }) => 'موقع التثبيت المكتشف (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'السبب: ${summary}';
   @override
@@ -30411,6 +30472,9 @@ class _StringsAr extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'معرّف عملية المثبّت: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'تعذّر على Fushi بدء مثبّت الإصدار ${version}. تحقق من مسار السجل أدناه.';
@@ -31693,6 +31757,9 @@ class _StringsAr extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -31739,6 +31806,9 @@ class _StringsAr extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -31762,6 +31832,23 @@ class _StringsAr extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -38649,6 +38736,11 @@ class _StringsDe extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -45113,6 +45205,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositorys';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -45736,7 +45848,7 @@ class _StringsDe extends _StringsEn {
       'MP4 · H.264 (eigener Player von Anki; für AnkiMobile verwenden)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9; nur Desktop)';
+      'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (wird in der Karte abgespielt, empfohlen)';
@@ -52013,6 +52125,9 @@ class _StringsDe extends _StringsEn {
     required Object path,
   }) => 'Erkannter Installationsort (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Grund: ${summary}';
   @override
@@ -52029,6 +52144,9 @@ class _StringsDe extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'Installer-PID: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi konnte das Installationsprogramm für Version ${version} nicht starten. Prüfe den Protokollpfad unten.';
@@ -53334,6 +53452,9 @@ class _StringsDe extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -53380,6 +53501,9 @@ class _StringsDe extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -53403,6 +53527,23 @@ class _StringsDe extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -60349,6 +60490,11 @@ class _StringsEs extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -66827,6 +66973,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositorios';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -67447,7 +67613,7 @@ class _StringsEs extends _StringsEn {
       'MP4 · H.264 (reproductor propio de Anki; úsalo para AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9; solo escritorio)';
+      'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (se reproduce dentro de la tarjeta, recomendado)';
@@ -73739,6 +73905,9 @@ class _StringsEs extends _StringsEn {
     required Object path,
   }) => 'Ubicación de instalación detectada (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
   @override
@@ -73755,6 +73924,9 @@ class _StringsEs extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID del instalador: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi no pudo iniciar el instalador de la versión ${version}. Revisa la ruta del registro más abajo.';
@@ -75066,6 +75238,9 @@ class _StringsEs extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -75112,6 +75287,9 @@ class _StringsEs extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -75135,6 +75313,23 @@ class _StringsEs extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -82116,6 +82311,11 @@ class _StringsFr extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -88611,6 +88811,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Dépôts';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -89235,7 +89455,7 @@ class _StringsFr extends _StringsEn {
       'MP4 · H.264 (lecteur propre d\'Anki ; à utiliser pour AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9 ; ordinateur uniquement)';
+      'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (lu dans la carte, recommandé)';
@@ -95540,6 +95760,9 @@ class _StringsFr extends _StringsEn {
     required Object path,
   }) => 'Emplacement d\'installation détecté (${source}) : ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Raison : ${summary}';
   @override
@@ -95556,6 +95779,9 @@ class _StringsFr extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID de l\'installateur : ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi n\'a pas pu démarrer l\'installateur de la version ${version}. Consultez le chemin du journal ci-dessous.';
@@ -96874,6 +97100,9 @@ class _StringsFr extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -96920,6 +97149,9 @@ class _StringsFr extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -96943,6 +97175,23 @@ class _StringsFr extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -103864,6 +104113,11 @@ class _StringsId extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -110246,6 +110500,26 @@ class _StringsId extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositori';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -110860,7 +111134,7 @@ class _StringsId extends _StringsEn {
       'MP4 · H.264 (pemutar Anki sendiri; gunakan untuk AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9; hanya desktop)';
+      'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (diputar di dalam kartu, direkomendasikan)';
@@ -117086,6 +117360,9 @@ class _StringsId extends _StringsEn {
     required Object path,
   }) => 'Lokasi pemasangan terdeteksi (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Alasan: ${summary}';
   @override
@@ -117102,6 +117379,9 @@ class _StringsId extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID penginstal: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi tidak dapat memulai penginstal untuk versi ${version}. Periksa jalur log di bawah.';
@@ -118403,6 +118683,9 @@ class _StringsId extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -118449,6 +118732,9 @@ class _StringsId extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -118472,6 +118758,23 @@ class _StringsId extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -125373,6 +125676,11 @@ class _StringsIt extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -131817,6 +132125,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repository';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -132439,7 +132767,7 @@ class _StringsIt extends _StringsEn {
       'MP4 · H.264 (lettore di Anki; da usare per AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9; solo desktop)';
+      'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (si riproduce dentro la carta, consigliato)';
@@ -138708,6 +139036,9 @@ class _StringsIt extends _StringsEn {
     required Object path,
   }) => 'Posizione di installazione rilevata (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
   @override
@@ -138725,6 +139056,9 @@ class _StringsIt extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID del programma di installazione: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi non è riuscito ad avviare il programma di installazione per la versione ${version}. Controlla il percorso del log qui sotto.';
@@ -140024,6 +140358,9 @@ class _StringsIt extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -140070,6 +140407,9 @@ class _StringsIt extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -140093,6 +140433,23 @@ class _StringsIt extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -146823,6 +147180,11 @@ class _StringsJa extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => '用語辞書に付属の漢字';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'この漢字は用語辞書に付属するものです。削除すると辞書全体（用語の見出しも含む）が削除されます。漢字カードだけを表示しないなら、ここでオフにしてください。';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -152920,6 +153282,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_import_segment_stores => 'リポジトリ';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -153501,7 +153883,7 @@ class _StringsJa extends _StringsEn {
       'MP4 · H.264（Anki 独自のプレーヤー。AnkiMobile 向け）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間。デスクトップのみ）';
+      'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（カード内で再生、推奨）';
   @override
@@ -159529,6 +159911,9 @@ class _StringsJa extends _StringsEn {
     required Object path,
   }) => '検出されたインストール場所（${source}）：${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
   @override
@@ -159545,6 +159930,9 @@ class _StringsJa extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'インストーラー PID：${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi はバージョン ${version} のインストーラーを起動できませんでした。下のログパスを確認してください。';
@@ -160776,6 +161164,9 @@ class _StringsJa extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'パソコン側でダイアログが開いているため動画を切り替えられません。閉じてからもう一度お試しください';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -160822,6 +161213,8 @@ class _StringsJa extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing => 'この動画はもうパソコンのライブラリにありません';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -160845,6 +161238,20 @@ class _StringsJa extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty => 'パソコンの動画ライブラリは空です';
+  @override
+  String get video_remote_library_no_match => '一致する動画がありません';
+  @override
+  String get video_remote_library_now_playing => '再生中';
+  @override
+  String get video_remote_library_pick => '動画を選ぶ';
+  @override
+  String video_remote_library_resume({required Object time}) => '${time} から再開';
+  @override
+  String get video_remote_library_search_hint => 'パソコンの動画を検索';
+  @override
+  String get video_remote_library_title => '動画を選んで再生';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -167430,6 +167837,11 @@ class _StringsKo extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -173545,6 +173957,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_import_segment_stores => '저장소';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -174127,7 +174559,7 @@ class _StringsKo extends _StringsEn {
       'MP4 · H.264 (Anki 자체 플레이어, AnkiMobile용)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배, 데스크톱 전용)';
+      'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배)';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9 (카드 안에서 재생, 권장)';
   @override
@@ -180165,6 +180597,9 @@ class _StringsKo extends _StringsEn {
     required Object path,
   }) => '감지된 설치 위치(${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       '원인: ${summary}';
   @override
@@ -180181,6 +180616,9 @@ class _StringsKo extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       '설치 프로그램 PID: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi가 ${version} 버전 설치 프로그램을 시작하지 못했습니다. 아래 로그 경로를 확인하세요.';
@@ -181416,6 +181854,9 @@ class _StringsKo extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -181462,6 +181903,9 @@ class _StringsKo extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -181485,6 +181929,23 @@ class _StringsKo extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -188290,6 +188751,11 @@ class _StringsNl extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -194703,6 +195169,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repository\'s';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -195321,7 +195807,7 @@ class _StringsNl extends _StringsEn {
       'MP4 · H.264 (eigen speler van Anki; gebruik voor AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9; alleen desktop)';
+      'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (speelt binnen de kaart af, aanbevolen)';
@@ -201587,6 +202073,9 @@ class _StringsNl extends _StringsEn {
     required Object path,
   }) => 'Gedetecteerde installatielocatie (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Reden: ${summary}';
   @override
@@ -201603,6 +202092,9 @@ class _StringsNl extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID installatieprogramma: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi kon het installatieprogramma voor versie ${version} niet starten. Bekijk het logboekpad hieronder.';
@@ -202903,6 +203395,9 @@ class _StringsNl extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -202949,6 +203444,9 @@ class _StringsNl extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -202972,6 +203470,23 @@ class _StringsNl extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -209895,6 +210410,11 @@ class _StringsPtBr extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -216341,6 +216861,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositórios';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -216961,7 +217501,7 @@ class _StringsPtBr extends _StringsEn {
       'MP4 · H.264 (player do próprio Anki; use para o AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9; somente desktop)';
+      'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (reproduz dentro do cartão, recomendado)';
@@ -223223,6 +223763,9 @@ class _StringsPtBr extends _StringsEn {
     required Object path,
   }) => 'Local de instalação detectado (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
   @override
@@ -223240,6 +223783,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID do instalador: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'O Fushi não conseguiu iniciar o instalador da versão ${version}. Verifique o caminho do log abaixo.';
@@ -224549,6 +225095,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -224595,6 +225144,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -224618,6 +225170,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -231538,6 +232107,11 @@ class _StringsRu extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -237954,6 +238528,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Репозитории';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -238574,7 +239168,7 @@ class _StringsRu extends _StringsEn {
       'MP4 · H.264 (встроенный плеер Anki; для AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9; только на компьютере)';
+      'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (воспроизводится внутри карточки, рекомендуется)';
@@ -244838,6 +245432,9 @@ class _StringsRu extends _StringsEn {
     required Object path,
   }) => 'Обнаружено расположение установки (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Причина: ${summary}';
   @override
@@ -244854,6 +245451,9 @@ class _StringsRu extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID установщика: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi не удалось запустить установщик версии ${version}. Проверьте путь к журналу ниже.';
@@ -246156,6 +246756,9 @@ class _StringsRu extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -246202,6 +246805,9 @@ class _StringsRu extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -246225,6 +246831,23 @@ class _StringsRu extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -253078,6 +253701,11 @@ class _StringsTh extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -259388,6 +260016,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_import_segment_stores => 'ที่เก็บ';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -260000,7 +260648,7 @@ class _StringsTh extends _StringsEn {
       'MP4 · H.264 (เครื่องเล่นของ Anki เอง ใช้กับ AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9 เฉพาะเดสก์ท็อป)';
+      'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9)';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9 (เล่นในการ์ด แนะนำ)';
   @override
@@ -266193,6 +266841,9 @@ class _StringsTh extends _StringsEn {
     required Object path,
   }) => 'ตำแหน่งติดตั้งที่ตรวจพบ (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'สาเหตุ: ${summary}';
   @override
@@ -266209,6 +266860,9 @@ class _StringsTh extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID ตัวติดตั้ง: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi ไม่สามารถเริ่มตัวติดตั้งสำหรับเวอร์ชัน ${version} ได้ กรุณาตรวจสอบเส้นทางล็อกด้านล่าง';
@@ -267488,6 +268142,9 @@ class _StringsTh extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -267534,6 +268191,9 @@ class _StringsTh extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -267557,6 +268217,23 @@ class _StringsTh extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -274407,6 +275084,11 @@ class _StringsTr extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -280795,6 +281477,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Depolar';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -281411,7 +282113,7 @@ class _StringsTr extends _StringsEn {
       'MP4 · H.264 (Anki\'nin kendi oynatıcısı; AnkiMobile için kullanın)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi; yalnızca masaüstü)';
+      'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (kartın içinde oynar, önerilir)';
@@ -287643,6 +288345,9 @@ class _StringsTr extends _StringsEn {
     required Object path,
   }) => 'Algılanan yükleme konumu (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Neden: ${summary}';
   @override
@@ -287659,6 +288364,9 @@ class _StringsTr extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'Yükleyici PID: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi, ${version} sürümünün yükleyicisini başlatamadı. Aşağıdaki günlük yolunu kontrol edin.';
@@ -288947,6 +289655,9 @@ class _StringsTr extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -288993,6 +289704,9 @@ class _StringsTr extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -289016,6 +289730,23 @@ class _StringsTr extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -295882,6 +296613,11 @@ class _StringsVi extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -302245,6 +302981,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Kho';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -302857,7 +303613,7 @@ class _StringsVi extends _StringsEn {
       'MP4 · H.264 (trình phát riêng của Anki; dùng cho AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9; chỉ máy tính)';
+      'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (phát trong thẻ, khuyến nghị)';
@@ -309065,6 +309821,9 @@ class _StringsVi extends _StringsEn {
     required Object path,
   }) => 'Vị trí cài đặt phát hiện được (${source}): ${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       'Lý do: ${summary}';
   @override
@@ -309081,6 +309840,9 @@ class _StringsVi extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       'PID trình cài đặt: ${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi không thể khởi chạy trình cài đặt cho phiên bản ${version}. Hãy xem đường dẫn nhật ký bên dưới.';
@@ -310373,6 +311135,9 @@ class _StringsVi extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy =>
+      'The computer can\'t switch videos right now. Close the dialog on it and try again';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -310419,6 +311184,9 @@ class _StringsVi extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing =>
+      'This video is no longer in the computer\'s library';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -310442,6 +311210,23 @@ class _StringsVi extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty =>
+      'The computer\'s video library is empty';
+  @override
+  String get video_remote_library_no_match => 'No matching videos';
+  @override
+  String get video_remote_library_now_playing => 'Playing';
+  @override
+  String get video_remote_library_pick => 'Choose a video';
+  @override
+  String video_remote_library_resume({required Object time}) =>
+      'Resume at ${time}';
+  @override
+  String get video_remote_library_search_hint =>
+      'Search the computer\'s videos';
+  @override
+  String get video_remote_library_title => 'Play a video';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -316896,6 +317681,11 @@ class _StringsZhCn extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '共 ${n} 本 · 已启用 ${m} 本';
   @override
+  String get dict_mixed_kanji_part => '术语词典内附的汉字';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      '这份汉字是术语词典内附的：删除会把整本词典（连同术语词条）一起删掉。只想不显示汉字卡，在这里关掉它即可。';
+  @override
   String get dict_order_bottom_move => '移到最后';
   @override
   String dict_order_position_clamped({required Object n}) => '超出范围，将移到第 ${n} 位';
@@ -322719,6 +323509,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_import_segment_stores => '仓库';
   @override
+  String get media_privacy_action => '私密';
+  @override
+  String get media_privacy_cleared_toast => '已取消私密';
+  @override
+  String get media_privacy_hint =>
+      '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      '读取私密状态失败，暂时无法修改：${reason}';
+  @override
+  String get media_privacy_marked_toast => '已设为私密';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      '私密设置失败：${reason}';
+  @override
+  String get media_privacy_switch => '设为私密';
+  @override
   String get media_server_browse_by_folder => '按文件夹浏览';
   @override
   String get media_server_browse_by_title => '按作品浏览';
@@ -323272,7 +324082,7 @@ class _StringsZhCn extends _StringsEn {
       'MP4 · H.264（Anki 自带播放器；AnkiMobile 用这个）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍；仅桌面端）';
+      'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（卡片内播放，推荐）';
   @override
@@ -328987,6 +329797,9 @@ class _StringsZhCn extends _StringsEn {
     required Object path,
   }) => '检测到的安装位置（${source}）：${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi 装在需要管理员权限的目录，而管理员权限提示（UAC）被拒绝了，所以这次没有安装更新。请重新更新，并在提示中选择「是」。';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
   @override
@@ -329002,6 +329815,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       '安装器 PID：${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      '下载的安装包与发布方公布的校验值不符，Fushi 没有以管理员权限运行它。请重新更新以重新下载。';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi 未能启动 ${version} 版本安装器。请查看下方日志路径。';
@@ -330162,6 +330978,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_remote_error_favorite_subtitle_missing => '视频里找不到这条收藏对应的字幕';
   @override
+  String get video_remote_error_host_busy => '电脑上有窗口挡着，暂时换不了视频，关掉后再试';
+  @override
   String get video_remote_error_internal_error => '电脑端出错';
   @override
   String video_remote_error_invalid_request({required Object code}) =>
@@ -330196,6 +331014,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       '电脑无法为卡片提取音频或画面';
   @override
+  String get video_remote_error_video_missing => '电脑库里已经没有这个视频了';
+  @override
   String get video_remote_expression => '词语';
   @override
   String get video_remote_favorites => '收藏';
@@ -330215,6 +331035,20 @@ class _StringsZhCn extends _StringsEn {
   String video_remote_favorites_selected({required Object n}) => '已选 ${n} 条';
   @override
   String video_remote_host_connected({required Object name}) => '已连接 ${name}';
+  @override
+  String get video_remote_library_empty => '电脑的视频库里还没有视频';
+  @override
+  String get video_remote_library_no_match => '没有匹配的视频';
+  @override
+  String get video_remote_library_now_playing => '正在播放';
+  @override
+  String get video_remote_library_pick => '选个视频';
+  @override
+  String video_remote_library_resume({required Object time}) => '从 ${time} 继续';
+  @override
+  String get video_remote_library_search_hint => '搜索电脑上的视频';
+  @override
+  String get video_remote_library_title => '点播';
   @override
   String get video_remote_line_actions => '句子操作';
   @override
@@ -336578,6 +337412,11 @@ class _StringsZhHk extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => '術語詞典內附的漢字';
+  @override
+  String get dict_mixed_kanji_part_delete_note =>
+      '這份漢字是術語詞典內附的：刪除會把整本詞典（連同術語詞條）一起刪掉。只想不顯示漢字卡，在這裡關掉它即可。';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -342475,6 +343314,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_import_segment_stores => '倉庫';
   @override
+  String get media_privacy_action => 'Privacy';
+  @override
+  String get media_privacy_cleared_toast => 'No longer private';
+  @override
+  String get media_privacy_hint =>
+      'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+  @override
+  String media_privacy_inherited_note({required Object collections}) =>
+      'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+  @override
+  String media_privacy_load_failed({required Object reason}) =>
+      'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+  @override
+  String get media_privacy_marked_toast => 'Marked private';
+  @override
+  String media_privacy_save_failed({required Object reason}) =>
+      'Could not change privacy: ${reason}';
+  @override
+  String get media_privacy_switch => 'Keep this private';
+  @override
   String get media_server_browse_by_folder => 'Browse by folder';
   @override
   String get media_server_browse_by_title => 'Browse shows and movies';
@@ -343031,7 +343890,7 @@ class _StringsZhHk extends _StringsEn {
       'MP4 · H.264（Anki 自帶播放器；AnkiMobile 用這個）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍；僅桌面端）';
+      'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（卡片內播放，推薦）';
   @override
@@ -348936,6 +349795,9 @@ class _StringsZhHk extends _StringsEn {
     required Object path,
   }) => '偵測到的安裝位置（${source}）：${path}';
   @override
+  String get update_install_elevation_declined =>
+      'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
+  @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
   @override
@@ -348951,6 +349813,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String update_install_installer_pid({required Object pid}) =>
       '安裝程式 PID：${pid}';
+  @override
+  String get update_install_integrity_failed =>
+      'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
   @override
   String update_install_launch_failed_message({required Object version}) =>
       'Fushi 未能啟動 ${version} 版本的安裝程式。請查看下方的記錄路徑。';
@@ -350137,6 +351002,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_remote_error_favorite_subtitle_missing =>
       'This favorite\'s subtitle line was not found in the video';
   @override
+  String get video_remote_error_host_busy => '電腦上有視窗擋著，暫時換不了影片，關掉後再試';
+  @override
   String get video_remote_error_internal_error =>
       'Something went wrong on the computer';
   @override
@@ -350181,6 +351048,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_remote_error_video_extraction_unavailable =>
       'The computer couldn\'t extract audio or images for the card';
   @override
+  String get video_remote_error_video_missing => '電腦庫裡已經沒有這個影片了';
+  @override
   String get video_remote_expression => 'Expression';
   @override
   String get video_remote_favorites => 'Favorites';
@@ -350204,6 +351073,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
+  @override
+  String get video_remote_library_empty => '電腦的影片庫裡還沒有影片';
+  @override
+  String get video_remote_library_no_match => '沒有相符的影片';
+  @override
+  String get video_remote_library_now_playing => '正在播放';
+  @override
+  String get video_remote_library_pick => '揀個影片';
+  @override
+  String video_remote_library_resume({required Object time}) => '從 ${time} 繼續';
+  @override
+  String get video_remote_library_search_hint => '搜尋電腦上的影片';
+  @override
+  String get video_remote_library_title => '點播';
   @override
   String get video_remote_line_actions => 'Line actions';
   @override
@@ -356123,6 +357006,10 @@ extension on _StringsEn {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -361539,6 +362426,25 @@ extension on _StringsEn {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Stores';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -362070,7 +362976,7 @@ extension on _StringsEn {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki\'s own player; use for AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9; desktop only)';
+        return 'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (plays inside the card, recommended)';
       case 'mining_image_quality':
@@ -367519,6 +368425,8 @@ extension on _StringsEn {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Detected install location (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Reason: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -367530,6 +368438,8 @@ extension on _StringsEn {
         return 'Update did not finish';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'Installer PID: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi could not start the installer for version ${version}. Check the log path below.';
@@ -368599,6 +369509,8 @@ extension on _StringsEn {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -368632,6 +369544,8 @@ extension on _StringsEn {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -368652,6 +369566,20 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -374377,6 +375305,10 @@ extension on _StringsAr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -379787,6 +380719,25 @@ extension on _StringsAr {
         return 'المصادر';
       case 'media_import_segment_stores':
         return 'المستودعات';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -380318,7 +381269,7 @@ extension on _StringsAr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (مشغّل Anki نفسه؛ استخدمه مع AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9؛ لسطح المكتب فقط)';
+        return 'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (يُشغَّل داخل البطاقة، موصى به)';
       case 'mining_image_quality':
@@ -385765,6 +386716,8 @@ extension on _StringsAr {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'موقع التثبيت المكتشف (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'السبب: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -385776,6 +386729,8 @@ extension on _StringsAr {
         return 'لم يكتمل التحديث';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'معرّف عملية المثبّت: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'تعذّر على Fushi بدء مثبّت الإصدار ${version}. تحقق من مسار السجل أدناه.';
@@ -386844,6 +387799,8 @@ extension on _StringsAr {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -386877,6 +387834,8 @@ extension on _StringsAr {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -386897,6 +387856,20 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -392649,6 +393622,10 @@ extension on _StringsDe {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -398082,6 +399059,25 @@ extension on _StringsDe {
         return 'Quellen';
       case 'media_import_segment_stores':
         return 'Repositorys';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -398617,7 +399613,7 @@ extension on _StringsDe {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (eigener Player von Anki; für AnkiMobile verwenden)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9; nur Desktop)';
+        return 'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (wird in der Karte abgespielt, empfohlen)';
       case 'mining_image_quality':
@@ -404080,6 +405076,8 @@ extension on _StringsDe {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Erkannter Installationsort (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Grund: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -404091,6 +405089,8 @@ extension on _StringsDe {
         return 'Update nicht abgeschlossen';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'Installer-PID: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi konnte das Installationsprogramm für Version ${version} nicht starten. Prüfe den Protokollpfad unten.';
@@ -405165,6 +406165,8 @@ extension on _StringsDe {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -405198,6 +406200,8 @@ extension on _StringsDe {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -405218,6 +406222,20 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -410966,6 +411984,10 @@ extension on _StringsEs {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -416391,6 +417413,25 @@ extension on _StringsEs {
         return 'Fuentes';
       case 'media_import_segment_stores':
         return 'Repositorios';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -416926,7 +417967,7 @@ extension on _StringsEs {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (reproductor propio de Anki; úsalo para AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9; solo escritorio)';
+        return 'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (se reproduce dentro de la tarjeta, recomendado)';
       case 'mining_image_quality':
@@ -422386,6 +423427,8 @@ extension on _StringsEs {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Ubicación de instalación detectada (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Motivo: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -422397,6 +423440,8 @@ extension on _StringsEs {
         return 'La actualización no terminó';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID del instalador: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi no pudo iniciar el instalador de la versión ${version}. Revisa la ruta del registro más abajo.';
@@ -423471,6 +424516,8 @@ extension on _StringsEs {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -423504,6 +424551,8 @@ extension on _StringsEs {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -423524,6 +424573,20 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -429279,6 +430342,10 @@ extension on _StringsFr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -434710,6 +435777,25 @@ extension on _StringsFr {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Dépôts';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -435245,7 +436331,7 @@ extension on _StringsFr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (lecteur propre d\'Anki ; à utiliser pour AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9 ; ordinateur uniquement)';
+        return 'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (lu dans la carte, recommandé)';
       case 'mining_image_quality':
@@ -440706,6 +441792,8 @@ extension on _StringsFr {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Emplacement d\'installation détecté (${source}) : ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Raison : ${summary}';
       case 'update_install_gal_hook_holder':
@@ -440717,6 +441805,8 @@ extension on _StringsFr {
         return 'Mise à jour non terminée';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID de l\'installateur : ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi n\'a pas pu démarrer l\'installateur de la version ${version}. Consultez le chemin du journal ci-dessous.';
@@ -441793,6 +442883,8 @@ extension on _StringsFr {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -441826,6 +442918,8 @@ extension on _StringsFr {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -441846,6 +442940,20 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -447584,6 +448692,10 @@ extension on _StringsId {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -453002,6 +454114,25 @@ extension on _StringsId {
         return 'Sumber';
       case 'media_import_segment_stores':
         return 'Repositori';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -453533,7 +454664,7 @@ extension on _StringsId {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (pemutar Anki sendiri; gunakan untuk AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9; hanya desktop)';
+        return 'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (diputar di dalam kartu, direkomendasikan)';
       case 'mining_image_quality':
@@ -458983,6 +460114,8 @@ extension on _StringsId {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Lokasi pemasangan terdeteksi (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Alasan: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -458994,6 +460127,8 @@ extension on _StringsId {
         return 'Pembaruan tidak selesai';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID penginstal: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi tidak dapat memulai penginstal untuk versi ${version}. Periksa jalur log di bawah.';
@@ -460063,6 +461198,8 @@ extension on _StringsId {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -460096,6 +461233,8 @@ extension on _StringsId {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -460116,6 +461255,20 @@ extension on _StringsId {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -465857,6 +467010,10 @@ extension on _StringsIt {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -471283,6 +472440,25 @@ extension on _StringsIt {
         return 'Fonti';
       case 'media_import_segment_stores':
         return 'Repository';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -471818,7 +472994,7 @@ extension on _StringsIt {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (lettore di Anki; da usare per AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9; solo desktop)';
+        return 'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (si riproduce dentro la carta, consigliato)';
       case 'mining_image_quality':
@@ -477277,6 +478453,8 @@ extension on _StringsIt {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Posizione di installazione rilevata (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Motivo: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -477289,6 +478467,8 @@ extension on _StringsIt {
       case 'update_install_installer_pid':
         return ({required Object pid}) =>
             'PID del programma di installazione: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi non è riuscito ad avviare il programma di installazione per la versione ${version}. Controlla il percorso del log qui sotto.';
@@ -478363,6 +479543,8 @@ extension on _StringsIt {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -478396,6 +479578,8 @@ extension on _StringsIt {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -478416,6 +479600,20 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -484126,6 +485324,10 @@ extension on _StringsJa {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return '用語辞書に付属の漢字';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'この漢字は用語辞書に付属するものです。削除すると辞書全体（用語の見出しも含む）が削除されます。漢字カードだけを表示しないなら、ここでオフにしてください。';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -489522,6 +490724,25 @@ extension on _StringsJa {
         return 'ソース';
       case 'media_import_segment_stores':
         return 'リポジトリ';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -490051,7 +491272,7 @@ extension on _StringsJa {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 独自のプレーヤー。AnkiMobile 向け）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間。デスクトップのみ）';
+        return 'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（カード内で再生、推奨）';
       case 'mining_image_quality':
@@ -495480,6 +496701,8 @@ extension on _StringsJa {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             '検出されたインストール場所（${source}）：${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => '原因：${summary}';
       case 'update_install_gal_hook_holder':
@@ -495491,6 +496714,8 @@ extension on _StringsJa {
         return '更新が完了しませんでした';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'インストーラー PID：${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi はバージョン ${version} のインストーラーを起動できませんでした。下のログパスを確認してください。';
@@ -496548,6 +497773,8 @@ extension on _StringsJa {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'パソコン側でダイアログが開いているため動画を切り替えられません。閉じてからもう一度お試しください';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -496581,6 +497808,8 @@ extension on _StringsJa {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'この動画はもうパソコンのライブラリにありません';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -496601,6 +497830,20 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'パソコンの動画ライブラリは空です';
+      case 'video_remote_library_no_match':
+        return '一致する動画がありません';
+      case 'video_remote_library_now_playing':
+        return '再生中';
+      case 'video_remote_library_pick':
+        return '動画を選ぶ';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => '${time} から再開';
+      case 'video_remote_library_search_hint':
+        return 'パソコンの動画を検索';
+      case 'video_remote_library_title':
+        return '動画を選んで再生';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -502295,6 +503538,10 @@ extension on _StringsKo {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -507693,6 +508940,25 @@ extension on _StringsKo {
         return '소스';
       case 'media_import_segment_stores':
         return '저장소';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -508221,7 +509487,7 @@ extension on _StringsKo {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki 자체 플레이어, AnkiMobile용)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배, 데스크톱 전용)';
+        return 'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (카드 안에서 재생, 권장)';
       case 'mining_image_quality':
@@ -513654,6 +514920,8 @@ extension on _StringsKo {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             '감지된 설치 위치(${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => '원인: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -513665,6 +514933,8 @@ extension on _StringsKo {
         return '업데이트가 끝나지 않음';
       case 'update_install_installer_pid':
         return ({required Object pid}) => '설치 프로그램 PID: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi가 ${version} 버전 설치 프로그램을 시작하지 못했습니다. 아래 로그 경로를 확인하세요.';
@@ -514727,6 +515997,8 @@ extension on _StringsKo {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -514760,6 +516032,8 @@ extension on _StringsKo {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -514780,6 +516054,20 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -520514,6 +521802,10 @@ extension on _StringsNl {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -525940,6 +527232,25 @@ extension on _StringsNl {
         return 'Bronnen';
       case 'media_import_segment_stores':
         return 'Repository\'s';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -526475,7 +527786,7 @@ extension on _StringsNl {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (eigen speler van Anki; gebruik voor AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9; alleen desktop)';
+        return 'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (speelt binnen de kaart af, aanbevolen)';
       case 'mining_image_quality':
@@ -531929,6 +533240,8 @@ extension on _StringsNl {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Gedetecteerde installatielocatie (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Reden: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -531940,6 +533253,8 @@ extension on _StringsNl {
         return 'Update niet voltooid';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID installatieprogramma: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi kon het installatieprogramma voor versie ${version} niet starten. Bekijk het logboekpad hieronder.';
@@ -533012,6 +534327,8 @@ extension on _StringsNl {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -533045,6 +534362,8 @@ extension on _StringsNl {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -533065,6 +534384,20 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -538811,6 +540144,10 @@ extension on _StringsPtBr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -544233,6 +545570,25 @@ extension on _StringsPtBr {
         return 'Fontes';
       case 'media_import_segment_stores':
         return 'Repositórios';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -544768,7 +546124,7 @@ extension on _StringsPtBr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (player do próprio Anki; use para o AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9; somente desktop)';
+        return 'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (reproduz dentro do cartão, recomendado)';
       case 'mining_image_quality':
@@ -550219,6 +551575,8 @@ extension on _StringsPtBr {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Local de instalação detectado (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Motivo: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -550230,6 +551588,8 @@ extension on _StringsPtBr {
         return 'A atualização não foi concluída';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID do instalador: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'O Fushi não conseguiu iniciar o instalador da versão ${version}. Verifique o caminho do log abaixo.';
@@ -551304,6 +552664,8 @@ extension on _StringsPtBr {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -551337,6 +552699,8 @@ extension on _StringsPtBr {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -551357,6 +552721,20 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -557105,6 +558483,10 @@ extension on _StringsRu {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -562530,6 +563912,25 @@ extension on _StringsRu {
         return 'Источники';
       case 'media_import_segment_stores':
         return 'Репозитории';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -563065,7 +564466,7 @@ extension on _StringsRu {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (встроенный плеер Anki; для AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9; только на компьютере)';
+        return 'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (воспроизводится внутри карточки, рекомендуется)';
       case 'mining_image_quality':
@@ -568518,6 +569919,8 @@ extension on _StringsRu {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Обнаружено расположение установки (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Причина: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -568529,6 +569932,8 @@ extension on _StringsRu {
         return 'Обновление не завершено';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID установщика: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi не удалось запустить установщик версии ${version}. Проверьте путь к журналу ниже.';
@@ -569600,6 +571005,8 @@ extension on _StringsRu {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -569633,6 +571040,8 @@ extension on _StringsRu {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -569653,6 +571062,20 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -575379,6 +576802,10 @@ extension on _StringsTh {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -580796,6 +582223,25 @@ extension on _StringsTh {
         return 'แหล่งที่มา';
       case 'media_import_segment_stores':
         return 'ที่เก็บ';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -581327,7 +582773,7 @@ extension on _StringsTh {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (เครื่องเล่นของ Anki เอง ใช้กับ AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9 เฉพาะเดสก์ท็อป)';
+        return 'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (เล่นในการ์ด แนะนำ)';
       case 'mining_image_quality':
@@ -586774,6 +588220,8 @@ extension on _StringsTh {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'ตำแหน่งติดตั้งที่ตรวจพบ (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'สาเหตุ: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -586785,6 +588233,8 @@ extension on _StringsTh {
         return 'อัปเดตยังไม่เสร็จ';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID ตัวติดตั้ง: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi ไม่สามารถเริ่มตัวติดตั้งสำหรับเวอร์ชัน ${version} ได้ กรุณาตรวจสอบเส้นทางล็อกด้านล่าง';
@@ -587853,6 +589303,8 @@ extension on _StringsTh {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -587886,6 +589338,8 @@ extension on _StringsTh {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -587906,6 +589360,20 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -593646,6 +595114,10 @@ extension on _StringsTr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -599068,6 +600540,25 @@ extension on _StringsTr {
         return 'Kaynaklar';
       case 'media_import_segment_stores':
         return 'Depolar';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -599602,7 +601093,7 @@ extension on _StringsTr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki\'nin kendi oynatıcısı; AnkiMobile için kullanın)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi; yalnızca masaüstü)';
+        return 'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (kartın içinde oynar, önerilir)';
       case 'mining_image_quality':
@@ -605051,6 +606542,8 @@ extension on _StringsTr {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Algılanan yükleme konumu (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Neden: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -605062,6 +606555,8 @@ extension on _StringsTr {
         return 'Güncelleme tamamlanmadı';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'Yükleyici PID: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi, ${version} sürümünün yükleyicisini başlatamadı. Aşağıdaki günlük yolunu kontrol edin.';
@@ -606132,6 +607627,8 @@ extension on _StringsTr {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -606165,6 +607662,8 @@ extension on _StringsTr {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -606185,6 +607684,20 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -611920,6 +613433,10 @@ extension on _StringsVi {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
+      case 'dict_mixed_kanji_part_delete_note':
+        return 'This kanji list is part of a term dictionary: deleting it removes the whole dictionary, term entries included. To hide only its kanji cards, turn it off here instead.';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -617338,6 +618855,25 @@ extension on _StringsVi {
         return 'Nguồn';
       case 'media_import_segment_stores':
         return 'Kho';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -617869,7 +619405,7 @@ extension on _StringsVi {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (trình phát riêng của Anki; dùng cho AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9; chỉ máy tính)';
+        return 'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (phát trong thẻ, khuyến nghị)';
       case 'mining_image_quality':
@@ -623321,6 +624857,8 @@ extension on _StringsVi {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             'Vị trí cài đặt phát hiện được (${source}): ${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => 'Lý do: ${summary}';
       case 'update_install_gal_hook_holder':
@@ -623332,6 +624870,8 @@ extension on _StringsVi {
         return 'Cập nhật chưa hoàn tất';
       case 'update_install_installer_pid':
         return ({required Object pid}) => 'PID trình cài đặt: ${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi không thể khởi chạy trình cài đặt cho phiên bản ${version}. Hãy xem đường dẫn nhật ký bên dưới.';
@@ -624400,6 +625940,8 @@ extension on _StringsVi {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return 'The computer can\'t switch videos right now. Close the dialog on it and try again';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -624433,6 +625975,8 @@ extension on _StringsVi {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return 'This video is no longer in the computer\'s library';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -624453,6 +625997,20 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return 'The computer\'s video library is empty';
+      case 'video_remote_library_no_match':
+        return 'No matching videos';
+      case 'video_remote_library_now_playing':
+        return 'Playing';
+      case 'video_remote_library_pick':
+        return 'Choose a video';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => 'Resume at ${time}';
+      case 'video_remote_library_search_hint':
+        return 'Search the computer\'s videos';
+      case 'video_remote_library_title':
+        return 'Play a video';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
@@ -630122,6 +631680,10 @@ extension on _StringsZhCn {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '共 ${n} 本 · 已启用 ${m} 本';
+      case 'dict_mixed_kanji_part':
+        return '术语词典内附的汉字';
+      case 'dict_mixed_kanji_part_delete_note':
+        return '这份汉字是术语词典内附的：删除会把整本词典（连同术语词条）一起删掉。只想不显示汉字卡，在这里关掉它即可。';
       case 'dict_order_bottom_move':
         return '移到最后';
       case 'dict_order_position_clamped':
@@ -635486,6 +637048,23 @@ extension on _StringsZhCn {
         return '在线源';
       case 'media_import_segment_stores':
         return '仓库';
+      case 'media_privacy_action':
+        return '私密';
+      case 'media_privacy_cleared_toast':
+        return '已取消私密';
+      case 'media_privacy_hint':
+        return '私密作品不会上传到排行榜，也不会分享出去：不出现在公开书架与分享卡上，进度也不推送到 Bangumi。已经上传过的会在下次排行榜同步时撤下。每日总字数仍会计入，但不带作品信息。';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            '因所在合集「${collections}」已设为私密，这部作品也是私密的。要取消，请到该合集的「私密」里关闭。';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) => '读取私密状态失败，暂时无法修改：${reason}';
+      case 'media_privacy_marked_toast':
+        return '已设为私密';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) => '私密设置失败：${reason}';
+      case 'media_privacy_switch':
+        return '设为私密';
       case 'media_server_browse_by_folder':
         return '按文件夹浏览';
       case 'media_server_browse_by_title':
@@ -636011,7 +637590,7 @@ extension on _StringsZhCn {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 自带播放器；AnkiMobile 用这个）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍；仅桌面端）';
+        return 'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（卡片内播放，推荐）';
       case 'mining_image_quality':
@@ -641403,6 +642982,8 @@ extension on _StringsZhCn {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             '检测到的安装位置（${source}）：${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi 装在需要管理员权限的目录，而管理员权限提示（UAC）被拒绝了，所以这次没有安装更新。请重新更新，并在提示中选择「是」。';
       case 'update_install_failure_summary':
         return ({required Object summary}) => '原因：${summary}';
       case 'update_install_gal_hook_holder':
@@ -641414,6 +642995,8 @@ extension on _StringsZhCn {
         return '更新未完成';
       case 'update_install_installer_pid':
         return ({required Object pid}) => '安装器 PID：${pid}';
+      case 'update_install_integrity_failed':
+        return '下载的安装包与发布方公布的校验值不符，Fushi 没有以管理员权限运行它。请重新更新以重新下载。';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi 未能启动 ${version} 版本安装器。请查看下方日志路径。';
@@ -642469,6 +644052,8 @@ extension on _StringsZhCn {
         return '这条收藏对应的视频已不可用';
       case 'video_remote_error_favorite_subtitle_missing':
         return '视频里找不到这条收藏对应的字幕';
+      case 'video_remote_error_host_busy':
+        return '电脑上有窗口挡着，暂时换不了视频，关掉后再试';
       case 'video_remote_error_internal_error':
         return '电脑端出错';
       case 'video_remote_error_invalid_request':
@@ -642502,6 +644087,8 @@ extension on _StringsZhCn {
         return '连接不到电脑';
       case 'video_remote_error_video_extraction_unavailable':
         return '电脑无法为卡片提取音频或画面';
+      case 'video_remote_error_video_missing':
+        return '电脑库里已经没有这个视频了';
       case 'video_remote_expression':
         return '词语';
       case 'video_remote_favorites':
@@ -642522,6 +644109,20 @@ extension on _StringsZhCn {
         return ({required Object n}) => '已选 ${n} 条';
       case 'video_remote_host_connected':
         return ({required Object name}) => '已连接 ${name}';
+      case 'video_remote_library_empty':
+        return '电脑的视频库里还没有视频';
+      case 'video_remote_library_no_match':
+        return '没有匹配的视频';
+      case 'video_remote_library_now_playing':
+        return '正在播放';
+      case 'video_remote_library_pick':
+        return '选个视频';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => '从 ${time} 继续';
+      case 'video_remote_library_search_hint':
+        return '搜索电脑上的视频';
+      case 'video_remote_library_title':
+        return '点播';
       case 'video_remote_line_actions':
         return '句子操作';
       case 'video_remote_meaning':
@@ -648171,6 +649772,10 @@ extension on _StringsZhHk {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return '術語詞典內附的漢字';
+      case 'dict_mixed_kanji_part_delete_note':
+        return '這份漢字是術語詞典內附的：刪除會把整本詞典（連同術語詞條）一起刪掉。只想不顯示漢字卡，在這裡關掉它即可。';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -653552,6 +655157,25 @@ extension on _StringsZhHk {
         return '線上源';
       case 'media_import_segment_stores':
         return '倉庫';
+      case 'media_privacy_action':
+        return 'Privacy';
+      case 'media_privacy_cleared_toast':
+        return 'No longer private';
+      case 'media_privacy_hint':
+        return 'Private items are never uploaded to the leaderboard or shared: they are left off your public shelf and share cards, and their progress is not pushed to Bangumi. Anything already uploaded is removed at the next leaderboard sync. Your daily character total still counts them, without saying what you read.';
+      case 'media_privacy_inherited_note':
+        return ({required Object collections}) =>
+            'Private because it is in the private collection “${collections}”. To make it public, turn off privacy on that collection.';
+      case 'media_privacy_load_failed':
+        return ({required Object reason}) =>
+            'Could not read the privacy setting, so it cannot be changed right now: ${reason}';
+      case 'media_privacy_marked_toast':
+        return 'Marked private';
+      case 'media_privacy_save_failed':
+        return ({required Object reason}) =>
+            'Could not change privacy: ${reason}';
+      case 'media_privacy_switch':
+        return 'Keep this private';
       case 'media_server_browse_by_folder':
         return 'Browse by folder';
       case 'media_server_browse_by_title':
@@ -654078,7 +655702,7 @@ extension on _StringsZhHk {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 自帶播放器；AnkiMobile 用這個）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍；僅桌面端）';
+        return 'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（卡片內播放，推薦）';
       case 'mining_image_quality':
@@ -659502,6 +661126,8 @@ extension on _StringsZhHk {
       case 'update_install_detected_location':
         return ({required Object source, required Object path}) =>
             '偵測到的安裝位置（${source}）：${path}';
+      case 'update_install_elevation_declined':
+        return 'Fushi is installed in a folder that needs administrator rights, and the administrator prompt (UAC) was declined, so the update was not installed. Update again and choose "Yes" in the prompt.';
       case 'update_install_failure_summary':
         return ({required Object summary}) => '原因：${summary}';
       case 'update_install_gal_hook_holder':
@@ -659513,6 +661139,8 @@ extension on _StringsZhHk {
         return '更新未完成';
       case 'update_install_installer_pid':
         return ({required Object pid}) => '安裝程式 PID：${pid}';
+      case 'update_install_integrity_failed':
+        return 'The downloaded installer did not match the published checksum, so Fushi did not run it with administrator rights. Update again to download a fresh copy.';
       case 'update_install_launch_failed_message':
         return ({required Object version}) =>
             'Fushi 未能啟動 ${version} 版本的安裝程式。請查看下方的記錄路徑。';
@@ -660568,6 +662196,8 @@ extension on _StringsZhHk {
         return 'The video for this favorite is no longer available';
       case 'video_remote_error_favorite_subtitle_missing':
         return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_host_busy':
+        return '電腦上有視窗擋著，暫時換不了影片，關掉後再試';
       case 'video_remote_error_internal_error':
         return 'Something went wrong on the computer';
       case 'video_remote_error_invalid_request':
@@ -660601,6 +662231,8 @@ extension on _StringsZhHk {
         return 'Can\'t reach the computer';
       case 'video_remote_error_video_extraction_unavailable':
         return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_error_video_missing':
+        return '電腦庫裡已經沒有這個影片了';
       case 'video_remote_expression':
         return 'Expression';
       case 'video_remote_favorites':
@@ -660621,6 +662253,20 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} selected';
       case 'video_remote_host_connected':
         return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_library_empty':
+        return '電腦的影片庫裡還沒有影片';
+      case 'video_remote_library_no_match':
+        return '沒有相符的影片';
+      case 'video_remote_library_now_playing':
+        return '正在播放';
+      case 'video_remote_library_pick':
+        return '揀個影片';
+      case 'video_remote_library_resume':
+        return ({required Object time}) => '從 ${time} 繼續';
+      case 'video_remote_library_search_hint':
+        return '搜尋電腦上的影片';
+      case 'video_remote_library_title':
+        return '點播';
       case 'video_remote_line_actions':
         return 'Line actions';
       case 'video_remote_meaning':
