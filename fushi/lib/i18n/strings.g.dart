@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149481 (8793 per locale)
+/// Strings: 149498 (8794 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2927,6 +2927,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_language_tooltip => 'Content language';
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
   String get dict_order_bottom_move => 'Move to bottom';
   String dict_order_position_clamped({required Object n}) =>
       'Out of range — will move to position ${n}';
@@ -17298,6 +17299,8 @@ class _StringsAr extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -38680,6 +38683,8 @@ class _StringsDe extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -60400,6 +60405,8 @@ class _StringsEs extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -82188,6 +82195,8 @@ class _StringsFr extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -103956,6 +103965,8 @@ class _StringsId extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -125485,6 +125496,8 @@ class _StringsIt extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -146955,6 +146968,8 @@ class _StringsJa extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => '用語辞書に付属の漢字';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -167581,6 +167596,8 @@ class _StringsKo extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -188461,6 +188478,8 @@ class _StringsNl extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -210086,6 +210105,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -231750,6 +231771,8 @@ class _StringsRu extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -253310,6 +253333,8 @@ class _StringsTh extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -274658,6 +274683,8 @@ class _StringsTr extends _StringsEn {
   @override
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
+  @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
   @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
@@ -296154,6 +296181,8 @@ class _StringsVi extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => 'Kanji bundled with a term dictionary';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -317188,6 +317217,8 @@ class _StringsZhCn extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '共 ${n} 本 · 已启用 ${m} 本';
   @override
+  String get dict_mixed_kanji_part => '术语词典内附的汉字';
+  @override
   String get dict_order_bottom_move => '移到最后';
   @override
   String dict_order_position_clamped({required Object n}) => '超出范围，将移到第 ${n} 位';
@@ -336890,6 +336921,8 @@ class _StringsZhHk extends _StringsEn {
   String dict_manager_summary({required Object n, required Object m}) =>
       '${n} dictionaries · ${m} enabled';
   @override
+  String get dict_mixed_kanji_part => '術語詞典內附的漢字';
+  @override
   String get dict_order_bottom_move => 'Move to bottom';
   @override
   String dict_order_position_clamped({required Object n}) =>
@@ -356455,6 +356488,8 @@ extension on _StringsEn {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -374728,6 +374763,8 @@ extension on _StringsAr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -393019,6 +393056,8 @@ extension on _StringsDe {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -411355,6 +411394,8 @@ extension on _StringsEs {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -429687,6 +429728,8 @@ extension on _StringsFr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -448011,6 +448054,8 @@ extension on _StringsId {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -466303,6 +466348,8 @@ extension on _StringsIt {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -484591,6 +484638,8 @@ extension on _StringsJa {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return '用語辞書に付属の漢字';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -502779,6 +502828,8 @@ extension on _StringsKo {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -521017,6 +521068,8 @@ extension on _StringsNl {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -539333,6 +539386,8 @@ extension on _StringsPtBr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -557646,6 +557701,8 @@ extension on _StringsRu {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -575939,6 +575996,8 @@ extension on _StringsTh {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -594225,6 +594284,8 @@ extension on _StringsTr {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -612518,6 +612579,8 @@ extension on _StringsVi {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return 'Kanji bundled with a term dictionary';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
@@ -630739,6 +630802,8 @@ extension on _StringsZhCn {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '共 ${n} 本 · 已启用 ${m} 本';
+      case 'dict_mixed_kanji_part':
+        return '术语词典内附的汉字';
       case 'dict_order_bottom_move':
         return '移到最后';
       case 'dict_order_position_clamped':
@@ -648805,6 +648870,8 @@ extension on _StringsZhHk {
       case 'dict_manager_summary':
         return ({required Object n, required Object m}) =>
             '${n} dictionaries · ${m} enabled';
+      case 'dict_mixed_kanji_part':
+        return '術語詞典內附的漢字';
       case 'dict_order_bottom_move':
         return 'Move to bottom';
       case 'dict_order_position_clamped':
