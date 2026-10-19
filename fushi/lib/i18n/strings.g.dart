@@ -11479,7 +11479,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   String get video_setting_pause_ocr_scope_off => 'Off';
   String get video_setting_picture_fit => 'Picture scaling';
   String get video_setting_picture_fit_contain =>
@@ -31763,7 +31763,7 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -53088,7 +53088,7 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -74489,7 +74489,7 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -95968,7 +95968,7 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -117153,7 +117153,7 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -138451,7 +138451,7 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -158841,7 +158841,7 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。Fushi が表示しているテキスト字幕がある場合はそちらを優先します。';
+      '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。テキスト字幕の有無には影響されません。';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
   @override
@@ -179153,7 +179153,7 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -200332,7 +200332,7 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -221654,7 +221654,7 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -242929,7 +242929,7 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -263918,7 +263918,7 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -285055,7 +285055,7 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -306145,7 +306145,7 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
@@ -325577,7 +325577,7 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      '暂停时对画面做文字识别，识别出的字可直接点按查词。画面上已有 Fushi 显示的文字字幕时以字幕为准。';
+      '暂停时对画面做文字识别，识别出的字可直接点按查词。与是否显示文字字幕无关。';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
   @override
@@ -345249,7 +345249,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_hint =>
-      '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。畫面上已有 Fushi 顯示的文字字幕時以字幕為準。';
+      '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。與是否顯示文字字幕無關。';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
   @override
@@ -363372,7 +363372,7 @@ extension on _StringsEn {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -381339,7 +381339,7 @@ extension on _StringsAr {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -399381,7 +399381,7 @@ extension on _StringsDe {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -417408,7 +417408,7 @@ extension on _StringsEs {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -435452,7 +435452,7 @@ extension on _StringsFr {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -453441,7 +453441,7 @@ extension on _StringsId {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -471463,7 +471463,7 @@ extension on _StringsIt {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -489367,7 +489367,7 @@ extension on _StringsJa {
       case 'video_setting_pause_ocr_scope_graphic':
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_hint':
-        return '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。Fushi が表示しているテキスト字幕がある場合はそちらを優先します。';
+        return '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。テキスト字幕の有無には影響されません。';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
       case 'video_setting_picture_fit':
@@ -507266,7 +507266,7 @@ extension on _StringsKo {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -525276,7 +525276,7 @@ extension on _StringsNl {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -543288,7 +543288,7 @@ extension on _StringsPtBr {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -561305,7 +561305,7 @@ extension on _StringsRu {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -579278,7 +579278,7 @@ extension on _StringsTh {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -597280,7 +597280,7 @@ extension on _StringsTr {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -615268,7 +615268,7 @@ extension on _StringsVi {
       case 'video_setting_pause_ocr_scope_graphic':
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_hint':
-        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitle tracks don\'t affect it.';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'video_setting_picture_fit':
@@ -633055,7 +633055,7 @@ extension on _StringsZhCn {
       case 'video_setting_pause_ocr_scope_graphic':
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_hint':
-        return '暂停时对画面做文字识别，识别出的字可直接点按查词。画面上已有 Fushi 显示的文字字幕时以字幕为准。';
+        return '暂停时对画面做文字识别，识别出的字可直接点按查词。与是否显示文字字幕无关。';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
       case 'video_setting_picture_fit':
@@ -650876,7 +650876,7 @@ extension on _StringsZhHk {
       case 'video_setting_pause_ocr_scope_graphic':
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_hint':
-        return '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。畫面上已有 Fushi 顯示的文字字幕時以字幕為準。';
+        return '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。與是否顯示文字字幕無關。';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
       case 'video_setting_picture_fit':
