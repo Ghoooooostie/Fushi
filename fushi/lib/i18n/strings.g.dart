@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 144568 (8504 per locale)
+/// Strings: 144602 (8506 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11851,6 +11851,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_ai_remote_probing => 'Connecting to the host…';
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   String get video_subtitle_ai_remote_unreachable =>
@@ -12024,6 +12026,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_glossary_rerun_running =>
       'Re-running spelling unification…';
   String get video_subtitle_glossary_save => 'Save';
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   String get video_subtitle_glossary_title => 'Glossary';
   String get video_subtitle_glossary_user_edited =>
       'Edited by you; kept when regenerating';
@@ -32173,6 +32177,9 @@ class _StringsAr extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -32446,6 +32453,9 @@ class _StringsAr extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -53145,6 +53155,9 @@ class _StringsDe extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -53420,6 +53433,9 @@ class _StringsDe extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -74188,6 +74204,9 @@ class _StringsEs extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -74463,6 +74482,9 @@ class _StringsEs extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -95305,6 +95327,9 @@ class _StringsFr extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -95580,6 +95605,9 @@ class _StringsFr extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -116099,6 +116127,9 @@ class _StringsId extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -116374,6 +116405,9 @@ class _StringsId extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -137037,6 +137071,9 @@ class _StringsIt extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -137312,6 +137349,9 @@ class _StringsIt extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -156997,6 +157037,9 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -157259,6 +157302,9 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_glossary_rerun_running => '表記の統一をやり直しています…';
   @override
   String get video_subtitle_glossary_save => '保存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => '固有名詞表';
   @override
@@ -176956,6 +177002,9 @@ class _StringsKo extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -177224,6 +177273,9 @@ class _StringsKo extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -197812,6 +197864,9 @@ class _StringsNl extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -198087,6 +198142,9 @@ class _StringsNl extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -218771,6 +218829,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -219045,6 +219106,9 @@ class _StringsPtBr extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -239674,6 +239738,9 @@ class _StringsRu extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -239950,6 +240017,9 @@ class _StringsRu extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -260273,6 +260343,9 @@ class _StringsTh extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -260548,6 +260621,9 @@ class _StringsTh extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -281054,6 +281130,9 @@ class _StringsTr extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -281330,6 +281409,9 @@ class _StringsTr extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -301772,6 +301854,9 @@ class _StringsVi extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -302047,6 +302132,9 @@ class _StringsVi extends _StringsEn {
       'Re-running spelling unification…';
   @override
   String get video_subtitle_glossary_save => 'Save';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => 'Glossary';
   @override
@@ -320780,6 +320868,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       '使用 host 上为「字幕校对」指派的 AI 提供商';
   @override
+  String get video_subtitle_ai_remote_result_missing => '电脑端任务结束了，但没有返回字幕';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint => 'MOSS 能否使用取决于 host 的显卡';
   @override
   String get video_subtitle_ai_remote_unreachable => '连不上这个视频所在的 host';
@@ -321026,6 +321116,9 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_glossary_rerun_running => '正在重跑写法统一…';
   @override
   String get video_subtitle_glossary_save => '保存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      '专名表保存失败：${reason}';
   @override
   String get video_subtitle_glossary_title => '专名表';
   @override
@@ -340095,6 +340188,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_subtitle_ai_remote_proofread_hint =>
       'Uses the AI provider assigned to "Subtitle proofreading" on the host';
   @override
+  String get video_subtitle_ai_remote_result_missing =>
+      'The host finished without returning subtitles';
+  @override
   String get video_subtitle_ai_remote_segmenter_hint =>
       'Whether MOSS can be used depends on the host\'s GPU';
   @override
@@ -340349,6 +340445,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_subtitle_glossary_rerun_running => '正在重跑統一寫法…';
   @override
   String get video_subtitle_glossary_save => '儲存';
+  @override
+  String video_subtitle_glossary_save_failed({required Object reason}) =>
+      'Could not save the glossary: ${reason}';
   @override
   String get video_subtitle_glossary_title => '專名表';
   @override
@@ -357819,6 +357918,8 @@ extension on _StringsEn {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -358040,6 +358141,9 @@ extension on _StringsEn {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -375478,6 +375582,8 @@ extension on _StringsAr {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -375699,6 +375805,9 @@ extension on _StringsAr {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -393212,6 +393321,8 @@ extension on _StringsDe {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -393435,6 +393546,9 @@ extension on _StringsDe {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -410931,6 +411045,8 @@ extension on _StringsEs {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -411153,6 +411269,9 @@ extension on _StringsEs {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -428667,6 +428786,8 @@ extension on _StringsFr {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -428889,6 +429010,9 @@ extension on _StringsFr {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -446348,6 +446472,8 @@ extension on _StringsId {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -446570,6 +446696,9 @@ extension on _StringsId {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -464062,6 +464191,8 @@ extension on _StringsIt {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -464285,6 +464416,9 @@ extension on _StringsIt {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -481654,6 +481788,8 @@ extension on _StringsJa {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -481871,6 +482007,9 @@ extension on _StringsJa {
         return '表記の統一をやり直しています…';
       case 'video_subtitle_glossary_save':
         return '保存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return '固有名詞表';
       case 'video_subtitle_glossary_user_edited':
@@ -499249,6 +499388,8 @@ extension on _StringsKo {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -499469,6 +499610,9 @@ extension on _StringsKo {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -516951,6 +517095,8 @@ extension on _StringsNl {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -517174,6 +517320,9 @@ extension on _StringsNl {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -534655,6 +534804,8 @@ extension on _StringsPtBr {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -534877,6 +535028,9 @@ extension on _StringsPtBr {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -552364,6 +552518,8 @@ extension on _StringsRu {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -552585,6 +552741,9 @@ extension on _StringsRu {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -570029,6 +570188,8 @@ extension on _StringsTh {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -570250,6 +570411,9 @@ extension on _StringsTh {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -587723,6 +587887,8 @@ extension on _StringsTr {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -587944,6 +588110,9 @@ extension on _StringsTr {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -605403,6 +605572,8 @@ extension on _StringsVi {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -605623,6 +605794,9 @@ extension on _StringsVi {
         return 'Re-running spelling unification…';
       case 'video_subtitle_glossary_save':
         return 'Save';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return 'Glossary';
       case 'video_subtitle_glossary_user_edited':
@@ -622883,6 +623057,8 @@ extension on _StringsZhCn {
         return '正在连接 host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return '使用 host 上为「字幕校对」指派的 AI 提供商';
+      case 'video_subtitle_ai_remote_result_missing':
+        return '电脑端任务结束了，但没有返回字幕';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'MOSS 能否使用取决于 host 的显卡';
       case 'video_subtitle_ai_remote_unreachable':
@@ -623095,6 +623271,8 @@ extension on _StringsZhCn {
         return '正在重跑写法统一…';
       case 'video_subtitle_glossary_save':
         return '保存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) => '专名表保存失败：${reason}';
       case 'video_subtitle_glossary_title':
         return '专名表';
       case 'video_subtitle_glossary_user_edited':
@@ -640399,6 +640577,8 @@ extension on _StringsZhHk {
         return 'Connecting to the host…';
       case 'video_subtitle_ai_remote_proofread_hint':
         return 'Uses the AI provider assigned to "Subtitle proofreading" on the host';
+      case 'video_subtitle_ai_remote_result_missing':
+        return 'The host finished without returning subtitles';
       case 'video_subtitle_ai_remote_segmenter_hint':
         return 'Whether MOSS can be used depends on the host\'s GPU';
       case 'video_subtitle_ai_remote_unreachable':
@@ -640612,6 +640792,9 @@ extension on _StringsZhHk {
         return '正在重跑統一寫法…';
       case 'video_subtitle_glossary_save':
         return '儲存';
+      case 'video_subtitle_glossary_save_failed':
+        return ({required Object reason}) =>
+            'Could not save the glossary: ${reason}';
       case 'video_subtitle_glossary_title':
         return '專名表';
       case 'video_subtitle_glossary_user_edited':
