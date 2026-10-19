@@ -8854,7 +8854,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_color_app => 'Follow app theme';
   String get srs_card_appearance_color_custom => 'Custom accent';
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   String get srs_card_appearance_density => 'Density';
   String get srs_card_appearance_density_comfortable => 'Comfortable';
   String get srs_card_appearance_density_compact => 'Compact';
@@ -27416,7 +27416,7 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -48989,7 +48989,7 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -70687,7 +70687,7 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -92472,7 +92472,7 @@ class _StringsFr extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -114021,7 +114021,7 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -135614,7 +135614,7 @@ class _StringsIt extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -156499,7 +156499,7 @@ class _StringsJa extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -177113,7 +177113,7 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -198432,7 +198432,7 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -220054,7 +220054,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -241654,7 +241654,7 @@ class _StringsRu extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -263005,7 +263005,7 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -284421,7 +284421,7 @@ class _StringsTr extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -305833,7 +305833,7 @@ class _StringsVi extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -325971,7 +325971,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_color_custom => '自定义强调色';
   @override
-  String get srs_card_appearance_compact_phone => '手机精简背面（词典页签、长释义收起）';
+  String get srs_card_appearance_compact_phone => '手机精简背面（长释义收起）';
   @override
   String get srs_card_appearance_density => '密度';
   @override
@@ -345783,7 +345783,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_card_appearance_color_custom => 'Custom accent';
   @override
   String get srs_card_appearance_compact_phone =>
-      'Compact back on phones (dictionary tabs, long definitions folded)';
+      'Compact back on phones (long definitions folded)';
   @override
   String get srs_card_appearance_density => 'Density';
   @override
@@ -364572,7 +364572,7 @@ extension on _StringsEn {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -382805,7 +382805,7 @@ extension on _StringsAr {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -401094,7 +401094,7 @@ extension on _StringsDe {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -419387,7 +419387,7 @@ extension on _StringsEs {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -437691,7 +437691,7 @@ extension on _StringsFr {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -455955,7 +455955,7 @@ extension on _StringsId {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -474228,7 +474228,7 @@ extension on _StringsIt {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -492435,7 +492435,7 @@ extension on _StringsJa {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -510591,7 +510591,7 @@ extension on _StringsKo {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -528837,7 +528837,7 @@ extension on _StringsNl {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -547114,7 +547114,7 @@ extension on _StringsPtBr {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -565395,7 +565395,7 @@ extension on _StringsRu {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -583636,7 +583636,7 @@ extension on _StringsTh {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -601895,7 +601895,7 @@ extension on _StringsTr {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -620149,7 +620149,7 @@ extension on _StringsVi {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
@@ -638257,7 +638257,7 @@ extension on _StringsZhCn {
       case 'srs_card_appearance_color_custom':
         return '自定义强调色';
       case 'srs_card_appearance_compact_phone':
-        return '手机精简背面（词典页签、长释义收起）';
+        return '手机精简背面（长释义收起）';
       case 'srs_card_appearance_density':
         return '密度';
       case 'srs_card_appearance_density_comfortable':
@@ -656317,7 +656317,7 @@ extension on _StringsZhHk {
       case 'srs_card_appearance_color_custom':
         return 'Custom accent';
       case 'srs_card_appearance_compact_phone':
-        return 'Compact back on phones (dictionary tabs, long definitions folded)';
+        return 'Compact back on phones (long definitions folded)';
       case 'srs_card_appearance_density':
         return 'Density';
       case 'srs_card_appearance_density_comfortable':
