@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 145911 (8583 per locale)
+/// Strings: 145962 (8586 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6599,7 +6599,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Skip QR-code ad pages at chapter end: on';
   String get manga_web_chapter_next => 'Next chapter';
   String get manga_web_chapter_prev => 'Previous chapter';
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
   String get manga_web_scan_failed =>
@@ -7149,6 +7149,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String novel_web_extract_failed({required Object error}) =>
       'Couldn\'t extract this page: ${error}';
   String get novel_web_extract_running => 'Extracting the chapter text…';
+  String get novel_web_page_read => 'Read in Fushi (novel)';
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -7160,7 +7161,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No next-chapter link was found on this page.';
   String get novel_web_preview_read => 'Read';
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   String get now_listening_label => 'Now listening';
   String get ocr_llm_default_accept => 'Turn on';
   String ocr_llm_default_body({required Object provider}) =>
@@ -7294,6 +7294,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Browse sites inside Fushi and look up words on any page.';
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   String get onboarding_features_modules_hint =>
       'Unchecked pages are hidden from the navigation bar. Change anytime in Settings → Appearance.';
   String get onboarding_features_modules_title => 'Library pages';
@@ -12297,8 +12301,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_adblock_allowlist_hint =>
       'Domains separated by commas or spaces; subdomains are included';
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   String get web_adblock_section_title => 'Web ad blocking';
   String get web_adblock_status_failed =>
       'Filter lists could not be downloaded; will retry later';
@@ -12322,7 +12330,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_browser_sites_title => 'Sites';
   String get web_browser_title => 'Browser';
   String get web_hub_browse => 'Web';
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
@@ -23219,7 +23226,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -24150,6 +24157,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -24166,8 +24175,6 @@ class _StringsAr extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'يُستمع الآن';
   @override
@@ -24387,6 +24394,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'الصفحات غير المحدّدة تُخفى من شريط التنقل. يمكنك تغيير ذلك في أي وقت من الإعدادات → المظهر.';
@@ -33001,8 +33014,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -33046,8 +33065,6 @@ class _StringsAr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -44223,7 +44240,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -45174,6 +45191,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -45190,8 +45209,6 @@ class _StringsDe extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Wird gerade gehört';
   @override
@@ -45415,6 +45432,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Nicht angehakte Seiten werden in der Navigationsleiste ausgeblendet. Jederzeit änderbar unter Einstellungen → Erscheinungsbild.';
@@ -54176,8 +54199,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -54221,8 +54250,6 @@ class _StringsDe extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -65425,7 +65452,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -66374,6 +66401,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -66390,8 +66419,6 @@ class _StringsEs extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Escuchando ahora';
   @override
@@ -66614,6 +66641,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Las páginas sin marcar se ocultan de la barra de navegación. Puede cambiarlo cuando quiera en Ajustes → Apariencia.';
@@ -75407,8 +75440,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -75452,8 +75491,6 @@ class _StringsEs extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -86699,7 +86736,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -87653,6 +87690,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -87669,8 +87708,6 @@ class _StringsFr extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Écoute en cours';
   @override
@@ -87895,6 +87932,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Les pages non cochées sont masquées de la barre de navigation. Modifiable à tout moment dans Paramètres → Apparence.';
@@ -96719,8 +96762,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -96764,8 +96813,6 @@ class _StringsFr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -107824,7 +107871,7 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -108765,6 +108812,8 @@ class _StringsId extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -108781,8 +108830,6 @@ class _StringsId extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Sedang mendengarkan';
   @override
@@ -109004,6 +109051,12 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Halaman yang tidak dicentang disembunyikan dari bilah navigasi. Bisa diubah kapan saja di Pengaturan → Tampilan.';
@@ -117690,8 +117743,14 @@ class _StringsId extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -117735,8 +117794,6 @@ class _StringsId extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -128884,7 +128941,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -129833,6 +129890,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -129849,8 +129908,6 @@ class _StringsIt extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'In ascolto';
   @override
@@ -130072,6 +130129,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Le pagine non selezionate vengono nascoste dalla barra di navigazione. Puoi cambiarle quando vuoi in Impostazioni → Aspetto.';
@@ -138821,8 +138884,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -138866,8 +138935,6 @@ class _StringsIt extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -149478,7 +149545,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -150373,6 +150440,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -150389,8 +150458,6 @@ class _StringsJa extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => '再生中';
   @override
@@ -150600,6 +150667,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'チェックを外したページはナビゲーションバーに表示されません。設定 → 外観でいつでも変更できます。';
@@ -158924,8 +158997,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -158969,8 +159048,6 @@ class _StringsJa extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -169592,7 +169669,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -170491,6 +170568,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -170507,8 +170586,6 @@ class _StringsKo extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => '현재 듣는 중';
   @override
@@ -170722,6 +170799,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       '선택하지 않은 페이지는 내비게이션 바에서 숨겨집니다. 설정 → 외관에서 언제든 바꿀 수 있습니다.';
@@ -179080,8 +179163,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -179125,8 +179214,6 @@ class _StringsKo extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -190237,7 +190324,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -191182,6 +191269,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -191198,8 +191287,6 @@ class _StringsNl extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Nu aan het luisteren';
   @override
@@ -191422,6 +191509,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Niet-aangevinkte pagina\'s worden verborgen in de navigatiebalk. Later aan te passen via Instellingen → Uiterlijk.';
@@ -200157,8 +200250,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -200202,8 +200301,6 @@ class _StringsNl extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -211362,7 +211459,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -212311,6 +212408,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -212327,8 +212426,6 @@ class _StringsPtBr extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Ouvindo agora';
   @override
@@ -212552,6 +212649,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Páginas não marcadas ficam ocultas na barra de navegação. Dá para mudar quando quiser em Configurações → Aparência.';
@@ -221307,8 +221410,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -221352,8 +221461,6 @@ class _StringsPtBr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -232465,7 +232572,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -233415,6 +233522,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -233431,8 +233540,6 @@ class _StringsRu extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Сейчас слушаете';
   @override
@@ -233657,6 +233764,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Неотмеченные страницы скрываются из панели навигации. Изменить можно в любой момент: Настройки → Внешний вид.';
@@ -242403,8 +242516,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -242448,8 +242567,6 @@ class _StringsRu extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -253390,7 +253507,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -254326,6 +254443,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -254342,8 +254461,6 @@ class _StringsTh extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'กำลังฟังอยู่';
   @override
@@ -254564,6 +254681,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'หน้าที่ไม่ได้เลือกจะถูกซ่อนจากแถบนำทาง เปลี่ยนได้ทุกเมื่อที่ การตั้งค่า → รูปลักษณ์';
@@ -263175,8 +263298,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -263220,8 +263349,6 @@ class _StringsTh extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -274286,7 +274413,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -275228,6 +275355,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -275244,8 +275373,6 @@ class _StringsTr extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Şimdi dinleniyor';
   @override
@@ -275469,6 +275596,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'İşaretlenmeyen sayfalar gezinme çubuğunda gizlenir. İstediğiniz zaman Ayarlar → Görünüm\'den değiştirebilirsiniz.';
@@ -284150,8 +284283,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -284195,8 +284334,6 @@ class _StringsTr extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -295225,7 +295362,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -296163,6 +296300,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -296179,8 +296318,6 @@ class _StringsVi extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Đang nghe';
   @override
@@ -296401,6 +296538,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       'Những trang không đánh dấu sẽ bị ẩn khỏi thanh điều hướng. Đổi lại bất cứ lúc nào ở Cài đặt → Giao diện.';
@@ -305053,8 +305196,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -305098,8 +305247,6 @@ class _StringsVi extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -315192,7 +315339,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_web_chapter_prev => '上一话';
   @override
-  String get manga_web_read_chapter => '用 Fushi 阅读本章';
+  String get manga_web_chapter_read => '用 Fushi 阅读本章';
   @override
   String get manga_web_scan_empty => '本页没有找到漫画图片，请先打开某一话的阅读页。';
   @override
@@ -316045,6 +316192,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get novel_web_extract_running => '正在提取正文…';
   @override
+  String get novel_web_page_read => '用 Fushi 阅读（小说）';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -316059,8 +316208,6 @@ class _StringsZhCn extends _StringsEn {
   String get novel_web_preview_read => '阅读';
   @override
   String get novel_web_preview_title => '用 Fushi 阅读这一章';
-  @override
-  String get novel_web_read_page => '用 Fushi 阅读（小说）';
   @override
   String get now_listening_label => '正在听书';
   @override
@@ -316262,6 +316409,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       '在 Fushi 里直接浏览网站：视频站点用 Fushi 播放器看、网页漫画用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      '在 Fushi 里直接浏览网站：网页漫画和网页小说用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      '在 Fushi 里直接浏览网站：网页漫画和网页小说用 Fushi 阅读器读，任何网页都能查词。';
   @override
   String get onboarding_features_modules_hint =>
       '未勾选的页面不显示在导航栏，之后可在「设置 → 外观」改回。';
@@ -324167,8 +324320,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_adblock_enabled => '拦截网页广告与跟踪器';
   @override
+  String get web_adblock_enabled_basic_hint => '作用于应用内的网页浏览。过滤列表会自动下载并定期更新。';
+  @override
   String get web_adblock_enabled_hint =>
       '作用于应用内的网页浏览，例如网页漫画、视频站点和在线源登录页。过滤列表会自动下载并定期更新。';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      '作用于应用内的网页浏览，例如网页漫画、网页小说和在线源登录页。过滤列表会自动下载并定期更新。';
   @override
   String get web_adblock_section_title => '网页广告拦截';
   @override
@@ -324210,8 +324368,6 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_title => '浏览器';
   @override
   String get web_hub_browse => '网页';
-  @override
-  String get web_hub_empty => '这台设备上暂时没有可用的浏览功能。';
   @override
   String get web_hub_video_sites => '视频站点';
   @override
@@ -334488,7 +334644,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_web_chapter_prev => 'Previous chapter';
   @override
-  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_chapter_read => 'Read in Fushi';
   @override
   String get manga_web_scan_empty =>
       'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -335351,6 +335507,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get novel_web_extract_running => 'Extracting the chapter text…';
   @override
+  String get novel_web_page_read => 'Read in Fushi (novel)';
+  @override
   String novel_web_preview_merge({
     required Object title,
     required Object count,
@@ -335367,8 +335525,6 @@ class _StringsZhHk extends _StringsEn {
   String get novel_web_preview_read => 'Read';
   @override
   String get novel_web_preview_title => 'Read this chapter in Fushi';
-  @override
-  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => '正在聽書';
   @override
@@ -335573,6 +335729,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_feature_web_hint =>
       'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_desktop_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+  @override
+  String get onboarding_feature_web_reader_hint =>
+      'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
   @override
   String get onboarding_features_modules_hint =>
       '未勾選的頁面不顯示在導航欄，之後可在「設定 → 外觀」改回。';
@@ -343678,8 +343840,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_adblock_enabled => 'Block ads and trackers on web pages';
   @override
+  String get web_adblock_enabled_basic_hint =>
+      'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
+  @override
   String get web_adblock_enabled_hint =>
       'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_enabled_sources_hint =>
+      'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
   @override
   String get web_adblock_section_title => 'Web ad blocking';
   @override
@@ -343723,8 +343891,6 @@ class _StringsZhHk extends _StringsEn {
   String get web_browser_title => 'Browser';
   @override
   String get web_hub_browse => 'Web';
-  @override
-  String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
   @override
@@ -353047,7 +353213,7 @@ extension on _StringsEn {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -353863,6 +354029,8 @@ extension on _StringsEn {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -353876,8 +354044,6 @@ extension on _StringsEn {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Now listening';
       case 'ocr_llm_default_accept':
@@ -354052,6 +354218,10 @@ extension on _StringsEn {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Unchecked pages are hidden from the navigation bar. Change anytime in Settings → Appearance.';
       case 'onboarding_features_modules_title':
@@ -361519,8 +361689,12 @@ extension on _StringsEn {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -361561,8 +361735,6 @@ extension on _StringsEn {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -370871,7 +371043,7 @@ extension on _StringsAr {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -371687,6 +371859,8 @@ extension on _StringsAr {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -371700,8 +371874,6 @@ extension on _StringsAr {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'يُستمع الآن';
       case 'ocr_llm_default_accept':
@@ -371877,6 +372049,10 @@ extension on _StringsAr {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'الصفحات غير المحدّدة تُخفى من شريط التنقل. يمكنك تغيير ذلك في أي وقت من الإعدادات → المظهر.';
       case 'onboarding_features_modules_title':
@@ -379342,8 +379518,12 @@ extension on _StringsAr {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -379384,8 +379564,6 @@ extension on _StringsAr {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -388742,7 +388920,7 @@ extension on _StringsDe {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -389564,6 +389742,8 @@ extension on _StringsDe {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -389577,8 +389757,6 @@ extension on _StringsDe {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Wird gerade gehört';
       case 'ocr_llm_default_accept':
@@ -389755,6 +389933,10 @@ extension on _StringsDe {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Nicht angehakte Seiten werden in der Navigationsleiste ausgeblendet. Jederzeit änderbar unter Einstellungen → Erscheinungsbild.';
       case 'onboarding_features_modules_title':
@@ -397241,8 +397423,12 @@ extension on _StringsDe {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -397283,8 +397469,6 @@ extension on _StringsDe {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -406627,7 +406811,7 @@ extension on _StringsEs {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -407448,6 +407632,8 @@ extension on _StringsEs {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -407461,8 +407647,6 @@ extension on _StringsEs {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Escuchando ahora';
       case 'ocr_llm_default_accept':
@@ -407639,6 +407823,10 @@ extension on _StringsEs {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Las páginas sin marcar se ocultan de la barra de navegación. Puede cambiarlo cuando quiera en Ajustes → Apariencia.';
       case 'onboarding_features_modules_title':
@@ -415122,8 +415310,12 @@ extension on _StringsEs {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -415164,8 +415356,6 @@ extension on _StringsEs {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -424522,7 +424712,7 @@ extension on _StringsFr {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -425344,6 +425534,8 @@ extension on _StringsFr {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -425357,8 +425549,6 @@ extension on _StringsFr {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Écoute en cours';
       case 'ocr_llm_default_accept':
@@ -425535,6 +425725,10 @@ extension on _StringsFr {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Les pages non cochées sont masquées de la barre de navigation. Modifiable à tout moment dans Paramètres → Apparence.';
       case 'onboarding_features_modules_title':
@@ -433021,8 +433215,12 @@ extension on _StringsFr {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -433063,8 +433261,6 @@ extension on _StringsFr {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -442390,7 +442586,7 @@ extension on _StringsId {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -443206,6 +443402,8 @@ extension on _StringsId {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -443219,8 +443417,6 @@ extension on _StringsId {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Sedang mendengarkan';
       case 'ocr_llm_default_accept':
@@ -443395,6 +443591,10 @@ extension on _StringsId {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Halaman yang tidak dicentang disembunyikan dari bilah navigasi. Bisa diubah kapan saja di Pengaturan → Tampilan.';
       case 'onboarding_features_modules_title':
@@ -450864,8 +451064,12 @@ extension on _StringsId {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -450906,8 +451110,6 @@ extension on _StringsId {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -460247,7 +460449,7 @@ extension on _StringsIt {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -461068,6 +461270,8 @@ extension on _StringsIt {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -461081,8 +461285,6 @@ extension on _StringsIt {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'In ascolto';
       case 'ocr_llm_default_accept':
@@ -461258,6 +461460,10 @@ extension on _StringsIt {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Le pagine non selezionate vengono nascoste dalla barra di navigazione. Puoi cambiarle quando vuoi in Impostazioni → Aspetto.';
       case 'onboarding_features_modules_title':
@@ -468743,8 +468949,12 @@ extension on _StringsIt {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -468785,8 +468995,6 @@ extension on _StringsIt {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -478062,7 +478270,7 @@ extension on _StringsJa {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -478874,6 +479082,8 @@ extension on _StringsJa {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -478887,8 +479097,6 @@ extension on _StringsJa {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return '再生中';
       case 'ocr_llm_default_accept':
@@ -479062,6 +479270,10 @@ extension on _StringsJa {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'チェックを外したページはナビゲーションバーに表示されません。設定 → 外観でいつでも変更できます。';
       case 'onboarding_features_modules_title':
@@ -486490,8 +486702,12 @@ extension on _StringsJa {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -486532,8 +486748,6 @@ extension on _StringsJa {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -495809,7 +496023,7 @@ extension on _StringsKo {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -496620,6 +496834,8 @@ extension on _StringsKo {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -496633,8 +496849,6 @@ extension on _StringsKo {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return '현재 듣는 중';
       case 'ocr_llm_default_accept':
@@ -496809,6 +497023,10 @@ extension on _StringsKo {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return '선택하지 않은 페이지는 내비게이션 바에서 숨겨집니다. 설정 → 외관에서 언제든 바꿀 수 있습니다.';
       case 'onboarding_features_modules_title':
@@ -504250,8 +504468,12 @@ extension on _StringsKo {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -504292,8 +504514,6 @@ extension on _StringsKo {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -513632,7 +513852,7 @@ extension on _StringsNl {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -514453,6 +514673,8 @@ extension on _StringsNl {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -514466,8 +514688,6 @@ extension on _StringsNl {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Nu aan het luisteren';
       case 'ocr_llm_default_accept':
@@ -514643,6 +514863,10 @@ extension on _StringsNl {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Niet-aangevinkte pagina\'s worden verborgen in de navigatiebalk. Later aan te passen via Instellingen → Uiterlijk.';
       case 'onboarding_features_modules_title':
@@ -522121,8 +522345,12 @@ extension on _StringsNl {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -522163,8 +522391,6 @@ extension on _StringsNl {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -531501,7 +531727,7 @@ extension on _StringsPtBr {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -532322,6 +532548,8 @@ extension on _StringsPtBr {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -532335,8 +532563,6 @@ extension on _StringsPtBr {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Ouvindo agora';
       case 'ocr_llm_default_accept':
@@ -532512,6 +532738,10 @@ extension on _StringsPtBr {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Páginas não marcadas ficam ocultas na barra de navegação. Dá para mudar quando quiser em Configurações → Aparência.';
       case 'onboarding_features_modules_title':
@@ -539987,8 +540217,12 @@ extension on _StringsPtBr {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -540029,8 +540263,6 @@ extension on _StringsPtBr {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -549374,7 +549606,7 @@ extension on _StringsRu {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -550195,6 +550427,8 @@ extension on _StringsRu {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -550208,8 +550442,6 @@ extension on _StringsRu {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Сейчас слушаете';
       case 'ocr_llm_default_accept':
@@ -550385,6 +550617,10 @@ extension on _StringsRu {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Неотмеченные страницы скрываются из панели навигации. Изменить можно в любой момент: Настройки → Внешний вид.';
       case 'onboarding_features_modules_title':
@@ -557858,8 +558094,12 @@ extension on _StringsRu {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -557900,8 +558140,6 @@ extension on _StringsRu {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -567216,7 +567454,7 @@ extension on _StringsTh {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -568031,6 +568269,8 @@ extension on _StringsTh {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -568044,8 +568284,6 @@ extension on _StringsTh {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'กำลังฟังอยู่';
       case 'ocr_llm_default_accept':
@@ -568220,6 +568458,10 @@ extension on _StringsTh {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'หน้าที่ไม่ได้เลือกจะถูกซ่อนจากแถบนำทาง เปลี่ยนได้ทุกเมื่อที่ การตั้งค่า → รูปลักษณ์';
       case 'onboarding_features_modules_title':
@@ -575685,8 +575927,12 @@ extension on _StringsTh {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -575727,8 +575973,6 @@ extension on _StringsTh {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -585064,7 +585308,7 @@ extension on _StringsTr {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -585882,6 +586126,8 @@ extension on _StringsTr {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -585895,8 +586141,6 @@ extension on _StringsTr {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Şimdi dinleniyor';
       case 'ocr_llm_default_accept':
@@ -586071,6 +586315,10 @@ extension on _StringsTr {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'İşaretlenmeyen sayfalar gezinme çubuğunda gizlenir. İstediğiniz zaman Ayarlar → Görünüm\'den değiştirebilirsiniz.';
       case 'onboarding_features_modules_title':
@@ -593543,8 +593791,12 @@ extension on _StringsTr {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -593585,8 +593837,6 @@ extension on _StringsTr {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -602910,7 +603160,7 @@ extension on _StringsVi {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -603725,6 +603975,8 @@ extension on _StringsVi {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -603738,8 +603990,6 @@ extension on _StringsVi {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Đang nghe';
       case 'ocr_llm_default_accept':
@@ -603915,6 +604165,10 @@ extension on _StringsVi {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return 'Những trang không đánh dấu sẽ bị ẩn khỏi thanh điều hướng. Đổi lại bất cứ lúc nào ở Cài đặt → Giao diện.';
       case 'onboarding_features_modules_title':
@@ -611384,8 +611638,12 @@ extension on _StringsVi {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -611426,8 +611684,6 @@ extension on _StringsVi {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
@@ -620636,7 +620892,7 @@ extension on _StringsZhCn {
         return '下一话';
       case 'manga_web_chapter_prev':
         return '上一话';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return '用 Fushi 阅读本章';
       case 'manga_web_scan_empty':
         return '本页没有找到漫画图片，请先打开某一话的阅读页。';
@@ -621441,6 +621697,8 @@ extension on _StringsZhCn {
         return ({required Object error}) => '提取正文失败：${error}';
       case 'novel_web_extract_running':
         return '正在提取正文…';
+      case 'novel_web_page_read':
+        return '用 Fushi 阅读（小说）';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             '将并入书架上的《${title}》（已有 ${count} 章）。';
@@ -621454,8 +621712,6 @@ extension on _StringsZhCn {
         return '阅读';
       case 'novel_web_preview_title':
         return '用 Fushi 阅读这一章';
-      case 'novel_web_read_page':
-        return '用 Fushi 阅读（小说）';
       case 'now_listening_label':
         return '正在听书';
       case 'ocr_llm_default_accept':
@@ -621629,6 +621885,10 @@ extension on _StringsZhCn {
         return '在 Fushi 里直接浏览网站，任何网页都能查词。';
       case 'onboarding_feature_web_hint':
         return '在 Fushi 里直接浏览网站：视频站点用 Fushi 播放器看、网页漫画用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return '在 Fushi 里直接浏览网站：网页漫画和网页小说用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
+      case 'onboarding_feature_web_reader_hint':
+        return '在 Fushi 里直接浏览网站：网页漫画和网页小说用 Fushi 阅读器读，任何网页都能查词。';
       case 'onboarding_features_modules_hint':
         return '未勾选的页面不显示在导航栏，之后可在「设置 → 外观」改回。';
       case 'onboarding_features_modules_title':
@@ -629011,8 +629271,12 @@ extension on _StringsZhCn {
         return '用逗号或空格分隔域名，包含子域名';
       case 'web_adblock_enabled':
         return '拦截网页广告与跟踪器';
+      case 'web_adblock_enabled_basic_hint':
+        return '作用于应用内的网页浏览。过滤列表会自动下载并定期更新。';
       case 'web_adblock_enabled_hint':
         return '作用于应用内的网页浏览，例如网页漫画、视频站点和在线源登录页。过滤列表会自动下载并定期更新。';
+      case 'web_adblock_enabled_sources_hint':
+        return '作用于应用内的网页浏览，例如网页漫画、网页小说和在线源登录页。过滤列表会自动下载并定期更新。';
       case 'web_adblock_section_title':
         return '网页广告拦截';
       case 'web_adblock_status_failed':
@@ -629053,8 +629317,6 @@ extension on _StringsZhCn {
         return '浏览器';
       case 'web_hub_browse':
         return '网页';
-      case 'web_hub_empty':
-        return '这台设备上暂时没有可用的浏览功能。';
       case 'web_hub_video_sites':
         return '视频站点';
       case 'web_video_ad_skipping':
@@ -638283,7 +638545,7 @@ extension on _StringsZhHk {
         return 'Next chapter';
       case 'manga_web_chapter_prev':
         return 'Previous chapter';
-      case 'manga_web_read_chapter':
+      case 'manga_web_chapter_read':
         return 'Read in Fushi';
       case 'manga_web_scan_empty':
         return 'No manga pages were found here. Open a chapter\'s reading page first.';
@@ -639092,6 +639354,8 @@ extension on _StringsZhHk {
             'Couldn\'t extract this page: ${error}';
       case 'novel_web_extract_running':
         return 'Extracting the chapter text…';
+      case 'novel_web_page_read':
+        return 'Read in Fushi (novel)';
       case 'novel_web_preview_merge':
         return ({required Object title, required Object count}) =>
             'Adds to “${title}” on your shelf (${count} chapters so far).';
@@ -639105,8 +639369,6 @@ extension on _StringsZhHk {
         return 'Read';
       case 'novel_web_preview_title':
         return 'Read this chapter in Fushi';
-      case 'novel_web_read_page':
-        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return '正在聽書';
       case 'ocr_llm_default_accept':
@@ -639280,6 +639542,10 @@ extension on _StringsZhHk {
         return 'Browse sites inside Fushi and look up words on any page.';
       case 'onboarding_feature_web_hint':
         return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_desktop_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
+      case 'onboarding_feature_web_reader_hint':
+        return 'Browse sites inside Fushi: read web comics and web novels in the Fushi reader, and look up words on any page.';
       case 'onboarding_features_modules_hint':
         return '未勾選的頁面不顯示在導航欄，之後可在「設定 → 外觀」改回。';
       case 'onboarding_features_modules_title':
@@ -646690,8 +646956,12 @@ extension on _StringsZhHk {
         return 'Domains separated by commas or spaces; subdomains are included';
       case 'web_adblock_enabled':
         return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_basic_hint':
+        return 'Applies to in-app web browsing. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_enabled_hint':
         return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_enabled_sources_hint':
+        return 'Applies to in-app web browsing such as web manga, web novels and source login pages. Filter lists are downloaded and refreshed automatically.';
       case 'web_adblock_section_title':
         return 'Web ad blocking';
       case 'web_adblock_status_failed':
@@ -646732,8 +647002,6 @@ extension on _StringsZhHk {
         return 'Browser';
       case 'web_hub_browse':
         return 'Web';
-      case 'web_hub_empty':
-        return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
         return 'Video sites';
       case 'web_video_ad_skipping':
