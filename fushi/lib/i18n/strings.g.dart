@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 149702 (8806 per locale)
+/// Strings: 150042 (8826 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4126,12 +4126,44 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get font_target_srs_card_short => 'Card';
   String get font_target_video_subtitle => 'Video subtitle font';
   String get font_target_video_subtitle_short => 'Subtitles';
+  String get fushi_api_access_allow_list => 'Specific networks';
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  String get fushi_api_access_lan => 'Local network';
+  String get fushi_api_access_local_only => 'This device only';
+  String get fushi_api_access_title => 'Allow connections from';
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
   String get fushi_api_key => 'Fushi API key';
+  String get fushi_api_key_generate => 'Generate key';
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  String get fushi_api_port_title => 'Port';
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  String get fushi_api_reach_title => 'Who can connect';
   String get fushi_api_server => 'Fushi API server';
   String get fushi_api_server_hint =>
-      'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   String get fushi_api_server_started => 'Fushi API server started';
   String get gal_card_lookup_independent_size =>
       'Independent in-game card size';
@@ -8363,6 +8395,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_group_learning => 'Learning';
   String get settings_group_tools => 'Tools';
   String get settings_jump_to_section => 'Jump to section';
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  String get settings_local_services_title => 'Local services';
   String get settings_lookup_ime_language_description =>
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   String get settings_lookup_ime_language_title => 'Lookup input language';
@@ -8723,13 +8758,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_anki_migrate_start => 'Migrate';
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
-  String get srs_ankiconnect_generate_key => 'Generate key';
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   String get srs_backup_auto => 'Automatic backups';
   String get srs_backup_auto_hint =>
@@ -19357,15 +19387,68 @@ class _StringsAr extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'مفتاح Fushi API';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'خادم Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'السماح لإضافة المتصفح والعملاء المتوافقين مع yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'تم تشغيل خادم Fushi API';
   @override
@@ -26583,6 +26666,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'اللغة التي تتبدل إليها لوحة المفاتيح عند الكتابة في مربع البحث. يجب أن تكون طريقة الإدخال مثبّتة في النظام مسبقًا. لا تؤثر على نتائج البحث.';
   @override
@@ -27224,16 +27312,8 @@ class _StringsAr extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -40820,15 +40900,68 @@ class _StringsDe extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi-API-Schlüssel';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Fushi-API-Server';
   @override
   String get fushi_api_server_hint =>
-      'Browsererweiterung und yomitan-api-kompatible Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Fushi-API-Server gestartet';
   @override
@@ -48215,6 +48348,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'Auf welche Sprache die Tastatur umschaltet, wenn du in ein Suchfeld tippst. Die Eingabemethode muss bereits im System installiert sein. Hat keinen Einfluss auf Suchergebnisse.';
   @override
@@ -48870,16 +49008,8 @@ class _StringsDe extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -62576,15 +62706,68 @@ class _StringsEs extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Clave de Fushi API';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Servidor Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'Permite que la extensión del navegador y los clientes compatibles con yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Servidor Fushi API iniciado';
   @override
@@ -69978,6 +70161,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'A qué idioma cambia el teclado cuando escribes en un cuadro de consulta. El método de entrada ya debe estar instalado en el sistema. No afecta a los resultados de búsqueda.';
   @override
@@ -70641,16 +70829,8 @@ class _StringsEs extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -84400,15 +84580,68 @@ class _StringsFr extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Clé Fushi API';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Serveur Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'Permet à l\'extension de navigateur et aux clients compatibles yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Serveur Fushi API démarré';
   @override
@@ -91836,6 +92069,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'Langue vers laquelle le clavier bascule lorsque vous saisissez dans un champ de recherche. La méthode de saisie doit déjà être installée sur le système. N\'affecte pas les résultats de recherche.';
   @override
@@ -92499,16 +92737,8 @@ class _StringsFr extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -106168,15 +106398,68 @@ class _StringsId extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi API key';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Server Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'Izinkan ekstensi browser dan klien yang kompatibel dengan yomitan-api mencari di kamus Fushi (port 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Server Fushi API dimulai';
   @override
@@ -113479,6 +113762,11 @@ class _StringsId extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'Bahasa yang dipilih papan ketik saat Anda mengetik di kotak pencarian. Metode input harus sudah terpasang di sistem. Tidak memengaruhi hasil pencarian.';
   @override
@@ -114121,16 +114409,8 @@ class _StringsId extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -127754,15 +128034,68 @@ class _StringsIt extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Chiave Fushi API';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Server Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'Consenti all\'estensione del browser e ai client compatibili con yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Server Fushi API avviato';
   @override
@@ -135126,6 +135459,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'La lingua a cui passa la tastiera quando scrivi in una casella di ricerca. Il metodo di input deve essere già installato nel sistema. Non influisce sui risultati di ricerca.';
   @override
@@ -135787,16 +136125,8 @@ class _StringsIt extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -149154,15 +149484,68 @@ class _StringsJa extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi API キー';
   @override
+  String get fushi_api_key_generate => 'キーを生成';
+  @override
   String get fushi_api_key_hint =>
-      '他のデバイスやツール（Yomitan、別のデバイスの Fushi）から接続するときは同じキーを入力します。空欄のままだと他のデバイスから Fushi の復習にカードを追加できません。設定後は、このデバイスのツールにも入力が必要です。';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Fushi API サーバー';
   @override
   String get fushi_api_server_hint =>
-      'ブラウザ拡張機能や yomitan-api 互換クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Fushi API サーバーが起動しました';
   @override
@@ -156130,6 +156513,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       '検索ボックスに入力するときにキーボードを切り替える言語です。対応する入力方式がシステムにインストールされている必要があります。検索結果には影響しません。';
   @override
@@ -156745,16 +157133,8 @@ class _StringsJa extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'キーを生成';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'キー未設定：このデバイスからのみ接続できます。他のデバイスからカードを追加するには、キーを生成して向こうにも同じキーを入力してください。';
-  @override
-  String get srs_ankiconnect_key_set =>
-      '他のデバイスから接続するときは、127.0.0.1 をこのコンピューターの LAN アドレスに置き換え、同じ Fushi API キーを入力してください。';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -169823,15 +170203,68 @@ class _StringsKo extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi API key';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Fushi API 서버';
   @override
   String get fushi_api_server_hint =>
-      '브라우저 확장 프로그램과 yomitan-api 호환 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Fushi API 서버가 시작되었습니다';
   @override
@@ -176812,6 +177245,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       '검색 상자에 입력할 때 키보드가 전환될 언어입니다. 해당 입력기는 시스템에 미리 설치되어 있어야 합니다. 검색 결과에는 영향을 주지 않습니다.';
   @override
@@ -177428,16 +177866,8 @@ class _StringsKo extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -190819,15 +191249,68 @@ class _StringsNl extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi API-sleutel';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Fushi API-server';
   @override
   String get fushi_api_server_hint =>
-      'Laat de browserextensie en yomitan-api-compatibele clients de woordenboeken van Fushi opvragen (poort 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Fushi API-server gestart';
   @override
@@ -198167,6 +198650,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'Naar welke taal het toetsenbord overschakelt wanneer je in een opzoekvak typt. De invoermethode moet al op het systeem zijn geïnstalleerd. Heeft geen invloed op zoekresultaten.';
   @override
@@ -198820,16 +199308,8 @@ class _StringsNl extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -212488,15 +212968,68 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Chave da Fushi API';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Servidor da Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'Permite que a extensão do navegador e clientes compatíveis com yomitan-api consultem os dicionários do Fushi (porta 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Servidor da Fushi API iniciado';
   @override
@@ -219860,6 +220393,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'Para qual idioma o teclado muda quando você digita em uma caixa de consulta. O método de entrada já deve estar instalado no sistema. Não afeta os resultados da busca.';
   @override
@@ -220515,16 +221053,8 @@ class _StringsPtBr extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -234172,15 +234702,68 @@ class _StringsRu extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Ключ Fushi API';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Сервер Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'Разрешить расширению браузера и клиентам, совместимым с yomitan-api, запрашивать словари Fushi (порт 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Сервер Fushi API запущен';
   @override
@@ -241533,6 +242116,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'На какой язык переключается клавиатура при вводе в поле поиска. Метод ввода должен быть уже установлен в системе. Не влияет на результаты поиска.';
   @override
@@ -242188,16 +242776,8 @@ class _StringsRu extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -255743,15 +256323,68 @@ class _StringsTh extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi API key';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'เซิร์ฟเวอร์ Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'ให้ส่วนขยายเบราว์เซอร์และไคลเอนต์ที่เข้ากันได้กับ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
   @override
@@ -262974,6 +263607,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'ภาษาที่แป้นพิมพ์สลับไปเมื่อคุณพิมพ์ในช่องค้นหา ต้องติดตั้งวิธีการป้อนข้อมูลในระบบไว้แล้ว ไม่ส่งผลต่อผลการค้นหา';
   @override
@@ -263612,16 +264250,8 @@ class _StringsTh extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -277145,15 +277775,68 @@ class _StringsTr extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi API anahtarı';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Fushi API sunucusu';
   @override
   String get fushi_api_server_hint =>
-      'Tarayıcı uzantısının ve yomitan-api uyumlu istemcilerin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Fushi API sunucusu başlatıldı';
   @override
@@ -284456,6 +285139,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'Bir arama kutusuna yazdığınızda klavyenin hangi dile geçeceği. Giriş yönteminin sistemde zaten yüklü olması gerekir. Arama sonuçlarını etkilemez.';
   @override
@@ -285101,16 +285789,8 @@ class _StringsTr extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -298667,15 +299347,68 @@ class _StringsVi extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi API key';
   @override
+  String get fushi_api_key_generate => 'Generate key';
+  @override
   String get fushi_api_key_hint =>
-      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Máy chủ Fushi API';
   @override
   String get fushi_api_server_hint =>
-      'Cho phép tiện ích mở rộng trình duyệt và máy khách tương thích yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Đã khởi động máy chủ Fushi API';
   @override
@@ -305945,6 +306678,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       'Bàn phím chuyển sang ngôn ngữ nào khi bạn gõ trong ô tra từ. Bộ gõ phải đã được cài trên hệ thống. Không ảnh hưởng đến kết quả tìm kiếm.';
   @override
@@ -306586,16 +307324,8 @@ class _StringsVi extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => 'Generate key';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-  @override
-  String get srs_ankiconnect_key_set =>
-      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -319566,15 +320296,62 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => '字幕';
   @override
+  String get fushi_api_access_allow_list => '指定网段';
+  @override
+  String get fushi_api_access_hint => '本机始终可以连接；其他设备还需要填 API 密钥。';
+  @override
+  String get fushi_api_access_lan => '局域网';
+  @override
+  String get fushi_api_access_local_only => '仅本机';
+  @override
+  String get fushi_api_access_title => '允许连接';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      '每行一个，例如 192.168.1.0/24 或 10.0.0.5。本机始终可以连接。';
+  @override
+  String get fushi_api_allowed_networks_empty => '尚未添加：目前只有本机能连接。';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      '不是有效的 IP 地址或网段：${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => '允许的网段';
+  @override
   String get fushi_api_key => 'Fushi API 密钥';
   @override
+  String get fushi_api_key_generate => '生成密钥';
+  @override
   String get fushi_api_key_hint =>
-      '其他设备和工具（Yomitan、另一台设备上的 Fushi）连接时要填同一个密钥。留空时其他设备无法往 Fushi 复习里加卡；设置后，本机的工具也要填它。';
+      '连接 Fushi 的工具（Yomitan、AnkiConnect 客户端、另一台设备上的 Fushi）都要填这个密钥，本机的也一样；浏览器扩展会自动配置，不用手填。';
+  @override
+  String get fushi_api_port_changed => '端口已更改。浏览器扩展会自动跟上，其他工具要改成新地址。';
+  @override
+  String get fushi_api_port_invalid => '请输入 1–65535 之间的端口';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      '端口 ${port} 已被占用，已保留原端口。';
+  @override
+  String get fushi_api_port_title => '端口';
+  @override
+  String fushi_api_port_value({required Object port}) => '监听端口 ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      '允许网段内的设备填 API 密钥即可连接（地址把 127.0.0.1 换成这台电脑的局域网地址）。';
+  @override
+  String get fushi_api_reach_lan =>
+      '同一网络的设备填 API 密钥即可连接（地址把 127.0.0.1 换成这台电脑的局域网地址）。';
+  @override
+  String get fushi_api_reach_local_only => '只有本机能连接。';
+  @override
+  String get fushi_api_reach_no_key => '未设 API 密钥：只有本机能连接。要让其他设备连接，先生成密钥。';
+  @override
+  String get fushi_api_reach_server_off => '服务器未开启，任何设备都连不上。';
+  @override
+  String get fushi_api_reach_title => '当前谁能连接';
   @override
   String get fushi_api_server => 'Fushi API 服务器';
   @override
   String get fushi_api_server_hint =>
-      '让浏览器扩展和兼容 yomitan-api 的客户端查询 Fushi 词典（端口 19633）';
+      '让浏览器扩展、Yomitan（yomitan-api）和 AnkiConnect 工具连接 Fushi';
   @override
   String get fushi_api_server_started => 'Fushi API 服务器已开启';
   @override
@@ -326217,6 +326994,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get settings_jump_to_section => '跳到分组';
   @override
+  String get settings_local_services_summary => 'Fushi API、浏览器扩展、AnkiConnect';
+  @override
+  String get settings_local_services_title => '本机服务';
+  @override
   String get settings_lookup_ime_language_description =>
       '在查词输入框打字时键盘切到哪种语言。需要系统已安装对应输入法。不影响查词结果。';
   @override
@@ -326809,16 +327590,8 @@ class _StringsZhCn extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       '有些文件夹读取不了：${paths}';
   @override
-  String get srs_ankiconnect_generate_key => '生成密钥';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      '未设密钥：只有本机能连。要从其他设备加卡，先生成密钥，再在那边填同一个密钥。';
-  @override
-  String get srs_ankiconnect_key_set =>
-      '从其他设备连接时，把 127.0.0.1 换成这台电脑的局域网地址，并填同一个 Fushi API 密钥。';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect（Fushi 复习）';
   @override
@@ -339333,15 +340106,68 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get font_target_video_subtitle_short => 'Subtitles';
   @override
+  String get fushi_api_access_allow_list => 'Specific networks';
+  @override
+  String get fushi_api_access_hint =>
+      'This device is always allowed. Other devices also need the API key.';
+  @override
+  String get fushi_api_access_lan => 'Local network';
+  @override
+  String get fushi_api_access_local_only => 'This device only';
+  @override
+  String get fushi_api_access_title => 'Allow connections from';
+  @override
+  String get fushi_api_allowed_networks_dialog_hint =>
+      'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+  @override
+  String get fushi_api_allowed_networks_empty =>
+      'None added: only this device can connect.';
+  @override
+  String fushi_api_allowed_networks_invalid({required Object entries}) =>
+      'Not a valid IP address or network: ${entries}';
+  @override
+  String get fushi_api_allowed_networks_title => 'Allowed networks';
+  @override
   String get fushi_api_key => 'Fushi API 金鑰';
   @override
+  String get fushi_api_key_generate => '產生金鑰';
+  @override
   String get fushi_api_key_hint =>
-      '其他裝置和工具（Yomitan、另一部裝置上的 Fushi）連線時要填同一個金鑰。留空時其他裝置無法往 Fushi 複習裡加卡；設定後，本機的工具也要填它。';
+      'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+  @override
+  String get fushi_api_port_changed =>
+      'Port changed. The browser extension follows automatically; update other tools to the new address.';
+  @override
+  String get fushi_api_port_invalid => 'Enter a port between 1 and 65535';
+  @override
+  String fushi_api_port_reverted({required Object port}) =>
+      'Port ${port} is in use; kept the previous port.';
+  @override
+  String get fushi_api_port_title => 'Port';
+  @override
+  String fushi_api_port_value({required Object port}) =>
+      'Listening on port ${port}';
+  @override
+  String get fushi_api_reach_allow_list =>
+      'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_lan =>
+      'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+  @override
+  String get fushi_api_reach_local_only => 'Only this device can connect.';
+  @override
+  String get fushi_api_reach_no_key =>
+      'No API key set: only this device can connect. Generate a key to let other devices connect.';
+  @override
+  String get fushi_api_reach_server_off =>
+      'The server is off: nothing can connect.';
+  @override
+  String get fushi_api_reach_title => 'Who can connect';
   @override
   String get fushi_api_server => 'Fushi API 伺服器';
   @override
   String get fushi_api_server_hint =>
-      '讓瀏覽器擴展和兼容 yomitan-api 的客戶端查詢 Fushi 詞典（連接埠 19633）';
+      'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
   @override
   String get fushi_api_server_started => 'Fushi API 伺服器已開啟';
   @override
@@ -346065,6 +346891,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get settings_jump_to_section => 'Jump to section';
   @override
+  String get settings_local_services_summary =>
+      'Fushi API, browser extension, AnkiConnect';
+  @override
+  String get settings_local_services_title => 'Local services';
+  @override
   String get settings_lookup_ime_language_description =>
       '在查詞輸入框打字時鍵盤切到哪種語言。需要系統已安裝對應輸入法。不影響查詞結果。';
   @override
@@ -346674,16 +347505,8 @@ class _StringsZhHk extends _StringsEn {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   @override
-  String get srs_ankiconnect_generate_key => '產生金鑰';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  @override
-  String get srs_ankiconnect_key_missing =>
-      '未設金鑰：只有本機能連線。要從其他裝置加卡，先產生金鑰，再在那邊填同一個金鑰。';
-  @override
-  String get srs_ankiconnect_key_set =>
-      '從其他裝置連線時，把 127.0.0.1 換成這部電腦的區域網路位址，並填同一個 Fushi API 金鑰。';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
@@ -358764,14 +359587,58 @@ extension on _StringsEn {
         return 'Video subtitle font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API key';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Fushi API server';
       case 'fushi_api_server_hint':
-        return 'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Fushi API server started';
       case 'gal_card_lookup_independent_size':
@@ -364977,6 +365844,10 @@ extension on _StringsEn {
         return 'Tools';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_title':
@@ -365548,15 +366419,9 @@ extension on _StringsEn {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -377062,14 +377927,58 @@ extension on _StringsAr {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'مفتاح Fushi API';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'خادم Fushi API';
       case 'fushi_api_server_hint':
-        return 'السماح لإضافة المتصفح والعملاء المتوافقين مع yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'تم تشغيل خادم Fushi API';
       case 'gal_card_lookup_independent_size':
@@ -383271,6 +384180,10 @@ extension on _StringsAr {
         return 'الأدوات';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'اللغة التي تتبدل إليها لوحة المفاتيح عند الكتابة في مربع البحث. يجب أن تكون طريقة الإدخال مثبّتة في النظام مسبقًا. لا تؤثر على نتائج البحث.';
       case 'settings_lookup_ime_language_title':
@@ -383842,15 +384755,9 @@ extension on _StringsAr {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -395386,14 +396293,58 @@ extension on _StringsDe {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi-API-Schlüssel';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Fushi-API-Server';
       case 'fushi_api_server_hint':
-        return 'Browsererweiterung und yomitan-api-kompatible Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Fushi-API-Server gestartet';
       case 'gal_card_lookup_independent_size':
@@ -401621,6 +402572,10 @@ extension on _StringsDe {
         return 'Werkzeuge';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'Auf welche Sprache die Tastatur umschaltet, wenn du in ein Suchfeld tippst. Die Eingabemethode muss bereits im System installiert sein. Hat keinen Einfluss auf Suchergebnisse.';
       case 'settings_lookup_ime_language_title':
@@ -402192,15 +403147,9 @@ extension on _StringsDe {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -413744,14 +414693,58 @@ extension on _StringsEs {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Clave de Fushi API';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Servidor Fushi API';
       case 'fushi_api_server_hint':
-        return 'Permite que la extensión del navegador y los clientes compatibles con yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Servidor Fushi API iniciado';
       case 'gal_card_lookup_independent_size':
@@ -419975,6 +420968,10 @@ extension on _StringsEs {
         return 'Herramientas';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'A qué idioma cambia el teclado cuando escribes en un cuadro de consulta. El método de entrada ya debe estar instalado en el sistema. No afecta a los resultados de búsqueda.';
       case 'settings_lookup_ime_language_title':
@@ -420546,15 +421543,9 @@ extension on _StringsEs {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -432107,14 +433098,58 @@ extension on _StringsFr {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Clé Fushi API';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Serveur Fushi API';
       case 'fushi_api_server_hint':
-        return 'Permet à l\'extension de navigateur et aux clients compatibles yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Serveur Fushi API démarré';
       case 'gal_card_lookup_independent_size':
@@ -438340,6 +439375,10 @@ extension on _StringsFr {
         return 'Outils';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'Langue vers laquelle le clavier bascule lorsque vous saisissez dans un champ de recherche. La méthode de saisie doit déjà être installée sur le système. N\'affecte pas les résultats de recherche.';
       case 'settings_lookup_ime_language_title':
@@ -438911,15 +439950,9 @@ extension on _StringsFr {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -450451,14 +451484,58 @@ extension on _StringsId {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API key';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Server Fushi API';
       case 'fushi_api_server_hint':
-        return 'Izinkan ekstensi browser dan klien yang kompatibel dengan yomitan-api mencari di kamus Fushi (port 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Server Fushi API dimulai';
       case 'gal_card_lookup_independent_size':
@@ -456665,6 +457742,10 @@ extension on _StringsId {
         return 'Alat';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'Bahasa yang dipilih papan ketik saat Anda mengetik di kotak pencarian. Metode input harus sudah terpasang di sistem. Tidak memengaruhi hasil pencarian.';
       case 'settings_lookup_ime_language_title':
@@ -457236,15 +458317,9 @@ extension on _StringsId {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -468773,14 +469848,58 @@ extension on _StringsIt {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Chiave Fushi API';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Server Fushi API';
       case 'fushi_api_server_hint':
-        return 'Consenti all\'estensione del browser e ai client compatibili con yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Server Fushi API avviato';
       case 'gal_card_lookup_independent_size':
@@ -474999,6 +476118,10 @@ extension on _StringsIt {
         return 'Strumenti';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'La lingua a cui passa la tastiera quando scrivi in una casella di ricerca. Il metodo di input deve essere già installato nel sistema. Non influisce sui risultati di ricerca.';
       case 'settings_lookup_ime_language_title':
@@ -475570,15 +476693,9 @@ extension on _StringsIt {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -487076,14 +488193,58 @@ extension on _StringsJa {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API キー';
+      case 'fushi_api_key_generate':
+        return 'キーを生成';
       case 'fushi_api_key_hint':
-        return '他のデバイスやツール（Yomitan、別のデバイスの Fushi）から接続するときは同じキーを入力します。空欄のままだと他のデバイスから Fushi の復習にカードを追加できません。設定後は、このデバイスのツールにも入力が必要です。';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Fushi API サーバー';
       case 'fushi_api_server_hint':
-        return 'ブラウザ拡張機能や yomitan-api 互換クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Fushi API サーバーが起動しました';
       case 'gal_card_lookup_independent_size':
@@ -493267,6 +494428,10 @@ extension on _StringsJa {
         return 'ツール';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return '検索ボックスに入力するときにキーボードを切り替える言語です。対応する入力方式がシステムにインストールされている必要があります。検索結果には影響しません。';
       case 'settings_lookup_ime_language_title':
@@ -493838,15 +495003,9 @@ extension on _StringsJa {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'キーを生成';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'キー未設定：このデバイスからのみ接続できます。他のデバイスからカードを追加するには、キーを生成して向こうにも同じキーを入力してください。';
-      case 'srs_ankiconnect_key_set':
-        return '他のデバイスから接続するときは、127.0.0.1 をこのコンピューターの LAN アドレスに置き換え、同じ Fushi API キーを入力してください。';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -505293,14 +506452,58 @@ extension on _StringsKo {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API key';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Fushi API 서버';
       case 'fushi_api_server_hint':
-        return '브라우저 확장 프로그램과 yomitan-api 호환 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Fushi API 서버가 시작되었습니다';
       case 'gal_card_lookup_independent_size':
@@ -511484,6 +512687,10 @@ extension on _StringsKo {
         return '도구';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return '검색 상자에 입력할 때 키보드가 전환될 언어입니다. 해당 입력기는 시스템에 미리 설치되어 있어야 합니다. 검색 결과에는 영향을 주지 않습니다.';
       case 'settings_lookup_ime_language_title':
@@ -512055,15 +513262,9 @@ extension on _StringsKo {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -523561,14 +524762,58 @@ extension on _StringsNl {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API-sleutel';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Fushi API-server';
       case 'fushi_api_server_hint':
-        return 'Laat de browserextensie en yomitan-api-compatibele clients de woordenboeken van Fushi opvragen (poort 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Fushi API-server gestart';
       case 'gal_card_lookup_independent_size':
@@ -529791,6 +531036,10 @@ extension on _StringsNl {
         return 'Hulpmiddelen';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'Naar welke taal het toetsenbord overschakelt wanneer je in een opzoekvak typt. De invoermethode moet al op het systeem zijn geïnstalleerd. Heeft geen invloed op zoekresultaten.';
       case 'settings_lookup_ime_language_title':
@@ -530362,15 +531611,9 @@ extension on _StringsNl {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -541903,14 +543146,58 @@ extension on _StringsPtBr {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Chave da Fushi API';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Servidor da Fushi API';
       case 'fushi_api_server_hint':
-        return 'Permite que a extensão do navegador e clientes compatíveis com yomitan-api consultem os dicionários do Fushi (porta 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Servidor da Fushi API iniciado';
       case 'gal_card_lookup_independent_size':
@@ -548129,6 +549416,10 @@ extension on _StringsPtBr {
         return 'Ferramentas';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'Para qual idioma o teclado muda quando você digita em uma caixa de consulta. O método de entrada já deve estar instalado no sistema. Não afeta os resultados da busca.';
       case 'settings_lookup_ime_language_title':
@@ -548700,15 +549991,9 @@ extension on _StringsPtBr {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -560245,14 +561530,58 @@ extension on _StringsRu {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Ключ Fushi API';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Сервер Fushi API';
       case 'fushi_api_server_hint':
-        return 'Разрешить расширению браузера и клиентам, совместимым с yomitan-api, запрашивать словари Fushi (порт 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Сервер Fushi API запущен';
       case 'gal_card_lookup_independent_size':
@@ -566471,6 +567800,10 @@ extension on _StringsRu {
         return 'Инструменты';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'На какой язык переключается клавиатура при вводе в поле поиска. Метод ввода должен быть уже установлен в системе. Не влияет на результаты поиска.';
       case 'settings_lookup_ime_language_title':
@@ -567042,15 +568375,9 @@ extension on _StringsRu {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -578561,14 +579888,58 @@ extension on _StringsTh {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API key';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'เซิร์ฟเวอร์ Fushi API';
       case 'fushi_api_server_hint':
-        return 'ให้ส่วนขยายเบราว์เซอร์และไคลเอนต์ที่เข้ากันได้กับ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
       case 'gal_card_lookup_independent_size':
@@ -584773,6 +586144,10 @@ extension on _StringsTh {
         return 'เครื่องมือ';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'ภาษาที่แป้นพิมพ์สลับไปเมื่อคุณพิมพ์ในช่องค้นหา ต้องติดตั้งวิธีการป้อนข้อมูลในระบบไว้แล้ว ไม่ส่งผลต่อผลการค้นหา';
       case 'settings_lookup_ime_language_title':
@@ -585344,15 +586719,9 @@ extension on _StringsTh {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -596874,14 +598243,58 @@ extension on _StringsTr {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API anahtarı';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Fushi API sunucusu';
       case 'fushi_api_server_hint':
-        return 'Tarayıcı uzantısının ve yomitan-api uyumlu istemcilerin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Fushi API sunucusu başlatıldı';
       case 'gal_card_lookup_independent_size':
@@ -603093,6 +604506,10 @@ extension on _StringsTr {
         return 'Araçlar';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'Bir arama kutusuna yazdığınızda klavyenin hangi dile geçeceği. Giriş yönteminin sistemde zaten yüklü olması gerekir. Arama sonuçlarını etkilemez.';
       case 'settings_lookup_ime_language_title':
@@ -603664,15 +605081,9 @@ extension on _StringsTr {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -615194,14 +616605,58 @@ extension on _StringsVi {
         return 'Video Subtitle Font';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API key';
+      case 'fushi_api_key_generate':
+        return 'Generate key';
       case 'fushi_api_key_hint':
-        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Máy chủ Fushi API';
       case 'fushi_api_server_hint':
-        return 'Cho phép tiện ích mở rộng trình duyệt và máy khách tương thích yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Đã khởi động máy chủ Fushi API';
       case 'gal_card_lookup_independent_size':
@@ -621408,6 +622863,10 @@ extension on _StringsVi {
         return 'Công cụ';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return 'Bàn phím chuyển sang ngôn ngữ nào khi bạn gõ trong ô tra từ. Bộ gõ phải đã được cài trên hệ thống. Không ảnh hưởng đến kết quả tìm kiếm.';
       case 'settings_lookup_ime_language_title':
@@ -621979,15 +623438,9 @@ extension on _StringsVi {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return 'Generate key';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
-      case 'srs_ankiconnect_key_set':
-        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
@@ -633410,14 +634863,56 @@ extension on _StringsZhCn {
         return '视频字幕字体';
       case 'font_target_video_subtitle_short':
         return '字幕';
+      case 'fushi_api_access_allow_list':
+        return '指定网段';
+      case 'fushi_api_access_hint':
+        return '本机始终可以连接；其他设备还需要填 API 密钥。';
+      case 'fushi_api_access_lan':
+        return '局域网';
+      case 'fushi_api_access_local_only':
+        return '仅本机';
+      case 'fushi_api_access_title':
+        return '允许连接';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return '每行一个，例如 192.168.1.0/24 或 10.0.0.5。本机始终可以连接。';
+      case 'fushi_api_allowed_networks_empty':
+        return '尚未添加：目前只有本机能连接。';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) => '不是有效的 IP 地址或网段：${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return '允许的网段';
       case 'fushi_api_key':
         return 'Fushi API 密钥';
+      case 'fushi_api_key_generate':
+        return '生成密钥';
       case 'fushi_api_key_hint':
-        return '其他设备和工具（Yomitan、另一台设备上的 Fushi）连接时要填同一个密钥。留空时其他设备无法往 Fushi 复习里加卡；设置后，本机的工具也要填它。';
+        return '连接 Fushi 的工具（Yomitan、AnkiConnect 客户端、另一台设备上的 Fushi）都要填这个密钥，本机的也一样；浏览器扩展会自动配置，不用手填。';
+      case 'fushi_api_port_changed':
+        return '端口已更改。浏览器扩展会自动跟上，其他工具要改成新地址。';
+      case 'fushi_api_port_invalid':
+        return '请输入 1–65535 之间的端口';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) => '端口 ${port} 已被占用，已保留原端口。';
+      case 'fushi_api_port_title':
+        return '端口';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => '监听端口 ${port}';
+      case 'fushi_api_reach_allow_list':
+        return '允许网段内的设备填 API 密钥即可连接（地址把 127.0.0.1 换成这台电脑的局域网地址）。';
+      case 'fushi_api_reach_lan':
+        return '同一网络的设备填 API 密钥即可连接（地址把 127.0.0.1 换成这台电脑的局域网地址）。';
+      case 'fushi_api_reach_local_only':
+        return '只有本机能连接。';
+      case 'fushi_api_reach_no_key':
+        return '未设 API 密钥：只有本机能连接。要让其他设备连接，先生成密钥。';
+      case 'fushi_api_reach_server_off':
+        return '服务器未开启，任何设备都连不上。';
+      case 'fushi_api_reach_title':
+        return '当前谁能连接';
       case 'fushi_api_server':
         return 'Fushi API 服务器';
       case 'fushi_api_server_hint':
-        return '让浏览器扩展和兼容 yomitan-api 的客户端查询 Fushi 词典（端口 19633）';
+        return '让浏览器扩展、Yomitan（yomitan-api）和 AnkiConnect 工具连接 Fushi';
       case 'fushi_api_server_started':
         return 'Fushi API 服务器已开启';
       case 'gal_card_lookup_independent_size':
@@ -639581,6 +641076,10 @@ extension on _StringsZhCn {
         return '工具';
       case 'settings_jump_to_section':
         return '跳到分组';
+      case 'settings_local_services_summary':
+        return 'Fushi API、浏览器扩展、AnkiConnect';
+      case 'settings_local_services_title':
+        return '本机服务';
       case 'settings_lookup_ime_language_description':
         return '在查词输入框打字时键盘切到哪种语言。需要系统已安装对应输入法。不影响查词结果。';
       case 'settings_lookup_ime_language_title':
@@ -640150,15 +641649,9 @@ extension on _StringsZhCn {
         return '开始迁移';
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) => '有些文件夹读取不了：${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return '生成密钥';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
-      case 'srs_ankiconnect_key_missing':
-        return '未设密钥：只有本机能连。要从其他设备加卡，先生成密钥，再在那边填同一个密钥。';
-      case 'srs_ankiconnect_key_set':
-        return '从其他设备连接时，把 127.0.0.1 换成这台电脑的局域网地址，并填同一个 Fushi API 密钥。';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect（Fushi 复习）';
       case 'srs_backup_auto':
@@ -651515,14 +653008,58 @@ extension on _StringsZhHk {
         return '視頻字幕字體';
       case 'font_target_video_subtitle_short':
         return 'Subtitles';
+      case 'fushi_api_access_allow_list':
+        return 'Specific networks';
+      case 'fushi_api_access_hint':
+        return 'This device is always allowed. Other devices also need the API key.';
+      case 'fushi_api_access_lan':
+        return 'Local network';
+      case 'fushi_api_access_local_only':
+        return 'This device only';
+      case 'fushi_api_access_title':
+        return 'Allow connections from';
+      case 'fushi_api_allowed_networks_dialog_hint':
+        return 'One per line, e.g. 192.168.1.0/24 or 10.0.0.5. This device is always allowed.';
+      case 'fushi_api_allowed_networks_empty':
+        return 'None added: only this device can connect.';
+      case 'fushi_api_allowed_networks_invalid':
+        return ({required Object entries}) =>
+            'Not a valid IP address or network: ${entries}';
+      case 'fushi_api_allowed_networks_title':
+        return 'Allowed networks';
       case 'fushi_api_key':
         return 'Fushi API 金鑰';
+      case 'fushi_api_key_generate':
+        return '產生金鑰';
       case 'fushi_api_key_hint':
-        return '其他裝置和工具（Yomitan、另一部裝置上的 Fushi）連線時要填同一個金鑰。留空時其他裝置無法往 Fushi 複習裡加卡；設定後，本機的工具也要填它。';
+        return 'Every tool that connects to Fushi (Yomitan, AnkiConnect clients, Fushi on another device) enters this key, on this computer too. The browser extension is configured automatically.';
+      case 'fushi_api_port_changed':
+        return 'Port changed. The browser extension follows automatically; update other tools to the new address.';
+      case 'fushi_api_port_invalid':
+        return 'Enter a port between 1 and 65535';
+      case 'fushi_api_port_reverted':
+        return ({required Object port}) =>
+            'Port ${port} is in use; kept the previous port.';
+      case 'fushi_api_port_title':
+        return 'Port';
+      case 'fushi_api_port_value':
+        return ({required Object port}) => 'Listening on port ${port}';
+      case 'fushi_api_reach_allow_list':
+        return 'Devices in the allowed networks can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_lan':
+        return 'Devices on the same network can connect with the API key, using this computer\'s LAN address instead of 127.0.0.1.';
+      case 'fushi_api_reach_local_only':
+        return 'Only this device can connect.';
+      case 'fushi_api_reach_no_key':
+        return 'No API key set: only this device can connect. Generate a key to let other devices connect.';
+      case 'fushi_api_reach_server_off':
+        return 'The server is off: nothing can connect.';
+      case 'fushi_api_reach_title':
+        return 'Who can connect';
       case 'fushi_api_server':
         return 'Fushi API 伺服器';
       case 'fushi_api_server_hint':
-        return '讓瀏覽器擴展和兼容 yomitan-api 的客戶端查詢 Fushi 詞典（連接埠 19633）';
+        return 'Lets the browser extension, Yomitan (yomitan-api) and AnkiConnect tools connect to Fushi';
       case 'fushi_api_server_started':
         return 'Fushi API 伺服器已開啟';
       case 'gal_card_lookup_independent_size':
@@ -657697,6 +659234,10 @@ extension on _StringsZhHk {
         return '工具';
       case 'settings_jump_to_section':
         return 'Jump to section';
+      case 'settings_local_services_summary':
+        return 'Fushi API, browser extension, AnkiConnect';
+      case 'settings_local_services_title':
+        return 'Local services';
       case 'settings_lookup_ime_language_description':
         return '在查詞輸入框打字時鍵盤切到哪種語言。需要系統已安裝對應輸入法。不影響查詞結果。';
       case 'settings_lookup_ime_language_title':
@@ -658267,15 +659808,9 @@ extension on _StringsZhHk {
       case 'srs_anki_migrate_unreadable':
         return ({required Object paths}) =>
             'Some folders couldn\'t be read: ${paths}';
-      case 'srs_ankiconnect_generate_key':
-        return '產生金鑰';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-      case 'srs_ankiconnect_key_missing':
-        return '未設金鑰：只有本機能連線。要從其他裝置加卡，先產生金鑰，再在那邊填同一個金鑰。';
-      case 'srs_ankiconnect_key_set':
-        return '從其他裝置連線時，把 127.0.0.1 換成這部電腦的區域網路位址，並填同一個 Fushi API 金鑰。';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
