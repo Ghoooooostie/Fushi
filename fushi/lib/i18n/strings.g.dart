@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150416 (8848 per locale)
+/// Strings: 150569 (8857 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9042,11 +9042,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_empty_title => 'Add your first card';
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
   String get srs_export_apkg => 'Export (.apkg)';
   String get srs_export_done => 'Exported';
   String get srs_export_failed => 'Export failed';
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  String get srs_export_options_title => 'Export options';
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  String get srs_export_with_scheduling => 'Include learning progress';
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   String get srs_field_info_ai => 'Let AI write it';
   String get srs_field_info_ai_busy => 'AI is writing…';
   String srs_field_info_ai_request({required Object name}) =>
@@ -9254,7 +9265,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The same choice for note types: their name, styling and card templates.';
   String get srs_import_with_deck_configs => 'Import all deck presets';
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   String get srs_import_with_scheduling => 'Import all review progress';
   String get srs_import_with_scheduling_help =>
       'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
@@ -27856,6 +27870,11 @@ class _StringsAr extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -27864,6 +27883,19 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -28202,7 +28234,12 @@ class _StringsAr extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -49610,6 +49647,11 @@ class _StringsDe extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -49618,6 +49660,19 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -49956,7 +50011,12 @@ class _StringsDe extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -71489,6 +71549,11 @@ class _StringsEs extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -71497,6 +71562,19 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -71835,7 +71913,12 @@ class _StringsEs extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -93455,6 +93538,11 @@ class _StringsFr extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -93463,6 +93551,19 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -93801,7 +93902,12 @@ class _StringsFr extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -115185,6 +115291,11 @@ class _StringsId extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -115193,6 +115304,19 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -115531,7 +115655,12 @@ class _StringsId extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -136959,6 +137088,11 @@ class _StringsIt extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -136967,6 +137101,19 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -137305,7 +137452,12 @@ class _StringsIt extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -158025,6 +158177,11 @@ class _StringsJa extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -158033,6 +158190,19 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -158371,7 +158541,12 @@ class _StringsJa extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -178816,6 +178991,11 @@ class _StringsKo extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -178824,6 +179004,19 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -179162,7 +179355,12 @@ class _StringsKo extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -200316,6 +200514,11 @@ class _StringsNl extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -200324,6 +200527,19 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -200662,7 +200878,12 @@ class _StringsNl extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -222119,6 +222340,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -222127,6 +222353,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -222465,7 +222704,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -243900,6 +244144,11 @@ class _StringsRu extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -243908,6 +244157,19 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -244246,7 +244508,12 @@ class _StringsRu extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -265432,6 +265699,11 @@ class _StringsTh extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -265440,6 +265712,19 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -265778,7 +266063,12 @@ class _StringsTh extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -287029,6 +287319,11 @@ class _StringsTr extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -287037,6 +287332,19 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -287375,7 +287683,12 @@ class _StringsTr extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -308622,6 +308935,11 @@ class _StringsVi extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -308630,6 +308948,19 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -308968,7 +309299,12 @@ class _StringsVi extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -328918,6 +329254,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_engine_unavailable => '本机的排程内核不可用：可以浏览和编辑卡片，但暂时不能复习。';
   @override
+  String get srs_export_anki_compatible => '兼容 Anki';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      '只写 Anki 认识的内容，去掉 Fushi 专有数据（完整复习日志、FSRS-7 参数、笔记出处）。Anki 本来就会忽略这些数据；之后要无损导回 Fushi 请保持关闭。';
+  @override
   String get srs_export_apkg => '导出（.apkg）';
   @override
   String get srs_export_done => '已导出';
@@ -328926,6 +329267,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
+  @override
+  String get srs_export_options_title => '导出选项';
+  @override
+  String get srs_export_with_deck_configs => '包含牌组预设与 FSRS 参数';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      '学习步长、每日上限、期望保留率与 FSRS 参数。关闭时牌组使用 Anki 默认预设。';
+  @override
+  String get srs_export_with_scheduling => '包含学习进度';
+  @override
+  String get srs_export_with_scheduling_desc => '复习记录与到期日。关闭时所有卡片作为新卡导出。';
   @override
   String get srs_field_info_ai => '让 AI 写说明';
   @override
@@ -329229,7 +329581,12 @@ class _StringsZhCn extends _StringsEn {
   String get srs_import_with_deck_configs => '导入所有牌组预设配置';
   @override
   String get srs_import_with_deck_configs_help =>
-      '本次导入新建的牌组使用包里的学习步长、每日上限、算法和 FSRS 参数；关闭时使用默认设置。已存在的牌组不会被改动。';
+      '本次导入新建的牌组使用包里的学习步长、每日上限、最大间隔和音频设置；关闭时使用默认设置。算法与 FSRS 参数由单独的开关决定。已存在的牌组不会被改动。';
+  @override
+  String get srs_import_with_fsrs_params => '导入 FSRS 参数';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      '本次导入新建的牌组使用包里的排程算法、FSRS 参数和期望保留率；关闭时使用 Fushi 默认设置（FSRS-7，按你的复习记录自动优化）。已存在的牌组不会被改动。';
   @override
   String get srs_import_with_scheduling => '导入所有学习进度信息';
   @override
@@ -348909,6 +349266,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -348917,6 +349279,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -349255,7 +349630,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -367837,6 +368217,10 @@ extension on _StringsEn {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -367845,6 +368229,16 @@ extension on _StringsEn {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -368129,7 +368523,11 @@ extension on _StringsEn {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -386217,6 +386615,10 @@ extension on _StringsAr {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -386225,6 +386627,16 @@ extension on _StringsAr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -386509,7 +386921,11 @@ extension on _StringsAr {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -404653,6 +405069,10 @@ extension on _StringsDe {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -404661,6 +405081,16 @@ extension on _StringsDe {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -404945,7 +405375,11 @@ extension on _StringsDe {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -423093,6 +423527,10 @@ extension on _StringsEs {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -423101,6 +423539,16 @@ extension on _StringsEs {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -423385,7 +423833,11 @@ extension on _StringsEs {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -441544,6 +441996,10 @@ extension on _StringsFr {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -441552,6 +442008,16 @@ extension on _StringsFr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -441836,7 +442302,11 @@ extension on _StringsFr {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -459955,6 +460425,10 @@ extension on _StringsId {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -459963,6 +460437,16 @@ extension on _StringsId {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -460247,7 +460731,11 @@ extension on _StringsId {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -478375,6 +478863,10 @@ extension on _StringsIt {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -478383,6 +478875,16 @@ extension on _StringsIt {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -478667,7 +479169,11 @@ extension on _StringsIt {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -496729,6 +497235,10 @@ extension on _StringsJa {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -496737,6 +497247,16 @@ extension on _StringsJa {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -497021,7 +497541,11 @@ extension on _StringsJa {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -515032,6 +515556,10 @@ extension on _StringsKo {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -515040,6 +515568,16 @@ extension on _StringsKo {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -515324,7 +515862,11 @@ extension on _StringsKo {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -533425,6 +533967,10 @@ extension on _StringsNl {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -533433,6 +533979,16 @@ extension on _StringsNl {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -533717,7 +534273,11 @@ extension on _StringsNl {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -551849,6 +552409,10 @@ extension on _StringsPtBr {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -551857,6 +552421,16 @@ extension on _StringsPtBr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -552141,7 +552715,11 @@ extension on _StringsPtBr {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -570277,6 +570855,10 @@ extension on _StringsRu {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -570285,6 +570867,16 @@ extension on _StringsRu {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -570569,7 +571161,11 @@ extension on _StringsRu {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -588665,6 +589261,10 @@ extension on _StringsTh {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -588673,6 +589273,16 @@ extension on _StringsTh {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -588957,7 +589567,11 @@ extension on _StringsTh {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -607071,6 +607685,10 @@ extension on _StringsTr {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -607079,6 +607697,16 @@ extension on _StringsTr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -607363,7 +607991,11 @@ extension on _StringsTr {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -625472,6 +626104,10 @@ extension on _StringsVi {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -625480,6 +626116,16 @@ extension on _StringsVi {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -625764,7 +626410,11 @@ extension on _StringsVi {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -643720,6 +644370,10 @@ extension on _StringsZhCn {
         return '添加第一张卡';
       case 'srs_engine_unavailable':
         return '本机的排程内核不可用：可以浏览和编辑卡片，但暂时不能复习。';
+      case 'srs_export_anki_compatible':
+        return '兼容 Anki';
+      case 'srs_export_anki_compatible_desc':
+        return '只写 Anki 认识的内容，去掉 Fushi 专有数据（完整复习日志、FSRS-7 参数、笔记出处）。Anki 本来就会忽略这些数据；之后要无损导回 Fushi 请保持关闭。';
       case 'srs_export_apkg':
         return '导出（.apkg）';
       case 'srs_export_done':
@@ -643728,6 +644382,16 @@ extension on _StringsZhCn {
         return '导出失败';
       case 'srs_export_fsrs7_note':
         return 'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
+      case 'srs_export_options_title':
+        return '导出选项';
+      case 'srs_export_with_deck_configs':
+        return '包含牌组预设与 FSRS 参数';
+      case 'srs_export_with_deck_configs_desc':
+        return '学习步长、每日上限、期望保留率与 FSRS 参数。关闭时牌组使用 Anki 默认预设。';
+      case 'srs_export_with_scheduling':
+        return '包含学习进度';
+      case 'srs_export_with_scheduling_desc':
+        return '复习记录与到期日。关闭时所有卡片作为新卡导出。';
       case 'srs_field_info_ai':
         return '让 AI 写说明';
       case 'srs_field_info_ai_busy':
@@ -643998,7 +644662,11 @@ extension on _StringsZhCn {
       case 'srs_import_with_deck_configs':
         return '导入所有牌组预设配置';
       case 'srs_import_with_deck_configs_help':
-        return '本次导入新建的牌组使用包里的学习步长、每日上限、算法和 FSRS 参数；关闭时使用默认设置。已存在的牌组不会被改动。';
+        return '本次导入新建的牌组使用包里的学习步长、每日上限、最大间隔和音频设置；关闭时使用默认设置。算法与 FSRS 参数由单独的开关决定。已存在的牌组不会被改动。';
+      case 'srs_import_with_fsrs_params':
+        return '导入 FSRS 参数';
+      case 'srs_import_with_fsrs_params_help':
+        return '本次导入新建的牌组使用包里的排程算法、FSRS 参数和期望保留率；关闭时使用 Fushi 默认设置（FSRS-7，按你的复习记录自动优化）。已存在的牌组不会被改动。';
       case 'srs_import_with_scheduling':
         return '导入所有学习进度信息';
       case 'srs_import_with_scheduling_help':
@@ -661929,6 +662597,10 @@ extension on _StringsZhHk {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -661937,6 +662609,16 @@ extension on _StringsZhHk {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -662220,7 +662902,11 @@ extension on _StringsZhHk {
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the scheduling algorithm, FSRS parameters and desired retention from the package. When off they use Fushi\'s defaults (FSRS-7, optimized automatically from your reviews). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
