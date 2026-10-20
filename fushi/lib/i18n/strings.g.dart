@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150807 (8871 per locale)
+/// Strings: 151232 (8896 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2039,7 +2039,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_progress_desc => 'Reading positions and bookmarks';
   String get backup_category_settings => 'Settings';
   String get backup_category_settings_desc => 'App and reader settings';
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   String get backup_category_statistics => 'Statistics';
@@ -2391,12 +2391,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
   String get card_target_anki_title => 'Send to Anki';
   String get card_target_current => 'Current';
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   String get change_source => 'Change source';
   String get changelog_empty =>
       'No changelog found. Check your network or proxy settings.';
@@ -2942,6 +2942,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_rename_label => 'Dictionary name';
   String get dict_reorder_hint_desktop => 'Drag to reorder · Alt+↑/↓';
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
   String get dict_selection_exit => 'Exit selection';
   String get dict_status_disabled => 'Disabled';
   String get dict_style_ai_applied =>
@@ -3019,7 +3021,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dictionaries_delete_failed => 'Failed to delete dictionaries';
   String get dictionaries_deleting_data => 'Deleting dictionary data...';
   String get dictionaries_menu_empty => 'Import a dictionary for use';
-  String get dictionary_collapse_follow_global => 'Follow global setting';
   String get dictionary_delete_failed => 'Failed to delete dictionary';
   String get dictionary_font_size => 'Dictionary font size';
   String get dictionary_font_size_zoom_hint =>
@@ -3196,16 +3197,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dismiss_swipe_sensitivity => 'Swipe dismiss sensitivity';
   String get display_settings => 'Typography settings';
   String get download_add_video_source => 'Add video source';
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Ep ${episode}';
   String get download_airing_calendar_error =>
       'Failed to load the airing schedule';
   String get download_airing_calendar_in_library => 'In library';
-  String get download_airing_calendar_show_all => 'Show all this season';
   String get download_airing_calendar_subscribed => 'Subscribed';
   String get download_airing_calendar_title => 'Airing calendar';
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  String get download_airing_calendar_today_title => 'Airing today';
   String get download_airing_calendar_week_empty => 'Nothing airing this week';
   String get download_airing_calendar_week_next => 'Next week';
   String get download_airing_calendar_week_prev => 'Previous week';
@@ -5104,10 +5104,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Drop non-Japanese charset characters';
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Removes characters that cannot be encoded in Shift-JIS';
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Keep only quoted text';
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
   String get game_text_process_kind_normalize_width =>
       'Normalise character width';
   String get game_text_process_kind_normalize_width_desc =>
@@ -5120,9 +5116,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       'Removes markup such as ruby and br tags';
   String get game_text_process_kind_strip_curly_braces =>
-      'Remove furigana braces';
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'A brace with a slash keeps its base text; one without is removed entirely';
+      'Curly-brace furigana to ruby';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   String get game_text_process_kind_take_lines => 'Keep N lines';
   String get game_text_process_kind_take_lines_desc =>
       'Keeps only the first or last N lines';
@@ -5146,6 +5146,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_process_preview_step_unchanged => 'No change';
   String get game_text_process_preview_unchanged => 'Unchanged';
   String get game_text_process_preview_use_latest => 'Use latest captured line';
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   String get game_text_process_ruby_warning =>
       'This step removes the markup furigana is parsed from, so those lines lose their ruby';
   String game_text_process_step_count({required Object count}) =>
@@ -5299,7 +5300,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_mode_shown => 'Show';
   String get home_panel_srs_hint =>
-      'Auto shows it once you mine to Fushi SRS or have review cards';
+      'Auto shows it once you mine to Fushi review or have review cards';
   String get home_recently_added => 'Recently added';
   String get home_remote_source => 'Remote';
   String home_session_count({required Object n}) => '${n} sessions';
@@ -5568,6 +5569,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_upload_content => 'Upload book files';
   String get interconnect_upload_content_hint =>
       'Sync this device\'s books and reading content up to the interconnect peer.';
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   String get interconnect_upload_section => 'Upload to interconnect peer';
   String get interconnect_upload_section_footer =>
       'Choose what this device uploads to the connected peer. Independent from the cloud backup switches and off by default. These switches only apply while Enable interconnect is on: turning interconnect off stops every upload here.';
@@ -6667,6 +6671,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_audio_cd_rip_title => 'Ripping audio CD';
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
+  String get media_detail_start_reading => 'Start reading';
+  String get media_detail_start_watching => 'Start watching';
   String get media_file_location_failed => 'Could not open the file location.';
   String get media_file_location_open => 'Open file location';
   String get media_import_folder => 'Import folder';
@@ -7093,7 +7099,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get nav_game => 'Game';
   String get nav_home => 'Home';
   String get nav_lookup => 'Lookup';
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Review';
   String get nav_video => 'Video';
   String get nav_web => 'Browser';
   String get network_proxy_address_hint =>
@@ -7360,12 +7366,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_finish_body =>
       'You can reopen this guide anytime from Settings → System.';
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   String get onboarding_finish_next_title => 'Next steps';
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   String get onboarding_finish_summary_modules => 'Library pages shown';
   String get onboarding_finish_summary_none => 'None';
   String get onboarding_finish_summary_setup => 'Guided setup';
@@ -7521,9 +7527,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
   String get onboarding_review_anki_title => 'Anki';
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
   String get onboarding_review_method_title => 'How you review';
@@ -7547,7 +7555,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_srs_sync_desc =>
       'Your decks and review progress follow you to your other devices.';
   String get onboarding_srs_sync_title => 'Syncs across devices';
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   String get onboarding_step_anki_action => 'Card creation settings';
   String get onboarding_step_anki_action_desc =>
       'Template, field mapping, screenshots and audio. Deck and note type above are enough to start.';
@@ -8763,8 +8771,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   String get srs_backup_auto => 'Automatic backups';
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
@@ -8783,7 +8791,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_backup_failed => 'Backup failed';
   String get srs_backup_interval => 'Minimum interval';
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   String get srs_backup_keep_daily => 'Daily backups to keep';
   String get srs_backup_keep_hint =>
       'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
@@ -9040,11 +9048,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_empty_title => 'Add your first card';
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
   String get srs_export_apkg => 'Export (.apkg)';
   String get srs_export_done => 'Exported';
   String get srs_export_failed => 'Export failed';
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  String get srs_export_options_title => 'Export options';
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  String get srs_export_with_scheduling => 'Include learning progress';
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   String get srs_field_info_ai => 'Let AI write it';
   String get srs_field_info_ai_busy => 'AI is writing…';
   String srs_field_info_ai_request({required Object name}) =>
@@ -9266,10 +9285,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The same choice for note types: their name, styling and card templates.';
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   String get srs_import_with_deck_configs => 'Import all deck presets';
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   String get srs_import_with_scheduling => 'Import all review progress';
   String get srs_import_with_scheduling_help =>
       'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
@@ -9348,7 +9370,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
   String get srs_mining_target_anki => 'Anki';
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   String get srs_mining_target_title => 'Mining target';
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -9703,7 +9725,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_stats_tomorrow => 'Tomorrow';
   String get srs_stats_total => 'Total';
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   String get srs_stats_view_count => 'Count';
   String get srs_stats_view_cumulative => 'Cumulative';
   String get srs_stats_view_daily => 'Daily';
@@ -9711,9 +9733,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_status_due => 'Due today';
   String get srs_status_learning => 'Learning';
   String get srs_status_new => 'New card';
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   String get srs_status_review_by_recall => 'In review (RWKV)';
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   String get srs_status_suspended => 'Suspended';
@@ -10044,6 +10066,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get storage_shaders_delete_anime4k => 'Delete Anime4K shaders';
   String get stream => 'Stream';
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  String get subscription_auto_disable_half_year => '6 months';
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  String get subscription_auto_disable_never => 'Never';
+  String get subscription_auto_disable_one_year => '1 year';
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   String get subscription_edit_list_helper =>
@@ -10054,6 +10083,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get subscription_edit_title => 'Edit subscription';
   String get subscription_edit_title_exclude => 'Title must not contain';
   String get subscription_edit_title_include => 'Title must contain';
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   String get subscription_history_title => 'Match history';
   String get subscription_item_status_discovered => 'Pending';
   String get subscription_item_status_failed => 'Failed';
@@ -10089,6 +10119,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get subscription_sort_created => 'Date added';
   String get subscription_sort_last_checked => 'Last checked';
   String get subscription_sort_last_matched => 'Last match';
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   String get subtitle_version_ai_translated => 'AI translated';
   String get subtitle_version_content_language => 'Content';
   String subtitle_version_episode_count({required Object n}) => '${n} episodes';
@@ -10240,6 +10272,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_last_no_channels =>
       'Last sync: nothing synced - no connected sync channel';
   String get sync_last_nothing => 'Last sync: nothing to sync';
+  String get sync_manga_content => 'Upload manga files';
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   String get sync_not_signed_in => 'Not signed in';
   String get sync_now => 'Sync now';
   String sync_now_audio_in({required Object count}) => '↓${count} audiobooks';
@@ -10800,7 +10835,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get url => 'URL';
   String get usage_stats_enabled => 'Share usage statistics';
   String get usage_stats_enabled_hint =>
-      'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
+      'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform, update channel, app language, CPU architecture, OS major version and install source (e.g. app store or installer) to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored — only the country or region it resolves to is kept. When you attach device info to feedback, the install ID is sent with it.';
   String get video_air_season_autumn => 'Fall';
   String get video_air_season_spring => 'Spring';
   String get video_air_season_summer => 'Summer';
@@ -11141,6 +11176,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Recently added · Episode ${n}';
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   String video_home_subscription_unwatched_episode({
     required Object n,
     required Object count,
@@ -12761,11 +12798,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_adblock_update_done => 'Filter lists updated';
   String get web_adblock_update_failed => 'Failed to update filter lists';
   String get web_adblock_update_now => 'Update filter lists now';
-  String get web_browser_address_hint => 'Enter a website address';
-  String get web_browser_address_invalid => 'Not a valid website address';
   String get web_browser_forward => 'Forward';
   String get web_browser_lookup_off => 'Tap to look up: off';
   String get web_browser_lookup_on => 'Tap to look up: on';
+  String get web_browser_search_engine => 'Search engine';
+  String get web_browser_search_hint => 'Search or enter address';
   String get web_browser_site_add => 'Add to sites';
   String get web_browser_site_added => 'Added to sites';
   String get web_browser_site_remove => 'Remove from sites';
@@ -15906,7 +15943,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'إعدادات التطبيق والقارئ';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -16489,15 +16526,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'تغيير المصدر';
   @override
@@ -17457,6 +17494,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -17587,8 +17627,6 @@ class _StringsAr extends _StringsEn {
   String get dictionaries_deleting_data => 'جارٍ حذف بيانات القاموس...';
   @override
   String get dictionaries_menu_empty => 'استورد قاموساً للاستخدام';
-  @override
-  String get dictionary_collapse_follow_global => 'اتباع الإعداد العام';
   @override
   String get dictionary_delete_failed => 'فشل حذف القاموس';
   @override
@@ -17893,9 +17931,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_add_video_source => 'إضافة مصدر فيديو';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'لا شيء لعرضه بعد: اربط مجموعة بـ AniList أو أضف اشتراك تحميل، وستظهر مواعيد بثها هنا.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'الحلقة ${episode}';
   @override
@@ -17903,11 +17938,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'في المكتبة';
   @override
-  String get download_airing_calendar_show_all => 'عرض كل هذا الموسم';
-  @override
   String get download_airing_calendar_subscribed => 'مشترك';
   @override
   String get download_airing_calendar_title => 'جدول البث';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty => 'لا يوجد بث هذا الأسبوع';
   @override
@@ -21127,12 +21164,6 @@ class _StringsAr extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'يزيل الأحرف التي لا يمكن ترميزها في Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'الاحتفاظ بالنص المقتبس فقط';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'يحتفظ بالحوار ويحذف السرد؛ والسطر بلا علامات اقتباس يُحذف بالكامل';
-  @override
   String get game_text_process_kind_normalize_width => 'توحيد عرض الأحرف';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -21152,8 +21183,14 @@ class _StringsAr extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'إزالة أقواس الفوريغانا';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'القوس الذي فيه شرطة مائلة يحتفظ بنصه الأساسي؛ وما لا شرطة فيه يُزال بالكامل';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'الاحتفاظ بـ N سطرًا';
   @override
@@ -21195,6 +21232,8 @@ class _StringsAr extends _StringsEn {
   String get game_text_process_preview_unchanged => 'دون تغيير';
   @override
   String get game_text_process_preview_use_latest => 'استخدام آخر سطر ملتقَط';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'تزيل هذه الخطوة الوسوم التي تُحلَّل منها الفوريغانا، فتفقد تلك الأسطر الروبي';
@@ -21899,6 +21938,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'مزامنة كتب ومحتوى القراءة على هذا الجهاز إلى نظير الترابط.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'الرفع إلى نظير الترابط';
   @override
@@ -23782,6 +23826,10 @@ class _StringsAr extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed => 'تعذّر فتح موقع الملف.';
   @override
   String get media_file_location_open => 'فتح موقع الملف';
@@ -24504,7 +24552,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get nav_lookup => 'بحث';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'المراجعة';
   @override
   String get nav_video => 'فيديو';
   @override
@@ -24947,16 +24995,16 @@ class _StringsAr extends _StringsEn {
       'يمكنك فتح هذا الدليل مجدداً في أي وقت من الإعدادات → النظام.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules => 'صفحات المكتبة المعروضة';
   @override
@@ -25206,10 +25254,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -25249,7 +25300,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'إعدادات إنشاء البطاقات';
   @override
@@ -27398,9 +27449,9 @@ class _StringsAr extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -27434,7 +27485,7 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -27896,6 +27947,11 @@ class _StringsAr extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -27904,6 +27960,19 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -28262,12 +28331,17 @@ class _StringsAr extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -28401,7 +28475,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -29022,7 +29096,7 @@ class _StringsAr extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -29038,10 +29112,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -29632,6 +29706,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get study_diag_share_subject => 'تشخيص الدراسة في Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -29649,6 +29735,8 @@ class _StringsAr extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -29713,6 +29801,9 @@ class _StringsAr extends _StringsEn {
   String get subscription_sort_last_checked => 'آخر فحص';
   @override
   String get subscription_sort_last_matched => 'آخر تطابق';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'ترجمة بالذكاء الاصطناعي';
   @override
@@ -29982,6 +30073,11 @@ class _StringsAr extends _StringsEn {
       'آخر مزامنة: لم تتم المزامنة - لا توجد قناة مزامنة متصلة';
   @override
   String get sync_last_nothing => 'آخر مزامنة: لا شيء لمزامنته';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'لم يتم تسجيل الدخول';
   @override
@@ -30943,7 +31039,7 @@ class _StringsAr extends _StringsEn {
   String get usage_stats_enabled => 'مشاركة إحصاءات الاستخدام';
   @override
   String get usage_stats_enabled_hint =>
-      'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
+      'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث ولغة التطبيق وبنية المعالج والإصدار الرئيسي لنظام التشغيل ومصدر التثبيت (مثل متجر التطبيقات أو المثبّت) إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك، بل يُحفَظ فقط البلد أو المنطقة المستنتجة منه. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
   @override
   String get video_air_season_autumn => 'خريف';
   @override
@@ -31522,6 +31618,9 @@ class _StringsAr extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} دقيقة متبقية';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -34214,15 +34313,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -37470,7 +37569,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'App- und Reader-Einstellungen';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -38067,15 +38166,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Quelle ändern';
   @override
@@ -39047,6 +39146,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -39183,8 +39285,6 @@ class _StringsDe extends _StringsEn {
   String get dictionaries_deleting_data => 'Wörterbuchdaten werden gelöscht...';
   @override
   String get dictionaries_menu_empty => 'Importieren Sie ein Wörterbuch';
-  @override
-  String get dictionary_collapse_follow_global => 'Globaler Einstellung folgen';
   @override
   String get dictionary_delete_failed =>
       'Löschen des Wörterbuchs fehlgeschlagen';
@@ -39497,9 +39597,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_add_video_source => 'Videoquelle hinzufügen';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Noch nichts anzuzeigen: Verknüpfen Sie eine Sammlung mit AniList oder fügen Sie ein Download-Abonnement hinzu, dann erscheinen die Sendezeiten hier.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Folge ${episode}';
   @override
@@ -39508,11 +39605,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'In der Bibliothek';
   @override
-  String get download_airing_calendar_show_all => 'Alle dieser Saison anzeigen';
-  @override
   String get download_airing_calendar_subscribed => 'Abonniert';
   @override
   String get download_airing_calendar_title => 'Sendekalender';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty =>
       'Keine Ausstrahlungen diese Woche';
@@ -42812,12 +42911,6 @@ class _StringsDe extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Entfernt Zeichen, die in Shift-JIS nicht kodiert werden können';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Nur zitierten Text behalten';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Behält Dialoge und verwirft Erzähltext; eine Zeile ohne Anführungszeichen wird vollständig verworfen';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Zeichenbreite normalisieren';
   @override
@@ -42838,8 +42931,14 @@ class _StringsDe extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Furigana-Klammern entfernen';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Eine Klammer mit Schrägstrich behält ihren Basistext; eine ohne wird vollständig entfernt';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'N Zeilen behalten';
   @override
@@ -42884,6 +42983,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Zuletzt erfasste Zeile verwenden';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Dieser Schritt entfernt das Markup, aus dem Furigana geparst werden, sodass diese Zeilen ihr Ruby verlieren';
@@ -43596,6 +43697,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Bücher und Leseinhalte dieses Geräts zum Interconnect-Peer synchronisieren.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Zum Interconnect-Peer hochladen';
   @override
@@ -45526,6 +45632,10 @@ class _StringsDe extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed =>
       'Der Speicherort der Datei konnte nicht geöffnet werden.';
   @override
@@ -46265,7 +46375,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get nav_lookup => 'Nachschlagen';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Wiederholen';
   @override
   String get nav_video => 'Video';
   @override
@@ -46714,16 +46824,16 @@ class _StringsDe extends _StringsEn {
       'Sie können diese Anleitung jederzeit unter Einstellungen → System wieder öffnen.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Angezeigte Bibliotheksseiten';
@@ -46983,10 +47093,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -47026,7 +47139,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Kartenerstell-Einstellungen';
   @override
@@ -49218,9 +49331,9 @@ class _StringsDe extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -49254,7 +49367,7 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -49716,6 +49829,11 @@ class _StringsDe extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -49724,6 +49842,19 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -50082,12 +50213,17 @@ class _StringsDe extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -50221,7 +50357,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -50842,7 +50978,7 @@ class _StringsDe extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -50858,10 +50994,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -51457,6 +51593,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Fushi-Lerndiagnose';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -51474,6 +51622,8 @@ class _StringsDe extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -51538,6 +51688,9 @@ class _StringsDe extends _StringsEn {
   String get subscription_sort_last_checked => 'Zuletzt geprüft';
   @override
   String get subscription_sort_last_matched => 'Letzter Treffer';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'KI-übersetzt';
   @override
@@ -51811,6 +51964,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Letzte Synchronisierung: nichts zu synchronisieren';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Nicht angemeldet';
   @override
@@ -52793,7 +52951,7 @@ class _StringsDe extends _StringsEn {
   String get usage_stats_enabled => 'Nutzungsstatistiken teilen';
   @override
   String get usage_stats_enabled_hint =>
-      'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
+      'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform, den Update-Kanal, die App-Sprache, die CPU-Architektur, die Hauptversion des Betriebssystems und die Installationsquelle (z. B. App-Store oder Installer) an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert – nur das daraus ermittelte Land bzw. die Region. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
   @override
   String get video_air_season_autumn => 'Herbst';
   @override
@@ -53379,6 +53537,9 @@ class _StringsDe extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} Min. verbleibend';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -56128,15 +56289,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -59398,7 +59559,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Ajustes de la app y del lector';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -59991,15 +60152,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Cambiar fuente';
   @override
@@ -60975,6 +61136,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -61112,8 +61276,6 @@ class _StringsEs extends _StringsEn {
       'Eliminando datos del diccionario...';
   @override
   String get dictionaries_menu_empty => 'Importa un diccionario para usar';
-  @override
-  String get dictionary_collapse_follow_global => 'Seguir el ajuste global';
   @override
   String get dictionary_delete_failed => 'No se pudo eliminar el diccionario';
   @override
@@ -61428,9 +61590,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_add_video_source => 'Añadir fuente de vídeo';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nada que mostrar aún: vincule una colección a AniList o agregue una suscripción de descarga, y sus horarios de emisión aparecerán aquí.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Ep ${episode}';
   @override
@@ -61439,12 +61598,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'En biblioteca';
   @override
-  String get download_airing_calendar_show_all =>
-      'Mostrar todo de esta temporada';
-  @override
   String get download_airing_calendar_subscribed => 'Suscrito';
   @override
   String get download_airing_calendar_title => 'Calendario de emisión';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty => 'Nada se emite esta semana';
   @override
@@ -64743,12 +64903,6 @@ class _StringsEs extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Elimina los caracteres que no se pueden codificar en Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Conservar solo el texto entrecomillado';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Conserva los diálogos y descarta la narración; una línea sin comillas se descarta por completo';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normalizar el ancho de caracteres';
   @override
@@ -64769,8 +64923,14 @@ class _StringsEs extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Quitar llaves de furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Una llave con barra conserva su texto base; una sin barra se elimina por completo';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Conservar N líneas';
   @override
@@ -64814,6 +64974,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Usar la última línea capturada';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Este paso elimina el marcado a partir del cual se analiza el furigana, por lo que esas líneas pierden su ruby';
@@ -65529,6 +65691,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Sincroniza los libros y contenido de lectura de este dispositivo al par de Interconnect.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Subir al par de Interconnect';
   @override
@@ -67468,6 +67635,10 @@ class _StringsEs extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed =>
       'No se pudo abrir la ubicación del archivo.';
   @override
@@ -68204,7 +68375,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get nav_lookup => 'Consultar';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Repaso';
   @override
   String get nav_video => 'Vídeo';
   @override
@@ -68652,16 +68823,16 @@ class _StringsEs extends _StringsEn {
       'Puede volver a abrir esta guía en cualquier momento desde Ajustes → Sistema.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Páginas de biblioteca visibles';
@@ -68922,10 +69093,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -68965,7 +69139,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Ajustes de creación de tarjetas';
   @override
@@ -71163,9 +71337,9 @@ class _StringsEs extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -71199,7 +71373,7 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -71661,6 +71835,11 @@ class _StringsEs extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -71669,6 +71848,19 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -72027,12 +72219,17 @@ class _StringsEs extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -72166,7 +72363,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -72787,7 +72984,7 @@ class _StringsEs extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -72803,10 +73000,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -73403,6 +73600,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Diagnóstico de estudio de Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -73420,6 +73629,8 @@ class _StringsEs extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -73485,6 +73696,9 @@ class _StringsEs extends _StringsEn {
   String get subscription_sort_last_checked => 'Última verificación';
   @override
   String get subscription_sort_last_matched => 'Última coincidencia';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'Traducido por IA';
   @override
@@ -73761,6 +73975,11 @@ class _StringsEs extends _StringsEn {
       'Última sincronización: nada sincronizado — sin canal de sincronización conectado';
   @override
   String get sync_last_nothing => 'Última sincronización: nada que sincronizar';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'No conectado';
   @override
@@ -74749,7 +74968,7 @@ class _StringsEs extends _StringsEn {
   String get usage_stats_enabled => 'Compartir estadísticas de uso';
   @override
   String get usage_stats_enabled_hint =>
-      'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
+      'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma, el canal de actualizaciones, el idioma de la app, la arquitectura de CPU, la versión principal del sistema y el origen de instalación (p. ej. tienda o instalador) para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda: solo se conserva el país o región que se deduce de ella. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
   @override
   String get video_air_season_autumn => 'Otoño';
   @override
@@ -75340,6 +75559,9 @@ class _StringsEs extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min restantes';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -78098,15 +78320,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -81382,7 +81604,7 @@ class _StringsFr extends _StringsEn {
   String get backup_category_settings_desc =>
       'Paramètres de l\'application et du lecteur';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -81979,15 +82201,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Changer de source';
   @override
@@ -82970,6 +83192,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -83109,8 +83334,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Importez un dictionnaire pour l\'utiliser';
-  @override
-  String get dictionary_collapse_follow_global => 'Suivre le réglage global';
   @override
   String get dictionary_delete_failed =>
       'Échec de la suppression du dictionnaire';
@@ -83425,9 +83648,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_add_video_source => 'Ajouter une source vidéo';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Rien à afficher : liez une collection à AniList ou ajoutez un abonnement de téléchargement, et les horaires de diffusion apparaîtront ici.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Ép ${episode}';
   @override
@@ -83436,11 +83656,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'Dans la bibliothèque';
   @override
-  String get download_airing_calendar_show_all => 'Afficher toute cette saison';
-  @override
   String get download_airing_calendar_subscribed => 'Abonné';
   @override
   String get download_airing_calendar_title => 'Calendrier de diffusion';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty =>
       'Rien ne passe cette semaine';
@@ -86745,12 +86967,6 @@ class _StringsFr extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Supprime les caractères qui ne peuvent pas être encodés en Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Ne garder que le texte entre guillemets';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Garde les dialogues et supprime la narration ; une ligne sans guillemets est entièrement supprimée';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normaliser la largeur des caractères';
   @override
@@ -86771,8 +86987,14 @@ class _StringsFr extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Supprimer les accolades de furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Une accolade avec une barre oblique conserve son texte de base ; sans barre, elle est entièrement supprimée';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Garder N lignes';
   @override
@@ -86817,6 +87039,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Utiliser la dernière ligne capturée';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Cette étape supprime le balisage à partir duquel les furigana sont analysés ; ces lignes perdent donc leurs ruby';
@@ -87534,6 +87758,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Synchroniser les livres et le contenu de lecture de cet appareil vers le pair d\'interconnexion.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section =>
       'Envoyer vers le pair d\'interconnexion';
@@ -89480,6 +89709,10 @@ class _StringsFr extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed =>
       'Impossible d\'ouvrir l\'emplacement du fichier.';
   @override
@@ -90220,7 +90453,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get nav_lookup => 'Recherche';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Révision';
   @override
   String get nav_video => 'Vidéo';
   @override
@@ -90672,16 +90905,16 @@ class _StringsFr extends _StringsEn {
       'Vous pouvez rouvrir ce guide à tout moment depuis Paramètres → Système.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Pages de bibliothèque affichées';
@@ -90945,10 +91178,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -90988,7 +91224,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Paramètres de création de cartes';
   @override
@@ -93195,9 +93431,9 @@ class _StringsFr extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -93231,7 +93467,7 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -93693,6 +93929,11 @@ class _StringsFr extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -93701,6 +93942,19 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -94059,12 +94313,17 @@ class _StringsFr extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -94198,7 +94457,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -94819,7 +95078,7 @@ class _StringsFr extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -94835,10 +95094,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -95434,6 +95693,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Diagnostic d\'étude Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -95451,6 +95722,8 @@ class _StringsFr extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -95514,6 +95787,9 @@ class _StringsFr extends _StringsEn {
   String get subscription_sort_last_checked => 'Dernière vérification';
   @override
   String get subscription_sort_last_matched => 'Dernière correspondance';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'Traduit par IA';
   @override
@@ -95788,6 +96064,11 @@ class _StringsFr extends _StringsEn {
       'Dernière synchro : rien — aucun canal de synchronisation connecté';
   @override
   String get sync_last_nothing => 'Dernière synchro : rien à synchroniser';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Non connecté';
   @override
@@ -96779,7 +97060,7 @@ class _StringsFr extends _StringsEn {
   String get usage_stats_enabled => 'Partager les statistiques d’utilisation';
   @override
   String get usage_stats_enabled_hint =>
-      'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
+      'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme, le canal de mise à jour, la langue de l’app, l’architecture du processeur, la version majeure du système et la source d’installation (boutique ou installateur, par ex.) afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée : seul le pays ou la région qui en découle est gardé. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
   @override
   String get video_air_season_autumn => 'Automne';
   @override
@@ -97371,6 +97652,9 @@ class _StringsFr extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min restantes';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -100149,15 +100433,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -103389,7 +103673,7 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Pengaturan aplikasi dan pembaca';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -103975,15 +104259,15 @@ class _StringsId extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Ubah Sumber';
   @override
@@ -104946,6 +105230,9 @@ class _StringsId extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -105079,8 +105366,6 @@ class _StringsId extends _StringsEn {
   String get dictionaries_deleting_data => 'Menghapus data kamus...';
   @override
   String get dictionaries_menu_empty => 'Impor kamus untuk digunakan';
-  @override
-  String get dictionary_collapse_follow_global => 'Ikuti pengaturan global';
   @override
   String get dictionary_delete_failed => 'Gagal menghapus kamus';
   @override
@@ -105388,9 +105673,6 @@ class _StringsId extends _StringsEn {
   @override
   String get download_add_video_source => 'Tambah sumber video';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Belum ada yang ditampilkan: tautkan koleksi ke AniList atau tambahkan langganan unduhan, dan jadwal tayangnya akan muncul di sini.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Ep ${episode}';
   @override
@@ -105398,11 +105680,13 @@ class _StringsId extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'Di perpustakaan';
   @override
-  String get download_airing_calendar_show_all => 'Tampilkan semua musim ini';
-  @override
   String get download_airing_calendar_subscribed => 'Berlangganan';
   @override
   String get download_airing_calendar_title => 'Kalender tayang';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty =>
       'Tidak ada yang tayang minggu ini';
@@ -108656,12 +108940,6 @@ class _StringsId extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Menghapus karakter yang tidak dapat dikodekan dalam Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Pertahankan hanya teks bertanda kutip';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Mempertahankan dialog dan membuang narasi; baris tanpa tanda kutip dibuang seluruhnya';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normalkan lebar karakter';
   @override
@@ -108682,8 +108960,14 @@ class _StringsId extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Hapus kurung furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Kurung dengan garis miring mempertahankan teks dasarnya; yang tanpa itu dihapus seluruhnya';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Pertahankan N baris';
   @override
@@ -108728,6 +109012,8 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Gunakan baris terakhir yang ditangkap';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Langkah ini menghapus markup tempat furigana diurai, sehingga baris tersebut kehilangan ruby-nya';
@@ -109436,6 +109722,11 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Sinkronkan buku dan konten bacaan perangkat ini ke peer interconnect.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Unggah ke peer interconnect';
   @override
@@ -111344,6 +111635,10 @@ class _StringsId extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed => 'Tidak dapat membuka lokasi berkas.';
   @override
   String get media_file_location_open => 'Buka lokasi berkas';
@@ -112073,7 +112368,7 @@ class _StringsId extends _StringsEn {
   @override
   String get nav_lookup => 'Cari Kata';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Ulasan';
   @override
   String get nav_video => 'Video';
   @override
@@ -112520,16 +112815,16 @@ class _StringsId extends _StringsEn {
       'Anda bisa membuka lagi panduan ini kapan saja dari Pengaturan → Sistem.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Halaman perpustakaan yang ditampilkan';
@@ -112781,10 +113076,13 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -112824,7 +113122,7 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Pengaturan pembuatan kartu';
   @override
@@ -114991,9 +115289,9 @@ class _StringsId extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -115027,7 +115325,7 @@ class _StringsId extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -115489,6 +115787,11 @@ class _StringsId extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -115497,6 +115800,19 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -115855,12 +116171,17 @@ class _StringsId extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -115994,7 +116315,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -116615,7 +116936,7 @@ class _StringsId extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -116631,10 +116952,10 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -117228,6 +117549,18 @@ class _StringsId extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Diagnostik belajar Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -117245,6 +117578,8 @@ class _StringsId extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -117308,6 +117643,9 @@ class _StringsId extends _StringsEn {
   String get subscription_sort_last_checked => 'Terakhir diperiksa';
   @override
   String get subscription_sort_last_matched => 'Kecocokan terakhir';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'Diterjemahkan AI';
   @override
@@ -117577,6 +117915,11 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Sinkronisasi terakhir: tidak ada yang perlu disinkronkan';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Belum masuk';
   @override
@@ -118549,7 +118892,7 @@ class _StringsId extends _StringsEn {
   String get usage_stats_enabled => 'Bagikan statistik penggunaan';
   @override
   String get usage_stats_enabled_hint =>
-      'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
+      'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, kanal pembaruan, bahasa aplikasi, arsitektur CPU, versi utama sistem operasi, dan sumber instalasi (misalnya toko aplikasi atau penginstal) ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan — hanya negara atau wilayah yang ditentukan darinya. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
   @override
   String get video_air_season_autumn => 'Musim gugur';
   @override
@@ -119135,6 +119478,9 @@ class _StringsId extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} menit tersisa';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -121859,15 +122205,15 @@ class _StringsId extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -125117,7 +125463,7 @@ class _StringsIt extends _StringsEn {
   String get backup_category_settings_desc =>
       'Impostazioni dell\'app e del lettore';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -125707,15 +126053,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Cambia sorgente';
   @override
@@ -126683,6 +127029,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -126819,9 +127168,6 @@ class _StringsIt extends _StringsEn {
       'Eliminazione dati del dizionario...';
   @override
   String get dictionaries_menu_empty => 'Importa un dizionario per l\'uso';
-  @override
-  String get dictionary_collapse_follow_global =>
-      'Segui l\'impostazione globale';
   @override
   String get dictionary_delete_failed => 'Impossibile eliminare il dizionario';
   @override
@@ -127133,9 +127479,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_add_video_source => 'Aggiungi fonte video';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Niente da mostrare: collega una raccolta ad AniList o aggiungi un abbonamento ai download, e gli orari di uscita appariranno qui.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Ep ${episode}';
   @override
@@ -127144,12 +127487,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'In libreria';
   @override
-  String get download_airing_calendar_show_all =>
-      'Mostra tutto questa stagione';
-  @override
   String get download_airing_calendar_subscribed => 'Abbonato';
   @override
   String get download_airing_calendar_title => 'Calendario uscite';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty =>
       'Nessuna uscita questa settimana';
@@ -130429,12 +130773,6 @@ class _StringsIt extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Rimuove i caratteri che non possono essere codificati in Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Mantieni solo il testo tra virgolette';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Mantiene i dialoghi ed elimina la narrazione; una riga senza virgolette viene scartata del tutto';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normalizza la larghezza dei caratteri';
   @override
@@ -130455,8 +130793,14 @@ class _StringsIt extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Rimuovi le graffe dei furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Una graffa con una barra mantiene il testo di base; una senza viene rimossa del tutto';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Mantieni N righe';
   @override
@@ -130501,6 +130845,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Usa l\'ultima riga catturata';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Questo passaggio rimuove il markup da cui vengono analizzati i furigana, quindi quelle righe perdono il ruby';
@@ -131215,6 +131561,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Sincronizza i libri e i contenuti di lettura di questo dispositivo sul peer interconnect.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Carica sul peer interconnect';
   @override
@@ -133143,6 +133494,10 @@ class _StringsIt extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed =>
       'Impossibile aprire la posizione del file.';
   @override
@@ -133880,7 +134235,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get nav_lookup => 'Ricerca';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Ripasso';
   @override
   String get nav_video => 'Video';
   @override
@@ -134327,16 +134682,16 @@ class _StringsIt extends _StringsEn {
       'Puoi riaprire questa guida in qualsiasi momento da Impostazioni → Sistema.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Pagine della libreria mostrate';
@@ -134593,10 +134948,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -134636,7 +134994,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Impostazioni creazione carte';
   @override
@@ -136831,9 +137189,9 @@ class _StringsIt extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -136867,7 +137225,7 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -137329,6 +137687,11 @@ class _StringsIt extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -137337,6 +137700,19 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -137695,12 +138071,17 @@ class _StringsIt extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -137834,7 +138215,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -138455,7 +138836,7 @@ class _StringsIt extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -138471,10 +138852,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -139069,6 +139450,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Diagnostica di studio di Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -139086,6 +139479,8 @@ class _StringsIt extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -139149,6 +139544,9 @@ class _StringsIt extends _StringsEn {
   String get subscription_sort_last_checked => 'Ultimo controllo';
   @override
   String get subscription_sort_last_matched => 'Ultima corrispondenza';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'Traduzione AI';
   @override
@@ -139420,6 +139818,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Ultima sincronizzazione: nulla da sincronizzare';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Non connesso';
   @override
@@ -140401,7 +140804,7 @@ class _StringsIt extends _StringsEn {
   String get usage_stats_enabled => 'Condividi statistiche di utilizzo';
   @override
   String get usage_stats_enabled_hint =>
-      'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
+      'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma, il canale di aggiornamento, la lingua dell\'app, l\'architettura della CPU, la versione principale del sistema e l\'origine dell\'installazione (es. store o programma di installazione), così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato: si conserva solo il paese o la regione che ne deriva. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
   @override
   String get video_air_season_autumn => 'Autunno';
   @override
@@ -140988,6 +141391,9 @@ class _StringsIt extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min rimanenti';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -143729,15 +144135,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -146874,7 +147280,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'アプリとリーダーの設定';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -147433,15 +147839,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'ソースを変更';
   @override
@@ -148361,6 +148767,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -148489,8 +148898,6 @@ class _StringsJa extends _StringsEn {
   String get dictionaries_deleting_data => '辞書データを削除中...';
   @override
   String get dictionaries_menu_empty => '辞書をインポートしてください';
-  @override
-  String get dictionary_collapse_follow_global => '全体設定に従う';
   @override
   String get dictionary_delete_failed => '辞書の削除に失敗しました';
   @override
@@ -148787,9 +149194,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_add_video_source => '動画ソースを追加';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'まだ表示するものがありません。コレクションをAniListに紐付けるか、ダウンロードサブスクリプションを追加すると、放送スケジュールがここに表示されます。';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       '第${episode}話';
   @override
@@ -148797,11 +149201,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'ライブラリ内';
   @override
-  String get download_airing_calendar_show_all => '今季のすべてを表示';
-  @override
   String get download_airing_calendar_subscribed => '購読中';
   @override
   String get download_airing_calendar_title => '放送カレンダー';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty => '今週の放送はありません';
   @override
@@ -151909,11 +152315,6 @@ class _StringsJa extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Shift-JIS でエンコードできない文字を削除します';
   @override
-  String get game_text_process_kind_keep_japanese_quotes => '「」内のテキストのみ残す';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      '台詞だけを残し、地の文を削除します。「」のない行は丸ごと破棄されます';
-  @override
   String get game_text_process_kind_normalize_width => '文字幅を正規化';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -151928,10 +152329,15 @@ class _StringsJa extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       'ruby や br タグなどのマークアップを削除します';
   @override
-  String get game_text_process_kind_strip_curly_braces => '波括弧のふりがなを削除';
+  String get game_text_process_kind_strip_curly_braces => '波括弧のふりがなをルビに変換';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'スラッシュ付きの波括弧は基の文字を残し、スラッシュのないものは丸ごと削除します';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{漢字/かな}・{漢字:かな} の読みを漢字の上にルビとして表示し、それ以外の波括弧は丸ごと削除します';
+  @override
+  String get game_text_process_kind_strip_outside_quotes => '「」の外の文字を除去';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      '話者名など「」の外の文字を除去します。「」のない行（地の文）はそのまま残ります';
   @override
   String get game_text_process_kind_take_lines => 'N 行を残す';
   @override
@@ -151970,6 +152376,8 @@ class _StringsJa extends _StringsEn {
   String get game_text_process_preview_unchanged => '変更なし';
   @override
   String get game_text_process_preview_use_latest => '最近取得した行を使用';
+  @override
+  String get game_text_process_reset_defaults => 'デフォルトに戻す';
   @override
   String get game_text_process_ruby_warning =>
       'このステップはふりがなの解析元になるマークアップを削除するため、該当する行のルビが失われます';
@@ -152236,7 +152644,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_panel_mode_shown => '表示';
   @override
-  String get home_panel_srs_hint => '自動：Fushi SRS にカードを作成するか、復習カードがあると表示';
+  String get home_panel_srs_hint => '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
   @override
   String get home_recently_added => '最近追加';
   @override
@@ -152649,6 +153057,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'このデバイスの書籍と読書コンテンツをインターコネクトピアに同期します。';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'インターコネクトピアにアップロード';
   @override
@@ -154475,6 +154888,10 @@ class _StringsJa extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed => 'ファイルの場所を開けませんでした。';
   @override
   String get media_file_location_open => 'ファイルの場所を開く';
@@ -155167,7 +155584,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get nav_lookup => '辞書';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => '復習';
   @override
   String get nav_video => '動画';
   @override
@@ -155592,16 +156009,16 @@ class _StringsJa extends _StringsEn {
   String get onboarding_finish_body => 'このガイドは設定 → システムからいつでも開き直せます。';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules => '表示するライブラリのページ';
   @override
@@ -155838,10 +156255,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -155881,7 +156301,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'カード作成設定';
   @override
@@ -157963,9 +158383,9 @@ class _StringsJa extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -157999,7 +158419,7 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -158461,6 +158881,11 @@ class _StringsJa extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -158469,6 +158894,19 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -158827,12 +159265,17 @@ class _StringsJa extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -158966,7 +159409,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -159587,7 +160030,7 @@ class _StringsJa extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -159603,10 +160046,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -160186,6 +160629,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Fushi 統計診断';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -160203,6 +160658,8 @@ class _StringsJa extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -160262,6 +160719,9 @@ class _StringsJa extends _StringsEn {
   String get subscription_sort_last_checked => '最終チェック日';
   @override
   String get subscription_sort_last_matched => '最終一致日';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'AI翻訳';
   @override
@@ -160511,6 +160971,11 @@ class _StringsJa extends _StringsEn {
   String get sync_last_no_channels => '最終同期: 同期チャンネルが未接続のため同期なし';
   @override
   String get sync_last_nothing => '最終同期: 同期対象なし';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => '未ログイン';
   @override
@@ -161441,7 +161906,7 @@ class _StringsJa extends _StringsEn {
   String get usage_stats_enabled => '利用統計を送信';
   @override
   String get usage_stats_enabled_hint =>
-      '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
+      '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネル・アプリの表示言語・CPU アーキテクチャ・OS のメジャーバージョン・インストール元（ストアやインストーラーなど）を fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません（そこから判定した国・地域のみ記録します）。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -161997,6 +162462,9 @@ class _StringsJa extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '残り${minutes}分';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -164567,15 +165035,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -167700,7 +168168,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_settings_desc => '앱 및 리더 설정';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -168261,15 +168729,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => '소스 변경';
   @override
@@ -169192,6 +169660,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -169319,8 +169790,6 @@ class _StringsKo extends _StringsEn {
   String get dictionaries_deleting_data => '사전 데이터 삭제 중...';
   @override
   String get dictionaries_menu_empty => '사용할 사전을 가져오세요';
-  @override
-  String get dictionary_collapse_follow_global => '전역 설정 따르기';
   @override
   String get dictionary_delete_failed => '사전 삭제 실패';
   @override
@@ -169613,9 +170082,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_add_video_source => '동영상 소스 추가';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      '아직 표시할 항목이 없습니다: 컬렉션을 AniList에 연결하거나 다운로드 구독을 추가하면 방영 시간이 여기에 표시됩니다.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       '${episode}화';
   @override
@@ -169623,11 +170089,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => '라이브러리에 있음';
   @override
-  String get download_airing_calendar_show_all => '이번 시즌 모두 보기';
-  @override
   String get download_airing_calendar_subscribed => '구독 중';
   @override
   String get download_airing_calendar_title => '방영 일정';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty => '이번 주 방영 없음';
   @override
@@ -172752,11 +173220,6 @@ class _StringsKo extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Shift-JIS로 인코딩할 수 없는 문자를 제거합니다';
   @override
-  String get game_text_process_kind_keep_japanese_quotes => '따옴표 안의 텍스트만 유지';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      '대사는 유지하고 지문은 삭제하며, 따옴표가 없는 줄은 통째로 삭제합니다';
-  @override
   String get game_text_process_kind_normalize_width => '문자 폭 정규화';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -172773,8 +173236,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_process_kind_strip_curly_braces => '후리가나 중괄호 제거';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      '슬래시가 있는 중괄호는 본문 텍스트를 유지하고, 없는 중괄호는 통째로 제거합니다';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'N줄만 유지';
   @override
@@ -172813,6 +173282,8 @@ class _StringsKo extends _StringsEn {
   String get game_text_process_preview_unchanged => '변경 없음';
   @override
   String get game_text_process_preview_use_latest => '가장 최근에 캡처한 줄 사용';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       '이 단계는 후리가나를 파싱하는 데 쓰이는 마크업을 제거하므로 해당 줄은 루비를 잃게 됩니다';
@@ -173489,6 +173960,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       '이 기기의 도서 및 읽기 콘텐츠를 인터커넥트 피어로 동기화합니다.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => '인터커넥트 피어로 업로드';
   @override
@@ -175324,6 +175800,10 @@ class _StringsKo extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed => '파일 위치를 열 수 없어요.';
   @override
   String get media_file_location_open => '파일 위치 열기';
@@ -176018,7 +176498,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get nav_lookup => '단어 찾기';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => '복습';
   @override
   String get nav_video => '비디오';
   @override
@@ -176449,16 +176929,16 @@ class _StringsKo extends _StringsEn {
   String get onboarding_finish_body => '설정 → 시스템에서 이 가이드를 언제든 다시 열 수 있습니다.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules => '표시할 라이브러리 페이지';
   @override
@@ -176695,10 +177175,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -176738,7 +177221,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => '카드 생성 설정';
   @override
@@ -178820,9 +179303,9 @@ class _StringsKo extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -178856,7 +179339,7 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -179318,6 +179801,11 @@ class _StringsKo extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -179326,6 +179814,19 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -179684,12 +180185,17 @@ class _StringsKo extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -179823,7 +180329,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -180444,7 +180950,7 @@ class _StringsKo extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -180460,10 +180966,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -181043,6 +181549,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Fushi 학습 진단';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -181060,6 +181578,8 @@ class _StringsKo extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -181119,6 +181639,9 @@ class _StringsKo extends _StringsEn {
   String get subscription_sort_last_checked => '마지막 확인';
   @override
   String get subscription_sort_last_matched => '마지막 일치';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'AI 번역';
   @override
@@ -181370,6 +181893,11 @@ class _StringsKo extends _StringsEn {
   String get sync_last_no_channels => '마지막 동기화: 동기화 안 됨 - 연결된 동기화 채널 없음';
   @override
   String get sync_last_nothing => '마지막 동기화: 동기화할 항목 없음';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => '로그인되지 않음';
   @override
@@ -182300,7 +182828,7 @@ class _StringsKo extends _StringsEn {
   String get usage_stats_enabled => '사용 통계 보내기';
   @override
   String get usage_stats_enabled_hint =>
-      '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
+      '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널, 앱 언어, CPU 아키텍처, OS 주 버전, 설치 경로(앱 스토어·설치 프로그램 등)를 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않으며, 이를 통해 판별한 국가/지역만 기록합니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
   @override
   String get video_air_season_autumn => '가을';
   @override
@@ -182856,6 +183384,9 @@ class _StringsKo extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '남은 시간 ${minutes}분';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -185462,15 +185993,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -188712,7 +189243,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'App- en lezerinstellingen';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -189304,15 +189835,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Bron wijzigen';
   @override
@@ -190280,6 +190811,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -190416,8 +190950,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Importeer een woordenboek voor gebruik';
-  @override
-  String get dictionary_collapse_follow_global => 'Globale instelling volgen';
   @override
   String get dictionary_delete_failed => 'Verwijderen van woordenboek mislukt';
   @override
@@ -190730,9 +191262,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_add_video_source => 'Videobron toevoegen';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nog niets te tonen: koppel een collectie aan AniList of voeg een downloadabonnement toe, en hun uitzendtijden verschijnen hier.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Afl. ${episode}';
   @override
@@ -190741,11 +191270,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'In bibliotheek';
   @override
-  String get download_airing_calendar_show_all => 'Alles tonen van dit seizoen';
-  @override
   String get download_airing_calendar_subscribed => 'Geabonneerd';
   @override
   String get download_airing_calendar_title => 'Uitzendkalender';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty => 'Niets gepland deze week';
   @override
@@ -194009,12 +194540,6 @@ class _StringsNl extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Verwijdert tekens die niet in Shift-JIS kunnen worden gecodeerd';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Alleen geciteerde tekst behouden';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Behoudt dialoog en laat vertelling weg; een regel zonder aanhalingstekens wordt helemaal weggelaten';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Tekenbreedte normaliseren';
   @override
@@ -194035,8 +194560,14 @@ class _StringsNl extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Furigana-accolades verwijderen';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Een accolade met een schuine streep behoudt de basistekst; een zonder wordt helemaal verwijderd';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'N regels behouden';
   @override
@@ -194081,6 +194612,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Laatst vastgelegde regel gebruiken';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Deze stap verwijdert de opmaak waaruit furigana wordt gelezen, waardoor die regels hun ruby verliezen';
@@ -194793,6 +195326,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Synchroniseer de boeken en leesinhoud van dit apparaat naar de interconnectpeer.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Uploaden naar interconnectpeer';
   @override
@@ -196709,6 +197247,10 @@ class _StringsNl extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed =>
       'Kan de bestandslocatie niet openen.';
   @override
@@ -197442,7 +197984,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get nav_lookup => 'Opzoeken';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Herhalen';
   @override
   String get nav_video => 'Video';
   @override
@@ -197890,16 +198432,16 @@ class _StringsNl extends _StringsEn {
       'Je kunt deze gids altijd opnieuw openen via Instellingen → Systeem.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Getoonde bibliotheekpagina\'s';
@@ -198158,10 +198700,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -198201,7 +198746,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Kaartaanmaak-instellingen';
   @override
@@ -200386,9 +200931,9 @@ class _StringsNl extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -200422,7 +200967,7 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -200884,6 +201429,11 @@ class _StringsNl extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -200892,6 +201442,19 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -201250,12 +201813,17 @@ class _StringsNl extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -201389,7 +201957,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -202010,7 +202578,7 @@ class _StringsNl extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -202026,10 +202594,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -202624,6 +203192,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Fushi-studiediagnostiek';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -202641,6 +203221,8 @@ class _StringsNl extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -202704,6 +203286,9 @@ class _StringsNl extends _StringsEn {
   String get subscription_sort_last_checked => 'Laatst gecontroleerd';
   @override
   String get subscription_sort_last_matched => 'Laatste match';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'AI-vertaald';
   @override
@@ -202976,6 +203561,11 @@ class _StringsNl extends _StringsEn {
       'Laatste sync: niets gesynchroniseerd — geen verbonden synchronisatiekanaal';
   @override
   String get sync_last_nothing => 'Laatste sync: niets te synchroniseren';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Niet aangemeld';
   @override
@@ -203960,7 +204550,7 @@ class _StringsNl extends _StringsEn {
   String get usage_stats_enabled => 'Gebruiksstatistieken delen';
   @override
   String get usage_stats_enabled_hint =>
-      'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
+      'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform, het updatekanaal, de app-taal, de CPU-architectuur, de hoofdversie van het besturingssysteem en de installatiebron (bijv. app-winkel of installatieprogramma) naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen; alleen het daaruit afgeleide land of de regio wordt bewaard. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
   @override
   String get video_air_season_autumn => 'Herfst';
   @override
@@ -204545,6 +205135,9 @@ class _StringsNl extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min resterend';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -207278,15 +207871,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -210545,7 +211138,7 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_settings_desc =>
       'Configurações do app e do leitor';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -211136,15 +211729,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Alterar Fonte';
   @override
@@ -212113,6 +212706,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -212248,8 +212844,6 @@ class _StringsPtBr extends _StringsEn {
   String get dictionaries_deleting_data => 'Excluindo dados do dicionário...';
   @override
   String get dictionaries_menu_empty => 'Importe um dicionário para uso';
-  @override
-  String get dictionary_collapse_follow_global => 'Seguir configuração global';
   @override
   String get dictionary_delete_failed => 'Falha ao excluir dicionário';
   @override
@@ -212562,9 +213156,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_add_video_source => 'Adicionar fonte de vídeo';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nada para mostrar ainda: vincule uma coleção ao AniList ou adicione uma assinatura de download, e os horários de exibição aparecerão aqui.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Ep ${episode}';
   @override
@@ -212573,12 +213164,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'Na biblioteca';
   @override
-  String get download_airing_calendar_show_all =>
-      'Mostrar tudo desta temporada';
-  @override
   String get download_airing_calendar_subscribed => 'Assinado';
   @override
   String get download_airing_calendar_title => 'Calendário de exibição';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty => 'Nada exibindo esta semana';
   @override
@@ -215865,12 +216457,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Remove caracteres que não podem ser codificados em Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Manter apenas o texto entre aspas';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Mantém os diálogos e descarta a narração; uma linha sem aspas é descartada por completo';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normalizar largura dos caracteres';
   @override
@@ -215891,8 +216477,14 @@ class _StringsPtBr extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Remover chaves de furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Uma chave com barra mantém o texto-base; uma sem barra é removida por completo';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Manter N linhas';
   @override
@@ -215936,6 +216528,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Usar a última linha capturada';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Esta etapa remove a marcação de onde o furigana é extraído, então essas linhas perdem o ruby';
@@ -216649,6 +217243,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Sincronizar livros e conteúdo de leitura deste dispositivo para o par da interconexão.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Upload para par da interconexão';
   @override
@@ -218574,6 +219173,10 @@ class _StringsPtBr extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed =>
       'Não foi possível abrir o local do arquivo.';
   @override
@@ -219310,7 +219913,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get nav_lookup => 'Consultar';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Revisão';
   @override
   String get nav_video => 'Vídeo';
   @override
@@ -219759,16 +220362,16 @@ class _StringsPtBr extends _StringsEn {
       'Você pode reabrir este guia a qualquer momento em Configurações → Sistema.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Páginas de biblioteca exibidas';
@@ -220023,10 +220626,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -220066,7 +220672,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action =>
       'Configurações de criação de cartões';
@@ -222255,9 +222861,9 @@ class _StringsPtBr extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -222291,7 +222897,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -222753,6 +223359,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -222761,6 +223372,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -223119,12 +223743,17 @@ class _StringsPtBr extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -223258,7 +223887,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -223879,7 +224508,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -223895,10 +224524,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -224493,6 +225122,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Diagnóstico de estudo do Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -224510,6 +225151,8 @@ class _StringsPtBr extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -224573,6 +225216,9 @@ class _StringsPtBr extends _StringsEn {
   String get subscription_sort_last_checked => 'Última verificação';
   @override
   String get subscription_sort_last_matched => 'Última correspondência';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'Tradução por IA';
   @override
@@ -224845,6 +225491,11 @@ class _StringsPtBr extends _StringsEn {
       'Última sincronização: nada sincronizado - nenhum canal de sincronização conectado';
   @override
   String get sync_last_nothing => 'Última sincronização: nada para sincronizar';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Não conectado';
   @override
@@ -225826,7 +226477,7 @@ class _StringsPtBr extends _StringsEn {
   String get usage_stats_enabled => 'Compartilhar estatísticas de uso';
   @override
   String get usage_stats_enabled_hint =>
-      'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
+      'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma, o canal de atualização, o idioma do app, a arquitetura da CPU, a versão principal do sistema e a origem da instalação (ex.: loja ou instalador) para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado — só o país ou região deduzido dele é guardado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
   @override
   String get video_air_season_autumn => 'Outono';
   @override
@@ -226416,6 +227067,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min restantes';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -229167,15 +229821,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -232417,7 +233071,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Настройки приложения и читалки';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -233010,15 +233664,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Сменить источник';
   @override
@@ -233984,6 +234638,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -234118,8 +234775,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Импортируйте словарь для использования';
-  @override
-  String get dictionary_collapse_follow_global => 'Как в общих настройках';
   @override
   String get dictionary_delete_failed => 'Не удалось удалить словарь';
   @override
@@ -234429,9 +235084,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_add_video_source => 'Добавить видеоисточник';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Пока нечего показывать: привяжите коллекцию к AniList или добавьте подписку на загрузку, и время выхода появится здесь.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Эп. ${episode}';
   @override
@@ -234440,11 +235092,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'В библиотеке';
   @override
-  String get download_airing_calendar_show_all => 'Показать все за этот сезон';
-  @override
   String get download_airing_calendar_subscribed => 'Подписка';
   @override
   String get download_airing_calendar_title => 'Календарь выхода';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty =>
       'На этой неделе ничего не выходит';
@@ -237714,12 +238368,6 @@ class _StringsRu extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Удаляет символы, которые нельзя закодировать в Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Оставлять только текст в кавычках';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Оставляет диалоги и отбрасывает повествование; строка без кавычек отбрасывается целиком';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Нормализовать ширину символов';
   @override
@@ -237740,8 +238388,14 @@ class _StringsRu extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Удалять фигурные скобки фуриганы';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Скобка со слэшем сохраняет основной текст; скобка без слэша удаляется целиком';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Оставить N строк';
   @override
@@ -237786,6 +238440,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Использовать последнюю перехваченную строку';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Этот шаг удаляет разметку, из которой разбирается фуригана, поэтому у таких строк пропадёт руби';
@@ -238495,6 +239151,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Синхронизировать книги и контент для чтения этого устройства с партнёром по взаимосвязи.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section =>
       'Загрузка на партнёра по взаимосвязи';
@@ -240415,6 +241076,10 @@ class _StringsRu extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed =>
       'Не удалось открыть расположение файла.';
   @override
@@ -241151,7 +241816,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get nav_lookup => 'Поиск';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Повторение';
   @override
   String get nav_video => 'Видео';
   @override
@@ -241603,16 +242268,16 @@ class _StringsRu extends _StringsEn {
       'Вы можете снова открыть это руководство в любое время: Настройки → Система.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Показанные страницы библиотеки';
@@ -241869,10 +242534,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -241912,7 +242580,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Настройки создания карточек';
   @override
@@ -244102,9 +244770,9 @@ class _StringsRu extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -244138,7 +244806,7 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -244600,6 +245268,11 @@ class _StringsRu extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -244608,6 +245281,19 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -244966,12 +245652,17 @@ class _StringsRu extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -245105,7 +245796,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -245726,7 +246417,7 @@ class _StringsRu extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -245742,10 +246433,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -246339,6 +247030,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Диагностика обучения Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -246356,6 +247059,8 @@ class _StringsRu extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -246419,6 +247124,9 @@ class _StringsRu extends _StringsEn {
   String get subscription_sort_last_checked => 'Последняя проверка';
   @override
   String get subscription_sort_last_matched => 'Последнее совпадение';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'Перевод ИИ';
   @override
@@ -246691,6 +247399,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Последняя синхронизация: нечего синхронизировать';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Не авторизован';
   @override
@@ -247666,7 +248379,7 @@ class _StringsRu extends _StringsEn {
   String get usage_stats_enabled => 'Отправлять статистику использования';
   @override
   String get usage_stats_enabled_hint =>
-      'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
+      'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу, канал обновлений, язык приложения, архитектуру процессора, основную версию ОС и источник установки (например, магазин приложений или установщик), чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется — сохраняется только определённая по нему страна или регион. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
   @override
   String get video_air_season_autumn => 'Осень';
   @override
@@ -248252,6 +248965,9 @@ class _StringsRu extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       'Осталось ${minutes} мин';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -251002,15 +251718,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -254209,7 +254925,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'การตั้งค่าแอปและเครื่องอ่าน';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -254791,15 +255507,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'เปลี่ยนแหล่งข้อมูล';
   @override
@@ -255752,6 +256468,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -255885,8 +256604,6 @@ class _StringsTh extends _StringsEn {
   String get dictionaries_deleting_data => 'กำลังลบข้อมูลพจนานุกรม...';
   @override
   String get dictionaries_menu_empty => 'นำเข้าพจนานุกรมเพื่อใช้งาน';
-  @override
-  String get dictionary_collapse_follow_global => 'ตามการตั้งค่าส่วนกลาง';
   @override
   String get dictionary_delete_failed => 'ลบพจนานุกรมไม่สำเร็จ';
   @override
@@ -256194,9 +256911,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_add_video_source => 'เพิ่มแหล่งวิดีโอ';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'ยังไม่มีอะไรแสดง: ผูกคอลเลกชันกับ AniList หรือเพิ่มการสมัครสมาชิกดาวน์โหลด แล้วเวลาออกอากาศจะปรากฏที่นี่';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'ตอน ${episode}';
   @override
@@ -256204,11 +256918,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'ในไลบรารี';
   @override
-  String get download_airing_calendar_show_all => 'แสดงทั้งหมดในซีซันนี้';
-  @override
   String get download_airing_calendar_subscribed => 'สมัครแล้ว';
   @override
   String get download_airing_calendar_title => 'ตารางออกอากาศ';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty =>
       'ไม่มีรายการออกอากาศสัปดาห์นี้';
@@ -259421,12 +260137,6 @@ class _StringsTh extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'ลบอักขระที่เข้ารหัสใน Shift-JIS ไม่ได้';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'เก็บเฉพาะข้อความในเครื่องหมายคำพูด';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'เก็บบทสนทนาและทิ้งคำบรรยาย บรรทัดที่ไม่มีเครื่องหมายคำพูดจะถูกทิ้งทั้งบรรทัด';
-  @override
   String get game_text_process_kind_normalize_width =>
       'ปรับความกว้างอักขระให้เป็นมาตรฐาน';
   @override
@@ -259447,8 +260157,14 @@ class _StringsTh extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'ลบวงเล็บปีกกาของฟุริกานะ';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'วงเล็บปีกกาที่มีเครื่องหมายทับจะเก็บข้อความฐานไว้ ส่วนที่ไม่มีจะถูกลบทั้งหมด';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'เก็บ N บรรทัด';
   @override
@@ -259491,6 +260207,8 @@ class _StringsTh extends _StringsEn {
   String get game_text_process_preview_unchanged => 'ไม่เปลี่ยนแปลง';
   @override
   String get game_text_process_preview_use_latest => 'ใช้บรรทัดที่จับได้ล่าสุด';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'ขั้นตอนนี้ลบมาร์กอัปที่ใช้แยกฟุริกานะ บรรทัดเหล่านั้นจึงสูญเสียรูบี้';
@@ -260194,6 +260912,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'ซิงค์หนังสือและเนื้อหาการอ่านของอุปกรณ์นี้ไปยังอุปกรณ์เชื่อมต่อ';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'อัปโหลดไปยังอุปกรณ์เชื่อมต่อ';
   @override
@@ -262079,6 +262802,10 @@ class _StringsTh extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed => 'ไม่สามารถเปิดตำแหน่งไฟล์ได้';
   @override
   String get media_file_location_open => 'เปิดตำแหน่งไฟล์';
@@ -262804,7 +263531,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get nav_lookup => 'ค้นคำ';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'ทบทวน';
   @override
   String get nav_video => 'วิดีโอ';
   @override
@@ -263249,16 +263976,16 @@ class _StringsTh extends _StringsEn {
       'คุณเปิดคู่มือนี้อีกครั้งได้ทุกเมื่อจาก การตั้งค่า → ระบบ';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules => 'หน้าคลังที่แสดง';
   @override
@@ -263505,10 +264232,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -263548,7 +264278,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'การตั้งค่าการสร้างการ์ด';
   @override
@@ -265700,9 +266430,9 @@ class _StringsTh extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -265736,7 +266466,7 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -266198,6 +266928,11 @@ class _StringsTh extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -266206,6 +266941,19 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -266564,12 +267312,17 @@ class _StringsTh extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -266703,7 +267456,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -267324,7 +268077,7 @@ class _StringsTh extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -267340,10 +268093,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -267933,6 +268686,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get study_diag_share_subject => 'การวินิจฉัยการเรียนของ Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -267950,6 +268715,8 @@ class _StringsTh extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -268013,6 +268780,9 @@ class _StringsTh extends _StringsEn {
   String get subscription_sort_last_checked => 'ตรวจสอบล่าสุด';
   @override
   String get subscription_sort_last_matched => 'จับคู่ล่าสุด';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'แปลด้วย AI';
   @override
@@ -268282,6 +269052,11 @@ class _StringsTh extends _StringsEn {
       'ซิงค์ล่าสุด: ไม่มีอะไรซิงค์ — ไม่มีช่องทางซิงค์ที่เชื่อมต่อ';
   @override
   String get sync_last_nothing => 'ซิงค์ล่าสุด: ไม่มีอะไรต้องซิงค์';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'ยังไม่ได้เข้าสู่ระบบ';
   @override
@@ -269246,7 +270021,7 @@ class _StringsTh extends _StringsEn {
   String get usage_stats_enabled => 'ส่งสถิติการใช้งาน';
   @override
   String get usage_stats_enabled_hint =>
-      'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
+      'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม ช่องทางอัปเดต ภาษาของแอป สถาปัตยกรรม CPU เวอร์ชันหลักของระบบปฏิบัติการ และแหล่งที่ติดตั้ง (เช่น สโตร์หรือตัวติดตั้ง)ไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ (เก็บเพียงประเทศหรือภูมิภาคที่ระบุได้จากที่อยู่นั้น) เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
   @override
   String get video_air_season_autumn => 'ฤดูใบไม้ร่วง';
   @override
@@ -269824,6 +270599,9 @@ class _StringsTh extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       'เหลืออีก ${minutes} นาที';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -272513,15 +273291,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -275747,7 +276525,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Uygulama ve okuyucu ayarları';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -276336,15 +277114,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Kaynağı değiştir';
   @override
@@ -277309,6 +278087,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -277444,8 +278225,6 @@ class _StringsTr extends _StringsEn {
   String get dictionaries_deleting_data => 'Sözlük verileri siliniyor...';
   @override
   String get dictionaries_menu_empty => 'Kullanmak için bir sözlük içe aktarın';
-  @override
-  String get dictionary_collapse_follow_global => 'Genel ayarı izle';
   @override
   String get dictionary_delete_failed => 'Sözlük silinemedi';
   @override
@@ -277755,9 +278534,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_add_video_source => 'Video kaynağı ekle';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Henüz gösterilecek bir şey yok: bir koleksiyonu AniList\'e bağlayın veya bir indirme aboneliği ekleyin, yayın zamanları burada görünecektir.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Bl ${episode}';
   @override
@@ -277765,11 +278541,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'Kütüphanede';
   @override
-  String get download_airing_calendar_show_all => 'Bu sezonun tümünü göster';
-  @override
   String get download_airing_calendar_subscribed => 'Abone olundu';
   @override
   String get download_airing_calendar_title => 'Yayın takvimi';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty => 'Bu hafta yayın yok';
   @override
@@ -281030,12 +281808,6 @@ class _StringsTr extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Shift-JIS ile kodlanamayan karakterleri kaldırır';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Yalnızca tırnak içindeki metni tut';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Diyalogları tutar, anlatımı atar; tırnaksız bir satır tamamen atılır';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Karakter genişliğini normalleştir';
   @override
@@ -281056,8 +281828,14 @@ class _StringsTr extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Furigana küme parantezlerini kaldır';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Eğik çizgili bir küme parantezi temel metnini korur; çizgisiz olan tamamen kaldırılır';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'N satırı tut';
   @override
@@ -281102,6 +281880,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Yakalanan son satırı kullan';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Bu adım, furiganın ayrıştırıldığı işaretlemeyi kaldırır; bu yüzden bu satırlar ruby\'lerini kaybeder';
@@ -281811,6 +282591,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Bu cihazın kitap ve okuma içeriğini bağlantı eşine senkronize edin.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Bağlantı eşine yükle';
   @override
@@ -283714,6 +284499,10 @@ class _StringsTr extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed => 'Dosya konumu açılamadı.';
   @override
   String get media_file_location_open => 'Dosya konumunu aç';
@@ -284444,7 +285233,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get nav_lookup => 'Ara';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Tekrar';
   @override
   String get nav_video => 'Video';
   @override
@@ -284893,16 +285682,16 @@ class _StringsTr extends _StringsEn {
       'Bu rehberi istediğiniz zaman Ayarlar → Sistem\'den yeniden açabilirsiniz.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Gösterilen kitaplık sayfaları';
@@ -285154,10 +285943,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -285197,7 +285989,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Kart oluşturma ayarları';
   @override
@@ -287363,9 +288155,9 @@ class _StringsTr extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -287399,7 +288191,7 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -287861,6 +288653,11 @@ class _StringsTr extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -287869,6 +288666,19 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -288227,12 +289037,17 @@ class _StringsTr extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -288366,7 +289181,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -288987,7 +289802,7 @@ class _StringsTr extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -289003,10 +289818,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -289600,6 +290415,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Fushi çalışma tanılaması';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -289617,6 +290444,8 @@ class _StringsTr extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -289681,6 +290510,9 @@ class _StringsTr extends _StringsEn {
   String get subscription_sort_last_checked => 'Son kontrol';
   @override
   String get subscription_sort_last_matched => 'Son eşleşme';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'Yapay zekâ çevirisi';
   @override
@@ -289953,6 +290785,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Son senkronizasyon: senkronize edilecek bir şey yok';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Oturum açılmadı';
   @override
@@ -290926,7 +291763,7 @@ class _StringsTr extends _StringsEn {
   String get usage_stats_enabled => 'Kullanım istatistiklerini paylaş';
   @override
   String get usage_stats_enabled_hint =>
-      'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
+      'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu, güncelleme kanalını, uygulama dilini, CPU mimarisini, işletim sisteminin ana sürümünü ve kurulum kaynağını (ör. uygulama mağazası veya yükleyici) fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz; yalnızca ondan belirlenen ülke veya bölge tutulur. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
   @override
   String get video_air_season_autumn => 'Sonbahar';
   @override
@@ -291506,6 +292343,9 @@ class _StringsTr extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} dk kaldı';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -294227,15 +295067,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -297452,7 +298292,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Cài đặt ứng dụng và trình đọc';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -298041,15 +298881,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Đổi nguồn';
   @override
@@ -299012,6 +299852,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -299146,8 +299989,6 @@ class _StringsVi extends _StringsEn {
   String get dictionaries_deleting_data => 'Đang xóa dữ liệu từ điển…';
   @override
   String get dictionaries_menu_empty => 'Nhập một từ điển để sử dụng';
-  @override
-  String get dictionary_collapse_follow_global => 'Theo cài đặt chung';
   @override
   String get dictionary_delete_failed => 'Không thể xóa từ điển';
   @override
@@ -299455,9 +300296,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_add_video_source => 'Thêm nguồn video';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Chưa có gì để hiển thị: liên kết bộ sưu tập với AniList hoặc thêm đăng ký tải xuống, và lịch phát sóng sẽ xuất hiện ở đây.';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       'Tập ${episode}';
   @override
@@ -299465,11 +300303,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => 'Trong thư viện';
   @override
-  String get download_airing_calendar_show_all => 'Hiện tất cả mùa này';
-  @override
   String get download_airing_calendar_subscribed => 'Đã đăng ký';
   @override
   String get download_airing_calendar_title => 'Lịch phát sóng';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty =>
       'Không có gì phát sóng tuần này';
@@ -302719,12 +303559,6 @@ class _StringsVi extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Loại bỏ các ký tự không thể mã hóa bằng Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Chỉ giữ văn bản trong dấu ngoặc kép';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Giữ lời thoại và bỏ phần dẫn truyện; dòng không có ngoặc kép bị bỏ hoàn toàn';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Chuẩn hóa độ rộng ký tự';
   @override
@@ -302745,8 +303579,14 @@ class _StringsVi extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Xóa ngoặc nhọn furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Ngoặc nhọn có dấu gạch chéo giữ lại phần chữ gốc; không có thì bị xóa hoàn toàn';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Giữ N dòng';
   @override
@@ -302789,6 +303629,8 @@ class _StringsVi extends _StringsEn {
   String get game_text_process_preview_unchanged => 'Không đổi';
   @override
   String get game_text_process_preview_use_latest => 'Dùng dòng thu gần nhất';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Bước này xóa phần đánh dấu mà furigana được phân tích từ đó, nên các dòng ấy mất ruby';
@@ -303495,6 +304337,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Đồng bộ sách và nội dung đọc của thiết bị này lên thiết bị ghép nối.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Tải lên thiết bị ghép nối';
   @override
@@ -305392,6 +306239,10 @@ class _StringsVi extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed => 'Không mở được vị trí tệp.';
   @override
   String get media_file_location_open => 'Mở vị trí tệp';
@@ -306118,7 +306969,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get nav_lookup => 'Tra từ';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => 'Ôn tập';
   @override
   String get nav_video => 'Video';
   @override
@@ -306564,16 +307415,16 @@ class _StringsVi extends _StringsEn {
       'Bạn có thể mở lại hướng dẫn này bất cứ lúc nào từ Cài đặt → Hệ thống.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules => 'Trang thư viện hiển thị';
   @override
@@ -306821,10 +307672,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -306864,7 +307718,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => 'Cài đặt tạo thẻ';
   @override
@@ -309022,9 +309876,9 @@ class _StringsVi extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -309058,7 +309912,7 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -309520,6 +310374,11 @@ class _StringsVi extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -309528,6 +310387,19 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -309886,12 +310758,17 @@ class _StringsVi extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -310025,7 +310902,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -310646,7 +311523,7 @@ class _StringsVi extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -310662,10 +311539,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -311258,6 +312135,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Chẩn đoán học tập của Fushi';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -311275,6 +312164,8 @@ class _StringsVi extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -311340,6 +312231,9 @@ class _StringsVi extends _StringsEn {
   String get subscription_sort_last_checked => 'Lần kiểm tra cuối';
   @override
   String get subscription_sort_last_matched => 'Kết quả cuối';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => 'Dịch bằng AI';
   @override
@@ -311610,6 +312504,11 @@ class _StringsVi extends _StringsEn {
       'Đồng bộ lần cuối: không đồng bộ gì - chưa có kênh đồng bộ nào được kết nối';
   @override
   String get sync_last_nothing => 'Đồng bộ lần cuối: không có gì để đồng bộ';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Chưa đăng nhập';
   @override
@@ -312576,7 +313475,7 @@ class _StringsVi extends _StringsEn {
   String get usage_stats_enabled => 'Chia sẻ thống kê sử dụng';
   @override
   String get usage_stats_enabled_hint =>
-      'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
+      'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng, kênh cập nhật, ngôn ngữ ứng dụng, kiến trúc CPU, phiên bản chính của hệ điều hành và nguồn cài đặt (ví dụ cửa hàng ứng dụng hoặc trình cài đặt) đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu — chỉ giữ quốc gia hoặc khu vực suy ra từ nó. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
   @override
   String get video_air_season_autumn => 'Thu';
   @override
@@ -313157,6 +314056,9 @@ class _StringsVi extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       'Còn ${minutes} phút';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -315869,15 +316771,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -318821,7 +319723,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_settings_desc => '应用与阅读器设置';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => '复习';
   @override
   String get backup_category_srs_desc =>
       '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
@@ -319346,14 +320248,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get card_target_current => '当前';
   @override
-  String get card_target_srs_enable => '开启 Fushi SRS';
+  String get card_target_srs_enable => '开启 Fushi 复习';
   @override
   String get card_target_srs_enable_confirm =>
-      '将开启「SRS」模块，之后制的卡发往 Fushi SRS。随时可以改回 Anki。';
+      '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
   @override
   String get card_target_srs_hint => '内置间隔复习，无需安装 Anki';
   @override
-  String get card_target_srs_title => '发往 Fushi SRS';
+  String get card_target_srs_title => '发往 Fushi 复习';
   @override
   String get change_source => '切换来源';
   @override
@@ -320253,6 +321155,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => '长按拖动排序';
   @override
+  String dict_row_collapse_tooltip({required Object state}) => '默认展示：${state}';
+  @override
   String get dict_selection_exit => '退出选择';
   @override
   String get dict_status_disabled => '已停用';
@@ -320378,8 +321282,6 @@ class _StringsZhCn extends _StringsEn {
   String get dictionaries_deleting_data => '正在删除词典数据…';
   @override
   String get dictionaries_menu_empty => '请先导入词典以便使用';
-  @override
-  String get dictionary_collapse_follow_global => '跟随全局设置';
   @override
   String get dictionary_delete_failed => '删除词典失败';
   @override
@@ -320665,9 +321567,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_add_video_source => '添加视频来源';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       '第 ${episode} 集';
   @override
@@ -320675,11 +321574,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => '已入库';
   @override
-  String get download_airing_calendar_show_all => '显示本季全部';
-  @override
   String get download_airing_calendar_subscribed => '订阅中';
   @override
   String get download_airing_calendar_title => '放送日历';
+  @override
+  String get download_airing_calendar_today_empty => '今天没有放送';
+  @override
+  String get download_airing_calendar_today_title => '今日放送';
   @override
   String get download_airing_calendar_week_empty => '本周没有相关放送';
   @override
@@ -323626,11 +324527,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       '移除无法用 Shift-JIS 表示的字符';
   @override
-  String get game_text_process_kind_keep_japanese_quotes => '只保留「」内的文本';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      '只留台词、丢掉旁白；没有「」的整行会被丢弃';
-  @override
   String get game_text_process_kind_normalize_width => '全角半角正规化';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -323645,10 +324541,15 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       '移除 ruby、br 之类的标记';
   @override
-  String get game_text_process_kind_strip_curly_braces => '去除花括号注音';
+  String get game_text_process_kind_strip_curly_braces => '花括号注音转振假名';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      '带斜杠的花括号保留基字；不带斜杠的整体删除';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{漢字/かな} 或 {漢字:かな} 的读音显示在汉字上方；其余花括号整体删除';
+  @override
+  String get game_text_process_kind_strip_outside_quotes => '去掉「」外的文字';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      '去掉人名等「」外的文字；没有「」的旁白整行保留';
   @override
   String get game_text_process_kind_take_lines => '截取指定行数';
   @override
@@ -323687,6 +324588,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_process_preview_unchanged => '无变化';
   @override
   String get game_text_process_preview_use_latest => '使用最近抓到的一行';
+  @override
+  String get game_text_process_reset_defaults => '恢复默认';
   @override
   String get game_text_process_ruby_warning => '这一步会删掉注音标记，相应的行将没有振假名';
   @override
@@ -323944,7 +324847,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_panel_mode_shown => '显示';
   @override
-  String get home_panel_srs_hint => '自动：制卡发往 Fushi SRS 或已有复习卡时显示';
+  String get home_panel_srs_hint => '自动：制卡发往 Fushi 复习或已有复习卡时显示';
   @override
   String get home_recently_added => '最近添加';
   @override
@@ -324330,6 +325233,10 @@ class _StringsZhCn extends _StringsEn {
   String get interconnect_upload_content => '上传书籍文件';
   @override
   String get interconnect_upload_content_hint => '把本设备的书籍/阅读内容上传同步到互联对端。';
+  @override
+  String get interconnect_upload_manga_content => '上传漫画文件';
+  @override
+  String get interconnect_upload_manga_content_hint => '把本设备的漫画上传同步到互联对端。';
   @override
   String get interconnect_upload_section => '上传到互联对端';
   @override
@@ -326088,6 +326995,10 @@ class _StringsZhCn extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '有 ${n} 个损坏扇区读不出来，已用静音填充';
   @override
+  String get media_detail_start_reading => '开始阅读';
+  @override
+  String get media_detail_start_watching => '开始观看';
+  @override
   String get media_file_location_failed => '无法打开文件位置。';
   @override
   String get media_file_location_open => '打开文件位置';
@@ -326747,7 +327658,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get nav_lookup => '查词';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => '复习';
   @override
   String get nav_video => '视频';
   @override
@@ -327155,15 +328066,15 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_finish_body => '之后随时可以在「设置 → 系统」重新打开本引导。';
   @override
   String get onboarding_finish_import_desc =>
-      '在「SRS」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
+      '在「复习」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
   @override
   String get onboarding_finish_import_title => '导入已有的 Anki 牌组';
   @override
   String get onboarding_finish_next_title => '下一步';
   @override
-  String get onboarding_finish_review_desc => '制的卡会进入底栏的「SRS」页，到期的卡在那里等你复习。';
+  String get onboarding_finish_review_desc => '制的卡会进入底栏的「复习」页，到期的卡在那里等你复习。';
   @override
-  String get onboarding_finish_review_title => '在「SRS」里复习';
+  String get onboarding_finish_review_title => '在「复习」里复习';
   @override
   String get onboarding_finish_summary_modules => '显示的库页';
   @override
@@ -327385,10 +328296,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => '改用 Anki…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
+  @override
   String get onboarding_review_fushi_desc =>
       '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi 复习';
   @override
   String get onboarding_review_method_body =>
       '查词时制的卡在这里复习。之后随时可以在「设置 → 制卡」里更改。';
@@ -327422,7 +328336,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => '多设备自动同步';
   @override
-  String get onboarding_srs_title => 'Fushi 内置 SRS';
+  String get onboarding_srs_title => 'Fushi 内置复习';
   @override
   String get onboarding_step_anki_action => '制卡设置';
   @override
@@ -329411,9 +330325,9 @@ class _StringsZhCn extends _StringsEn {
       '有些文件夹读取不了：${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      '开启 SRS 模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi SRS。';
+      '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect（Fushi SRS）';
+  String get srs_ankiconnect_title => 'AnkiConnect（Fushi 复习）';
   @override
   String get srs_backup_auto => '自动备份';
   @override
@@ -329445,7 +330359,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} 分钟';
   @override
-  String get srs_backup_invalid => '这个文件不是 Fushi SRS 备份';
+  String get srs_backup_invalid => '这个文件不是 Fushi 复习备份';
   @override
   String get srs_backup_keep_daily => '每日备份保留份数';
   @override
@@ -329882,6 +330796,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_engine_unavailable => '本机的排程内核不可用：可以浏览和编辑卡片，但暂时不能复习。';
   @override
+  String get srs_export_anki_compatible => '兼容 Anki';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      '只写 Anki 认识的内容，去掉 Fushi 专有数据（完整复习日志、FSRS-7 参数、笔记出处）。Anki 本来就会忽略这些数据；之后要无损导回 Fushi 请保持关闭。';
+  @override
   String get srs_export_apkg => '导出（.apkg）';
   @override
   String get srs_export_done => '已导出';
@@ -329890,6 +330809,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
+  @override
+  String get srs_export_options_title => '导出选项';
+  @override
+  String get srs_export_with_deck_configs => '包含牌组预设与 FSRS 参数';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      '学习步长、每日上限、期望保留率与 FSRS 参数。关闭时牌组使用 Anki 默认预设。';
+  @override
+  String get srs_export_with_scheduling => '包含学习进度';
+  @override
+  String get srs_export_with_scheduling_desc => '复习记录与到期日。关闭时所有卡片作为新卡导出。';
   @override
   String get srs_field_info_ai => '让 AI 写说明';
   @override
@@ -330212,12 +331142,17 @@ class _StringsZhCn extends _StringsEn {
   String get srs_import_use_rwkv => '使用 RWKV 排程';
   @override
   String get srs_import_use_rwkv_help =>
-      '本次导入新建的牌组使用 Fushi 默认的 RWKV 排程，包里的 FSRS 参数照样保留，之后可以切回。关闭时牌组保留包里的 FSRS 算法（没有参数的，包括在 Anki 里用 RWKV 的预设，使用 FSRS-7）。';
+      '本次导入新建的牌组使用 Fushi 默认的 RWKV 排程，导入的 FSRS 参数照样保留，之后可以切回。关闭时牌组保留包里的 FSRS 算法（没有参数或不导入 FSRS 参数的，包括在 Anki 里用 RWKV 的预设，使用 FSRS-7）。';
   @override
   String get srs_import_with_deck_configs => '导入所有牌组预设配置';
   @override
   String get srs_import_with_deck_configs_help =>
-      '本次导入新建的牌组使用包里的学习步长、每日上限、算法和 FSRS 参数；关闭时使用默认设置。已存在的牌组不会被改动。';
+      '本次导入新建的牌组使用包里的学习步长、每日上限、最大间隔和音频设置；关闭时使用默认设置。算法与 FSRS 参数由单独的开关决定。已存在的牌组不会被改动。';
+  @override
+  String get srs_import_with_fsrs_params => '导入 FSRS 参数';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      '本次导入新建的牌组使用包里的 FSRS 参数和期望保留率，关闭「使用 RWKV 排程」时还沿用包里的 FSRS 算法；关闭时使用 Fushi 默认设置（RWKV；关闭 RWKV 时为 FSRS-7，按你的复习记录自动优化）。已存在的牌组不会被改动。';
   @override
   String get srs_import_with_scheduling => '导入所有学习进度信息';
   @override
@@ -330343,7 +331278,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_mining_target_hint => '制卡时卡片发往哪里';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi 复习';
   @override
   String get srs_mining_target_title => '挖词目标';
   @override
@@ -330920,7 +331855,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_stats_total => '合计';
   @override
-  String get srs_stats_unavailable => '打开 SRS 模块后可查看复习统计。';
+  String get srs_stats_unavailable => '打开复习模块后可查看复习统计。';
   @override
   String get srs_stats_view_count => '次数';
   @override
@@ -330936,10 +331871,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_status_new => '新卡';
   @override
-  String get srs_status_open_tooltip => '在 Fushi SRS 中打开';
+  String get srs_status_open_tooltip => '在 Fushi 复习中打开';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      '在 Fushi SRS 中打开（${n} 张卡）';
+      '在 Fushi 复习中打开（${n} 张卡）';
   @override
   String get srs_status_review_by_recall => '复习中（RWKV）';
   @override
@@ -331492,6 +332427,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Fushi 统计诊断日志';
   @override
+  String get subscription_auto_disable_half_year => '半年';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      '自动关闭：${period}';
+  @override
+  String get subscription_auto_disable_never => '从不';
+  @override
+  String get subscription_auto_disable_one_year => '一年';
+  @override
+  String get subscription_auto_disable_tooltip => '追更订阅多久没有更新就自动关闭';
+  @override
   String get subscription_edit_filter_hint => '改字幕组或关键词只影响还没下载的集，已下载的保留不动。';
   @override
   String get subscription_edit_list_helper => '多个用逗号分隔';
@@ -331507,6 +332453,8 @@ class _StringsZhCn extends _StringsEn {
   String get subscription_edit_title_exclude => '标题排除';
   @override
   String get subscription_edit_title_include => '标题必须包含';
+  @override
+  String get subscription_fulfilled_chip => '已下载，自动关闭';
   @override
   String get subscription_history_title => '匹配历史';
   @override
@@ -331566,6 +332514,8 @@ class _StringsZhCn extends _StringsEn {
   String get subscription_sort_last_checked => '最近检查';
   @override
   String get subscription_sort_last_matched => '最近命中';
+  @override
+  String subscription_stale_chip({required Object period}) => '超过${period}未更新';
   @override
   String get subtitle_version_ai_translated => '机翻';
   @override
@@ -331806,6 +332756,10 @@ class _StringsZhCn extends _StringsEn {
   String get sync_last_no_channels => '上次同步：未同步——没有已连接的同步通道';
   @override
   String get sync_last_nothing => '上次同步：没有可同步的内容';
+  @override
+  String get sync_manga_content => '上传漫画文件';
+  @override
+  String get sync_manga_content_warning => '漫画卷体积大，会消耗更多存储空间和流量';
   @override
   String get sync_not_signed_in => '未登录';
   @override
@@ -332686,7 +333640,7 @@ class _StringsZhCn extends _StringsEn {
   String get usage_stats_enabled => '发送使用统计';
   @override
   String get usage_stats_enabled_hint =>
-      '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
+      '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台、更新通道、界面语言、CPU 架构、系统大版本和安装来源（如应用商店或安装包），用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址，只记录据此判断的国家或地区。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -333207,6 +334161,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '剩余 ${minutes} 分钟';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} 集新';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -335643,15 +336600,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_adblock_update_now => '立即更新过滤列表';
   @override
-  String get web_browser_address_hint => '输入网址';
-  @override
-  String get web_browser_address_invalid => '不是有效的网址';
-  @override
   String get web_browser_forward => '前进';
   @override
   String get web_browser_lookup_off => '点词查词：关';
   @override
   String get web_browser_lookup_on => '点词查词：开';
+  @override
+  String get web_browser_search_engine => '搜索引擎';
+  @override
+  String get web_browser_search_hint => '搜索或输入网址';
   @override
   String get web_browser_site_add => '加入站点';
   @override
@@ -338693,7 +339650,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_settings_desc => '應用與閱讀器設定';
   @override
-  String get backup_category_srs => 'SRS';
+  String get backup_category_srs => 'Review';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -339227,15 +340184,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi SRS';
+  String get card_target_srs_enable => 'Turn on Fushi review';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi SRS';
+  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => '切換來源';
   @override
@@ -340140,6 +341097,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -340265,8 +341225,6 @@ class _StringsZhHk extends _StringsEn {
   String get dictionaries_deleting_data => '正在刪除辭典資料…';
   @override
   String get dictionaries_menu_empty => '請先匯入辭典以便使用';
-  @override
-  String get dictionary_collapse_follow_global => '跟隨全局設定';
   @override
   String get dictionary_delete_failed => '刪除詞典失敗';
   @override
@@ -340558,9 +341516,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_add_video_source => '添加影片來源';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      '暫無可顯示的放送資訊：給合集綁定 AniList 或添加下載訂閱後，這裡會顯示對應的放送時間。';
-  @override
   String download_airing_calendar_episode_label({required Object episode}) =>
       '第 ${episode} 集';
   @override
@@ -340568,11 +341523,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_airing_calendar_in_library => '已入庫';
   @override
-  String get download_airing_calendar_show_all => '顯示本季全部';
-  @override
   String get download_airing_calendar_subscribed => '訂閱中';
   @override
   String get download_airing_calendar_title => '放送日歷';
+  @override
+  String get download_airing_calendar_today_empty => 'Nothing airs today';
+  @override
+  String get download_airing_calendar_today_title => 'Airing today';
   @override
   String get download_airing_calendar_week_empty => '本周沒有相關放送';
   @override
@@ -343560,11 +344517,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       '移除無法用 Shift-JIS 表示的字符';
   @override
-  String get game_text_process_kind_keep_japanese_quotes => '只保留「」內的文字';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      '只留台詞、丟掉旁白；沒有「」的整行會被丟棄';
-  @override
   String get game_text_process_kind_normalize_width => '全角半角正規化';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -343579,10 +344531,15 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       '移除 ruby、br 之類的標記';
   @override
-  String get game_text_process_kind_strip_curly_braces => '去除花括號注音';
+  String get game_text_process_kind_strip_curly_braces => '花括號注音轉振假名';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      '帶斜槓的花括號保留基字；不帶斜槓的整體刪除';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{漢字/かな} 或 {漢字:かな} 的讀音顯示在漢字上方；其餘花括號整體刪除';
+  @override
+  String get game_text_process_kind_strip_outside_quotes => '去掉「」外的文字';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      '去掉人名等「」外的文字；沒有「」的旁白整行保留';
   @override
   String get game_text_process_kind_take_lines => '截取指定行數';
   @override
@@ -343621,6 +344578,8 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_process_preview_unchanged => '無變化';
   @override
   String get game_text_process_preview_use_latest => '使用最近抓到的一行';
+  @override
+  String get game_text_process_reset_defaults => '恢復預設';
   @override
   String get game_text_process_ruby_warning => '這一步會刪掉注音標記，相應的行將沒有振假名';
   @override
@@ -343879,7 +344838,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_panel_mode_shown => '顯示';
   @override
-  String get home_panel_srs_hint => '自動：製卡發往 Fushi SRS 或已有複習卡時顯示';
+  String get home_panel_srs_hint => '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
   @override
   String get home_recently_added => '最近添加';
   @override
@@ -344280,6 +345239,11 @@ class _StringsZhHk extends _StringsEn {
   String get interconnect_upload_content => '上傳書籍檔案';
   @override
   String get interconnect_upload_content_hint => '把本設備的書籍/閱讀內容上傳同步到互聯對端。';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => '上傳到互聯對端';
   @override
@@ -346054,6 +347018,10 @@ class _StringsZhHk extends _StringsEn {
   String media_audio_cd_rip_unreadable({required Object n}) =>
       '${n} damaged sectors could not be read and were filled with silence';
   @override
+  String get media_detail_start_reading => 'Start reading';
+  @override
+  String get media_detail_start_watching => 'Start watching';
+  @override
   String get media_file_location_failed => '無法開啟檔案位置。';
   @override
   String get media_file_location_open => '開啟檔案位置';
@@ -346719,7 +347687,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get nav_lookup => '查詞';
   @override
-  String get nav_srs => 'SRS';
+  String get nav_srs => '複習';
   @override
   String get nav_video => '影片';
   @override
@@ -347134,16 +348102,16 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_finish_body => '之後隨時可以在「設定 → 系統」重新打開本引導。';
   @override
   String get onboarding_finish_import_desc =>
-      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the SRS tab';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
   @override
   String get onboarding_finish_summary_modules => '顯示的庫頁';
   @override
@@ -347365,10 +348333,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi SRS';
+  String get onboarding_review_fushi_title => 'Fushi review';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -347407,7 +348378,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi SRS';
+  String get onboarding_srs_title => 'Fushi review';
   @override
   String get onboarding_step_anki_action => '製卡設定';
   @override
@@ -349439,9 +350410,9 @@ class _StringsZhHk extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -349475,7 +350446,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -349937,6 +350908,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_engine_unavailable =>
       'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
   @override
+  String get srs_export_anki_compatible => 'Anki-compatible only';
+  @override
+  String get srs_export_anki_compatible_desc =>
+      'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
+  @override
   String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_done => 'Exported';
@@ -349945,6 +350921,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_options_title => 'Export options';
+  @override
+  String get srs_export_with_deck_configs =>
+      'Include deck presets and FSRS parameters';
+  @override
+  String get srs_export_with_deck_configs_desc =>
+      'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+  @override
+  String get srs_export_with_scheduling => 'Include learning progress';
+  @override
+  String get srs_export_with_scheduling_desc =>
+      'Review history and due dates. When off, every card is exported as new.';
   @override
   String get srs_field_info_ai => 'Let AI write it';
   @override
@@ -350303,12 +351292,17 @@ class _StringsZhHk extends _StringsEn {
   String get srs_import_use_rwkv => 'Schedule with RWKV';
   @override
   String get srs_import_use_rwkv_help =>
-      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
   String get srs_import_with_deck_configs_help =>
-      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+  @override
+  String get srs_import_with_fsrs_params => 'Import FSRS parameters';
+  @override
+  String get srs_import_with_fsrs_params_help =>
+      'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
   @override
   String get srs_import_with_scheduling => 'Import all review progress';
   @override
@@ -350442,7 +351436,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi SRS';
+  String get srs_mining_target_srs => 'Fushi review';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -351063,7 +352057,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the SRS module to see review statistics.';
+      'Turn on the review module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -351079,10 +352073,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi SRS';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi SRS (${n} cards)';
+      'Open in Fushi review (${n} cards)';
   @override
   String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
@@ -351651,6 +352645,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get study_diag_share_subject => 'Fushi 統計診斷日誌';
   @override
+  String get subscription_auto_disable_half_year => '6 months';
+  @override
+  String subscription_auto_disable_label({required Object period}) =>
+      'Auto-off: ${period}';
+  @override
+  String get subscription_auto_disable_never => 'Never';
+  @override
+  String get subscription_auto_disable_one_year => '1 year';
+  @override
+  String get subscription_auto_disable_tooltip =>
+      'Turn off ongoing subscriptions after no new episodes for';
+  @override
   String get subscription_edit_filter_hint =>
       'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
   @override
@@ -351668,6 +352674,8 @@ class _StringsZhHk extends _StringsEn {
   String get subscription_edit_title_exclude => 'Title must not contain';
   @override
   String get subscription_edit_title_include => 'Title must contain';
+  @override
+  String get subscription_fulfilled_chip => 'Downloaded, turned off';
   @override
   String get subscription_history_title => 'Match history';
   @override
@@ -351727,6 +352735,9 @@ class _StringsZhHk extends _StringsEn {
   String get subscription_sort_last_checked => '最近檢查';
   @override
   String get subscription_sort_last_matched => '最近命中';
+  @override
+  String subscription_stale_chip({required Object period}) =>
+      'No updates for ${period}';
   @override
   String get subtitle_version_ai_translated => '機翻';
   @override
@@ -351967,6 +352978,11 @@ class _StringsZhHk extends _StringsEn {
   String get sync_last_no_channels => '上次同步：未同步——沒有已連接的同步通道';
   @override
   String get sync_last_nothing => '上次同步：沒有可同步的內容';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => '未登入';
   @override
@@ -352861,7 +353877,7 @@ class _StringsZhHk extends _StringsEn {
   String get usage_stats_enabled => '傳送使用統計';
   @override
   String get usage_stats_enabled_hint =>
-      '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
+      '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台、更新通道、介面語言、CPU 架構、系統主要版本和安裝來源（如應用程式商店或安裝程式），用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址，只記錄據此判斷的國家或地區。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -353394,6 +354410,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '剩餘 ${minutes} 分鐘';
+  @override
+  String video_home_subscription_new_count({required Object count}) =>
+      '${count} new';
   @override
   String video_home_subscription_unwatched_episode({
     required Object n,
@@ -355888,15 +356907,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_adblock_update_now => 'Update filter lists now';
   @override
-  String get web_browser_address_hint => 'Enter a website address';
-  @override
-  String get web_browser_address_invalid => 'Not a valid website address';
-  @override
   String get web_browser_forward => 'Forward';
   @override
   String get web_browser_lookup_off => 'Tap to look up: off';
   @override
   String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_search_engine => 'Search engine';
+  @override
+  String get web_browser_search_hint => 'Search or enter address';
   @override
   String get web_browser_site_add => 'Add to sites';
   @override
@@ -358548,7 +359567,7 @@ extension on _StringsEn {
       case 'backup_category_settings_desc':
         return 'App and reader settings';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -359044,13 +360063,13 @@ extension on _StringsEn {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Change source';
       case 'changelog_empty':
@@ -359906,6 +360925,8 @@ extension on _StringsEn {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -360025,8 +361046,6 @@ extension on _StringsEn {
         return 'Deleting dictionary data...';
       case 'dictionaries_menu_empty':
         return 'Import a dictionary for use';
-      case 'dictionary_collapse_follow_global':
-        return 'Follow global setting';
       case 'dictionary_delete_failed':
         return 'Failed to delete dictionary';
       case 'dictionary_font_size':
@@ -360288,20 +361307,20 @@ extension on _StringsEn {
         return 'Typography settings';
       case 'download_add_video_source':
         return 'Add video source';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Ep ${episode}';
       case 'download_airing_calendar_error':
         return 'Failed to load the airing schedule';
       case 'download_airing_calendar_in_library':
         return 'In library';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
       case 'download_airing_calendar_subscribed':
         return 'Subscribed';
       case 'download_airing_calendar_title':
         return 'Airing calendar';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Nothing airing this week';
       case 'download_airing_calendar_week_next':
@@ -363036,10 +364055,6 @@ extension on _StringsEn {
         return 'Drop non-Japanese charset characters';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Removes characters that cannot be encoded in Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Keep only quoted text';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
       case 'game_text_process_kind_normalize_width':
         return 'Normalise character width';
       case 'game_text_process_kind_normalize_width_desc':
@@ -363053,9 +364068,13 @@ extension on _StringsEn {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return 'Removes markup such as ruby and br tags';
       case 'game_text_process_kind_strip_curly_braces':
-        return 'Remove furigana braces';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'A brace with a slash keeps its base text; one without is removed entirely';
+        return 'Curly-brace furigana to ruby';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Keep N lines';
       case 'game_text_process_kind_take_lines_desc':
@@ -363094,6 +364113,8 @@ extension on _StringsEn {
         return 'Unchanged';
       case 'game_text_process_preview_use_latest':
         return 'Use latest captured line';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
       case 'game_text_process_step_count':
@@ -363336,7 +364357,7 @@ extension on _StringsEn {
       case 'home_panel_mode_shown':
         return 'Show';
       case 'home_panel_srs_hint':
-        return 'Auto shows it once you mine to Fushi SRS or have review cards';
+        return 'Auto shows it once you mine to Fushi review or have review cards';
       case 'home_recently_added':
         return 'Recently added';
       case 'home_remote_source':
@@ -363696,6 +364717,10 @@ extension on _StringsEn {
         return 'Upload book files';
       case 'interconnect_upload_content_hint':
         return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Upload to interconnect peer';
       case 'interconnect_upload_section_footer':
@@ -365329,6 +366354,10 @@ extension on _StringsEn {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Could not open the file location.';
       case 'media_file_location_open':
@@ -365963,7 +366992,7 @@ extension on _StringsEn {
       case 'nav_lookup':
         return 'Lookup';
       case 'nav_srs':
-        return 'SRS';
+        return 'Review';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -366329,15 +367358,15 @@ extension on _StringsEn {
       case 'onboarding_finish_body':
         return 'You can reopen this guide anytime from Settings → System.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Library pages shown';
       case 'onboarding_finish_summary_none':
@@ -366527,10 +367556,12 @@ extension on _StringsEn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -366562,7 +367593,7 @@ extension on _StringsEn {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Card creation settings';
       case 'onboarding_step_anki_action_desc':
@@ -368475,9 +369506,9 @@ extension on _StringsEn {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -368507,7 +369538,7 @@ extension on _StringsEn {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -368932,6 +369963,10 @@ extension on _StringsEn {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -368940,6 +369975,16 @@ extension on _StringsEn {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -369240,11 +370285,15 @@ extension on _StringsEn {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -369362,7 +370411,7 @@ extension on _StringsEn {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -369915,7 +370964,7 @@ extension on _StringsEn {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -369931,9 +370980,9 @@ extension on _StringsEn {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -370467,6 +371516,16 @@ extension on _StringsEn {
         return 'Stream';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -370483,6 +371542,8 @@ extension on _StringsEn {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -370540,6 +371601,8 @@ extension on _StringsEn {
         return 'Last checked';
       case 'subscription_sort_last_matched':
         return 'Last match';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'AI translated';
       case 'subtitle_version_content_language':
@@ -370772,6 +371835,10 @@ extension on _StringsEn {
         return 'Last sync: nothing synced - no connected sync channel';
       case 'sync_last_nothing':
         return 'Last sync: nothing to sync';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Not signed in';
       case 'sync_now':
@@ -371604,7 +372671,7 @@ extension on _StringsEn {
       case 'usage_stats_enabled':
         return 'Share usage statistics';
       case 'usage_stats_enabled_hint':
-        return 'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
+        return 'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform, update channel, app language, CPU architecture, OS major version and install source (e.g. app store or installer) to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored — only the country or region it resolves to is kept. When you attach device info to feedback, the install ID is sent with it.';
       case 'video_air_season_autumn':
         return 'Fall';
       case 'video_air_season_spring':
@@ -372084,6 +373151,8 @@ extension on _StringsEn {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Episode ${n} · ${count} unwatched';
@@ -374334,16 +375403,16 @@ extension on _StringsEn {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -376985,7 +378054,7 @@ extension on _StringsAr {
       case 'backup_category_settings_desc':
         return 'إعدادات التطبيق والقارئ';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -377482,13 +378551,13 @@ extension on _StringsAr {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'تغيير المصدر';
       case 'changelog_empty':
@@ -378344,6 +379413,8 @@ extension on _StringsAr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -378463,8 +379534,6 @@ extension on _StringsAr {
         return 'جارٍ حذف بيانات القاموس...';
       case 'dictionaries_menu_empty':
         return 'استورد قاموساً للاستخدام';
-      case 'dictionary_collapse_follow_global':
-        return 'اتباع الإعداد العام';
       case 'dictionary_delete_failed':
         return 'فشل حذف القاموس';
       case 'dictionary_font_size':
@@ -378726,20 +379795,20 @@ extension on _StringsAr {
         return 'إعدادات الطباعة';
       case 'download_add_video_source':
         return 'إضافة مصدر فيديو';
-      case 'download_airing_calendar_empty_guidance':
-        return 'لا شيء لعرضه بعد: اربط مجموعة بـ AniList أو أضف اشتراك تحميل، وستظهر مواعيد بثها هنا.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'الحلقة ${episode}';
       case 'download_airing_calendar_error':
         return 'فشل تحميل جدول البث';
       case 'download_airing_calendar_in_library':
         return 'في المكتبة';
-      case 'download_airing_calendar_show_all':
-        return 'عرض كل هذا الموسم';
       case 'download_airing_calendar_subscribed':
         return 'مشترك';
       case 'download_airing_calendar_title':
         return 'جدول البث';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'لا يوجد بث هذا الأسبوع';
       case 'download_airing_calendar_week_next':
@@ -381472,10 +382541,6 @@ extension on _StringsAr {
         return 'حذف أحرف المجموعات غير اليابانية';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'يزيل الأحرف التي لا يمكن ترميزها في Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'الاحتفاظ بالنص المقتبس فقط';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'يحتفظ بالحوار ويحذف السرد؛ والسطر بلا علامات اقتباس يُحذف بالكامل';
       case 'game_text_process_kind_normalize_width':
         return 'توحيد عرض الأحرف';
       case 'game_text_process_kind_normalize_width_desc':
@@ -381490,8 +382555,12 @@ extension on _StringsAr {
         return 'يزيل الوسوم مثل ruby وbr';
       case 'game_text_process_kind_strip_curly_braces':
         return 'إزالة أقواس الفوريغانا';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'القوس الذي فيه شرطة مائلة يحتفظ بنصه الأساسي؛ وما لا شرطة فيه يُزال بالكامل';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'الاحتفاظ بـ N سطرًا';
       case 'game_text_process_kind_take_lines_desc':
@@ -381530,6 +382599,8 @@ extension on _StringsAr {
         return 'دون تغيير';
       case 'game_text_process_preview_use_latest':
         return 'استخدام آخر سطر ملتقَط';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'تزيل هذه الخطوة الوسوم التي تُحلَّل منها الفوريغانا، فتفقد تلك الأسطر الروبي';
       case 'game_text_process_step_count':
@@ -382129,6 +383200,10 @@ extension on _StringsAr {
         return 'رفع ملفات الكتب';
       case 'interconnect_upload_content_hint':
         return 'مزامنة كتب ومحتوى القراءة على هذا الجهاز إلى نظير الترابط.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'الرفع إلى نظير الترابط';
       case 'interconnect_upload_section_footer':
@@ -383761,6 +384836,10 @@ extension on _StringsAr {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'تعذّر فتح موقع الملف.';
       case 'media_file_location_open':
@@ -384395,7 +385474,7 @@ extension on _StringsAr {
       case 'nav_lookup':
         return 'بحث';
       case 'nav_srs':
-        return 'SRS';
+        return 'المراجعة';
       case 'nav_video':
         return 'فيديو';
       case 'nav_web':
@@ -384762,15 +385841,15 @@ extension on _StringsAr {
       case 'onboarding_finish_body':
         return 'يمكنك فتح هذا الدليل مجدداً في أي وقت من الإعدادات → النظام.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'صفحات المكتبة المعروضة';
       case 'onboarding_finish_summary_none':
@@ -384960,10 +386039,12 @@ extension on _StringsAr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -384995,7 +386076,7 @@ extension on _StringsAr {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'إعدادات إنشاء البطاقات';
       case 'onboarding_step_anki_action_desc':
@@ -386908,9 +387989,9 @@ extension on _StringsAr {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -386940,7 +388021,7 @@ extension on _StringsAr {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -387365,6 +388446,10 @@ extension on _StringsAr {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -387373,6 +388458,16 @@ extension on _StringsAr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -387673,11 +388768,15 @@ extension on _StringsAr {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -387795,7 +388894,7 @@ extension on _StringsAr {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -388348,7 +389447,7 @@ extension on _StringsAr {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -388364,9 +389463,9 @@ extension on _StringsAr {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -388896,6 +389995,16 @@ extension on _StringsAr {
         return 'بث';
       case 'study_diag_share_subject':
         return 'تشخيص الدراسة في Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -388912,6 +390021,8 @@ extension on _StringsAr {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -388969,6 +390080,8 @@ extension on _StringsAr {
         return 'آخر فحص';
       case 'subscription_sort_last_matched':
         return 'آخر تطابق';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'ترجمة بالذكاء الاصطناعي';
       case 'subtitle_version_content_language':
@@ -389200,6 +390313,10 @@ extension on _StringsAr {
         return 'آخر مزامنة: لم تتم المزامنة - لا توجد قناة مزامنة متصلة';
       case 'sync_last_nothing':
         return 'آخر مزامنة: لا شيء لمزامنته';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'لم يتم تسجيل الدخول';
       case 'sync_now':
@@ -390033,7 +391150,7 @@ extension on _StringsAr {
       case 'usage_stats_enabled':
         return 'مشاركة إحصاءات الاستخدام';
       case 'usage_stats_enabled_hint':
-        return 'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
+        return 'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث ولغة التطبيق وبنية المعالج والإصدار الرئيسي لنظام التشغيل ومصدر التثبيت (مثل متجر التطبيقات أو المثبّت) إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك، بل يُحفَظ فقط البلد أو المنطقة المستنتجة منه. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
       case 'video_air_season_autumn':
         return 'خريف';
       case 'video_air_season_spring':
@@ -390514,6 +391631,8 @@ extension on _StringsAr {
         return ({required Object n}) => 'أُضيف مؤخرًا · الحلقة ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} دقيقة متبقية';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'الحلقة ${n} · ${count} غير مشاهدة';
@@ -392765,16 +393884,16 @@ extension on _StringsAr {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -395436,7 +396555,7 @@ extension on _StringsDe {
       case 'backup_category_settings_desc':
         return 'App- und Reader-Einstellungen';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -395934,13 +397053,13 @@ extension on _StringsDe {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Quelle ändern';
       case 'changelog_empty':
@@ -396800,6 +397919,8 @@ extension on _StringsDe {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -396921,8 +398042,6 @@ extension on _StringsDe {
         return 'Wörterbuchdaten werden gelöscht...';
       case 'dictionaries_menu_empty':
         return 'Importieren Sie ein Wörterbuch';
-      case 'dictionary_collapse_follow_global':
-        return 'Globaler Einstellung folgen';
       case 'dictionary_delete_failed':
         return 'Löschen des Wörterbuchs fehlgeschlagen';
       case 'dictionary_font_size':
@@ -397186,20 +398305,20 @@ extension on _StringsDe {
         return 'Typografie-Einstellungen';
       case 'download_add_video_source':
         return 'Videoquelle hinzufügen';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Noch nichts anzuzeigen: Verknüpfen Sie eine Sammlung mit AniList oder fügen Sie ein Download-Abonnement hinzu, dann erscheinen die Sendezeiten hier.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Folge ${episode}';
       case 'download_airing_calendar_error':
         return 'Sendezeitplan konnte nicht geladen werden';
       case 'download_airing_calendar_in_library':
         return 'In der Bibliothek';
-      case 'download_airing_calendar_show_all':
-        return 'Alle dieser Saison anzeigen';
       case 'download_airing_calendar_subscribed':
         return 'Abonniert';
       case 'download_airing_calendar_title':
         return 'Sendekalender';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Keine Ausstrahlungen diese Woche';
       case 'download_airing_calendar_week_next':
@@ -399937,10 +401056,6 @@ extension on _StringsDe {
         return 'Nicht-japanische Zeichen entfernen';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Entfernt Zeichen, die in Shift-JIS nicht kodiert werden können';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Nur zitierten Text behalten';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Behält Dialoge und verwirft Erzähltext; eine Zeile ohne Anführungszeichen wird vollständig verworfen';
       case 'game_text_process_kind_normalize_width':
         return 'Zeichenbreite normalisieren';
       case 'game_text_process_kind_normalize_width_desc':
@@ -399955,8 +401070,12 @@ extension on _StringsDe {
         return 'Entfernt Markup wie ruby- und br-Tags';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana-Klammern entfernen';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Eine Klammer mit Schrägstrich behält ihren Basistext; eine ohne wird vollständig entfernt';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'N Zeilen behalten';
       case 'game_text_process_kind_take_lines_desc':
@@ -399995,6 +401114,8 @@ extension on _StringsDe {
         return 'Unverändert';
       case 'game_text_process_preview_use_latest':
         return 'Zuletzt erfasste Zeile verwenden';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Dieser Schritt entfernt das Markup, aus dem Furigana geparst werden, sodass diese Zeilen ihr Ruby verlieren';
       case 'game_text_process_step_count':
@@ -400600,6 +401721,10 @@ extension on _StringsDe {
         return 'Buchdateien hochladen';
       case 'interconnect_upload_content_hint':
         return 'Bücher und Leseinhalte dieses Geräts zum Interconnect-Peer synchronisieren.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Zum Interconnect-Peer hochladen';
       case 'interconnect_upload_section_footer':
@@ -402240,6 +403365,10 @@ extension on _StringsDe {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Der Speicherort der Datei konnte nicht geöffnet werden.';
       case 'media_file_location_open':
@@ -402878,7 +404007,7 @@ extension on _StringsDe {
       case 'nav_lookup':
         return 'Nachschlagen';
       case 'nav_srs':
-        return 'SRS';
+        return 'Wiederholen';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -403248,15 +404377,15 @@ extension on _StringsDe {
       case 'onboarding_finish_body':
         return 'Sie können diese Anleitung jederzeit unter Einstellungen → System wieder öffnen.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Angezeigte Bibliotheksseiten';
       case 'onboarding_finish_summary_none':
@@ -403447,10 +404576,12 @@ extension on _StringsDe {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -403482,7 +404613,7 @@ extension on _StringsDe {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Kartenerstell-Einstellungen';
       case 'onboarding_step_anki_action_desc':
@@ -405397,9 +406528,9 @@ extension on _StringsDe {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -405429,7 +406560,7 @@ extension on _StringsDe {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -405854,6 +406985,10 @@ extension on _StringsDe {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -405862,6 +406997,16 @@ extension on _StringsDe {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -406162,11 +407307,15 @@ extension on _StringsDe {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -406284,7 +407433,7 @@ extension on _StringsDe {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -406837,7 +407986,7 @@ extension on _StringsDe {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -406853,9 +408002,9 @@ extension on _StringsDe {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -407390,6 +408539,16 @@ extension on _StringsDe {
         return 'Stream';
       case 'study_diag_share_subject':
         return 'Fushi-Lerndiagnose';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -407406,6 +408565,8 @@ extension on _StringsDe {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -407463,6 +408624,8 @@ extension on _StringsDe {
         return 'Zuletzt geprüft';
       case 'subscription_sort_last_matched':
         return 'Letzter Treffer';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'KI-übersetzt';
       case 'subtitle_version_content_language':
@@ -407696,6 +408859,10 @@ extension on _StringsDe {
         return 'Letzte Synchronisierung: nichts synchronisiert – kein verbundener Sync-Kanal';
       case 'sync_last_nothing':
         return 'Letzte Synchronisierung: nichts zu synchronisieren';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Nicht angemeldet';
       case 'sync_now':
@@ -408533,7 +409700,7 @@ extension on _StringsDe {
       case 'usage_stats_enabled':
         return 'Nutzungsstatistiken teilen';
       case 'usage_stats_enabled_hint':
-        return 'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
+        return 'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform, den Update-Kanal, die App-Sprache, die CPU-Architektur, die Hauptversion des Betriebssystems und die Installationsquelle (z. B. App-Store oder Installer) an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert – nur das daraus ermittelte Land bzw. die Region. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
       case 'video_air_season_autumn':
         return 'Herbst';
       case 'video_air_season_spring':
@@ -409015,6 +410182,8 @@ extension on _StringsDe {
         return ({required Object n}) => 'Kürzlich hinzugefügt · Folge ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} Min. verbleibend';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Folge ${n} · ${count} ungesehen';
@@ -411272,16 +412441,16 @@ extension on _StringsDe {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -413938,7 +415107,7 @@ extension on _StringsEs {
       case 'backup_category_settings_desc':
         return 'Ajustes de la app y del lector';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -414436,13 +415605,13 @@ extension on _StringsEs {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Cambiar fuente';
       case 'changelog_empty':
@@ -415301,6 +416470,8 @@ extension on _StringsEs {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -415420,8 +416591,6 @@ extension on _StringsEs {
         return 'Eliminando datos del diccionario...';
       case 'dictionaries_menu_empty':
         return 'Importa un diccionario para usar';
-      case 'dictionary_collapse_follow_global':
-        return 'Seguir el ajuste global';
       case 'dictionary_delete_failed':
         return 'No se pudo eliminar el diccionario';
       case 'dictionary_font_size':
@@ -415683,20 +416852,20 @@ extension on _StringsEs {
         return 'Configuración de pantalla';
       case 'download_add_video_source':
         return 'Añadir fuente de vídeo';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nada que mostrar aún: vincule una colección a AniList o agregue una suscripción de descarga, y sus horarios de emisión aparecerán aquí.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Ep ${episode}';
       case 'download_airing_calendar_error':
         return 'No se pudo cargar el calendario de emisión';
       case 'download_airing_calendar_in_library':
         return 'En biblioteca';
-      case 'download_airing_calendar_show_all':
-        return 'Mostrar todo de esta temporada';
       case 'download_airing_calendar_subscribed':
         return 'Suscrito';
       case 'download_airing_calendar_title':
         return 'Calendario de emisión';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Nada se emite esta semana';
       case 'download_airing_calendar_week_next':
@@ -418434,10 +419603,6 @@ extension on _StringsEs {
         return 'Quitar caracteres de juegos de caracteres no japoneses';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Elimina los caracteres que no se pueden codificar en Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Conservar solo el texto entrecomillado';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Conserva los diálogos y descarta la narración; una línea sin comillas se descarta por completo';
       case 'game_text_process_kind_normalize_width':
         return 'Normalizar el ancho de caracteres';
       case 'game_text_process_kind_normalize_width_desc':
@@ -418452,8 +419617,12 @@ extension on _StringsEs {
         return 'Elimina marcado como las etiquetas ruby y br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Quitar llaves de furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Una llave con barra conserva su texto base; una sin barra se elimina por completo';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Conservar N líneas';
       case 'game_text_process_kind_take_lines_desc':
@@ -418492,6 +419661,8 @@ extension on _StringsEs {
         return 'Sin cambios';
       case 'game_text_process_preview_use_latest':
         return 'Usar la última línea capturada';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Este paso elimina el marcado a partir del cual se analiza el furigana, por lo que esas líneas pierden su ruby';
       case 'game_text_process_step_count':
@@ -419095,6 +420266,10 @@ extension on _StringsEs {
         return 'Subir archivos de libros';
       case 'interconnect_upload_content_hint':
         return 'Sincroniza los libros y contenido de lectura de este dispositivo al par de Interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Subir al par de Interconnect';
       case 'interconnect_upload_section_footer':
@@ -420733,6 +421908,10 @@ extension on _StringsEs {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'No se pudo abrir la ubicación del archivo.';
       case 'media_file_location_open':
@@ -421371,7 +422550,7 @@ extension on _StringsEs {
       case 'nav_lookup':
         return 'Consultar';
       case 'nav_srs':
-        return 'SRS';
+        return 'Repaso';
       case 'nav_video':
         return 'Vídeo';
       case 'nav_web':
@@ -421740,15 +422919,15 @@ extension on _StringsEs {
       case 'onboarding_finish_body':
         return 'Puede volver a abrir esta guía en cualquier momento desde Ajustes → Sistema.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Páginas de biblioteca visibles';
       case 'onboarding_finish_summary_none':
@@ -421938,10 +423117,12 @@ extension on _StringsEs {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -421973,7 +423154,7 @@ extension on _StringsEs {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Ajustes de creación de tarjetas';
       case 'onboarding_step_anki_action_desc':
@@ -423890,9 +425071,9 @@ extension on _StringsEs {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -423922,7 +425103,7 @@ extension on _StringsEs {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -424347,6 +425528,10 @@ extension on _StringsEs {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -424355,6 +425540,16 @@ extension on _StringsEs {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -424655,11 +425850,15 @@ extension on _StringsEs {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -424777,7 +425976,7 @@ extension on _StringsEs {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -425330,7 +426529,7 @@ extension on _StringsEs {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -425346,9 +426545,9 @@ extension on _StringsEs {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -425882,6 +427081,16 @@ extension on _StringsEs {
         return 'Transmisión';
       case 'study_diag_share_subject':
         return 'Diagnóstico de estudio de Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -425898,6 +427107,8 @@ extension on _StringsEs {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -425955,6 +427166,8 @@ extension on _StringsEs {
         return 'Última verificación';
       case 'subscription_sort_last_matched':
         return 'Última coincidencia';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'Traducido por IA';
       case 'subtitle_version_content_language':
@@ -426188,6 +427401,10 @@ extension on _StringsEs {
         return 'Última sincronización: nada sincronizado — sin canal de sincronización conectado';
       case 'sync_last_nothing':
         return 'Última sincronización: nada que sincronizar';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'No conectado';
       case 'sync_now':
@@ -427024,7 +428241,7 @@ extension on _StringsEs {
       case 'usage_stats_enabled':
         return 'Compartir estadísticas de uso';
       case 'usage_stats_enabled_hint':
-        return 'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
+        return 'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma, el canal de actualizaciones, el idioma de la app, la arquitectura de CPU, la versión principal del sistema y el origen de instalación (p. ej. tienda o instalador) para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda: solo se conserva el país o región que se deduce de ella. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
       case 'video_air_season_autumn':
         return 'Otoño';
       case 'video_air_season_spring':
@@ -427507,6 +428724,8 @@ extension on _StringsEs {
         return ({required Object n}) => 'Añadido recientemente · Episodio ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min restantes';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Episodio ${n} · ${count} sin ver';
@@ -429761,16 +430980,16 @@ extension on _StringsEs {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -432432,7 +433651,7 @@ extension on _StringsFr {
       case 'backup_category_settings_desc':
         return 'Paramètres de l\'application et du lecteur';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -432930,13 +434149,13 @@ extension on _StringsFr {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Changer de source';
       case 'changelog_empty':
@@ -433798,6 +435017,8 @@ extension on _StringsFr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -433918,8 +435139,6 @@ extension on _StringsFr {
         return 'Suppression des données du dictionnaire...';
       case 'dictionaries_menu_empty':
         return 'Importez un dictionnaire pour l\'utiliser';
-      case 'dictionary_collapse_follow_global':
-        return 'Suivre le réglage global';
       case 'dictionary_delete_failed':
         return 'Échec de la suppression du dictionnaire';
       case 'dictionary_font_size':
@@ -434183,20 +435402,20 @@ extension on _StringsFr {
         return 'Paramètres d\'affichage';
       case 'download_add_video_source':
         return 'Ajouter une source vidéo';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Rien à afficher : liez une collection à AniList ou ajoutez un abonnement de téléchargement, et les horaires de diffusion apparaîtront ici.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Ép ${episode}';
       case 'download_airing_calendar_error':
         return 'Échec du chargement du calendrier de diffusion';
       case 'download_airing_calendar_in_library':
         return 'Dans la bibliothèque';
-      case 'download_airing_calendar_show_all':
-        return 'Afficher toute cette saison';
       case 'download_airing_calendar_subscribed':
         return 'Abonné';
       case 'download_airing_calendar_title':
         return 'Calendrier de diffusion';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Rien ne passe cette semaine';
       case 'download_airing_calendar_week_next':
@@ -436936,10 +438155,6 @@ extension on _StringsFr {
         return 'Supprimer les caractères hors jeu de caractères japonais';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Supprime les caractères qui ne peuvent pas être encodés en Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Ne garder que le texte entre guillemets';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Garde les dialogues et supprime la narration ; une ligne sans guillemets est entièrement supprimée';
       case 'game_text_process_kind_normalize_width':
         return 'Normaliser la largeur des caractères';
       case 'game_text_process_kind_normalize_width_desc':
@@ -436954,8 +438169,12 @@ extension on _StringsFr {
         return 'Supprime le balisage comme les balises ruby et br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Supprimer les accolades de furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Une accolade avec une barre oblique conserve son texte de base ; sans barre, elle est entièrement supprimée';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Garder N lignes';
       case 'game_text_process_kind_take_lines_desc':
@@ -436994,6 +438213,8 @@ extension on _StringsFr {
         return 'Inchangé';
       case 'game_text_process_preview_use_latest':
         return 'Utiliser la dernière ligne capturée';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Cette étape supprime le balisage à partir duquel les furigana sont analysés ; ces lignes perdent donc leurs ruby';
       case 'game_text_process_step_count':
@@ -437599,6 +438820,10 @@ extension on _StringsFr {
         return 'Envoyer les fichiers de livres';
       case 'interconnect_upload_content_hint':
         return 'Synchroniser les livres et le contenu de lecture de cet appareil vers le pair d\'interconnexion.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Envoyer vers le pair d\'interconnexion';
       case 'interconnect_upload_section_footer':
@@ -439236,6 +440461,10 @@ extension on _StringsFr {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Impossible d\'ouvrir l\'emplacement du fichier.';
       case 'media_file_location_open':
@@ -439874,7 +441103,7 @@ extension on _StringsFr {
       case 'nav_lookup':
         return 'Recherche';
       case 'nav_srs':
-        return 'SRS';
+        return 'Révision';
       case 'nav_video':
         return 'Vidéo';
       case 'nav_web':
@@ -440244,15 +441473,15 @@ extension on _StringsFr {
       case 'onboarding_finish_body':
         return 'Vous pouvez rouvrir ce guide à tout moment depuis Paramètres → Système.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Pages de bibliothèque affichées';
       case 'onboarding_finish_summary_none':
@@ -440443,10 +441672,12 @@ extension on _StringsFr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -440478,7 +441709,7 @@ extension on _StringsFr {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Paramètres de création de cartes';
       case 'onboarding_step_anki_action_desc':
@@ -442394,9 +443625,9 @@ extension on _StringsFr {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -442426,7 +443657,7 @@ extension on _StringsFr {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -442851,6 +444082,10 @@ extension on _StringsFr {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -442859,6 +444094,16 @@ extension on _StringsFr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -443159,11 +444404,15 @@ extension on _StringsFr {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -443281,7 +444530,7 @@ extension on _StringsFr {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -443834,7 +445083,7 @@ extension on _StringsFr {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -443850,9 +445099,9 @@ extension on _StringsFr {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -444384,6 +445633,16 @@ extension on _StringsFr {
         return 'Flux';
       case 'study_diag_share_subject':
         return 'Diagnostic d\'étude Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -444400,6 +445659,8 @@ extension on _StringsFr {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -444457,6 +445718,8 @@ extension on _StringsFr {
         return 'Dernière vérification';
       case 'subscription_sort_last_matched':
         return 'Dernière correspondance';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'Traduit par IA';
       case 'subtitle_version_content_language':
@@ -444691,6 +445954,10 @@ extension on _StringsFr {
         return 'Dernière synchro : rien — aucun canal de synchronisation connecté';
       case 'sync_last_nothing':
         return 'Dernière synchro : rien à synchroniser';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Non connecté';
       case 'sync_now':
@@ -445529,7 +446796,7 @@ extension on _StringsFr {
       case 'usage_stats_enabled':
         return 'Partager les statistiques d’utilisation';
       case 'usage_stats_enabled_hint':
-        return 'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
+        return 'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme, le canal de mise à jour, la langue de l’app, l’architecture du processeur, la version majeure du système et la source d’installation (boutique ou installateur, par ex.) afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée : seul le pays ou la région qui en découle est gardé. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
       case 'video_air_season_autumn':
         return 'Automne';
       case 'video_air_season_spring':
@@ -446012,6 +447279,8 @@ extension on _StringsFr {
         return ({required Object n}) => 'Ajouté récemment · Épisode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min restantes';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Épisode ${n} · ${count} non vus';
@@ -448268,16 +449537,16 @@ extension on _StringsFr {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -450926,7 +452195,7 @@ extension on _StringsId {
       case 'backup_category_settings_desc':
         return 'Pengaturan aplikasi dan pembaca';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -451423,13 +452692,13 @@ extension on _StringsId {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Ubah Sumber';
       case 'changelog_empty':
@@ -452287,6 +453556,8 @@ extension on _StringsId {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -452406,8 +453677,6 @@ extension on _StringsId {
         return 'Menghapus data kamus...';
       case 'dictionaries_menu_empty':
         return 'Impor kamus untuk digunakan';
-      case 'dictionary_collapse_follow_global':
-        return 'Ikuti pengaturan global';
       case 'dictionary_delete_failed':
         return 'Gagal menghapus kamus';
       case 'dictionary_font_size':
@@ -452669,20 +453938,20 @@ extension on _StringsId {
         return 'Pengaturan Tampilan';
       case 'download_add_video_source':
         return 'Tambah sumber video';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Belum ada yang ditampilkan: tautkan koleksi ke AniList atau tambahkan langganan unduhan, dan jadwal tayangnya akan muncul di sini.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Ep ${episode}';
       case 'download_airing_calendar_error':
         return 'Gagal memuat jadwal tayang';
       case 'download_airing_calendar_in_library':
         return 'Di perpustakaan';
-      case 'download_airing_calendar_show_all':
-        return 'Tampilkan semua musim ini';
       case 'download_airing_calendar_subscribed':
         return 'Berlangganan';
       case 'download_airing_calendar_title':
         return 'Kalender tayang';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Tidak ada yang tayang minggu ini';
       case 'download_airing_calendar_week_next':
@@ -455418,10 +456687,6 @@ extension on _StringsId {
         return 'Buang karakter charset non-Jepang';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Menghapus karakter yang tidak dapat dikodekan dalam Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Pertahankan hanya teks bertanda kutip';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Mempertahankan dialog dan membuang narasi; baris tanpa tanda kutip dibuang seluruhnya';
       case 'game_text_process_kind_normalize_width':
         return 'Normalkan lebar karakter';
       case 'game_text_process_kind_normalize_width_desc':
@@ -455436,8 +456701,12 @@ extension on _StringsId {
         return 'Menghapus markup seperti tag ruby dan br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Hapus kurung furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Kurung dengan garis miring mempertahankan teks dasarnya; yang tanpa itu dihapus seluruhnya';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Pertahankan N baris';
       case 'game_text_process_kind_take_lines_desc':
@@ -455476,6 +456745,8 @@ extension on _StringsId {
         return 'Tidak berubah';
       case 'game_text_process_preview_use_latest':
         return 'Gunakan baris terakhir yang ditangkap';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Langkah ini menghapus markup tempat furigana diurai, sehingga baris tersebut kehilangan ruby-nya';
       case 'game_text_process_step_count':
@@ -456078,6 +457349,10 @@ extension on _StringsId {
         return 'Unggah file buku';
       case 'interconnect_upload_content_hint':
         return 'Sinkronkan buku dan konten bacaan perangkat ini ke peer interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Unggah ke peer interconnect';
       case 'interconnect_upload_section_footer':
@@ -457712,6 +458987,10 @@ extension on _StringsId {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Tidak dapat membuka lokasi berkas.';
       case 'media_file_location_open':
@@ -458346,7 +459625,7 @@ extension on _StringsId {
       case 'nav_lookup':
         return 'Cari Kata';
       case 'nav_srs':
-        return 'SRS';
+        return 'Ulasan';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -458712,15 +459991,15 @@ extension on _StringsId {
       case 'onboarding_finish_body':
         return 'Anda bisa membuka lagi panduan ini kapan saja dari Pengaturan → Sistem.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Halaman perpustakaan yang ditampilkan';
       case 'onboarding_finish_summary_none':
@@ -458910,10 +460189,12 @@ extension on _StringsId {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -458945,7 +460226,7 @@ extension on _StringsId {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Pengaturan pembuatan kartu';
       case 'onboarding_step_anki_action_desc':
@@ -460858,9 +462139,9 @@ extension on _StringsId {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -460890,7 +462171,7 @@ extension on _StringsId {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -461315,6 +462596,10 @@ extension on _StringsId {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -461323,6 +462608,16 @@ extension on _StringsId {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -461623,11 +462918,15 @@ extension on _StringsId {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -461745,7 +463044,7 @@ extension on _StringsId {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -462298,7 +463597,7 @@ extension on _StringsId {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -462314,9 +463613,9 @@ extension on _StringsId {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -462850,6 +464149,16 @@ extension on _StringsId {
         return 'Streaming';
       case 'study_diag_share_subject':
         return 'Diagnostik belajar Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -462866,6 +464175,8 @@ extension on _StringsId {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -462923,6 +464234,8 @@ extension on _StringsId {
         return 'Terakhir diperiksa';
       case 'subscription_sort_last_matched':
         return 'Kecocokan terakhir';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'Diterjemahkan AI';
       case 'subtitle_version_content_language':
@@ -463155,6 +464468,10 @@ extension on _StringsId {
         return 'Sinkronisasi terakhir: tidak ada yang disinkronkan - tidak ada kanal sinkronisasi yang terhubung';
       case 'sync_last_nothing':
         return 'Sinkronisasi terakhir: tidak ada yang perlu disinkronkan';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Belum masuk';
       case 'sync_now':
@@ -463987,7 +465304,7 @@ extension on _StringsId {
       case 'usage_stats_enabled':
         return 'Bagikan statistik penggunaan';
       case 'usage_stats_enabled_hint':
-        return 'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
+        return 'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, kanal pembaruan, bahasa aplikasi, arsitektur CPU, versi utama sistem operasi, dan sumber instalasi (misalnya toko aplikasi atau penginstal) ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan — hanya negara atau wilayah yang ditentukan darinya. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
       case 'video_air_season_autumn':
         return 'Musim gugur';
       case 'video_air_season_spring':
@@ -464468,6 +465785,8 @@ extension on _StringsId {
         return ({required Object n}) => 'Baru ditambahkan · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} menit tersisa';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Episode ${n} · ${count} belum ditonton';
@@ -466719,16 +468038,16 @@ extension on _StringsId {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -469382,7 +470701,7 @@ extension on _StringsIt {
       case 'backup_category_settings_desc':
         return 'Impostazioni dell\'app e del lettore';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -469880,13 +471199,13 @@ extension on _StringsIt {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Cambia sorgente';
       case 'changelog_empty':
@@ -470744,6 +472063,8 @@ extension on _StringsIt {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -470865,8 +472186,6 @@ extension on _StringsIt {
         return 'Eliminazione dati del dizionario...';
       case 'dictionaries_menu_empty':
         return 'Importa un dizionario per l\'uso';
-      case 'dictionary_collapse_follow_global':
-        return 'Segui l\'impostazione globale';
       case 'dictionary_delete_failed':
         return 'Impossibile eliminare il dizionario';
       case 'dictionary_font_size':
@@ -471130,20 +472449,20 @@ extension on _StringsIt {
         return 'Impostazioni di visualizzazione';
       case 'download_add_video_source':
         return 'Aggiungi fonte video';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Niente da mostrare: collega una raccolta ad AniList o aggiungi un abbonamento ai download, e gli orari di uscita appariranno qui.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Ep ${episode}';
       case 'download_airing_calendar_error':
         return 'Impossibile caricare il calendario delle uscite';
       case 'download_airing_calendar_in_library':
         return 'In libreria';
-      case 'download_airing_calendar_show_all':
-        return 'Mostra tutto questa stagione';
       case 'download_airing_calendar_subscribed':
         return 'Abbonato';
       case 'download_airing_calendar_title':
         return 'Calendario uscite';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Nessuna uscita questa settimana';
       case 'download_airing_calendar_week_next':
@@ -473880,10 +475199,6 @@ extension on _StringsIt {
         return 'Elimina i caratteri non giapponesi';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Rimuove i caratteri che non possono essere codificati in Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Mantieni solo il testo tra virgolette';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Mantiene i dialoghi ed elimina la narrazione; una riga senza virgolette viene scartata del tutto';
       case 'game_text_process_kind_normalize_width':
         return 'Normalizza la larghezza dei caratteri';
       case 'game_text_process_kind_normalize_width_desc':
@@ -473898,8 +475213,12 @@ extension on _StringsIt {
         return 'Rimuove il markup come i tag ruby e br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Rimuovi le graffe dei furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Una graffa con una barra mantiene il testo di base; una senza viene rimossa del tutto';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Mantieni N righe';
       case 'game_text_process_kind_take_lines_desc':
@@ -473938,6 +475257,8 @@ extension on _StringsIt {
         return 'Invariato';
       case 'game_text_process_preview_use_latest':
         return 'Usa l\'ultima riga catturata';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Questo passaggio rimuove il markup da cui vengono analizzati i furigana, quindi quelle righe perdono il ruby';
       case 'game_text_process_step_count':
@@ -474541,6 +475862,10 @@ extension on _StringsIt {
         return 'Carica file dei libri';
       case 'interconnect_upload_content_hint':
         return 'Sincronizza i libri e i contenuti di lettura di questo dispositivo sul peer interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Carica sul peer interconnect';
       case 'interconnect_upload_section_footer':
@@ -476177,6 +477502,10 @@ extension on _StringsIt {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Impossibile aprire la posizione del file.';
       case 'media_file_location_open':
@@ -476815,7 +478144,7 @@ extension on _StringsIt {
       case 'nav_lookup':
         return 'Ricerca';
       case 'nav_srs':
-        return 'SRS';
+        return 'Ripasso';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -477183,15 +478512,15 @@ extension on _StringsIt {
       case 'onboarding_finish_body':
         return 'Puoi riaprire questa guida in qualsiasi momento da Impostazioni → Sistema.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Pagine della libreria mostrate';
       case 'onboarding_finish_summary_none':
@@ -477381,10 +478710,12 @@ extension on _StringsIt {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -477416,7 +478747,7 @@ extension on _StringsIt {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Impostazioni creazione carte';
       case 'onboarding_step_anki_action_desc':
@@ -479331,9 +480662,9 @@ extension on _StringsIt {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -479363,7 +480694,7 @@ extension on _StringsIt {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -479788,6 +481119,10 @@ extension on _StringsIt {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -479796,6 +481131,16 @@ extension on _StringsIt {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -480096,11 +481441,15 @@ extension on _StringsIt {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -480218,7 +481567,7 @@ extension on _StringsIt {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -480771,7 +482120,7 @@ extension on _StringsIt {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -480787,9 +482136,9 @@ extension on _StringsIt {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -481323,6 +482672,16 @@ extension on _StringsIt {
         return 'Streaming';
       case 'study_diag_share_subject':
         return 'Diagnostica di studio di Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -481339,6 +482698,8 @@ extension on _StringsIt {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -481396,6 +482757,8 @@ extension on _StringsIt {
         return 'Ultimo controllo';
       case 'subscription_sort_last_matched':
         return 'Ultima corrispondenza';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'Traduzione AI';
       case 'subtitle_version_content_language':
@@ -481629,6 +482992,10 @@ extension on _StringsIt {
         return 'Ultima sincronizzazione: nulla sincronizzato — nessun canale di sincronizzazione connesso';
       case 'sync_last_nothing':
         return 'Ultima sincronizzazione: nulla da sincronizzare';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Non connesso';
       case 'sync_now':
@@ -482469,7 +483836,7 @@ extension on _StringsIt {
       case 'usage_stats_enabled':
         return 'Condividi statistiche di utilizzo';
       case 'usage_stats_enabled_hint':
-        return 'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
+        return 'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma, il canale di aggiornamento, la lingua dell\'app, l\'architettura della CPU, la versione principale del sistema e l\'origine dell\'installazione (es. store o programma di installazione), così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato: si conserva solo il paese o la regione che ne deriva. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
       case 'video_air_season_autumn':
         return 'Autunno';
       case 'video_air_season_spring':
@@ -482952,6 +484319,8 @@ extension on _StringsIt {
         return ({required Object n}) => 'Aggiunto di recente · Episodio ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min rimanenti';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Episodio ${n} · ${count} da guardare';
@@ -485206,16 +486575,16 @@ extension on _StringsIt {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -487846,7 +489215,7 @@ extension on _StringsJa {
       case 'backup_category_settings_desc':
         return 'アプリとリーダーの設定';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -488337,13 +489706,13 @@ extension on _StringsJa {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'ソースを変更';
       case 'changelog_empty':
@@ -489197,6 +490566,8 @@ extension on _StringsJa {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -489316,8 +490687,6 @@ extension on _StringsJa {
         return '辞書データを削除中...';
       case 'dictionaries_menu_empty':
         return '辞書をインポートしてください';
-      case 'dictionary_collapse_follow_global':
-        return '全体設定に従う';
       case 'dictionary_delete_failed':
         return '辞書の削除に失敗しました';
       case 'dictionary_font_size':
@@ -489578,20 +490947,20 @@ extension on _StringsJa {
         return '組版設定';
       case 'download_add_video_source':
         return '動画ソースを追加';
-      case 'download_airing_calendar_empty_guidance':
-        return 'まだ表示するものがありません。コレクションをAniListに紐付けるか、ダウンロードサブスクリプションを追加すると、放送スケジュールがここに表示されます。';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => '第${episode}話';
       case 'download_airing_calendar_error':
         return '放送スケジュールの読み込みに失敗しました';
       case 'download_airing_calendar_in_library':
         return 'ライブラリ内';
-      case 'download_airing_calendar_show_all':
-        return '今季のすべてを表示';
       case 'download_airing_calendar_subscribed':
         return '購読中';
       case 'download_airing_calendar_title':
         return '放送カレンダー';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return '今週の放送はありません';
       case 'download_airing_calendar_week_next':
@@ -492321,10 +493690,6 @@ extension on _StringsJa {
         return '日本語以外の文字セットの文字を除外';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Shift-JIS でエンコードできない文字を削除します';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return '「」内のテキストのみ残す';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return '台詞だけを残し、地の文を削除します。「」のない行は丸ごと破棄されます';
       case 'game_text_process_kind_normalize_width':
         return '文字幅を正規化';
       case 'game_text_process_kind_normalize_width_desc':
@@ -492338,9 +493703,13 @@ extension on _StringsJa {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return 'ruby や br タグなどのマークアップを削除します';
       case 'game_text_process_kind_strip_curly_braces':
-        return '波括弧のふりがなを削除';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'スラッシュ付きの波括弧は基の文字を残し、スラッシュのないものは丸ごと削除します';
+        return '波括弧のふりがなをルビに変換';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{漢字/かな}・{漢字:かな} の読みを漢字の上にルビとして表示し、それ以外の波括弧は丸ごと削除します';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return '「」の外の文字を除去';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return '話者名など「」の外の文字を除去します。「」のない行（地の文）はそのまま残ります';
       case 'game_text_process_kind_take_lines':
         return 'N 行を残す';
       case 'game_text_process_kind_take_lines_desc':
@@ -492379,6 +493748,8 @@ extension on _StringsJa {
         return '変更なし';
       case 'game_text_process_preview_use_latest':
         return '最近取得した行を使用';
+      case 'game_text_process_reset_defaults':
+        return 'デフォルトに戻す';
       case 'game_text_process_ruby_warning':
         return 'このステップはふりがなの解析元になるマークアップを削除するため、該当する行のルビが失われます';
       case 'game_text_process_step_count':
@@ -492621,7 +493992,7 @@ extension on _StringsJa {
       case 'home_panel_mode_shown':
         return '表示';
       case 'home_panel_srs_hint':
-        return '自動：Fushi SRS にカードを作成するか、復習カードがあると表示';
+        return '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
       case 'home_recently_added':
         return '最近追加';
       case 'home_remote_source':
@@ -492972,6 +494343,10 @@ extension on _StringsJa {
         return '書籍ファイルをアップロード';
       case 'interconnect_upload_content_hint':
         return 'このデバイスの書籍と読書コンテンツをインターコネクトピアに同期します。';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'インターコネクトピアにアップロード';
       case 'interconnect_upload_section_footer':
@@ -494600,6 +495975,10 @@ extension on _StringsJa {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'ファイルの場所を開けませんでした。';
       case 'media_file_location_open':
@@ -495232,7 +496611,7 @@ extension on _StringsJa {
       case 'nav_lookup':
         return '辞書';
       case 'nav_srs':
-        return 'SRS';
+        return '復習';
       case 'nav_video':
         return '動画';
       case 'nav_web':
@@ -495595,15 +496974,15 @@ extension on _StringsJa {
       case 'onboarding_finish_body':
         return 'このガイドは設定 → システムからいつでも開き直せます。';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return '表示するライブラリのページ';
       case 'onboarding_finish_summary_none':
@@ -495792,10 +497171,12 @@ extension on _StringsJa {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -495827,7 +497208,7 @@ extension on _StringsJa {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'カード作成設定';
       case 'onboarding_step_anki_action_desc':
@@ -497738,9 +499119,9 @@ extension on _StringsJa {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -497770,7 +499151,7 @@ extension on _StringsJa {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -498195,6 +499576,10 @@ extension on _StringsJa {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -498203,6 +499588,16 @@ extension on _StringsJa {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -498503,11 +499898,15 @@ extension on _StringsJa {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -498625,7 +500024,7 @@ extension on _StringsJa {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -499178,7 +500577,7 @@ extension on _StringsJa {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -499194,9 +500593,9 @@ extension on _StringsJa {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -499722,6 +501121,16 @@ extension on _StringsJa {
         return 'ストリーム';
       case 'study_diag_share_subject':
         return 'Fushi 統計診断';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -499738,6 +501147,8 @@ extension on _StringsJa {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -499795,6 +501206,8 @@ extension on _StringsJa {
         return '最終チェック日';
       case 'subscription_sort_last_matched':
         return '最終一致日';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'AI翻訳';
       case 'subtitle_version_content_language':
@@ -500025,6 +501438,10 @@ extension on _StringsJa {
         return '最終同期: 同期チャンネルが未接続のため同期なし';
       case 'sync_last_nothing':
         return '最終同期: 同期対象なし';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '未ログイン';
       case 'sync_now':
@@ -500851,7 +502268,7 @@ extension on _StringsJa {
       case 'usage_stats_enabled':
         return '利用統計を送信';
       case 'usage_stats_enabled_hint':
-        return '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
+        return '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネル・アプリの表示言語・CPU アーキテクチャ・OS のメジャーバージョン・インストール元（ストアやインストーラーなど）を fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません（そこから判定した国・地域のみ記録します）。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -501329,6 +502746,8 @@ extension on _StringsJa {
         return ({required Object n}) => '最近追加 · 第${n}話';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '残り${minutes}分';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             '第${n}話 · 未視聴 ${count} 話';
@@ -503561,16 +504980,16 @@ extension on _StringsJa {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -506196,7 +507615,7 @@ extension on _StringsKo {
       case 'backup_category_settings_desc':
         return '앱 및 리더 설정';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -506689,13 +508108,13 @@ extension on _StringsKo {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return '소스 변경';
       case 'changelog_empty':
@@ -507550,6 +508969,8 @@ extension on _StringsKo {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -507669,8 +509090,6 @@ extension on _StringsKo {
         return '사전 데이터 삭제 중...';
       case 'dictionaries_menu_empty':
         return '사용할 사전을 가져오세요';
-      case 'dictionary_collapse_follow_global':
-        return '전역 설정 따르기';
       case 'dictionary_delete_failed':
         return '사전 삭제 실패';
       case 'dictionary_font_size':
@@ -507932,20 +509351,20 @@ extension on _StringsKo {
         return '서체 설정';
       case 'download_add_video_source':
         return '동영상 소스 추가';
-      case 'download_airing_calendar_empty_guidance':
-        return '아직 표시할 항목이 없습니다: 컬렉션을 AniList에 연결하거나 다운로드 구독을 추가하면 방영 시간이 여기에 표시됩니다.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => '${episode}화';
       case 'download_airing_calendar_error':
         return '방영 일정을 불러오지 못했습니다';
       case 'download_airing_calendar_in_library':
         return '라이브러리에 있음';
-      case 'download_airing_calendar_show_all':
-        return '이번 시즌 모두 보기';
       case 'download_airing_calendar_subscribed':
         return '구독 중';
       case 'download_airing_calendar_title':
         return '방영 일정';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return '이번 주 방영 없음';
       case 'download_airing_calendar_week_next':
@@ -510676,10 +512095,6 @@ extension on _StringsKo {
         return '일본어 문자 집합이 아닌 문자 삭제';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Shift-JIS로 인코딩할 수 없는 문자를 제거합니다';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return '따옴표 안의 텍스트만 유지';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return '대사는 유지하고 지문은 삭제하며, 따옴표가 없는 줄은 통째로 삭제합니다';
       case 'game_text_process_kind_normalize_width':
         return '문자 폭 정규화';
       case 'game_text_process_kind_normalize_width_desc':
@@ -510694,8 +512109,12 @@ extension on _StringsKo {
         return 'ruby, br 태그 같은 마크업을 제거합니다';
       case 'game_text_process_kind_strip_curly_braces':
         return '후리가나 중괄호 제거';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return '슬래시가 있는 중괄호는 본문 텍스트를 유지하고, 없는 중괄호는 통째로 제거합니다';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'N줄만 유지';
       case 'game_text_process_kind_take_lines_desc':
@@ -510734,6 +512153,8 @@ extension on _StringsKo {
         return '변경 없음';
       case 'game_text_process_preview_use_latest':
         return '가장 최근에 캡처한 줄 사용';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return '이 단계는 후리가나를 파싱하는 데 쓰이는 마크업을 제거하므로 해당 줄은 루비를 잃게 됩니다';
       case 'game_text_process_step_count':
@@ -511328,6 +512749,10 @@ extension on _StringsKo {
         return '도서 파일 업로드';
       case 'interconnect_upload_content_hint':
         return '이 기기의 도서 및 읽기 콘텐츠를 인터커넥트 피어로 동기화합니다.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return '인터커넥트 피어로 업로드';
       case 'interconnect_upload_section_footer':
@@ -512955,6 +514380,10 @@ extension on _StringsKo {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return '파일 위치를 열 수 없어요.';
       case 'media_file_location_open':
@@ -513586,7 +515015,7 @@ extension on _StringsKo {
       case 'nav_lookup':
         return '단어 찾기';
       case 'nav_srs':
-        return 'SRS';
+        return '복습';
       case 'nav_video':
         return '비디오';
       case 'nav_web':
@@ -513950,15 +515379,15 @@ extension on _StringsKo {
       case 'onboarding_finish_body':
         return '설정 → 시스템에서 이 가이드를 언제든 다시 열 수 있습니다.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return '표시할 라이브러리 페이지';
       case 'onboarding_finish_summary_none':
@@ -514147,10 +515576,12 @@ extension on _StringsKo {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -514182,7 +515613,7 @@ extension on _StringsKo {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return '카드 생성 설정';
       case 'onboarding_step_anki_action_desc':
@@ -516094,9 +517525,9 @@ extension on _StringsKo {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -516126,7 +517557,7 @@ extension on _StringsKo {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -516551,6 +517982,10 @@ extension on _StringsKo {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -516559,6 +517994,16 @@ extension on _StringsKo {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -516859,11 +518304,15 @@ extension on _StringsKo {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -516981,7 +518430,7 @@ extension on _StringsKo {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -517534,7 +518983,7 @@ extension on _StringsKo {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -517550,9 +518999,9 @@ extension on _StringsKo {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -518079,6 +519528,16 @@ extension on _StringsKo {
         return '스트림';
       case 'study_diag_share_subject':
         return 'Fushi 학습 진단';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -518095,6 +519554,8 @@ extension on _StringsKo {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -518152,6 +519613,8 @@ extension on _StringsKo {
         return '마지막 확인';
       case 'subscription_sort_last_matched':
         return '마지막 일치';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'AI 번역';
       case 'subtitle_version_content_language':
@@ -518382,6 +519845,10 @@ extension on _StringsKo {
         return '마지막 동기화: 동기화 안 됨 - 연결된 동기화 채널 없음';
       case 'sync_last_nothing':
         return '마지막 동기화: 동기화할 항목 없음';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '로그인되지 않음';
       case 'sync_now':
@@ -519209,7 +520676,7 @@ extension on _StringsKo {
       case 'usage_stats_enabled':
         return '사용 통계 보내기';
       case 'usage_stats_enabled_hint':
-        return '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
+        return '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널, 앱 언어, CPU 아키텍처, OS 주 버전, 설치 경로(앱 스토어·설치 프로그램 등)를 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않으며, 이를 통해 판별한 국가/지역만 기록합니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
       case 'video_air_season_autumn':
         return '가을';
       case 'video_air_season_spring':
@@ -519687,6 +521154,8 @@ extension on _StringsKo {
         return ({required Object n}) => '최근 추가 · ${n}화';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '남은 시간 ${minutes}분';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             '${n}화 · 안 본 에피소드 ${count}개';
@@ -521929,16 +523398,16 @@ extension on _StringsKo {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -524587,7 +526056,7 @@ extension on _StringsNl {
       case 'backup_category_settings_desc':
         return 'App- en lezerinstellingen';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -525085,13 +526554,13 @@ extension on _StringsNl {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Bron wijzigen';
       case 'changelog_empty':
@@ -525953,6 +527422,8 @@ extension on _StringsNl {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -526073,8 +527544,6 @@ extension on _StringsNl {
         return 'Woordenboekgegevens verwijderen...';
       case 'dictionaries_menu_empty':
         return 'Importeer een woordenboek voor gebruik';
-      case 'dictionary_collapse_follow_global':
-        return 'Globale instelling volgen';
       case 'dictionary_delete_failed':
         return 'Verwijderen van woordenboek mislukt';
       case 'dictionary_font_size':
@@ -526336,20 +527805,20 @@ extension on _StringsNl {
         return 'Weergave-instellingen';
       case 'download_add_video_source':
         return 'Videobron toevoegen';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nog niets te tonen: koppel een collectie aan AniList of voeg een downloadabonnement toe, en hun uitzendtijden verschijnen hier.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Afl. ${episode}';
       case 'download_airing_calendar_error':
         return 'Kon het uitzendschema niet laden';
       case 'download_airing_calendar_in_library':
         return 'In bibliotheek';
-      case 'download_airing_calendar_show_all':
-        return 'Alles tonen van dit seizoen';
       case 'download_airing_calendar_subscribed':
         return 'Geabonneerd';
       case 'download_airing_calendar_title':
         return 'Uitzendkalender';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Niets gepland deze week';
       case 'download_airing_calendar_week_next':
@@ -529084,10 +530553,6 @@ extension on _StringsNl {
         return 'Tekens buiten de Japanse tekenset verwijderen';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Verwijdert tekens die niet in Shift-JIS kunnen worden gecodeerd';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Alleen geciteerde tekst behouden';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Behoudt dialoog en laat vertelling weg; een regel zonder aanhalingstekens wordt helemaal weggelaten';
       case 'game_text_process_kind_normalize_width':
         return 'Tekenbreedte normaliseren';
       case 'game_text_process_kind_normalize_width_desc':
@@ -529102,8 +530567,12 @@ extension on _StringsNl {
         return 'Verwijdert opmaak zoals ruby- en br-tags';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana-accolades verwijderen';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Een accolade met een schuine streep behoudt de basistekst; een zonder wordt helemaal verwijderd';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'N regels behouden';
       case 'game_text_process_kind_take_lines_desc':
@@ -529142,6 +530611,8 @@ extension on _StringsNl {
         return 'Ongewijzigd';
       case 'game_text_process_preview_use_latest':
         return 'Laatst vastgelegde regel gebruiken';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Deze stap verwijdert de opmaak waaruit furigana wordt gelezen, waardoor die regels hun ruby verliezen';
       case 'game_text_process_step_count':
@@ -529746,6 +531217,10 @@ extension on _StringsNl {
         return 'Boekbestanden uploaden';
       case 'interconnect_upload_content_hint':
         return 'Synchroniseer de boeken en leesinhoud van dit apparaat naar de interconnectpeer.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Uploaden naar interconnectpeer';
       case 'interconnect_upload_section_footer':
@@ -531386,6 +532861,10 @@ extension on _StringsNl {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Kan de bestandslocatie niet openen.';
       case 'media_file_location_open':
@@ -532024,7 +533503,7 @@ extension on _StringsNl {
       case 'nav_lookup':
         return 'Opzoeken';
       case 'nav_srs':
-        return 'SRS';
+        return 'Herhalen';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -532392,15 +533871,15 @@ extension on _StringsNl {
       case 'onboarding_finish_body':
         return 'Je kunt deze gids altijd opnieuw openen via Instellingen → Systeem.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Getoonde bibliotheekpagina\'s';
       case 'onboarding_finish_summary_none':
@@ -532590,10 +534069,12 @@ extension on _StringsNl {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -532625,7 +534106,7 @@ extension on _StringsNl {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Kaartaanmaak-instellingen';
       case 'onboarding_step_anki_action_desc':
@@ -534540,9 +536021,9 @@ extension on _StringsNl {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -534572,7 +536053,7 @@ extension on _StringsNl {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -534997,6 +536478,10 @@ extension on _StringsNl {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -535005,6 +536490,16 @@ extension on _StringsNl {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -535305,11 +536800,15 @@ extension on _StringsNl {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -535427,7 +536926,7 @@ extension on _StringsNl {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -535980,7 +537479,7 @@ extension on _StringsNl {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -535996,9 +537495,9 @@ extension on _StringsNl {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -536532,6 +538031,16 @@ extension on _StringsNl {
         return 'Stream';
       case 'study_diag_share_subject':
         return 'Fushi-studiediagnostiek';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -536548,6 +538057,8 @@ extension on _StringsNl {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -536605,6 +538116,8 @@ extension on _StringsNl {
         return 'Laatst gecontroleerd';
       case 'subscription_sort_last_matched':
         return 'Laatste match';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'AI-vertaald';
       case 'subtitle_version_content_language':
@@ -536837,6 +538350,10 @@ extension on _StringsNl {
         return 'Laatste sync: niets gesynchroniseerd — geen verbonden synchronisatiekanaal';
       case 'sync_last_nothing':
         return 'Laatste sync: niets te synchroniseren';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Niet aangemeld';
       case 'sync_now':
@@ -537670,7 +539187,7 @@ extension on _StringsNl {
       case 'usage_stats_enabled':
         return 'Gebruiksstatistieken delen';
       case 'usage_stats_enabled_hint':
-        return 'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
+        return 'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform, het updatekanaal, de app-taal, de CPU-architectuur, de hoofdversie van het besturingssysteem en de installatiebron (bijv. app-winkel of installatieprogramma) naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen; alleen het daaruit afgeleide land of de regio wordt bewaard. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
       case 'video_air_season_autumn':
         return 'Herfst';
       case 'video_air_season_spring':
@@ -538152,6 +539669,8 @@ extension on _StringsNl {
         return ({required Object n}) => 'Recent toegevoegd · Aflevering ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min resterend';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Aflevering ${n} · ${count} niet bekeken';
@@ -540408,16 +541927,16 @@ extension on _StringsNl {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -543071,7 +544590,7 @@ extension on _StringsPtBr {
       case 'backup_category_settings_desc':
         return 'Configurações do app e do leitor';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -543569,13 +545088,13 @@ extension on _StringsPtBr {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Alterar Fonte';
       case 'changelog_empty':
@@ -544434,6 +545953,8 @@ extension on _StringsPtBr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -544554,8 +546075,6 @@ extension on _StringsPtBr {
         return 'Excluindo dados do dicionário...';
       case 'dictionaries_menu_empty':
         return 'Importe um dicionário para uso';
-      case 'dictionary_collapse_follow_global':
-        return 'Seguir configuração global';
       case 'dictionary_delete_failed':
         return 'Falha ao excluir dicionário';
       case 'dictionary_font_size':
@@ -544817,20 +546336,20 @@ extension on _StringsPtBr {
         return 'Configurações de Tipografia';
       case 'download_add_video_source':
         return 'Adicionar fonte de vídeo';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nada para mostrar ainda: vincule uma coleção ao AniList ou adicione uma assinatura de download, e os horários de exibição aparecerão aqui.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Ep ${episode}';
       case 'download_airing_calendar_error':
         return 'Falha ao carregar calendário de exibição';
       case 'download_airing_calendar_in_library':
         return 'Na biblioteca';
-      case 'download_airing_calendar_show_all':
-        return 'Mostrar tudo desta temporada';
       case 'download_airing_calendar_subscribed':
         return 'Assinado';
       case 'download_airing_calendar_title':
         return 'Calendário de exibição';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Nada exibindo esta semana';
       case 'download_airing_calendar_week_next':
@@ -547565,10 +549084,6 @@ extension on _StringsPtBr {
         return 'Descartar caracteres fora do conjunto japonês';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Remove caracteres que não podem ser codificados em Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Manter apenas o texto entre aspas';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Mantém os diálogos e descarta a narração; uma linha sem aspas é descartada por completo';
       case 'game_text_process_kind_normalize_width':
         return 'Normalizar largura dos caracteres';
       case 'game_text_process_kind_normalize_width_desc':
@@ -547583,8 +549098,12 @@ extension on _StringsPtBr {
         return 'Remove marcações como as tags ruby e br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Remover chaves de furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Uma chave com barra mantém o texto-base; uma sem barra é removida por completo';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Manter N linhas';
       case 'game_text_process_kind_take_lines_desc':
@@ -547623,6 +549142,8 @@ extension on _StringsPtBr {
         return 'Sem alteração';
       case 'game_text_process_preview_use_latest':
         return 'Usar a última linha capturada';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Esta etapa remove a marcação de onde o furigana é extraído, então essas linhas perdem o ruby';
       case 'game_text_process_step_count':
@@ -548226,6 +549747,10 @@ extension on _StringsPtBr {
         return 'Upload de arquivos de livros';
       case 'interconnect_upload_content_hint':
         return 'Sincronizar livros e conteúdo de leitura deste dispositivo para o par da interconexão.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Upload para par da interconexão';
       case 'interconnect_upload_section_footer':
@@ -549863,6 +551388,10 @@ extension on _StringsPtBr {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Não foi possível abrir o local do arquivo.';
       case 'media_file_location_open':
@@ -550501,7 +552030,7 @@ extension on _StringsPtBr {
       case 'nav_lookup':
         return 'Consultar';
       case 'nav_srs':
-        return 'SRS';
+        return 'Revisão';
       case 'nav_video':
         return 'Vídeo';
       case 'nav_web':
@@ -550869,15 +552398,15 @@ extension on _StringsPtBr {
       case 'onboarding_finish_body':
         return 'Você pode reabrir este guia a qualquer momento em Configurações → Sistema.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Páginas de biblioteca exibidas';
       case 'onboarding_finish_summary_none':
@@ -551067,10 +552596,12 @@ extension on _StringsPtBr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -551102,7 +552633,7 @@ extension on _StringsPtBr {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Configurações de criação de cartões';
       case 'onboarding_step_anki_action_desc':
@@ -553017,9 +554548,9 @@ extension on _StringsPtBr {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -553049,7 +554580,7 @@ extension on _StringsPtBr {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -553474,6 +555005,10 @@ extension on _StringsPtBr {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -553482,6 +555017,16 @@ extension on _StringsPtBr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -553782,11 +555327,15 @@ extension on _StringsPtBr {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -553904,7 +555453,7 @@ extension on _StringsPtBr {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -554457,7 +556006,7 @@ extension on _StringsPtBr {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -554473,9 +556022,9 @@ extension on _StringsPtBr {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -555007,6 +556556,16 @@ extension on _StringsPtBr {
         return 'Transmissão';
       case 'study_diag_share_subject':
         return 'Diagnóstico de estudo do Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -555023,6 +556582,8 @@ extension on _StringsPtBr {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -555080,6 +556641,8 @@ extension on _StringsPtBr {
         return 'Última verificação';
       case 'subscription_sort_last_matched':
         return 'Última correspondência';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'Tradução por IA';
       case 'subtitle_version_content_language':
@@ -555313,6 +556876,10 @@ extension on _StringsPtBr {
         return 'Última sincronização: nada sincronizado - nenhum canal de sincronização conectado';
       case 'sync_last_nothing':
         return 'Última sincronização: nada para sincronizar';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Não conectado';
       case 'sync_now':
@@ -556145,7 +557712,7 @@ extension on _StringsPtBr {
       case 'usage_stats_enabled':
         return 'Compartilhar estatísticas de uso';
       case 'usage_stats_enabled_hint':
-        return 'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
+        return 'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma, o canal de atualização, o idioma do app, a arquitetura da CPU, a versão principal do sistema e a origem da instalação (ex.: loja ou instalador) para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado — só o país ou região deduzido dele é guardado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
       case 'video_air_season_autumn':
         return 'Outono';
       case 'video_air_season_spring':
@@ -556628,6 +558195,8 @@ extension on _StringsPtBr {
             'Adicionado recentemente · Episódio ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min restantes';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Episódio ${n} · ${count} não assistidos';
@@ -558882,16 +560451,16 @@ extension on _StringsPtBr {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -561548,7 +563117,7 @@ extension on _StringsRu {
       case 'backup_category_settings_desc':
         return 'Настройки приложения и читалки';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -562047,13 +563616,13 @@ extension on _StringsRu {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Сменить источник';
       case 'changelog_empty':
@@ -562912,6 +564481,8 @@ extension on _StringsRu {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -563032,8 +564603,6 @@ extension on _StringsRu {
         return 'Удаление данных словаря...';
       case 'dictionaries_menu_empty':
         return 'Импортируйте словарь для использования';
-      case 'dictionary_collapse_follow_global':
-        return 'Как в общих настройках';
       case 'dictionary_delete_failed':
         return 'Не удалось удалить словарь';
       case 'dictionary_font_size':
@@ -563297,20 +564866,20 @@ extension on _StringsRu {
         return 'Настройки отображения';
       case 'download_add_video_source':
         return 'Добавить видеоисточник';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Пока нечего показывать: привяжите коллекцию к AniList или добавьте подписку на загрузку, и время выхода появится здесь.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Эп. ${episode}';
       case 'download_airing_calendar_error':
         return 'Не удалось загрузить расписание выхода';
       case 'download_airing_calendar_in_library':
         return 'В библиотеке';
-      case 'download_airing_calendar_show_all':
-        return 'Показать все за этот сезон';
       case 'download_airing_calendar_subscribed':
         return 'Подписка';
       case 'download_airing_calendar_title':
         return 'Календарь выхода';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'На этой неделе ничего не выходит';
       case 'download_airing_calendar_week_next':
@@ -566046,10 +567615,6 @@ extension on _StringsRu {
         return 'Удалять символы вне японской кодировки';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Удаляет символы, которые нельзя закодировать в Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Оставлять только текст в кавычках';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Оставляет диалоги и отбрасывает повествование; строка без кавычек отбрасывается целиком';
       case 'game_text_process_kind_normalize_width':
         return 'Нормализовать ширину символов';
       case 'game_text_process_kind_normalize_width_desc':
@@ -566064,8 +567629,12 @@ extension on _StringsRu {
         return 'Удаляет разметку, например теги ruby и br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Удалять фигурные скобки фуриганы';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Скобка со слэшем сохраняет основной текст; скобка без слэша удаляется целиком';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Оставить N строк';
       case 'game_text_process_kind_take_lines_desc':
@@ -566104,6 +567673,8 @@ extension on _StringsRu {
         return 'Без изменений';
       case 'game_text_process_preview_use_latest':
         return 'Использовать последнюю перехваченную строку';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Этот шаг удаляет разметку, из которой разбирается фуригана, поэтому у таких строк пропадёт руби';
       case 'game_text_process_step_count':
@@ -566707,6 +568278,10 @@ extension on _StringsRu {
         return 'Загрузить файлы книг';
       case 'interconnect_upload_content_hint':
         return 'Синхронизировать книги и контент для чтения этого устройства с партнёром по взаимосвязи.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Загрузка на партнёра по взаимосвязи';
       case 'interconnect_upload_section_footer':
@@ -568344,6 +569919,10 @@ extension on _StringsRu {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Не удалось открыть расположение файла.';
       case 'media_file_location_open':
@@ -568982,7 +570561,7 @@ extension on _StringsRu {
       case 'nav_lookup':
         return 'Поиск';
       case 'nav_srs':
-        return 'SRS';
+        return 'Повторение';
       case 'nav_video':
         return 'Видео';
       case 'nav_web':
@@ -569350,15 +570929,15 @@ extension on _StringsRu {
       case 'onboarding_finish_body':
         return 'Вы можете снова открыть это руководство в любое время: Настройки → Система.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Показанные страницы библиотеки';
       case 'onboarding_finish_summary_none':
@@ -569548,10 +571127,12 @@ extension on _StringsRu {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -569583,7 +571164,7 @@ extension on _StringsRu {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Настройки создания карточек';
       case 'onboarding_step_anki_action_desc':
@@ -571498,9 +573079,9 @@ extension on _StringsRu {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -571530,7 +573111,7 @@ extension on _StringsRu {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -571955,6 +573536,10 @@ extension on _StringsRu {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -571963,6 +573548,16 @@ extension on _StringsRu {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -572263,11 +573858,15 @@ extension on _StringsRu {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -572385,7 +573984,7 @@ extension on _StringsRu {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -572938,7 +574537,7 @@ extension on _StringsRu {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -572954,9 +574553,9 @@ extension on _StringsRu {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -573488,6 +575087,16 @@ extension on _StringsRu {
         return 'Поток';
       case 'study_diag_share_subject':
         return 'Диагностика обучения Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -573504,6 +575113,8 @@ extension on _StringsRu {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -573561,6 +575172,8 @@ extension on _StringsRu {
         return 'Последняя проверка';
       case 'subscription_sort_last_matched':
         return 'Последнее совпадение';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'Перевод ИИ';
       case 'subtitle_version_content_language':
@@ -573795,6 +575408,10 @@ extension on _StringsRu {
         return 'Последняя синхронизация: ничего не синхронизировано — нет подключённых каналов';
       case 'sync_last_nothing':
         return 'Последняя синхронизация: нечего синхронизировать';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Не авторизован';
       case 'sync_now':
@@ -574627,7 +576244,7 @@ extension on _StringsRu {
       case 'usage_stats_enabled':
         return 'Отправлять статистику использования';
       case 'usage_stats_enabled_hint':
-        return 'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
+        return 'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу, канал обновлений, язык приложения, архитектуру процессора, основную версию ОС и источник установки (например, магазин приложений или установщик), чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется — сохраняется только определённая по нему страна или регион. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
       case 'video_air_season_autumn':
         return 'Осень';
       case 'video_air_season_spring':
@@ -575110,6 +576727,8 @@ extension on _StringsRu {
         return ({required Object n}) => 'Недавно добавлено · Эпизод ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => 'Осталось ${minutes} мин';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Серия ${n} · непросмотрено: ${count}';
@@ -577361,16 +578980,16 @@ extension on _StringsRu {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -580012,7 +581631,7 @@ extension on _StringsTh {
       case 'backup_category_settings_desc':
         return 'การตั้งค่าแอปและเครื่องอ่าน';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -580508,13 +582127,13 @@ extension on _StringsTh {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'เปลี่ยนแหล่งข้อมูล';
       case 'changelog_empty':
@@ -581370,6 +582989,8 @@ extension on _StringsTh {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -581489,8 +583110,6 @@ extension on _StringsTh {
         return 'กำลังลบข้อมูลพจนานุกรม...';
       case 'dictionaries_menu_empty':
         return 'นำเข้าพจนานุกรมเพื่อใช้งาน';
-      case 'dictionary_collapse_follow_global':
-        return 'ตามการตั้งค่าส่วนกลาง';
       case 'dictionary_delete_failed':
         return 'ลบพจนานุกรมไม่สำเร็จ';
       case 'dictionary_font_size':
@@ -581752,20 +583371,20 @@ extension on _StringsTh {
         return 'ตั้งค่าตัวอักษร';
       case 'download_add_video_source':
         return 'เพิ่มแหล่งวิดีโอ';
-      case 'download_airing_calendar_empty_guidance':
-        return 'ยังไม่มีอะไรแสดง: ผูกคอลเลกชันกับ AniList หรือเพิ่มการสมัครสมาชิกดาวน์โหลด แล้วเวลาออกอากาศจะปรากฏที่นี่';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'ตอน ${episode}';
       case 'download_airing_calendar_error':
         return 'โหลดตารางออกอากาศไม่สำเร็จ';
       case 'download_airing_calendar_in_library':
         return 'ในไลบรารี';
-      case 'download_airing_calendar_show_all':
-        return 'แสดงทั้งหมดในซีซันนี้';
       case 'download_airing_calendar_subscribed':
         return 'สมัครแล้ว';
       case 'download_airing_calendar_title':
         return 'ตารางออกอากาศ';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'ไม่มีรายการออกอากาศสัปดาห์นี้';
       case 'download_airing_calendar_week_next':
@@ -584501,10 +586120,6 @@ extension on _StringsTh {
         return 'ทิ้งอักขระที่ไม่ใช่ชุดอักขระภาษาญี่ปุ่น';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'ลบอักขระที่เข้ารหัสใน Shift-JIS ไม่ได้';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'เก็บเฉพาะข้อความในเครื่องหมายคำพูด';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'เก็บบทสนทนาและทิ้งคำบรรยาย บรรทัดที่ไม่มีเครื่องหมายคำพูดจะถูกทิ้งทั้งบรรทัด';
       case 'game_text_process_kind_normalize_width':
         return 'ปรับความกว้างอักขระให้เป็นมาตรฐาน';
       case 'game_text_process_kind_normalize_width_desc':
@@ -584519,8 +586134,12 @@ extension on _StringsTh {
         return 'ลบมาร์กอัปเช่นแท็ก ruby และ br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'ลบวงเล็บปีกกาของฟุริกานะ';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'วงเล็บปีกกาที่มีเครื่องหมายทับจะเก็บข้อความฐานไว้ ส่วนที่ไม่มีจะถูกลบทั้งหมด';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'เก็บ N บรรทัด';
       case 'game_text_process_kind_take_lines_desc':
@@ -584559,6 +586178,8 @@ extension on _StringsTh {
         return 'ไม่เปลี่ยนแปลง';
       case 'game_text_process_preview_use_latest':
         return 'ใช้บรรทัดที่จับได้ล่าสุด';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'ขั้นตอนนี้ลบมาร์กอัปที่ใช้แยกฟุริกานะ บรรทัดเหล่านั้นจึงสูญเสียรูบี้';
       case 'game_text_process_step_count':
@@ -585160,6 +586781,10 @@ extension on _StringsTh {
         return 'อัปโหลดไฟล์หนังสือ';
       case 'interconnect_upload_content_hint':
         return 'ซิงค์หนังสือและเนื้อหาการอ่านของอุปกรณ์นี้ไปยังอุปกรณ์เชื่อมต่อ';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'อัปโหลดไปยังอุปกรณ์เชื่อมต่อ';
       case 'interconnect_upload_section_footer':
@@ -586794,6 +588419,10 @@ extension on _StringsTh {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'ไม่สามารถเปิดตำแหน่งไฟล์ได้';
       case 'media_file_location_open':
@@ -587428,7 +589057,7 @@ extension on _StringsTh {
       case 'nav_lookup':
         return 'ค้นคำ';
       case 'nav_srs':
-        return 'SRS';
+        return 'ทบทวน';
       case 'nav_video':
         return 'วิดีโอ';
       case 'nav_web':
@@ -587793,15 +589422,15 @@ extension on _StringsTh {
       case 'onboarding_finish_body':
         return 'คุณเปิดคู่มือนี้อีกครั้งได้ทุกเมื่อจาก การตั้งค่า → ระบบ';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'หน้าคลังที่แสดง';
       case 'onboarding_finish_summary_none':
@@ -587991,10 +589620,12 @@ extension on _StringsTh {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -588026,7 +589657,7 @@ extension on _StringsTh {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'การตั้งค่าการสร้างการ์ด';
       case 'onboarding_step_anki_action_desc':
@@ -589939,9 +591570,9 @@ extension on _StringsTh {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -589971,7 +591602,7 @@ extension on _StringsTh {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -590396,6 +592027,10 @@ extension on _StringsTh {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -590404,6 +592039,16 @@ extension on _StringsTh {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -590704,11 +592349,15 @@ extension on _StringsTh {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -590826,7 +592475,7 @@ extension on _StringsTh {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -591379,7 +593028,7 @@ extension on _StringsTh {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -591395,9 +593044,9 @@ extension on _StringsTh {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -591929,6 +593578,16 @@ extension on _StringsTh {
         return 'สตรีม';
       case 'study_diag_share_subject':
         return 'การวินิจฉัยการเรียนของ Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -591945,6 +593604,8 @@ extension on _StringsTh {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -592002,6 +593663,8 @@ extension on _StringsTh {
         return 'ตรวจสอบล่าสุด';
       case 'subscription_sort_last_matched':
         return 'จับคู่ล่าสุด';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'แปลด้วย AI';
       case 'subtitle_version_content_language':
@@ -592234,6 +593897,10 @@ extension on _StringsTh {
         return 'ซิงค์ล่าสุด: ไม่มีอะไรซิงค์ — ไม่มีช่องทางซิงค์ที่เชื่อมต่อ';
       case 'sync_last_nothing':
         return 'ซิงค์ล่าสุด: ไม่มีอะไรต้องซิงค์';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'ยังไม่ได้เข้าสู่ระบบ';
       case 'sync_now':
@@ -593066,7 +594733,7 @@ extension on _StringsTh {
       case 'usage_stats_enabled':
         return 'ส่งสถิติการใช้งาน';
       case 'usage_stats_enabled_hint':
-        return 'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
+        return 'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม ช่องทางอัปเดต ภาษาของแอป สถาปัตยกรรม CPU เวอร์ชันหลักของระบบปฏิบัติการ และแหล่งที่ติดตั้ง (เช่น สโตร์หรือตัวติดตั้ง)ไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ (เก็บเพียงประเทศหรือภูมิภาคที่ระบุได้จากที่อยู่นั้น) เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
       case 'video_air_season_autumn':
         return 'ฤดูใบไม้ร่วง';
       case 'video_air_season_spring':
@@ -593548,6 +595215,8 @@ extension on _StringsTh {
         return ({required Object n}) => 'เพิ่มล่าสุด · ตอน ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => 'เหลืออีก ${minutes} นาที';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'ตอนที่ ${n} · ยังไม่ได้ดู ${count}';
@@ -595796,16 +597465,16 @@ extension on _StringsTh {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -598459,7 +600128,7 @@ extension on _StringsTr {
       case 'backup_category_settings_desc':
         return 'Uygulama ve okuyucu ayarları';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -598958,13 +600627,13 @@ extension on _StringsTr {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Kaynağı değiştir';
       case 'changelog_empty':
@@ -599821,6 +601490,8 @@ extension on _StringsTr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -599940,8 +601611,6 @@ extension on _StringsTr {
         return 'Sözlük verileri siliniyor...';
       case 'dictionaries_menu_empty':
         return 'Kullanmak için bir sözlük içe aktarın';
-      case 'dictionary_collapse_follow_global':
-        return 'Genel ayarı izle';
       case 'dictionary_delete_failed':
         return 'Sözlük silinemedi';
       case 'dictionary_font_size':
@@ -600204,20 +601873,20 @@ extension on _StringsTr {
         return 'Tipografi ayarları';
       case 'download_add_video_source':
         return 'Video kaynağı ekle';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Henüz gösterilecek bir şey yok: bir koleksiyonu AniList\'e bağlayın veya bir indirme aboneliği ekleyin, yayın zamanları burada görünecektir.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Bl ${episode}';
       case 'download_airing_calendar_error':
         return 'Yayın takvimi yüklenemedi';
       case 'download_airing_calendar_in_library':
         return 'Kütüphanede';
-      case 'download_airing_calendar_show_all':
-        return 'Bu sezonun tümünü göster';
       case 'download_airing_calendar_subscribed':
         return 'Abone olundu';
       case 'download_airing_calendar_title':
         return 'Yayın takvimi';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Bu hafta yayın yok';
       case 'download_airing_calendar_week_next':
@@ -602954,10 +604623,6 @@ extension on _StringsTr {
         return 'Japonca olmayan karakter kümesi karakterlerini at';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Shift-JIS ile kodlanamayan karakterleri kaldırır';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Yalnızca tırnak içindeki metni tut';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Diyalogları tutar, anlatımı atar; tırnaksız bir satır tamamen atılır';
       case 'game_text_process_kind_normalize_width':
         return 'Karakter genişliğini normalleştir';
       case 'game_text_process_kind_normalize_width_desc':
@@ -602972,8 +604637,12 @@ extension on _StringsTr {
         return 'ruby ve br etiketleri gibi işaretlemeleri kaldırır';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana küme parantezlerini kaldır';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Eğik çizgili bir küme parantezi temel metnini korur; çizgisiz olan tamamen kaldırılır';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'N satırı tut';
       case 'game_text_process_kind_take_lines_desc':
@@ -603012,6 +604681,8 @@ extension on _StringsTr {
         return 'Değişmedi';
       case 'game_text_process_preview_use_latest':
         return 'Yakalanan son satırı kullan';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Bu adım, furiganın ayrıştırıldığı işaretlemeyi kaldırır; bu yüzden bu satırlar ruby\'lerini kaybeder';
       case 'game_text_process_step_count':
@@ -603614,6 +605285,10 @@ extension on _StringsTr {
         return 'Kitap dosyalarını yükle';
       case 'interconnect_upload_content_hint':
         return 'Bu cihazın kitap ve okuma içeriğini bağlantı eşine senkronize edin.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Bağlantı eşine yükle';
       case 'interconnect_upload_section_footer':
@@ -605250,6 +606925,10 @@ extension on _StringsTr {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Dosya konumu açılamadı.';
       case 'media_file_location_open':
@@ -605887,7 +607566,7 @@ extension on _StringsTr {
       case 'nav_lookup':
         return 'Ara';
       case 'nav_srs':
-        return 'SRS';
+        return 'Tekrar';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -606252,15 +607931,15 @@ extension on _StringsTr {
       case 'onboarding_finish_body':
         return 'Bu rehberi istediğiniz zaman Ayarlar → Sistem\'den yeniden açabilirsiniz.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Gösterilen kitaplık sayfaları';
       case 'onboarding_finish_summary_none':
@@ -606450,10 +608129,12 @@ extension on _StringsTr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -606485,7 +608166,7 @@ extension on _StringsTr {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Kart oluşturma ayarları';
       case 'onboarding_step_anki_action_desc':
@@ -608398,9 +610079,9 @@ extension on _StringsTr {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -608430,7 +610111,7 @@ extension on _StringsTr {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -608855,6 +610536,10 @@ extension on _StringsTr {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -608863,6 +610548,16 @@ extension on _StringsTr {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -609163,11 +610858,15 @@ extension on _StringsTr {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -609285,7 +610984,7 @@ extension on _StringsTr {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -609838,7 +611537,7 @@ extension on _StringsTr {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -609854,9 +611553,9 @@ extension on _StringsTr {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -610387,6 +612086,16 @@ extension on _StringsTr {
         return 'Yayın';
       case 'study_diag_share_subject':
         return 'Fushi çalışma tanılaması';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -610403,6 +612112,8 @@ extension on _StringsTr {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -610460,6 +612171,8 @@ extension on _StringsTr {
         return 'Son kontrol';
       case 'subscription_sort_last_matched':
         return 'Son eşleşme';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'Yapay zekâ çevirisi';
       case 'subtitle_version_content_language':
@@ -610693,6 +612406,10 @@ extension on _StringsTr {
         return 'Son senkronizasyon: senkronize edilmedi — bağlı kanal yok';
       case 'sync_last_nothing':
         return 'Son senkronizasyon: senkronize edilecek bir şey yok';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Oturum açılmadı';
       case 'sync_now':
@@ -611527,7 +613244,7 @@ extension on _StringsTr {
       case 'usage_stats_enabled':
         return 'Kullanım istatistiklerini paylaş';
       case 'usage_stats_enabled_hint':
-        return 'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
+        return 'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu, güncelleme kanalını, uygulama dilini, CPU mimarisini, işletim sisteminin ana sürümünü ve kurulum kaynağını (ör. uygulama mağazası veya yükleyici) fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz; yalnızca ondan belirlenen ülke veya bölge tutulur. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
       case 'video_air_season_autumn':
         return 'Sonbahar';
       case 'video_air_season_spring':
@@ -612010,6 +613727,8 @@ extension on _StringsTr {
         return ({required Object n}) => 'Yeni eklenen · Bölüm ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} dk kaldı';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Bölüm ${n} · ${count} izlenmemiş';
@@ -614262,16 +615981,16 @@ extension on _StringsTr {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -616919,7 +618638,7 @@ extension on _StringsVi {
       case 'backup_category_settings_desc':
         return 'Cài đặt ứng dụng và trình đọc';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -617415,13 +619134,13 @@ extension on _StringsVi {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return 'Đổi nguồn';
       case 'changelog_empty':
@@ -618279,6 +619998,8 @@ extension on _StringsVi {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -618399,8 +620120,6 @@ extension on _StringsVi {
         return 'Đang xóa dữ liệu từ điển…';
       case 'dictionaries_menu_empty':
         return 'Nhập một từ điển để sử dụng';
-      case 'dictionary_collapse_follow_global':
-        return 'Theo cài đặt chung';
       case 'dictionary_delete_failed':
         return 'Không thể xóa từ điển';
       case 'dictionary_font_size':
@@ -618662,20 +620381,20 @@ extension on _StringsVi {
         return 'Cài đặt hiển thị';
       case 'download_add_video_source':
         return 'Thêm nguồn video';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Chưa có gì để hiển thị: liên kết bộ sưu tập với AniList hoặc thêm đăng ký tải xuống, và lịch phát sóng sẽ xuất hiện ở đây.';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => 'Tập ${episode}';
       case 'download_airing_calendar_error':
         return 'Không tải được lịch phát sóng';
       case 'download_airing_calendar_in_library':
         return 'Trong thư viện';
-      case 'download_airing_calendar_show_all':
-        return 'Hiện tất cả mùa này';
       case 'download_airing_calendar_subscribed':
         return 'Đã đăng ký';
       case 'download_airing_calendar_title':
         return 'Lịch phát sóng';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return 'Không có gì phát sóng tuần này';
       case 'download_airing_calendar_week_next':
@@ -621412,10 +623131,6 @@ extension on _StringsVi {
         return 'Loại ký tự ngoài bộ ký tự tiếng Nhật';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Loại bỏ các ký tự không thể mã hóa bằng Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Chỉ giữ văn bản trong dấu ngoặc kép';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Giữ lời thoại và bỏ phần dẫn truyện; dòng không có ngoặc kép bị bỏ hoàn toàn';
       case 'game_text_process_kind_normalize_width':
         return 'Chuẩn hóa độ rộng ký tự';
       case 'game_text_process_kind_normalize_width_desc':
@@ -621430,8 +623145,12 @@ extension on _StringsVi {
         return 'Xóa phần đánh dấu như thẻ ruby và br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Xóa ngoặc nhọn furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Ngoặc nhọn có dấu gạch chéo giữ lại phần chữ gốc; không có thì bị xóa hoàn toàn';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Giữ N dòng';
       case 'game_text_process_kind_take_lines_desc':
@@ -621470,6 +623189,8 @@ extension on _StringsVi {
         return 'Không đổi';
       case 'game_text_process_preview_use_latest':
         return 'Dùng dòng thu gần nhất';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Bước này xóa phần đánh dấu mà furigana được phân tích từ đó, nên các dòng ấy mất ruby';
       case 'game_text_process_step_count':
@@ -622071,6 +623792,10 @@ extension on _StringsVi {
         return 'Tải lên tệp sách';
       case 'interconnect_upload_content_hint':
         return 'Đồng bộ sách và nội dung đọc của thiết bị này lên thiết bị ghép nối.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Tải lên thiết bị ghép nối';
       case 'interconnect_upload_section_footer':
@@ -623704,6 +625429,10 @@ extension on _StringsVi {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return 'Không mở được vị trí tệp.';
       case 'media_file_location_open':
@@ -624338,7 +626067,7 @@ extension on _StringsVi {
       case 'nav_lookup':
         return 'Tra từ';
       case 'nav_srs':
-        return 'SRS';
+        return 'Ôn tập';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -624704,15 +626433,15 @@ extension on _StringsVi {
       case 'onboarding_finish_body':
         return 'Bạn có thể mở lại hướng dẫn này bất cứ lúc nào từ Cài đặt → Hệ thống.';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return 'Trang thư viện hiển thị';
       case 'onboarding_finish_summary_none':
@@ -624902,10 +626631,12 @@ extension on _StringsVi {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -624937,7 +626668,7 @@ extension on _StringsVi {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return 'Cài đặt tạo thẻ';
       case 'onboarding_step_anki_action_desc':
@@ -626852,9 +628583,9 @@ extension on _StringsVi {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -626884,7 +628615,7 @@ extension on _StringsVi {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -627309,6 +629040,10 @@ extension on _StringsVi {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -627317,6 +629052,16 @@ extension on _StringsVi {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -627617,11 +629362,15 @@ extension on _StringsVi {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -627739,7 +629488,7 @@ extension on _StringsVi {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -628292,7 +630041,7 @@ extension on _StringsVi {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -628308,9 +630057,9 @@ extension on _StringsVi {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -628844,6 +630593,16 @@ extension on _StringsVi {
         return 'Luồng phát';
       case 'study_diag_share_subject':
         return 'Chẩn đoán học tập của Fushi';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -628860,6 +630619,8 @@ extension on _StringsVi {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -628917,6 +630678,8 @@ extension on _StringsVi {
         return 'Lần kiểm tra cuối';
       case 'subscription_sort_last_matched':
         return 'Kết quả cuối';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return 'Dịch bằng AI';
       case 'subtitle_version_content_language':
@@ -629148,6 +630911,10 @@ extension on _StringsVi {
         return 'Đồng bộ lần cuối: không đồng bộ gì - chưa có kênh đồng bộ nào được kết nối';
       case 'sync_last_nothing':
         return 'Đồng bộ lần cuối: không có gì để đồng bộ';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Chưa đăng nhập';
       case 'sync_now':
@@ -629982,7 +631749,7 @@ extension on _StringsVi {
       case 'usage_stats_enabled':
         return 'Chia sẻ thống kê sử dụng';
       case 'usage_stats_enabled_hint':
-        return 'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
+        return 'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng, kênh cập nhật, ngôn ngữ ứng dụng, kiến trúc CPU, phiên bản chính của hệ điều hành và nguồn cài đặt (ví dụ cửa hàng ứng dụng hoặc trình cài đặt) đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu — chỉ giữ quốc gia hoặc khu vực suy ra từ nó. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
       case 'video_air_season_autumn':
         return 'Thu';
       case 'video_air_season_spring':
@@ -630463,6 +632230,8 @@ extension on _StringsVi {
         return ({required Object n}) => 'Mới thêm · Tập ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => 'Còn ${minutes} phút';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             'Tập ${n} · ${count} chưa xem';
@@ -632711,16 +634480,16 @@ extension on _StringsVi {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
@@ -635323,7 +637092,7 @@ extension on _StringsZhCn {
       case 'backup_category_settings_desc':
         return '应用与阅读器设置';
       case 'backup_category_srs':
-        return 'SRS';
+        return '复习';
       case 'backup_category_srs_desc':
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
       case 'backup_category_statistics':
@@ -635810,13 +637579,13 @@ extension on _StringsZhCn {
       case 'card_target_current':
         return '当前';
       case 'card_target_srs_enable':
-        return '开启 Fushi SRS';
+        return '开启 Fushi 复习';
       case 'card_target_srs_enable_confirm':
-        return '将开启「SRS」模块，之后制的卡发往 Fushi SRS。随时可以改回 Anki。';
+        return '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
       case 'card_target_srs_hint':
         return '内置间隔复习，无需安装 Anki';
       case 'card_target_srs_title':
-        return '发往 Fushi SRS';
+        return '发往 Fushi 复习';
       case 'change_source':
         return '切换来源';
       case 'changelog_empty':
@@ -636664,6 +638433,8 @@ extension on _StringsZhCn {
         return '拖动排序 · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return '长按拖动排序';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => '默认展示：${state}';
       case 'dict_selection_exit':
         return '退出选择';
       case 'dict_status_disabled':
@@ -636783,8 +638554,6 @@ extension on _StringsZhCn {
         return '正在删除词典数据…';
       case 'dictionaries_menu_empty':
         return '请先导入词典以便使用';
-      case 'dictionary_collapse_follow_global':
-        return '跟随全局设置';
       case 'dictionary_delete_failed':
         return '删除词典失败';
       case 'dictionary_font_size':
@@ -637043,20 +638812,20 @@ extension on _StringsZhCn {
         return '排版设置';
       case 'download_add_video_source':
         return '添加视频来源';
-      case 'download_airing_calendar_empty_guidance':
-        return '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => '第 ${episode} 集';
       case 'download_airing_calendar_error':
         return '放送时间表加载失败';
       case 'download_airing_calendar_in_library':
         return '已入库';
-      case 'download_airing_calendar_show_all':
-        return '显示本季全部';
       case 'download_airing_calendar_subscribed':
         return '订阅中';
       case 'download_airing_calendar_title':
         return '放送日历';
+      case 'download_airing_calendar_today_empty':
+        return '今天没有放送';
+      case 'download_airing_calendar_today_title':
+        return '今日放送';
       case 'download_airing_calendar_week_empty':
         return '本周没有相关放送';
       case 'download_airing_calendar_week_next':
@@ -639764,10 +641533,6 @@ extension on _StringsZhCn {
         return '过滤非日语字符集字符';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return '移除无法用 Shift-JIS 表示的字符';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return '只保留「」内的文本';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return '只留台词、丢掉旁白；没有「」的整行会被丢弃';
       case 'game_text_process_kind_normalize_width':
         return '全角半角正规化';
       case 'game_text_process_kind_normalize_width_desc':
@@ -639781,9 +641546,13 @@ extension on _StringsZhCn {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return '移除 ruby、br 之类的标记';
       case 'game_text_process_kind_strip_curly_braces':
-        return '去除花括号注音';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return '带斜杠的花括号保留基字；不带斜杠的整体删除';
+        return '花括号注音转振假名';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{漢字/かな} 或 {漢字:かな} 的读音显示在汉字上方；其余花括号整体删除';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return '去掉「」外的文字';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return '去掉人名等「」外的文字；没有「」的旁白整行保留';
       case 'game_text_process_kind_take_lines':
         return '截取指定行数';
       case 'game_text_process_kind_take_lines_desc':
@@ -639822,6 +641591,8 @@ extension on _StringsZhCn {
         return '无变化';
       case 'game_text_process_preview_use_latest':
         return '使用最近抓到的一行';
+      case 'game_text_process_reset_defaults':
+        return '恢复默认';
       case 'game_text_process_ruby_warning':
         return '这一步会删掉注音标记，相应的行将没有振假名';
       case 'game_text_process_step_count':
@@ -640064,7 +641835,7 @@ extension on _StringsZhCn {
       case 'home_panel_mode_shown':
         return '显示';
       case 'home_panel_srs_hint':
-        return '自动：制卡发往 Fushi SRS 或已有复习卡时显示';
+        return '自动：制卡发往 Fushi 复习或已有复习卡时显示';
       case 'home_recently_added':
         return '最近添加';
       case 'home_remote_source':
@@ -640413,6 +642184,10 @@ extension on _StringsZhCn {
         return '上传书籍文件';
       case 'interconnect_upload_content_hint':
         return '把本设备的书籍/阅读内容上传同步到互联对端。';
+      case 'interconnect_upload_manga_content':
+        return '上传漫画文件';
+      case 'interconnect_upload_manga_content_hint':
+        return '把本设备的漫画上传同步到互联对端。';
       case 'interconnect_upload_section':
         return '上传到互联对端';
       case 'interconnect_upload_section_footer':
@@ -642034,6 +643809,10 @@ extension on _StringsZhCn {
         return '正在抓取音频 CD';
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) => '有 ${n} 个损坏扇区读不出来，已用静音填充';
+      case 'media_detail_start_reading':
+        return '开始阅读';
+      case 'media_detail_start_watching':
+        return '开始观看';
       case 'media_file_location_failed':
         return '无法打开文件位置。';
       case 'media_file_location_open':
@@ -642660,7 +644439,7 @@ extension on _StringsZhCn {
       case 'nav_lookup':
         return '查词';
       case 'nav_srs':
-        return 'SRS';
+        return '复习';
       case 'nav_video':
         return '视频';
       case 'nav_web':
@@ -643022,15 +644801,15 @@ extension on _StringsZhCn {
       case 'onboarding_finish_body':
         return '之后随时可以在「设置 → 系统」重新打开本引导。';
       case 'onboarding_finish_import_desc':
-        return '在「SRS」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
+        return '在「复习」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
       case 'onboarding_finish_import_title':
         return '导入已有的 Anki 牌组';
       case 'onboarding_finish_next_title':
         return '下一步';
       case 'onboarding_finish_review_desc':
-        return '制的卡会进入底栏的「SRS」页，到期的卡在那里等你复习。';
+        return '制的卡会进入底栏的「复习」页，到期的卡在那里等你复习。';
       case 'onboarding_finish_review_title':
-        return '在「SRS」里复习';
+        return '在「复习」里复习';
       case 'onboarding_finish_summary_modules':
         return '显示的库页';
       case 'onboarding_finish_summary_none':
@@ -643219,10 +644998,12 @@ extension on _StringsZhCn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return '改用 Anki…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
       case 'onboarding_review_fushi_desc':
         return '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi 复习';
       case 'onboarding_review_method_body':
         return '查词时制的卡在这里复习。之后随时可以在「设置 → 制卡」里更改。';
       case 'onboarding_review_method_title':
@@ -643254,7 +645035,7 @@ extension on _StringsZhCn {
       case 'onboarding_srs_sync_title':
         return '多设备自动同步';
       case 'onboarding_srs_title':
-        return 'Fushi 内置 SRS';
+        return 'Fushi 内置复习';
       case 'onboarding_step_anki_action':
         return '制卡设置';
       case 'onboarding_step_anki_action_desc':
@@ -645160,9 +646941,9 @@ extension on _StringsZhCn {
         return ({required Object paths}) => '有些文件夹读取不了：${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            '开启 SRS 模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi SRS。';
+            '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect（Fushi SRS）';
+        return 'AnkiConnect（Fushi 复习）';
       case 'srs_backup_auto':
         return '自动备份';
       case 'srs_backup_auto_hint':
@@ -645192,7 +646973,7 @@ extension on _StringsZhCn {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} 分钟';
       case 'srs_backup_invalid':
-        return '这个文件不是 Fushi SRS 备份';
+        return '这个文件不是 Fushi 复习备份';
       case 'srs_backup_keep_daily':
         return '每日备份保留份数';
       case 'srs_backup_keep_hint':
@@ -645610,6 +647391,10 @@ extension on _StringsZhCn {
         return '添加第一张卡';
       case 'srs_engine_unavailable':
         return '本机的排程内核不可用：可以浏览和编辑卡片，但暂时不能复习。';
+      case 'srs_export_anki_compatible':
+        return '兼容 Anki';
+      case 'srs_export_anki_compatible_desc':
+        return '只写 Anki 认识的内容，去掉 Fushi 专有数据（完整复习日志、FSRS-7 参数、笔记出处）。Anki 本来就会忽略这些数据；之后要无损导回 Fushi 请保持关闭。';
       case 'srs_export_apkg':
         return '导出（.apkg）';
       case 'srs_export_done':
@@ -645618,6 +647403,16 @@ extension on _StringsZhCn {
         return '导出失败';
       case 'srs_export_fsrs7_note':
         return 'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
+      case 'srs_export_options_title':
+        return '导出选项';
+      case 'srs_export_with_deck_configs':
+        return '包含牌组预设与 FSRS 参数';
+      case 'srs_export_with_deck_configs_desc':
+        return '学习步长、每日上限、期望保留率与 FSRS 参数。关闭时牌组使用 Anki 默认预设。';
+      case 'srs_export_with_scheduling':
+        return '包含学习进度';
+      case 'srs_export_with_scheduling_desc':
+        return '复习记录与到期日。关闭时所有卡片作为新卡导出。';
       case 'srs_field_info_ai':
         return '让 AI 写说明';
       case 'srs_field_info_ai_busy':
@@ -645905,11 +647700,15 @@ extension on _StringsZhCn {
       case 'srs_import_use_rwkv':
         return '使用 RWKV 排程';
       case 'srs_import_use_rwkv_help':
-        return '本次导入新建的牌组使用 Fushi 默认的 RWKV 排程，包里的 FSRS 参数照样保留，之后可以切回。关闭时牌组保留包里的 FSRS 算法（没有参数的，包括在 Anki 里用 RWKV 的预设，使用 FSRS-7）。';
+        return '本次导入新建的牌组使用 Fushi 默认的 RWKV 排程，导入的 FSRS 参数照样保留，之后可以切回。关闭时牌组保留包里的 FSRS 算法（没有参数或不导入 FSRS 参数的，包括在 Anki 里用 RWKV 的预设，使用 FSRS-7）。';
       case 'srs_import_with_deck_configs':
         return '导入所有牌组预设配置';
       case 'srs_import_with_deck_configs_help':
-        return '本次导入新建的牌组使用包里的学习步长、每日上限、算法和 FSRS 参数；关闭时使用默认设置。已存在的牌组不会被改动。';
+        return '本次导入新建的牌组使用包里的学习步长、每日上限、最大间隔和音频设置；关闭时使用默认设置。算法与 FSRS 参数由单独的开关决定。已存在的牌组不会被改动。';
+      case 'srs_import_with_fsrs_params':
+        return '导入 FSRS 参数';
+      case 'srs_import_with_fsrs_params_help':
+        return '本次导入新建的牌组使用包里的 FSRS 参数和期望保留率，关闭「使用 RWKV 排程」时还沿用包里的 FSRS 算法；关闭时使用 Fushi 默认设置（RWKV；关闭 RWKV 时为 FSRS-7，按你的复习记录自动优化）。已存在的牌组不会被改动。';
       case 'srs_import_with_scheduling':
         return '导入所有学习进度信息';
       case 'srs_import_with_scheduling_help':
@@ -646025,7 +647824,7 @@ extension on _StringsZhCn {
       case 'srs_mining_target_hint':
         return '制卡时卡片发往哪里';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi 复习';
       case 'srs_mining_target_title':
         return '挖词目标';
       case 'srs_module_switch_hint':
@@ -646576,7 +648375,7 @@ extension on _StringsZhCn {
       case 'srs_stats_total':
         return '合计';
       case 'srs_stats_unavailable':
-        return '打开 SRS 模块后可查看复习统计。';
+        return '打开复习模块后可查看复习统计。';
       case 'srs_stats_view_count':
         return '次数';
       case 'srs_stats_view_cumulative':
@@ -646592,9 +648391,9 @@ extension on _StringsZhCn {
       case 'srs_status_new':
         return '新卡';
       case 'srs_status_open_tooltip':
-        return '在 Fushi SRS 中打开';
+        return '在 Fushi 复习中打开';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => '在 Fushi SRS 中打开（${n} 张卡）';
+        return ({required Object n}) => '在 Fushi 复习中打开（${n} 张卡）';
       case 'srs_status_review_by_recall':
         return '复习中（RWKV）';
       case 'srs_status_review_in':
@@ -647118,6 +648917,16 @@ extension on _StringsZhCn {
         return '流媒体';
       case 'study_diag_share_subject':
         return 'Fushi 统计诊断日志';
+      case 'subscription_auto_disable_half_year':
+        return '半年';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => '自动关闭：${period}';
+      case 'subscription_auto_disable_never':
+        return '从不';
+      case 'subscription_auto_disable_one_year':
+        return '一年';
+      case 'subscription_auto_disable_tooltip':
+        return '追更订阅多久没有更新就自动关闭';
       case 'subscription_edit_filter_hint':
         return '改字幕组或关键词只影响还没下载的集，已下载的保留不动。';
       case 'subscription_edit_list_helper':
@@ -647134,6 +648943,8 @@ extension on _StringsZhCn {
         return '标题排除';
       case 'subscription_edit_title_include':
         return '标题必须包含';
+      case 'subscription_fulfilled_chip':
+        return '已下载，自动关闭';
       case 'subscription_history_title':
         return '匹配历史';
       case 'subscription_item_status_discovered':
@@ -647190,6 +649001,8 @@ extension on _StringsZhCn {
         return '最近检查';
       case 'subscription_sort_last_matched':
         return '最近命中';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => '超过${period}未更新';
       case 'subtitle_version_ai_translated':
         return '机翻';
       case 'subtitle_version_content_language':
@@ -647418,6 +649231,10 @@ extension on _StringsZhCn {
         return '上次同步：未同步——没有已连接的同步通道';
       case 'sync_last_nothing':
         return '上次同步：没有可同步的内容';
+      case 'sync_manga_content':
+        return '上传漫画文件';
+      case 'sync_manga_content_warning':
+        return '漫画卷体积大，会消耗更多存储空间和流量';
       case 'sync_not_signed_in':
         return '未登录';
       case 'sync_now':
@@ -648241,7 +650058,7 @@ extension on _StringsZhCn {
       case 'usage_stats_enabled':
         return '发送使用统计';
       case 'usage_stats_enabled_hint':
-        return '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
+        return '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台、更新通道、界面语言、CPU 架构、系统大版本和安装来源（如应用商店或安装包），用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址，只记录据此判断的国家或地区。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -648718,6 +650535,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '最近添加 · 第 ${n} 集';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '剩余 ${minutes} 分钟';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} 集新';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             '第 ${n} 集 · ${count} 集未看';
@@ -650935,16 +652754,16 @@ extension on _StringsZhCn {
         return '过滤列表更新失败';
       case 'web_adblock_update_now':
         return '立即更新过滤列表';
-      case 'web_browser_address_hint':
-        return '输入网址';
-      case 'web_browser_address_invalid':
-        return '不是有效的网址';
       case 'web_browser_forward':
         return '前进';
       case 'web_browser_lookup_off':
         return '点词查词：关';
       case 'web_browser_lookup_on':
         return '点词查词：开';
+      case 'web_browser_search_engine':
+        return '搜索引擎';
+      case 'web_browser_search_hint':
+        return '搜索或输入网址';
       case 'web_browser_site_add':
         return '加入站点';
       case 'web_browser_site_added':
@@ -653549,7 +655368,7 @@ extension on _StringsZhHk {
       case 'backup_category_settings_desc':
         return '應用與閱讀器設定';
       case 'backup_category_srs':
-        return 'SRS';
+        return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -654036,13 +655855,13 @@ extension on _StringsZhHk {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi SRS';
+        return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi SRS';
+        return 'Send to Fushi review';
       case 'change_source':
         return '切換來源';
       case 'changelog_empty':
@@ -654894,6 +656713,8 @@ extension on _StringsZhHk {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -655013,8 +656834,6 @@ extension on _StringsZhHk {
         return '正在刪除辭典資料…';
       case 'dictionaries_menu_empty':
         return '請先匯入辭典以便使用';
-      case 'dictionary_collapse_follow_global':
-        return '跟隨全局設定';
       case 'dictionary_delete_failed':
         return '刪除詞典失敗';
       case 'dictionary_font_size':
@@ -655274,20 +657093,20 @@ extension on _StringsZhHk {
         return '排版設定';
       case 'download_add_video_source':
         return '添加影片來源';
-      case 'download_airing_calendar_empty_guidance':
-        return '暫無可顯示的放送資訊：給合集綁定 AniList 或添加下載訂閱後，這裡會顯示對應的放送時間。';
       case 'download_airing_calendar_episode_label':
         return ({required Object episode}) => '第 ${episode} 集';
       case 'download_airing_calendar_error':
         return '放送時間表加載失敗';
       case 'download_airing_calendar_in_library':
         return '已入庫';
-      case 'download_airing_calendar_show_all':
-        return '顯示本季全部';
       case 'download_airing_calendar_subscribed':
         return '訂閱中';
       case 'download_airing_calendar_title':
         return '放送日歷';
+      case 'download_airing_calendar_today_empty':
+        return 'Nothing airs today';
+      case 'download_airing_calendar_today_title':
+        return 'Airing today';
       case 'download_airing_calendar_week_empty':
         return '本周沒有相關放送';
       case 'download_airing_calendar_week_next':
@@ -658008,10 +659827,6 @@ extension on _StringsZhHk {
         return '過濾非日語字符集字符';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return '移除無法用 Shift-JIS 表示的字符';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return '只保留「」內的文字';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return '只留台詞、丟掉旁白；沒有「」的整行會被丟棄';
       case 'game_text_process_kind_normalize_width':
         return '全角半角正規化';
       case 'game_text_process_kind_normalize_width_desc':
@@ -658025,9 +659840,13 @@ extension on _StringsZhHk {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return '移除 ruby、br 之類的標記';
       case 'game_text_process_kind_strip_curly_braces':
-        return '去除花括號注音';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return '帶斜槓的花括號保留基字；不帶斜槓的整體刪除';
+        return '花括號注音轉振假名';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{漢字/かな} 或 {漢字:かな} 的讀音顯示在漢字上方；其餘花括號整體刪除';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return '去掉「」外的文字';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return '去掉人名等「」外的文字；沒有「」的旁白整行保留';
       case 'game_text_process_kind_take_lines':
         return '截取指定行數';
       case 'game_text_process_kind_take_lines_desc':
@@ -658066,6 +659885,8 @@ extension on _StringsZhHk {
         return '無變化';
       case 'game_text_process_preview_use_latest':
         return '使用最近抓到的一行';
+      case 'game_text_process_reset_defaults':
+        return '恢復預設';
       case 'game_text_process_ruby_warning':
         return '這一步會刪掉注音標記，相應的行將沒有振假名';
       case 'game_text_process_step_count':
@@ -658308,7 +660129,7 @@ extension on _StringsZhHk {
       case 'home_panel_mode_shown':
         return '顯示';
       case 'home_panel_srs_hint':
-        return '自動：製卡發往 Fushi SRS 或已有複習卡時顯示';
+        return '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
       case 'home_recently_added':
         return '最近添加';
       case 'home_remote_source':
@@ -658658,6 +660479,10 @@ extension on _StringsZhHk {
         return '上傳書籍檔案';
       case 'interconnect_upload_content_hint':
         return '把本設備的書籍/閱讀內容上傳同步到互聯對端。';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return '上傳到互聯對端';
       case 'interconnect_upload_section_footer':
@@ -660282,6 +662107,10 @@ extension on _StringsZhHk {
       case 'media_audio_cd_rip_unreadable':
         return ({required Object n}) =>
             '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_detail_start_reading':
+        return 'Start reading';
+      case 'media_detail_start_watching':
+        return 'Start watching';
       case 'media_file_location_failed':
         return '無法開啟檔案位置。';
       case 'media_file_location_open':
@@ -660911,7 +662740,7 @@ extension on _StringsZhHk {
       case 'nav_lookup':
         return '查詞';
       case 'nav_srs':
-        return 'SRS';
+        return '複習';
       case 'nav_video':
         return '影片';
       case 'nav_web':
@@ -661274,15 +663103,15 @@ extension on _StringsZhHk {
       case 'onboarding_finish_body':
         return '之後隨時可以在「設定 → 系統」重新打開本引導。';
       case 'onboarding_finish_import_desc':
-        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the SRS tab';
+        return 'Review on the Review tab';
       case 'onboarding_finish_summary_modules':
         return '顯示的庫頁';
       case 'onboarding_finish_summary_none':
@@ -661471,10 +663300,12 @@ extension on _StringsZhHk {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -661506,7 +663337,7 @@ extension on _StringsZhHk {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'onboarding_step_anki_action':
         return '製卡設定';
       case 'onboarding_step_anki_action_desc':
@@ -663416,9 +665247,9 @@ extension on _StringsZhHk {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi SRS';
+        return 'AnkiConnect for Fushi review';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
@@ -663448,7 +665279,7 @@ extension on _StringsZhHk {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi SRS backup';
+        return 'This file is not a Fushi review backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -663873,6 +665704,10 @@ extension on _StringsZhHk {
         return 'Add your first card';
       case 'srs_engine_unavailable':
         return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_export_anki_compatible':
+        return 'Anki-compatible only';
+      case 'srs_export_anki_compatible_desc':
+        return 'Leave out Fushi-only data (full review log, FSRS-7 parameters, note sources). Anki ignores it either way; keep this off if you want to import the file back into Fushi without loss.';
       case 'srs_export_apkg':
         return 'Export (.apkg)';
       case 'srs_export_done':
@@ -663881,6 +665716,16 @@ extension on _StringsZhHk {
         return 'Export failed';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_options_title':
+        return 'Export options';
+      case 'srs_export_with_deck_configs':
+        return 'Include deck presets and FSRS parameters';
+      case 'srs_export_with_deck_configs_desc':
+        return 'Learning steps, daily limits, desired retention and FSRS parameters. When off, decks use Anki\'s default preset.';
+      case 'srs_export_with_scheduling':
+        return 'Include learning progress';
+      case 'srs_export_with_scheduling_desc':
+        return 'Review history and due dates. When off, every card is exported as new.';
       case 'srs_field_info_ai':
         return 'Let AI write it';
       case 'srs_field_info_ai_busy':
@@ -664180,11 +666025,15 @@ extension on _StringsZhHk {
       case 'srs_import_use_rwkv':
         return 'Schedule with RWKV';
       case 'srs_import_use_rwkv_help':
-        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. FSRS parameters imported from the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none or FSRS parameters aren\'t imported, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
-        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+        return 'Decks created by this import take the learning steps, daily limits, maximum interval and audio settings from the package. When off they use the default settings. The algorithm and FSRS parameters have their own switch. Decks that already exist are never changed.';
+      case 'srs_import_with_fsrs_params':
+        return 'Import FSRS parameters';
+      case 'srs_import_with_fsrs_params_help':
+        return 'Decks created by this import take the FSRS parameters and desired retention from the package, plus its FSRS algorithm when RWKV is off. When off they use Fushi\'s defaults (RWKV, or FSRS-7 optimized automatically from your reviews when RWKV is off). Decks that already exist are never changed.';
       case 'srs_import_with_scheduling':
         return 'Import all review progress';
       case 'srs_import_with_scheduling_help':
@@ -664302,7 +666151,7 @@ extension on _StringsZhHk {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi SRS';
+        return 'Fushi review';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -664855,7 +666704,7 @@ extension on _StringsZhHk {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the SRS module to see review statistics.';
+        return 'Turn on the review module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -664871,9 +666720,9 @@ extension on _StringsZhHk {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi SRS';
+        return 'Open in Fushi review';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
       case 'srs_status_review_by_recall':
         return 'In review (RWKV)';
       case 'srs_status_review_in':
@@ -665399,6 +667248,16 @@ extension on _StringsZhHk {
         return '串流';
       case 'study_diag_share_subject':
         return 'Fushi 統計診斷日誌';
+      case 'subscription_auto_disable_half_year':
+        return '6 months';
+      case 'subscription_auto_disable_label':
+        return ({required Object period}) => 'Auto-off: ${period}';
+      case 'subscription_auto_disable_never':
+        return 'Never';
+      case 'subscription_auto_disable_one_year':
+        return '1 year';
+      case 'subscription_auto_disable_tooltip':
+        return 'Turn off ongoing subscriptions after no new episodes for';
       case 'subscription_edit_filter_hint':
         return 'Changing the release group or keywords only affects episodes that have not been downloaded yet.';
       case 'subscription_edit_list_helper':
@@ -665415,6 +667274,8 @@ extension on _StringsZhHk {
         return 'Title must not contain';
       case 'subscription_edit_title_include':
         return 'Title must contain';
+      case 'subscription_fulfilled_chip':
+        return 'Downloaded, turned off';
       case 'subscription_history_title':
         return 'Match history';
       case 'subscription_item_status_discovered':
@@ -665471,6 +667332,8 @@ extension on _StringsZhHk {
         return '最近檢查';
       case 'subscription_sort_last_matched':
         return '最近命中';
+      case 'subscription_stale_chip':
+        return ({required Object period}) => 'No updates for ${period}';
       case 'subtitle_version_ai_translated':
         return '機翻';
       case 'subtitle_version_content_language':
@@ -665700,6 +667563,10 @@ extension on _StringsZhHk {
         return '上次同步：未同步——沒有已連接的同步通道';
       case 'sync_last_nothing':
         return '上次同步：沒有可同步的內容';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '未登入';
       case 'sync_now':
@@ -666523,7 +668390,7 @@ extension on _StringsZhHk {
       case 'usage_stats_enabled':
         return '傳送使用統計';
       case 'usage_stats_enabled_hint':
-        return '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
+        return '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台、更新通道、介面語言、CPU 架構、系統主要版本和安裝來源（如應用程式商店或安裝程式），用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址，只記錄據此判斷的國家或地區。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -667000,6 +668867,8 @@ extension on _StringsZhHk {
         return ({required Object n}) => '最近添加 · 第 ${n} 集';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '剩餘 ${minutes} 分鐘';
+      case 'video_home_subscription_new_count':
+        return ({required Object count}) => '${count} new';
       case 'video_home_subscription_unwatched_episode':
         return ({required Object n, required Object count}) =>
             '第 ${n} 集 · ${count} 集未看';
@@ -669221,16 +671090,16 @@ extension on _StringsZhHk {
         return 'Failed to update filter lists';
       case 'web_adblock_update_now':
         return 'Update filter lists now';
-      case 'web_browser_address_hint':
-        return 'Enter a website address';
-      case 'web_browser_address_invalid':
-        return 'Not a valid website address';
       case 'web_browser_forward':
         return 'Forward';
       case 'web_browser_lookup_off':
         return 'Tap to look up: off';
       case 'web_browser_lookup_on':
         return 'Tap to look up: on';
+      case 'web_browser_search_engine':
+        return 'Search engine';
+      case 'web_browser_search_hint':
+        return 'Search or enter address';
       case 'web_browser_site_add':
         return 'Add to sites';
       case 'web_browser_site_added':
