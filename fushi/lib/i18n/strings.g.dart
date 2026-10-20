@@ -9573,7 +9573,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_settings_rwkv_failed({required Object error}) =>
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
@@ -28773,7 +28773,7 @@ class _StringsAr extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -50563,7 +50563,7 @@ class _StringsDe extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -72478,7 +72478,7 @@ class _StringsEs extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -94480,7 +94480,7 @@ class _StringsFr extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -116246,7 +116246,7 @@ class _StringsId extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -138056,7 +138056,7 @@ class _StringsIt extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -159158,7 +159158,7 @@ class _StringsJa extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -179985,7 +179985,7 @@ class _StringsKo extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -201521,7 +201521,7 @@ class _StringsNl extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -223360,7 +223360,7 @@ class _StringsPtBr extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -245177,7 +245177,7 @@ class _StringsRu extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -266745,7 +266745,7 @@ class _StringsTh extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -288378,7 +288378,7 @@ class _StringsTr extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -310007,7 +310007,7 @@ class _StringsVi extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -330257,7 +330257,7 @@ class _StringsZhCn extends _StringsEn {
       'RWKV 不可用：${error}。在此之前间隔按 FSRS-7 计算。';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant 用神经网络根据整个复习历史预测回忆率，卡片在预测回忆率降到目标保留率时到期。稳定性与难度仍由 FSRS-7 维护。';
+      'RWKV 用神经网络根据整个复习历史预测每张卡的遗忘曲线，每次作答后排到预测回忆率降到目标保留率的那一天。稳定性与难度仍由 FSRS-7 维护。';
   @override
   String get srs_settings_rwkv_license_small =>
       '小模型从作者的 GitHub 发布页下载；作者尚未声明它的许可。';
@@ -350364,7 +350364,7 @@ class _StringsZhHk extends _StringsEn {
       'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
   @override
   String get srs_settings_rwkv_hint =>
-      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
   @override
   String get srs_settings_rwkv_license_small =>
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
@@ -369203,7 +369203,7 @@ extension on _StringsEn {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -387611,7 +387611,7 @@ extension on _StringsAr {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -406075,7 +406075,7 @@ extension on _StringsDe {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -424543,7 +424543,7 @@ extension on _StringsEs {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -443022,7 +443022,7 @@ extension on _StringsFr {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -461461,7 +461461,7 @@ extension on _StringsId {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -479909,7 +479909,7 @@ extension on _StringsIt {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -498291,7 +498291,7 @@ extension on _StringsJa {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -516622,7 +516622,7 @@ extension on _StringsKo {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -535043,7 +535043,7 @@ extension on _StringsNl {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -553495,7 +553495,7 @@ extension on _StringsPtBr {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -571951,7 +571951,7 @@ extension on _StringsRu {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -590367,7 +590367,7 @@ extension on _StringsTh {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -608801,7 +608801,7 @@ extension on _StringsTr {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -627230,7 +627230,7 @@ extension on _StringsVi {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
@@ -645489,7 +645489,7 @@ extension on _StringsZhCn {
         return ({required Object error}) =>
             'RWKV 不可用：${error}。在此之前间隔按 FSRS-7 计算。';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant 用神经网络根据整个复习历史预测回忆率，卡片在预测回忆率降到目标保留率时到期。稳定性与难度仍由 FSRS-7 维护。';
+        return 'RWKV 用神经网络根据整个复习历史预测每张卡的遗忘曲线，每次作答后排到预测回忆率降到目标保留率的那一天。稳定性与难度仍由 FSRS-7 维护。';
       case 'srs_settings_rwkv_license_small':
         return '小模型从作者的 GitHub 发布页下载；作者尚未声明它的许可。';
       case 'srs_settings_rwkv_model':
@@ -663743,7 +663743,7 @@ extension on _StringsZhHk {
         return ({required Object error}) =>
             'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
-        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+        return 'RWKV predicts each card\'s forgetting curve from your whole review history with a neural network; every answer is scheduled for the day its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
       case 'srs_settings_rwkv_license_small':
         return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
