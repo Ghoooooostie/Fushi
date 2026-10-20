@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150756 (8868 per locale)
+/// Strings: 150824 (8872 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5568,6 +5568,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_upload_content => 'Upload book files';
   String get interconnect_upload_content_hint =>
       'Sync this device\'s books and reading content up to the interconnect peer.';
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   String get interconnect_upload_section => 'Upload to interconnect peer';
   String get interconnect_upload_section_footer =>
       'Choose what this device uploads to the connected peer. Independent from the cloud backup switches and off by default. These switches only apply while Enable interconnect is on: turning interconnect off stops every upload here.';
@@ -10223,6 +10226,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_last_no_channels =>
       'Last sync: nothing synced - no connected sync channel';
   String get sync_last_nothing => 'Last sync: nothing to sync';
+  String get sync_manga_content => 'Upload manga files';
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   String get sync_not_signed_in => 'Not signed in';
   String get sync_now => 'Sync now';
   String sync_now_audio_in({required Object count}) => '↓${count} audiobooks';
@@ -21886,6 +21892,11 @@ class _StringsAr extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'مزامنة كتب ومحتوى القراءة على هذا الجهاز إلى نظير الترابط.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'الرفع إلى نظير الترابط';
   @override
   String get interconnect_upload_section_footer =>
@@ -29946,6 +29957,11 @@ class _StringsAr extends _StringsEn {
       'آخر مزامنة: لم تتم المزامنة - لا توجد قناة مزامنة متصلة';
   @override
   String get sync_last_nothing => 'آخر مزامنة: لا شيء لمزامنته';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'لم يتم تسجيل الدخول';
   @override
@@ -43565,6 +43581,11 @@ class _StringsDe extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Bücher und Leseinhalte dieses Geräts zum Interconnect-Peer synchronisieren.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'Zum Interconnect-Peer hochladen';
   @override
   String get interconnect_upload_section_footer =>
@@ -51757,6 +51778,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Letzte Synchronisierung: nichts zu synchronisieren';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Nicht angemeldet';
   @override
@@ -65479,6 +65505,11 @@ class _StringsEs extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Sincroniza los libros y contenido de lectura de este dispositivo al par de Interconnect.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'Subir al par de Interconnect';
   @override
   String get interconnect_upload_section_footer =>
@@ -73688,6 +73719,11 @@ class _StringsEs extends _StringsEn {
       'Última sincronización: nada sincronizado — sin canal de sincronización conectado';
   @override
   String get sync_last_nothing => 'Última sincronización: nada que sincronizar';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'No conectado';
   @override
@@ -87466,6 +87502,11 @@ class _StringsFr extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Synchroniser les livres et le contenu de lecture de cet appareil vers le pair d\'interconnexion.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section =>
       'Envoyer vers le pair d\'interconnexion';
   @override
@@ -95697,6 +95738,11 @@ class _StringsFr extends _StringsEn {
       'Dernière synchro : rien — aucun canal de synchronisation connecté';
   @override
   String get sync_last_nothing => 'Dernière synchro : rien à synchroniser';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Non connecté';
   @override
@@ -109350,6 +109396,11 @@ class _StringsId extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Sinkronkan buku dan konten bacaan perangkat ini ke peer interconnect.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'Unggah ke peer interconnect';
   @override
   String get interconnect_upload_section_footer =>
@@ -117468,6 +117519,11 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Sinkronisasi terakhir: tidak ada yang perlu disinkronkan';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Belum masuk';
   @override
@@ -131110,6 +131166,11 @@ class _StringsIt extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Sincronizza i libri e i contenuti di lettura di questo dispositivo sul peer interconnect.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'Carica sul peer interconnect';
   @override
   String get interconnect_upload_section_footer =>
@@ -139292,6 +139353,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Ultima sincronizzazione: nulla da sincronizzare';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Non connesso';
   @override
@@ -152526,6 +152592,11 @@ class _StringsJa extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'このデバイスの書籍と読書コンテンツをインターコネクトピアに同期します。';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'インターコネクトピアにアップロード';
   @override
   String get interconnect_upload_section_footer =>
@@ -160365,6 +160436,11 @@ class _StringsJa extends _StringsEn {
   String get sync_last_no_channels => '最終同期: 同期チャンネルが未接続のため同期なし';
   @override
   String get sync_last_nothing => '最終同期: 同期対象なし';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => '未ログイン';
   @override
@@ -173349,6 +173425,11 @@ class _StringsKo extends _StringsEn {
   String get interconnect_upload_content_hint =>
       '이 기기의 도서 및 읽기 콘텐츠를 인터커넥트 피어로 동기화합니다.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => '인터커넥트 피어로 업로드';
   @override
   String get interconnect_upload_section_footer =>
@@ -181207,6 +181288,11 @@ class _StringsKo extends _StringsEn {
   String get sync_last_no_channels => '마지막 동기화: 동기화 안 됨 - 연결된 동기화 채널 없음';
   @override
   String get sync_last_nothing => '마지막 동기화: 동기화할 항목 없음';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => '로그인되지 않음';
   @override
@@ -194635,6 +194721,11 @@ class _StringsNl extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Synchroniseer de boeken en leesinhoud van dit apparaat naar de interconnectpeer.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'Uploaden naar interconnectpeer';
   @override
   String get interconnect_upload_section_footer =>
@@ -202795,6 +202886,11 @@ class _StringsNl extends _StringsEn {
       'Laatste sync: niets gesynchroniseerd — geen verbonden synchronisatiekanaal';
   @override
   String get sync_last_nothing => 'Laatste sync: niets te synchroniseren';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Niet aangemeld';
   @override
@@ -216472,6 +216568,11 @@ class _StringsPtBr extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Sincronizar livros e conteúdo de leitura deste dispositivo para o par da interconexão.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'Upload para par da interconexão';
   @override
   String get interconnect_upload_section_footer =>
@@ -224645,6 +224746,11 @@ class _StringsPtBr extends _StringsEn {
       'Última sincronização: nada sincronizado - nenhum canal de sincronização conectado';
   @override
   String get sync_last_nothing => 'Última sincronização: nada para sincronizar';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Não conectado';
   @override
@@ -238300,6 +238406,11 @@ class _StringsRu extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Синхронизировать книги и контент для чтения этого устройства с партнёром по взаимосвязи.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section =>
       'Загрузка на партнёра по взаимосвязи';
   @override
@@ -246473,6 +246584,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Последняя синхронизация: нечего синхронизировать';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Не авторизован';
   @override
@@ -259981,6 +260097,11 @@ class _StringsTh extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'ซิงค์หนังสือและเนื้อหาการอ่านของอุปกรณ์นี้ไปยังอุปกรณ์เชื่อมต่อ';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'อัปโหลดไปยังอุปกรณ์เชื่อมต่อ';
   @override
   String get interconnect_upload_section_footer =>
@@ -268046,6 +268167,11 @@ class _StringsTh extends _StringsEn {
       'ซิงค์ล่าสุด: ไม่มีอะไรซิงค์ — ไม่มีช่องทางซิงค์ที่เชื่อมต่อ';
   @override
   String get sync_last_nothing => 'ซิงค์ล่าสุด: ไม่มีอะไรต้องซิงค์';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'ยังไม่ได้เข้าสู่ระบบ';
   @override
@@ -281580,6 +281706,11 @@ class _StringsTr extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Bu cihazın kitap ve okuma içeriğini bağlantı eşine senkronize edin.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'Bağlantı eşine yükle';
   @override
   String get interconnect_upload_section_footer =>
@@ -289699,6 +289830,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_last_nothing =>
       'Son senkronizasyon: senkronize edilecek bir şey yok';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Oturum açılmadı';
   @override
@@ -303246,6 +303382,11 @@ class _StringsVi extends _StringsEn {
   String get interconnect_upload_content_hint =>
       'Đồng bộ sách và nội dung đọc của thiết bị này lên thiết bị ghép nối.';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => 'Tải lên thiết bị ghép nối';
   @override
   String get interconnect_upload_section_footer =>
@@ -311338,6 +311479,11 @@ class _StringsVi extends _StringsEn {
       'Đồng bộ lần cuối: không đồng bộ gì - chưa có kênh đồng bộ nào được kết nối';
   @override
   String get sync_last_nothing => 'Đồng bộ lần cuối: không có gì để đồng bộ';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => 'Chưa đăng nhập';
   @override
@@ -324063,6 +324209,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_upload_content_hint => '把本设备的书籍/阅读内容上传同步到互联对端。';
   @override
+  String get interconnect_upload_manga_content => '上传漫画文件';
+  @override
+  String get interconnect_upload_manga_content_hint => '把本设备的漫画上传同步到互联对端。';
+  @override
   String get interconnect_upload_section => '上传到互联对端';
   @override
   String get interconnect_upload_section_footer =>
@@ -331514,6 +331664,10 @@ class _StringsZhCn extends _StringsEn {
   String get sync_last_no_channels => '上次同步：未同步——没有已连接的同步通道';
   @override
   String get sync_last_nothing => '上次同步：没有可同步的内容';
+  @override
+  String get sync_manga_content => '上传漫画文件';
+  @override
+  String get sync_manga_content_warning => '漫画卷体积大，会消耗更多存储空间和流量';
   @override
   String get sync_not_signed_in => '未登录';
   @override
@@ -343993,6 +344147,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_upload_content_hint => '把本設備的書籍/閱讀內容上傳同步到互聯對端。';
   @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
+  @override
   String get interconnect_upload_section => '上傳到互聯對端';
   @override
   String get interconnect_upload_section_footer =>
@@ -351657,6 +351816,11 @@ class _StringsZhHk extends _StringsEn {
   String get sync_last_no_channels => '上次同步：未同步——沒有已連接的同步通道';
   @override
   String get sync_last_nothing => '上次同步：沒有可同步的內容';
+  @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   @override
   String get sync_not_signed_in => '未登入';
   @override
@@ -363391,6 +363555,10 @@ extension on _StringsEn {
         return 'Upload book files';
       case 'interconnect_upload_content_hint':
         return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Upload to interconnect peer';
       case 'interconnect_upload_section_footer':
@@ -370450,6 +370618,10 @@ extension on _StringsEn {
         return 'Last sync: nothing synced - no connected sync channel';
       case 'sync_last_nothing':
         return 'Last sync: nothing to sync';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Not signed in';
       case 'sync_now':
@@ -381811,6 +381983,10 @@ extension on _StringsAr {
         return 'رفع ملفات الكتب';
       case 'interconnect_upload_content_hint':
         return 'مزامنة كتب ومحتوى القراءة على هذا الجهاز إلى نظير الترابط.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'الرفع إلى نظير الترابط';
       case 'interconnect_upload_section_footer':
@@ -388865,6 +389041,10 @@ extension on _StringsAr {
         return 'آخر مزامنة: لم تتم المزامنة - لا توجد قناة مزامنة متصلة';
       case 'sync_last_nothing':
         return 'آخر مزامنة: لا شيء لمزامنته';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'لم يتم تسجيل الدخول';
       case 'sync_now':
@@ -400269,6 +400449,10 @@ extension on _StringsDe {
         return 'Buchdateien hochladen';
       case 'interconnect_upload_content_hint':
         return 'Bücher und Leseinhalte dieses Geräts zum Interconnect-Peer synchronisieren.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Zum Interconnect-Peer hochladen';
       case 'interconnect_upload_section_footer':
@@ -407348,6 +407532,10 @@ extension on _StringsDe {
         return 'Letzte Synchronisierung: nichts synchronisiert – kein verbundener Sync-Kanal';
       case 'sync_last_nothing':
         return 'Letzte Synchronisierung: nichts zu synchronisieren';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Nicht angemeldet';
       case 'sync_now':
@@ -418751,6 +418939,10 @@ extension on _StringsEs {
         return 'Subir archivos de libros';
       case 'interconnect_upload_content_hint':
         return 'Sincroniza los libros y contenido de lectura de este dispositivo al par de Interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Subir al par de Interconnect';
       case 'interconnect_upload_section_footer':
@@ -425827,6 +426019,10 @@ extension on _StringsEs {
         return 'Última sincronización: nada sincronizado — sin canal de sincronización conectado';
       case 'sync_last_nothing':
         return 'Última sincronización: nada que sincronizar';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'No conectado';
       case 'sync_now':
@@ -437242,6 +437438,10 @@ extension on _StringsFr {
         return 'Envoyer les fichiers de livres';
       case 'interconnect_upload_content_hint':
         return 'Synchroniser les livres et le contenu de lecture de cet appareil vers le pair d\'interconnexion.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Envoyer vers le pair d\'interconnexion';
       case 'interconnect_upload_section_footer':
@@ -444317,6 +444517,10 @@ extension on _StringsFr {
         return 'Dernière synchro : rien — aucun canal de synchronisation connecté';
       case 'sync_last_nothing':
         return 'Dernière synchro : rien à synchroniser';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Non connecté';
       case 'sync_now':
@@ -455708,6 +455912,10 @@ extension on _StringsId {
         return 'Unggah file buku';
       case 'interconnect_upload_content_hint':
         return 'Sinkronkan buku dan konten bacaan perangkat ini ke peer interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Unggah ke peer interconnect';
       case 'interconnect_upload_section_footer':
@@ -462768,6 +462976,10 @@ extension on _StringsId {
         return 'Sinkronisasi terakhir: tidak ada yang disinkronkan - tidak ada kanal sinkronisasi yang terhubung';
       case 'sync_last_nothing':
         return 'Sinkronisasi terakhir: tidak ada yang perlu disinkronkan';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Belum masuk';
       case 'sync_now':
@@ -474158,6 +474370,10 @@ extension on _StringsIt {
         return 'Carica file dei libri';
       case 'interconnect_upload_content_hint':
         return 'Sincronizza i libri e i contenuti di lettura di questo dispositivo sul peer interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Carica sul peer interconnect';
       case 'interconnect_upload_section_footer':
@@ -481229,6 +481445,10 @@ extension on _StringsIt {
         return 'Ultima sincronizzazione: nulla sincronizzato — nessun canale di sincronizzazione connesso';
       case 'sync_last_nothing':
         return 'Ultima sincronizzazione: nulla da sincronizzare';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Non connesso';
       case 'sync_now':
@@ -492576,6 +492796,10 @@ extension on _StringsJa {
         return '書籍ファイルをアップロード';
       case 'interconnect_upload_content_hint':
         return 'このデバイスの書籍と読書コンテンツをインターコネクトピアに同期します。';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'インターコネクトピアにアップロード';
       case 'interconnect_upload_section_footer':
@@ -499612,6 +499836,10 @@ extension on _StringsJa {
         return '最終同期: 同期チャンネルが未接続のため同期なし';
       case 'sync_last_nothing':
         return '最終同期: 同期対象なし';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '未ログイン';
       case 'sync_now':
@@ -510919,6 +511147,10 @@ extension on _StringsKo {
         return '도서 파일 업로드';
       case 'interconnect_upload_content_hint':
         return '이 기기의 도서 및 읽기 콘텐츠를 인터커넥트 피어로 동기화합니다.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return '인터커넥트 피어로 업로드';
       case 'interconnect_upload_section_footer':
@@ -517956,6 +518188,10 @@ extension on _StringsKo {
         return '마지막 동기화: 동기화 안 됨 - 연결된 동기화 채널 없음';
       case 'sync_last_nothing':
         return '마지막 동기화: 동기화할 항목 없음';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '로그인되지 않음';
       case 'sync_now':
@@ -529324,6 +529560,10 @@ extension on _StringsNl {
         return 'Boekbestanden uploaden';
       case 'interconnect_upload_content_hint':
         return 'Synchroniseer de boeken en leesinhoud van dit apparaat naar de interconnectpeer.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Uploaden naar interconnectpeer';
       case 'interconnect_upload_section_footer':
@@ -536398,6 +536638,10 @@ extension on _StringsNl {
         return 'Laatste sync: niets gesynchroniseerd — geen verbonden synchronisatiekanaal';
       case 'sync_last_nothing':
         return 'Laatste sync: niets te synchroniseren';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Niet aangemeld';
       case 'sync_now':
@@ -547791,6 +548035,10 @@ extension on _StringsPtBr {
         return 'Upload de arquivos de livros';
       case 'interconnect_upload_content_hint':
         return 'Sincronizar livros e conteúdo de leitura deste dispositivo para o par da interconexão.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Upload para par da interconexão';
       case 'interconnect_upload_section_footer':
@@ -554861,6 +555109,10 @@ extension on _StringsPtBr {
         return 'Última sincronização: nada sincronizado - nenhum canal de sincronização conectado';
       case 'sync_last_nothing':
         return 'Última sincronização: nada para sincronizar';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Não conectado';
       case 'sync_now':
@@ -566259,6 +566511,10 @@ extension on _StringsRu {
         return 'Загрузить файлы книг';
       case 'interconnect_upload_content_hint':
         return 'Синхронизировать книги и контент для чтения этого устройства с партнёром по взаимосвязи.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Загрузка на партнёра по взаимосвязи';
       case 'interconnect_upload_section_footer':
@@ -573330,6 +573586,10 @@ extension on _StringsRu {
         return 'Последняя синхронизация: ничего не синхронизировано — нет подключённых каналов';
       case 'sync_last_nothing':
         return 'Последняя синхронизация: нечего синхронизировать';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Не авторизован';
       case 'sync_now':
@@ -584699,6 +584959,10 @@ extension on _StringsTh {
         return 'อัปโหลดไฟล์หนังสือ';
       case 'interconnect_upload_content_hint':
         return 'ซิงค์หนังสือและเนื้อหาการอ่านของอุปกรณ์นี้ไปยังอุปกรณ์เชื่อมต่อ';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'อัปโหลดไปยังอุปกรณ์เชื่อมต่อ';
       case 'interconnect_upload_section_footer':
@@ -591756,6 +592020,10 @@ extension on _StringsTh {
         return 'ซิงค์ล่าสุด: ไม่มีอะไรซิงค์ — ไม่มีช่องทางซิงค์ที่เชื่อมต่อ';
       case 'sync_last_nothing':
         return 'ซิงค์ล่าสุด: ไม่มีอะไรต้องซิงค์';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'ยังไม่ได้เข้าสู่ระบบ';
       case 'sync_now':
@@ -603140,6 +603408,10 @@ extension on _StringsTr {
         return 'Kitap dosyalarını yükle';
       case 'interconnect_upload_content_hint':
         return 'Bu cihazın kitap ve okuma içeriğini bağlantı eşine senkronize edin.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Bağlantı eşine yükle';
       case 'interconnect_upload_section_footer':
@@ -610202,6 +610474,10 @@ extension on _StringsTr {
         return 'Son senkronizasyon: senkronize edilmedi — bağlı kanal yok';
       case 'sync_last_nothing':
         return 'Son senkronizasyon: senkronize edilecek bir şey yok';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Oturum açılmadı';
       case 'sync_now':
@@ -621584,6 +621860,10 @@ extension on _StringsVi {
         return 'Tải lên tệp sách';
       case 'interconnect_upload_content_hint':
         return 'Đồng bộ sách và nội dung đọc của thiết bị này lên thiết bị ghép nối.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Tải lên thiết bị ghép nối';
       case 'interconnect_upload_section_footer':
@@ -628644,6 +628924,10 @@ extension on _StringsVi {
         return 'Đồng bộ lần cuối: không đồng bộ gì - chưa có kênh đồng bộ nào được kết nối';
       case 'sync_last_nothing':
         return 'Đồng bộ lần cuối: không có gì để đồng bộ';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Chưa đăng nhập';
       case 'sync_now':
@@ -639913,6 +640197,10 @@ extension on _StringsZhCn {
         return '上传书籍文件';
       case 'interconnect_upload_content_hint':
         return '把本设备的书籍/阅读内容上传同步到互联对端。';
+      case 'interconnect_upload_manga_content':
+        return '上传漫画文件';
+      case 'interconnect_upload_manga_content_hint':
+        return '把本设备的漫画上传同步到互联对端。';
       case 'interconnect_upload_section':
         return '上传到互联对端';
       case 'interconnect_upload_section_footer':
@@ -646900,6 +647188,10 @@ extension on _StringsZhCn {
         return '上次同步：未同步——没有已连接的同步通道';
       case 'sync_last_nothing':
         return '上次同步：没有可同步的内容';
+      case 'sync_manga_content':
+        return '上传漫画文件';
+      case 'sync_manga_content_warning':
+        return '漫画卷体积大，会消耗更多存储空间和流量';
       case 'sync_not_signed_in':
         return '未登录';
       case 'sync_now':
@@ -658144,6 +658436,10 @@ extension on _StringsZhHk {
         return '上傳書籍檔案';
       case 'interconnect_upload_content_hint':
         return '把本設備的書籍/閱讀內容上傳同步到互聯對端。';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return '上傳到互聯對端';
       case 'interconnect_upload_section_footer':
@@ -665169,6 +665465,10 @@ extension on _StringsZhHk {
         return '上次同步：未同步——沒有已連接的同步通道';
       case 'sync_last_nothing':
         return '上次同步：沒有可同步的內容';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '未登入';
       case 'sync_now':
