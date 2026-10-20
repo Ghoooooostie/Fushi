@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150739 (8867 per locale)
+/// Strings: 150807 (8871 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9191,6 +9191,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} notes were not imported because their note type conflicts';
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -9228,6 +9230,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Review history not imported: ${n} entries';
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -9260,6 +9264,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_import_update_notetypes => 'Update note types';
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   String get srs_import_with_deck_configs => 'Import all deck presets';
   String get srs_import_with_deck_configs_help =>
       'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
@@ -28141,6 +28148,9 @@ class _StringsAr extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -28194,6 +28204,9 @@ class _StringsAr extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -28245,6 +28258,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -49950,6 +49968,9 @@ class _StringsDe extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -50003,6 +50024,9 @@ class _StringsDe extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -50054,6 +50078,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -71884,6 +71913,9 @@ class _StringsEs extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -71937,6 +71969,9 @@ class _StringsEs extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -71988,6 +72023,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -93905,6 +93945,9 @@ class _StringsFr extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -93958,6 +94001,9 @@ class _StringsFr extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -94009,6 +94055,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -115690,6 +115741,9 @@ class _StringsId extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -115743,6 +115797,9 @@ class _StringsId extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -115794,6 +115851,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -137519,6 +137581,9 @@ class _StringsIt extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -137572,6 +137637,9 @@ class _StringsIt extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -137623,6 +137691,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -158640,6 +158713,9 @@ class _StringsJa extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -158693,6 +158769,9 @@ class _StringsJa extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -158744,6 +158823,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -179486,6 +179570,9 @@ class _StringsKo extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -179539,6 +179626,9 @@ class _StringsKo extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -179590,6 +179680,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -201041,6 +201136,9 @@ class _StringsNl extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -201094,6 +201192,9 @@ class _StringsNl extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -201145,6 +201246,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -222899,6 +223005,9 @@ class _StringsPtBr extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -222952,6 +223061,9 @@ class _StringsPtBr extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -223003,6 +223115,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -244735,6 +244852,9 @@ class _StringsRu extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -244788,6 +244908,9 @@ class _StringsRu extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -244839,6 +244962,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -266322,6 +266450,9 @@ class _StringsTh extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -266375,6 +266506,9 @@ class _StringsTh extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -266426,6 +266560,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -287974,6 +288113,9 @@ class _StringsTr extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -288027,6 +288169,9 @@ class _StringsTr extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -288078,6 +288223,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -309622,6 +309772,9 @@ class _StringsVi extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -309675,6 +309828,9 @@ class _StringsVi extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -309726,6 +309882,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -329944,6 +330105,9 @@ class _StringsZhCn extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       '预设「${preset}」在 Anki 里没有 FSRS 参数（SM-2 或没优化过），对应牌组改用 Fushi 默认的 RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      '预设「${preset}」在 Anki 里没有 FSRS 参数（SM-2 或没优化过），对应牌组使用 FSRS-7 默认参数';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -329995,6 +330159,9 @@ class _StringsZhCn extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       '预设「${preset}」在 Anki 里用 RWKV，导入后照旧用 RWKV';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      '预设「${preset}」在 Anki 里用 RWKV；本次导入关闭了 RWKV，对应牌组改用 FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -330041,6 +330208,11 @@ class _StringsZhCn extends _StringsEn {
   String get srs_import_update_notetypes => '更新笔记模板';
   @override
   String get srs_import_update_notetypes_help => '对笔记模板做同样的选择：名称、样式和卡片模板。';
+  @override
+  String get srs_import_use_rwkv => '使用 RWKV 排程';
+  @override
+  String get srs_import_use_rwkv_help =>
+      '本次导入新建的牌组使用 Fushi 默认的 RWKV 排程，包里的 FSRS 参数照样保留，之后可以切回。关闭时牌组保留包里的 FSRS 算法（没有参数的，包括在 Anki 里用 RWKV 的预设，使用 FSRS-7）。';
   @override
   String get srs_import_with_deck_configs => '导入所有牌组预设配置';
   @override
@@ -350017,6 +350189,9 @@ class _StringsZhHk extends _StringsEn {
   String srs_import_report_default_algorithm({required Object preset}) =>
       'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
   @override
+  String srs_import_report_default_fsrs({required Object preset}) =>
+      'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
+  @override
   String srs_import_report_fsrs({
     required Object preset,
     required Object alg,
@@ -350070,6 +350245,9 @@ class _StringsZhHk extends _StringsEn {
   String srs_import_report_rwkv({required Object preset}) =>
       'Preset "${preset}" used RWKV in Anki and keeps using it';
   @override
+  String srs_import_report_rwkv_on_fsrs({required Object preset}) =>
+      'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
+  @override
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -350121,6 +350299,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_update_notetypes_help =>
       'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_use_rwkv => 'Schedule with RWKV';
+  @override
+  String get srs_import_use_rwkv_help =>
+      'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
   @override
   String get srs_import_with_deck_configs => 'Import all deck presets';
   @override
@@ -368957,6 +369140,9 @@ extension on _StringsEn {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -369004,6 +369190,9 @@ extension on _StringsEn {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -369048,6 +369237,10 @@ extension on _StringsEn {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -387380,6 +387573,9 @@ extension on _StringsAr {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -387427,6 +387623,9 @@ extension on _StringsAr {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -387471,6 +387670,10 @@ extension on _StringsAr {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -405859,6 +406062,9 @@ extension on _StringsDe {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -405906,6 +406112,9 @@ extension on _StringsDe {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -405950,6 +406159,10 @@ extension on _StringsDe {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -424342,6 +424555,9 @@ extension on _StringsEs {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -424389,6 +424605,9 @@ extension on _StringsEs {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -424433,6 +424652,10 @@ extension on _StringsEs {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -442836,6 +443059,9 @@ extension on _StringsFr {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -442883,6 +443109,9 @@ extension on _StringsFr {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -442927,6 +443156,10 @@ extension on _StringsFr {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -461290,6 +461523,9 @@ extension on _StringsId {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -461337,6 +461573,9 @@ extension on _StringsId {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -461381,6 +461620,10 @@ extension on _StringsId {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -479753,6 +479996,9 @@ extension on _StringsIt {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -479800,6 +480046,9 @@ extension on _StringsIt {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -479844,6 +480093,10 @@ extension on _StringsIt {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -498150,6 +498403,9 @@ extension on _StringsJa {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -498197,6 +498453,9 @@ extension on _StringsJa {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -498241,6 +498500,10 @@ extension on _StringsJa {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -516496,6 +516759,9 @@ extension on _StringsKo {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -516543,6 +516809,9 @@ extension on _StringsKo {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -516587,6 +516856,10 @@ extension on _StringsKo {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -534932,6 +535205,9 @@ extension on _StringsNl {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -534979,6 +535255,9 @@ extension on _StringsNl {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -535023,6 +535302,10 @@ extension on _StringsNl {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -553399,6 +553682,9 @@ extension on _StringsPtBr {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -553446,6 +553732,9 @@ extension on _StringsPtBr {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -553490,6 +553779,10 @@ extension on _StringsPtBr {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -571870,6 +572163,9 @@ extension on _StringsRu {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -571917,6 +572213,9 @@ extension on _StringsRu {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -571961,6 +572260,10 @@ extension on _StringsRu {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -590301,6 +590604,9 @@ extension on _StringsTh {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -590348,6 +590654,9 @@ extension on _StringsTh {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -590392,6 +590701,10 @@ extension on _StringsTh {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -608750,6 +609063,9 @@ extension on _StringsTr {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -608797,6 +609113,9 @@ extension on _StringsTr {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -608841,6 +609160,10 @@ extension on _StringsTr {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -627194,6 +627517,9 @@ extension on _StringsVi {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -627241,6 +627567,9 @@ extension on _StringsVi {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -627285,6 +627614,10 @@ extension on _StringsVi {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
@@ -645483,6 +645816,9 @@ extension on _StringsZhCn {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             '预设「${preset}」在 Anki 里没有 FSRS 参数（SM-2 或没优化过），对应牌组改用 Fushi 默认的 RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            '预设「${preset}」在 Anki 里没有 FSRS 参数（SM-2 或没优化过），对应牌组使用 FSRS-7 默认参数';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             '预设「${preset}」带着 ${alg} 参数导入，对应牌组已改用 Fushi 默认的 RWKV（按此刻每张卡的回忆率排队）。${alg} 参数已保留：想继续用 ${alg}，点下面的「继续用 FSRS」，或在牌组设置 › 算法里切回';
@@ -645521,6 +645857,9 @@ extension on _StringsZhCn {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             '预设「${preset}」在 Anki 里用 RWKV，导入后照旧用 RWKV';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            '预设「${preset}」在 Anki 里用 RWKV；本次导入关闭了 RWKV，对应牌组改用 FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             '牌组「${preset}」的步长 ${removed} 已移除，改由 FSRS 安排';
@@ -645563,6 +645902,10 @@ extension on _StringsZhCn {
         return '更新笔记模板';
       case 'srs_import_update_notetypes_help':
         return '对笔记模板做同样的选择：名称、样式和卡片模板。';
+      case 'srs_import_use_rwkv':
+        return '使用 RWKV 排程';
+      case 'srs_import_use_rwkv_help':
+        return '本次导入新建的牌组使用 Fushi 默认的 RWKV 排程，包里的 FSRS 参数照样保留，之后可以切回。关闭时牌组保留包里的 FSRS 算法（没有参数的，包括在 Anki 里用 RWKV 的预设，使用 FSRS-7）。';
       case 'srs_import_with_deck_configs':
         return '导入所有牌组预设配置';
       case 'srs_import_with_deck_configs_help':
@@ -663738,6 +664081,9 @@ extension on _StringsZhHk {
       case 'srs_import_report_default_algorithm':
         return ({required Object preset}) =>
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
+      case 'srs_import_report_default_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use FSRS-7 with default parameters';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
             'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
@@ -663784,6 +664130,9 @@ extension on _StringsZhHk {
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
             'Preset "${preset}" used RWKV in Anki and keeps using it';
+      case 'srs_import_report_rwkv_on_fsrs':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV in Anki; RWKV was off for this import, so its decks use FSRS-7';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -663828,6 +664177,10 @@ extension on _StringsZhHk {
         return 'Update note types';
       case 'srs_import_update_notetypes_help':
         return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_use_rwkv':
+        return 'Schedule with RWKV';
+      case 'srs_import_use_rwkv_help':
+        return 'Decks created by this import use RWKV, Fushi\'s default scheduler. Any FSRS parameters in the package are kept, so you can switch back later. When off, decks keep the package\'s FSRS algorithm (FSRS-7 if it has none, including presets that used RWKV in Anki).';
       case 'srs_import_with_deck_configs':
         return 'Import all deck presets';
       case 'srs_import_with_deck_configs_help':
