@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 151980 (8940 per locale)
+/// Strings: 152014 (8942 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3391,6 +3391,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_subscription_delete => 'Delete subscription';
   String download_subscription_delete_confirm({required Object title}) =>
       'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   String get download_subscription_download_and_create =>
       'Download and subscribe';
   String get download_subscription_empty_body =>
@@ -6236,6 +6238,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String manga_import_batch_hint({required Object n}) =>
       'This folder holds ${n} volume files; each is imported as its own book, named after its file.';
   String get manga_import_detected_confirm => 'Import as manga';
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   String get manga_import_detected_title => 'This looks like manga';
@@ -18325,6 +18328,9 @@ class _StringsAr extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'حذف اشتراك ${title}؟ مهام التحميل يتم الاحتفاظ بها.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'تحميل واشتراك';
   @override
   String get download_subscription_empty_body =>
@@ -23129,6 +23135,8 @@ class _StringsAr extends _StringsEn {
       'يحتوي هذا المجلد على ${n} ملف مجلّد؛ يتم استيراد كل منها ككتاب مستقل باسم ملفه.';
   @override
   String get manga_import_detected_confirm => 'استيراد كمانغا';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" هو ملف مانغا، لذا سيمر عبر مستورد المانغا بدلاً من مستورد الكتب.';
@@ -40113,6 +40121,9 @@ class _StringsDe extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Das Abonnement für ${title} löschen? Heruntergeladene Aufgaben bleiben erhalten.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Herunterladen und abonnieren';
   @override
@@ -45028,6 +45039,8 @@ class _StringsDe extends _StringsEn {
       'Dieser Ordner enthält ${n} Banddateien; jede wird als eigenes Buch importiert, benannt nach der Datei.';
   @override
   String get manga_import_detected_confirm => 'Als Manga importieren';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '„${name}" ist eine Manga-Datei und wird daher über den Manga-Importer statt den Buch-Importer importiert.';
@@ -62223,6 +62236,9 @@ class _StringsEs extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '¿Eliminar la suscripción de ${title}? Las tareas descargadas se conservan.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Descargar y suscribirse';
   @override
@@ -67140,6 +67156,8 @@ class _StringsEs extends _StringsEn {
       'Esta carpeta contiene ${n} archivos de volumen; cada uno se importa como su propio libro, nombrado según su archivo.';
   @override
   String get manga_import_detected_confirm => 'Importar como manga';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" es un archivo de manga, por lo que se procesará con el importador de manga en lugar del importador de libros.';
@@ -84398,6 +84416,9 @@ class _StringsFr extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Supprimer l\'abonnement pour ${title} ? Les tâches téléchargées sont conservées.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Télécharger et s\'abonner';
   @override
@@ -89330,6 +89351,8 @@ class _StringsFr extends _StringsEn {
       'Ce dossier contient ${n} fichiers de tomes ; chacun est importé comme son propre livre, nommé d\'après son fichier.';
   @override
   String get manga_import_detected_confirm => 'Importer comme manga';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '« ${name} » est un fichier manga, il passera donc par l\'importateur de manga au lieu de l\'importateur de livres.';
@@ -106534,6 +106557,9 @@ class _StringsId extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Hapus langganan untuk ${title}? Tugas yang sudah diunduh tetap ada.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Unduh dan berlangganan';
   @override
@@ -111390,6 +111416,8 @@ class _StringsId extends _StringsEn {
       'Folder ini berisi ${n} file volume; masing-masing diimpor sebagai buku tersendiri, dinamai sesuai filenya.';
   @override
   String get manga_import_detected_confirm => 'Impor sebagai manga';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" adalah file manga, jadi akan melalui pengimpor manga alih-alih pengimpor buku.';
@@ -128458,6 +128486,9 @@ class _StringsIt extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Eliminare l\'abbonamento per ${title}? I download già effettuati vengono mantenuti.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'Scarica e abbonati';
   @override
   String get download_subscription_empty_body =>
@@ -133349,6 +133380,8 @@ class _StringsIt extends _StringsEn {
       'Questa cartella contiene ${n} file di volume; ogni volume viene importato come libro a sé, con il nome del file.';
   @override
   String get manga_import_detected_confirm => 'Importa come manga';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" è un file manga, quindi passerà per l\'importatore manga invece di quello dei libri.';
@@ -150277,6 +150310,9 @@ class _StringsJa extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '「${title}」の購読を削除しますか？ダウンロード済みのタスクは保持されます。';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'ダウンロードして購読';
   @override
   String get download_subscription_empty_body =>
@@ -154909,6 +154945,8 @@ class _StringsJa extends _StringsEn {
       'このフォルダには${n}巻のファイルがあります。それぞれがファイル名で独立した本としてインポートされます。';
   @override
   String get manga_import_detected_confirm => 'マンガとしてインポート';
+  @override
+  String get manga_import_detected_import_as_book => '書籍としてインポート';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}"はマンガファイルのため、書籍インポーターの代わりにマンガインポーターで処理されます。';
@@ -171280,6 +171318,9 @@ class _StringsKo extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '${title}에 대한 구독을 삭제하시겠습니까? 다운로드된 작업은 유지됩니다.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => '다운로드 및 구독';
   @override
   String get download_subscription_empty_body =>
@@ -175931,6 +175972,8 @@ class _StringsKo extends _StringsEn {
       '이 폴더에 ${n}개의 볼륨 파일이 있습니다. 각각 파일 이름을 따서 별도의 책으로 가져옵니다.';
   @override
   String get manga_import_detected_confirm => '만화로 가져오기';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}"은(는) 만화 파일이므로 책 가져오기 대신 만화 가져오기로 처리됩니다.';
@@ -192587,6 +192630,9 @@ class _StringsNl extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Het abonnement voor ${title} verwijderen? Gedownloade taken worden bewaard.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Downloaden en abonneren';
   @override
@@ -197463,6 +197509,8 @@ class _StringsNl extends _StringsEn {
       'Deze map bevat ${n} deelbestanden; elk wordt als eigen boek geïmporteerd, vernoemd naar het bestand.';
   @override
   String get manga_import_detected_confirm => 'Importeren als manga';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is een mangabestand, dus het wordt via de manga-importeur verwerkt in plaats van de boekimporteur.';
@@ -214600,6 +214648,9 @@ class _StringsPtBr extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Excluir a assinatura de ${title}? Tarefas já baixadas são mantidas.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'Baixar e assinar';
   @override
   String get download_subscription_empty_body =>
@@ -219500,6 +219551,8 @@ class _StringsPtBr extends _StringsEn {
       'Esta pasta contém ${n} arquivos de volume; cada um é importado como seu próprio livro, nomeado pelo arquivo.';
   @override
   String get manga_import_detected_confirm => 'Importar como mangá';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" é um arquivo de mangá, então passará pelo importador de mangá em vez do importador de livros.';
@@ -236642,6 +236695,9 @@ class _StringsRu extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Удалить подписку на ${title}? Загруженные задачи сохранятся.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Скачать и подписаться';
   @override
@@ -241522,6 +241578,8 @@ class _StringsRu extends _StringsEn {
       'В этой папке ${n} томов; каждый импортируется как отдельная книга с именем файла.';
   @override
   String get manga_import_detected_confirm => 'Импортировать как мангу';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '«${name}» — файл манги, поэтому он будет обработан импортёром манги, а не импортёром книг.';
@@ -258582,6 +258640,9 @@ class _StringsTh extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'ลบการติดตาม ${title}? งานที่ดาวน์โหลดแล้วจะยังคงอยู่';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'ดาวน์โหลดและติดตาม';
   @override
   String get download_subscription_empty_body =>
@@ -263379,6 +263440,8 @@ class _StringsTh extends _StringsEn {
       'โฟลเดอร์นี้มีไฟล์เล่ม ${n} ไฟล์ แต่ละไฟล์จะถูกนำเข้าเป็นหนังสือแยกตามชื่อไฟล์';
   @override
   String get manga_import_detected_confirm => 'นำเข้าเป็นมังงะ';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" เป็นไฟล์มังงะ จึงจะผ่านตัวนำเข้ามังงะแทนตัวนำเข้าหนังสือ';
@@ -280322,6 +280385,9 @@ class _StringsTr extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '${title} aboneliği silinsin mi? İndirilen görevler korunur.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'İndir ve abone ol';
   @override
   String get download_subscription_empty_body =>
@@ -285183,6 +285249,8 @@ class _StringsTr extends _StringsEn {
       'Bu klasörde ${n} cilt dosyası var; her biri dosya adıyla kendi kitabı olarak içe aktarılır.';
   @override
   String get manga_import_detected_confirm => 'Manga olarak içe aktar';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" bir manga dosyasıdır, bu yüzden kitap içe aktarıcı yerine manga içe aktarıcıdan geçecektir.';
@@ -302203,6 +302271,9 @@ class _StringsVi extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Xóa đăng ký cho ${title}? Các tác vụ đã tải được giữ lại.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Tải xuống và đăng ký';
   @override
@@ -307043,6 +307114,8 @@ class _StringsVi extends _StringsEn {
       'Thư mục này chứa ${n} tệp tập; mỗi tệp được nhập thành một cuốn sách riêng, đặt tên theo tệp.';
   @override
   String get manga_import_detected_confirm => 'Nhập dạng truyện tranh';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" là tệp truyện tranh, nên sẽ được xử lý qua trình nhập truyện tranh thay vì trình nhập sách.';
@@ -323561,6 +323634,8 @@ class _StringsZhCn extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '删除“${title}”的订阅吗？已创建的下载任务会保留。';
   @override
+  String get download_subscription_disabled_enable_first => '订阅已停用，请先启用';
+  @override
   String get download_subscription_download_and_create => '下载并订阅';
   @override
   String get download_subscription_empty_body => '在“发现”中选择一个单集发布，然后使用“下载并订阅”。';
@@ -327968,6 +328043,8 @@ class _StringsZhCn extends _StringsEn {
       '该文件夹里有 ${n} 个整卷文件，将逐卷各导入为一本，书名取各自的文件名。';
   @override
   String get manga_import_detected_confirm => '按漫画导入';
+  @override
+  String get manga_import_detected_import_as_book => '仍按书籍导入';
   @override
   String manga_import_detected_message({required Object name}) =>
       '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
@@ -343626,6 +343703,8 @@ class _StringsZhHk extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '刪除“${title}”的訂閱嗎？已創建的下載任務會保留。';
   @override
+  String get download_subscription_disabled_enable_first => '訂閱已停用，請先啟用';
+  @override
   String get download_subscription_download_and_create => '下載並訂閱';
   @override
   String get download_subscription_empty_body => '在“發現”中選擇一個單集發布，然後使用“下載並訂閱”。';
@@ -348096,6 +348175,8 @@ class _StringsZhHk extends _StringsEn {
       '該資料夾裡有 ${n} 個整卷檔案，將逐卷各導入為一本，書名取各自的檔案名。';
   @override
   String get manga_import_detected_confirm => '按漫畫導入';
+  @override
+  String get manga_import_detected_import_as_book => '仍按書籍導入';
   @override
   String manga_import_detected_message({required Object name}) =>
       '「${name}」是漫畫檔案，將走漫畫導入流程，而不是書籍導入流程。';
@@ -363503,6 +363584,8 @@ extension on _StringsEn {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Download and subscribe';
       case 'download_subscription_empty_body':
@@ -367592,6 +367675,8 @@ extension on _StringsEn {
             'This folder holds ${n} volume files; each is imported as its own book, named after its file.';
       case 'manga_import_detected_confirm':
         return 'Import as manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
@@ -382088,6 +382173,8 @@ extension on _StringsAr {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'حذف اشتراك ${title}؟ مهام التحميل يتم الاحتفاظ بها.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'تحميل واشتراك';
       case 'download_subscription_empty_body':
@@ -386171,6 +386258,8 @@ extension on _StringsAr {
             'يحتوي هذا المجلد على ${n} ملف مجلّد؛ يتم استيراد كل منها ككتاب مستقل باسم ملفه.';
       case 'manga_import_detected_confirm':
         return 'استيراد كمانغا';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" هو ملف مانغا، لذا سيمر عبر مستورد المانغا بدلاً من مستورد الكتب.';
@@ -400695,6 +400784,8 @@ extension on _StringsDe {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Das Abonnement für ${title} löschen? Heruntergeladene Aufgaben bleiben erhalten.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Herunterladen und abonnieren';
       case 'download_subscription_empty_body':
@@ -404792,6 +404883,8 @@ extension on _StringsDe {
             'Dieser Ordner enthält ${n} Banddateien; jede wird als eigenes Buch importiert, benannt nach der Datei.';
       case 'manga_import_detected_confirm':
         return 'Als Manga importieren';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '„${name}" ist eine Manga-Datei und wird daher über den Manga-Importer statt den Buch-Importer importiert.';
@@ -419339,6 +419432,8 @@ extension on _StringsEs {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             '¿Eliminar la suscripción de ${title}? Las tareas descargadas se conservan.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Descargar y suscribirse';
       case 'download_subscription_empty_body':
@@ -423433,6 +423528,8 @@ extension on _StringsEs {
             'Esta carpeta contiene ${n} archivos de volumen; cada uno se importa como su propio libro, nombrado según su archivo.';
       case 'manga_import_detected_confirm':
         return 'Importar como manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" es un archivo de manga, por lo que se procesará con el importador de manga en lugar del importador de libros.';
@@ -437988,6 +438085,8 @@ extension on _StringsFr {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Supprimer l\'abonnement pour ${title} ? Les tâches téléchargées sont conservées.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Télécharger et s\'abonner';
       case 'download_subscription_empty_body':
@@ -442083,6 +442182,8 @@ extension on _StringsFr {
             'Ce dossier contient ${n} fichiers de tomes ; chacun est importé comme son propre livre, nommé d\'après son fichier.';
       case 'manga_import_detected_confirm':
         return 'Importer comme manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '« ${name} » est un fichier manga, il passera donc par l\'importateur de manga au lieu de l\'importateur de livres.';
@@ -456620,6 +456721,8 @@ extension on _StringsId {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Hapus langganan untuk ${title}? Tugas yang sudah diunduh tetap ada.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Unduh dan berlangganan';
       case 'download_subscription_empty_body':
@@ -460709,6 +460812,8 @@ extension on _StringsId {
             'Folder ini berisi ${n} file volume; masing-masing diimpor sebagai buku tersendiri, dinamai sesuai filenya.';
       case 'manga_import_detected_confirm':
         return 'Impor sebagai manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" adalah file manga, jadi akan melalui pengimpor manga alih-alih pengimpor buku.';
@@ -475227,6 +475332,8 @@ extension on _StringsIt {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Eliminare l\'abbonamento per ${title}? I download già effettuati vengono mantenuti.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Scarica e abbonati';
       case 'download_subscription_empty_body':
@@ -479319,6 +479426,8 @@ extension on _StringsIt {
             'Questa cartella contiene ${n} file di volume; ogni volume viene importato come libro a sé, con il nome del file.';
       case 'manga_import_detected_confirm':
         return 'Importa come manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" è un file manga, quindi passerà per l\'importatore manga invece di quello dei libri.';
@@ -493822,6 +493931,8 @@ extension on _StringsJa {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             '「${title}」の購読を削除しますか？ダウンロード済みのタスクは保持されます。';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'ダウンロードして購読';
       case 'download_subscription_empty_body':
@@ -497893,6 +498004,8 @@ extension on _StringsJa {
             'このフォルダには${n}巻のファイルがあります。それぞれがファイル名で独立した本としてインポートされます。';
       case 'manga_import_detected_confirm':
         return 'マンガとしてインポート';
+      case 'manga_import_detected_import_as_book':
+        return '書籍としてインポート';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}"はマンガファイルのため、書籍インポーターの代わりにマンガインポーターで処理されます。';
@@ -512323,6 +512436,8 @@ extension on _StringsKo {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             '${title}에 대한 구독을 삭제하시겠습니까? 다운로드된 작업은 유지됩니다.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return '다운로드 및 구독';
       case 'download_subscription_empty_body':
@@ -516396,6 +516511,8 @@ extension on _StringsKo {
             '이 폴더에 ${n}개의 볼륨 파일이 있습니다. 각각 파일 이름을 따서 별도의 책으로 가져옵니다.';
       case 'manga_import_detected_confirm':
         return '만화로 가져오기';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}"은(는) 만화 파일이므로 책 가져오기 대신 만화 가져오기로 처리됩니다.';
@@ -530874,6 +530991,8 @@ extension on _StringsNl {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Het abonnement voor ${title} verwijderen? Gedownloade taken worden bewaard.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Downloaden en abonneren';
       case 'download_subscription_empty_body':
@@ -534967,6 +535086,8 @@ extension on _StringsNl {
             'Deze map bevat ${n} deelbestanden; elk wordt als eigen boek geïmporteerd, vernoemd naar het bestand.';
       case 'manga_import_detected_confirm':
         return 'Importeren als manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is een mangabestand, dus het wordt via de manga-importeur verwerkt in plaats van de boekimporteur.';
@@ -549502,6 +549623,8 @@ extension on _StringsPtBr {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Excluir a assinatura de ${title}? Tarefas já baixadas são mantidas.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Baixar e assinar';
       case 'download_subscription_empty_body':
@@ -553593,6 +553716,8 @@ extension on _StringsPtBr {
             'Esta pasta contém ${n} arquivos de volume; cada um é importado como seu próprio livro, nomeado pelo arquivo.';
       case 'manga_import_detected_confirm':
         return 'Importar como mangá';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" é um arquivo de mangá, então passará pelo importador de mangá em vez do importador de livros.';
@@ -568129,6 +568254,8 @@ extension on _StringsRu {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Удалить подписку на ${title}? Загруженные задачи сохранятся.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Скачать и подписаться';
       case 'download_subscription_empty_body':
@@ -572221,6 +572348,8 @@ extension on _StringsRu {
             'В этой папке ${n} томов; каждый импортируется как отдельная книга с именем файла.';
       case 'manga_import_detected_confirm':
         return 'Импортировать как мангу';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '«${name}» — файл манги, поэтому он будет обработан импортёром манги, а не импортёром книг.';
@@ -586731,6 +586860,8 @@ extension on _StringsTh {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'ลบการติดตาม ${title}? งานที่ดาวน์โหลดแล้วจะยังคงอยู่';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'ดาวน์โหลดและติดตาม';
       case 'download_subscription_empty_body':
@@ -590821,6 +590952,8 @@ extension on _StringsTh {
             'โฟลเดอร์นี้มีไฟล์เล่ม ${n} ไฟล์ แต่ละไฟล์จะถูกนำเข้าเป็นหนังสือแยกตามชื่อไฟล์';
       case 'manga_import_detected_confirm':
         return 'นำเข้าเป็นมังงะ';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" เป็นไฟล์มังงะ จึงจะผ่านตัวนำเข้ามังงะแทนตัวนำเข้าหนังสือ';
@@ -605330,6 +605463,8 @@ extension on _StringsTr {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             '${title} aboneliği silinsin mi? İndirilen görevler korunur.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'İndir ve abone ol';
       case 'download_subscription_empty_body':
@@ -609423,6 +609558,8 @@ extension on _StringsTr {
             'Bu klasörde ${n} cilt dosyası var; her biri dosya adıyla kendi kitabı olarak içe aktarılır.';
       case 'manga_import_detected_confirm':
         return 'Manga olarak içe aktar';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" bir manga dosyasıdır, bu yüzden kitap içe aktarıcı yerine manga içe aktarıcıdan geçecektir.';
@@ -623935,6 +624072,8 @@ extension on _StringsVi {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Xóa đăng ký cho ${title}? Các tác vụ đã tải được giữ lại.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Tải xuống và đăng ký';
       case 'download_subscription_empty_body':
@@ -628025,6 +628164,8 @@ extension on _StringsVi {
             'Thư mục này chứa ${n} tệp tập; mỗi tệp được nhập thành một cuốn sách riêng, đặt tên theo tệp.';
       case 'manga_import_detected_confirm':
         return 'Nhập dạng truyện tranh';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" là tệp truyện tranh, nên sẽ được xử lý qua trình nhập truyện tranh thay vì trình nhập sách.';
@@ -642457,6 +642598,8 @@ extension on _StringsZhCn {
         return '删除订阅';
       case 'download_subscription_delete_confirm':
         return ({required Object title}) => '删除“${title}”的订阅吗？已创建的下载任务会保留。';
+      case 'download_subscription_disabled_enable_first':
+        return '订阅已停用，请先启用';
       case 'download_subscription_download_and_create':
         return '下载并订阅';
       case 'download_subscription_empty_body':
@@ -646508,6 +646651,8 @@ extension on _StringsZhCn {
             '该文件夹里有 ${n} 个整卷文件，将逐卷各导入为一本，书名取各自的文件名。';
       case 'manga_import_detected_confirm':
         return '按漫画导入';
+      case 'manga_import_detected_import_as_book':
+        return '仍按书籍导入';
       case 'manga_import_detected_message':
         return ({required Object name}) => '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
       case 'manga_import_detected_title':
@@ -660834,6 +660979,8 @@ extension on _StringsZhHk {
         return '刪除訂閱';
       case 'download_subscription_delete_confirm':
         return ({required Object title}) => '刪除“${title}”的訂閱嗎？已創建的下載任務會保留。';
+      case 'download_subscription_disabled_enable_first':
+        return '訂閱已停用，請先啟用';
       case 'download_subscription_download_and_create':
         return '下載並訂閱';
       case 'download_subscription_empty_body':
@@ -664899,6 +665046,8 @@ extension on _StringsZhHk {
             '該資料夾裡有 ${n} 個整卷檔案，將逐卷各導入為一本，書名取各自的檔案名。';
       case 'manga_import_detected_confirm':
         return '按漫畫導入';
+      case 'manga_import_detected_import_as_book':
+        return '仍按書籍導入';
       case 'manga_import_detected_message':
         return ({required Object name}) => '「${name}」是漫畫檔案，將走漫畫導入流程，而不是書籍導入流程。';
       case 'manga_import_detected_title':
