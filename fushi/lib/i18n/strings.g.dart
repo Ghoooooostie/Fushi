@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150399 (8847 per locale)
+/// Strings: 151113 (8889 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -260,6 +260,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_feature_lapis_style => 'Lapis card style';
   String get ai_feature_lapis_style_summary =>
       'Let AI generate Lapis card style rules and CSS from a description';
+  String get ai_feature_library_organize => 'Library organize';
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
   String get ai_feature_manga_ocr => 'OCR correction (vision)';
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
@@ -5945,6 +5948,54 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_empty_go_import => 'Go to import';
   String get library_filter_active => 'Filtered';
   String get library_filters_clear => 'Clear filters';
+  String get library_organize_action => 'AI organize';
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  String get library_organize_cancel => 'Stop';
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String get library_organize_change_undone => 'Undone';
+  String get library_organize_confidence_high => 'High';
+  String get library_organize_confidence_medium => 'Medium';
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  String get library_organize_consent_start => 'Start';
+  String get library_organize_consent_title => 'Send titles to AI?';
+  String get library_organize_domain_books => 'Bookshelf';
+  String get library_organize_domain_games => 'Games';
+  String get library_organize_domain_manga => 'Manga';
+  String get library_organize_domain_video => 'Videos';
+  String get library_organize_done => 'Organized {n} places';
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  String get library_organize_history_title => 'Organize history';
+  String get library_organize_history_undo_run => 'Undo this run';
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  String get library_organize_nothing => 'Nothing to organize';
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  String get library_organize_selection_action => 'AI organize selection';
+  String get library_organize_series_tag_prefix => 'Series: ';
+  String get library_organize_source_rule => 'Rule';
+  String get library_organize_trigger_auto => 'Auto';
+  String get library_organize_trigger_manual => 'Manual';
+  String get library_organize_undo => 'Undo';
+  String get library_organize_view => 'View';
   String get library_progress_reset_action => 'Reset reading status';
   String library_progress_reset_batch_done({required Object n}) =>
       'Reset ${n} item(s).';
@@ -12952,6 +13003,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_lapis_style_summary =>
       'دع الذكاء الاصطناعي ينشئ قواعد نمط بطاقة Lapis وCSS من وصف';
+  @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
   @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
@@ -22484,6 +22540,94 @@ class _StringsAr extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -34409,6 +34553,11 @@ class _StringsDe extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'KI aus einer Beschreibung Lapis-Kartenstilregeln und CSS erzeugen lassen';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -44130,6 +44279,94 @@ class _StringsDe extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -56255,6 +56492,11 @@ class _StringsEs extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Deja que la IA genere reglas de estilo y CSS de las tarjetas Lapis a partir de una descripción';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -65997,6 +66239,94 @@ class _StringsEs extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -78156,6 +78486,11 @@ class _StringsFr extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Laisser l\'IA générer des règles de style et du CSS pour les cartes Lapis à partir d\'une description';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -87935,6 +88270,94 @@ class _StringsFr extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -100139,6 +100562,11 @@ class _StringsId extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Biarkan AI membuat aturan gaya kartu Lapis dan CSS dari deskripsi';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -109756,6 +110184,94 @@ class _StringsId extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -121779,6 +122295,11 @@ class _StringsIt extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Lascia che l\'IA generi regole di stile e CSS della carta Lapis da una descrizione';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -131467,6 +131988,94 @@ class _StringsIt extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -143576,6 +144185,11 @@ class _StringsJa extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       '説明をもとに、Lapis カードのスタイルルールと CSS を AI に生成させます';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => '漫画 OCR（画像認識）';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -152797,6 +153411,94 @@ class _StringsJa extends _StringsEn {
   String get library_filter_active => '絞り込み中';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -164339,6 +165041,11 @@ class _StringsKo extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'AI가 설명을 바탕으로 Lapis 카드 스타일 규칙과 CSS를 생성하게 합니다';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -173567,6 +174274,94 @@ class _StringsKo extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -185172,6 +185967,11 @@ class _StringsNl extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Laat AI Lapis-kaartstijlregels en CSS genereren uit een beschrijving';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -194841,6 +195641,94 @@ class _StringsNl extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -206924,6 +207812,11 @@ class _StringsPtBr extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Deixe a IA gerar regras de estilo e CSS do cartão Lapis a partir de uma descrição';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -216631,6 +217524,94 @@ class _StringsPtBr extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -228741,6 +229722,11 @@ class _StringsRu extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Позволить ИИ создавать правила стиля карточек Lapis и CSS по описанию';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -238408,6 +239394,94 @@ class _StringsRu extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -250504,6 +251578,11 @@ class _StringsTh extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'ให้ AI สร้างกฎสไตล์และ CSS ของการ์ด Lapis จากคำอธิบาย';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -260022,6 +261101,94 @@ class _StringsTh extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -271949,6 +273116,11 @@ class _StringsTr extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Yapay zekanın bir açıklamadan Lapis kart stil kuralları ve CSS oluşturmasına izin verin';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -281576,6 +282748,94 @@ class _StringsTr extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -293594,6 +294854,11 @@ class _StringsVi extends _StringsEn {
   String get ai_feature_lapis_style_summary =>
       'Để AI tạo quy tắc kiểu và CSS cho thẻ Lapis từ một mô tả';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'Manga OCR (vision)';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -303189,6 +304454,94 @@ class _StringsVi extends _StringsEn {
   String get library_filter_active => 'Filtered';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -315154,6 +316507,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_feature_lapis_style_summary => '让 AI 按描述生成 Lapis 卡片样式规则与 CSS';
   @override
+  String get ai_feature_library_organize => 'AI 整理库';
+  @override
+  String get ai_feature_library_organize_summary => '让 AI 把该在一起的书、视频、游戏归进合集';
+  @override
   String get ai_feature_manga_ocr => 'OCR 纠错（视觉识别）';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -323901,6 +325258,90 @@ class _StringsZhCn extends _StringsEn {
   String get library_filter_active => '已筛选';
   @override
   String get library_filters_clear => '清除筛选';
+  @override
+  String get library_organize_action => 'AI 整理';
+  @override
+  String get library_organize_auto_setting => '导入后自动 AI 整理';
+  @override
+  String get library_organize_auto_setting_summary =>
+      '规则归不了组的新条目交给 AI，只落高置信度的建议，每个库每天最多 5 次请求';
+  @override
+  String get library_organize_cancel => '停止';
+  @override
+  String get library_organize_change_add => '{n} 个并入「{name}」';
+  @override
+  String get library_organize_change_create => '新建「{name}」（{n} 个）';
+  @override
+  String get library_organize_change_evict => '从「{name}」移出 {n} 个';
+  @override
+  String get library_organize_change_merge => '合并进「{name}」';
+  @override
+  String get library_organize_change_tag => '给 {n} 个打上「{name}」';
+  @override
+  String get library_organize_change_undone => '已撤销';
+  @override
+  String get library_organize_confidence_high => '高';
+  @override
+  String get library_organize_confidence_medium => '中';
+  @override
+  String get library_organize_consent_body =>
+      'AI 整理会把标题、作者或品牌、年份和视频所在文件夹名发给你选的 AI 提供商，不发完整路径、文件和封面；提供商可能按请求计费。AI 会直接改库，每处改动都能在整理记录里撤销。';
+  @override
+  String get library_organize_consent_start => '开始';
+  @override
+  String get library_organize_consent_title => '把标题发给 AI？';
+  @override
+  String get library_organize_domain_books => '书架';
+  @override
+  String get library_organize_domain_games => '游戏库';
+  @override
+  String get library_organize_domain_manga => '漫画库';
+  @override
+  String get library_organize_domain_video => '媒体库';
+  @override
+  String get library_organize_done => '已整理 {n} 处';
+  @override
+  String get library_organize_failed => 'AI 整理中止：{reason}';
+  @override
+  String get library_organize_history_allow_again => '允许再次建议';
+  @override
+  String get library_organize_history_empty => '还没有整理过';
+  @override
+  String get library_organize_history_rejected_title => '你拒绝过的分组';
+  @override
+  String get library_organize_history_title => '整理记录';
+  @override
+  String get library_organize_history_undo_run => '撤销本次';
+  @override
+  String get library_organize_no_provider =>
+      '请先在「设置 › 模型 › LLM」里给「AI 整理库」指派提供商';
+  @override
+  String get library_organize_nothing => '没有需要整理的';
+  @override
+  String get library_organize_over_budget => '今天的自动整理请求额度已用完，明天继续';
+  @override
+  String get library_organize_owner_setting => '自动整理由这台设备负责';
+  @override
+  String get library_organize_owner_setting_summary =>
+      '其它设备关掉它：它们跳过这台设备也有的条目，结果靠同步拿到';
+  @override
+  String get library_organize_progress => '正在分析… 第 {done}/{total} 批';
+  @override
+  String get library_organize_run_summary => '{library} · {trigger} · {n} 处';
+  @override
+  String get library_organize_selection_action => 'AI 整理所选';
+  @override
+  String get library_organize_series_tag_prefix => '系列：';
+  @override
+  String get library_organize_source_rule => '规则';
+  @override
+  String get library_organize_trigger_auto => '自动';
+  @override
+  String get library_organize_trigger_manual => '手动';
+  @override
+  String get library_organize_undo => '撤销';
+  @override
+  String get library_organize_view => '查看';
   @override
   String get library_progress_reset_action => '重置阅读状态';
   @override
@@ -334851,6 +336292,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_feature_lapis_style_summary => '讓 AI 按描述生成 Lapis 卡片樣式規則與 CSS';
   @override
+  String get ai_feature_library_organize => 'Library organize';
+  @override
+  String get ai_feature_library_organize_summary =>
+      'Let AI put books, videos and games that belong together into collections';
+  @override
   String get ai_feature_manga_ocr => 'OCR 糾錯（視覺識別）';
   @override
   String get ai_feature_manga_ocr_summary =>
@@ -343784,6 +345230,94 @@ class _StringsZhHk extends _StringsEn {
   String get library_filter_active => '已篩選';
   @override
   String get library_filters_clear => 'Clear filters';
+  @override
+  String get library_organize_action => 'AI organize';
+  @override
+  String get library_organize_auto_setting => 'Organize with AI after import';
+  @override
+  String get library_organize_auto_setting_summary =>
+      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+  @override
+  String get library_organize_cancel => 'Stop';
+  @override
+  String get library_organize_change_add => 'Added {n} to “{name}”';
+  @override
+  String get library_organize_change_create => 'Created “{name}” with {n}';
+  @override
+  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  @override
+  String get library_organize_change_merge =>
+      'Merged collections into “{name}”';
+  @override
+  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  @override
+  String get library_organize_change_undone => 'Undone';
+  @override
+  String get library_organize_confidence_high => 'High';
+  @override
+  String get library_organize_confidence_medium => 'Medium';
+  @override
+  String get library_organize_consent_body =>
+      'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+  @override
+  String get library_organize_consent_start => 'Start';
+  @override
+  String get library_organize_consent_title => 'Send titles to AI?';
+  @override
+  String get library_organize_domain_books => 'Bookshelf';
+  @override
+  String get library_organize_domain_games => 'Games';
+  @override
+  String get library_organize_domain_manga => 'Manga';
+  @override
+  String get library_organize_domain_video => 'Videos';
+  @override
+  String get library_organize_done => 'Organized {n} places';
+  @override
+  String get library_organize_failed => 'AI organize stopped: {reason}';
+  @override
+  String get library_organize_history_allow_again => 'Allow suggesting again';
+  @override
+  String get library_organize_history_empty => 'Nothing has been organized yet';
+  @override
+  String get library_organize_history_rejected_title => 'Groups you rejected';
+  @override
+  String get library_organize_history_title => 'Organize history';
+  @override
+  String get library_organize_history_undo_run => 'Undo this run';
+  @override
+  String get library_organize_no_provider =>
+      'Assign an AI provider to Library organize in Settings › Models › LLM first';
+  @override
+  String get library_organize_nothing => 'Nothing to organize';
+  @override
+  String get library_organize_over_budget =>
+      'Today\'s automatic organize requests are used up; it continues tomorrow';
+  @override
+  String get library_organize_owner_setting =>
+      'This device runs automatic organize';
+  @override
+  String get library_organize_owner_setting_summary =>
+      'Turn it off on other devices: they skip items this device also has and get the result by sync';
+  @override
+  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
+  @override
+  String get library_organize_run_summary =>
+      '{library} · {trigger} · {n} changes';
+  @override
+  String get library_organize_selection_action => 'AI organize selection';
+  @override
+  String get library_organize_series_tag_prefix => 'Series: ';
+  @override
+  String get library_organize_source_rule => 'Rule';
+  @override
+  String get library_organize_trigger_auto => 'Auto';
+  @override
+  String get library_organize_trigger_manual => 'Manual';
+  @override
+  String get library_organize_undo => 'Undo';
+  @override
+  String get library_organize_view => 'View';
   @override
   String get library_progress_reset_action => 'Reset reading status';
   @override
@@ -354992,6 +356526,10 @@ extension on _StringsEn {
         return 'Lapis card style';
       case 'ai_feature_lapis_style_summary':
         return 'Let AI generate Lapis card style rules and CSS from a description';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'OCR correction (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -363083,6 +364621,86 @@ extension on _StringsEn {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -373374,6 +374992,10 @@ extension on _StringsAr {
         return 'نمط بطاقة Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'دع الذكاء الاصطناعي ينشئ قواعد نمط بطاقة Lapis وCSS من وصف';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -381460,6 +383082,86 @@ extension on _StringsAr {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -391751,6 +393453,10 @@ extension on _StringsDe {
         return 'Lapis-Kartenstil';
       case 'ai_feature_lapis_style_summary':
         return 'KI aus einer Beschreibung Lapis-Kartenstilregeln und CSS erzeugen lassen';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -399878,6 +401584,86 @@ extension on _StringsDe {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -410203,6 +411989,10 @@ extension on _StringsEs {
         return 'Estilo de tarjeta Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'Deja que la IA genere reglas de estilo y CSS de las tarjetas Lapis a partir de una descripción';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -418317,6 +420107,86 @@ extension on _StringsEs {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -428638,6 +430508,10 @@ extension on _StringsFr {
         return 'Style des cartes Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'Laisser l\'IA générer des règles de style et du CSS pour les cartes Lapis à partir d\'une description';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -436766,6 +438640,86 @@ extension on _StringsFr {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -447088,6 +449042,10 @@ extension on _StringsId {
         return 'Gaya kartu Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'Biarkan AI membuat aturan gaya kartu Lapis dan CSS dari deskripsi';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -455190,6 +457148,86 @@ extension on _StringsId {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -465485,6 +467523,10 @@ extension on _StringsIt {
         return 'Stile della carta Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'Lascia che l\'IA generi regole di stile e CSS della carta Lapis da una descrizione';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -473598,6 +475640,86 @@ extension on _StringsIt {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -483915,6 +486037,10 @@ extension on _StringsJa {
         return 'Lapis カードのスタイル';
       case 'ai_feature_lapis_style_summary':
         return '説明をもとに、Lapis カードのスタイルルールと CSS を AI に生成させます';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return '漫画 OCR（画像認識）';
       case 'ai_feature_manga_ocr_summary':
@@ -491971,6 +494097,86 @@ extension on _StringsJa {
         return '絞り込み中';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -502212,6 +504418,10 @@ extension on _StringsKo {
         return 'Lapis 카드 스타일';
       case 'ai_feature_lapis_style_summary':
         return 'AI가 설명을 바탕으로 Lapis 카드 스타일 규칙과 CSS를 생성하게 합니다';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -510272,6 +512482,86 @@ extension on _StringsKo {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -520526,6 +522816,10 @@ extension on _StringsNl {
         return 'Lapis-kaartstijl';
       case 'ai_feature_lapis_style_summary':
         return 'Laat AI Lapis-kaartstijlregels en CSS genereren uit een beschrijving';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -528639,6 +530933,86 @@ extension on _StringsNl {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -538954,6 +541328,10 @@ extension on _StringsPtBr {
         return 'Estilo do cartão Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'Deixe a IA gerar regras de estilo e CSS do cartão Lapis a partir de uma descrição';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -547063,6 +549441,86 @@ extension on _StringsPtBr {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -557371,6 +559829,10 @@ extension on _StringsRu {
         return 'Стиль карточек Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'Позволить ИИ создавать правила стиля карточек Lapis и CSS по описанию';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -565489,6 +567951,86 @@ extension on _StringsRu {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -575796,6 +578338,10 @@ extension on _StringsTh {
         return 'สไตล์การ์ด Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'ให้ AI สร้างกฎสไตล์และ CSS ของการ์ด Lapis จากคำอธิบาย';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -583888,6 +586434,86 @@ extension on _StringsTh {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -594176,6 +596802,10 @@ extension on _StringsTr {
         return 'Lapis kart stili';
       case 'ai_feature_lapis_style_summary':
         return 'Yapay zekanın bir açıklamadan Lapis kart stil kuralları ve CSS oluşturmasına izin verin';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -602287,6 +604917,86 @@ extension on _StringsTr {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -612586,6 +615296,10 @@ extension on _StringsVi {
         return 'Kiểu thẻ Lapis';
       case 'ai_feature_lapis_style_summary':
         return 'Để AI tạo quy tắc kiểu và CSS cho thẻ Lapis từ một mô tả';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'Manga OCR (vision)';
       case 'ai_feature_manga_ocr_summary':
@@ -620688,6 +623402,86 @@ extension on _StringsVi {
         return 'Filtered';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
@@ -630980,6 +633774,10 @@ extension on _StringsZhCn {
         return 'Lapis 卡片样式';
       case 'ai_feature_lapis_style_summary':
         return '让 AI 按描述生成 Lapis 卡片样式规则与 CSS';
+      case 'ai_feature_library_organize':
+        return 'AI 整理库';
+      case 'ai_feature_library_organize_summary':
+        return '让 AI 把该在一起的书、视频、游戏归进合集';
       case 'ai_feature_manga_ocr':
         return 'OCR 纠错（视觉识别）';
       case 'ai_feature_manga_ocr_summary':
@@ -638970,6 +641768,86 @@ extension on _StringsZhCn {
         return '已筛选';
       case 'library_filters_clear':
         return '清除筛选';
+      case 'library_organize_action':
+        return 'AI 整理';
+      case 'library_organize_auto_setting':
+        return '导入后自动 AI 整理';
+      case 'library_organize_auto_setting_summary':
+        return '规则归不了组的新条目交给 AI，只落高置信度的建议，每个库每天最多 5 次请求';
+      case 'library_organize_cancel':
+        return '停止';
+      case 'library_organize_change_add':
+        return '{n} 个并入「{name}」';
+      case 'library_organize_change_create':
+        return '新建「{name}」（{n} 个）';
+      case 'library_organize_change_evict':
+        return '从「{name}」移出 {n} 个';
+      case 'library_organize_change_merge':
+        return '合并进「{name}」';
+      case 'library_organize_change_tag':
+        return '给 {n} 个打上「{name}」';
+      case 'library_organize_change_undone':
+        return '已撤销';
+      case 'library_organize_confidence_high':
+        return '高';
+      case 'library_organize_confidence_medium':
+        return '中';
+      case 'library_organize_consent_body':
+        return 'AI 整理会把标题、作者或品牌、年份和视频所在文件夹名发给你选的 AI 提供商，不发完整路径、文件和封面；提供商可能按请求计费。AI 会直接改库，每处改动都能在整理记录里撤销。';
+      case 'library_organize_consent_start':
+        return '开始';
+      case 'library_organize_consent_title':
+        return '把标题发给 AI？';
+      case 'library_organize_domain_books':
+        return '书架';
+      case 'library_organize_domain_games':
+        return '游戏库';
+      case 'library_organize_domain_manga':
+        return '漫画库';
+      case 'library_organize_domain_video':
+        return '媒体库';
+      case 'library_organize_done':
+        return '已整理 {n} 处';
+      case 'library_organize_failed':
+        return 'AI 整理中止：{reason}';
+      case 'library_organize_history_allow_again':
+        return '允许再次建议';
+      case 'library_organize_history_empty':
+        return '还没有整理过';
+      case 'library_organize_history_rejected_title':
+        return '你拒绝过的分组';
+      case 'library_organize_history_title':
+        return '整理记录';
+      case 'library_organize_history_undo_run':
+        return '撤销本次';
+      case 'library_organize_no_provider':
+        return '请先在「设置 › 模型 › LLM」里给「AI 整理库」指派提供商';
+      case 'library_organize_nothing':
+        return '没有需要整理的';
+      case 'library_organize_over_budget':
+        return '今天的自动整理请求额度已用完，明天继续';
+      case 'library_organize_owner_setting':
+        return '自动整理由这台设备负责';
+      case 'library_organize_owner_setting_summary':
+        return '其它设备关掉它：它们跳过这台设备也有的条目，结果靠同步拿到';
+      case 'library_organize_progress':
+        return '正在分析… 第 {done}/{total} 批';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} 处';
+      case 'library_organize_selection_action':
+        return 'AI 整理所选';
+      case 'library_organize_series_tag_prefix':
+        return '系列：';
+      case 'library_organize_source_rule':
+        return '规则';
+      case 'library_organize_trigger_auto':
+        return '自动';
+      case 'library_organize_trigger_manual':
+        return '手动';
+      case 'library_organize_undo':
+        return '撤销';
+      case 'library_organize_view':
+        return '查看';
       case 'library_progress_reset_action':
         return '重置阅读状态';
       case 'library_progress_reset_batch_done':
@@ -649141,6 +652019,10 @@ extension on _StringsZhHk {
         return 'Lapis 卡片樣式';
       case 'ai_feature_lapis_style_summary':
         return '讓 AI 按描述生成 Lapis 卡片樣式規則與 CSS';
+      case 'ai_feature_library_organize':
+        return 'Library organize';
+      case 'ai_feature_library_organize_summary':
+        return 'Let AI put books, videos and games that belong together into collections';
       case 'ai_feature_manga_ocr':
         return 'OCR 糾錯（視覺識別）';
       case 'ai_feature_manga_ocr_summary':
@@ -657159,6 +660041,86 @@ extension on _StringsZhHk {
         return '已篩選';
       case 'library_filters_clear':
         return 'Clear filters';
+      case 'library_organize_action':
+        return 'AI organize';
+      case 'library_organize_auto_setting':
+        return 'Organize with AI after import';
+      case 'library_organize_auto_setting_summary':
+        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      case 'library_organize_cancel':
+        return 'Stop';
+      case 'library_organize_change_add':
+        return 'Added {n} to “{name}”';
+      case 'library_organize_change_create':
+        return 'Created “{name}” with {n}';
+      case 'library_organize_change_evict':
+        return 'Removed {n} from “{name}”';
+      case 'library_organize_change_merge':
+        return 'Merged collections into “{name}”';
+      case 'library_organize_change_tag':
+        return 'Tagged {n} with “{name}”';
+      case 'library_organize_change_undone':
+        return 'Undone';
+      case 'library_organize_confidence_high':
+        return 'High';
+      case 'library_organize_confidence_medium':
+        return 'Medium';
+      case 'library_organize_consent_body':
+        return 'AI organize sends titles, authors or brands, years and video folder names to the AI provider you chose. Full paths, files and covers are never sent. The provider may charge for requests. AI changes your library directly; every change can be undone from the organize history.';
+      case 'library_organize_consent_start':
+        return 'Start';
+      case 'library_organize_consent_title':
+        return 'Send titles to AI?';
+      case 'library_organize_domain_books':
+        return 'Bookshelf';
+      case 'library_organize_domain_games':
+        return 'Games';
+      case 'library_organize_domain_manga':
+        return 'Manga';
+      case 'library_organize_domain_video':
+        return 'Videos';
+      case 'library_organize_done':
+        return 'Organized {n} places';
+      case 'library_organize_failed':
+        return 'AI organize stopped: {reason}';
+      case 'library_organize_history_allow_again':
+        return 'Allow suggesting again';
+      case 'library_organize_history_empty':
+        return 'Nothing has been organized yet';
+      case 'library_organize_history_rejected_title':
+        return 'Groups you rejected';
+      case 'library_organize_history_title':
+        return 'Organize history';
+      case 'library_organize_history_undo_run':
+        return 'Undo this run';
+      case 'library_organize_no_provider':
+        return 'Assign an AI provider to Library organize in Settings › Models › LLM first';
+      case 'library_organize_nothing':
+        return 'Nothing to organize';
+      case 'library_organize_over_budget':
+        return 'Today\'s automatic organize requests are used up; it continues tomorrow';
+      case 'library_organize_owner_setting':
+        return 'This device runs automatic organize';
+      case 'library_organize_owner_setting_summary':
+        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
+      case 'library_organize_progress':
+        return 'Analyzing… batch {done}/{total}';
+      case 'library_organize_run_summary':
+        return '{library} · {trigger} · {n} changes';
+      case 'library_organize_selection_action':
+        return 'AI organize selection';
+      case 'library_organize_series_tag_prefix':
+        return 'Series: ';
+      case 'library_organize_source_rule':
+        return 'Rule';
+      case 'library_organize_trigger_auto':
+        return 'Auto';
+      case 'library_organize_trigger_manual':
+        return 'Manual';
+      case 'library_organize_undo':
+        return 'Undo';
+      case 'library_organize_view':
+        return 'View';
       case 'library_progress_reset_action':
         return 'Reset reading status';
       case 'library_progress_reset_batch_done':
