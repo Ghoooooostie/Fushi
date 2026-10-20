@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150756 (8868 per locale)
+/// Strings: 150773 (8869 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6166,6 +6166,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String manga_import_batch_hint({required Object n}) =>
       'This folder holds ${n} volume files; each is imported as its own book, named after its file.';
   String get manga_import_detected_confirm => 'Import as manga';
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   String get manga_import_detected_title => 'This looks like manga';
@@ -22893,6 +22894,8 @@ class _StringsAr extends _StringsEn {
       'يحتوي هذا المجلد على ${n} ملف مجلّد؛ يتم استيراد كل منها ككتاب مستقل باسم ملفه.';
   @override
   String get manga_import_detected_confirm => 'استيراد كمانغا';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" هو ملف مانغا، لذا سيمر عبر مستورد المانغا بدلاً من مستورد الكتب.';
@@ -44596,6 +44599,8 @@ class _StringsDe extends _StringsEn {
       'Dieser Ordner enthält ${n} Banddateien; jede wird als eigenes Buch importiert, benannt nach der Datei.';
   @override
   String get manga_import_detected_confirm => 'Als Manga importieren';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '„${name}" ist eine Manga-Datei und wird daher über den Manga-Importer statt den Buch-Importer importiert.';
@@ -66512,6 +66517,8 @@ class _StringsEs extends _StringsEn {
       'Esta carpeta contiene ${n} archivos de volumen; cada uno se importa como su propio libro, nombrado según su archivo.';
   @override
   String get manga_import_detected_confirm => 'Importar como manga';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" es un archivo de manga, por lo que se procesará con el importador de manga en lugar del importador de libros.';
@@ -88507,6 +88514,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_import_detected_confirm => 'Importer comme manga';
   @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '« ${name} » est un fichier manga, il passera donc par l\'importateur de manga au lieu de l\'importateur de livres.';
   @override
@@ -110371,6 +110380,8 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_import_detected_confirm => 'Impor sebagai manga';
   @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" adalah file manga, jadi akan melalui pengimpor manga alih-alih pengimpor buku.';
   @override
@@ -132135,6 +132146,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_import_detected_confirm => 'Importa come manga';
   @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" è un file manga, quindi passerà per l\'importatore manga invece di quello dei libri.';
   @override
@@ -153499,6 +153512,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_import_detected_confirm => 'マンガとしてインポート';
   @override
+  String get manga_import_detected_import_as_book => '書籍としてインポート';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}"はマンガファイルのため、書籍インポーターの代わりにマンガインポーターで処理されます。';
   @override
@@ -174324,6 +174339,8 @@ class _StringsKo extends _StringsEn {
       '이 폴더에 ${n}개의 볼륨 파일이 있습니다. 각각 파일 이름을 따서 별도의 책으로 가져옵니다.';
   @override
   String get manga_import_detected_confirm => '만화로 가져오기';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}"은(는) 만화 파일이므로 책 가져오기 대신 만화 가져오기로 처리됩니다.';
@@ -195660,6 +195677,8 @@ class _StringsNl extends _StringsEn {
       'Deze map bevat ${n} deelbestanden; elk wordt als eigen boek geïmporteerd, vernoemd naar het bestand.';
   @override
   String get manga_import_detected_confirm => 'Importeren als manga';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is een mangabestand, dus het wordt via de manga-importeur verwerkt in plaats van de boekimporteur.';
@@ -217502,6 +217521,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_import_detected_confirm => 'Importar como mangá';
   @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" é um arquivo de mangá, então passará pelo importador de mangá em vez do importador de livros.';
   @override
@@ -239328,6 +239349,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_import_detected_confirm => 'Импортировать как мангу';
   @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '«${name}» — файл манги, поэтому он будет обработан импортёром манги, а не импортёром книг.';
   @override
@@ -260989,6 +261012,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_import_detected_confirm => 'นำเข้าเป็นมังงะ';
   @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" เป็นไฟล์มังงะ จึงจะผ่านตัวนำเข้ามังงะแทนตัวนำเข้าหนังสือ';
   @override
@@ -282596,6 +282621,8 @@ class _StringsTr extends _StringsEn {
       'Bu klasörde ${n} cilt dosyası var; her biri dosya adıyla kendi kitabı olarak içe aktarılır.';
   @override
   String get manga_import_detected_confirm => 'Manga olarak içe aktar';
+  @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" bir manga dosyasıdır, bu yüzden kitap içe aktarıcı yerine manga içe aktarıcıdan geçecektir.';
@@ -304261,6 +304288,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_import_detected_confirm => 'Nhập dạng truyện tranh';
   @override
+  String get manga_import_detected_import_as_book => 'Import as book anyway';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" là tệp truyện tranh, nên sẽ được xử lý qua trình nhập truyện tranh thay vì trình nhập sách.';
   @override
@@ -324994,6 +325023,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_import_detected_confirm => '按漫画导入';
   @override
+  String get manga_import_detected_import_as_book => '仍按书籍导入';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
   @override
@@ -344930,6 +344961,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_import_detected_confirm => '按漫畫導入';
   @override
+  String get manga_import_detected_import_as_book => '仍按書籍導入';
+  @override
   String manga_import_detected_message({required Object name}) =>
       '「${name}」是漫畫檔案，將走漫畫導入流程，而不是書籍導入流程。';
   @override
@@ -364248,6 +364281,8 @@ extension on _StringsEn {
             'This folder holds ${n} volume files; each is imported as its own book, named after its file.';
       case 'manga_import_detected_confirm':
         return 'Import as manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
@@ -382667,6 +382702,8 @@ extension on _StringsAr {
             'يحتوي هذا المجلد على ${n} ملف مجلّد؛ يتم استيراد كل منها ككتاب مستقل باسم ملفه.';
       case 'manga_import_detected_confirm':
         return 'استيراد كمانغا';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" هو ملف مانغا، لذا سيمر عبر مستورد المانغا بدلاً من مستورد الكتب.';
@@ -401128,6 +401165,8 @@ extension on _StringsDe {
             'Dieser Ordner enthält ${n} Banddateien; jede wird als eigenes Buch importiert, benannt nach der Datei.';
       case 'manga_import_detected_confirm':
         return 'Als Manga importieren';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '„${name}" ist eine Manga-Datei und wird daher über den Manga-Importer statt den Buch-Importer importiert.';
@@ -419609,6 +419648,8 @@ extension on _StringsEs {
             'Esta carpeta contiene ${n} archivos de volumen; cada uno se importa como su propio libro, nombrado según su archivo.';
       case 'manga_import_detected_confirm':
         return 'Importar como manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" es un archivo de manga, por lo que se procesará con el importador de manga en lugar del importador de libros.';
@@ -438099,6 +438140,8 @@ extension on _StringsFr {
             'Ce dossier contient ${n} fichiers de tomes ; chacun est importé comme son propre livre, nommé d\'après son fichier.';
       case 'manga_import_detected_confirm':
         return 'Importer comme manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '« ${name} » est un fichier manga, il passera donc par l\'importateur de manga au lieu de l\'importateur de livres.';
@@ -456565,6 +456608,8 @@ extension on _StringsId {
             'Folder ini berisi ${n} file volume; masing-masing diimpor sebagai buku tersendiri, dinamai sesuai filenya.';
       case 'manga_import_detected_confirm':
         return 'Impor sebagai manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" adalah file manga, jadi akan melalui pengimpor manga alih-alih pengimpor buku.';
@@ -475015,6 +475060,8 @@ extension on _StringsIt {
             'Questa cartella contiene ${n} file di volume; ogni volume viene importato come libro a sé, con il nome del file.';
       case 'manga_import_detected_confirm':
         return 'Importa come manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" è un file manga, quindi passerà per l\'importatore manga invece di quello dei libri.';
@@ -493429,6 +493476,8 @@ extension on _StringsJa {
             'このフォルダには${n}巻のファイルがあります。それぞれがファイル名で独立した本としてインポートされます。';
       case 'manga_import_detected_confirm':
         return 'マンガとしてインポート';
+      case 'manga_import_detected_import_as_book':
+        return '書籍としてインポート';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}"はマンガファイルのため、書籍インポーターの代わりにマンガインポーターで処理されます。';
@@ -511772,6 +511821,8 @@ extension on _StringsKo {
             '이 폴더에 ${n}개의 볼륨 파일이 있습니다. 각각 파일 이름을 따서 별도의 책으로 가져옵니다.';
       case 'manga_import_detected_confirm':
         return '만화로 가져오기';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}"은(는) 만화 파일이므로 책 가져오기 대신 만화 가져오기로 처리됩니다.';
@@ -530183,6 +530234,8 @@ extension on _StringsNl {
             'Deze map bevat ${n} deelbestanden; elk wordt als eigen boek geïmporteerd, vernoemd naar het bestand.';
       case 'manga_import_detected_confirm':
         return 'Importeren als manga';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is een mangabestand, dus het wordt via de manga-importeur verwerkt in plaats van de boekimporteur.';
@@ -548649,6 +548702,8 @@ extension on _StringsPtBr {
             'Esta pasta contém ${n} arquivos de volume; cada um é importado como seu próprio livro, nomeado pelo arquivo.';
       case 'manga_import_detected_confirm':
         return 'Importar como mangá';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" é um arquivo de mangá, então passará pelo importador de mangá em vez do importador de livros.';
@@ -567117,6 +567172,8 @@ extension on _StringsRu {
             'В этой папке ${n} томов; каждый импортируется как отдельная книга с именем файла.';
       case 'manga_import_detected_confirm':
         return 'Импортировать как мангу';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '«${name}» — файл манги, поэтому он будет обработан импортёром манги, а не импортёром книг.';
@@ -585557,6 +585614,8 @@ extension on _StringsTh {
             'โฟลเดอร์นี้มีไฟล์เล่ม ${n} ไฟล์ แต่ละไฟล์จะถูกนำเข้าเป็นหนังสือแยกตามชื่อไฟล์';
       case 'manga_import_detected_confirm':
         return 'นำเข้าเป็นมังงะ';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" เป็นไฟล์มังงะ จึงจะผ่านตัวนำเข้ามังงะแทนตัวนำเข้าหนังสือ';
@@ -603999,6 +604058,8 @@ extension on _StringsTr {
             'Bu klasörde ${n} cilt dosyası var; her biri dosya adıyla kendi kitabı olarak içe aktarılır.';
       case 'manga_import_detected_confirm':
         return 'Manga olarak içe aktar';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" bir manga dosyasıdır, bu yüzden kitap içe aktarıcı yerine manga içe aktarıcıdan geçecektir.';
@@ -622441,6 +622502,8 @@ extension on _StringsVi {
             'Thư mục này chứa ${n} tệp tập; mỗi tệp được nhập thành một cuốn sách riêng, đặt tên theo tệp.';
       case 'manga_import_detected_confirm':
         return 'Nhập dạng truyện tranh';
+      case 'manga_import_detected_import_as_book':
+        return 'Import as book anyway';
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" là tệp truyện tranh, nên sẽ được xử lý qua trình nhập truyện tranh thay vì trình nhập sách.';
@@ -640764,6 +640827,8 @@ extension on _StringsZhCn {
             '该文件夹里有 ${n} 个整卷文件，将逐卷各导入为一本，书名取各自的文件名。';
       case 'manga_import_detected_confirm':
         return '按漫画导入';
+      case 'manga_import_detected_import_as_book':
+        return '仍按书籍导入';
       case 'manga_import_detected_message':
         return ({required Object name}) => '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
       case 'manga_import_detected_title':
@@ -658995,6 +659060,8 @@ extension on _StringsZhHk {
             '該資料夾裡有 ${n} 個整卷檔案，將逐卷各導入為一本，書名取各自的檔案名。';
       case 'manga_import_detected_confirm':
         return '按漫畫導入';
+      case 'manga_import_detected_import_as_book':
+        return '仍按書籍導入';
       case 'manga_import_detected_message':
         return ({required Object name}) => '「${name}」是漫畫檔案，將走漫畫導入流程，而不是書籍導入流程。';
       case 'manga_import_detected_title':
