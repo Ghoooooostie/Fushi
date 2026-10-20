@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150059 (8827 per locale)
+/// Strings: 150399 (8847 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2039,7 +2039,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_progress_desc => 'Reading positions and bookmarks';
   String get backup_category_settings => 'Settings';
   String get backup_category_settings_desc => 'App and reader settings';
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   String get backup_category_statistics => 'Statistics';
@@ -2391,12 +2391,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
   String get card_target_anki_title => 'Send to Anki';
   String get card_target_current => 'Current';
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   String get change_source => 'Change source';
   String get changelog_empty =>
       'No changelog found. Check your network or proxy settings.';
@@ -5299,7 +5299,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_mode_shown => 'Show';
   String get home_panel_srs_hint =>
-      'Auto shows it once you mine to Fushi review or have review cards';
+      'Auto shows it once you mine to Fushi SRS or have review cards';
   String get home_recently_added => 'Recently added';
   String get home_remote_source => 'Remote';
   String home_session_count({required Object n}) => '${n} sessions';
@@ -7093,7 +7093,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get nav_game => 'Game';
   String get nav_home => 'Home';
   String get nav_lookup => 'Lookup';
-  String get nav_srs => 'Review';
+  String get nav_srs => 'SRS';
   String get nav_video => 'Video';
   String get nav_web => 'Browser';
   String get network_proxy_address_hint =>
@@ -7360,12 +7360,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_finish_body =>
       'You can reopen this guide anytime from Settings → System.';
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   String get onboarding_finish_next_title => 'Next steps';
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   String get onboarding_finish_summary_modules => 'Library pages shown';
   String get onboarding_finish_summary_none => 'None';
   String get onboarding_finish_summary_setup => 'Guided setup';
@@ -7523,7 +7523,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
   String get onboarding_review_method_title => 'How you review';
@@ -7547,7 +7547,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_srs_sync_desc =>
       'Your decks and review progress follow you to your other devices.';
   String get onboarding_srs_sync_title => 'Syncs across devices';
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   String get onboarding_step_anki_action => 'Card creation settings';
   String get onboarding_step_anki_action_desc =>
       'Template, field mapping, screenshots and audio. Deck and note type above are enough to start.';
@@ -8733,6 +8733,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_anki_migrate_found => 'Anki collections on this device';
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   String get srs_anki_migrate_ios_hint =>
@@ -8761,12 +8763,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   String get srs_backup_auto => 'Automatic backups';
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   String get srs_backup_change_location => 'Change storage location';
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   String get srs_backup_corrupt => 'This backup file is damaged';
   String get srs_backup_delete => 'Delete backup';
   String srs_backup_delete_confirm({required Object time}) =>
@@ -8779,7 +8783,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_backup_failed => 'Backup failed';
   String get srs_backup_interval => 'Minimum interval';
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   String get srs_backup_keep_daily => 'Daily backups to keep';
   String get srs_backup_keep_hint =>
       'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
@@ -9002,9 +9006,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_count_learn => 'Learning';
   String get srs_count_new => 'New';
   String get srs_count_review => 'Due';
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   String get srs_deck_collapse => 'Collapse subdecks';
   String get srs_deck_delete => 'Delete deck';
   String srs_deck_delete_confirm({required Object name}) =>
@@ -9012,6 +9014,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_deck_deleting => 'Deleting…';
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_menu => 'More actions';
+  String get srs_deck_move => 'Move to…';
+  String get srs_deck_move_down => 'Move down';
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  String get srs_deck_move_top_level => 'Top level';
+  String get srs_deck_move_up => 'Move up';
   String get srs_deck_name => 'Deck name';
   String get srs_deck_name_invalid => 'A deck name cannot contain ::';
   String get srs_deck_new => 'New deck';
@@ -9152,6 +9164,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object n,
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
   String get srs_import => 'Import';
   String get srs_import_background_started =>
       'Importing in the background. You can keep using Fushi.';
@@ -9159,6 +9173,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   String get srs_import_merge_notetypes => 'Merge note types';
   String get srs_import_merge_notetypes_help =>
       'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
@@ -9171,7 +9188,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_report_conflicts({required Object n}) =>
       '${n} notes were not imported because their note type conflicts';
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
   String srs_import_report_invalid_params({required Object preset}) =>
@@ -9269,12 +9286,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object n,
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   String srs_lapis_migration_fallback({required Object n}) =>
       '${n} notes fill an empty field from another field with the same meaning';
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   String get srs_lapis_migration_kind_fields => 'Recognized by fields';
   String get srs_lapis_migration_kind_named => 'Recognized by name';
@@ -9285,6 +9305,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_lapis_migration_notes({required Object n}) => '${n} notes';
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   String get srs_list_separator => ', ';
   String srs_media_missing({required Object name}) =>
@@ -9307,7 +9331,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
   String get srs_mining_target_anki => 'Anki';
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   String get srs_mining_target_title => 'Mining target';
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -9635,7 +9659,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_stats_tomorrow => 'Tomorrow';
   String get srs_stats_total => 'Total';
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   String get srs_stats_view_count => 'Count';
   String get srs_stats_view_cumulative => 'Cumulative';
   String get srs_stats_view_daily => 'Daily';
@@ -9643,18 +9667,26 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_status_due => 'Due today';
   String get srs_status_learning => 'Learning';
   String get srs_status_new => 'New card';
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   String get srs_status_suspended => 'Suspended';
   String get srs_sync_backend_unsupported =>
       'The current sync service doesn\'t support syncing review data';
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
   String get srs_sync_done => 'Review data synced';
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   String get srs_sync_no_backend => 'No sync service is set up';
   String get srs_sync_now => 'Sync now';
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   String get srs_value_no => 'No';
   String get srs_value_yes => 'Yes';
   String get srs_visual_add_field => 'Add field';
@@ -15829,7 +15861,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'إعدادات التطبيق والقارئ';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -16412,15 +16444,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'تغيير المصدر';
   @override
@@ -21389,7 +21421,7 @@ class _StringsAr extends _StringsEn {
   String get home_panel_mode_shown => 'إظهار';
   @override
   String get home_panel_srs_hint =>
-      'يظهر تلقائيًا عند الإرسال إلى مراجعة Fushi أو وجود بطاقات مراجعة';
+      'يظهر تلقائيًا عند الإرسال إلى Fushi SRS أو وجود بطاقات مراجعة';
   @override
   String get home_recently_added => 'أُضيفت مؤخرًا';
   @override
@@ -24427,7 +24459,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get nav_lookup => 'بحث';
   @override
-  String get nav_srs => 'المراجعة';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'فيديو';
   @override
@@ -24870,16 +24902,16 @@ class _StringsAr extends _StringsEn {
       'يمكنك فتح هذا الدليل مجدداً في أي وقت من الإعدادات → النظام.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules => 'صفحات المكتبة المعروضة';
   @override
@@ -25132,7 +25164,7 @@ class _StringsAr extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -25172,7 +25204,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'إعدادات إنشاء البطاقات';
   @override
@@ -27274,6 +27306,9 @@ class _StringsAr extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -27318,9 +27353,9 @@ class _StringsAr extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -27328,6 +27363,9 @@ class _StringsAr extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -27351,7 +27389,7 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -27753,10 +27791,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -27770,6 +27805,23 @@ class _StringsAr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -28007,6 +28059,9 @@ class _StringsAr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -28017,6 +28072,11 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -28038,7 +28098,7 @@ class _StringsAr extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -28194,6 +28254,9 @@ class _StringsAr extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -28202,6 +28265,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -28220,6 +28285,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -28259,7 +28331,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -28838,7 +28910,7 @@ class _StringsAr extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -28854,10 +28926,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -28869,11 +28941,23 @@ class _StringsAr extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -37272,7 +37356,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'App- und Reader-Einstellungen';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -37869,15 +37953,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Quelle ändern';
   @override
@@ -42960,7 +43044,7 @@ class _StringsDe extends _StringsEn {
   String get home_panel_mode_shown => 'Anzeigen';
   @override
   String get home_panel_srs_hint =>
-      'Automatisch sichtbar, sobald du in die Fushi-Wiederholung minst oder Karten hast';
+      'Automatisch sichtbar, sobald du in Fushi SRS minst oder Karten hast';
   @override
   String get home_recently_added => 'Kürzlich hinzugefügt';
   @override
@@ -46067,7 +46151,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get nav_lookup => 'Nachschlagen';
   @override
-  String get nav_srs => 'Wiederholen';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Video';
   @override
@@ -46516,16 +46600,16 @@ class _StringsDe extends _StringsEn {
       'Sie können diese Anleitung jederzeit unter Einstellungen → System wieder öffnen.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Angezeigte Bibliotheksseiten';
@@ -46788,7 +46872,7 @@ class _StringsDe extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -46828,7 +46912,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Kartenerstell-Einstellungen';
   @override
@@ -48973,6 +49057,9 @@ class _StringsDe extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -49017,9 +49104,9 @@ class _StringsDe extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -49027,6 +49114,9 @@ class _StringsDe extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -49050,7 +49140,7 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -49452,10 +49542,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -49469,6 +49556,23 @@ class _StringsDe extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -49706,6 +49810,9 @@ class _StringsDe extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -49716,6 +49823,11 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -49737,7 +49849,7 @@ class _StringsDe extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -49893,6 +50005,9 @@ class _StringsDe extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -49901,6 +50016,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -49919,6 +50036,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -49958,7 +50082,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -50537,7 +50661,7 @@ class _StringsDe extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -50553,10 +50677,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -50568,11 +50692,23 @@ class _StringsDe extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -59079,7 +59215,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Ajustes de la app y del lector';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -59672,15 +59808,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Cambiar fuente';
   @override
@@ -64769,7 +64905,7 @@ class _StringsEs extends _StringsEn {
   String get home_panel_mode_shown => 'Mostrar';
   @override
   String get home_panel_srs_hint =>
-      'Se muestra al minar a Repaso de Fushi o si ya tienes tarjetas';
+      'Se muestra al minar a Fushi SRS o si ya tienes tarjetas';
   @override
   String get home_recently_added => 'Añadido recientemente';
   @override
@@ -67885,7 +68021,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get nav_lookup => 'Consultar';
   @override
-  String get nav_srs => 'Repaso';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Vídeo';
   @override
@@ -68333,16 +68469,16 @@ class _StringsEs extends _StringsEn {
       'Puede volver a abrir esta guía en cualquier momento desde Ajustes → Sistema.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Páginas de biblioteca visibles';
@@ -68606,7 +68742,7 @@ class _StringsEs extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -68646,7 +68782,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Ajustes de creación de tarjetas';
   @override
@@ -70797,6 +70933,9 @@ class _StringsEs extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -70841,9 +70980,9 @@ class _StringsEs extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -70851,6 +70990,9 @@ class _StringsEs extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -70874,7 +71016,7 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -71276,10 +71418,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -71293,6 +71432,23 @@ class _StringsEs extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -71530,6 +71686,9 @@ class _StringsEs extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -71540,6 +71699,11 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -71561,7 +71725,7 @@ class _StringsEs extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -71717,6 +71881,9 @@ class _StringsEs extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -71725,6 +71892,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -71743,6 +71912,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -71782,7 +71958,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -72361,7 +72537,7 @@ class _StringsEs extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -72377,10 +72553,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -72392,11 +72568,23 @@ class _StringsEs extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -80942,7 +81130,7 @@ class _StringsFr extends _StringsEn {
   String get backup_category_settings_desc =>
       'Paramètres de l\'application et du lecteur';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -81539,15 +81727,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Changer de source';
   @override
@@ -86652,7 +86840,7 @@ class _StringsFr extends _StringsEn {
   String get home_panel_mode_shown => 'Afficher';
   @override
   String get home_panel_srs_hint =>
-      'Affiché dès que vous minez vers Révision Fushi ou avez des cartes';
+      'Affiché dès que vous minez vers Fushi SRS ou avez des cartes';
   @override
   String get home_recently_added => 'Ajoutés récemment';
   @override
@@ -89780,7 +89968,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get nav_lookup => 'Recherche';
   @override
-  String get nav_srs => 'Révision';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Vidéo';
   @override
@@ -90232,16 +90420,16 @@ class _StringsFr extends _StringsEn {
       'Vous pouvez rouvrir ce guide à tout moment depuis Paramètres → Système.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Pages de bibliothèque affichées';
@@ -90508,7 +90696,7 @@ class _StringsFr extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -90548,7 +90736,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Paramètres de création de cartes';
   @override
@@ -92708,6 +92896,9 @@ class _StringsFr extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -92752,9 +92943,9 @@ class _StringsFr extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -92762,6 +92953,9 @@ class _StringsFr extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -92785,7 +92979,7 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -93187,10 +93381,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -93204,6 +93395,23 @@ class _StringsFr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -93441,6 +93649,9 @@ class _StringsFr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -93451,6 +93662,11 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -93472,7 +93688,7 @@ class _StringsFr extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -93628,6 +93844,9 @@ class _StringsFr extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -93636,6 +93855,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -93654,6 +93875,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -93693,7 +93921,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -94272,7 +94500,7 @@ class _StringsFr extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -94288,10 +94516,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -94303,11 +94531,23 @@ class _StringsFr extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -102828,7 +103068,7 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Pengaturan aplikasi dan pembaca';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -103414,15 +103654,15 @@ class _StringsId extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Ubah Sumber';
   @override
@@ -108441,7 +108681,7 @@ class _StringsId extends _StringsEn {
   String get home_panel_mode_shown => 'Tampilkan';
   @override
   String get home_panel_srs_hint =>
-      'Otomatis tampil saat menambang ke Ulasan Fushi atau sudah ada kartu';
+      'Otomatis tampil saat menambang ke Fushi SRS atau sudah ada kartu';
   @override
   String get home_recently_added => 'Baru ditambahkan';
   @override
@@ -111512,7 +111752,7 @@ class _StringsId extends _StringsEn {
   @override
   String get nav_lookup => 'Cari Kata';
   @override
-  String get nav_srs => 'Ulasan';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Video';
   @override
@@ -111959,16 +112199,16 @@ class _StringsId extends _StringsEn {
       'Anda bisa membuka lagi panduan ini kapan saja dari Pengaturan → Sistem.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Halaman perpustakaan yang ditampilkan';
@@ -112223,7 +112463,7 @@ class _StringsId extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -112263,7 +112503,7 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Pengaturan pembuatan kartu';
   @override
@@ -114383,6 +114623,9 @@ class _StringsId extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -114427,9 +114670,9 @@ class _StringsId extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -114437,6 +114680,9 @@ class _StringsId extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -114460,7 +114706,7 @@ class _StringsId extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -114862,10 +115108,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -114879,6 +115122,23 @@ class _StringsId extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -115116,6 +115376,9 @@ class _StringsId extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -115126,6 +115389,11 @@ class _StringsId extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -115147,7 +115415,7 @@ class _StringsId extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -115303,6 +115571,9 @@ class _StringsId extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -115311,6 +115582,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -115329,6 +115602,13 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -115368,7 +115648,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -115947,7 +116227,7 @@ class _StringsId extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -115963,10 +116243,10 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -115978,11 +116258,23 @@ class _StringsId extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -124435,7 +124727,7 @@ class _StringsIt extends _StringsEn {
   String get backup_category_settings_desc =>
       'Impostazioni dell\'app e del lettore';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -125025,15 +125317,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Cambia sorgente';
   @override
@@ -130094,7 +130386,7 @@ class _StringsIt extends _StringsEn {
   String get home_panel_mode_shown => 'Mostra';
   @override
   String get home_panel_srs_hint =>
-      'Appare quando invii le carte al Ripasso Fushi o hai già carte';
+      'Appare quando invii le carte a Fushi SRS o hai già carte';
   @override
   String get home_recently_added => 'Aggiunti di recente';
   @override
@@ -133198,7 +133490,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get nav_lookup => 'Ricerca';
   @override
-  String get nav_srs => 'Ripasso';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Video';
   @override
@@ -133645,16 +133937,16 @@ class _StringsIt extends _StringsEn {
       'Puoi riaprire questa guida in qualsiasi momento da Impostazioni → Sistema.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Pagine della libreria mostrate';
@@ -133914,7 +134206,7 @@ class _StringsIt extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -133954,7 +134246,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Impostazioni creazione carte';
   @override
@@ -136102,6 +136394,9 @@ class _StringsIt extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -136146,9 +136441,9 @@ class _StringsIt extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -136156,6 +136451,9 @@ class _StringsIt extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -136179,7 +136477,7 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -136581,10 +136879,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -136598,6 +136893,23 @@ class _StringsIt extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -136835,6 +137147,9 @@ class _StringsIt extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -136845,6 +137160,11 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -136866,7 +137186,7 @@ class _StringsIt extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -137022,6 +137342,9 @@ class _StringsIt extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -137030,6 +137353,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -137048,6 +137373,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -137087,7 +137419,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -137666,7 +137998,7 @@ class _StringsIt extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -137682,10 +138014,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -137697,11 +138029,23 @@ class _StringsIt extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -146071,7 +146415,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'アプリとリーダーの設定';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -146630,15 +146974,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'ソースを変更';
   @override
@@ -151433,7 +151777,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_panel_mode_shown => '表示';
   @override
-  String get home_panel_srs_hint => '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
+  String get home_panel_srs_hint => '自動：Fushi SRS にカードを作成するか、復習カードがあると表示';
   @override
   String get home_recently_added => '最近追加';
   @override
@@ -154364,7 +154708,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get nav_lookup => '辞書';
   @override
-  String get nav_srs => '復習';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => '動画';
   @override
@@ -154789,16 +155133,16 @@ class _StringsJa extends _StringsEn {
   String get onboarding_finish_body => 'このガイドは設定 → システムからいつでも開き直せます。';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules => '表示するライブラリのページ';
   @override
@@ -155038,7 +155382,7 @@ class _StringsJa extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -155078,7 +155422,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'カード作成設定';
   @override
@@ -157113,6 +157457,9 @@ class _StringsJa extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -157157,9 +157504,9 @@ class _StringsJa extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -157167,6 +157514,9 @@ class _StringsJa extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -157190,7 +157540,7 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -157592,10 +157942,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -157609,6 +157956,23 @@ class _StringsJa extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -157846,6 +158210,9 @@ class _StringsJa extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -157856,6 +158223,11 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -157877,7 +158249,7 @@ class _StringsJa extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -158033,6 +158405,9 @@ class _StringsJa extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -158041,6 +158416,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -158059,6 +158436,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -158098,7 +158482,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -158677,7 +159061,7 @@ class _StringsJa extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -158693,10 +159077,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -158708,11 +159092,23 @@ class _StringsJa extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -166776,7 +167172,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_settings_desc => '앱 및 리더 설정';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -167337,15 +167733,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => '소스 변경';
   @override
@@ -172151,7 +172547,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_panel_mode_shown => '표시';
   @override
-  String get home_panel_srs_hint => '자동: Fushi 복습으로 카드를 만들거나 복습 카드가 있으면 표시';
+  String get home_panel_srs_hint => '자동: Fushi SRS로 카드를 만들거나 복습 카드가 있으면 표시';
   @override
   String get home_recently_added => '최근 추가';
   @override
@@ -175094,7 +175490,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get nav_lookup => '단어 찾기';
   @override
-  String get nav_srs => '복습';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => '비디오';
   @override
@@ -175525,16 +175921,16 @@ class _StringsKo extends _StringsEn {
   String get onboarding_finish_body => '설정 → 시스템에서 이 가이드를 언제든 다시 열 수 있습니다.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules => '표시할 라이브러리 페이지';
   @override
@@ -175774,7 +176170,7 @@ class _StringsKo extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -175814,7 +176210,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => '카드 생성 설정';
   @override
@@ -177849,6 +178245,9 @@ class _StringsKo extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -177893,9 +178292,9 @@ class _StringsKo extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -177903,6 +178302,9 @@ class _StringsKo extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -177926,7 +178328,7 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -178328,10 +178730,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -178345,6 +178744,23 @@ class _StringsKo extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -178582,6 +178998,9 @@ class _StringsKo extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -178592,6 +179011,11 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -178613,7 +179037,7 @@ class _StringsKo extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -178769,6 +179193,9 @@ class _StringsKo extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -178777,6 +179204,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -178795,6 +179224,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -178834,7 +179270,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -179413,7 +179849,7 @@ class _StringsKo extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -179429,10 +179865,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -179444,11 +179880,23 @@ class _StringsKo extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -187667,7 +188115,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'App- en lezerinstellingen';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -188259,15 +188707,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Bron wijzigen';
   @override
@@ -193309,7 +193757,7 @@ class _StringsNl extends _StringsEn {
   String get home_panel_mode_shown => 'Tonen';
   @override
   String get home_panel_srs_hint =>
-      'Automatisch zichtbaar zodra je naar Fushi-herhaling minet of kaarten hebt';
+      'Automatisch zichtbaar zodra je naar Fushi SRS minet of kaarten hebt';
   @override
   String get home_recently_added => 'Recent toegevoegd';
   @override
@@ -196397,7 +196845,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get nav_lookup => 'Opzoeken';
   @override
-  String get nav_srs => 'Herhalen';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Video';
   @override
@@ -196845,16 +197293,16 @@ class _StringsNl extends _StringsEn {
       'Je kunt deze gids altijd opnieuw openen via Instellingen → Systeem.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Getoonde bibliotheekpagina\'s';
@@ -197116,7 +197564,7 @@ class _StringsNl extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -197156,7 +197604,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Kaartaanmaak-instellingen';
   @override
@@ -199294,6 +199742,9 @@ class _StringsNl extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -199338,9 +199789,9 @@ class _StringsNl extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -199348,6 +199799,9 @@ class _StringsNl extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -199371,7 +199825,7 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -199773,10 +200227,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -199790,6 +200241,23 @@ class _StringsNl extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -200027,6 +200495,9 @@ class _StringsNl extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -200037,6 +200508,11 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -200058,7 +200534,7 @@ class _StringsNl extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -200214,6 +200690,9 @@ class _StringsNl extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -200222,6 +200701,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -200240,6 +200721,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -200279,7 +200767,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -200858,7 +201346,7 @@ class _StringsNl extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -200874,10 +201362,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -200889,11 +201377,23 @@ class _StringsNl extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -209379,7 +209879,7 @@ class _StringsPtBr extends _StringsEn {
   String get backup_category_settings_desc =>
       'Configurações do app e do leitor';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -209970,15 +210470,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Alterar Fonte';
   @override
@@ -215045,7 +215545,7 @@ class _StringsPtBr extends _StringsEn {
   String get home_panel_mode_shown => 'Mostrar';
   @override
   String get home_panel_srs_hint =>
-      'Aparece ao minerar para a Revisão Fushi ou se já houver cartões';
+      'Aparece ao minerar para o Fushi SRS ou se já houver cartões';
   @override
   String get home_recently_added => 'Adicionados recentemente';
   @override
@@ -218144,7 +218644,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get nav_lookup => 'Consultar';
   @override
-  String get nav_srs => 'Revisão';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Vídeo';
   @override
@@ -218593,16 +219093,16 @@ class _StringsPtBr extends _StringsEn {
       'Você pode reabrir este guia a qualquer momento em Configurações → Sistema.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Páginas de biblioteca exibidas';
@@ -218860,7 +219360,7 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -218900,7 +219400,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action =>
       'Configurações de criação de cartões';
@@ -221042,6 +221542,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -221086,9 +221589,9 @@ class _StringsPtBr extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -221096,6 +221599,9 @@ class _StringsPtBr extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -221119,7 +221625,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -221521,10 +222027,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -221538,6 +222041,23 @@ class _StringsPtBr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -221775,6 +222295,9 @@ class _StringsPtBr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -221785,6 +222308,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -221806,7 +222334,7 @@ class _StringsPtBr extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -221962,6 +222490,9 @@ class _StringsPtBr extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -221970,6 +222501,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -221988,6 +222521,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -222027,7 +222567,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -222606,7 +223146,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -222622,10 +223162,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -222637,11 +223177,23 @@ class _StringsPtBr extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -231130,7 +231682,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Настройки приложения и читалки';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -231723,15 +232275,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Сменить источник';
   @override
@@ -236773,7 +237325,7 @@ class _StringsRu extends _StringsEn {
   String get home_panel_mode_shown => 'Показать';
   @override
   String get home_panel_srs_hint =>
-      'Авто: показывается, если карточки идут в повторение Fushi или они уже есть';
+      'Авто: показывается, если карточки идут в Fushi SRS или они уже есть';
   @override
   String get home_recently_added => 'Недавно добавленные';
   @override
@@ -239864,7 +240416,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get nav_lookup => 'Поиск';
   @override
-  String get nav_srs => 'Повторение';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Видео';
   @override
@@ -240316,16 +240868,16 @@ class _StringsRu extends _StringsEn {
       'Вы можете снова открыть это руководство в любое время: Настройки → Система.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Показанные страницы библиотеки';
@@ -240585,7 +241137,7 @@ class _StringsRu extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -240625,7 +241177,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Настройки создания карточек';
   @override
@@ -242768,6 +243320,9 @@ class _StringsRu extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -242812,9 +243367,9 @@ class _StringsRu extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -242822,6 +243377,9 @@ class _StringsRu extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -242845,7 +243403,7 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -243247,10 +243805,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -243264,6 +243819,23 @@ class _StringsRu extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -243501,6 +244073,9 @@ class _StringsRu extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -243511,6 +244086,11 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -243532,7 +244112,7 @@ class _StringsRu extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -243688,6 +244268,9 @@ class _StringsRu extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -243696,6 +244279,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -243714,6 +244299,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -243753,7 +244345,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -244332,7 +244924,7 @@ class _StringsRu extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -244348,10 +244940,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -244363,11 +244955,23 @@ class _StringsRu extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -252801,7 +253405,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'การตั้งค่าแอปและเครื่องอ่าน';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -253383,15 +253987,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'เปลี่ยนแหล่งข้อมูล';
   @override
@@ -258355,7 +258959,7 @@ class _StringsTh extends _StringsEn {
   String get home_panel_mode_shown => 'แสดง';
   @override
   String get home_panel_srs_hint =>
-      'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยังการทบทวน Fushi หรือมีการ์ดอยู่แล้ว';
+      'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยัง Fushi SRS หรือมีการ์ดอยู่แล้ว';
   @override
   String get home_recently_added => 'เพิ่มล่าสุด';
   @override
@@ -261396,7 +262000,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get nav_lookup => 'ค้นคำ';
   @override
-  String get nav_srs => 'ทบทวน';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'วิดีโอ';
   @override
@@ -261841,16 +262445,16 @@ class _StringsTh extends _StringsEn {
       'คุณเปิดคู่มือนี้อีกครั้งได้ทุกเมื่อจาก การตั้งค่า → ระบบ';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules => 'หน้าคลังที่แสดง';
   @override
@@ -262100,7 +262704,7 @@ class _StringsTh extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -262140,7 +262744,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'การตั้งค่าการสร้างการ์ด';
   @override
@@ -264245,6 +264849,9 @@ class _StringsTh extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -264289,9 +264896,9 @@ class _StringsTh extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -264299,6 +264906,9 @@ class _StringsTh extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -264322,7 +264932,7 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -264724,10 +265334,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -264741,6 +265348,23 @@ class _StringsTh extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -264978,6 +265602,9 @@ class _StringsTh extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -264988,6 +265615,11 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -265009,7 +265641,7 @@ class _StringsTh extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -265165,6 +265797,9 @@ class _StringsTh extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -265173,6 +265808,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -265191,6 +265828,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -265230,7 +265874,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -265809,7 +266453,7 @@ class _StringsTh extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -265825,10 +266469,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -265840,11 +266484,23 @@ class _StringsTh extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -274218,7 +274874,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Uygulama ve okuyucu ayarları';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -274807,15 +275463,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Kaynağı değiştir';
   @override
@@ -279846,7 +280502,7 @@ class _StringsTr extends _StringsEn {
   String get home_panel_mode_shown => 'Göster';
   @override
   String get home_panel_srs_hint =>
-      'Fushi tekrarına kart eklediğinde veya kartın varsa otomatik görünür';
+      'Fushi SRS\'e kart eklediğinde veya kartın varsa otomatik görünür';
   @override
   String get home_recently_added => 'Son eklenenler';
   @override
@@ -282915,7 +283571,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get nav_lookup => 'Ara';
   @override
-  String get nav_srs => 'Tekrar';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Video';
   @override
@@ -283364,16 +284020,16 @@ class _StringsTr extends _StringsEn {
       'Bu rehberi istediğiniz zaman Ayarlar → Sistem\'den yeniden açabilirsiniz.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules =>
       'Gösterilen kitaplık sayfaları';
@@ -283628,7 +284284,7 @@ class _StringsTr extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -283668,7 +284324,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Kart oluşturma ayarları';
   @override
@@ -285787,6 +286443,9 @@ class _StringsTr extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -285831,9 +286490,9 @@ class _StringsTr extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -285841,6 +286500,9 @@ class _StringsTr extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -285864,7 +286526,7 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -286266,10 +286928,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -286283,6 +286942,23 @@ class _StringsTr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -286520,6 +287196,9 @@ class _StringsTr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -286530,6 +287209,11 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -286551,7 +287235,7 @@ class _StringsTr extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -286707,6 +287391,9 @@ class _StringsTr extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -286715,6 +287402,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -286733,6 +287422,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -286772,7 +287468,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -287351,7 +288047,7 @@ class _StringsTr extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -287367,10 +288063,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -287382,11 +288078,23 @@ class _StringsTr extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -295802,7 +296510,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_settings_desc => 'Cài đặt ứng dụng và trình đọc';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -296391,15 +297099,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => 'Đổi nguồn';
   @override
@@ -301413,7 +302121,7 @@ class _StringsVi extends _StringsEn {
   String get home_panel_mode_shown => 'Hiện';
   @override
   String get home_panel_srs_hint =>
-      'Tự động hiện khi tạo thẻ vào Ôn tập Fushi hoặc đã có thẻ';
+      'Tự động hiện khi tạo thẻ vào Fushi SRS hoặc đã có thẻ';
   @override
   String get home_recently_added => 'Thêm gần đây';
   @override
@@ -304468,7 +305176,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get nav_lookup => 'Tra từ';
   @override
-  String get nav_srs => 'Ôn tập';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => 'Video';
   @override
@@ -304914,16 +305622,16 @@ class _StringsVi extends _StringsEn {
       'Bạn có thể mở lại hướng dẫn này bất cứ lúc nào từ Cài đặt → Hệ thống.';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules => 'Trang thư viện hiển thị';
   @override
@@ -305174,7 +305882,7 @@ class _StringsVi extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -305214,7 +305922,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => 'Cài đặt tạo thẻ';
   @override
@@ -307325,6 +308033,9 @@ class _StringsVi extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -307369,9 +308080,9 @@ class _StringsVi extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -307379,6 +308090,9 @@ class _StringsVi extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -307402,7 +308116,7 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -307804,10 +308518,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -307821,6 +308532,23 @@ class _StringsVi extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -308058,6 +308786,9 @@ class _StringsVi extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -308068,6 +308799,11 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -308089,7 +308825,7 @@ class _StringsVi extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -308245,6 +308981,9 @@ class _StringsVi extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -308253,6 +308992,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -308271,6 +309012,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -308310,7 +309058,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -308889,7 +309637,7 @@ class _StringsVi extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -308905,10 +309653,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -308920,11 +309668,23 @@ class _StringsVi extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -317050,7 +317810,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_settings_desc => '应用与阅读器设置';
   @override
-  String get backup_category_srs => '复习';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
@@ -317575,14 +318335,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get card_target_current => '当前';
   @override
-  String get card_target_srs_enable => '开启 Fushi 复习';
+  String get card_target_srs_enable => '开启 Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
+      '将开启「SRS」模块，之后制的卡发往 Fushi SRS。随时可以改回 Anki。';
   @override
   String get card_target_srs_hint => '内置间隔复习，无需安装 Anki';
   @override
-  String get card_target_srs_title => '发往 Fushi 复习';
+  String get card_target_srs_title => '发往 Fushi SRS';
   @override
   String get change_source => '切换来源';
   @override
@@ -322173,7 +322933,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_panel_mode_shown => '显示';
   @override
-  String get home_panel_srs_hint => '自动：制卡发往 Fushi 复习或已有复习卡时显示';
+  String get home_panel_srs_hint => '自动：制卡发往 Fushi SRS 或已有复习卡时显示';
   @override
   String get home_recently_added => '最近添加';
   @override
@@ -324976,7 +325736,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get nav_lookup => '查词';
   @override
-  String get nav_srs => '复习';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => '视频';
   @override
@@ -325384,15 +326144,15 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_finish_body => '之后随时可以在「设置 → 系统」重新打开本引导。';
   @override
   String get onboarding_finish_import_desc =>
-      '在「复习」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
+      '在「SRS」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
   @override
   String get onboarding_finish_import_title => '导入已有的 Anki 牌组';
   @override
   String get onboarding_finish_next_title => '下一步';
   @override
-  String get onboarding_finish_review_desc => '制的卡会进入底栏的「复习」页，到期的卡在那里等你复习。';
+  String get onboarding_finish_review_desc => '制的卡会进入底栏的「SRS」页，到期的卡在那里等你复习。';
   @override
-  String get onboarding_finish_review_title => '在「复习」里复习';
+  String get onboarding_finish_review_title => '在「SRS」里复习';
   @override
   String get onboarding_finish_summary_modules => '显示的库页';
   @override
@@ -325617,7 +326377,7 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       '内置间隔复习，排程默认使用 FSRS-7。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
   @override
-  String get onboarding_review_fushi_title => 'Fushi 复习';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       '查词时制的卡在这里复习。之后随时可以在「设置 → 制卡」里更改。';
@@ -325651,7 +326411,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => '多设备自动同步';
   @override
-  String get onboarding_srs_title => 'Fushi 内置复习';
+  String get onboarding_srs_title => 'Fushi 内置 SRS';
   @override
   String get onboarding_step_anki_action => '制卡设置';
   @override
@@ -327596,6 +328356,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_anki_migrate_grant_access => '授予文件访问权限以查找 AnkiDroid';
   @override
+  String get srs_anki_migrate_hint => '把本机 Anki / AnkiDroid 的整个集合连同复习记录搬过来';
+  @override
   String get srs_anki_migrate_intro =>
       '把 Anki 的牌组、笔记、笔记类型、复习进度和媒体一次搬过来。只读取 Anki 数据，不会改动它。';
   @override
@@ -327638,9 +328400,9 @@ class _StringsZhCn extends _StringsEn {
       '有些文件夹读取不了：${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
+      '开启 SRS 模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi SRS。';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect（Fushi 复习）';
+  String get srs_ankiconnect_title => 'AnkiConnect（Fushi SRS）';
   @override
   String get srs_backup_auto => '自动备份';
   @override
@@ -327648,6 +328410,9 @@ class _StringsZhCn extends _StringsEn {
       '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
   @override
   String get srs_backup_change_location => '更改存储位置';
+  @override
+  String get srs_backup_cloud_hint =>
+      '这里的备份只存在本机。想让复习数据上云或同步到其它设备，配置「同步与备份」（云盘）或「Fushi 互联」即可，复习数据会随它们自动同步。';
   @override
   String get srs_backup_corrupt => '备份文件已损坏';
   @override
@@ -327669,7 +328434,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} 分钟';
   @override
-  String get srs_backup_invalid => '这个文件不是 Fushi 复习备份';
+  String get srs_backup_invalid => '这个文件不是 Fushi SRS 备份';
   @override
   String get srs_backup_keep_daily => '每日备份保留份数';
   @override
@@ -328053,10 +328818,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_count_review => '到期';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      '复习的「今天」在每天 ${hour} 点切换，与统计页共用同一个日界（在统计页的设置按钮里修改）。在这个时刻之前做的复习算前一天。';
-  @override
-  String get srs_day_boundary_title => '复习的「今天」从几点开始';
+  String get srs_deck_browse_cards => '浏览此牌组的卡片';
   @override
   String get srs_deck_collapse => '收起子牌组';
   @override
@@ -328070,6 +328832,20 @@ class _StringsZhCn extends _StringsEn {
   String get srs_deck_expand => '展开子牌组';
   @override
   String get srs_deck_menu => '更多操作';
+  @override
+  String get srs_deck_move => '移动到…';
+  @override
+  String get srs_deck_move_down => '下移';
+  @override
+  String get srs_deck_move_drop_top_level => '拖到这里，移到顶层';
+  @override
+  String get srs_deck_move_into_own_subdeck => '不能移到它自己的子牌组里';
+  @override
+  String get srs_deck_move_name_taken => '那里已经有同名牌组';
+  @override
+  String get srs_deck_move_top_level => '顶层';
+  @override
+  String get srs_deck_move_up => '上移';
   @override
   String get srs_deck_name => '牌组名称';
   @override
@@ -328280,6 +329056,8 @@ class _StringsZhCn extends _StringsEn {
     required Object skipped,
   }) => '已导入 ${n} 条，跳过 ${skipped} 条';
   @override
+  String get srs_history_import_hint => '以前在 Fushi 里制过的卡（词、读音、释义、例句）';
+  @override
   String get srs_import => '导入';
   @override
   String get srs_import_background_started => '正在后台导入，可以继续使用 Fushi。';
@@ -328288,6 +329066,10 @@ class _StringsZhCn extends _StringsEn {
       '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
   @override
   String srs_import_failed({required Object error}) => '导入失败：${error}';
+  @override
+  String get srs_import_file => '导入 .apkg / .colpkg 文件';
+  @override
+  String get srs_import_file_hint => '共享牌组，或从 Anki 导出的牌组文件';
   @override
   String get srs_import_merge_notetypes => '合并笔记模板';
   @override
@@ -328308,7 +329090,7 @@ class _StringsZhCn extends _StringsEn {
       '有 ${n} 条笔记因笔记类型冲突未导入';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      '恢复 Fushi 复习记录：${n} 条';
+      '恢复 SRS 复习记录：${n} 条';
   @override
   String srs_import_report_future({required Object n}) =>
       '有 ${n} 张卡的排程时间在未来，导入时没带排程';
@@ -328455,6 +329237,9 @@ class _StringsZhCn extends _StringsEn {
     required Object n,
   }) => '将「${name}」的 ${n} 条笔记迁移到 Fushi 卡片？';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      '卡片将移到「${deck}」。';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} 条笔记可迁移或有遗漏字段可补';
   @override
@@ -328463,6 +329248,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       '把旧 Lapis 笔记类型（内置、从 Anki 导入或改过名的）迁到 Fushi 卡片。字段按含义对应，复习历史随卡迁移，确认后才写入。';
+  @override
+  String get srs_lapis_migration_keep_deck => '保持原牌组';
   @override
   String get srs_lapis_migration_kind_builtin => '内置 Lapis';
   @override
@@ -328480,6 +329267,12 @@ class _StringsZhCn extends _StringsEn {
   String srs_lapis_migration_notes({required Object n}) => '${n} 条笔记';
   @override
   String get srs_lapis_migration_nothing => '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => '不再提醒';
+  @override
+  String get srs_lapis_migration_reminder_title => '把旧 Lapis 笔记迁到 Fushi 卡片';
+  @override
+  String get srs_lapis_migration_target_deck => '迁移后放到牌组';
   @override
   String get srs_lapis_migration_title => '迁移旧 Lapis 到新模板';
   @override
@@ -328515,7 +329308,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_mining_target_hint => '制卡时卡片发往哪里';
   @override
-  String get srs_mining_target_srs => 'Fushi 复习';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => '挖词目标';
   @override
@@ -329051,7 +329844,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_stats_total => '合计';
   @override
-  String get srs_stats_unavailable => '打开复习模块后可查看复习统计。';
+  String get srs_stats_unavailable => '打开 SRS 模块后可查看复习统计。';
   @override
   String get srs_stats_view_count => '次数';
   @override
@@ -329067,10 +329860,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_status_new => '新卡';
   @override
-  String get srs_status_open_tooltip => '在 Fushi 复习中打开';
+  String get srs_status_open_tooltip => '在 Fushi SRS 中打开';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      '在 Fushi 复习中打开（${n} 张卡）';
+      '在 Fushi SRS 中打开（${n} 张卡）';
   @override
   String srs_status_review_in({required Object n}) => '复习中 · ${n}天后';
   @override
@@ -329080,11 +329873,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_sync_clock_skew => '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
   @override
+  String get srs_sync_directory_unidentified => '暂时认不出同步目录（账号或地址还没就绪）';
+  @override
   String get srs_sync_done => '复习数据已同步';
+  @override
+  String srs_sync_failed({required Object reason}) => '复习数据同步失败：${reason}';
   @override
   String get srs_sync_no_backend => '还没有配置同步服务';
   @override
   String get srs_sync_now => '立即同步';
+  @override
+  String get srs_sync_setup_body =>
+      '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
+  @override
+  String get srs_sync_store_unavailable => '本机的 SRS 数据此刻没有打开';
   @override
   String get srs_value_no => '否';
   @override
@@ -336813,7 +337615,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_settings_desc => '應用與閱讀器設定';
   @override
-  String get backup_category_srs => 'Review';
+  String get backup_category_srs => 'SRS';
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
@@ -337347,15 +338149,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get card_target_current => 'Current';
   @override
-  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable => 'Turn on Fushi SRS';
   @override
   String get card_target_srs_enable_confirm =>
-      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
   @override
-  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_title => 'Send to Fushi SRS';
   @override
   String get change_source => '切換來源';
   @override
@@ -341999,7 +342801,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_panel_mode_shown => '顯示';
   @override
-  String get home_panel_srs_hint => '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
+  String get home_panel_srs_hint => '自動：製卡發往 Fushi SRS 或已有複習卡時顯示';
   @override
   String get home_recently_added => '最近添加';
   @override
@@ -344839,7 +345641,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get nav_lookup => '查詞';
   @override
-  String get nav_srs => '複習';
+  String get nav_srs => 'SRS';
   @override
   String get nav_video => '影片';
   @override
@@ -345254,16 +346056,16 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_finish_body => '之後隨時可以在「設定 → 系統」重新打開本引導。';
   @override
   String get onboarding_finish_import_desc =>
-      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
   @override
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   @override
   String get onboarding_finish_next_title => 'Next steps';
   @override
   String get onboarding_finish_review_desc =>
-      'Cards you make land on the Review tab; cards that are due wait for you there.';
+      'Cards you make land on the SRS tab; cards that are due wait for you there.';
   @override
-  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_title => 'Review on the SRS tab';
   @override
   String get onboarding_finish_summary_modules => '顯示的庫頁';
   @override
@@ -345488,7 +346290,7 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
-  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -345527,7 +346329,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_srs_sync_title => 'Syncs across devices';
   @override
-  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_title => 'Fushi SRS';
   @override
   String get onboarding_step_anki_action => '製卡設定';
   @override
@@ -347512,6 +348314,9 @@ class _StringsZhHk extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -347556,9 +348361,9 @@ class _StringsZhHk extends _StringsEn {
       'Some folders couldn\'t be read: ${paths}';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
-      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
   @override
-  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi SRS';
   @override
   String get srs_backup_auto => 'Automatic backups';
   @override
@@ -347566,6 +348371,9 @@ class _StringsZhHk extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -347589,7 +348397,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_backup_interval_minutes({required Object n}) => '${n} min';
   @override
-  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_invalid => 'This file is not a Fushi SRS backup';
   @override
   String get srs_backup_keep_daily => 'Daily backups to keep';
   @override
@@ -347991,10 +348799,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
+  String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
   @override
@@ -348008,6 +348813,23 @@ class _StringsZhHk extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -348245,6 +349067,9 @@ class _StringsZhHk extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -348255,6 +349080,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -348276,7 +349106,7 @@ class _StringsZhHk extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      '恢復 SRS 複習記錄：${n} 條';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -348432,6 +349262,9 @@ class _StringsZhHk extends _StringsEn {
     required Object name,
   }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
   @override
+  String srs_lapis_migration_confirm_deck({required Object deck}) =>
+      'Cards will be moved to “${deck}”.';
+  @override
   String srs_lapis_migration_entry_summary({required Object n}) =>
       '${n} notes can be migrated or have missed fields';
   @override
@@ -348440,6 +349273,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_lapis_migration_intro =>
       'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_keep_deck => 'Keep current decks';
   @override
   String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
   @override
@@ -348458,6 +349293,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_lapis_migration_nothing =>
       'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_reminder_dismiss => 'Don\'t remind again';
+  @override
+  String get srs_lapis_migration_reminder_title =>
+      'Migrate old Lapis notes to Fushi Card';
+  @override
+  String get srs_lapis_migration_target_deck => 'Destination deck';
   @override
   String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
@@ -348497,7 +349339,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   @override
-  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_srs => 'Fushi SRS';
   @override
   String get srs_mining_target_title => 'Mining target';
   @override
@@ -349076,7 +349918,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_stats_total => 'Total';
   @override
   String get srs_stats_unavailable =>
-      'Turn on the review module to see review statistics.';
+      'Turn on the SRS module to see review statistics.';
   @override
   String get srs_stats_view_count => 'Count';
   @override
@@ -349092,10 +349934,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_status_new => 'New card';
   @override
-  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String get srs_status_open_tooltip => 'Open in Fushi SRS';
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
-      'Open in Fushi review (${n} cards)';
+      'Open in Fushi SRS (${n} cards)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -349107,11 +349949,22 @@ class _StringsZhHk extends _StringsEn {
   String get srs_sync_clock_skew =>
       'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
   @override
+  String get srs_sync_directory_unidentified =>
+      'The sync folder can\'t be identified yet (account or address not ready)';
+  @override
   String get srs_sync_done => 'Review data synced';
+  @override
+  String srs_sync_failed({required Object reason}) =>
+      'Couldn\'t sync review data: ${reason}';
   @override
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable => '本機的 SRS 資料此刻沒有開啟';
   @override
   String get srs_value_no => 'No';
   @override
@@ -356548,7 +357401,7 @@ extension on _StringsEn {
       case 'backup_category_settings_desc':
         return 'App and reader settings';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -357044,13 +357897,13 @@ extension on _StringsEn {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Change source';
       case 'changelog_empty':
@@ -361336,7 +362189,7 @@ extension on _StringsEn {
       case 'home_panel_mode_shown':
         return 'Show';
       case 'home_panel_srs_hint':
-        return 'Auto shows it once you mine to Fushi review or have review cards';
+        return 'Auto shows it once you mine to Fushi SRS or have review cards';
       case 'home_recently_added':
         return 'Recently added';
       case 'home_remote_source':
@@ -363963,7 +364816,7 @@ extension on _StringsEn {
       case 'nav_lookup':
         return 'Lookup';
       case 'nav_srs':
-        return 'Review';
+        return 'SRS';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -364329,15 +365182,15 @@ extension on _StringsEn {
       case 'onboarding_finish_body':
         return 'You can reopen this guide anytime from Settings → System.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Library pages shown';
       case 'onboarding_finish_summary_none':
@@ -364530,7 +365383,7 @@ extension on _StringsEn {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -364562,7 +365415,7 @@ extension on _StringsEn {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Card creation settings';
       case 'onboarding_step_anki_action_desc':
@@ -366437,6 +367290,8 @@ extension on _StringsEn {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -366473,15 +367328,17 @@ extension on _StringsEn {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -366503,7 +367360,7 @@ extension on _StringsEn {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -366874,11 +367731,8 @@ extension on _StringsEn {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -366892,6 +367746,20 @@ extension on _StringsEn {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -367089,6 +367957,8 @@ extension on _StringsEn {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -367097,6 +367967,10 @@ extension on _StringsEn {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -367116,7 +367990,7 @@ extension on _StringsEn {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -367251,6 +368125,8 @@ extension on _StringsEn {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -367259,6 +368135,8 @@ extension on _StringsEn {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -367276,6 +368154,12 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -367311,7 +368195,7 @@ extension on _StringsEn {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -367831,7 +368715,7 @@ extension on _StringsEn {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -367847,9 +368731,9 @@ extension on _StringsEn {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -367858,12 +368742,21 @@ extension on _StringsEn {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -374890,7 +375783,7 @@ extension on _StringsAr {
       case 'backup_category_settings_desc':
         return 'إعدادات التطبيق والقارئ';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -375387,13 +376280,13 @@ extension on _StringsAr {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'تغيير المصدر';
       case 'changelog_empty':
@@ -379677,7 +380570,7 @@ extension on _StringsAr {
       case 'home_panel_mode_shown':
         return 'إظهار';
       case 'home_panel_srs_hint':
-        return 'يظهر تلقائيًا عند الإرسال إلى مراجعة Fushi أو وجود بطاقات مراجعة';
+        return 'يظهر تلقائيًا عند الإرسال إلى Fushi SRS أو وجود بطاقات مراجعة';
       case 'home_recently_added':
         return 'أُضيفت مؤخرًا';
       case 'home_remote_source':
@@ -382300,7 +383193,7 @@ extension on _StringsAr {
       case 'nav_lookup':
         return 'بحث';
       case 'nav_srs':
-        return 'المراجعة';
+        return 'SRS';
       case 'nav_video':
         return 'فيديو';
       case 'nav_web':
@@ -382667,15 +383560,15 @@ extension on _StringsAr {
       case 'onboarding_finish_body':
         return 'يمكنك فتح هذا الدليل مجدداً في أي وقت من الإعدادات → النظام.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'صفحات المكتبة المعروضة';
       case 'onboarding_finish_summary_none':
@@ -382868,7 +383761,7 @@ extension on _StringsAr {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -382900,7 +383793,7 @@ extension on _StringsAr {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'إعدادات إنشاء البطاقات';
       case 'onboarding_step_anki_action_desc':
@@ -384775,6 +385668,8 @@ extension on _StringsAr {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -384811,15 +385706,17 @@ extension on _StringsAr {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -384841,7 +385738,7 @@ extension on _StringsAr {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -385212,11 +386109,8 @@ extension on _StringsAr {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -385230,6 +386124,20 @@ extension on _StringsAr {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -385427,6 +386335,8 @@ extension on _StringsAr {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -385435,6 +386345,10 @@ extension on _StringsAr {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -385454,7 +386368,7 @@ extension on _StringsAr {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -385589,6 +386503,8 @@ extension on _StringsAr {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -385597,6 +386513,8 @@ extension on _StringsAr {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -385614,6 +386532,12 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -385649,7 +386573,7 @@ extension on _StringsAr {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -386169,7 +387093,7 @@ extension on _StringsAr {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -386185,9 +387109,9 @@ extension on _StringsAr {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -386196,12 +387120,21 @@ extension on _StringsAr {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -393246,7 +394179,7 @@ extension on _StringsDe {
       case 'backup_category_settings_desc':
         return 'App- und Reader-Einstellungen';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -393744,13 +394677,13 @@ extension on _StringsDe {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Quelle ändern';
       case 'changelog_empty':
@@ -398047,7 +398980,7 @@ extension on _StringsDe {
       case 'home_panel_mode_shown':
         return 'Anzeigen';
       case 'home_panel_srs_hint':
-        return 'Automatisch sichtbar, sobald du in die Fushi-Wiederholung minst oder Karten hast';
+        return 'Automatisch sichtbar, sobald du in Fushi SRS minst oder Karten hast';
       case 'home_recently_added':
         return 'Kürzlich hinzugefügt';
       case 'home_remote_source':
@@ -400688,7 +401621,7 @@ extension on _StringsDe {
       case 'nav_lookup':
         return 'Nachschlagen';
       case 'nav_srs':
-        return 'Wiederholen';
+        return 'SRS';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -401058,15 +401991,15 @@ extension on _StringsDe {
       case 'onboarding_finish_body':
         return 'Sie können diese Anleitung jederzeit unter Einstellungen → System wieder öffnen.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Angezeigte Bibliotheksseiten';
       case 'onboarding_finish_summary_none':
@@ -401260,7 +402193,7 @@ extension on _StringsDe {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -401292,7 +402225,7 @@ extension on _StringsDe {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Kartenerstell-Einstellungen';
       case 'onboarding_step_anki_action_desc':
@@ -403169,6 +404102,8 @@ extension on _StringsDe {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -403205,15 +404140,17 @@ extension on _StringsDe {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -403235,7 +404172,7 @@ extension on _StringsDe {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -403606,11 +404543,8 @@ extension on _StringsDe {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -403624,6 +404558,20 @@ extension on _StringsDe {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -403821,6 +404769,8 @@ extension on _StringsDe {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -403829,6 +404779,10 @@ extension on _StringsDe {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -403848,7 +404802,7 @@ extension on _StringsDe {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -403983,6 +404937,8 @@ extension on _StringsDe {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -403991,6 +404947,8 @@ extension on _StringsDe {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -404008,6 +404966,12 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -404043,7 +405007,7 @@ extension on _StringsDe {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -404563,7 +405527,7 @@ extension on _StringsDe {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -404579,9 +405543,9 @@ extension on _StringsDe {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -404590,12 +405554,21 @@ extension on _StringsDe {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -411653,7 +412626,7 @@ extension on _StringsEs {
       case 'backup_category_settings_desc':
         return 'Ajustes de la app y del lector';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -412151,13 +413124,13 @@ extension on _StringsEs {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Cambiar fuente';
       case 'changelog_empty':
@@ -416449,7 +417422,7 @@ extension on _StringsEs {
       case 'home_panel_mode_shown':
         return 'Mostrar';
       case 'home_panel_srs_hint':
-        return 'Se muestra al minar a Repaso de Fushi o si ya tienes tarjetas';
+        return 'Se muestra al minar a Fushi SRS o si ya tienes tarjetas';
       case 'home_recently_added':
         return 'Añadido recientemente';
       case 'home_remote_source':
@@ -419086,7 +420059,7 @@ extension on _StringsEs {
       case 'nav_lookup':
         return 'Consultar';
       case 'nav_srs':
-        return 'Repaso';
+        return 'SRS';
       case 'nav_video':
         return 'Vídeo';
       case 'nav_web':
@@ -419455,15 +420428,15 @@ extension on _StringsEs {
       case 'onboarding_finish_body':
         return 'Puede volver a abrir esta guía en cualquier momento desde Ajustes → Sistema.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Páginas de biblioteca visibles';
       case 'onboarding_finish_summary_none':
@@ -419656,7 +420629,7 @@ extension on _StringsEs {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -419688,7 +420661,7 @@ extension on _StringsEs {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Ajustes de creación de tarjetas';
       case 'onboarding_step_anki_action_desc':
@@ -421567,6 +422540,8 @@ extension on _StringsEs {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -421603,15 +422578,17 @@ extension on _StringsEs {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -421633,7 +422610,7 @@ extension on _StringsEs {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -422004,11 +422981,8 @@ extension on _StringsEs {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -422022,6 +422996,20 @@ extension on _StringsEs {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -422219,6 +423207,8 @@ extension on _StringsEs {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -422227,6 +423217,10 @@ extension on _StringsEs {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -422246,7 +423240,7 @@ extension on _StringsEs {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -422381,6 +423375,8 @@ extension on _StringsEs {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -422389,6 +423385,8 @@ extension on _StringsEs {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -422406,6 +423404,12 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -422441,7 +423445,7 @@ extension on _StringsEs {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -422961,7 +423965,7 @@ extension on _StringsEs {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -422977,9 +423981,9 @@ extension on _StringsEs {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -422988,12 +423992,21 @@ extension on _StringsEs {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -430052,7 +431065,7 @@ extension on _StringsFr {
       case 'backup_category_settings_desc':
         return 'Paramètres de l\'application et du lecteur';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -430550,13 +431563,13 @@ extension on _StringsFr {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Changer de source';
       case 'changelog_empty':
@@ -434857,7 +435870,7 @@ extension on _StringsFr {
       case 'home_panel_mode_shown':
         return 'Afficher';
       case 'home_panel_srs_hint':
-        return 'Affiché dès que vous minez vers Révision Fushi ou avez des cartes';
+        return 'Affiché dès que vous minez vers Fushi SRS ou avez des cartes';
       case 'home_recently_added':
         return 'Ajoutés récemment';
       case 'home_remote_source':
@@ -437494,7 +438507,7 @@ extension on _StringsFr {
       case 'nav_lookup':
         return 'Recherche';
       case 'nav_srs':
-        return 'Révision';
+        return 'SRS';
       case 'nav_video':
         return 'Vidéo';
       case 'nav_web':
@@ -437864,15 +438877,15 @@ extension on _StringsFr {
       case 'onboarding_finish_body':
         return 'Vous pouvez rouvrir ce guide à tout moment depuis Paramètres → Système.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Pages de bibliothèque affichées';
       case 'onboarding_finish_summary_none':
@@ -438066,7 +439079,7 @@ extension on _StringsFr {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -438098,7 +439111,7 @@ extension on _StringsFr {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Paramètres de création de cartes';
       case 'onboarding_step_anki_action_desc':
@@ -439976,6 +440989,8 @@ extension on _StringsFr {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -440012,15 +441027,17 @@ extension on _StringsFr {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -440042,7 +441059,7 @@ extension on _StringsFr {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -440413,11 +441430,8 @@ extension on _StringsFr {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -440431,6 +441445,20 @@ extension on _StringsFr {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -440628,6 +441656,8 @@ extension on _StringsFr {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -440636,6 +441666,10 @@ extension on _StringsFr {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -440655,7 +441689,7 @@ extension on _StringsFr {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -440790,6 +441824,8 @@ extension on _StringsFr {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -440798,6 +441834,8 @@ extension on _StringsFr {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -440815,6 +441853,12 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -440850,7 +441894,7 @@ extension on _StringsFr {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -441370,7 +442414,7 @@ extension on _StringsFr {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -441386,9 +442430,9 @@ extension on _StringsFr {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -441397,12 +442441,21 @@ extension on _StringsFr {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -448451,7 +449504,7 @@ extension on _StringsId {
       case 'backup_category_settings_desc':
         return 'Pengaturan aplikasi dan pembaca';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -448948,13 +450001,13 @@ extension on _StringsId {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Ubah Sumber';
       case 'changelog_empty':
@@ -453243,7 +454296,7 @@ extension on _StringsId {
       case 'home_panel_mode_shown':
         return 'Tampilkan';
       case 'home_panel_srs_hint':
-        return 'Otomatis tampil saat menambang ke Ulasan Fushi atau sudah ada kartu';
+        return 'Otomatis tampil saat menambang ke Fushi SRS atau sudah ada kartu';
       case 'home_recently_added':
         return 'Baru ditambahkan';
       case 'home_remote_source':
@@ -455871,7 +456924,7 @@ extension on _StringsId {
       case 'nav_lookup':
         return 'Cari Kata';
       case 'nav_srs':
-        return 'Ulasan';
+        return 'SRS';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -456237,15 +457290,15 @@ extension on _StringsId {
       case 'onboarding_finish_body':
         return 'Anda bisa membuka lagi panduan ini kapan saja dari Pengaturan → Sistem.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Halaman perpustakaan yang ditampilkan';
       case 'onboarding_finish_summary_none':
@@ -456438,7 +457491,7 @@ extension on _StringsId {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -456470,7 +457523,7 @@ extension on _StringsId {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Pengaturan pembuatan kartu';
       case 'onboarding_step_anki_action_desc':
@@ -458345,6 +459398,8 @@ extension on _StringsId {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -458381,15 +459436,17 @@ extension on _StringsId {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -458411,7 +459468,7 @@ extension on _StringsId {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -458782,11 +459839,8 @@ extension on _StringsId {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -458800,6 +459854,20 @@ extension on _StringsId {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -458997,6 +460065,8 @@ extension on _StringsId {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -459005,6 +460075,10 @@ extension on _StringsId {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -459024,7 +460098,7 @@ extension on _StringsId {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -459159,6 +460233,8 @@ extension on _StringsId {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -459167,6 +460243,8 @@ extension on _StringsId {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -459184,6 +460262,12 @@ extension on _StringsId {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -459219,7 +460303,7 @@ extension on _StringsId {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -459739,7 +460823,7 @@ extension on _StringsId {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -459755,9 +460839,9 @@ extension on _StringsId {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -459766,12 +460850,21 @@ extension on _StringsId {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -466812,7 +467905,7 @@ extension on _StringsIt {
       case 'backup_category_settings_desc':
         return 'Impostazioni dell\'app e del lettore';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -467310,13 +468403,13 @@ extension on _StringsIt {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Cambia sorgente';
       case 'changelog_empty':
@@ -471610,7 +472703,7 @@ extension on _StringsIt {
       case 'home_panel_mode_shown':
         return 'Mostra';
       case 'home_panel_srs_hint':
-        return 'Appare quando invii le carte al Ripasso Fushi o hai già carte';
+        return 'Appare quando invii le carte a Fushi SRS o hai già carte';
       case 'home_recently_added':
         return 'Aggiunti di recente';
       case 'home_remote_source':
@@ -474245,7 +475338,7 @@ extension on _StringsIt {
       case 'nav_lookup':
         return 'Ricerca';
       case 'nav_srs':
-        return 'Ripasso';
+        return 'SRS';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -474613,15 +475706,15 @@ extension on _StringsIt {
       case 'onboarding_finish_body':
         return 'Puoi riaprire questa guida in qualsiasi momento da Impostazioni → Sistema.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Pagine della libreria mostrate';
       case 'onboarding_finish_summary_none':
@@ -474814,7 +475907,7 @@ extension on _StringsIt {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -474846,7 +475939,7 @@ extension on _StringsIt {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Impostazioni creazione carte';
       case 'onboarding_step_anki_action_desc':
@@ -476723,6 +477816,8 @@ extension on _StringsIt {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -476759,15 +477854,17 @@ extension on _StringsIt {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -476789,7 +477886,7 @@ extension on _StringsIt {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -477160,11 +478257,8 @@ extension on _StringsIt {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -477178,6 +478272,20 @@ extension on _StringsIt {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -477375,6 +478483,8 @@ extension on _StringsIt {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -477383,6 +478493,10 @@ extension on _StringsIt {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -477402,7 +478516,7 @@ extension on _StringsIt {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -477537,6 +478651,8 @@ extension on _StringsIt {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -477545,6 +478661,8 @@ extension on _StringsIt {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -477562,6 +478680,12 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -477597,7 +478721,7 @@ extension on _StringsIt {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -478117,7 +479241,7 @@ extension on _StringsIt {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -478133,9 +479257,9 @@ extension on _StringsIt {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -478144,12 +479268,21 @@ extension on _StringsIt {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -485181,7 +486314,7 @@ extension on _StringsJa {
       case 'backup_category_settings_desc':
         return 'アプリとリーダーの設定';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -485672,13 +486805,13 @@ extension on _StringsJa {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'ソースを変更';
       case 'changelog_empty':
@@ -489956,7 +491089,7 @@ extension on _StringsJa {
       case 'home_panel_mode_shown':
         return '表示';
       case 'home_panel_srs_hint':
-        return '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
+        return '自動：Fushi SRS にカードを作成するか、復習カードがあると表示';
       case 'home_recently_added':
         return '最近追加';
       case 'home_remote_source':
@@ -492567,7 +493700,7 @@ extension on _StringsJa {
       case 'nav_lookup':
         return '辞書';
       case 'nav_srs':
-        return '復習';
+        return 'SRS';
       case 'nav_video':
         return '動画';
       case 'nav_web':
@@ -492930,15 +494063,15 @@ extension on _StringsJa {
       case 'onboarding_finish_body':
         return 'このガイドは設定 → システムからいつでも開き直せます。';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return '表示するライブラリのページ';
       case 'onboarding_finish_summary_none':
@@ -493130,7 +494263,7 @@ extension on _StringsJa {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -493162,7 +494295,7 @@ extension on _StringsJa {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'カード作成設定';
       case 'onboarding_step_anki_action_desc':
@@ -495035,6 +496168,8 @@ extension on _StringsJa {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -495071,15 +496206,17 @@ extension on _StringsJa {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -495101,7 +496238,7 @@ extension on _StringsJa {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -495472,11 +496609,8 @@ extension on _StringsJa {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -495490,6 +496624,20 @@ extension on _StringsJa {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -495687,6 +496835,8 @@ extension on _StringsJa {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -495695,6 +496845,10 @@ extension on _StringsJa {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -495714,7 +496868,7 @@ extension on _StringsJa {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -495849,6 +497003,8 @@ extension on _StringsJa {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -495857,6 +497013,8 @@ extension on _StringsJa {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -495874,6 +497032,12 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -495909,7 +497073,7 @@ extension on _StringsJa {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -496429,7 +497593,7 @@ extension on _StringsJa {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -496445,9 +497609,9 @@ extension on _StringsJa {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -496456,12 +497620,21 @@ extension on _StringsJa {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -503436,7 +504609,7 @@ extension on _StringsKo {
       case 'backup_category_settings_desc':
         return '앱 및 리더 설정';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -503929,13 +505102,13 @@ extension on _StringsKo {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return '소스 변경';
       case 'changelog_empty':
@@ -508216,7 +509389,7 @@ extension on _StringsKo {
       case 'home_panel_mode_shown':
         return '표시';
       case 'home_panel_srs_hint':
-        return '자동: Fushi 복습으로 카드를 만들거나 복습 카드가 있으면 표시';
+        return '자동: Fushi SRS로 카드를 만들거나 복습 카드가 있으면 표시';
       case 'home_recently_added':
         return '최근 추가';
       case 'home_remote_source':
@@ -510826,7 +511999,7 @@ extension on _StringsKo {
       case 'nav_lookup':
         return '단어 찾기';
       case 'nav_srs':
-        return '복습';
+        return 'SRS';
       case 'nav_video':
         return '비디오';
       case 'nav_web':
@@ -511190,15 +512363,15 @@ extension on _StringsKo {
       case 'onboarding_finish_body':
         return '설정 → 시스템에서 이 가이드를 언제든 다시 열 수 있습니다.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return '표시할 라이브러리 페이지';
       case 'onboarding_finish_summary_none':
@@ -511390,7 +512563,7 @@ extension on _StringsKo {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -511422,7 +512595,7 @@ extension on _StringsKo {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return '카드 생성 설정';
       case 'onboarding_step_anki_action_desc':
@@ -513296,6 +514469,8 @@ extension on _StringsKo {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -513332,15 +514507,17 @@ extension on _StringsKo {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -513362,7 +514539,7 @@ extension on _StringsKo {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -513733,11 +514910,8 @@ extension on _StringsKo {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -513751,6 +514925,20 @@ extension on _StringsKo {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -513948,6 +515136,8 @@ extension on _StringsKo {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -513956,6 +515146,10 @@ extension on _StringsKo {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -513975,7 +515169,7 @@ extension on _StringsKo {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -514110,6 +515304,8 @@ extension on _StringsKo {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -514118,6 +515314,8 @@ extension on _StringsKo {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -514135,6 +515333,12 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -514170,7 +515374,7 @@ extension on _StringsKo {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -514690,7 +515894,7 @@ extension on _StringsKo {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -514706,9 +515910,9 @@ extension on _StringsKo {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -514717,12 +515921,21 @@ extension on _StringsKo {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -521732,7 +522945,7 @@ extension on _StringsNl {
       case 'backup_category_settings_desc':
         return 'App- en lezerinstellingen';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -522230,13 +523443,13 @@ extension on _StringsNl {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Bron wijzigen';
       case 'changelog_empty':
@@ -526529,7 +527742,7 @@ extension on _StringsNl {
       case 'home_panel_mode_shown':
         return 'Tonen';
       case 'home_panel_srs_hint':
-        return 'Automatisch zichtbaar zodra je naar Fushi-herhaling minet of kaarten hebt';
+        return 'Automatisch zichtbaar zodra je naar Fushi SRS minet of kaarten hebt';
       case 'home_recently_added':
         return 'Recent toegevoegd';
       case 'home_remote_source':
@@ -529169,7 +530382,7 @@ extension on _StringsNl {
       case 'nav_lookup':
         return 'Opzoeken';
       case 'nav_srs':
-        return 'Herhalen';
+        return 'SRS';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -529537,15 +530750,15 @@ extension on _StringsNl {
       case 'onboarding_finish_body':
         return 'Je kunt deze gids altijd opnieuw openen via Instellingen → Systeem.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Getoonde bibliotheekpagina\'s';
       case 'onboarding_finish_summary_none':
@@ -529738,7 +530951,7 @@ extension on _StringsNl {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -529770,7 +530983,7 @@ extension on _StringsNl {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Kaartaanmaak-instellingen';
       case 'onboarding_step_anki_action_desc':
@@ -531647,6 +532860,8 @@ extension on _StringsNl {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -531683,15 +532898,17 @@ extension on _StringsNl {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -531713,7 +532930,7 @@ extension on _StringsNl {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -532084,11 +533301,8 @@ extension on _StringsNl {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -532102,6 +533316,20 @@ extension on _StringsNl {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -532299,6 +533527,8 @@ extension on _StringsNl {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -532307,6 +533537,10 @@ extension on _StringsNl {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -532326,7 +533560,7 @@ extension on _StringsNl {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -532461,6 +533695,8 @@ extension on _StringsNl {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -532469,6 +533705,8 @@ extension on _StringsNl {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -532486,6 +533724,12 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -532521,7 +533765,7 @@ extension on _StringsNl {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -533041,7 +534285,7 @@ extension on _StringsNl {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -533057,9 +534301,9 @@ extension on _StringsNl {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -533068,12 +534312,21 @@ extension on _StringsNl {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -540121,7 +541374,7 @@ extension on _StringsPtBr {
       case 'backup_category_settings_desc':
         return 'Configurações do app e do leitor';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -540619,13 +541872,13 @@ extension on _StringsPtBr {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Alterar Fonte';
       case 'changelog_empty':
@@ -544915,7 +546168,7 @@ extension on _StringsPtBr {
       case 'home_panel_mode_shown':
         return 'Mostrar';
       case 'home_panel_srs_hint':
-        return 'Aparece ao minerar para a Revisão Fushi ou se já houver cartões';
+        return 'Aparece ao minerar para o Fushi SRS ou se já houver cartões';
       case 'home_recently_added':
         return 'Adicionados recentemente';
       case 'home_remote_source':
@@ -547551,7 +548804,7 @@ extension on _StringsPtBr {
       case 'nav_lookup':
         return 'Consultar';
       case 'nav_srs':
-        return 'Revisão';
+        return 'SRS';
       case 'nav_video':
         return 'Vídeo';
       case 'nav_web':
@@ -547919,15 +549172,15 @@ extension on _StringsPtBr {
       case 'onboarding_finish_body':
         return 'Você pode reabrir este guia a qualquer momento em Configurações → Sistema.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Páginas de biblioteca exibidas';
       case 'onboarding_finish_summary_none':
@@ -548120,7 +549373,7 @@ extension on _StringsPtBr {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -548152,7 +549405,7 @@ extension on _StringsPtBr {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Configurações de criação de cartões';
       case 'onboarding_step_anki_action_desc':
@@ -550029,6 +551282,8 @@ extension on _StringsPtBr {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -550065,15 +551320,17 @@ extension on _StringsPtBr {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -550095,7 +551352,7 @@ extension on _StringsPtBr {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -550466,11 +551723,8 @@ extension on _StringsPtBr {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -550484,6 +551738,20 @@ extension on _StringsPtBr {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -550681,6 +551949,8 @@ extension on _StringsPtBr {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -550689,6 +551959,10 @@ extension on _StringsPtBr {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -550708,7 +551982,7 @@ extension on _StringsPtBr {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -550843,6 +552117,8 @@ extension on _StringsPtBr {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -550851,6 +552127,8 @@ extension on _StringsPtBr {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -550868,6 +552146,12 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -550903,7 +552187,7 @@ extension on _StringsPtBr {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -551423,7 +552707,7 @@ extension on _StringsPtBr {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -551439,9 +552723,9 @@ extension on _StringsPtBr {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -551450,12 +552734,21 @@ extension on _StringsPtBr {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -558503,7 +559796,7 @@ extension on _StringsRu {
       case 'backup_category_settings_desc':
         return 'Настройки приложения и читалки';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -559002,13 +560295,13 @@ extension on _StringsRu {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Сменить источник';
       case 'changelog_empty':
@@ -563301,7 +564594,7 @@ extension on _StringsRu {
       case 'home_panel_mode_shown':
         return 'Показать';
       case 'home_panel_srs_hint':
-        return 'Авто: показывается, если карточки идут в повторение Fushi или они уже есть';
+        return 'Авто: показывается, если карточки идут в Fushi SRS или они уже есть';
       case 'home_recently_added':
         return 'Недавно добавленные';
       case 'home_remote_source':
@@ -565937,7 +567230,7 @@ extension on _StringsRu {
       case 'nav_lookup':
         return 'Поиск';
       case 'nav_srs':
-        return 'Повторение';
+        return 'SRS';
       case 'nav_video':
         return 'Видео';
       case 'nav_web':
@@ -566305,15 +567598,15 @@ extension on _StringsRu {
       case 'onboarding_finish_body':
         return 'Вы можете снова открыть это руководство в любое время: Настройки → Система.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Показанные страницы библиотеки';
       case 'onboarding_finish_summary_none':
@@ -566506,7 +567799,7 @@ extension on _StringsRu {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -566538,7 +567831,7 @@ extension on _StringsRu {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Настройки создания карточек';
       case 'onboarding_step_anki_action_desc':
@@ -568415,6 +569708,8 @@ extension on _StringsRu {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -568451,15 +569746,17 @@ extension on _StringsRu {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -568481,7 +569778,7 @@ extension on _StringsRu {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -568852,11 +570149,8 @@ extension on _StringsRu {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -568870,6 +570164,20 @@ extension on _StringsRu {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -569067,6 +570375,8 @@ extension on _StringsRu {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -569075,6 +570385,10 @@ extension on _StringsRu {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -569094,7 +570408,7 @@ extension on _StringsRu {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -569229,6 +570543,8 @@ extension on _StringsRu {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -569237,6 +570553,8 @@ extension on _StringsRu {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -569254,6 +570572,12 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -569289,7 +570613,7 @@ extension on _StringsRu {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -569809,7 +571133,7 @@ extension on _StringsRu {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -569825,9 +571149,9 @@ extension on _StringsRu {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -569836,12 +571160,21 @@ extension on _StringsRu {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -576872,7 +578205,7 @@ extension on _StringsTh {
       case 'backup_category_settings_desc':
         return 'การตั้งค่าแอปและเครื่องอ่าน';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -577368,13 +578701,13 @@ extension on _StringsTh {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'เปลี่ยนแหล่งข้อมูล';
       case 'changelog_empty':
@@ -581661,7 +582994,7 @@ extension on _StringsTh {
       case 'home_panel_mode_shown':
         return 'แสดง';
       case 'home_panel_srs_hint':
-        return 'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยังการทบทวน Fushi หรือมีการ์ดอยู่แล้ว';
+        return 'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยัง Fushi SRS หรือมีการ์ดอยู่แล้ว';
       case 'home_recently_added':
         return 'เพิ่มล่าสุด';
       case 'home_remote_source':
@@ -584288,7 +585621,7 @@ extension on _StringsTh {
       case 'nav_lookup':
         return 'ค้นคำ';
       case 'nav_srs':
-        return 'ทบทวน';
+        return 'SRS';
       case 'nav_video':
         return 'วิดีโอ';
       case 'nav_web':
@@ -584653,15 +585986,15 @@ extension on _StringsTh {
       case 'onboarding_finish_body':
         return 'คุณเปิดคู่มือนี้อีกครั้งได้ทุกเมื่อจาก การตั้งค่า → ระบบ';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'หน้าคลังที่แสดง';
       case 'onboarding_finish_summary_none':
@@ -584854,7 +586187,7 @@ extension on _StringsTh {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -584886,7 +586219,7 @@ extension on _StringsTh {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'การตั้งค่าการสร้างการ์ด';
       case 'onboarding_step_anki_action_desc':
@@ -586761,6 +588094,8 @@ extension on _StringsTh {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -586797,15 +588132,17 @@ extension on _StringsTh {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -586827,7 +588164,7 @@ extension on _StringsTh {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -587198,11 +588535,8 @@ extension on _StringsTh {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -587216,6 +588550,20 @@ extension on _StringsTh {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -587413,6 +588761,8 @@ extension on _StringsTh {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -587421,6 +588771,10 @@ extension on _StringsTh {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -587440,7 +588794,7 @@ extension on _StringsTh {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -587575,6 +588929,8 @@ extension on _StringsTh {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -587583,6 +588939,8 @@ extension on _StringsTh {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -587600,6 +588958,12 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -587635,7 +588999,7 @@ extension on _StringsTh {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -588155,7 +589519,7 @@ extension on _StringsTh {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -588171,9 +589535,9 @@ extension on _StringsTh {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -588182,12 +589546,21 @@ extension on _StringsTh {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -595224,7 +596597,7 @@ extension on _StringsTr {
       case 'backup_category_settings_desc':
         return 'Uygulama ve okuyucu ayarları';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -595723,13 +597096,13 @@ extension on _StringsTr {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Kaynağı değiştir';
       case 'changelog_empty':
@@ -600019,7 +601392,7 @@ extension on _StringsTr {
       case 'home_panel_mode_shown':
         return 'Göster';
       case 'home_panel_srs_hint':
-        return 'Fushi tekrarına kart eklediğinde veya kartın varsa otomatik görünür';
+        return 'Fushi SRS\'e kart eklediğinde veya kartın varsa otomatik görünür';
       case 'home_recently_added':
         return 'Son eklenenler';
       case 'home_remote_source':
@@ -602652,7 +604025,7 @@ extension on _StringsTr {
       case 'nav_lookup':
         return 'Ara';
       case 'nav_srs':
-        return 'Tekrar';
+        return 'SRS';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -603017,15 +604390,15 @@ extension on _StringsTr {
       case 'onboarding_finish_body':
         return 'Bu rehberi istediğiniz zaman Ayarlar → Sistem\'den yeniden açabilirsiniz.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Gösterilen kitaplık sayfaları';
       case 'onboarding_finish_summary_none':
@@ -603218,7 +604591,7 @@ extension on _StringsTr {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -603250,7 +604623,7 @@ extension on _StringsTr {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Kart oluşturma ayarları';
       case 'onboarding_step_anki_action_desc':
@@ -605125,6 +606498,8 @@ extension on _StringsTr {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -605161,15 +606536,17 @@ extension on _StringsTr {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -605191,7 +606568,7 @@ extension on _StringsTr {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -605562,11 +606939,8 @@ extension on _StringsTr {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -605580,6 +606954,20 @@ extension on _StringsTr {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -605777,6 +607165,8 @@ extension on _StringsTr {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -605785,6 +607175,10 @@ extension on _StringsTr {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -605804,7 +607198,7 @@ extension on _StringsTr {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -605939,6 +607333,8 @@ extension on _StringsTr {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -605947,6 +607343,8 @@ extension on _StringsTr {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -605964,6 +607362,12 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -605999,7 +607403,7 @@ extension on _StringsTr {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -606519,7 +607923,7 @@ extension on _StringsTr {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -606535,9 +607939,9 @@ extension on _StringsTr {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -606546,12 +607950,21 @@ extension on _StringsTr {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -613589,7 +615002,7 @@ extension on _StringsVi {
       case 'backup_category_settings_desc':
         return 'Cài đặt ứng dụng và trình đọc';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -614085,13 +615498,13 @@ extension on _StringsVi {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return 'Đổi nguồn';
       case 'changelog_empty':
@@ -618382,7 +619795,7 @@ extension on _StringsVi {
       case 'home_panel_mode_shown':
         return 'Hiện';
       case 'home_panel_srs_hint':
-        return 'Tự động hiện khi tạo thẻ vào Ôn tập Fushi hoặc đã có thẻ';
+        return 'Tự động hiện khi tạo thẻ vào Fushi SRS hoặc đã có thẻ';
       case 'home_recently_added':
         return 'Thêm gần đây';
       case 'home_remote_source':
@@ -621008,7 +622421,7 @@ extension on _StringsVi {
       case 'nav_lookup':
         return 'Tra từ';
       case 'nav_srs':
-        return 'Ôn tập';
+        return 'SRS';
       case 'nav_video':
         return 'Video';
       case 'nav_web':
@@ -621374,15 +622787,15 @@ extension on _StringsVi {
       case 'onboarding_finish_body':
         return 'Bạn có thể mở lại hướng dẫn này bất cứ lúc nào từ Cài đặt → Hệ thống.';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return 'Trang thư viện hiển thị';
       case 'onboarding_finish_summary_none':
@@ -621575,7 +622988,7 @@ extension on _StringsVi {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -621607,7 +623020,7 @@ extension on _StringsVi {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return 'Cài đặt tạo thẻ';
       case 'onboarding_step_anki_action_desc':
@@ -623484,6 +624897,8 @@ extension on _StringsVi {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -623520,15 +624935,17 @@ extension on _StringsVi {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -623550,7 +624967,7 @@ extension on _StringsVi {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -623921,11 +625338,8 @@ extension on _StringsVi {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -623939,6 +625353,20 @@ extension on _StringsVi {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -624136,6 +625564,8 @@ extension on _StringsVi {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -624144,6 +625574,10 @@ extension on _StringsVi {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -624163,7 +625597,7 @@ extension on _StringsVi {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -624298,6 +625732,8 @@ extension on _StringsVi {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -624306,6 +625742,8 @@ extension on _StringsVi {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -624323,6 +625761,12 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -624358,7 +625802,7 @@ extension on _StringsVi {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -624878,7 +626322,7 @@ extension on _StringsVi {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -624894,9 +626338,9 @@ extension on _StringsVi {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -624905,12 +626349,21 @@ extension on _StringsVi {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -631898,7 +633351,7 @@ extension on _StringsZhCn {
       case 'backup_category_settings_desc':
         return '应用与阅读器设置';
       case 'backup_category_srs':
-        return '复习';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
       case 'backup_category_statistics':
@@ -632385,13 +633838,13 @@ extension on _StringsZhCn {
       case 'card_target_current':
         return '当前';
       case 'card_target_srs_enable':
-        return '开启 Fushi 复习';
+        return '开启 Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
+        return '将开启「SRS」模块，之后制的卡发往 Fushi SRS。随时可以改回 Anki。';
       case 'card_target_srs_hint':
         return '内置间隔复习，无需安装 Anki';
       case 'card_target_srs_title':
-        return '发往 Fushi 复习';
+        return '发往 Fushi SRS';
       case 'change_source':
         return '切换来源';
       case 'changelog_empty':
@@ -636639,7 +638092,7 @@ extension on _StringsZhCn {
       case 'home_panel_mode_shown':
         return '显示';
       case 'home_panel_srs_hint':
-        return '自动：制卡发往 Fushi 复习或已有复习卡时显示';
+        return '自动：制卡发往 Fushi SRS 或已有复习卡时显示';
       case 'home_recently_added':
         return '最近添加';
       case 'home_remote_source':
@@ -639235,7 +640688,7 @@ extension on _StringsZhCn {
       case 'nav_lookup':
         return '查词';
       case 'nav_srs':
-        return '复习';
+        return 'SRS';
       case 'nav_video':
         return '视频';
       case 'nav_web':
@@ -639597,15 +641050,15 @@ extension on _StringsZhCn {
       case 'onboarding_finish_body':
         return '之后随时可以在「设置 → 系统」重新打开本引导。';
       case 'onboarding_finish_import_desc':
-        return '在「复习」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
+        return '在「SRS」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
       case 'onboarding_finish_import_title':
         return '导入已有的 Anki 牌组';
       case 'onboarding_finish_next_title':
         return '下一步';
       case 'onboarding_finish_review_desc':
-        return '制的卡会进入底栏的「复习」页，到期的卡在那里等你复习。';
+        return '制的卡会进入底栏的「SRS」页，到期的卡在那里等你复习。';
       case 'onboarding_finish_review_title':
-        return '在「复习」里复习';
+        return '在「SRS」里复习';
       case 'onboarding_finish_summary_modules':
         return '显示的库页';
       case 'onboarding_finish_summary_none':
@@ -639797,7 +641250,7 @@ extension on _StringsZhCn {
       case 'onboarding_review_fushi_desc':
         return '内置间隔复习，排程默认使用 FSRS-7。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
       case 'onboarding_review_fushi_title':
-        return 'Fushi 复习';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return '查词时制的卡在这里复习。之后随时可以在「设置 → 制卡」里更改。';
       case 'onboarding_review_method_title':
@@ -639829,7 +641282,7 @@ extension on _StringsZhCn {
       case 'onboarding_srs_sync_title':
         return '多设备自动同步';
       case 'onboarding_srs_title':
-        return 'Fushi 内置复习';
+        return 'Fushi 内置 SRS';
       case 'onboarding_step_anki_action':
         return '制卡设置';
       case 'onboarding_step_anki_action_desc':
@@ -641698,6 +643151,8 @@ extension on _StringsZhCn {
         return '本机找到的 Anki 集合';
       case 'srs_anki_migrate_grant_access':
         return '授予文件访问权限以查找 AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return '把本机 Anki / AnkiDroid 的整个集合连同复习记录搬过来';
       case 'srs_anki_migrate_intro':
         return '把 Anki 的牌组、笔记、笔记类型、复习进度和媒体一次搬过来。只读取 Anki 数据，不会改动它。';
       case 'srs_anki_migrate_ios_hint':
@@ -641733,15 +643188,17 @@ extension on _StringsZhCn {
         return ({required Object paths}) => '有些文件夹读取不了：${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
+            '开启 SRS 模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi SRS。';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect（Fushi 复习）';
+        return 'AnkiConnect（Fushi SRS）';
       case 'srs_backup_auto':
         return '自动备份';
       case 'srs_backup_auto_hint':
         return '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
       case 'srs_backup_change_location':
         return '更改存储位置';
+      case 'srs_backup_cloud_hint':
+        return '这里的备份只存在本机。想让复习数据上云或同步到其它设备，配置「同步与备份」（云盘）或「Fushi 互联」即可，复习数据会随它们自动同步。';
       case 'srs_backup_corrupt':
         return '备份文件已损坏';
       case 'srs_backup_delete':
@@ -641763,7 +643220,7 @@ extension on _StringsZhCn {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} 分钟';
       case 'srs_backup_invalid':
-        return '这个文件不是 Fushi 复习备份';
+        return '这个文件不是 Fushi SRS 备份';
       case 'srs_backup_keep_daily':
         return '每日备份保留份数';
       case 'srs_backup_keep_hint':
@@ -642128,11 +643585,8 @@ extension on _StringsZhCn {
         return '新卡';
       case 'srs_count_review':
         return '到期';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            '复习的「今天」在每天 ${hour} 点切换，与统计页共用同一个日界（在统计页的设置按钮里修改）。在这个时刻之前做的复习算前一天。';
-      case 'srs_day_boundary_title':
-        return '复习的「今天」从几点开始';
+      case 'srs_deck_browse_cards':
+        return '浏览此牌组的卡片';
       case 'srs_deck_collapse':
         return '收起子牌组';
       case 'srs_deck_delete':
@@ -642146,6 +643600,20 @@ extension on _StringsZhCn {
         return '展开子牌组';
       case 'srs_deck_menu':
         return '更多操作';
+      case 'srs_deck_move':
+        return '移动到…';
+      case 'srs_deck_move_down':
+        return '下移';
+      case 'srs_deck_move_drop_top_level':
+        return '拖到这里，移到顶层';
+      case 'srs_deck_move_into_own_subdeck':
+        return '不能移到它自己的子牌组里';
+      case 'srs_deck_move_name_taken':
+        return '那里已经有同名牌组';
+      case 'srs_deck_move_top_level':
+        return '顶层';
+      case 'srs_deck_move_up':
+        return '上移';
       case 'srs_deck_name':
         return '牌组名称';
       case 'srs_deck_name_invalid':
@@ -642341,6 +643809,8 @@ extension on _StringsZhCn {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             '已导入 ${n} 条，跳过 ${skipped} 条';
+      case 'srs_history_import_hint':
+        return '以前在 Fushi 里制过的卡（词、读音、释义、例句）';
       case 'srs_import':
         return '导入';
       case 'srs_import_background_started':
@@ -642349,6 +643819,10 @@ extension on _StringsZhCn {
         return '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
       case 'srs_import_failed':
         return ({required Object error}) => '导入失败：${error}';
+      case 'srs_import_file':
+        return '导入 .apkg / .colpkg 文件';
+      case 'srs_import_file_hint':
+        return '共享牌组，或从 Anki 导出的牌组文件';
       case 'srs_import_merge_notetypes':
         return '合并笔记模板';
       case 'srs_import_merge_notetypes_help':
@@ -642366,7 +643840,7 @@ extension on _StringsZhCn {
       case 'srs_import_report_conflicts':
         return ({required Object n}) => '有 ${n} 条笔记因笔记类型冲突未导入';
       case 'srs_import_report_fushi_restored':
-        return ({required Object n}) => '恢复 Fushi 复习记录：${n} 条';
+        return ({required Object n}) => '恢复 SRS 复习记录：${n} 条';
       case 'srs_import_report_future':
         return ({required Object n}) => '有 ${n} 张卡的排程时间在未来，导入时没带排程';
       case 'srs_import_report_invalid_params':
@@ -642490,12 +643964,16 @@ extension on _StringsZhCn {
       case 'srs_lapis_migration_confirm':
         return ({required Object name, required Object n}) =>
             '将「${name}」的 ${n} 条笔记迁移到 Fushi 卡片？';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => '卡片将移到「${deck}」。';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) => '${n} 条笔记可迁移或有遗漏字段可补';
       case 'srs_lapis_migration_fallback':
         return ({required Object n}) => '${n} 条笔记的空字段会从同含义的其它字段补上';
       case 'srs_lapis_migration_intro':
         return '把旧 Lapis 笔记类型（内置、从 Anki 导入或改过名的）迁到 Fushi 卡片。字段按含义对应，复习历史随卡迁移，确认后才写入。';
+      case 'srs_lapis_migration_keep_deck':
+        return '保持原牌组';
       case 'srs_lapis_migration_kind_builtin':
         return '内置 Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -642513,6 +643991,12 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 条笔记';
       case 'srs_lapis_migration_nothing':
         return '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return '不再提醒';
+      case 'srs_lapis_migration_reminder_title':
+        return '把旧 Lapis 笔记迁到 Fushi 卡片';
+      case 'srs_lapis_migration_target_deck':
+        return '迁移后放到牌组';
       case 'srs_lapis_migration_title':
         return '迁移旧 Lapis 到新模板';
       case 'srs_list_separator':
@@ -642548,7 +644032,7 @@ extension on _StringsZhCn {
       case 'srs_mining_target_hint':
         return '制卡时卡片发往哪里';
       case 'srs_mining_target_srs':
-        return 'Fushi 复习';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return '挖词目标';
       case 'srs_module_switch_hint':
@@ -643066,7 +644550,7 @@ extension on _StringsZhCn {
       case 'srs_stats_total':
         return '合计';
       case 'srs_stats_unavailable':
-        return '打开复习模块后可查看复习统计。';
+        return '打开 SRS 模块后可查看复习统计。';
       case 'srs_stats_view_count':
         return '次数';
       case 'srs_stats_view_cumulative':
@@ -643082,9 +644566,9 @@ extension on _StringsZhCn {
       case 'srs_status_new':
         return '新卡';
       case 'srs_status_open_tooltip':
-        return '在 Fushi 复习中打开';
+        return '在 Fushi SRS 中打开';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => '在 Fushi 复习中打开（${n} 张卡）';
+        return ({required Object n}) => '在 Fushi SRS 中打开（${n} 张卡）';
       case 'srs_status_review_in':
         return ({required Object n}) => '复习中 · ${n}天后';
       case 'srs_status_suspended':
@@ -643093,12 +644577,20 @@ extension on _StringsZhCn {
         return '当前同步后端不支持复习数据同步';
       case 'srs_sync_clock_skew':
         return '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
+      case 'srs_sync_directory_unidentified':
+        return '暂时认不出同步目录（账号或地址还没就绪）';
       case 'srs_sync_done':
         return '复习数据已同步';
+      case 'srs_sync_failed':
+        return ({required Object reason}) => '复习数据同步失败：${reason}';
       case 'srs_sync_no_backend':
         return '还没有配置同步服务';
       case 'srs_sync_now':
         return '立即同步';
+      case 'srs_sync_setup_body':
+        return '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
+      case 'srs_sync_store_unavailable':
+        return '本机的 SRS 数据此刻没有打开';
       case 'srs_value_no':
         return '否';
       case 'srs_value_yes':
@@ -650029,7 +651521,7 @@ extension on _StringsZhHk {
       case 'backup_category_settings_desc':
         return '應用與閱讀器設定';
       case 'backup_category_srs':
-        return 'Review';
+        return 'SRS';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'backup_category_statistics':
@@ -650516,13 +652008,13 @@ extension on _StringsZhHk {
       case 'card_target_current':
         return 'Current';
       case 'card_target_srs_enable':
-        return 'Turn on Fushi review';
+        return 'Turn on Fushi SRS';
       case 'card_target_srs_enable_confirm':
-        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+        return 'This turns on the SRS module and sends cards you mine to Fushi SRS. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
       case 'card_target_srs_title':
-        return 'Send to Fushi review';
+        return 'Send to Fushi SRS';
       case 'change_source':
         return '切換來源';
       case 'changelog_empty':
@@ -654788,7 +656280,7 @@ extension on _StringsZhHk {
       case 'home_panel_mode_shown':
         return '顯示';
       case 'home_panel_srs_hint':
-        return '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
+        return '自動：製卡發往 Fushi SRS 或已有複習卡時顯示';
       case 'home_recently_added':
         return '最近添加';
       case 'home_remote_source':
@@ -657391,7 +658883,7 @@ extension on _StringsZhHk {
       case 'nav_lookup':
         return '查詞';
       case 'nav_srs':
-        return '複習';
+        return 'SRS';
       case 'nav_video':
         return '影片';
       case 'nav_web':
@@ -657754,15 +659246,15 @@ extension on _StringsZhHk {
       case 'onboarding_finish_body':
         return '之後隨時可以在「設定 → 系統」重新打開本引導。';
       case 'onboarding_finish_import_desc':
-        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+        return 'On the SRS page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       case 'onboarding_finish_import_title':
         return 'Bring your Anki decks';
       case 'onboarding_finish_next_title':
         return 'Next steps';
       case 'onboarding_finish_review_desc':
-        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+        return 'Cards you make land on the SRS tab; cards that are due wait for you there.';
       case 'onboarding_finish_review_title':
-        return 'Review on the Review tab';
+        return 'Review on the SRS tab';
       case 'onboarding_finish_summary_modules':
         return '顯示的庫頁';
       case 'onboarding_finish_summary_none':
@@ -657954,7 +659446,7 @@ extension on _StringsZhHk {
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_review_method_body':
         return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
       case 'onboarding_review_method_title':
@@ -657986,7 +659478,7 @@ extension on _StringsZhHk {
       case 'onboarding_srs_sync_title':
         return 'Syncs across devices';
       case 'onboarding_srs_title':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'onboarding_step_anki_action':
         return '製卡設定';
       case 'onboarding_step_anki_action_desc':
@@ -659858,6 +661350,8 @@ extension on _StringsZhHk {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -659894,15 +661388,17 @@ extension on _StringsZhHk {
             'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
-            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+            'With the SRS module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi SRS.';
       case 'srs_ankiconnect_title':
-        return 'AnkiConnect for Fushi review';
+        return 'AnkiConnect for Fushi SRS';
       case 'srs_backup_auto':
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -659924,7 +661420,7 @@ extension on _StringsZhHk {
       case 'srs_backup_interval_minutes':
         return ({required Object n}) => '${n} min';
       case 'srs_backup_invalid':
-        return 'This file is not a Fushi review backup';
+        return 'This file is not a Fushi SRS backup';
       case 'srs_backup_keep_daily':
         return 'Daily backups to keep';
       case 'srs_backup_keep_hint':
@@ -660295,11 +661791,8 @@ extension on _StringsZhHk {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
+      case 'srs_deck_browse_cards':
+        return 'Browse cards in this deck';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
       case 'srs_deck_delete':
@@ -660313,6 +661806,20 @@ extension on _StringsZhHk {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -660510,6 +662017,8 @@ extension on _StringsZhHk {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -660518,6 +662027,10 @@ extension on _StringsZhHk {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -660536,8 +662049,7 @@ extension on _StringsZhHk {
         return ({required Object n}) =>
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
-        return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+        return ({required Object n}) => '恢復 SRS 複習記錄：${n} 條';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -660672,6 +662184,8 @@ extension on _StringsZhHk {
       case 'srs_lapis_migration_confirm':
         return ({required Object n, required Object name}) =>
             'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_confirm_deck':
+        return ({required Object deck}) => 'Cards will be moved to “${deck}”.';
       case 'srs_lapis_migration_entry_summary':
         return ({required Object n}) =>
             '${n} notes can be migrated or have missed fields';
@@ -660680,6 +662194,8 @@ extension on _StringsZhHk {
             '${n} notes fill an empty field from another field with the same meaning';
       case 'srs_lapis_migration_intro':
         return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_keep_deck':
+        return 'Keep current decks';
       case 'srs_lapis_migration_kind_builtin':
         return 'Built-in Lapis';
       case 'srs_lapis_migration_kind_fields':
@@ -660697,6 +662213,12 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} notes';
       case 'srs_lapis_migration_nothing':
         return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_reminder_dismiss':
+        return 'Don\'t remind again';
+      case 'srs_lapis_migration_reminder_title':
+        return 'Migrate old Lapis notes to Fushi Card';
+      case 'srs_lapis_migration_target_deck':
+        return 'Destination deck';
       case 'srs_lapis_migration_title':
         return 'Migrate old Lapis';
       case 'srs_list_separator':
@@ -660732,7 +662254,7 @@ extension on _StringsZhHk {
       case 'srs_mining_target_hint':
         return 'Where a card goes when you mine a word';
       case 'srs_mining_target_srs':
-        return 'Fushi review';
+        return 'Fushi SRS';
       case 'srs_mining_target_title':
         return 'Mining target';
       case 'srs_module_switch_hint':
@@ -661252,7 +662774,7 @@ extension on _StringsZhHk {
       case 'srs_stats_total':
         return 'Total';
       case 'srs_stats_unavailable':
-        return 'Turn on the review module to see review statistics.';
+        return 'Turn on the SRS module to see review statistics.';
       case 'srs_stats_view_count':
         return 'Count';
       case 'srs_stats_view_cumulative':
@@ -661268,9 +662790,9 @@ extension on _StringsZhHk {
       case 'srs_status_new':
         return 'New card';
       case 'srs_status_open_tooltip':
-        return 'Open in Fushi review';
+        return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
-        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+        return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -661279,12 +662801,21 @@ extension on _StringsZhHk {
         return 'The current sync service doesn\'t support syncing review data';
       case 'srs_sync_clock_skew':
         return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_sync_directory_unidentified':
+        return 'The sync folder can\'t be identified yet (account or address not ready)';
       case 'srs_sync_done':
         return 'Review data synced';
+      case 'srs_sync_failed':
+        return ({required Object reason}) =>
+            'Couldn\'t sync review data: ${reason}';
       case 'srs_sync_no_backend':
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return '本機的 SRS 資料此刻沒有開啟';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
