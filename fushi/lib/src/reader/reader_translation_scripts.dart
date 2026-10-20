@@ -187,24 +187,20 @@ if (!window.fushiTranslation) {
       collectVisibleTargets: function(ahead, limit) {
         var list = candidates(document.body);
         var out = [];
-        var winCount = 0;
-        var seen = 0;
-        var firstRect = null;
         for (var i = 0; i < list.length; i++) {
           if (out.length >= limit) break;
           var el = list[i];
           if (el.getAttribute(DONE_ATTR)) continue;
-          if (!hasOwnText(el)) continue;
+          // 修复（见 docs/bugs/BUG-3370-reader-translation-span-wrap-stops.md）：
+          // 阅读器会把句子包进 <SPAN class="fushi-senten"> 做逐句音频高亮，段落从
+          // <P>文本</P> 变成 <P><SPAN>文本</SPAN></P>。原 hasOwnText 只认「直接文本
+          // 子节点」，此时返回 false 把整段跳过，表现为「滚动/高亮后翻译停止」。
+          // 语义块候选（p/li/…）应以整体 textContent 是否非空为判据。
+          if (!(el.textContent || '').trim()) continue;
           if (!inWindow(el, ahead)) continue;
-          winCount++;
           var text = (el.textContent || '').trim();
           // 太短的片段（页码、分隔线、"…"）译出来也没有对照价值，纯浪费往返。
           if (text.length < 2) continue;
-          if (firstRect === null) {
-            var r0 = el.getBoundingClientRect();
-            firstRect = { t: Math.round(r0.top), b: Math.round(r0.bottom) };
-          }
-          seen++;
           out.push({ id: ensureId(el), text: text });
         }
         return JSON.stringify(out);
