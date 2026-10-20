@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 151572 (8916 per locale)
+/// Strings: 151589 (8917 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3391,6 +3391,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_subscription_delete => 'Delete subscription';
   String download_subscription_delete_confirm({required Object title}) =>
       'Delete the subscription for ${title}? Downloaded tasks are kept.';
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   String get download_subscription_download_and_create =>
       'Download and subscribe';
   String get download_subscription_empty_body =>
@@ -18279,6 +18281,9 @@ class _StringsAr extends _StringsEn {
   @override
   String download_subscription_delete_confirm({required Object title}) =>
       'حذف اشتراك ${title}؟ مهام التحميل يتم الاحتفاظ بها.';
+  @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   @override
   String get download_subscription_download_and_create => 'تحميل واشتراك';
   @override
@@ -39998,6 +40003,9 @@ class _StringsDe extends _StringsEn {
   @override
   String download_subscription_delete_confirm({required Object title}) =>
       'Das Abonnement für ${title} löschen? Heruntergeladene Aufgaben bleiben erhalten.';
+  @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   @override
   String get download_subscription_download_and_create =>
       'Herunterladen und abonnieren';
@@ -62039,6 +62047,9 @@ class _StringsEs extends _StringsEn {
   @override
   String download_subscription_delete_confirm({required Object title}) =>
       '¿Eliminar la suscripción de ${title}? Las tareas descargadas se conservan.';
+  @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   @override
   String get download_subscription_download_and_create =>
       'Descargar y suscribirse';
@@ -84146,6 +84157,9 @@ class _StringsFr extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Supprimer l\'abonnement pour ${title} ? Les tâches téléchargées sont conservées.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Télécharger et s\'abonner';
   @override
@@ -106213,6 +106227,9 @@ class _StringsId extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Hapus langganan untuk ${title}? Tugas yang sudah diunduh tetap ada.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Unduh dan berlangganan';
   @override
@@ -128068,6 +128085,9 @@ class _StringsIt extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Eliminare l\'abbonamento per ${title}? I download già effettuati vengono mantenuti.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'Scarica e abbonati';
   @override
   String get download_subscription_empty_body =>
@@ -149818,6 +149838,9 @@ class _StringsJa extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '「${title}」の購読を削除しますか？ダウンロード済みのタスクは保持されます。';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'ダウンロードして購読';
   @override
   String get download_subscription_empty_body =>
@@ -170751,6 +170774,9 @@ class _StringsKo extends _StringsEn {
   @override
   String download_subscription_delete_confirm({required Object title}) =>
       '${title}에 대한 구독을 삭제하시겠습니까? 다운로드된 작업은 유지됩니다.';
+  @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   @override
   String get download_subscription_download_and_create => '다운로드 및 구독';
   @override
@@ -191989,6 +192015,9 @@ class _StringsNl extends _StringsEn {
   @override
   String download_subscription_delete_confirm({required Object title}) =>
       'Het abonnement voor ${title} verwijderen? Gedownloade taken worden bewaard.';
+  @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   @override
   String get download_subscription_download_and_create =>
       'Downloaden en abonneren';
@@ -213933,6 +213962,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String download_subscription_delete_confirm({required Object title}) =>
       'Excluir a assinatura de ${title}? Tarefas já baixadas são mantidas.';
+  @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   @override
   String get download_subscription_download_and_create => 'Baixar e assinar';
   @override
@@ -235907,6 +235939,9 @@ class _StringsRu extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Удалить подписку на ${title}? Загруженные задачи сохранятся.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Скачать и подписаться';
   @override
@@ -257778,6 +257813,9 @@ class _StringsTh extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'ลบการติดตาม ${title}? งานที่ดาวน์โหลดแล้วจะยังคงอยู่';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create => 'ดาวน์โหลดและติดตาม';
   @override
   String get download_subscription_empty_body =>
@@ -279448,6 +279486,9 @@ class _StringsTr extends _StringsEn {
   @override
   String download_subscription_delete_confirm({required Object title}) =>
       '${title} aboneliği silinsin mi? İndirilen görevler korunur.';
+  @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
   @override
   String get download_subscription_download_and_create => 'İndir ve abone ol';
   @override
@@ -301261,6 +301302,9 @@ class _StringsVi extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       'Xóa đăng ký cho ${title}? Các tác vụ đã tải được giữ lại.';
   @override
+  String get download_subscription_disabled_enable_first =>
+      'This subscription is disabled. Enable it first.';
+  @override
   String get download_subscription_download_and_create =>
       'Tải xuống và đăng ký';
   @override
@@ -322550,6 +322594,8 @@ class _StringsZhCn extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '删除“${title}”的订阅吗？已创建的下载任务会保留。';
   @override
+  String get download_subscription_disabled_enable_first => '订阅已停用，请先启用';
+  @override
   String get download_subscription_download_and_create => '下载并订阅';
   @override
   String get download_subscription_empty_body => '在“发现”中选择一个单集发布，然后使用“下载并订阅”。';
@@ -342548,6 +342594,8 @@ class _StringsZhHk extends _StringsEn {
   String download_subscription_delete_confirm({required Object title}) =>
       '刪除“${title}”的訂閱嗎？已創建的下載任務會保留。';
   @override
+  String get download_subscription_disabled_enable_first => '訂閱已停用，請先啟用';
+  @override
   String get download_subscription_download_and_create => '下載並訂閱';
   @override
   String get download_subscription_empty_body => '在“發現”中選擇一個單集發布，然後使用“下載並訂閱”。';
@@ -362356,6 +362404,8 @@ extension on _StringsEn {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Delete the subscription for ${title}? Downloaded tasks are kept.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Download and subscribe';
       case 'download_subscription_empty_body':
@@ -380886,6 +380936,8 @@ extension on _StringsAr {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'حذف اشتراك ${title}؟ مهام التحميل يتم الاحتفاظ بها.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'تحميل واشتراك';
       case 'download_subscription_empty_body':
@@ -399438,6 +399490,8 @@ extension on _StringsDe {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Das Abonnement für ${title} löschen? Heruntergeladene Aufgaben bleiben erhalten.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Herunterladen und abonnieren';
       case 'download_subscription_empty_body':
@@ -418027,6 +418081,8 @@ extension on _StringsEs {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             '¿Eliminar la suscripción de ${title}? Las tareas descargadas se conservan.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Descargar y suscribirse';
       case 'download_subscription_empty_body':
@@ -436621,6 +436677,8 @@ extension on _StringsFr {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Supprimer l\'abonnement pour ${title} ? Les tâches téléchargées sont conservées.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Télécharger et s\'abonner';
       case 'download_subscription_empty_body':
@@ -455198,6 +455256,8 @@ extension on _StringsId {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Hapus langganan untuk ${title}? Tugas yang sudah diunduh tetap ada.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Unduh dan berlangganan';
       case 'download_subscription_empty_body':
@@ -473750,6 +473810,8 @@ extension on _StringsIt {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Eliminare l\'abbonamento per ${title}? I download già effettuati vengono mantenuti.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Scarica e abbonati';
       case 'download_subscription_empty_body':
@@ -492290,6 +492352,8 @@ extension on _StringsJa {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             '「${title}」の購読を削除しますか？ダウンロード済みのタスクは保持されます。';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'ダウンロードして購読';
       case 'download_subscription_empty_body':
@@ -510736,6 +510800,8 @@ extension on _StringsKo {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             '${title}에 대한 구독을 삭제하시겠습니까? 다운로드된 작업은 유지됩니다.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return '다운로드 및 구독';
       case 'download_subscription_empty_body':
@@ -529232,6 +529298,8 @@ extension on _StringsNl {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Het abonnement voor ${title} verwijderen? Gedownloade taken worden bewaard.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Downloaden en abonneren';
       case 'download_subscription_empty_body':
@@ -547805,6 +547873,8 @@ extension on _StringsPtBr {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Excluir a assinatura de ${title}? Tarefas já baixadas são mantidas.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Baixar e assinar';
       case 'download_subscription_empty_body':
@@ -566377,6 +566447,8 @@ extension on _StringsRu {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Удалить подписку на ${title}? Загруженные задачи сохранятся.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Скачать и подписаться';
       case 'download_subscription_empty_body':
@@ -584924,6 +584996,8 @@ extension on _StringsTh {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'ลบการติดตาม ${title}? งานที่ดาวน์โหลดแล้วจะยังคงอยู่';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'ดาวน์โหลดและติดตาม';
       case 'download_subscription_empty_body':
@@ -603468,6 +603542,8 @@ extension on _StringsTr {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             '${title} aboneliği silinsin mi? İndirilen görevler korunur.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'İndir ve abone ol';
       case 'download_subscription_empty_body':
@@ -622018,6 +622094,8 @@ extension on _StringsVi {
       case 'download_subscription_delete_confirm':
         return ({required Object title}) =>
             'Xóa đăng ký cho ${title}? Các tác vụ đã tải được giữ lại.';
+      case 'download_subscription_disabled_enable_first':
+        return 'This subscription is disabled. Enable it first.';
       case 'download_subscription_download_and_create':
         return 'Tải xuống và đăng ký';
       case 'download_subscription_empty_body':
@@ -640485,6 +640563,8 @@ extension on _StringsZhCn {
         return '删除订阅';
       case 'download_subscription_delete_confirm':
         return ({required Object title}) => '删除“${title}”的订阅吗？已创建的下载任务会保留。';
+      case 'download_subscription_disabled_enable_first':
+        return '订阅已停用，请先启用';
       case 'download_subscription_download_and_create':
         return '下载并订阅';
       case 'download_subscription_empty_body':
@@ -658806,6 +658886,8 @@ extension on _StringsZhHk {
         return '刪除訂閱';
       case 'download_subscription_delete_confirm':
         return ({required Object title}) => '刪除“${title}”的訂閱嗎？已創建的下載任務會保留。';
+      case 'download_subscription_disabled_enable_first':
+        return '訂閱已停用，請先啟用';
       case 'download_subscription_download_and_create':
         return '下載並訂閱';
       case 'download_subscription_empty_body':
