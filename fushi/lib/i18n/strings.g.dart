@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150773 (8869 per locale)
+/// Strings: 150909 (8877 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2942,6 +2942,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_rename_label => 'Dictionary name';
   String get dict_reorder_hint_desktop => 'Drag to reorder · Alt+↑/↓';
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
   String get dict_selection_exit => 'Exit selection';
   String get dict_status_disabled => 'Disabled';
   String get dict_style_ai_applied =>
@@ -3019,7 +3021,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dictionaries_delete_failed => 'Failed to delete dictionaries';
   String get dictionaries_deleting_data => 'Deleting dictionary data...';
   String get dictionaries_menu_empty => 'Import a dictionary for use';
-  String get dictionary_collapse_follow_global => 'Follow global setting';
   String get dictionary_delete_failed => 'Failed to delete dictionary';
   String get dictionary_font_size => 'Dictionary font size';
   String get dictionary_font_size_zoom_hint =>
@@ -5568,6 +5569,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_upload_content => 'Upload book files';
   String get interconnect_upload_content_hint =>
       'Sync this device\'s books and reading content up to the interconnect peer.';
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   String get interconnect_upload_section => 'Upload to interconnect peer';
   String get interconnect_upload_section_footer =>
       'Choose what this device uploads to the connected peer. Independent from the cloud backup switches and off by default. These switches only apply while Enable interconnect is on: turning interconnect off stops every upload here.';
@@ -9014,8 +9018,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   String get srs_deck_collapse => 'Collapse subdecks';
   String get srs_deck_delete => 'Delete deck';
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   String get srs_deck_deleting => 'Deleting…';
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_menu => 'More actions';
@@ -10224,6 +10234,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_last_no_channels =>
       'Last sync: nothing synced - no connected sync channel';
   String get sync_last_nothing => 'Last sync: nothing to sync';
+  String get sync_manga_content => 'Upload manga files';
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
   String get sync_not_signed_in => 'Not signed in';
   String get sync_now => 'Sync now';
   String sync_now_audio_in({required Object count}) => '↓${count} audiobooks';
@@ -10784,7 +10797,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get url => 'URL';
   String get usage_stats_enabled => 'Share usage statistics';
   String get usage_stats_enabled_hint =>
-      'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
+      'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform, update channel, app language, CPU architecture, OS major version and install source (e.g. app store or installer) to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored — only the country or region it resolves to is kept. When you attach device info to feedback, the install ID is sent with it.';
   String get video_air_season_autumn => 'Fall';
   String get video_air_season_spring => 'Spring';
   String get video_air_season_summer => 'Summer';
@@ -17443,6 +17456,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -17573,8 +17589,6 @@ class _StringsAr extends _StringsEn {
   String get dictionaries_deleting_data => 'جارٍ حذف بيانات القاموس...';
   @override
   String get dictionaries_menu_empty => 'استورد قاموساً للاستخدام';
-  @override
-  String get dictionary_collapse_follow_global => 'اتباع الإعداد العام';
   @override
   String get dictionary_delete_failed => 'فشل حذف القاموس';
   @override
@@ -21886,6 +21900,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'مزامنة كتب ومحتوى القراءة على هذا الجهاز إلى نظير الترابط.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'الرفع إلى نظير الترابط';
   @override
@@ -27838,8 +27857,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -29950,6 +29979,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_last_nothing => 'آخر مزامنة: لا شيء لمزامنته';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'لم يتم تسجيل الدخول';
   @override
   String get sync_now => 'زامن الآن';
@@ -30910,7 +30944,7 @@ class _StringsAr extends _StringsEn {
   String get usage_stats_enabled => 'مشاركة إحصاءات الاستخدام';
   @override
   String get usage_stats_enabled_hint =>
-      'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
+      'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث ولغة التطبيق وبنية المعالج والإصدار الرئيسي لنظام التشغيل ومصدر التثبيت (مثل متجر التطبيقات أو المثبّت) إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك، بل يُحفَظ فقط البلد أو المنطقة المستنتجة منه. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
   @override
   String get video_air_season_autumn => 'خريف';
   @override
@@ -39017,6 +39051,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -39153,8 +39190,6 @@ class _StringsDe extends _StringsEn {
   String get dictionaries_deleting_data => 'Wörterbuchdaten werden gelöscht...';
   @override
   String get dictionaries_menu_empty => 'Importieren Sie ein Wörterbuch';
-  @override
-  String get dictionary_collapse_follow_global => 'Globaler Einstellung folgen';
   @override
   String get dictionary_delete_failed =>
       'Löschen des Wörterbuchs fehlgeschlagen';
@@ -43567,6 +43602,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Bücher und Leseinhalte dieses Geräts zum Interconnect-Peer synchronisieren.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Zum Interconnect-Peer hochladen';
   @override
@@ -49642,8 +49682,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -51763,6 +51813,11 @@ class _StringsDe extends _StringsEn {
   String get sync_last_nothing =>
       'Letzte Synchronisierung: nichts zu synchronisieren';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Nicht angemeldet';
   @override
   String get sync_now => 'Jetzt synchronisieren';
@@ -52744,7 +52799,7 @@ class _StringsDe extends _StringsEn {
   String get usage_stats_enabled => 'Nutzungsstatistiken teilen';
   @override
   String get usage_stats_enabled_hint =>
-      'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
+      'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform, den Update-Kanal, die App-Sprache, die CPU-Architektur, die Hauptversion des Betriebssystems und die Installationsquelle (z. B. App-Store oder Installer) an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert – nur das daraus ermittelte Land bzw. die Region. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
   @override
   String get video_air_season_autumn => 'Herbst';
   @override
@@ -60929,6 +60984,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -61066,8 +61124,6 @@ class _StringsEs extends _StringsEn {
       'Eliminando datos del diccionario...';
   @override
   String get dictionaries_menu_empty => 'Importa un diccionario para usar';
-  @override
-  String get dictionary_collapse_follow_global => 'Seguir el ajuste global';
   @override
   String get dictionary_delete_failed => 'No se pudo eliminar el diccionario';
   @override
@@ -65483,6 +65539,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Sincroniza los libros y contenido de lectura de este dispositivo al par de Interconnect.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Subir al par de Interconnect';
   @override
@@ -71570,8 +71631,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -73696,6 +73767,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_last_nothing => 'Última sincronización: nada que sincronizar';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'No conectado';
   @override
   String get sync_now => 'Sincronizar ahora';
@@ -74683,7 +74759,7 @@ class _StringsEs extends _StringsEn {
   String get usage_stats_enabled => 'Compartir estadísticas de uso';
   @override
   String get usage_stats_enabled_hint =>
-      'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
+      'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma, el canal de actualizaciones, el idioma de la app, la arquitectura de CPU, la versión principal del sistema y el origen de instalación (p. ej. tienda o instalador) para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda: solo se conserva el país o región que se deduce de ella. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
   @override
   String get video_air_season_autumn => 'Otoño';
   @override
@@ -82907,6 +82983,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -83046,8 +83125,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Importez un dictionnaire pour l\'utiliser';
-  @override
-  String get dictionary_collapse_follow_global => 'Suivre le réglage global';
   @override
   String get dictionary_delete_failed =>
       'Échec de la suppression du dictionnaire';
@@ -87472,6 +87549,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Synchroniser les livres et le contenu de lecture de cet appareil vers le pair d\'interconnexion.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section =>
       'Envoyer vers le pair d\'interconnexion';
@@ -93586,8 +93668,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -95707,6 +95799,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_last_nothing => 'Dernière synchro : rien à synchroniser';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Non connecté';
   @override
   String get sync_now => 'Synchroniser maintenant';
@@ -96697,7 +96794,7 @@ class _StringsFr extends _StringsEn {
   String get usage_stats_enabled => 'Partager les statistiques d’utilisation';
   @override
   String get usage_stats_enabled_hint =>
-      'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
+      'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme, le canal de mise à jour, la langue de l’app, l’architecture du processeur, la version majeure du système et la source d’installation (boutique ou installateur, par ex.) afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée : seul le pays ou la région qui en découle est gardé. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
   @override
   String get video_air_season_autumn => 'Automne';
   @override
@@ -104867,6 +104964,9 @@ class _StringsId extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -105000,8 +105100,6 @@ class _StringsId extends _StringsEn {
   String get dictionaries_deleting_data => 'Menghapus data kamus...';
   @override
   String get dictionaries_menu_empty => 'Impor kamus untuk digunakan';
-  @override
-  String get dictionary_collapse_follow_global => 'Ikuti pengaturan global';
   @override
   String get dictionary_delete_failed => 'Gagal menghapus kamus';
   @override
@@ -109358,6 +109456,11 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Sinkronkan buku dan konten bacaan perangkat ini ke peer interconnect.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Unggah ke peer interconnect';
   @override
@@ -115366,8 +115469,18 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -117480,6 +117593,11 @@ class _StringsId extends _StringsEn {
   String get sync_last_nothing =>
       'Sinkronisasi terakhir: tidak ada yang perlu disinkronkan';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Belum masuk';
   @override
   String get sync_now => 'Sinkronkan sekarang';
@@ -118451,7 +118569,7 @@ class _StringsId extends _StringsEn {
   String get usage_stats_enabled => 'Bagikan statistik penggunaan';
   @override
   String get usage_stats_enabled_hint =>
-      'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
+      'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, kanal pembaruan, bahasa aplikasi, arsitektur CPU, versi utama sistem operasi, dan sumber instalasi (misalnya toko aplikasi atau penginstal) ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan — hanya negara atau wilayah yang ditentukan darinya. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
   @override
   String get video_air_season_autumn => 'Musim gugur';
   @override
@@ -126588,6 +126706,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -126724,9 +126845,6 @@ class _StringsIt extends _StringsEn {
       'Eliminazione dati del dizionario...';
   @override
   String get dictionaries_menu_empty => 'Importa un dizionario per l\'uso';
-  @override
-  String get dictionary_collapse_follow_global =>
-      'Segui l\'impostazione globale';
   @override
   String get dictionary_delete_failed => 'Impossibile eliminare il dizionario';
   @override
@@ -131120,6 +131238,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Sincronizza i libri e i contenuti di lettura di questo dispositivo sul peer interconnect.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Carica sul peer interconnect';
   @override
@@ -137189,8 +137312,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -139306,6 +139439,11 @@ class _StringsIt extends _StringsEn {
   String get sync_last_nothing =>
       'Ultima sincronizzazione: nulla da sincronizzare';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Non connesso';
   @override
   String get sync_now => 'Sincronizza ora';
@@ -140286,7 +140424,7 @@ class _StringsIt extends _StringsEn {
   String get usage_stats_enabled => 'Condividi statistiche di utilizzo';
   @override
   String get usage_stats_enabled_hint =>
-      'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
+      'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma, il canale di aggiornamento, la lingua dell\'app, l\'architettura della CPU, la versione principale del sistema e l\'origine dell\'installazione (es. store o programma di installazione), così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato: si conserva solo il paese o la regione che ne deriva. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
   @override
   String get video_air_season_autumn => 'Autunno';
   @override
@@ -148249,6 +148387,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -148377,8 +148518,6 @@ class _StringsJa extends _StringsEn {
   String get dictionaries_deleting_data => '辞書データを削除中...';
   @override
   String get dictionaries_menu_empty => '辞書をインポートしてください';
-  @override
-  String get dictionary_collapse_follow_global => '全体設定に従う';
   @override
   String get dictionary_delete_failed => '辞書の削除に失敗しました';
   @override
@@ -152538,6 +152677,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'このデバイスの書籍と読書コンテンツをインターコネクトピアに同期します。';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'インターコネクトピアにアップロード';
   @override
@@ -158305,8 +158449,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -160381,6 +160535,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_last_nothing => '最終同期: 同期対象なし';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => '未ログイン';
   @override
   String get sync_now => '今すぐ同期';
@@ -161310,7 +161469,7 @@ class _StringsJa extends _StringsEn {
   String get usage_stats_enabled => '利用統計を送信';
   @override
   String get usage_stats_enabled_hint =>
-      '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
+      '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネル・アプリの表示言語・CPU アーキテクチャ・OS のメジャーバージョン・インストール元（ストアやインストーラーなど）を fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません（そこから判定した国・地域のみ記録します）。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -169064,6 +169223,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -169191,8 +169353,6 @@ class _StringsKo extends _StringsEn {
   String get dictionaries_deleting_data => '사전 데이터 삭제 중...';
   @override
   String get dictionaries_menu_empty => '사용할 사전을 가져오세요';
-  @override
-  String get dictionary_collapse_follow_global => '전역 설정 따르기';
   @override
   String get dictionary_delete_failed => '사전 삭제 실패';
   @override
@@ -173363,6 +173523,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       '이 기기의 도서 및 읽기 콘텐츠를 인터커넥트 피어로 동기화합니다.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => '인터커넥트 피어로 업로드';
   @override
@@ -179147,8 +179312,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -181225,6 +181400,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_last_nothing => '마지막 동기화: 동기화할 항목 없음';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => '로그인되지 않음';
   @override
   String get sync_now => '지금 동기화';
@@ -182154,7 +182334,7 @@ class _StringsKo extends _StringsEn {
   String get usage_stats_enabled => '사용 통계 보내기';
   @override
   String get usage_stats_enabled_hint =>
-      '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
+      '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널, 앱 언어, CPU 아키텍처, OS 주 버전, 설치 경로(앱 스토어·설치 프로그램 등)를 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않으며, 이를 통해 판별한 국가/지역만 기록합니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
   @override
   String get video_air_season_autumn => '가을';
   @override
@@ -190137,6 +190317,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -190273,8 +190456,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Importeer een woordenboek voor gebruik';
-  @override
-  String get dictionary_collapse_follow_global => 'Globale instelling volgen';
   @override
   String get dictionary_delete_failed => 'Verwijderen van woordenboek mislukt';
   @override
@@ -194651,6 +194832,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Synchroniseer de boeken en leesinhoud van dit apparaat naar de interconnectpeer.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Uploaden naar interconnectpeer';
   @override
@@ -200697,8 +200883,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -202815,6 +203011,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_last_nothing => 'Laatste sync: niets te synchroniseren';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Niet aangemeld';
   @override
   String get sync_now => 'Nu synchroniseren';
@@ -203798,7 +203999,7 @@ class _StringsNl extends _StringsEn {
   String get usage_stats_enabled => 'Gebruiksstatistieken delen';
   @override
   String get usage_stats_enabled_hint =>
-      'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
+      'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform, het updatekanaal, de app-taal, de CPU-architectuur, de hoofdversie van het besturingssysteem en de installatiebron (bijv. app-winkel of installatieprogramma) naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen; alleen het daaruit afgeleide land of de regio wordt bewaard. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
   @override
   String get video_air_season_autumn => 'Herfst';
   @override
@@ -211954,6 +212155,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -212089,8 +212293,6 @@ class _StringsPtBr extends _StringsEn {
   String get dictionaries_deleting_data => 'Excluindo dados do dicionário...';
   @override
   String get dictionaries_menu_empty => 'Importe um dicionário para uso';
-  @override
-  String get dictionary_collapse_follow_global => 'Seguir configuração global';
   @override
   String get dictionary_delete_failed => 'Falha ao excluir dicionário';
   @override
@@ -216490,6 +216692,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Sincronizar livros e conteúdo de leitura deste dispositivo para o par da interconexão.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Upload para par da interconexão';
   @override
@@ -222549,8 +222756,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -224667,6 +224884,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_last_nothing => 'Última sincronização: nada para sincronizar';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Não conectado';
   @override
   String get sync_now => 'Sincronizar agora';
@@ -225647,7 +225869,7 @@ class _StringsPtBr extends _StringsEn {
   String get usage_stats_enabled => 'Compartilhar estatísticas de uso';
   @override
   String get usage_stats_enabled_hint =>
-      'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
+      'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma, o canal de atualização, o idioma do app, a arquitetura da CPU, a versão principal do sistema e a origem da instalação (ex.: loja ou instalador) para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado — só o país ou região deduzido dele é guardado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
   @override
   String get video_air_season_autumn => 'Outono';
   @override
@@ -233808,6 +234030,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -233942,8 +234167,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Импортируйте словарь для использования';
-  @override
-  String get dictionary_collapse_follow_global => 'Как в общих настройках';
   @override
   String get dictionary_delete_failed => 'Не удалось удалить словарь';
   @override
@@ -238320,6 +238543,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Синхронизировать книги и контент для чтения этого устройства с партнёром по взаимосвязи.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section =>
       'Загрузка на партнёра по взаимосвязи';
@@ -244380,8 +244608,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -246497,6 +246735,11 @@ class _StringsRu extends _StringsEn {
   String get sync_last_nothing =>
       'Последняя синхронизация: нечего синхронизировать';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Не авторизован';
   @override
   String get sync_now => 'Синхронизировать сейчас';
@@ -247471,7 +247714,7 @@ class _StringsRu extends _StringsEn {
   String get usage_stats_enabled => 'Отправлять статистику использования';
   @override
   String get usage_stats_enabled_hint =>
-      'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
+      'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу, канал обновлений, язык приложения, архитектуру процессора, основную версию ОС и источник установки (например, магазин приложений или установщик), чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется — сохраняется только определённая по нему страна или регион. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
   @override
   String get video_air_season_autumn => 'Осень';
   @override
@@ -255560,6 +255803,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -255693,8 +255939,6 @@ class _StringsTh extends _StringsEn {
   String get dictionaries_deleting_data => 'กำลังลบข้อมูลพจนานุกรม...';
   @override
   String get dictionaries_menu_empty => 'นำเข้าพจนานุกรมเพื่อใช้งาน';
-  @override
-  String get dictionary_collapse_follow_global => 'ตามการตั้งค่าส่วนกลาง';
   @override
   String get dictionary_delete_failed => 'ลบพจนานุกรมไม่สำเร็จ';
   @override
@@ -260003,6 +260247,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'ซิงค์หนังสือและเนื้อหาการอ่านของอุปกรณ์นี้ไปยังอุปกรณ์เชื่อมต่อ';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'อัปโหลดไปยังอุปกรณ์เชื่อมต่อ';
   @override
@@ -265962,8 +266211,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -268072,6 +268331,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_last_nothing => 'ซิงค์ล่าสุด: ไม่มีอะไรต้องซิงค์';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'ยังไม่ได้เข้าสู่ระบบ';
   @override
   String get sync_now => 'ซิงค์ทันที';
@@ -269035,7 +269299,7 @@ class _StringsTh extends _StringsEn {
   String get usage_stats_enabled => 'ส่งสถิติการใช้งาน';
   @override
   String get usage_stats_enabled_hint =>
-      'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
+      'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม ช่องทางอัปเดต ภาษาของแอป สถาปัตยกรรม CPU เวอร์ชันหลักของระบบปฏิบัติการ และแหล่งที่ติดตั้ง (เช่น สโตร์หรือตัวติดตั้ง)ไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ (เก็บเพียงประเทศหรือภูมิภาคที่ระบุได้จากที่อยู่นั้น) เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
   @override
   String get video_air_season_autumn => 'ฤดูใบไม้ร่วง';
   @override
@@ -277101,6 +277365,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -277236,8 +277503,6 @@ class _StringsTr extends _StringsEn {
   String get dictionaries_deleting_data => 'Sözlük verileri siliniyor...';
   @override
   String get dictionaries_menu_empty => 'Kullanmak için bir sözlük içe aktarın';
-  @override
-  String get dictionary_collapse_follow_global => 'Genel ayarı izle';
   @override
   String get dictionary_delete_failed => 'Sözlük silinemedi';
   @override
@@ -281604,6 +281869,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Bu cihazın kitap ve okuma içeriğini bağlantı eşine senkronize edin.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Bağlantı eşine yükle';
   @override
@@ -287609,8 +287879,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -289727,6 +290007,11 @@ class _StringsTr extends _StringsEn {
   String get sync_last_nothing =>
       'Son senkronizasyon: senkronize edilecek bir şey yok';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Oturum açılmadı';
   @override
   String get sync_now => 'Şimdi eşitle';
@@ -290699,7 +290984,7 @@ class _StringsTr extends _StringsEn {
   String get usage_stats_enabled => 'Kullanım istatistiklerini paylaş';
   @override
   String get usage_stats_enabled_hint =>
-      'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
+      'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu, güncelleme kanalını, uygulama dilini, CPU mimarisini, işletim sisteminin ana sürümünü ve kurulum kaynağını (ör. uygulama mağazası veya yükleyici) fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz; yalnızca ondan belirlenen ülke veya bölge tutulur. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
   @override
   String get video_air_season_autumn => 'Sonbahar';
   @override
@@ -298788,6 +299073,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -298922,8 +299210,6 @@ class _StringsVi extends _StringsEn {
   String get dictionaries_deleting_data => 'Đang xóa dữ liệu từ điển…';
   @override
   String get dictionaries_menu_empty => 'Nhập một từ điển để sử dụng';
-  @override
-  String get dictionary_collapse_follow_global => 'Theo cài đặt chung';
   @override
   String get dictionary_delete_failed => 'Không thể xóa từ điển';
   @override
@@ -303272,6 +303558,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_upload_content_hint =>
       'Đồng bộ sách và nội dung đọc của thiết bị này lên thiết bị ghép nối.';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => 'Tải lên thiết bị ghép nối';
   @override
@@ -309252,8 +309543,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -311368,6 +311669,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_last_nothing => 'Đồng bộ lần cuối: không có gì để đồng bộ';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => 'Chưa đăng nhập';
   @override
   String get sync_now => 'Đồng bộ ngay';
@@ -312333,7 +312639,7 @@ class _StringsVi extends _StringsEn {
   String get usage_stats_enabled => 'Chia sẻ thống kê sử dụng';
   @override
   String get usage_stats_enabled_hint =>
-      'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
+      'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng, kênh cập nhật, ngôn ngữ ứng dụng, kiến trúc CPU, phiên bản chính của hệ điều hành và nguồn cài đặt (ví dụ cửa hàng ứng dụng hoặc trình cài đặt) đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu — chỉ giữ quốc gia hoặc khu vực suy ra từ nó. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
   @override
   String get video_air_season_autumn => 'Thu';
   @override
@@ -320013,6 +320319,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => '长按拖动排序';
   @override
+  String dict_row_collapse_tooltip({required Object state}) => '默认展示：${state}';
+  @override
   String get dict_selection_exit => '退出选择';
   @override
   String get dict_status_disabled => '已停用';
@@ -320138,8 +320446,6 @@ class _StringsZhCn extends _StringsEn {
   String get dictionaries_deleting_data => '正在删除词典数据…';
   @override
   String get dictionaries_menu_empty => '请先导入词典以便使用';
-  @override
-  String get dictionary_collapse_follow_global => '跟随全局设置';
   @override
   String get dictionary_delete_failed => '删除词典失败';
   @override
@@ -324091,6 +324397,10 @@ class _StringsZhCn extends _StringsEn {
   String get interconnect_upload_content => '上传书籍文件';
   @override
   String get interconnect_upload_content_hint => '把本设备的书籍/阅读内容上传同步到互联对端。';
+  @override
+  String get interconnect_upload_manga_content => '上传漫画文件';
+  @override
+  String get interconnect_upload_manga_content_hint => '把本设备的漫画上传同步到互联对端。';
   @override
   String get interconnect_upload_section => '上传到互联对端';
   @override
@@ -329605,8 +329915,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_deck_delete => '删除牌组';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
+  String get srs_deck_delete_move_cards => '保留卡片';
+  @override
+  String get srs_deck_delete_move_cards_hint => '移到上级牌组（没有上级则移到默认牌组）';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      '删除「${name}」及其子牌组。其中的卡片怎么处理？';
+  @override
+  String get srs_deck_delete_with_cards => '连卡片一起删除';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      '只在这些牌组里有卡的笔记整条删除；在别的牌组还有卡的笔记保留，这里的卡移到上级牌组';
   @override
   String get srs_deck_deleting => '正在删除…';
   @override
@@ -331546,6 +331865,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_last_nothing => '上次同步：没有可同步的内容';
   @override
+  String get sync_manga_content => '上传漫画文件';
+  @override
+  String get sync_manga_content_warning => '漫画卷体积大，会消耗更多存储空间和流量';
+  @override
   String get sync_not_signed_in => '未登录';
   @override
   String get sync_now => '立即同步';
@@ -332425,7 +332748,7 @@ class _StringsZhCn extends _StringsEn {
   String get usage_stats_enabled => '发送使用统计';
   @override
   String get usage_stats_enabled_hint =>
-      '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
+      '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台、更新通道、界面语言、CPU 架构、系统大版本和安装来源（如应用商店或安装包），用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址，只记录据此判断的国家或地区。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -339882,6 +340205,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -340007,8 +340333,6 @@ class _StringsZhHk extends _StringsEn {
   String get dictionaries_deleting_data => '正在刪除辭典資料…';
   @override
   String get dictionaries_menu_empty => '請先匯入辭典以便使用';
-  @override
-  String get dictionary_collapse_follow_global => '跟隨全局設定';
   @override
   String get dictionary_delete_failed => '刪除詞典失敗';
   @override
@@ -344023,6 +344347,11 @@ class _StringsZhHk extends _StringsEn {
   String get interconnect_upload_content => '上傳書籍檔案';
   @override
   String get interconnect_upload_content_hint => '把本設備的書籍/閱讀內容上傳同步到互聯對端。';
+  @override
+  String get interconnect_upload_manga_content => 'Upload manga files';
+  @override
+  String get interconnect_upload_manga_content_hint =>
+      'Sync this device\'s manga up to the interconnect peer.';
   @override
   String get interconnect_upload_section => '上傳到互聯對端';
   @override
@@ -349635,8 +349964,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -351691,6 +352030,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_last_nothing => '上次同步：沒有可同步的內容';
   @override
+  String get sync_manga_content => 'Upload manga files';
+  @override
+  String get sync_manga_content_warning =>
+      'Manga volumes are large and use more storage and data';
+  @override
   String get sync_not_signed_in => '未登入';
   @override
   String get sync_now => '立即同步';
@@ -352584,7 +352928,7 @@ class _StringsZhHk extends _StringsEn {
   String get usage_stats_enabled => '傳送使用統計';
   @override
   String get usage_stats_enabled_hint =>
-      '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
+      '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台、更新通道、介面語言、CPU 架構、系統主要版本和安裝來源（如應用程式商店或安裝程式），用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址，只記錄據此判斷的國家或地區。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
   @override
   String get video_air_season_autumn => '秋';
   @override
@@ -359632,6 +359976,8 @@ extension on _StringsEn {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -359751,8 +360097,6 @@ extension on _StringsEn {
         return 'Deleting dictionary data...';
       case 'dictionaries_menu_empty':
         return 'Import a dictionary for use';
-      case 'dictionary_collapse_follow_global':
-        return 'Follow global setting';
       case 'dictionary_delete_failed':
         return 'Failed to delete dictionary';
       case 'dictionary_font_size':
@@ -363424,6 +363768,10 @@ extension on _StringsEn {
         return 'Upload book files';
       case 'interconnect_upload_content_hint':
         return 'Sync this device\'s books and reading content up to the interconnect peer.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Upload to interconnect peer';
       case 'interconnect_upload_section_footer':
@@ -368620,9 +368968,17 @@ extension on _StringsEn {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -370485,6 +370841,10 @@ extension on _StringsEn {
         return 'Last sync: nothing synced - no connected sync channel';
       case 'sync_last_nothing':
         return 'Last sync: nothing to sync';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Not signed in';
       case 'sync_now':
@@ -371317,7 +371677,7 @@ extension on _StringsEn {
       case 'usage_stats_enabled':
         return 'Share usage statistics';
       case 'usage_stats_enabled_hint':
-        return 'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
+        return 'Once a day, sends an install ID (derived from this device, unchanged after reinstalling), the app version, platform, update channel, app language, CPU architecture, OS major version and install source (e.g. app store or installer) to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored — only the country or region it resolves to is kept. When you attach device info to feedback, the install ID is sent with it.';
       case 'video_air_season_autumn':
         return 'Fall';
       case 'video_air_season_spring':
@@ -378059,6 +378419,8 @@ extension on _StringsAr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -378178,8 +378540,6 @@ extension on _StringsAr {
         return 'جارٍ حذف بيانات القاموس...';
       case 'dictionaries_menu_empty':
         return 'استورد قاموساً للاستخدام';
-      case 'dictionary_collapse_follow_global':
-        return 'اتباع الإعداد العام';
       case 'dictionary_delete_failed':
         return 'فشل حذف القاموس';
       case 'dictionary_font_size':
@@ -381846,6 +382206,10 @@ extension on _StringsAr {
         return 'رفع ملفات الكتب';
       case 'interconnect_upload_content_hint':
         return 'مزامنة كتب ومحتوى القراءة على هذا الجهاز إلى نظير الترابط.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'الرفع إلى نظير الترابط';
       case 'interconnect_upload_section_footer':
@@ -387042,9 +387406,17 @@ extension on _StringsAr {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -388902,6 +389274,10 @@ extension on _StringsAr {
         return 'آخر مزامنة: لم تتم المزامنة - لا توجد قناة مزامنة متصلة';
       case 'sync_last_nothing':
         return 'آخر مزامنة: لا شيء لمزامنته';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'لم يتم تسجيل الدخول';
       case 'sync_now':
@@ -389735,7 +390111,7 @@ extension on _StringsAr {
       case 'usage_stats_enabled':
         return 'مشاركة إحصاءات الاستخدام';
       case 'usage_stats_enabled_hint':
-        return 'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
+        return 'مرة واحدة يوميًا، يرسل معرّف تثبيت (مشتقًا من هذا الجهاز، ولا يتغيّر عند إعادة التثبيت) وإصدار التطبيق والمنصة وقناة التحديث ولغة التطبيق وبنية المعالج والإصدار الرئيسي لنظام التشغيل ومصدر التثبيت (مثل متجر التطبيقات أو المثبّت) إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك، بل يُحفَظ فقط البلد أو المنطقة المستنتجة منه. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
       case 'video_air_season_autumn':
         return 'خريف';
       case 'video_air_season_spring':
@@ -396504,6 +396880,8 @@ extension on _StringsDe {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -396625,8 +397003,6 @@ extension on _StringsDe {
         return 'Wörterbuchdaten werden gelöscht...';
       case 'dictionaries_menu_empty':
         return 'Importieren Sie ein Wörterbuch';
-      case 'dictionary_collapse_follow_global':
-        return 'Globaler Einstellung folgen';
       case 'dictionary_delete_failed':
         return 'Löschen des Wörterbuchs fehlgeschlagen';
       case 'dictionary_font_size':
@@ -400306,6 +400682,10 @@ extension on _StringsDe {
         return 'Buchdateien hochladen';
       case 'interconnect_upload_content_hint':
         return 'Bücher und Leseinhalte dieses Geräts zum Interconnect-Peer synchronisieren.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Zum Interconnect-Peer hochladen';
       case 'interconnect_upload_section_footer':
@@ -405520,9 +405900,17 @@ extension on _StringsDe {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -407387,6 +407775,10 @@ extension on _StringsDe {
         return 'Letzte Synchronisierung: nichts synchronisiert – kein verbundener Sync-Kanal';
       case 'sync_last_nothing':
         return 'Letzte Synchronisierung: nichts zu synchronisieren';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Nicht angemeldet';
       case 'sync_now':
@@ -408224,7 +408616,7 @@ extension on _StringsDe {
       case 'usage_stats_enabled':
         return 'Nutzungsstatistiken teilen';
       case 'usage_stats_enabled_hint':
-        return 'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
+        return 'Sendet einmal täglich eine aus diesem Gerät abgeleitete Installations-ID (bleibt bei Neuinstallation gleich), die App-Version, die Plattform, den Update-Kanal, die App-Sprache, die CPU-Architektur, die Hauptversion des Betriebssystems und die Installationsquelle (z. B. App-Store oder Installer) an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert – nur das daraus ermittelte Land bzw. die Region. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
       case 'video_air_season_autumn':
         return 'Herbst';
       case 'video_air_season_spring':
@@ -414994,6 +415386,8 @@ extension on _StringsEs {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -415113,8 +415507,6 @@ extension on _StringsEs {
         return 'Eliminando datos del diccionario...';
       case 'dictionaries_menu_empty':
         return 'Importa un diccionario para usar';
-      case 'dictionary_collapse_follow_global':
-        return 'Seguir el ajuste global';
       case 'dictionary_delete_failed':
         return 'No se pudo eliminar el diccionario';
       case 'dictionary_font_size':
@@ -418790,6 +419182,10 @@ extension on _StringsEs {
         return 'Subir archivos de libros';
       case 'interconnect_upload_content_hint':
         return 'Sincroniza los libros y contenido de lectura de este dispositivo al par de Interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Subir al par de Interconnect';
       case 'interconnect_upload_section_footer':
@@ -424002,9 +424398,17 @@ extension on _StringsEs {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -425868,6 +426272,10 @@ extension on _StringsEs {
         return 'Última sincronización: nada sincronizado — sin canal de sincronización conectado';
       case 'sync_last_nothing':
         return 'Última sincronización: nada que sincronizar';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'No conectado';
       case 'sync_now':
@@ -426704,7 +427112,7 @@ extension on _StringsEs {
       case 'usage_stats_enabled':
         return 'Compartir estadísticas de uso';
       case 'usage_stats_enabled_hint':
-        return 'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
+        return 'Una vez al día, envía a fushi.moe un ID de instalación derivado de este dispositivo (no cambia al reinstalar), la versión de la app, la plataforma, el canal de actualizaciones, el idioma de la app, la arquitectura de CPU, la versión principal del sistema y el origen de instalación (p. ej. tienda o instalador) para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda: solo se conserva el país o región que se deduce de ella. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
       case 'video_air_season_autumn':
         return 'Otoño';
       case 'video_air_season_spring':
@@ -433480,6 +433888,8 @@ extension on _StringsFr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -433600,8 +434010,6 @@ extension on _StringsFr {
         return 'Suppression des données du dictionnaire...';
       case 'dictionaries_menu_empty':
         return 'Importez un dictionnaire pour l\'utiliser';
-      case 'dictionary_collapse_follow_global':
-        return 'Suivre le réglage global';
       case 'dictionary_delete_failed':
         return 'Échec de la suppression du dictionnaire';
       case 'dictionary_font_size':
@@ -437283,6 +437691,10 @@ extension on _StringsFr {
         return 'Envoyer les fichiers de livres';
       case 'interconnect_upload_content_hint':
         return 'Synchroniser les livres et le contenu de lecture de cet appareil vers le pair d\'interconnexion.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Envoyer vers le pair d\'interconnexion';
       case 'interconnect_upload_section_footer':
@@ -442495,9 +442907,17 @@ extension on _StringsFr {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -444360,6 +444780,10 @@ extension on _StringsFr {
         return 'Dernière synchro : rien — aucun canal de synchronisation connecté';
       case 'sync_last_nothing':
         return 'Dernière synchro : rien à synchroniser';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Non connecté';
       case 'sync_now':
@@ -445198,7 +445622,7 @@ extension on _StringsFr {
       case 'usage_stats_enabled':
         return 'Partager les statistiques d’utilisation';
       case 'usage_stats_enabled_hint':
-        return 'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
+        return 'Une fois par jour, envoie à fushi.moe un identifiant d’installation dérivé de cet appareil (inchangé après réinstallation), la version de l’app, la plateforme, le canal de mise à jour, la langue de l’app, l’architecture du processeur, la version majeure du système et la source d’installation (boutique ou installateur, par ex.) afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée : seul le pays ou la région qui en découle est gardé. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
       case 'video_air_season_autumn':
         return 'Automne';
       case 'video_air_season_spring':
@@ -451958,6 +452382,8 @@ extension on _StringsId {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -452077,8 +452503,6 @@ extension on _StringsId {
         return 'Menghapus data kamus...';
       case 'dictionaries_menu_empty':
         return 'Impor kamus untuk digunakan';
-      case 'dictionary_collapse_follow_global':
-        return 'Ikuti pengaturan global';
       case 'dictionary_delete_failed':
         return 'Gagal menghapus kamus';
       case 'dictionary_font_size':
@@ -455751,6 +456175,10 @@ extension on _StringsId {
         return 'Unggah file buku';
       case 'interconnect_upload_content_hint':
         return 'Sinkronkan buku dan konten bacaan perangkat ini ke peer interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Unggah ke peer interconnect';
       case 'interconnect_upload_section_footer':
@@ -460948,9 +461376,17 @@ extension on _StringsId {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -462813,6 +463249,10 @@ extension on _StringsId {
         return 'Sinkronisasi terakhir: tidak ada yang disinkronkan - tidak ada kanal sinkronisasi yang terhubung';
       case 'sync_last_nothing':
         return 'Sinkronisasi terakhir: tidak ada yang perlu disinkronkan';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Belum masuk';
       case 'sync_now':
@@ -463645,7 +464085,7 @@ extension on _StringsId {
       case 'usage_stats_enabled':
         return 'Bagikan statistik penggunaan';
       case 'usage_stats_enabled_hint':
-        return 'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
+        return 'Sekali sehari, mengirim ID instalasi yang diturunkan dari perangkat ini (tetap sama setelah instal ulang), versi aplikasi, platform, kanal pembaruan, bahasa aplikasi, arsitektur CPU, versi utama sistem operasi, dan sumber instalasi (misalnya toko aplikasi atau penginstal) ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan — hanya negara atau wilayah yang ditentukan darinya. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
       case 'video_air_season_autumn':
         return 'Musim gugur';
       case 'video_air_season_spring':
@@ -470404,6 +470844,8 @@ extension on _StringsIt {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -470525,8 +470967,6 @@ extension on _StringsIt {
         return 'Eliminazione dati del dizionario...';
       case 'dictionaries_menu_empty':
         return 'Importa un dizionario per l\'uso';
-      case 'dictionary_collapse_follow_global':
-        return 'Segui l\'impostazione globale';
       case 'dictionary_delete_failed':
         return 'Impossibile eliminare il dizionario';
       case 'dictionary_font_size':
@@ -474203,6 +474643,10 @@ extension on _StringsIt {
         return 'Carica file dei libri';
       case 'interconnect_upload_content_hint':
         return 'Sincronizza i libri e i contenuti di lettura di questo dispositivo sul peer interconnect.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Carica sul peer interconnect';
       case 'interconnect_upload_section_footer':
@@ -479410,9 +479854,17 @@ extension on _StringsIt {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -481276,6 +481728,10 @@ extension on _StringsIt {
         return 'Ultima sincronizzazione: nulla sincronizzato — nessun canale di sincronizzazione connesso';
       case 'sync_last_nothing':
         return 'Ultima sincronizzazione: nulla da sincronizzare';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Non connesso';
       case 'sync_now':
@@ -482116,7 +482572,7 @@ extension on _StringsIt {
       case 'usage_stats_enabled':
         return 'Condividi statistiche di utilizzo';
       case 'usage_stats_enabled_hint':
-        return 'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
+        return 'Una volta al giorno invia a fushi.moe un ID di installazione derivato da questo dispositivo (invariato dopo la reinstallazione), la versione dell\'app, la piattaforma, il canale di aggiornamento, la lingua dell\'app, l\'architettura della CPU, la versione principale del sistema e l\'origine dell\'installazione (es. store o programma di installazione), così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato: si conserva solo il paese o la regione che ne deriva. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
       case 'video_air_season_autumn':
         return 'Autunno';
       case 'video_air_season_spring':
@@ -488846,6 +489302,8 @@ extension on _StringsJa {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -488965,8 +489423,6 @@ extension on _StringsJa {
         return '辞書データを削除中...';
       case 'dictionaries_menu_empty':
         return '辞書をインポートしてください';
-      case 'dictionary_collapse_follow_global':
-        return '全体設定に従う';
       case 'dictionary_delete_failed':
         return '辞書の削除に失敗しました';
       case 'dictionary_font_size':
@@ -492623,6 +493079,10 @@ extension on _StringsJa {
         return '書籍ファイルをアップロード';
       case 'interconnect_upload_content_hint':
         return 'このデバイスの書籍と読書コンテンツをインターコネクトピアに同期します。';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'インターコネクトピアにアップロード';
       case 'interconnect_upload_section_footer':
@@ -497806,9 +498266,17 @@ extension on _StringsJa {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -499661,6 +500129,10 @@ extension on _StringsJa {
         return '最終同期: 同期チャンネルが未接続のため同期なし';
       case 'sync_last_nothing':
         return '最終同期: 同期対象なし';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '未ログイン';
       case 'sync_now':
@@ -500487,7 +500959,7 @@ extension on _StringsJa {
       case 'usage_stats_enabled':
         return '利用統計を送信';
       case 'usage_stats_enabled_hint':
-        return '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
+        return '1 日 1 回、この端末から導出したインストール ID（再インストールしても変わりません）・アプリのバージョン・プラットフォーム・更新チャネル・アプリの表示言語・CPU アーキテクチャ・OS のメジャーバージョン・インストール元（ストアやインストーラーなど）を fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません（そこから判定した国・地域のみ記録します）。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -507188,6 +507660,8 @@ extension on _StringsKo {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -507307,8 +507781,6 @@ extension on _StringsKo {
         return '사전 데이터 삭제 중...';
       case 'dictionaries_menu_empty':
         return '사용할 사전을 가져오세요';
-      case 'dictionary_collapse_follow_global':
-        return '전역 설정 따르기';
       case 'dictionary_delete_failed':
         return '사전 삭제 실패';
       case 'dictionary_font_size':
@@ -510968,6 +511440,10 @@ extension on _StringsKo {
         return '도서 파일 업로드';
       case 'interconnect_upload_content_hint':
         return '이 기기의 도서 및 읽기 콘텐츠를 인터커넥트 피어로 동기화합니다.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return '인터커넥트 피어로 업로드';
       case 'interconnect_upload_section_footer':
@@ -516151,9 +516627,17 @@ extension on _StringsKo {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -518007,6 +518491,10 @@ extension on _StringsKo {
         return '마지막 동기화: 동기화 안 됨 - 연결된 동기화 채널 없음';
       case 'sync_last_nothing':
         return '마지막 동기화: 동기화할 항목 없음';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '로그인되지 않음';
       case 'sync_now':
@@ -518834,7 +519322,7 @@ extension on _StringsKo {
       case 'usage_stats_enabled':
         return '사용 통계 보내기';
       case 'usage_stats_enabled_hint':
-        return '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
+        return '하루에 한 번 이 기기에서 파생된 설치 ID(재설치해도 바뀌지 않음), 앱 버전, 플랫폼, 업데이트 채널, 앱 언어, CPU 아키텍처, OS 주 버전, 설치 경로(앱 스토어·설치 프로그램 등)를 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않으며, 이를 통해 판별한 국가/지역만 기록합니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
       case 'video_air_season_autumn':
         return '가을';
       case 'video_air_season_spring':
@@ -525580,6 +526068,8 @@ extension on _StringsNl {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -525700,8 +526190,6 @@ extension on _StringsNl {
         return 'Woordenboekgegevens verwijderen...';
       case 'dictionaries_menu_empty':
         return 'Importeer een woordenboek voor gebruik';
-      case 'dictionary_collapse_follow_global':
-        return 'Globale instelling volgen';
       case 'dictionary_delete_failed':
         return 'Verwijderen van woordenboek mislukt';
       case 'dictionary_font_size':
@@ -529375,6 +529863,10 @@ extension on _StringsNl {
         return 'Boekbestanden uploaden';
       case 'interconnect_upload_content_hint':
         return 'Synchroniseer de boeken en leesinhoud van dit apparaat naar de interconnectpeer.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Uploaden naar interconnectpeer';
       case 'interconnect_upload_section_footer':
@@ -534586,9 +535078,17 @@ extension on _StringsNl {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -536451,6 +536951,10 @@ extension on _StringsNl {
         return 'Laatste sync: niets gesynchroniseerd — geen verbonden synchronisatiekanaal';
       case 'sync_last_nothing':
         return 'Laatste sync: niets te synchroniseren';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Niet aangemeld';
       case 'sync_now':
@@ -537284,7 +537788,7 @@ extension on _StringsNl {
       case 'usage_stats_enabled':
         return 'Gebruiksstatistieken delen';
       case 'usage_stats_enabled_hint':
-        return 'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
+        return 'Stuurt één keer per dag een van dit apparaat afgeleide installatie-ID (blijft gelijk na herinstallatie), de app-versie, het platform, het updatekanaal, de app-taal, de CPU-architectuur, de hoofdversie van het besturingssysteem en de installatiebron (bijv. app-winkel of installatieprogramma) naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen; alleen het daaruit afgeleide land of de regio wordt bewaard. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
       case 'video_air_season_autumn':
         return 'Herfst';
       case 'video_air_season_spring':
@@ -544050,6 +544554,8 @@ extension on _StringsPtBr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -544170,8 +544676,6 @@ extension on _StringsPtBr {
         return 'Excluindo dados do dicionário...';
       case 'dictionaries_menu_empty':
         return 'Importe um dicionário para uso';
-      case 'dictionary_collapse_follow_global':
-        return 'Seguir configuração global';
       case 'dictionary_delete_failed':
         return 'Falha ao excluir dicionário';
       case 'dictionary_font_size':
@@ -547844,6 +548348,10 @@ extension on _StringsPtBr {
         return 'Upload de arquivos de livros';
       case 'interconnect_upload_content_hint':
         return 'Sincronizar livros e conteúdo de leitura deste dispositivo para o par da interconexão.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Upload para par da interconexão';
       case 'interconnect_upload_section_footer':
@@ -553052,9 +553560,17 @@ extension on _StringsPtBr {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -554916,6 +555432,10 @@ extension on _StringsPtBr {
         return 'Última sincronização: nada sincronizado - nenhum canal de sincronização conectado';
       case 'sync_last_nothing':
         return 'Última sincronização: nada para sincronizar';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Não conectado';
       case 'sync_now':
@@ -555748,7 +556268,7 @@ extension on _StringsPtBr {
       case 'usage_stats_enabled':
         return 'Compartilhar estatísticas de uso';
       case 'usage_stats_enabled_hint':
-        return 'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
+        return 'Uma vez por dia, envia ao fushi.moe um ID de instalação derivado deste dispositivo (não muda ao reinstalar), a versão do app, a plataforma, o canal de atualização, o idioma do app, a arquitetura da CPU, a versão principal do sistema e a origem da instalação (ex.: loja ou instalador) para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado — só o país ou região deduzido dele é guardado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
       case 'video_air_season_autumn':
         return 'Outono';
       case 'video_air_season_spring':
@@ -562517,6 +563037,8 @@ extension on _StringsRu {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -562637,8 +563159,6 @@ extension on _StringsRu {
         return 'Удаление данных словаря...';
       case 'dictionaries_menu_empty':
         return 'Импортируйте словарь для использования';
-      case 'dictionary_collapse_follow_global':
-        return 'Как в общих настройках';
       case 'dictionary_delete_failed':
         return 'Не удалось удалить словарь';
       case 'dictionary_font_size':
@@ -566314,6 +566834,10 @@ extension on _StringsRu {
         return 'Загрузить файлы книг';
       case 'interconnect_upload_content_hint':
         return 'Синхронизировать книги и контент для чтения этого устройства с партнёром по взаимосвязи.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Загрузка на партнёра по взаимосвязи';
       case 'interconnect_upload_section_footer':
@@ -571522,9 +572046,17 @@ extension on _StringsRu {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -573387,6 +573919,10 @@ extension on _StringsRu {
         return 'Последняя синхронизация: ничего не синхронизировано — нет подключённых каналов';
       case 'sync_last_nothing':
         return 'Последняя синхронизация: нечего синхронизировать';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Не авторизован';
       case 'sync_now':
@@ -574219,7 +574755,7 @@ extension on _StringsRu {
       case 'usage_stats_enabled':
         return 'Отправлять статистику использования';
       case 'usage_stats_enabled_hint':
-        return 'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
+        return 'Раз в день отправляет на fushi.moe идентификатор установки, полученный из данных этого устройства (не меняется при переустановке), версию приложения, платформу, канал обновлений, язык приложения, архитектуру процессора, основную версию ОС и источник установки (например, магазин приложений или установщик), чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется — сохраняется только определённая по нему страна или регион. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
       case 'video_air_season_autumn':
         return 'Осень';
       case 'video_air_season_spring':
@@ -580964,6 +581500,8 @@ extension on _StringsTh {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -581083,8 +581621,6 @@ extension on _StringsTh {
         return 'กำลังลบข้อมูลพจนานุกรม...';
       case 'dictionaries_menu_empty':
         return 'นำเข้าพจนานุกรมเพื่อใช้งาน';
-      case 'dictionary_collapse_follow_global':
-        return 'ตามการตั้งค่าส่วนกลาง';
       case 'dictionary_delete_failed':
         return 'ลบพจนานุกรมไม่สำเร็จ';
       case 'dictionary_font_size':
@@ -584756,6 +585292,10 @@ extension on _StringsTh {
         return 'อัปโหลดไฟล์หนังสือ';
       case 'interconnect_upload_content_hint':
         return 'ซิงค์หนังสือและเนื้อหาการอ่านของอุปกรณ์นี้ไปยังอุปกรณ์เชื่อมต่อ';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'อัปโหลดไปยังอุปกรณ์เชื่อมต่อ';
       case 'interconnect_upload_section_footer':
@@ -589952,9 +590492,17 @@ extension on _StringsTh {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -591815,6 +592363,10 @@ extension on _StringsTh {
         return 'ซิงค์ล่าสุด: ไม่มีอะไรซิงค์ — ไม่มีช่องทางซิงค์ที่เชื่อมต่อ';
       case 'sync_last_nothing':
         return 'ซิงค์ล่าสุด: ไม่มีอะไรต้องซิงค์';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'ยังไม่ได้เข้าสู่ระบบ';
       case 'sync_now':
@@ -592647,7 +593199,7 @@ extension on _StringsTh {
       case 'usage_stats_enabled':
         return 'ส่งสถิติการใช้งาน';
       case 'usage_stats_enabled_hint':
-        return 'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
+        return 'วันละครั้ง จะส่ง ID การติดตั้งที่สร้างจากอุปกรณ์นี้ (ไม่เปลี่ยนแม้ติดตั้งใหม่) เวอร์ชันแอป แพลตฟอร์ม ช่องทางอัปเดต ภาษาของแอป สถาปัตยกรรม CPU เวอร์ชันหลักของระบบปฏิบัติการ และแหล่งที่ติดตั้ง (เช่น สโตร์หรือตัวติดตั้ง)ไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ (เก็บเพียงประเทศหรือภูมิภาคที่ระบุได้จากที่อยู่นั้น) เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
       case 'video_air_season_autumn':
         return 'ฤดูใบไม้ร่วง';
       case 'video_air_season_spring':
@@ -599404,6 +599956,8 @@ extension on _StringsTr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -599523,8 +600077,6 @@ extension on _StringsTr {
         return 'Sözlük verileri siliniyor...';
       case 'dictionaries_menu_empty':
         return 'Kullanmak için bir sözlük içe aktarın';
-      case 'dictionary_collapse_follow_global':
-        return 'Genel ayarı izle';
       case 'dictionary_delete_failed':
         return 'Sözlük silinemedi';
       case 'dictionary_font_size':
@@ -603199,6 +603751,10 @@ extension on _StringsTr {
         return 'Kitap dosyalarını yükle';
       case 'interconnect_upload_content_hint':
         return 'Bu cihazın kitap ve okuma içeriğini bağlantı eşine senkronize edin.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Bağlantı eşine yükle';
       case 'interconnect_upload_section_footer':
@@ -608400,9 +608956,17 @@ extension on _StringsTr {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -610263,6 +610827,10 @@ extension on _StringsTr {
         return 'Son senkronizasyon: senkronize edilmedi — bağlı kanal yok';
       case 'sync_last_nothing':
         return 'Son senkronizasyon: senkronize edilecek bir şey yok';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Oturum açılmadı';
       case 'sync_now':
@@ -611097,7 +611665,7 @@ extension on _StringsTr {
       case 'usage_stats_enabled':
         return 'Kullanım istatistiklerini paylaş';
       case 'usage_stats_enabled_hint':
-        return 'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
+        return 'Günde bir kez bu cihazdan türetilen bir kurulum kimliğini (yeniden yüklemede değişmez), uygulama sürümünü, platformu, güncelleme kanalını, uygulama dilini, CPU mimarisini, işletim sisteminin ana sürümünü ve kurulum kaynağını (ör. uygulama mağazası veya yükleyici) fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz; yalnızca ondan belirlenen ülke veya bölge tutulur. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
       case 'video_air_season_autumn':
         return 'Sonbahar';
       case 'video_air_season_spring':
@@ -617851,6 +618419,8 @@ extension on _StringsVi {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -617971,8 +618541,6 @@ extension on _StringsVi {
         return 'Đang xóa dữ liệu từ điển…';
       case 'dictionaries_menu_empty':
         return 'Nhập một từ điển để sử dụng';
-      case 'dictionary_collapse_follow_global':
-        return 'Theo cài đặt chung';
       case 'dictionary_delete_failed':
         return 'Không thể xóa từ điển';
       case 'dictionary_font_size':
@@ -621645,6 +622213,10 @@ extension on _StringsVi {
         return 'Tải lên tệp sách';
       case 'interconnect_upload_content_hint':
         return 'Đồng bộ sách và nội dung đọc của thiết bị này lên thiết bị ghép nối.';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return 'Tải lên thiết bị ghép nối';
       case 'interconnect_upload_section_footer':
@@ -626843,9 +627415,17 @@ extension on _StringsVi {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -628707,6 +629287,10 @@ extension on _StringsVi {
         return 'Đồng bộ lần cuối: không đồng bộ gì - chưa có kênh đồng bộ nào được kết nối';
       case 'sync_last_nothing':
         return 'Đồng bộ lần cuối: không có gì để đồng bộ';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return 'Chưa đăng nhập';
       case 'sync_now':
@@ -629541,7 +630125,7 @@ extension on _StringsVi {
       case 'usage_stats_enabled':
         return 'Chia sẻ thống kê sử dụng';
       case 'usage_stats_enabled_hint':
-        return 'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
+        return 'Mỗi ngày một lần, gửi ID cài đặt được tạo từ thiết bị này (không đổi khi cài lại), phiên bản ứng dụng, nền tảng, kênh cập nhật, ngôn ngữ ứng dụng, kiến trúc CPU, phiên bản chính của hệ điều hành và nguồn cài đặt (ví dụ cửa hàng ứng dụng hoặc trình cài đặt) đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu — chỉ giữ quốc gia hoặc khu vực suy ra từ nó. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
       case 'video_air_season_autumn':
         return 'Thu';
       case 'video_air_season_spring':
@@ -636225,6 +636809,8 @@ extension on _StringsZhCn {
         return '拖动排序 · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return '长按拖动排序';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => '默认展示：${state}';
       case 'dict_selection_exit':
         return '退出选择';
       case 'dict_status_disabled':
@@ -636344,8 +636930,6 @@ extension on _StringsZhCn {
         return '正在删除词典数据…';
       case 'dictionaries_menu_empty':
         return '请先导入词典以便使用';
-      case 'dictionary_collapse_follow_global':
-        return '跟随全局设置';
       case 'dictionary_delete_failed':
         return '删除词典失败';
       case 'dictionary_font_size':
@@ -639976,6 +640560,10 @@ extension on _StringsZhCn {
         return '上传书籍文件';
       case 'interconnect_upload_content_hint':
         return '把本设备的书籍/阅读内容上传同步到互联对端。';
+      case 'interconnect_upload_manga_content':
+        return '上传漫画文件';
+      case 'interconnect_upload_manga_content_hint':
+        return '把本设备的漫画上传同步到互联对端。';
       case 'interconnect_upload_section':
         return '上传到互联对端';
       case 'interconnect_upload_section_footer':
@@ -645134,9 +645722,16 @@ extension on _StringsZhCn {
         return '收起子牌组';
       case 'srs_deck_delete':
         return '删除牌组';
-      case 'srs_deck_delete_confirm':
-        return ({required Object name}) =>
-            '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
+      case 'srs_deck_delete_move_cards':
+        return '保留卡片';
+      case 'srs_deck_delete_move_cards_hint':
+        return '移到上级牌组（没有上级则移到默认牌组）';
+      case 'srs_deck_delete_prompt':
+        return ({required Object name}) => '删除「${name}」及其子牌组。其中的卡片怎么处理？';
+      case 'srs_deck_delete_with_cards':
+        return '连卡片一起删除';
+      case 'srs_deck_delete_with_cards_hint':
+        return '只在这些牌组里有卡的笔记整条删除；在别的牌组还有卡的笔记保留，这里的卡移到上级牌组';
       case 'srs_deck_deleting':
         return '正在删除…';
       case 'srs_deck_expand':
@@ -646965,6 +647560,10 @@ extension on _StringsZhCn {
         return '上次同步：未同步——没有已连接的同步通道';
       case 'sync_last_nothing':
         return '上次同步：没有可同步的内容';
+      case 'sync_manga_content':
+        return '上传漫画文件';
+      case 'sync_manga_content_warning':
+        return '漫画卷体积大，会消耗更多存储空间和流量';
       case 'sync_not_signed_in':
         return '未登录';
       case 'sync_now':
@@ -647788,7 +648387,7 @@ extension on _StringsZhCn {
       case 'usage_stats_enabled':
         return '发送使用统计';
       case 'usage_stats_enabled_hint':
-        return '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
+        return '每天一次向 fushi.moe 发送由本机派生的安装 ID（重装不变）、应用版本、平台、更新通道、界面语言、CPU 架构、系统大版本和安装来源（如应用商店或安装包），用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址，只记录据此判断的国家或地区。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -654443,6 +655042,8 @@ extension on _StringsZhHk {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -654562,8 +655163,6 @@ extension on _StringsZhHk {
         return '正在刪除辭典資料…';
       case 'dictionaries_menu_empty':
         return '請先匯入辭典以便使用';
-      case 'dictionary_collapse_follow_global':
-        return '跟隨全局設定';
       case 'dictionary_delete_failed':
         return '刪除詞典失敗';
       case 'dictionary_font_size':
@@ -658209,6 +658808,10 @@ extension on _StringsZhHk {
         return '上傳書籍檔案';
       case 'interconnect_upload_content_hint':
         return '把本設備的書籍/閱讀內容上傳同步到互聯對端。';
+      case 'interconnect_upload_manga_content':
+        return 'Upload manga files';
+      case 'interconnect_upload_manga_content_hint':
+        return 'Sync this device\'s manga up to the interconnect peer.';
       case 'interconnect_upload_section':
         return '上傳到互聯對端';
       case 'interconnect_upload_section_footer':
@@ -663384,9 +663987,17 @@ extension on _StringsZhHk {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -665236,6 +665847,10 @@ extension on _StringsZhHk {
         return '上次同步：未同步——沒有已連接的同步通道';
       case 'sync_last_nothing':
         return '上次同步：沒有可同步的內容';
+      case 'sync_manga_content':
+        return 'Upload manga files';
+      case 'sync_manga_content_warning':
+        return 'Manga volumes are large and use more storage and data';
       case 'sync_not_signed_in':
         return '未登入';
       case 'sync_now':
@@ -666059,7 +666674,7 @@ extension on _StringsZhHk {
       case 'usage_stats_enabled':
         return '傳送使用統計';
       case 'usage_stats_enabled_hint':
-        return '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
+        return '每天一次向 fushi.moe 傳送由本機衍生的安裝 ID（重新安裝不變）、應用程式版本、平台、更新通道、介面語言、CPU 架構、系統主要版本和安裝來源（如應用程式商店或安裝程式），用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址，只記錄據此判斷的國家或地區。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
