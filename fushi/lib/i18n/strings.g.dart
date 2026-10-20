@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150637 (8861 per locale)
+/// Strings: 150671 (8863 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7522,7 +7522,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_review_anki_title => 'Anki';
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   String get onboarding_review_fushi_title => 'Fushi SRS';
   String get onboarding_review_method_body =>
       'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
@@ -9613,6 +9613,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   String get srs_stats_future_backlog => 'Include overdue';
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
   String get srs_stats_future_load => 'Daily load';
   String get srs_stats_future_overdue => 'Overdue';
   String get srs_stats_future_title => 'Future due';
@@ -9695,6 +9697,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_status_open_tooltip => 'Open in Fushi SRS';
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   String get srs_status_suspended => 'Suspended';
   String get srs_sync_backend_unsupported =>
@@ -25187,7 +25190,7 @@ class _StringsAr extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -28840,6 +28843,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -28994,6 +29000,8 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -46934,7 +46942,7 @@ class _StringsDe extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -50630,6 +50638,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -50784,6 +50795,8 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -68843,7 +68856,7 @@ class _StringsEs extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -72545,6 +72558,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -72699,6 +72715,8 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -90836,7 +90854,7 @@ class _StringsFr extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -94547,6 +94565,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -94701,6 +94722,8 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -112642,7 +112665,7 @@ class _StringsId extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -116313,6 +116336,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -116467,6 +116493,8 @@ class _StringsId extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -134424,7 +134452,7 @@ class _StringsIt extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -138123,6 +138151,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -138277,6 +138308,8 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -155639,7 +155672,7 @@ class _StringsJa extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -159225,6 +159258,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -159379,6 +159415,8 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -176466,7 +176504,7 @@ class _StringsKo extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -180052,6 +180090,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -180206,6 +180247,8 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -197899,7 +197942,7 @@ class _StringsNl extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -201588,6 +201631,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -201742,6 +201788,8 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -219734,7 +219782,7 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -223427,6 +223475,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -223581,6 +223632,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -241550,7 +241603,7 @@ class _StringsRu extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -245244,6 +245297,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -245398,6 +245454,8 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -263156,7 +263214,7 @@ class _StringsTh extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -266812,6 +266870,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -266966,6 +267027,8 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -284775,7 +284838,7 @@ class _StringsTr extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -288445,6 +288508,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -288599,6 +288665,8 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -306412,7 +306480,7 @@ class _StringsVi extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -310074,6 +310142,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -310228,6 +310299,8 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -326946,7 +327019,7 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_review_anki_toggle => '改用 Anki…';
   @override
   String get onboarding_review_fushi_desc =>
-      '内置间隔复习，排程默认使用 FSRS-7。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
+      '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -330322,6 +330395,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_stats_future_backlog => '含逾期';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      'RWKV 牌组里的 ${n} 张复习卡不计在内：它们在估计回忆率降到目标保留率时出现，没有固定的到期日。';
+  @override
   String get srs_stats_future_load => '每日负担';
   @override
   String get srs_stats_future_overdue => '逾期';
@@ -330473,6 +330549,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       '在 Fushi SRS 中打开（${n} 张卡）';
+  @override
+  String get srs_status_review_by_recall => '复习中（RWKV）';
   @override
   String srs_status_review_in({required Object n}) => '复习中 · ${n}天后';
   @override
@@ -346897,7 +346975,7 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
   String get onboarding_review_fushi_desc =>
-      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
   String get onboarding_review_fushi_title => 'Fushi SRS';
   @override
@@ -350432,6 +350510,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_stats_future_backlog => 'Include overdue';
   @override
+  String srs_stats_future_due_by_recall({required Object n}) =>
+      '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
+  @override
   String get srs_stats_future_load => 'Daily load';
   @override
   String get srs_stats_future_overdue => 'Overdue';
@@ -350586,6 +350667,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_status_open_tooltip_many({required Object n}) =>
       'Open in Fushi SRS (${n} cards)';
+  @override
+  String get srs_status_review_by_recall => 'In review (RWKV)';
   @override
   String srs_status_review_in({required Object n}) => 'Review in ${n} days';
   @override
@@ -366029,7 +366112,7 @@ extension on _StringsEn {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -369262,6 +369345,9 @@ extension on _StringsEn {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -369412,6 +369498,8 @@ extension on _StringsEn {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -384437,7 +384525,7 @@ extension on _StringsAr {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -387670,6 +387758,9 @@ extension on _StringsAr {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -387820,6 +387911,8 @@ extension on _StringsAr {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -402899,7 +402992,7 @@ extension on _StringsDe {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -406134,6 +406227,9 @@ extension on _StringsDe {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -406284,6 +406380,8 @@ extension on _StringsDe {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -421365,7 +421463,7 @@ extension on _StringsEs {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -424602,6 +424700,9 @@ extension on _StringsEs {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -424752,6 +424853,8 @@ extension on _StringsEs {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -439845,7 +439948,7 @@ extension on _StringsFr {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -443081,6 +443184,9 @@ extension on _StringsFr {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -443231,6 +443337,8 @@ extension on _StringsFr {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -458287,7 +458395,7 @@ extension on _StringsId {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -461520,6 +461628,9 @@ extension on _StringsId {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -461670,6 +461781,8 @@ extension on _StringsId {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -476733,7 +476846,7 @@ extension on _StringsIt {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -479968,6 +480081,9 @@ extension on _StringsIt {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -480118,6 +480234,8 @@ extension on _StringsIt {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -495119,7 +495237,7 @@ extension on _StringsJa {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -498350,6 +498468,9 @@ extension on _StringsJa {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -498500,6 +498621,8 @@ extension on _StringsJa {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -513449,7 +513572,7 @@ extension on _StringsKo {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -516681,6 +516804,9 @@ extension on _StringsKo {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -516831,6 +516957,8 @@ extension on _StringsKo {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -531867,7 +531995,7 @@ extension on _StringsNl {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -535102,6 +535230,9 @@ extension on _StringsNl {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -535252,6 +535383,8 @@ extension on _StringsNl {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -550319,7 +550452,7 @@ extension on _StringsPtBr {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -553554,6 +553687,9 @@ extension on _StringsPtBr {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -553704,6 +553840,8 @@ extension on _StringsPtBr {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -568775,7 +568913,7 @@ extension on _StringsRu {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -572010,6 +572148,9 @@ extension on _StringsRu {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -572160,6 +572301,8 @@ extension on _StringsRu {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -587193,7 +587336,7 @@ extension on _StringsTh {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -590426,6 +590569,9 @@ extension on _StringsTh {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -590576,6 +590722,8 @@ extension on _StringsTh {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -605627,7 +605775,7 @@ extension on _StringsTr {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -608860,6 +609008,9 @@ extension on _StringsTr {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -609010,6 +609161,8 @@ extension on _StringsTr {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -624054,7 +624207,7 @@ extension on _StringsVi {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -627289,6 +627442,9 @@ extension on _StringsVi {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -627439,6 +627595,8 @@ extension on _StringsVi {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
@@ -642346,7 +642504,7 @@ extension on _StringsZhCn {
       case 'onboarding_review_anki_toggle':
         return '改用 Anki…';
       case 'onboarding_review_fushi_desc':
-        return '内置间隔复习，排程默认使用 FSRS-7。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
+        return '内置间隔复习，排程默认使用 RWKV（首次使用时下载一个小模型）。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -645548,6 +645706,9 @@ extension on _StringsZhCn {
         return '还没有复习记录。复习几张卡后，统计就会出现在这里。';
       case 'srs_stats_future_backlog':
         return '含逾期';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            'RWKV 牌组里的 ${n} 张复习卡不计在内：它们在估计回忆率降到目标保留率时出现，没有固定的到期日。';
       case 'srs_stats_future_load':
         return '每日负担';
       case 'srs_stats_future_overdue':
@@ -645698,6 +645859,8 @@ extension on _StringsZhCn {
         return '在 Fushi SRS 中打开';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => '在 Fushi SRS 中打开（${n} 张卡）';
+      case 'srs_status_review_by_recall':
+        return '复习中（RWKV）';
       case 'srs_status_review_in':
         return ({required Object n}) => '复习中 · ${n}天后';
       case 'srs_status_suspended':
@@ -660573,7 +660736,7 @@ extension on _StringsZhHk {
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
       case 'onboarding_review_fushi_desc':
-        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+        return 'Built-in spaced repetition, scheduled with RWKV by default (a small model downloaded on first use). No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
         return 'Fushi SRS';
       case 'onboarding_review_method_body':
@@ -663802,6 +663965,9 @@ extension on _StringsZhHk {
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_future_backlog':
         return 'Include overdue';
+      case 'srs_stats_future_due_by_recall':
+        return ({required Object n}) =>
+            '${n} review cards in RWKV decks aren\'t counted: they come back when their estimated recall drops to the desired retention, not on a due date.';
       case 'srs_stats_future_load':
         return 'Daily load';
       case 'srs_stats_future_overdue':
@@ -663952,6 +664118,8 @@ extension on _StringsZhHk {
         return 'Open in Fushi SRS';
       case 'srs_status_open_tooltip_many':
         return ({required Object n}) => 'Open in Fushi SRS (${n} cards)';
+      case 'srs_status_review_by_recall':
+        return 'In review (RWKV)';
       case 'srs_status_review_in':
         return ({required Object n}) => 'Review in ${n} days';
       case 'srs_status_suspended':
