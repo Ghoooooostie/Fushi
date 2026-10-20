@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 151113 (8889 per locale)
+/// Strings: 151079 (8887 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5951,14 +5951,26 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_organize_action => 'AI organize';
   String get library_organize_auto_setting => 'Organize with AI after import';
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   String get library_organize_cancel => 'Stop';
-  String get library_organize_change_add => 'Added {n} to “{name}”';
-  String get library_organize_change_create => 'Created “{name}” with {n}';
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   String get library_organize_change_undone => 'Undone';
   String get library_organize_confidence_high => 'High';
   String get library_organize_confidence_medium => 'Medium';
@@ -5970,8 +5982,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_organize_domain_games => 'Games';
   String get library_organize_domain_manga => 'Manga';
   String get library_organize_domain_video => 'Videos';
-  String get library_organize_done => 'Organized {n} places';
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   String get library_organize_history_allow_again => 'Allow suggesting again';
   String get library_organize_history_empty => 'Nothing has been organized yet';
   String get library_organize_history_rejected_title => 'Groups you rejected';
@@ -5982,13 +5995,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_organize_nothing => 'Nothing to organize';
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   String get library_organize_selection_action => 'AI organize selection';
   String get library_organize_series_tag_prefix => 'Series: ';
   String get library_organize_source_rule => 'Rule';
@@ -22546,20 +22561,32 @@ class _StringsAr extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -22582,9 +22609,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -22604,16 +22632,16 @@ class _StringsAr extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -44285,20 +44313,32 @@ class _StringsDe extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -44321,9 +44361,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -44343,16 +44384,16 @@ class _StringsDe extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -66245,20 +66286,32 @@ class _StringsEs extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -66281,9 +66334,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -66303,16 +66357,16 @@ class _StringsEs extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -88276,20 +88330,32 @@ class _StringsFr extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -88312,9 +88378,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -88334,16 +88401,16 @@ class _StringsFr extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -110190,20 +110257,32 @@ class _StringsId extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -110226,9 +110305,10 @@ class _StringsId extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -110248,16 +110328,16 @@ class _StringsId extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -131994,20 +132074,32 @@ class _StringsIt extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -132030,9 +132122,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -132052,16 +132145,16 @@ class _StringsIt extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -153417,20 +153510,32 @@ class _StringsJa extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -153453,9 +153558,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -153475,16 +153581,16 @@ class _StringsJa extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -174280,20 +174386,32 @@ class _StringsKo extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -174316,9 +174434,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -174338,16 +174457,16 @@ class _StringsKo extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -195647,20 +195766,32 @@ class _StringsNl extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -195683,9 +195814,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -195705,16 +195837,16 @@ class _StringsNl extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -217530,20 +217662,32 @@ class _StringsPtBr extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -217566,9 +217710,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -217588,16 +217733,16 @@ class _StringsPtBr extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -239400,20 +239545,32 @@ class _StringsRu extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -239436,9 +239593,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -239458,16 +239616,16 @@ class _StringsRu extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -261107,20 +261265,32 @@ class _StringsTh extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -261143,9 +261313,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -261165,16 +261336,16 @@ class _StringsTh extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -282754,20 +282925,32 @@ class _StringsTr extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -282790,9 +282973,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -282812,16 +282996,16 @@ class _StringsTr extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -304460,20 +304644,32 @@ class _StringsVi extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -304496,9 +304692,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -304518,16 +304715,16 @@ class _StringsVi extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -325264,19 +325461,32 @@ class _StringsZhCn extends _StringsEn {
   String get library_organize_auto_setting => '导入后自动 AI 整理';
   @override
   String get library_organize_auto_setting_summary =>
-      '规则归不了组的新条目交给 AI，只落高置信度的建议，每个库每天最多 5 次请求';
+      '规则归不了组的新条目在这台设备上交给 AI，只落高置信度的建议，每个库每天最多 5 次请求。只在一台设备上打开就够了：同步的其它设备直接拿到结果，不重复计费';
   @override
   String get library_organize_cancel => '停止';
   @override
-  String get library_organize_change_add => '{n} 个并入「{name}」';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => '${n} 个并入「${name}」';
   @override
-  String get library_organize_change_create => '新建「{name}」（{n} 个）';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => '新建「${name}」（${n} 个）';
   @override
-  String get library_organize_change_evict => '从「{name}」移出 {n} 个';
+  String library_organize_change_evict({
+    required Object name,
+    required Object n,
+  }) => '从「${name}」移出 ${n} 个';
   @override
-  String get library_organize_change_merge => '合并进「{name}」';
+  String library_organize_change_merge({required Object name}) =>
+      '合并进「${name}」';
   @override
-  String get library_organize_change_tag => '给 {n} 个打上「{name}」';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => '给 ${n} 个打上「${name}」';
   @override
   String get library_organize_change_undone => '已撤销';
   @override
@@ -325299,9 +325509,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get library_organize_domain_video => '媒体库';
   @override
-  String get library_organize_done => '已整理 {n} 处';
+  String library_organize_done({required Object n}) => '已整理 ${n} 处';
   @override
-  String get library_organize_failed => 'AI 整理中止：{reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI 整理中止：${reason}';
   @override
   String get library_organize_history_allow_again => '允许再次建议';
   @override
@@ -325320,14 +325531,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get library_organize_over_budget => '今天的自动整理请求额度已用完，明天继续';
   @override
-  String get library_organize_owner_setting => '自动整理由这台设备负责';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => '正在分析… 第 ${done}/${total} 批';
   @override
-  String get library_organize_owner_setting_summary =>
-      '其它设备关掉它：它们跳过这台设备也有的条目，结果靠同步拿到';
-  @override
-  String get library_organize_progress => '正在分析… 第 {done}/{total} 批';
-  @override
-  String get library_organize_run_summary => '{library} · {trigger} · {n} 处';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} 处';
   @override
   String get library_organize_selection_action => 'AI 整理所选';
   @override
@@ -345236,20 +345449,32 @@ class _StringsZhHk extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
-  String get library_organize_change_add => 'Added {n} to “{name}”';
+  String library_organize_change_add({
+    required Object n,
+    required Object name,
+  }) => 'Added ${n} to “${name}”';
   @override
-  String get library_organize_change_create => 'Created “{name}” with {n}';
+  String library_organize_change_create({
+    required Object name,
+    required Object n,
+  }) => 'Created “${name}” with ${n}';
   @override
-  String get library_organize_change_evict => 'Removed {n} from “{name}”';
+  String library_organize_change_evict({
+    required Object n,
+    required Object name,
+  }) => 'Removed ${n} from “${name}”';
   @override
-  String get library_organize_change_merge =>
-      'Merged collections into “{name}”';
+  String library_organize_change_merge({required Object name}) =>
+      'Merged collections into “${name}”';
   @override
-  String get library_organize_change_tag => 'Tagged {n} with “{name}”';
+  String library_organize_change_tag({
+    required Object n,
+    required Object name,
+  }) => 'Tagged ${n} with “${name}”';
   @override
   String get library_organize_change_undone => 'Undone';
   @override
@@ -345272,9 +345497,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get library_organize_domain_video => 'Videos';
   @override
-  String get library_organize_done => 'Organized {n} places';
+  String library_organize_done({required Object n}) => 'Organized ${n} places';
   @override
-  String get library_organize_failed => 'AI organize stopped: {reason}';
+  String library_organize_failed({required Object reason}) =>
+      'AI organize stopped: ${reason}';
   @override
   String get library_organize_history_allow_again => 'Allow suggesting again';
   @override
@@ -345294,16 +345520,16 @@ class _StringsZhHk extends _StringsEn {
   String get library_organize_over_budget =>
       'Today\'s automatic organize requests are used up; it continues tomorrow';
   @override
-  String get library_organize_owner_setting =>
-      'This device runs automatic organize';
+  String library_organize_progress({
+    required Object done,
+    required Object total,
+  }) => 'Analyzing… batch ${done}/${total}';
   @override
-  String get library_organize_owner_setting_summary =>
-      'Turn it off on other devices: they skip items this device also has and get the result by sync';
-  @override
-  String get library_organize_progress => 'Analyzing… batch {done}/{total}';
-  @override
-  String get library_organize_run_summary =>
-      '{library} · {trigger} · {n} changes';
+  String library_organize_run_summary({
+    required Object library,
+    required Object trigger,
+    required Object n,
+  }) => '${library} · ${trigger} · ${n} changes';
   @override
   String get library_organize_selection_action => 'AI organize selection';
   @override
@@ -364626,19 +364852,23 @@ extension on _StringsEn {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -364660,9 +364890,9 @@ extension on _StringsEn {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -364679,14 +364909,15 @@ extension on _StringsEn {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -383087,19 +383318,23 @@ extension on _StringsAr {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -383121,9 +383356,9 @@ extension on _StringsAr {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -383140,14 +383375,15 @@ extension on _StringsAr {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -401589,19 +401825,23 @@ extension on _StringsDe {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -401623,9 +401863,9 @@ extension on _StringsDe {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -401642,14 +401882,15 @@ extension on _StringsDe {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -420112,19 +420353,23 @@ extension on _StringsEs {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -420146,9 +420391,9 @@ extension on _StringsEs {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -420165,14 +420410,15 @@ extension on _StringsEs {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -438645,19 +438891,23 @@ extension on _StringsFr {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -438679,9 +438929,9 @@ extension on _StringsFr {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -438698,14 +438948,15 @@ extension on _StringsFr {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -457153,19 +457404,23 @@ extension on _StringsId {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -457187,9 +457442,9 @@ extension on _StringsId {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -457206,14 +457461,15 @@ extension on _StringsId {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -475645,19 +475901,23 @@ extension on _StringsIt {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -475679,9 +475939,9 @@ extension on _StringsIt {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -475698,14 +475958,15 @@ extension on _StringsIt {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -494102,19 +494363,23 @@ extension on _StringsJa {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -494136,9 +494401,9 @@ extension on _StringsJa {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -494155,14 +494420,15 @@ extension on _StringsJa {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -512487,19 +512753,23 @@ extension on _StringsKo {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -512521,9 +512791,9 @@ extension on _StringsKo {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -512540,14 +512810,15 @@ extension on _StringsKo {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -530938,19 +531209,23 @@ extension on _StringsNl {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -530972,9 +531247,9 @@ extension on _StringsNl {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -530991,14 +531266,15 @@ extension on _StringsNl {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -549446,19 +549722,23 @@ extension on _StringsPtBr {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -549480,9 +549760,9 @@ extension on _StringsPtBr {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -549499,14 +549779,15 @@ extension on _StringsPtBr {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -567956,19 +568237,23 @@ extension on _StringsRu {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -567990,9 +568275,9 @@ extension on _StringsRu {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -568009,14 +568294,15 @@ extension on _StringsRu {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -586439,19 +586725,23 @@ extension on _StringsTh {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -586473,9 +586763,9 @@ extension on _StringsTh {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -586492,14 +586782,15 @@ extension on _StringsTh {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -604922,19 +605213,23 @@ extension on _StringsTr {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -604956,9 +605251,9 @@ extension on _StringsTr {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -604975,14 +605270,15 @@ extension on _StringsTr {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -623407,19 +623703,23 @@ extension on _StringsVi {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -623441,9 +623741,9 @@ extension on _StringsVi {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -623460,14 +623760,15 @@ extension on _StringsVi {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
@@ -641773,19 +642074,23 @@ extension on _StringsZhCn {
       case 'library_organize_auto_setting':
         return '导入后自动 AI 整理';
       case 'library_organize_auto_setting_summary':
-        return '规则归不了组的新条目交给 AI，只落高置信度的建议，每个库每天最多 5 次请求';
+        return '规则归不了组的新条目在这台设备上交给 AI，只落高置信度的建议，每个库每天最多 5 次请求。只在一台设备上打开就够了：同步的其它设备直接拿到结果，不重复计费';
       case 'library_organize_cancel':
         return '停止';
       case 'library_organize_change_add':
-        return '{n} 个并入「{name}」';
+        return ({required Object n, required Object name}) =>
+            '${n} 个并入「${name}」';
       case 'library_organize_change_create':
-        return '新建「{name}」（{n} 个）';
+        return ({required Object name, required Object n}) =>
+            '新建「${name}」（${n} 个）';
       case 'library_organize_change_evict':
-        return '从「{name}」移出 {n} 个';
+        return ({required Object name, required Object n}) =>
+            '从「${name}」移出 ${n} 个';
       case 'library_organize_change_merge':
-        return '合并进「{name}」';
+        return ({required Object name}) => '合并进「${name}」';
       case 'library_organize_change_tag':
-        return '给 {n} 个打上「{name}」';
+        return ({required Object n, required Object name}) =>
+            '给 ${n} 个打上「${name}」';
       case 'library_organize_change_undone':
         return '已撤销';
       case 'library_organize_confidence_high':
@@ -641807,9 +642112,9 @@ extension on _StringsZhCn {
       case 'library_organize_domain_video':
         return '媒体库';
       case 'library_organize_done':
-        return '已整理 {n} 处';
+        return ({required Object n}) => '已整理 ${n} 处';
       case 'library_organize_failed':
-        return 'AI 整理中止：{reason}';
+        return ({required Object reason}) => 'AI 整理中止：${reason}';
       case 'library_organize_history_allow_again':
         return '允许再次建议';
       case 'library_organize_history_empty':
@@ -641826,14 +642131,15 @@ extension on _StringsZhCn {
         return '没有需要整理的';
       case 'library_organize_over_budget':
         return '今天的自动整理请求额度已用完，明天继续';
-      case 'library_organize_owner_setting':
-        return '自动整理由这台设备负责';
-      case 'library_organize_owner_setting_summary':
-        return '其它设备关掉它：它们跳过这台设备也有的条目，结果靠同步拿到';
       case 'library_organize_progress':
-        return '正在分析… 第 {done}/{total} 批';
+        return ({required Object done, required Object total}) =>
+            '正在分析… 第 ${done}/${total} 批';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} 处';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} 处';
       case 'library_organize_selection_action':
         return 'AI 整理所选';
       case 'library_organize_series_tag_prefix':
@@ -660046,19 +660352,23 @@ extension on _StringsZhHk {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI. Only high-confidence suggestions are applied, at most 5 requests per library per day';
+        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
-        return 'Added {n} to “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Added ${n} to “${name}”';
       case 'library_organize_change_create':
-        return 'Created “{name}” with {n}';
+        return ({required Object name, required Object n}) =>
+            'Created “${name}” with ${n}';
       case 'library_organize_change_evict':
-        return 'Removed {n} from “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Removed ${n} from “${name}”';
       case 'library_organize_change_merge':
-        return 'Merged collections into “{name}”';
+        return ({required Object name}) => 'Merged collections into “${name}”';
       case 'library_organize_change_tag':
-        return 'Tagged {n} with “{name}”';
+        return ({required Object n, required Object name}) =>
+            'Tagged ${n} with “${name}”';
       case 'library_organize_change_undone':
         return 'Undone';
       case 'library_organize_confidence_high':
@@ -660080,9 +660390,9 @@ extension on _StringsZhHk {
       case 'library_organize_domain_video':
         return 'Videos';
       case 'library_organize_done':
-        return 'Organized {n} places';
+        return ({required Object n}) => 'Organized ${n} places';
       case 'library_organize_failed':
-        return 'AI organize stopped: {reason}';
+        return ({required Object reason}) => 'AI organize stopped: ${reason}';
       case 'library_organize_history_allow_again':
         return 'Allow suggesting again';
       case 'library_organize_history_empty':
@@ -660099,14 +660409,15 @@ extension on _StringsZhHk {
         return 'Nothing to organize';
       case 'library_organize_over_budget':
         return 'Today\'s automatic organize requests are used up; it continues tomorrow';
-      case 'library_organize_owner_setting':
-        return 'This device runs automatic organize';
-      case 'library_organize_owner_setting_summary':
-        return 'Turn it off on other devices: they skip items this device also has and get the result by sync';
       case 'library_organize_progress':
-        return 'Analyzing… batch {done}/{total}';
+        return ({required Object done, required Object total}) =>
+            'Analyzing… batch ${done}/${total}';
       case 'library_organize_run_summary':
-        return '{library} · {trigger} · {n} changes';
+        return ({
+          required Object library,
+          required Object trigger,
+          required Object n,
+        }) => '${library} · ${trigger} · ${n} changes';
       case 'library_organize_selection_action':
         return 'AI organize selection';
       case 'library_organize_series_tag_prefix':
