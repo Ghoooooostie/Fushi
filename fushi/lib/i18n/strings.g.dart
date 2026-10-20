@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150399 (8847 per locale)
+/// Strings: 150416 (8848 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7521,6 +7521,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
   String get onboarding_review_anki_title => 'Anki';
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   String get onboarding_review_fushi_title => 'Fushi SRS';
@@ -25160,6 +25162,9 @@ class _StringsAr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -46868,6 +46873,9 @@ class _StringsDe extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -68738,6 +68746,9 @@ class _StringsEs extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -90693,6 +90704,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -112460,6 +112474,9 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -134203,6 +134220,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -155379,6 +155399,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -176166,6 +176189,9 @@ class _StringsKo extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -197560,6 +197586,9 @@ class _StringsNl extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -219357,6 +219386,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -241134,6 +241166,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -262700,6 +262735,9 @@ class _StringsTh extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -284280,6 +284318,9 @@ class _StringsTr extends _StringsEn {
   String get onboarding_review_anki_title => 'Anki';
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
   @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
@@ -305879,6 +305920,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -326374,6 +326418,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => '改用 Anki…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
+  @override
   String get onboarding_review_fushi_desc =>
       '内置间隔复习，排程默认使用 FSRS-7。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
   @override
@@ -346287,6 +346334,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_review_anki_toggle => 'Use Anki instead…';
   @override
+  String get onboarding_review_fushi_auto_reposition_hint =>
+      'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
+  @override
   String get onboarding_review_fushi_desc =>
       'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
   @override
@@ -365380,6 +365430,8 @@ extension on _StringsEn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -383758,6 +383810,8 @@ extension on _StringsAr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -402190,6 +402244,8 @@ extension on _StringsDe {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -420626,6 +420682,8 @@ extension on _StringsEs {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -439076,6 +439134,8 @@ extension on _StringsFr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -457488,6 +457548,8 @@ extension on _StringsId {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -475904,6 +475966,8 @@ extension on _StringsIt {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -494260,6 +494324,8 @@ extension on _StringsJa {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -512560,6 +512626,8 @@ extension on _StringsKo {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -530948,6 +531016,8 @@ extension on _StringsNl {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -549370,6 +549440,8 @@ extension on _StringsPtBr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -567796,6 +567868,8 @@ extension on _StringsRu {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -586184,6 +586258,8 @@ extension on _StringsTh {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -604588,6 +604664,8 @@ extension on _StringsTr {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -622985,6 +623063,8 @@ extension on _StringsVi {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
@@ -641247,6 +641327,8 @@ extension on _StringsZhCn {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return '改用 Anki…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。之后可在 设置 › 制卡 里更改。';
       case 'onboarding_review_fushi_desc':
         return '内置间隔复习，排程默认使用 FSRS-7。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
       case 'onboarding_review_fushi_title':
@@ -659443,6 +659525,8 @@ extension on _StringsZhHk {
         return 'Anki';
       case 'onboarding_review_anki_toggle':
         return 'Use Anki instead…';
+      case 'onboarding_review_fushi_auto_reposition_hint':
+        return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. You can change this later in Settings › Card creation.';
       case 'onboarding_review_fushi_desc':
         return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
       case 'onboarding_review_fushi_title':
