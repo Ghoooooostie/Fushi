@@ -5951,7 +5951,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_organize_action => 'AI organize';
   String get library_organize_auto_setting => 'Organize with AI after import';
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   String get library_organize_cancel => 'Stop';
   String library_organize_change_add({
     required Object n,
@@ -22561,7 +22561,7 @@ class _StringsAr extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -44313,7 +44313,7 @@ class _StringsDe extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -66286,7 +66286,7 @@ class _StringsEs extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -88330,7 +88330,7 @@ class _StringsFr extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -110257,7 +110257,7 @@ class _StringsId extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -132074,7 +132074,7 @@ class _StringsIt extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -153510,7 +153510,7 @@ class _StringsJa extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -174386,7 +174386,7 @@ class _StringsKo extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -195766,7 +195766,7 @@ class _StringsNl extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -217662,7 +217662,7 @@ class _StringsPtBr extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -239545,7 +239545,7 @@ class _StringsRu extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -261265,7 +261265,7 @@ class _StringsTh extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -282925,7 +282925,7 @@ class _StringsTr extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -304644,7 +304644,7 @@ class _StringsVi extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -325461,7 +325461,7 @@ class _StringsZhCn extends _StringsEn {
   String get library_organize_auto_setting => '导入后自动 AI 整理';
   @override
   String get library_organize_auto_setting_summary =>
-      '规则归不了组的新条目在这台设备上交给 AI，只落高置信度的建议，每个库每天最多 5 次请求。只在一台设备上打开就够了：同步的其它设备直接拿到结果，不重复计费';
+      '打开即同意：规则归不了组的新条目，其标题、作者或品牌、年份和视频文件夹名会发给你选的 AI 提供商（可能计费）。只落高置信度的建议，每个库每天最多 5 次请求。只在一台设备上打开就够了：同步的其它设备直接拿到结果，不重复计费';
   @override
   String get library_organize_cancel => '停止';
   @override
@@ -345449,7 +345449,7 @@ class _StringsZhHk extends _StringsEn {
   String get library_organize_auto_setting => 'Organize with AI after import';
   @override
   String get library_organize_auto_setting_summary =>
-      'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+      'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
   @override
   String get library_organize_cancel => 'Stop';
   @override
@@ -364852,7 +364852,7 @@ extension on _StringsEn {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -383318,7 +383318,7 @@ extension on _StringsAr {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -401825,7 +401825,7 @@ extension on _StringsDe {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -420353,7 +420353,7 @@ extension on _StringsEs {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -438891,7 +438891,7 @@ extension on _StringsFr {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -457404,7 +457404,7 @@ extension on _StringsId {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -475901,7 +475901,7 @@ extension on _StringsIt {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -494363,7 +494363,7 @@ extension on _StringsJa {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -512753,7 +512753,7 @@ extension on _StringsKo {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -531209,7 +531209,7 @@ extension on _StringsNl {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -549722,7 +549722,7 @@ extension on _StringsPtBr {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -568237,7 +568237,7 @@ extension on _StringsRu {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -586725,7 +586725,7 @@ extension on _StringsTh {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -605213,7 +605213,7 @@ extension on _StringsTr {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -623703,7 +623703,7 @@ extension on _StringsVi {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
@@ -642074,7 +642074,7 @@ extension on _StringsZhCn {
       case 'library_organize_auto_setting':
         return '导入后自动 AI 整理';
       case 'library_organize_auto_setting_summary':
-        return '规则归不了组的新条目在这台设备上交给 AI，只落高置信度的建议，每个库每天最多 5 次请求。只在一台设备上打开就够了：同步的其它设备直接拿到结果，不重复计费';
+        return '打开即同意：规则归不了组的新条目，其标题、作者或品牌、年份和视频文件夹名会发给你选的 AI 提供商（可能计费）。只落高置信度的建议，每个库每天最多 5 次请求。只在一台设备上打开就够了：同步的其它设备直接拿到结果，不重复计费';
       case 'library_organize_cancel':
         return '停止';
       case 'library_organize_change_add':
@@ -660352,7 +660352,7 @@ extension on _StringsZhHk {
       case 'library_organize_auto_setting':
         return 'Organize with AI after import';
       case 'library_organize_auto_setting_summary':
-        return 'New items the rules can\'t group go to AI on this device. Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
+        return 'Turning this on sends the titles, authors or brands, years and video folder names of new items the rules can\'t group to the AI provider you chose (it may charge). Only high-confidence suggestions are applied, at most 5 requests per library per day. Turn it on for one device only: synced devices get the result without paying twice';
       case 'library_organize_cancel':
         return 'Stop';
       case 'library_organize_change_add':
