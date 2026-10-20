@@ -9188,7 +9188,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_report_conflicts({required Object n}) =>
       '${n} notes were not imported because their note type conflicts';
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
   String srs_import_report_invalid_params({required Object preset}) =>
@@ -21419,7 +21419,7 @@ class _StringsAr extends _StringsEn {
   String get home_panel_mode_shown => 'إظهار';
   @override
   String get home_panel_srs_hint =>
-      'يظهر تلقائيًا عند الإرسال إلى مراجعة Fushi أو وجود بطاقات مراجعة';
+      'يظهر تلقائيًا عند الإرسال إلى Fushi SRS أو وجود بطاقات مراجعة';
   @override
   String get home_recently_added => 'أُضيفت مؤخرًا';
   @override
@@ -28096,7 +28096,7 @@ class _StringsAr extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -43039,7 +43039,7 @@ class _StringsDe extends _StringsEn {
   String get home_panel_mode_shown => 'Anzeigen';
   @override
   String get home_panel_srs_hint =>
-      'Automatisch sichtbar, sobald du in die Fushi-Wiederholung minst oder Karten hast';
+      'Automatisch sichtbar, sobald du in Fushi SRS minst oder Karten hast';
   @override
   String get home_recently_added => 'Kürzlich hinzugefügt';
   @override
@@ -49844,7 +49844,7 @@ class _StringsDe extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -64897,7 +64897,7 @@ class _StringsEs extends _StringsEn {
   String get home_panel_mode_shown => 'Mostrar';
   @override
   String get home_panel_srs_hint =>
-      'Se muestra al minar a Repaso de Fushi o si ya tienes tarjetas';
+      'Se muestra al minar a Fushi SRS o si ya tienes tarjetas';
   @override
   String get home_recently_added => 'Añadido recientemente';
   @override
@@ -71717,7 +71717,7 @@ class _StringsEs extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -86829,7 +86829,7 @@ class _StringsFr extends _StringsEn {
   String get home_panel_mode_shown => 'Afficher';
   @override
   String get home_panel_srs_hint =>
-      'Affiché dès que vous minez vers Révision Fushi ou avez des cartes';
+      'Affiché dès que vous minez vers Fushi SRS ou avez des cartes';
   @override
   String get home_recently_added => 'Ajoutés récemment';
   @override
@@ -93677,7 +93677,7 @@ class _StringsFr extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -108667,7 +108667,7 @@ class _StringsId extends _StringsEn {
   String get home_panel_mode_shown => 'Tampilkan';
   @override
   String get home_panel_srs_hint =>
-      'Otomatis tampil saat menambang ke Ulasan Fushi atau sudah ada kartu';
+      'Otomatis tampil saat menambang ke Fushi SRS atau sudah ada kartu';
   @override
   String get home_recently_added => 'Baru ditambahkan';
   @override
@@ -115401,7 +115401,7 @@ class _StringsId extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -130369,7 +130369,7 @@ class _StringsIt extends _StringsEn {
   String get home_panel_mode_shown => 'Mostra';
   @override
   String get home_panel_srs_hint =>
-      'Appare quando invii le carte al Ripasso Fushi o hai già carte';
+      'Appare quando invii le carte a Fushi SRS o hai già carte';
   @override
   String get home_recently_added => 'Aggiunti di recente';
   @override
@@ -137169,7 +137169,7 @@ class _StringsIt extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -158229,7 +158229,7 @@ class _StringsJa extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -172524,7 +172524,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_panel_mode_shown => '표시';
   @override
-  String get home_panel_srs_hint => '자동: Fushi 복습으로 카드를 만들거나 복습 카드가 있으면 표시';
+  String get home_panel_srs_hint => '자동: Fushi SRS로 카드를 만들거나 복습 카드가 있으면 표시';
   @override
   String get home_recently_added => '최근 추가';
   @override
@@ -179014,7 +179014,7 @@ class _StringsKo extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -193731,7 +193731,7 @@ class _StringsNl extends _StringsEn {
   String get home_panel_mode_shown => 'Tonen';
   @override
   String get home_panel_srs_hint =>
-      'Automatisch zichtbaar zodra je naar Fushi-herhaling minet of kaarten hebt';
+      'Automatisch zichtbaar zodra je naar Fushi SRS minet of kaarten hebt';
   @override
   String get home_recently_added => 'Recent toegevoegd';
   @override
@@ -200508,7 +200508,7 @@ class _StringsNl extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -215516,7 +215516,7 @@ class _StringsPtBr extends _StringsEn {
   String get home_panel_mode_shown => 'Mostrar';
   @override
   String get home_panel_srs_hint =>
-      'Aparece ao minerar para a Revisão Fushi ou se já houver cartões';
+      'Aparece ao minerar para o Fushi SRS ou se já houver cartões';
   @override
   String get home_recently_added => 'Adicionados recentemente';
   @override
@@ -222305,7 +222305,7 @@ class _StringsPtBr extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -237293,7 +237293,7 @@ class _StringsRu extends _StringsEn {
   String get home_panel_mode_shown => 'Показать';
   @override
   String get home_panel_srs_hint =>
-      'Авто: показывается, если карточки идут в повторение Fushi или они уже есть';
+      'Авто: показывается, если карточки идут в Fushi SRS или они уже есть';
   @override
   String get home_recently_added => 'Недавно добавленные';
   @override
@@ -244080,7 +244080,7 @@ class _StringsRu extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -258924,7 +258924,7 @@ class _StringsTh extends _StringsEn {
   String get home_panel_mode_shown => 'แสดง';
   @override
   String get home_panel_srs_hint =>
-      'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยังการทบทวน Fushi หรือมีการ์ดอยู่แล้ว';
+      'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยัง Fushi SRS หรือมีการ์ดอยู่แล้ว';
   @override
   String get home_recently_added => 'เพิ่มล่าสุด';
   @override
@@ -265606,7 +265606,7 @@ class _StringsTh extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -280464,7 +280464,7 @@ class _StringsTr extends _StringsEn {
   String get home_panel_mode_shown => 'Göster';
   @override
   String get home_panel_srs_hint =>
-      'Fushi tekrarına kart eklediğinde veya kartın varsa otomatik görünür';
+      'Fushi SRS\'e kart eklediğinde veya kartın varsa otomatik görünür';
   @override
   String get home_recently_added => 'Son eklenenler';
   @override
@@ -287197,7 +287197,7 @@ class _StringsTr extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -302080,7 +302080,7 @@ class _StringsVi extends _StringsEn {
   String get home_panel_mode_shown => 'Hiện';
   @override
   String get home_panel_srs_hint =>
-      'Tự động hiện khi tạo thẻ vào Ôn tập Fushi hoặc đã có thẻ';
+      'Tự động hiện khi tạo thẻ vào Fushi SRS hoặc đã có thẻ';
   @override
   String get home_recently_added => 'Thêm gần đây';
   @override
@@ -308784,7 +308784,7 @@ class _StringsVi extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      'SRS review history restored: ${n} entries';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -329046,7 +329046,7 @@ class _StringsZhCn extends _StringsEn {
       '有 ${n} 条笔记因笔记类型冲突未导入';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      '恢复 Fushi 复习记录：${n} 条';
+      '恢复 SRS 复习记录：${n} 条';
   @override
   String srs_import_report_future({required Object n}) =>
       '有 ${n} 张卡的排程时间在未来，导入时没带排程';
@@ -349060,7 +349060,7 @@ class _StringsZhHk extends _StringsEn {
       '${n} notes were not imported because their note type conflicts';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
-      'Fushi review history restored: ${n} entries';
+      '恢復 SRS 複習記錄：${n} 條';
   @override
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
@@ -367942,7 +367942,7 @@ extension on _StringsEn {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -380520,7 +380520,7 @@ extension on _StringsAr {
       case 'home_panel_mode_shown':
         return 'إظهار';
       case 'home_panel_srs_hint':
-        return 'يظهر تلقائيًا عند الإرسال إلى مراجعة Fushi أو وجود بطاقات مراجعة';
+        return 'يظهر تلقائيًا عند الإرسال إلى Fushi SRS أو وجود بطاقات مراجعة';
       case 'home_recently_added':
         return 'أُضيفت مؤخرًا';
       case 'home_remote_source':
@@ -386318,7 +386318,7 @@ extension on _StringsAr {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -398928,7 +398928,7 @@ extension on _StringsDe {
       case 'home_panel_mode_shown':
         return 'Anzeigen';
       case 'home_panel_srs_hint':
-        return 'Automatisch sichtbar, sobald du in die Fushi-Wiederholung minst oder Karten hast';
+        return 'Automatisch sichtbar, sobald du in Fushi SRS minst oder Karten hast';
       case 'home_recently_added':
         return 'Kürzlich hinzugefügt';
       case 'home_remote_source':
@@ -404750,7 +404750,7 @@ extension on _StringsDe {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -417368,7 +417368,7 @@ extension on _StringsEs {
       case 'home_panel_mode_shown':
         return 'Mostrar';
       case 'home_panel_srs_hint':
-        return 'Se muestra al minar a Repaso de Fushi o si ya tienes tarjetas';
+        return 'Se muestra al minar a Fushi SRS o si ya tienes tarjetas';
       case 'home_recently_added':
         return 'Añadido recientemente';
       case 'home_remote_source':
@@ -423186,7 +423186,7 @@ extension on _StringsEs {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -435814,7 +435814,7 @@ extension on _StringsFr {
       case 'home_panel_mode_shown':
         return 'Afficher';
       case 'home_panel_srs_hint':
-        return 'Affiché dès que vous minez vers Révision Fushi ou avez des cartes';
+        return 'Affiché dès que vous minez vers Fushi SRS ou avez des cartes';
       case 'home_recently_added':
         return 'Ajoutés récemment';
       case 'home_remote_source':
@@ -441633,7 +441633,7 @@ extension on _StringsFr {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -454238,7 +454238,7 @@ extension on _StringsId {
       case 'home_panel_mode_shown':
         return 'Tampilkan';
       case 'home_panel_srs_hint':
-        return 'Otomatis tampil saat menambang ke Ulasan Fushi atau sudah ada kartu';
+        return 'Otomatis tampil saat menambang ke Fushi SRS atau sudah ada kartu';
       case 'home_recently_added':
         return 'Baru ditambahkan';
       case 'home_remote_source':
@@ -460040,7 +460040,7 @@ extension on _StringsId {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -472643,7 +472643,7 @@ extension on _StringsIt {
       case 'home_panel_mode_shown':
         return 'Mostra';
       case 'home_panel_srs_hint':
-        return 'Appare quando invii le carte al Ripasso Fushi o hai già carte';
+        return 'Appare quando invii le carte a Fushi SRS o hai già carte';
       case 'home_recently_added':
         return 'Aggiunti di recente';
       case 'home_remote_source':
@@ -478456,7 +478456,7 @@ extension on _StringsIt {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -496806,7 +496806,7 @@ extension on _StringsJa {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -509325,7 +509325,7 @@ extension on _StringsKo {
       case 'home_panel_mode_shown':
         return '표시';
       case 'home_panel_srs_hint':
-        return '자동: Fushi 복습으로 카드를 만들거나 복습 카드가 있으면 표시';
+        return '자동: Fushi SRS로 카드를 만들거나 복습 카드가 있으면 표시';
       case 'home_recently_added':
         return '최근 추가';
       case 'home_remote_source':
@@ -515105,7 +515105,7 @@ extension on _StringsKo {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -527676,7 +527676,7 @@ extension on _StringsNl {
       case 'home_panel_mode_shown':
         return 'Tonen';
       case 'home_panel_srs_hint':
-        return 'Automatisch zichtbaar zodra je naar Fushi-herhaling minet of kaarten hebt';
+        return 'Automatisch zichtbaar zodra je naar Fushi SRS minet of kaarten hebt';
       case 'home_recently_added':
         return 'Recent toegevoegd';
       case 'home_remote_source':
@@ -533494,7 +533494,7 @@ extension on _StringsNl {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -546100,7 +546100,7 @@ extension on _StringsPtBr {
       case 'home_panel_mode_shown':
         return 'Mostrar';
       case 'home_panel_srs_hint':
-        return 'Aparece ao minerar para a Revisão Fushi ou se já houver cartões';
+        return 'Aparece ao minerar para o Fushi SRS ou se já houver cartões';
       case 'home_recently_added':
         return 'Adicionados recentemente';
       case 'home_remote_source':
@@ -551914,7 +551914,7 @@ extension on _StringsPtBr {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -564524,7 +564524,7 @@ extension on _StringsRu {
       case 'home_panel_mode_shown':
         return 'Показать';
       case 'home_panel_srs_hint':
-        return 'Авто: показывается, если карточки идут в повторение Fushi или они уже есть';
+        return 'Авто: показывается, если карточки идут в Fushi SRS или они уже есть';
       case 'home_recently_added':
         return 'Недавно добавленные';
       case 'home_remote_source':
@@ -570338,7 +570338,7 @@ extension on _StringsRu {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -582922,7 +582922,7 @@ extension on _StringsTh {
       case 'home_panel_mode_shown':
         return 'แสดง';
       case 'home_panel_srs_hint':
-        return 'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยังการทบทวน Fushi หรือมีการ์ดอยู่แล้ว';
+        return 'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยัง Fushi SRS หรือมีการ์ดอยู่แล้ว';
       case 'home_recently_added':
         return 'เพิ่มล่าสุด';
       case 'home_remote_source':
@@ -588722,7 +588722,7 @@ extension on _StringsTh {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -601318,7 +601318,7 @@ extension on _StringsTr {
       case 'home_panel_mode_shown':
         return 'Göster';
       case 'home_panel_srs_hint':
-        return 'Fushi tekrarına kart eklediğinde veya kartın varsa otomatik görünür';
+        return 'Fushi SRS\'e kart eklediğinde veya kartın varsa otomatik görünür';
       case 'home_recently_added':
         return 'Son eklenenler';
       case 'home_remote_source':
@@ -607124,7 +607124,7 @@ extension on _StringsTr {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -619719,7 +619719,7 @@ extension on _StringsVi {
       case 'home_panel_mode_shown':
         return 'Hiện';
       case 'home_panel_srs_hint':
-        return 'Tự động hiện khi tạo thẻ vào Ôn tập Fushi hoặc đã có thẻ';
+        return 'Tự động hiện khi tạo thẻ vào Fushi SRS hoặc đã có thẻ';
       case 'home_recently_added':
         return 'Thêm gần đây';
       case 'home_remote_source':
@@ -625521,7 +625521,7 @@ extension on _StringsVi {
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+            'SRS review history restored: ${n} entries';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
@@ -643762,7 +643762,7 @@ extension on _StringsZhCn {
       case 'srs_import_report_conflicts':
         return ({required Object n}) => '有 ${n} 条笔记因笔记类型冲突未导入';
       case 'srs_import_report_fushi_restored':
-        return ({required Object n}) => '恢复 Fushi 复习记录：${n} 条';
+        return ({required Object n}) => '恢复 SRS 复习记录：${n} 条';
       case 'srs_import_report_future':
         return ({required Object n}) => '有 ${n} 张卡的排程时间在未来，导入时没带排程';
       case 'srs_import_report_invalid_params':
@@ -661969,8 +661969,7 @@ extension on _StringsZhHk {
         return ({required Object n}) =>
             '${n} notes were not imported because their note type conflicts';
       case 'srs_import_report_fushi_restored':
-        return ({required Object n}) =>
-            'Fushi review history restored: ${n} entries';
+        return ({required Object n}) => '恢復 SRS 複習記錄：${n} 條';
       case 'srs_import_report_future':
         return ({required Object n}) =>
             '${n} cards have times in the future and were imported without their schedule';
