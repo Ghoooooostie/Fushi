@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150399 (8847 per locale)
+/// Strings: 150637 (8861 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9217,7 +9217,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_report_reviews_skipped({required Object n}) =>
       'Review history not imported: ${n} entries';
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   String srs_import_report_steps_removed({
     required Object preset,
     required Object removed,
@@ -9500,6 +9500,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_review_layout_title => 'Review layout';
   String get srs_review_pending_decision => 'Needs your decision';
   String get srs_review_replay_audio => 'Replay audio';
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
   String get srs_review_show_answer => 'Show answer';
   String get srs_review_undo_blocked =>
       'This card was already reviewed on another device, so this step can\'t be undone';
@@ -9564,6 +9566,29 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_settings_retention_value({required Object p}) =>
       'Target retention: ${p}%';
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  String get srs_settings_rwkv_model_large => 'Large';
+  String get srs_settings_rwkv_model_small => 'Small';
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  String get srs_settings_rwkv_ready => 'Ready';
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   String get srs_settings_save => 'Save';
   String get srs_settings_saved => 'Deck settings saved';
   String get srs_settings_steps_hint =>
@@ -28140,7 +28165,7 @@ class _StringsAr extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -28629,6 +28654,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -28734,6 +28762,42 @@ class _StringsAr extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -49891,7 +49955,7 @@ class _StringsDe extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -50380,6 +50444,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -50485,6 +50552,42 @@ class _StringsDe extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -71767,7 +71870,7 @@ class _StringsEs extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -72256,6 +72359,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -72361,6 +72467,42 @@ class _StringsEs extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -93730,7 +93872,7 @@ class _StringsFr extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -94219,6 +94361,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -94324,6 +94469,42 @@ class _StringsFr extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -115457,7 +115638,7 @@ class _StringsId extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -115946,6 +116127,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -116051,6 +116235,42 @@ class _StringsId extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -137228,7 +137448,7 @@ class _StringsIt extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -137717,6 +137937,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -137822,6 +138045,42 @@ class _StringsIt extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -158291,7 +158550,7 @@ class _StringsJa extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -158780,6 +159039,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -158885,6 +159147,42 @@ class _StringsJa extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -179079,7 +179377,7 @@ class _StringsKo extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -179568,6 +179866,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -179673,6 +179974,42 @@ class _StringsKo extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -200576,7 +200913,7 @@ class _StringsNl extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -201065,6 +201402,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -201170,6 +201510,42 @@ class _StringsNl extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -222376,7 +222752,7 @@ class _StringsPtBr extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -222865,6 +223241,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -222970,6 +223349,42 @@ class _StringsPtBr extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -244154,7 +244569,7 @@ class _StringsRu extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -244643,6 +245058,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -244748,6 +245166,42 @@ class _StringsRu extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -265683,7 +266137,7 @@ class _StringsTh extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -266172,6 +266626,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -266277,6 +266734,42 @@ class _StringsTh extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -287277,7 +287770,7 @@ class _StringsTr extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -287766,6 +288259,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -287871,6 +288367,42 @@ class _StringsTr extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -308867,7 +309399,7 @@ class _StringsVi extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -309356,6 +309888,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -309461,6 +309996,42 @@ class _StringsVi extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -329130,7 +329701,7 @@ class _StringsZhCn extends _StringsEn {
       '未导入复习记录：${n} 条';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      '预设「${preset}」原用 RWKV，已改用 FSRS';
+      '预设「${preset}」使用 RWKV：请在牌组设置里下载 RWKV 模型';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -329583,6 +330154,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_replay_audio => '重播音频';
   @override
+  String get srs_review_rwkv_unavailable => 'RWKV 尚未就绪，这张卡按 FSRS-7 排程。';
+  @override
   String get srs_review_show_answer => '显示答案';
   @override
   String get srs_review_undo_blocked => '这张卡已在其它设备上复习过，无法撤销这一步';
@@ -329674,6 +330247,41 @@ class _StringsZhCn extends _StringsEn {
   String srs_settings_retention_value({required Object p}) => '目标记忆率：${p}%';
   @override
   String get srs_settings_reviews_per_day => '每日复习上限';
+  @override
+  String srs_settings_rwkv_download({required Object size}) => '下载模型（${size}）';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      '正在下载… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV 不可用：${error}。在此之前间隔按 FSRS-7 计算。';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant 用神经网络根据整个复习历史预测回忆率，卡片在预测回忆率降到目标保留率时到期。稳定性与难度仍由 FSRS-7 维护。';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      '小模型从作者的 GitHub 发布页下载；作者尚未声明它的许可。';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV 模型（本机）';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      '小模型：每张卡约占 2.9 KB 内存。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
+  @override
+  String get srs_settings_rwkv_model_large => '大模型';
+  @override
+  String get srs_settings_rwkv_model_small => '小模型';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => '正在回放复习历史… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => '正在准备…';
+  @override
+  String get srs_settings_rwkv_ready => '已就绪';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      '刚复习完时的预测回忆率大约等于你的整体通过率；目标保留率设得比它还高，卡片会天天到期。';
   @override
   String get srs_settings_save => '保存';
   @override
@@ -349148,7 +349756,7 @@ class _StringsZhHk extends _StringsEn {
       'Review history not imported: ${n} entries';
   @override
   String srs_import_report_rwkv({required Object preset}) =>
-      'Preset "${preset}" used RWKV and now uses FSRS';
+      'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
   @override
   String srs_import_report_steps_removed({
     required Object preset,
@@ -349637,6 +350245,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_review_replay_audio => 'Replay audio';
   @override
+  String get srs_review_rwkv_unavailable =>
+      'RWKV is not ready, so this card is scheduled with FSRS-7.';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -349742,6 +350353,42 @@ class _StringsZhHk extends _StringsEn {
       'Target retention: ${p}%';
   @override
   String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String srs_settings_rwkv_download({required Object size}) =>
+      'Download model (${size})';
+  @override
+  String srs_settings_rwkv_downloading({required Object percent}) =>
+      'Downloading… ${percent}%';
+  @override
+  String srs_settings_rwkv_failed({required Object error}) =>
+      'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+  @override
+  String get srs_settings_rwkv_hint =>
+      'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+  @override
+  String get srs_settings_rwkv_license_small =>
+      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  @override
+  String get srs_settings_rwkv_model => 'RWKV model (this device)';
+  @override
+  String get srs_settings_rwkv_model_hint =>
+      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+  @override
+  String get srs_settings_rwkv_model_large => 'Large';
+  @override
+  String get srs_settings_rwkv_model_small => 'Small';
+  @override
+  String srs_settings_rwkv_preparing({
+    required Object done,
+    required Object total,
+  }) => 'Replaying review history… ${done}/${total}';
+  @override
+  String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  @override
+  String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_retention_note =>
+      'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
   @override
   String get srs_settings_save => 'Save';
   @override
@@ -368029,7 +368676,7 @@ extension on _StringsEn {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -368459,6 +369106,8 @@ extension on _StringsEn {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -368546,6 +369195,34 @@ extension on _StringsEn {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -386407,7 +387084,7 @@ extension on _StringsAr {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -386837,6 +387514,8 @@ extension on _StringsAr {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -386924,6 +387603,34 @@ extension on _StringsAr {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -404841,7 +405548,7 @@ extension on _StringsDe {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -405271,6 +405978,8 @@ extension on _StringsDe {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -405358,6 +406067,34 @@ extension on _StringsDe {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -423279,7 +424016,7 @@ extension on _StringsEs {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -423709,6 +424446,8 @@ extension on _StringsEs {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -423796,6 +424535,34 @@ extension on _StringsEs {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -441728,7 +442495,7 @@ extension on _StringsFr {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -442158,6 +442925,8 @@ extension on _StringsFr {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -442245,6 +443014,34 @@ extension on _StringsFr {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -460137,7 +460934,7 @@ extension on _StringsId {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -460567,6 +461364,8 @@ extension on _StringsId {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -460654,6 +461453,34 @@ extension on _StringsId {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -478555,7 +479382,7 @@ extension on _StringsIt {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -478985,6 +479812,8 @@ extension on _StringsIt {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -479072,6 +479901,34 @@ extension on _StringsIt {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -496907,7 +497764,7 @@ extension on _StringsJa {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -497337,6 +498194,8 @@ extension on _StringsJa {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -497424,6 +498283,34 @@ extension on _StringsJa {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -515208,7 +516095,7 @@ extension on _StringsKo {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -515638,6 +516525,8 @@ extension on _StringsKo {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -515725,6 +516614,34 @@ extension on _StringsKo {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -533599,7 +534516,7 @@ extension on _StringsNl {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -534029,6 +534946,8 @@ extension on _StringsNl {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -534116,6 +535035,34 @@ extension on _StringsNl {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -552021,7 +552968,7 @@ extension on _StringsPtBr {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -552451,6 +553398,8 @@ extension on _StringsPtBr {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -552538,6 +553487,34 @@ extension on _StringsPtBr {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -570447,7 +571424,7 @@ extension on _StringsRu {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -570877,6 +571854,8 @@ extension on _StringsRu {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -570964,6 +571943,34 @@ extension on _StringsRu {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -588833,7 +589840,7 @@ extension on _StringsTh {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -589263,6 +590270,8 @@ extension on _StringsTh {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -589350,6 +590359,34 @@ extension on _StringsTh {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -607237,7 +608274,7 @@ extension on _StringsTr {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -607667,6 +608704,8 @@ extension on _StringsTr {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -607754,6 +608793,34 @@ extension on _StringsTr {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -625636,7 +626703,7 @@ extension on _StringsVi {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -626066,6 +627133,8 @@ extension on _StringsVi {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -626153,6 +627222,34 @@ extension on _StringsVi {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
@@ -643870,7 +644967,8 @@ extension on _StringsZhCn {
       case 'srs_import_report_reviews_skipped':
         return ({required Object n}) => '未导入复习记录：${n} 条';
       case 'srs_import_report_rwkv':
-        return ({required Object preset}) => '预设「${preset}」原用 RWKV，已改用 FSRS';
+        return ({required Object preset}) =>
+            '预设「${preset}」使用 RWKV：请在牌组设置里下载 RWKV 模型';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             '牌组「${preset}」的步长 ${removed} 已移除，改由 FSRS 安排';
@@ -644296,6 +645394,8 @@ extension on _StringsZhCn {
         return '待你决定';
       case 'srs_review_replay_audio':
         return '重播音频';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV 尚未就绪，这张卡按 FSRS-7 排程。';
       case 'srs_review_show_answer':
         return '显示答案';
       case 'srs_review_undo_blocked':
@@ -644381,6 +645481,34 @@ extension on _StringsZhCn {
         return ({required Object p}) => '目标记忆率：${p}%';
       case 'srs_settings_reviews_per_day':
         return '每日复习上限';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => '下载模型（${size}）';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => '正在下载… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV 不可用：${error}。在此之前间隔按 FSRS-7 计算。';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant 用神经网络根据整个复习历史预测回忆率，卡片在预测回忆率降到目标保留率时到期。稳定性与难度仍由 FSRS-7 维护。';
+      case 'srs_settings_rwkv_license_small':
+        return '小模型从作者的 GitHub 发布页下载；作者尚未声明它的许可。';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV 模型（本机）';
+      case 'srs_settings_rwkv_model_hint':
+        return '小模型：每张卡约占 2.9 KB 内存。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
+      case 'srs_settings_rwkv_model_large':
+        return '大模型';
+      case 'srs_settings_rwkv_model_small':
+        return '小模型';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            '正在回放复习历史… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return '正在准备…';
+      case 'srs_settings_rwkv_ready':
+        return '已就绪';
+      case 'srs_settings_rwkv_retention_note':
+        return '刚复习完时的预测回忆率大约等于你的整体通过率；目标保留率设得比它还高，卡片会天天到期。';
       case 'srs_settings_save':
         return '保存';
       case 'srs_settings_saved':
@@ -662088,7 +663216,7 @@ extension on _StringsZhHk {
             'Review history not imported: ${n} entries';
       case 'srs_import_report_rwkv':
         return ({required Object preset}) =>
-            'Preset "${preset}" used RWKV and now uses FSRS';
+            'Preset "${preset}" uses RWKV: download the RWKV model in its deck settings';
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
@@ -662518,6 +663646,8 @@ extension on _StringsZhHk {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
+      case 'srs_review_rwkv_unavailable':
+        return 'RWKV is not ready, so this card is scheduled with FSRS-7.';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -662605,6 +663735,34 @@ extension on _StringsZhHk {
         return ({required Object p}) => 'Target retention: ${p}%';
       case 'srs_settings_reviews_per_day':
         return 'Reviews per day';
+      case 'srs_settings_rwkv_download':
+        return ({required Object size}) => 'Download model (${size})';
+      case 'srs_settings_rwkv_downloading':
+        return ({required Object percent}) => 'Downloading… ${percent}%';
+      case 'srs_settings_rwkv_failed':
+        return ({required Object error}) =>
+            'RWKV is unavailable: ${error}. Intervals use FSRS-7 until this is fixed.';
+      case 'srs_settings_rwkv_hint':
+        return 'RWKV-Instant predicts recall from your whole review history with a neural network; a card is due when its predicted recall drops to the desired retention. Stability and difficulty are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_license_small':
+        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_model':
+        return 'RWKV model (this device)';
+      case 'srs_settings_rwkv_model_hint':
+        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      case 'srs_settings_rwkv_model_large':
+        return 'Large';
+      case 'srs_settings_rwkv_model_small':
+        return 'Small';
+      case 'srs_settings_rwkv_preparing':
+        return ({required Object done, required Object total}) =>
+            'Replaying review history… ${done}/${total}';
+      case 'srs_settings_rwkv_preparing_start':
+        return 'Preparing…';
+      case 'srs_settings_rwkv_ready':
+        return 'Ready';
+      case 'srs_settings_rwkv_retention_note':
+        return 'Right after a review the predicted recall is about your overall pass rate, so a desired retention above it makes cards due every day.';
       case 'srs_settings_save':
         return 'Save';
       case 'srs_settings_saved':
