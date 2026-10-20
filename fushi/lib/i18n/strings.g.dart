@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150399 (8847 per locale)
+/// Strings: 150416 (8848 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5104,10 +5104,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Drop non-Japanese charset characters';
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Removes characters that cannot be encoded in Shift-JIS';
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Keep only quoted text';
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
   String get game_text_process_kind_normalize_width =>
       'Normalise character width';
   String get game_text_process_kind_normalize_width_desc =>
@@ -5120,9 +5116,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       'Removes markup such as ruby and br tags';
   String get game_text_process_kind_strip_curly_braces =>
-      'Remove furigana braces';
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'A brace with a slash keeps its base text; one without is removed entirely';
+      'Curly-brace furigana to ruby';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   String get game_text_process_kind_take_lines => 'Keep N lines';
   String get game_text_process_kind_take_lines_desc =>
       'Keeps only the first or last N lines';
@@ -5146,6 +5146,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_process_preview_step_unchanged => 'No change';
   String get game_text_process_preview_unchanged => 'Unchanged';
   String get game_text_process_preview_use_latest => 'Use latest captured line';
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   String get game_text_process_ruby_warning =>
       'This step removes the markup furigana is parsed from, so those lines lose their ruby';
   String game_text_process_step_count({required Object count}) =>
@@ -21082,12 +21083,6 @@ class _StringsAr extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'يزيل الأحرف التي لا يمكن ترميزها في Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'الاحتفاظ بالنص المقتبس فقط';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'يحتفظ بالحوار ويحذف السرد؛ والسطر بلا علامات اقتباس يُحذف بالكامل';
-  @override
   String get game_text_process_kind_normalize_width => 'توحيد عرض الأحرف';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -21107,8 +21102,14 @@ class _StringsAr extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'إزالة أقواس الفوريغانا';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'القوس الذي فيه شرطة مائلة يحتفظ بنصه الأساسي؛ وما لا شرطة فيه يُزال بالكامل';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'الاحتفاظ بـ N سطرًا';
   @override
@@ -21150,6 +21151,8 @@ class _StringsAr extends _StringsEn {
   String get game_text_process_preview_unchanged => 'دون تغيير';
   @override
   String get game_text_process_preview_use_latest => 'استخدام آخر سطر ملتقَط';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'تزيل هذه الخطوة الوسوم التي تُحلَّل منها الفوريغانا، فتفقد تلك الأسطر الروبي';
@@ -42698,12 +42701,6 @@ class _StringsDe extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Entfernt Zeichen, die in Shift-JIS nicht kodiert werden können';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Nur zitierten Text behalten';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Behält Dialoge und verwirft Erzähltext; eine Zeile ohne Anführungszeichen wird vollständig verworfen';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Zeichenbreite normalisieren';
   @override
@@ -42724,8 +42721,14 @@ class _StringsDe extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Furigana-Klammern entfernen';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Eine Klammer mit Schrägstrich behält ihren Basistext; eine ohne wird vollständig entfernt';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'N Zeilen behalten';
   @override
@@ -42770,6 +42773,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Zuletzt erfasste Zeile verwenden';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Dieser Schritt entfernt das Markup, aus dem Furigana geparst werden, sodass diese Zeilen ihr Ruby verlieren';
@@ -64560,12 +64565,6 @@ class _StringsEs extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Elimina los caracteres que no se pueden codificar en Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Conservar solo el texto entrecomillado';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Conserva los diálogos y descarta la narración; una línea sin comillas se descarta por completo';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normalizar el ancho de caracteres';
   @override
@@ -64586,8 +64585,14 @@ class _StringsEs extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Quitar llaves de furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Una llave con barra conserva su texto base; una sin barra se elimina por completo';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Conservar N líneas';
   @override
@@ -64631,6 +64636,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Usar la última línea capturada';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Este paso elimina el marcado a partir del cual se analiza el furigana, por lo que esas líneas pierden su ruby';
@@ -86493,12 +86500,6 @@ class _StringsFr extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Supprime les caractères qui ne peuvent pas être encodés en Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Ne garder que le texte entre guillemets';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Garde les dialogues et supprime la narration ; une ligne sans guillemets est entièrement supprimée';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normaliser la largeur des caractères';
   @override
@@ -86519,8 +86520,14 @@ class _StringsFr extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Supprimer les accolades de furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Une accolade avec une barre oblique conserve son texte de base ; sans barre, elle est entièrement supprimée';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Garder N lignes';
   @override
@@ -86565,6 +86572,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Utiliser la dernière ligne capturée';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Cette étape supprime le balisage à partir duquel les furigana sont analysés ; ces lignes perdent donc leurs ruby';
@@ -108335,12 +108344,6 @@ class _StringsId extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Menghapus karakter yang tidak dapat dikodekan dalam Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Pertahankan hanya teks bertanda kutip';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Mempertahankan dialog dan membuang narasi; baris tanpa tanda kutip dibuang seluruhnya';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normalkan lebar karakter';
   @override
@@ -108361,8 +108364,14 @@ class _StringsId extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Hapus kurung furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Kurung dengan garis miring mempertahankan teks dasarnya; yang tanpa itu dihapus seluruhnya';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Pertahankan N baris';
   @override
@@ -108407,6 +108416,8 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Gunakan baris terakhir yang ditangkap';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Langkah ini menghapus markup tempat furigana diurai, sehingga baris tersebut kehilangan ruby-nya';
@@ -130039,12 +130050,6 @@ class _StringsIt extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Rimuove i caratteri che non possono essere codificati in Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Mantieni solo il testo tra virgolette';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Mantiene i dialoghi ed elimina la narrazione; una riga senza virgolette viene scartata del tutto';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normalizza la larghezza dei caratteri';
   @override
@@ -130065,8 +130070,14 @@ class _StringsIt extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Rimuovi le graffe dei furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Una graffa con una barra mantiene il testo di base; una senza viene rimossa del tutto';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Mantieni N righe';
   @override
@@ -130111,6 +130122,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Usa l\'ultima riga catturata';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Questo passaggio rimuove il markup da cui vengono analizzati i furigana, quindi quelle righe perdono il ruby';
@@ -151450,11 +151463,6 @@ class _StringsJa extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Shift-JIS でエンコードできない文字を削除します';
   @override
-  String get game_text_process_kind_keep_japanese_quotes => '「」内のテキストのみ残す';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      '台詞だけを残し、地の文を削除します。「」のない行は丸ごと破棄されます';
-  @override
   String get game_text_process_kind_normalize_width => '文字幅を正規化';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -151469,10 +151477,15 @@ class _StringsJa extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       'ruby や br タグなどのマークアップを削除します';
   @override
-  String get game_text_process_kind_strip_curly_braces => '波括弧のふりがなを削除';
+  String get game_text_process_kind_strip_curly_braces => '波括弧のふりがなをルビに変換';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'スラッシュ付きの波括弧は基の文字を残し、スラッシュのないものは丸ごと削除します';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{漢字/かな}・{漢字:かな} の読みを漢字の上にルビとして表示し、それ以外の波括弧は丸ごと削除します';
+  @override
+  String get game_text_process_kind_strip_outside_quotes => '「」の外の文字を除去';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      '話者名など「」の外の文字を除去します。「」のない行（地の文）はそのまま残ります';
   @override
   String get game_text_process_kind_take_lines => 'N 行を残す';
   @override
@@ -151511,6 +151524,8 @@ class _StringsJa extends _StringsEn {
   String get game_text_process_preview_unchanged => '変更なし';
   @override
   String get game_text_process_preview_use_latest => '最近取得した行を使用';
+  @override
+  String get game_text_process_reset_defaults => 'デフォルトに戻す';
   @override
   String get game_text_process_ruby_warning =>
       'このステップはふりがなの解析元になるマークアップを削除するため、該当する行のルビが失われます';
@@ -172224,11 +172239,6 @@ class _StringsKo extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Shift-JIS로 인코딩할 수 없는 문자를 제거합니다';
   @override
-  String get game_text_process_kind_keep_japanese_quotes => '따옴표 안의 텍스트만 유지';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      '대사는 유지하고 지문은 삭제하며, 따옴표가 없는 줄은 통째로 삭제합니다';
-  @override
   String get game_text_process_kind_normalize_width => '문자 폭 정규화';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -172245,8 +172255,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_process_kind_strip_curly_braces => '후리가나 중괄호 제거';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      '슬래시가 있는 중괄호는 본문 텍스트를 유지하고, 없는 중괄호는 통째로 제거합니다';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'N줄만 유지';
   @override
@@ -172285,6 +172301,8 @@ class _StringsKo extends _StringsEn {
   String get game_text_process_preview_unchanged => '변경 없음';
   @override
   String get game_text_process_preview_use_latest => '가장 최근에 캡처한 줄 사용';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       '이 단계는 후리가나를 파싱하는 데 쓰이는 마크업을 제거하므로 해당 줄은 루비를 잃게 됩니다';
@@ -193412,12 +193430,6 @@ class _StringsNl extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Verwijdert tekens die niet in Shift-JIS kunnen worden gecodeerd';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Alleen geciteerde tekst behouden';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Behoudt dialoog en laat vertelling weg; een regel zonder aanhalingstekens wordt helemaal weggelaten';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Tekenbreedte normaliseren';
   @override
@@ -193438,8 +193450,14 @@ class _StringsNl extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Furigana-accolades verwijderen';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Een accolade met een schuine streep behoudt de basistekst; een zonder wordt helemaal verwijderd';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'N regels behouden';
   @override
@@ -193484,6 +193502,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Laatst vastgelegde regel gebruiken';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Deze stap verwijdert de opmaak waaruit furigana wordt gelezen, waardoor die regels hun ruby verliezen';
@@ -215199,12 +215219,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Remove caracteres que não podem ser codificados em Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Manter apenas o texto entre aspas';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Mantém os diálogos e descarta a narração; uma linha sem aspas é descartada por completo';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Normalizar largura dos caracteres';
   @override
@@ -215225,8 +215239,14 @@ class _StringsPtBr extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Remover chaves de furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Uma chave com barra mantém o texto-base; uma sem barra é removida por completo';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Manter N linhas';
   @override
@@ -215270,6 +215290,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Usar a última linha capturada';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Esta etapa remove a marcação de onde o furigana é extraído, então essas linhas perdem o ruby';
@@ -236979,12 +237001,6 @@ class _StringsRu extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Удаляет символы, которые нельзя закодировать в Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Оставлять только текст в кавычках';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Оставляет диалоги и отбрасывает повествование; строка без кавычек отбрасывается целиком';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Нормализовать ширину символов';
   @override
@@ -237005,8 +237021,14 @@ class _StringsRu extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Удалять фигурные скобки фуриганы';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Скобка со слэшем сохраняет основной текст; скобка без слэша удаляется целиком';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Оставить N строк';
   @override
@@ -237051,6 +237073,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Использовать последнюю перехваченную строку';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Этот шаг удаляет разметку, из которой разбирается фуригана, поэтому у таких строк пропадёт руби';
@@ -258617,12 +258641,6 @@ class _StringsTh extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'ลบอักขระที่เข้ารหัสใน Shift-JIS ไม่ได้';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'เก็บเฉพาะข้อความในเครื่องหมายคำพูด';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'เก็บบทสนทนาและทิ้งคำบรรยาย บรรทัดที่ไม่มีเครื่องหมายคำพูดจะถูกทิ้งทั้งบรรทัด';
-  @override
   String get game_text_process_kind_normalize_width =>
       'ปรับความกว้างอักขระให้เป็นมาตรฐาน';
   @override
@@ -258643,8 +258661,14 @@ class _StringsTh extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'ลบวงเล็บปีกกาของฟุริกานะ';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'วงเล็บปีกกาที่มีเครื่องหมายทับจะเก็บข้อความฐานไว้ ส่วนที่ไม่มีจะถูกลบทั้งหมด';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'เก็บ N บรรทัด';
   @override
@@ -258687,6 +258711,8 @@ class _StringsTh extends _StringsEn {
   String get game_text_process_preview_unchanged => 'ไม่เปลี่ยนแปลง';
   @override
   String get game_text_process_preview_use_latest => 'ใช้บรรทัดที่จับได้ล่าสุด';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'ขั้นตอนนี้ลบมาร์กอัปที่ใช้แยกฟุริกานะ บรรทัดเหล่านั้นจึงสูญเสียรูบี้';
@@ -280157,12 +280183,6 @@ class _StringsTr extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Shift-JIS ile kodlanamayan karakterleri kaldırır';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Yalnızca tırnak içindeki metni tut';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Diyalogları tutar, anlatımı atar; tırnaksız bir satır tamamen atılır';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Karakter genişliğini normalleştir';
   @override
@@ -280183,8 +280203,14 @@ class _StringsTr extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Furigana küme parantezlerini kaldır';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Eğik çizgili bir küme parantezi temel metnini korur; çizgisiz olan tamamen kaldırılır';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'N satırı tut';
   @override
@@ -280229,6 +280255,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_process_preview_use_latest =>
       'Yakalanan son satırı kullan';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Bu adım, furiganın ayrıştırıldığı işaretlemeyi kaldırır; bu yüzden bu satırlar ruby\'lerini kaybeder';
@@ -301777,12 +301805,6 @@ class _StringsVi extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       'Loại bỏ các ký tự không thể mã hóa bằng Shift-JIS';
   @override
-  String get game_text_process_kind_keep_japanese_quotes =>
-      'Chỉ giữ văn bản trong dấu ngoặc kép';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      'Giữ lời thoại và bỏ phần dẫn truyện; dòng không có ngoặc kép bị bỏ hoàn toàn';
-  @override
   String get game_text_process_kind_normalize_width =>
       'Chuẩn hóa độ rộng ký tự';
   @override
@@ -301803,8 +301825,14 @@ class _StringsVi extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces =>
       'Xóa ngoặc nhọn furigana';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      'Ngoặc nhọn có dấu gạch chéo giữ lại phần chữ gốc; không có thì bị xóa hoàn toàn';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+  @override
+  String get game_text_process_kind_strip_outside_quotes =>
+      'Strip text outside 「」';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
   @override
   String get game_text_process_kind_take_lines => 'Giữ N dòng';
   @override
@@ -301847,6 +301875,8 @@ class _StringsVi extends _StringsEn {
   String get game_text_process_preview_unchanged => 'Không đổi';
   @override
   String get game_text_process_preview_use_latest => 'Dùng dòng thu gần nhất';
+  @override
+  String get game_text_process_reset_defaults => 'Reset to defaults';
   @override
   String get game_text_process_ruby_warning =>
       'Bước này xóa phần đánh dấu mà furigana được phân tích từ đó, nên các dòng ấy mất ruby';
@@ -322615,11 +322645,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       '移除无法用 Shift-JIS 表示的字符';
   @override
-  String get game_text_process_kind_keep_japanese_quotes => '只保留「」内的文本';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      '只留台词、丢掉旁白；没有「」的整行会被丢弃';
-  @override
   String get game_text_process_kind_normalize_width => '全角半角正规化';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -322634,10 +322659,15 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       '移除 ruby、br 之类的标记';
   @override
-  String get game_text_process_kind_strip_curly_braces => '去除花括号注音';
+  String get game_text_process_kind_strip_curly_braces => '花括号注音转振假名';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      '带斜杠的花括号保留基字；不带斜杠的整体删除';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{漢字/かな} 或 {漢字:かな} 的读音显示在汉字上方；其余花括号整体删除';
+  @override
+  String get game_text_process_kind_strip_outside_quotes => '去掉「」外的文字';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      '去掉人名等「」外的文字；没有「」的旁白整行保留';
   @override
   String get game_text_process_kind_take_lines => '截取指定行数';
   @override
@@ -322676,6 +322706,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_process_preview_unchanged => '无变化';
   @override
   String get game_text_process_preview_use_latest => '使用最近抓到的一行';
+  @override
+  String get game_text_process_reset_defaults => '恢复默认';
   @override
   String get game_text_process_ruby_warning => '这一步会删掉注音标记，相应的行将没有振假名';
   @override
@@ -342482,11 +342514,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_process_kind_filter_non_japanese_desc =>
       '移除無法用 Shift-JIS 表示的字符';
   @override
-  String get game_text_process_kind_keep_japanese_quotes => '只保留「」內的文字';
-  @override
-  String get game_text_process_kind_keep_japanese_quotes_desc =>
-      '只留台詞、丟掉旁白；沒有「」的整行會被丟棄';
-  @override
   String get game_text_process_kind_normalize_width => '全角半角正規化';
   @override
   String get game_text_process_kind_normalize_width_desc =>
@@ -342501,10 +342528,15 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       '移除 ruby、br 之類的標記';
   @override
-  String get game_text_process_kind_strip_curly_braces => '去除花括號注音';
+  String get game_text_process_kind_strip_curly_braces => '花括號注音轉振假名';
   @override
-  String get game_text_process_kind_strip_curly_braces_desc =>
-      '帶斜槓的花括號保留基字；不帶斜槓的整體刪除';
+  String get game_text_process_kind_strip_curly_braces_detail =>
+      '{漢字/かな} 或 {漢字:かな} 的讀音顯示在漢字上方；其餘花括號整體刪除';
+  @override
+  String get game_text_process_kind_strip_outside_quotes => '去掉「」外的文字';
+  @override
+  String get game_text_process_kind_strip_outside_quotes_desc =>
+      '去掉人名等「」外的文字；沒有「」的旁白整行保留';
   @override
   String get game_text_process_kind_take_lines => '截取指定行數';
   @override
@@ -342543,6 +342575,8 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_process_preview_unchanged => '無變化';
   @override
   String get game_text_process_preview_use_latest => '使用最近抓到的一行';
+  @override
+  String get game_text_process_reset_defaults => '恢復預設';
   @override
   String get game_text_process_ruby_warning => '這一步會刪掉注音標記，相應的行將沒有振假名';
   @override
@@ -361889,10 +361923,6 @@ extension on _StringsEn {
         return 'Drop non-Japanese charset characters';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Removes characters that cannot be encoded in Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Keep only quoted text';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
       case 'game_text_process_kind_normalize_width':
         return 'Normalise character width';
       case 'game_text_process_kind_normalize_width_desc':
@@ -361906,9 +361936,13 @@ extension on _StringsEn {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return 'Removes markup such as ruby and br tags';
       case 'game_text_process_kind_strip_curly_braces':
-        return 'Remove furigana braces';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'A brace with a slash keeps its base text; one without is removed entirely';
+        return 'Curly-brace furigana to ruby';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Keep N lines';
       case 'game_text_process_kind_take_lines_desc':
@@ -361947,6 +361981,8 @@ extension on _StringsEn {
         return 'Unchanged';
       case 'game_text_process_preview_use_latest':
         return 'Use latest captured line';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
       case 'game_text_process_step_count':
@@ -380270,10 +380306,6 @@ extension on _StringsAr {
         return 'حذف أحرف المجموعات غير اليابانية';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'يزيل الأحرف التي لا يمكن ترميزها في Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'الاحتفاظ بالنص المقتبس فقط';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'يحتفظ بالحوار ويحذف السرد؛ والسطر بلا علامات اقتباس يُحذف بالكامل';
       case 'game_text_process_kind_normalize_width':
         return 'توحيد عرض الأحرف';
       case 'game_text_process_kind_normalize_width_desc':
@@ -380288,8 +380320,12 @@ extension on _StringsAr {
         return 'يزيل الوسوم مثل ruby وbr';
       case 'game_text_process_kind_strip_curly_braces':
         return 'إزالة أقواس الفوريغانا';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'القوس الذي فيه شرطة مائلة يحتفظ بنصه الأساسي؛ وما لا شرطة فيه يُزال بالكامل';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'الاحتفاظ بـ N سطرًا';
       case 'game_text_process_kind_take_lines_desc':
@@ -380328,6 +380364,8 @@ extension on _StringsAr {
         return 'دون تغيير';
       case 'game_text_process_preview_use_latest':
         return 'استخدام آخر سطر ملتقَط';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'تزيل هذه الخطوة الوسوم التي تُحلَّل منها الفوريغانا، فتفقد تلك الأسطر الروبي';
       case 'game_text_process_step_count':
@@ -398680,10 +398718,6 @@ extension on _StringsDe {
         return 'Nicht-japanische Zeichen entfernen';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Entfernt Zeichen, die in Shift-JIS nicht kodiert werden können';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Nur zitierten Text behalten';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Behält Dialoge und verwirft Erzähltext; eine Zeile ohne Anführungszeichen wird vollständig verworfen';
       case 'game_text_process_kind_normalize_width':
         return 'Zeichenbreite normalisieren';
       case 'game_text_process_kind_normalize_width_desc':
@@ -398698,8 +398732,12 @@ extension on _StringsDe {
         return 'Entfernt Markup wie ruby- und br-Tags';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana-Klammern entfernen';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Eine Klammer mit Schrägstrich behält ihren Basistext; eine ohne wird vollständig entfernt';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'N Zeilen behalten';
       case 'game_text_process_kind_take_lines_desc':
@@ -398738,6 +398776,8 @@ extension on _StringsDe {
         return 'Unverändert';
       case 'game_text_process_preview_use_latest':
         return 'Zuletzt erfasste Zeile verwenden';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Dieser Schritt entfernt das Markup, aus dem Furigana geparst werden, sodass diese Zeilen ihr Ruby verlieren';
       case 'game_text_process_step_count':
@@ -417122,10 +417162,6 @@ extension on _StringsEs {
         return 'Quitar caracteres de juegos de caracteres no japoneses';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Elimina los caracteres que no se pueden codificar en Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Conservar solo el texto entrecomillado';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Conserva los diálogos y descarta la narración; una línea sin comillas se descarta por completo';
       case 'game_text_process_kind_normalize_width':
         return 'Normalizar el ancho de caracteres';
       case 'game_text_process_kind_normalize_width_desc':
@@ -417140,8 +417176,12 @@ extension on _StringsEs {
         return 'Elimina marcado como las etiquetas ruby y br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Quitar llaves de furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Una llave con barra conserva su texto base; una sin barra se elimina por completo';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Conservar N líneas';
       case 'game_text_process_kind_take_lines_desc':
@@ -417180,6 +417220,8 @@ extension on _StringsEs {
         return 'Sin cambios';
       case 'game_text_process_preview_use_latest':
         return 'Usar la última línea capturada';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Este paso elimina el marcado a partir del cual se analiza el furigana, por lo que esas líneas pierden su ruby';
       case 'game_text_process_step_count':
@@ -435569,10 +435611,6 @@ extension on _StringsFr {
         return 'Supprimer les caractères hors jeu de caractères japonais';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Supprime les caractères qui ne peuvent pas être encodés en Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Ne garder que le texte entre guillemets';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Garde les dialogues et supprime la narration ; une ligne sans guillemets est entièrement supprimée';
       case 'game_text_process_kind_normalize_width':
         return 'Normaliser la largeur des caractères';
       case 'game_text_process_kind_normalize_width_desc':
@@ -435587,8 +435625,12 @@ extension on _StringsFr {
         return 'Supprime le balisage comme les balises ruby et br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Supprimer les accolades de furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Une accolade avec une barre oblique conserve son texte de base ; sans barre, elle est entièrement supprimée';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Garder N lignes';
       case 'game_text_process_kind_take_lines_desc':
@@ -435627,6 +435669,8 @@ extension on _StringsFr {
         return 'Inchangé';
       case 'game_text_process_preview_use_latest':
         return 'Utiliser la dernière ligne capturée';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Cette étape supprime le balisage à partir duquel les furigana sont analysés ; ces lignes perdent donc leurs ruby';
       case 'game_text_process_step_count':
@@ -453996,10 +454040,6 @@ extension on _StringsId {
         return 'Buang karakter charset non-Jepang';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Menghapus karakter yang tidak dapat dikodekan dalam Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Pertahankan hanya teks bertanda kutip';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Mempertahankan dialog dan membuang narasi; baris tanpa tanda kutip dibuang seluruhnya';
       case 'game_text_process_kind_normalize_width':
         return 'Normalkan lebar karakter';
       case 'game_text_process_kind_normalize_width_desc':
@@ -454014,8 +454054,12 @@ extension on _StringsId {
         return 'Menghapus markup seperti tag ruby dan br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Hapus kurung furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Kurung dengan garis miring mempertahankan teks dasarnya; yang tanpa itu dihapus seluruhnya';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Pertahankan N baris';
       case 'game_text_process_kind_take_lines_desc':
@@ -454054,6 +454098,8 @@ extension on _StringsId {
         return 'Tidak berubah';
       case 'game_text_process_preview_use_latest':
         return 'Gunakan baris terakhir yang ditangkap';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Langkah ini menghapus markup tempat furigana diurai, sehingga baris tersebut kehilangan ruby-nya';
       case 'game_text_process_step_count':
@@ -472403,10 +472449,6 @@ extension on _StringsIt {
         return 'Elimina i caratteri non giapponesi';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Rimuove i caratteri che non possono essere codificati in Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Mantieni solo il testo tra virgolette';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Mantiene i dialoghi ed elimina la narrazione; una riga senza virgolette viene scartata del tutto';
       case 'game_text_process_kind_normalize_width':
         return 'Normalizza la larghezza dei caratteri';
       case 'game_text_process_kind_normalize_width_desc':
@@ -472421,8 +472463,12 @@ extension on _StringsIt {
         return 'Rimuove il markup come i tag ruby e br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Rimuovi le graffe dei furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Una graffa con una barra mantiene il testo di base; una senza viene rimossa del tutto';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Mantieni N righe';
       case 'game_text_process_kind_take_lines_desc':
@@ -472461,6 +472507,8 @@ extension on _StringsIt {
         return 'Invariato';
       case 'game_text_process_preview_use_latest':
         return 'Usa l\'ultima riga catturata';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Questo passaggio rimuove il markup da cui vengono analizzati i furigana, quindi quelle righe perdono il ruby';
       case 'game_text_process_step_count':
@@ -490789,10 +490837,6 @@ extension on _StringsJa {
         return '日本語以外の文字セットの文字を除外';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Shift-JIS でエンコードできない文字を削除します';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return '「」内のテキストのみ残す';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return '台詞だけを残し、地の文を削除します。「」のない行は丸ごと破棄されます';
       case 'game_text_process_kind_normalize_width':
         return '文字幅を正規化';
       case 'game_text_process_kind_normalize_width_desc':
@@ -490806,9 +490850,13 @@ extension on _StringsJa {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return 'ruby や br タグなどのマークアップを削除します';
       case 'game_text_process_kind_strip_curly_braces':
-        return '波括弧のふりがなを削除';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'スラッシュ付きの波括弧は基の文字を残し、スラッシュのないものは丸ごと削除します';
+        return '波括弧のふりがなをルビに変換';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{漢字/かな}・{漢字:かな} の読みを漢字の上にルビとして表示し、それ以外の波括弧は丸ごと削除します';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return '「」の外の文字を除去';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return '話者名など「」の外の文字を除去します。「」のない行（地の文）はそのまま残ります';
       case 'game_text_process_kind_take_lines':
         return 'N 行を残す';
       case 'game_text_process_kind_take_lines_desc':
@@ -490847,6 +490895,8 @@ extension on _StringsJa {
         return '変更なし';
       case 'game_text_process_preview_use_latest':
         return '最近取得した行を使用';
+      case 'game_text_process_reset_defaults':
+        return 'デフォルトに戻す';
       case 'game_text_process_ruby_warning':
         return 'このステップはふりがなの解析元になるマークアップを削除するため、該当する行のルビが失われます';
       case 'game_text_process_step_count':
@@ -509089,10 +509139,6 @@ extension on _StringsKo {
         return '일본어 문자 집합이 아닌 문자 삭제';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Shift-JIS로 인코딩할 수 없는 문자를 제거합니다';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return '따옴표 안의 텍스트만 유지';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return '대사는 유지하고 지문은 삭제하며, 따옴표가 없는 줄은 통째로 삭제합니다';
       case 'game_text_process_kind_normalize_width':
         return '문자 폭 정규화';
       case 'game_text_process_kind_normalize_width_desc':
@@ -509107,8 +509153,12 @@ extension on _StringsKo {
         return 'ruby, br 태그 같은 마크업을 제거합니다';
       case 'game_text_process_kind_strip_curly_braces':
         return '후리가나 중괄호 제거';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return '슬래시가 있는 중괄호는 본문 텍스트를 유지하고, 없는 중괄호는 통째로 제거합니다';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'N줄만 유지';
       case 'game_text_process_kind_take_lines_desc':
@@ -509147,6 +509197,8 @@ extension on _StringsKo {
         return '변경 없음';
       case 'game_text_process_preview_use_latest':
         return '가장 최근에 캡처한 줄 사용';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return '이 단계는 후리가나를 파싱하는 데 쓰이는 마크업을 제거하므로 해당 줄은 루비를 잃게 됩니다';
       case 'game_text_process_step_count':
@@ -527442,10 +527494,6 @@ extension on _StringsNl {
         return 'Tekens buiten de Japanse tekenset verwijderen';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Verwijdert tekens die niet in Shift-JIS kunnen worden gecodeerd';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Alleen geciteerde tekst behouden';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Behoudt dialoog en laat vertelling weg; een regel zonder aanhalingstekens wordt helemaal weggelaten';
       case 'game_text_process_kind_normalize_width':
         return 'Tekenbreedte normaliseren';
       case 'game_text_process_kind_normalize_width_desc':
@@ -527460,8 +527508,12 @@ extension on _StringsNl {
         return 'Verwijdert opmaak zoals ruby- en br-tags';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana-accolades verwijderen';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Een accolade met een schuine streep behoudt de basistekst; een zonder wordt helemaal verwijderd';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'N regels behouden';
       case 'game_text_process_kind_take_lines_desc':
@@ -527500,6 +527552,8 @@ extension on _StringsNl {
         return 'Ongewijzigd';
       case 'game_text_process_preview_use_latest':
         return 'Laatst vastgelegde regel gebruiken';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Deze stap verwijdert de opmaak waaruit furigana wordt gelezen, waardoor die regels hun ruby verliezen';
       case 'game_text_process_step_count':
@@ -545868,10 +545922,6 @@ extension on _StringsPtBr {
         return 'Descartar caracteres fora do conjunto japonês';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Remove caracteres que não podem ser codificados em Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Manter apenas o texto entre aspas';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Mantém os diálogos e descarta a narração; uma linha sem aspas é descartada por completo';
       case 'game_text_process_kind_normalize_width':
         return 'Normalizar largura dos caracteres';
       case 'game_text_process_kind_normalize_width_desc':
@@ -545886,8 +545936,12 @@ extension on _StringsPtBr {
         return 'Remove marcações como as tags ruby e br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Remover chaves de furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Uma chave com barra mantém o texto-base; uma sem barra é removida por completo';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Manter N linhas';
       case 'game_text_process_kind_take_lines_desc':
@@ -545926,6 +545980,8 @@ extension on _StringsPtBr {
         return 'Sem alteração';
       case 'game_text_process_preview_use_latest':
         return 'Usar a última linha capturada';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Esta etapa remove a marcação de onde o furigana é extraído, então essas linhas perdem o ruby';
       case 'game_text_process_step_count':
@@ -564294,10 +564350,6 @@ extension on _StringsRu {
         return 'Удалять символы вне японской кодировки';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Удаляет символы, которые нельзя закодировать в Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Оставлять только текст в кавычках';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Оставляет диалоги и отбрасывает повествование; строка без кавычек отбрасывается целиком';
       case 'game_text_process_kind_normalize_width':
         return 'Нормализовать ширину символов';
       case 'game_text_process_kind_normalize_width_desc':
@@ -564312,8 +564364,12 @@ extension on _StringsRu {
         return 'Удаляет разметку, например теги ruby и br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Удалять фигурные скобки фуриганы';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Скобка со слэшем сохраняет основной текст; скобка без слэша удаляется целиком';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Оставить N строк';
       case 'game_text_process_kind_take_lines_desc':
@@ -564352,6 +564408,8 @@ extension on _StringsRu {
         return 'Без изменений';
       case 'game_text_process_preview_use_latest':
         return 'Использовать последнюю перехваченную строку';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Этот шаг удаляет разметку, из которой разбирается фуригана, поэтому у таких строк пропадёт руби';
       case 'game_text_process_step_count':
@@ -582694,10 +582752,6 @@ extension on _StringsTh {
         return 'ทิ้งอักขระที่ไม่ใช่ชุดอักขระภาษาญี่ปุ่น';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'ลบอักขระที่เข้ารหัสใน Shift-JIS ไม่ได้';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'เก็บเฉพาะข้อความในเครื่องหมายคำพูด';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'เก็บบทสนทนาและทิ้งคำบรรยาย บรรทัดที่ไม่มีเครื่องหมายคำพูดจะถูกทิ้งทั้งบรรทัด';
       case 'game_text_process_kind_normalize_width':
         return 'ปรับความกว้างอักขระให้เป็นมาตรฐาน';
       case 'game_text_process_kind_normalize_width_desc':
@@ -582712,8 +582766,12 @@ extension on _StringsTh {
         return 'ลบมาร์กอัปเช่นแท็ก ruby และ br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'ลบวงเล็บปีกกาของฟุริกานะ';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'วงเล็บปีกกาที่มีเครื่องหมายทับจะเก็บข้อความฐานไว้ ส่วนที่ไม่มีจะถูกลบทั้งหมด';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'เก็บ N บรรทัด';
       case 'game_text_process_kind_take_lines_desc':
@@ -582752,6 +582810,8 @@ extension on _StringsTh {
         return 'ไม่เปลี่ยนแปลง';
       case 'game_text_process_preview_use_latest':
         return 'ใช้บรรทัดที่จับได้ล่าสุด';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'ขั้นตอนนี้ลบมาร์กอัปที่ใช้แยกฟุริกานะ บรรทัดเหล่านั้นจึงสูญเสียรูบี้';
       case 'game_text_process_step_count':
@@ -601092,10 +601152,6 @@ extension on _StringsTr {
         return 'Japonca olmayan karakter kümesi karakterlerini at';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Shift-JIS ile kodlanamayan karakterleri kaldırır';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Yalnızca tırnak içindeki metni tut';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Diyalogları tutar, anlatımı atar; tırnaksız bir satır tamamen atılır';
       case 'game_text_process_kind_normalize_width':
         return 'Karakter genişliğini normalleştir';
       case 'game_text_process_kind_normalize_width_desc':
@@ -601110,8 +601166,12 @@ extension on _StringsTr {
         return 'ruby ve br etiketleri gibi işaretlemeleri kaldırır';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana küme parantezlerini kaldır';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Eğik çizgili bir küme parantezi temel metnini korur; çizgisiz olan tamamen kaldırılır';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'N satırı tut';
       case 'game_text_process_kind_take_lines_desc':
@@ -601150,6 +601210,8 @@ extension on _StringsTr {
         return 'Değişmedi';
       case 'game_text_process_preview_use_latest':
         return 'Yakalanan son satırı kullan';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Bu adım, furiganın ayrıştırıldığı işaretlemeyi kaldırır; bu yüzden bu satırlar ruby\'lerini kaybeder';
       case 'game_text_process_step_count':
@@ -619495,10 +619557,6 @@ extension on _StringsVi {
         return 'Loại ký tự ngoài bộ ký tự tiếng Nhật';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return 'Loại bỏ các ký tự không thể mã hóa bằng Shift-JIS';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return 'Chỉ giữ văn bản trong dấu ngoặc kép';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return 'Giữ lời thoại và bỏ phần dẫn truyện; dòng không có ngoặc kép bị bỏ hoàn toàn';
       case 'game_text_process_kind_normalize_width':
         return 'Chuẩn hóa độ rộng ký tự';
       case 'game_text_process_kind_normalize_width_desc':
@@ -619513,8 +619571,12 @@ extension on _StringsVi {
         return 'Xóa phần đánh dấu như thẻ ruby và br';
       case 'game_text_process_kind_strip_curly_braces':
         return 'Xóa ngoặc nhọn furigana';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return 'Ngoặc nhọn có dấu gạch chéo giữ lại phần chữ gốc; không có thì bị xóa hoàn toàn';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return 'Strip text outside 「」';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return 'Drops speaker names and other text outside 「」; lines without 「」 (narration) are kept as-is';
       case 'game_text_process_kind_take_lines':
         return 'Giữ N dòng';
       case 'game_text_process_kind_take_lines_desc':
@@ -619553,6 +619615,8 @@ extension on _StringsVi {
         return 'Không đổi';
       case 'game_text_process_preview_use_latest':
         return 'Dùng dòng thu gần nhất';
+      case 'game_text_process_reset_defaults':
+        return 'Reset to defaults';
       case 'game_text_process_ruby_warning':
         return 'Bước này xóa phần đánh dấu mà furigana được phân tích từ đó, nên các dòng ấy mất ruby';
       case 'game_text_process_step_count':
@@ -637792,10 +637856,6 @@ extension on _StringsZhCn {
         return '过滤非日语字符集字符';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return '移除无法用 Shift-JIS 表示的字符';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return '只保留「」内的文本';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return '只留台词、丢掉旁白；没有「」的整行会被丢弃';
       case 'game_text_process_kind_normalize_width':
         return '全角半角正规化';
       case 'game_text_process_kind_normalize_width_desc':
@@ -637809,9 +637869,13 @@ extension on _StringsZhCn {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return '移除 ruby、br 之类的标记';
       case 'game_text_process_kind_strip_curly_braces':
-        return '去除花括号注音';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return '带斜杠的花括号保留基字；不带斜杠的整体删除';
+        return '花括号注音转振假名';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{漢字/かな} 或 {漢字:かな} 的读音显示在汉字上方；其余花括号整体删除';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return '去掉「」外的文字';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return '去掉人名等「」外的文字；没有「」的旁白整行保留';
       case 'game_text_process_kind_take_lines':
         return '截取指定行数';
       case 'game_text_process_kind_take_lines_desc':
@@ -637850,6 +637914,8 @@ extension on _StringsZhCn {
         return '无变化';
       case 'game_text_process_preview_use_latest':
         return '使用最近抓到的一行';
+      case 'game_text_process_reset_defaults':
+        return '恢复默认';
       case 'game_text_process_ruby_warning':
         return '这一步会删掉注音标记，相应的行将没有振假名';
       case 'game_text_process_step_count':
@@ -655980,10 +656046,6 @@ extension on _StringsZhHk {
         return '過濾非日語字符集字符';
       case 'game_text_process_kind_filter_non_japanese_desc':
         return '移除無法用 Shift-JIS 表示的字符';
-      case 'game_text_process_kind_keep_japanese_quotes':
-        return '只保留「」內的文字';
-      case 'game_text_process_kind_keep_japanese_quotes_desc':
-        return '只留台詞、丟掉旁白；沒有「」的整行會被丟棄';
       case 'game_text_process_kind_normalize_width':
         return '全角半角正規化';
       case 'game_text_process_kind_normalize_width_desc':
@@ -655997,9 +656059,13 @@ extension on _StringsZhHk {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return '移除 ruby、br 之類的標記';
       case 'game_text_process_kind_strip_curly_braces':
-        return '去除花括號注音';
-      case 'game_text_process_kind_strip_curly_braces_desc':
-        return '帶斜槓的花括號保留基字；不帶斜槓的整體刪除';
+        return '花括號注音轉振假名';
+      case 'game_text_process_kind_strip_curly_braces_detail':
+        return '{漢字/かな} 或 {漢字:かな} 的讀音顯示在漢字上方；其餘花括號整體刪除';
+      case 'game_text_process_kind_strip_outside_quotes':
+        return '去掉「」外的文字';
+      case 'game_text_process_kind_strip_outside_quotes_desc':
+        return '去掉人名等「」外的文字；沒有「」的旁白整行保留';
       case 'game_text_process_kind_take_lines':
         return '截取指定行數';
       case 'game_text_process_kind_take_lines_desc':
@@ -656038,6 +656104,8 @@ extension on _StringsZhHk {
         return '無變化';
       case 'game_text_process_preview_use_latest':
         return '使用最近抓到的一行';
+      case 'game_text_process_reset_defaults':
+        return '恢復預設';
       case 'game_text_process_ruby_warning':
         return '這一步會刪掉注音標記，相應的行將沒有振假名';
       case 'game_text_process_step_count':
