@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150195 (8835 per locale)
+/// Strings: 150382 (8846 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8733,6 +8733,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_anki_migrate_found => 'Anki collections on this device';
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   String get srs_anki_migrate_ios_hint =>
@@ -8767,6 +8769,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   String get srs_backup_change_location => 'Change storage location';
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   String get srs_backup_corrupt => 'This backup file is damaged';
   String get srs_backup_delete => 'Delete backup';
   String srs_backup_delete_confirm({required Object time}) =>
@@ -9002,9 +9006,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_count_learn => 'Learning';
   String get srs_count_new => 'New';
   String get srs_count_review => 'Due';
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  String get srs_day_boundary_title => 'When does the day start';
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   String get srs_deck_collapse => 'Collapse subdecks';
   String get srs_deck_delete => 'Delete deck';
@@ -9013,6 +9014,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_deck_deleting => 'Deleting…';
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_menu => 'More actions';
+  String get srs_deck_move => 'Move to…';
+  String get srs_deck_move_down => 'Move down';
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  String get srs_deck_move_top_level => 'Top level';
+  String get srs_deck_move_up => 'Move up';
   String get srs_deck_name => 'Deck name';
   String get srs_deck_name_invalid => 'A deck name cannot contain ::';
   String get srs_deck_new => 'New deck';
@@ -9153,6 +9164,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object n,
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
   String get srs_import => 'Import';
   String get srs_import_background_started =>
       'Importing in the background. You can keep using Fushi.';
@@ -9160,6 +9173,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   String get srs_import_merge_notetypes => 'Merge note types';
   String get srs_import_merge_notetypes_help =>
       'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
@@ -9667,6 +9683,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Couldn\'t sync review data: ${reason}';
   String get srs_sync_no_backend => 'No sync service is set up';
   String get srs_sync_now => 'Sync now';
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   String get srs_value_no => 'No';
   String get srs_value_yes => 'Yes';
   String get srs_visual_add_field => 'Add field';
@@ -27286,6 +27304,9 @@ class _StringsAr extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -27340,6 +27361,9 @@ class _StringsAr extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -27765,11 +27789,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -27784,6 +27803,23 @@ class _StringsAr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -28021,6 +28057,9 @@ class _StringsAr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -28031,6 +28070,11 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -28906,6 +28950,9 @@ class _StringsAr extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -49005,6 +49052,9 @@ class _StringsDe extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -49059,6 +49109,9 @@ class _StringsDe extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -49484,11 +49537,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -49503,6 +49551,23 @@ class _StringsDe extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -49740,6 +49805,9 @@ class _StringsDe extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -49750,6 +49818,11 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -50625,6 +50698,9 @@ class _StringsDe extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -70849,6 +70925,9 @@ class _StringsEs extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -70903,6 +70982,9 @@ class _StringsEs extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -71328,11 +71410,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -71347,6 +71424,23 @@ class _StringsEs extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -71584,6 +71678,9 @@ class _StringsEs extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -71594,6 +71691,11 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -72469,6 +72571,9 @@ class _StringsEs extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -92780,6 +92885,9 @@ class _StringsFr extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -92834,6 +92942,9 @@ class _StringsFr extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -93259,11 +93370,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -93278,6 +93384,23 @@ class _StringsFr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -93515,6 +93638,9 @@ class _StringsFr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -93525,6 +93651,11 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -94400,6 +94531,9 @@ class _StringsFr extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -114475,6 +114609,9 @@ class _StringsId extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -114529,6 +114666,9 @@ class _StringsId extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -114954,11 +115094,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -114973,6 +115108,23 @@ class _StringsId extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -115210,6 +115362,9 @@ class _StringsId extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -115220,6 +115375,11 @@ class _StringsId extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -116095,6 +116255,9 @@ class _StringsId extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -136214,6 +136377,9 @@ class _StringsIt extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -136268,6 +136434,9 @@ class _StringsIt extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -136693,11 +136862,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -136712,6 +136876,23 @@ class _StringsIt extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -136949,6 +137130,9 @@ class _StringsIt extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -136959,6 +137143,11 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -137834,6 +138023,9 @@ class _StringsIt extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -157245,6 +157437,9 @@ class _StringsJa extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -157299,6 +157494,9 @@ class _StringsJa extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -157724,11 +157922,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -157743,6 +157936,23 @@ class _StringsJa extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -157980,6 +158190,9 @@ class _StringsJa extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -157990,6 +158203,11 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -158865,6 +159083,9 @@ class _StringsJa extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -178001,6 +178222,9 @@ class _StringsKo extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -178055,6 +178279,9 @@ class _StringsKo extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -178480,11 +178707,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -178499,6 +178721,23 @@ class _StringsKo extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -178736,6 +178975,9 @@ class _StringsKo extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -178746,6 +178988,11 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -179621,6 +179868,9 @@ class _StringsKo extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -199466,6 +199716,9 @@ class _StringsNl extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -199520,6 +199773,9 @@ class _StringsNl extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -199945,11 +200201,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -199964,6 +200215,23 @@ class _StringsNl extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -200201,6 +200469,9 @@ class _StringsNl extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -200211,6 +200482,11 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -201086,6 +201362,9 @@ class _StringsNl extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -221234,6 +221513,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -221288,6 +221570,9 @@ class _StringsPtBr extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -221713,11 +221998,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -221732,6 +222012,23 @@ class _StringsPtBr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -221969,6 +222266,9 @@ class _StringsPtBr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -221979,6 +222279,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -222854,6 +223159,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -242980,6 +243288,9 @@ class _StringsRu extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -243034,6 +243345,9 @@ class _StringsRu extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -243459,11 +243773,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -243478,6 +243787,23 @@ class _StringsRu extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -243715,6 +244041,9 @@ class _StringsRu extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -243725,6 +244054,11 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -244600,6 +244934,9 @@ class _StringsRu extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -264477,6 +264814,9 @@ class _StringsTh extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -264531,6 +264871,9 @@ class _StringsTh extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -264956,11 +265299,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -264975,6 +265313,23 @@ class _StringsTh extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -265212,6 +265567,9 @@ class _StringsTh extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -265222,6 +265580,11 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -266097,6 +266460,9 @@ class _StringsTh extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -286039,6 +286405,9 @@ class _StringsTr extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -286093,6 +286462,9 @@ class _StringsTr extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -286518,11 +286890,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -286537,6 +286904,23 @@ class _StringsTr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -286774,6 +287158,9 @@ class _StringsTr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -286784,6 +287171,11 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -287659,6 +288051,9 @@ class _StringsTr extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -307597,6 +307992,9 @@ class _StringsVi extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -307651,6 +308049,9 @@ class _StringsVi extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -308076,11 +308477,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -308095,6 +308491,23 @@ class _StringsVi extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -308332,6 +308745,9 @@ class _StringsVi extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -308342,6 +308758,11 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -309217,6 +309638,9 @@ class _StringsVi extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -327888,6 +328312,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_anki_migrate_grant_access => '授予文件访问权限以查找 AnkiDroid';
   @override
+  String get srs_anki_migrate_hint => '把本机 Anki / AnkiDroid 的整个集合连同复习记录搬过来';
+  @override
   String get srs_anki_migrate_intro =>
       '把 Anki 的牌组、笔记、笔记类型、复习进度和媒体一次搬过来。只读取 Anki 数据，不会改动它。';
   @override
@@ -327940,6 +328366,9 @@ class _StringsZhCn extends _StringsEn {
       '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
   @override
   String get srs_backup_change_location => '更改存储位置';
+  @override
+  String get srs_backup_cloud_hint =>
+      '这里的备份只存在本机。想让复习数据上云或同步到其它设备，配置「同步与备份」（云盘）或「Fushi 互联」即可，复习数据会随它们自动同步。';
   @override
   String get srs_backup_corrupt => '备份文件已损坏';
   @override
@@ -328345,11 +328774,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_count_review => '到期';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      '复习的「今天」在每天 ${hour} 点切换，与统计页共用同一个日界（在统计页的设置按钮里修改）。在这个时刻之前做的复习算前一天。';
-  @override
-  String get srs_day_boundary_title => '复习的「今天」从几点开始';
-  @override
   String get srs_deck_browse_cards => '浏览此牌组的卡片';
   @override
   String get srs_deck_collapse => '收起子牌组';
@@ -328364,6 +328788,20 @@ class _StringsZhCn extends _StringsEn {
   String get srs_deck_expand => '展开子牌组';
   @override
   String get srs_deck_menu => '更多操作';
+  @override
+  String get srs_deck_move => '移动到…';
+  @override
+  String get srs_deck_move_down => '下移';
+  @override
+  String get srs_deck_move_drop_top_level => '拖到这里，移到顶层';
+  @override
+  String get srs_deck_move_into_own_subdeck => '不能移到它自己的子牌组里';
+  @override
+  String get srs_deck_move_name_taken => '那里已经有同名牌组';
+  @override
+  String get srs_deck_move_top_level => '顶层';
+  @override
+  String get srs_deck_move_up => '上移';
   @override
   String get srs_deck_name => '牌组名称';
   @override
@@ -328574,6 +329012,8 @@ class _StringsZhCn extends _StringsEn {
     required Object skipped,
   }) => '已导入 ${n} 条，跳过 ${skipped} 条';
   @override
+  String get srs_history_import_hint => '以前在 Fushi 里制过的卡（词、读音、释义、例句）';
+  @override
   String get srs_import => '导入';
   @override
   String get srs_import_background_started => '正在后台导入，可以继续使用 Fushi。';
@@ -328582,6 +329022,10 @@ class _StringsZhCn extends _StringsEn {
       '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
   @override
   String srs_import_failed({required Object error}) => '导入失败：${error}';
+  @override
+  String get srs_import_file => '导入 .apkg / .colpkg 文件';
+  @override
+  String get srs_import_file_hint => '共享牌组，或从 Anki 导出的牌组文件';
   @override
   String get srs_import_merge_notetypes => '合并笔记模板';
   @override
@@ -329394,6 +329838,9 @@ class _StringsZhCn extends _StringsEn {
   String get srs_sync_no_backend => '还没有配置同步服务';
   @override
   String get srs_sync_now => '立即同步';
+  @override
+  String get srs_sync_setup_body =>
+      '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
   @override
   String get srs_value_no => '否';
   @override
@@ -347821,6 +348268,9 @@ class _StringsZhHk extends _StringsEn {
   String get srs_anki_migrate_grant_access =>
       'Allow file access to find AnkiDroid';
   @override
+  String get srs_anki_migrate_hint =>
+      'Move your whole Anki / AnkiDroid collection here, review history included';
+  @override
   String get srs_anki_migrate_intro =>
       'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
   @override
@@ -347875,6 +348325,9 @@ class _StringsZhHk extends _StringsEn {
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
   String get srs_backup_change_location => 'Change storage location';
+  @override
+  String get srs_backup_cloud_hint =>
+      'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
   @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
@@ -348300,11 +348753,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_count_review => 'Due';
   @override
-  String srs_day_boundary_body({required Object hour}) =>
-      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-  @override
-  String get srs_day_boundary_title => 'When does the day start';
-  @override
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -348319,6 +348767,23 @@ class _StringsZhHk extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_deck_move => 'Move to…';
+  @override
+  String get srs_deck_move_down => 'Move down';
+  @override
+  String get srs_deck_move_drop_top_level =>
+      'Drop here to move to the top level';
+  @override
+  String get srs_deck_move_into_own_subdeck =>
+      'A deck can\'t go into its own subdeck';
+  @override
+  String get srs_deck_move_name_taken =>
+      'A deck with the same name is already there';
+  @override
+  String get srs_deck_move_top_level => 'Top level';
+  @override
+  String get srs_deck_move_up => 'Move up';
   @override
   String get srs_deck_name => 'Deck name';
   @override
@@ -348556,6 +349021,9 @@ class _StringsZhHk extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
+  String get srs_history_import_hint =>
+      'Cards you mined in Fushi before (word, reading, definition, sentence)';
+  @override
   String get srs_import => 'Import';
   @override
   String get srs_import_background_started =>
@@ -348566,6 +349034,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_import_failed({required Object error}) =>
       'Import failed: ${error}';
+  @override
+  String get srs_import_file => 'Import .apkg / .colpkg file';
+  @override
+  String get srs_import_file_hint =>
+      'Shared decks, or decks exported from Anki';
   @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
@@ -349441,6 +349914,9 @@ class _StringsZhHk extends _StringsEn {
   String get srs_sync_no_backend => 'No sync service is set up';
   @override
   String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_setup_body =>
+      'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
   String get srs_value_no => 'No';
   @override
@@ -366766,6 +367242,8 @@ extension on _StringsEn {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -366811,6 +367289,8 @@ extension on _StringsEn {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -367203,11 +367683,6 @@ extension on _StringsEn {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -367223,6 +367698,20 @@ extension on _StringsEn {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -367420,6 +367909,8 @@ extension on _StringsEn {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -367428,6 +367919,10 @@ extension on _StringsEn {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -368210,6 +368705,8 @@ extension on _StringsEn {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -385121,6 +385618,8 @@ extension on _StringsAr {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -385166,6 +385665,8 @@ extension on _StringsAr {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -385558,11 +386059,6 @@ extension on _StringsAr {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -385578,6 +386074,20 @@ extension on _StringsAr {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -385775,6 +386285,8 @@ extension on _StringsAr {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -385783,6 +386295,10 @@ extension on _StringsAr {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -386565,6 +387081,8 @@ extension on _StringsAr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -403532,6 +404050,8 @@ extension on _StringsDe {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -403577,6 +404097,8 @@ extension on _StringsDe {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -403969,11 +404491,6 @@ extension on _StringsDe {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -403989,6 +404506,20 @@ extension on _StringsDe {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -404186,6 +404717,8 @@ extension on _StringsDe {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -404194,6 +404727,10 @@ extension on _StringsDe {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -404976,6 +405513,8 @@ extension on _StringsDe {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -421947,6 +422486,8 @@ extension on _StringsEs {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -421992,6 +422533,8 @@ extension on _StringsEs {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -422384,11 +422927,6 @@ extension on _StringsEs {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -422404,6 +422942,20 @@ extension on _StringsEs {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -422601,6 +423153,8 @@ extension on _StringsEs {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -422609,6 +423163,10 @@ extension on _StringsEs {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -423391,6 +423949,8 @@ extension on _StringsEs {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -440373,6 +440933,8 @@ extension on _StringsFr {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -440418,6 +440980,8 @@ extension on _StringsFr {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -440810,11 +441374,6 @@ extension on _StringsFr {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -440830,6 +441389,20 @@ extension on _StringsFr {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -441027,6 +441600,8 @@ extension on _StringsFr {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -441035,6 +441610,10 @@ extension on _StringsFr {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -441817,6 +442396,8 @@ extension on _StringsFr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -458759,6 +459340,8 @@ extension on _StringsId {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -458804,6 +459387,8 @@ extension on _StringsId {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -459196,11 +459781,6 @@ extension on _StringsId {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -459216,6 +459796,20 @@ extension on _StringsId {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -459413,6 +460007,8 @@ extension on _StringsId {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -459421,6 +460017,10 @@ extension on _StringsId {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -460203,6 +460803,8 @@ extension on _StringsId {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -477154,6 +477756,8 @@ extension on _StringsIt {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -477199,6 +477803,8 @@ extension on _StringsIt {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -477591,11 +478197,6 @@ extension on _StringsIt {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -477611,6 +478212,20 @@ extension on _StringsIt {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -477808,6 +478423,8 @@ extension on _StringsIt {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -477816,6 +478433,10 @@ extension on _StringsIt {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -478598,6 +479219,8 @@ extension on _StringsIt {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -495483,6 +496106,8 @@ extension on _StringsJa {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -495528,6 +496153,8 @@ extension on _StringsJa {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -495920,11 +496547,6 @@ extension on _StringsJa {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -495940,6 +496562,20 @@ extension on _StringsJa {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -496137,6 +496773,8 @@ extension on _StringsJa {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -496145,6 +496783,10 @@ extension on _StringsJa {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -496927,6 +497569,8 @@ extension on _StringsJa {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -513761,6 +514405,8 @@ extension on _StringsKo {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -513806,6 +514452,8 @@ extension on _StringsKo {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -514198,11 +514846,6 @@ extension on _StringsKo {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -514218,6 +514861,20 @@ extension on _StringsKo {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -514415,6 +515072,8 @@ extension on _StringsKo {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -514423,6 +515082,10 @@ extension on _StringsKo {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -515205,6 +515868,8 @@ extension on _StringsKo {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -532129,6 +532794,8 @@ extension on _StringsNl {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -532174,6 +532841,8 @@ extension on _StringsNl {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -532566,11 +533235,6 @@ extension on _StringsNl {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -532586,6 +533250,20 @@ extension on _StringsNl {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -532783,6 +533461,8 @@ extension on _StringsNl {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -532791,6 +533471,10 @@ extension on _StringsNl {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -533573,6 +534257,8 @@ extension on _StringsNl {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -550528,6 +551214,8 @@ extension on _StringsPtBr {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -550573,6 +551261,8 @@ extension on _StringsPtBr {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -550965,11 +551655,6 @@ extension on _StringsPtBr {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -550985,6 +551670,20 @@ extension on _StringsPtBr {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -551182,6 +551881,8 @@ extension on _StringsPtBr {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -551190,6 +551891,10 @@ extension on _StringsPtBr {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -551972,6 +552677,8 @@ extension on _StringsPtBr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -568931,6 +569638,8 @@ extension on _StringsRu {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -568976,6 +569685,8 @@ extension on _StringsRu {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -569368,11 +570079,6 @@ extension on _StringsRu {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -569388,6 +570094,20 @@ extension on _StringsRu {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -569585,6 +570305,8 @@ extension on _StringsRu {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -569593,6 +570315,10 @@ extension on _StringsRu {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -570375,6 +571101,8 @@ extension on _StringsRu {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -587294,6 +588022,8 @@ extension on _StringsTh {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -587339,6 +588069,8 @@ extension on _StringsTh {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -587731,11 +588463,6 @@ extension on _StringsTh {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -587751,6 +588478,20 @@ extension on _StringsTh {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -587948,6 +588689,8 @@ extension on _StringsTh {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -587956,6 +588699,10 @@ extension on _StringsTh {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -588738,6 +589485,8 @@ extension on _StringsTh {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -605675,6 +606424,8 @@ extension on _StringsTr {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -605720,6 +606471,8 @@ extension on _StringsTr {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -606112,11 +606865,6 @@ extension on _StringsTr {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -606132,6 +606880,20 @@ extension on _StringsTr {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -606329,6 +607091,8 @@ extension on _StringsTr {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -606337,6 +607101,10 @@ extension on _StringsTr {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -607119,6 +607887,8 @@ extension on _StringsTr {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -624051,6 +624821,8 @@ extension on _StringsVi {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -624096,6 +624868,8 @@ extension on _StringsVi {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -624488,11 +625262,6 @@ extension on _StringsVi {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -624508,6 +625277,20 @@ extension on _StringsVi {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -624705,6 +625488,8 @@ extension on _StringsVi {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -624713,6 +625498,10 @@ extension on _StringsVi {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -625495,6 +626284,8 @@ extension on _StringsVi {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -642282,6 +643073,8 @@ extension on _StringsZhCn {
         return '本机找到的 Anki 集合';
       case 'srs_anki_migrate_grant_access':
         return '授予文件访问权限以查找 AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return '把本机 Anki / AnkiDroid 的整个集合连同复习记录搬过来';
       case 'srs_anki_migrate_intro':
         return '把 Anki 的牌组、笔记、笔记类型、复习进度和媒体一次搬过来。只读取 Anki 数据，不会改动它。';
       case 'srs_anki_migrate_ios_hint':
@@ -642326,6 +643119,8 @@ extension on _StringsZhCn {
         return '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
       case 'srs_backup_change_location':
         return '更改存储位置';
+      case 'srs_backup_cloud_hint':
+        return '这里的备份只存在本机。想让复习数据上云或同步到其它设备，配置「同步与备份」（云盘）或「Fushi 互联」即可，复习数据会随它们自动同步。';
       case 'srs_backup_corrupt':
         return '备份文件已损坏';
       case 'srs_backup_delete':
@@ -642712,11 +643507,6 @@ extension on _StringsZhCn {
         return '新卡';
       case 'srs_count_review':
         return '到期';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            '复习的「今天」在每天 ${hour} 点切换，与统计页共用同一个日界（在统计页的设置按钮里修改）。在这个时刻之前做的复习算前一天。';
-      case 'srs_day_boundary_title':
-        return '复习的「今天」从几点开始';
       case 'srs_deck_browse_cards':
         return '浏览此牌组的卡片';
       case 'srs_deck_collapse':
@@ -642732,6 +643522,20 @@ extension on _StringsZhCn {
         return '展开子牌组';
       case 'srs_deck_menu':
         return '更多操作';
+      case 'srs_deck_move':
+        return '移动到…';
+      case 'srs_deck_move_down':
+        return '下移';
+      case 'srs_deck_move_drop_top_level':
+        return '拖到这里，移到顶层';
+      case 'srs_deck_move_into_own_subdeck':
+        return '不能移到它自己的子牌组里';
+      case 'srs_deck_move_name_taken':
+        return '那里已经有同名牌组';
+      case 'srs_deck_move_top_level':
+        return '顶层';
+      case 'srs_deck_move_up':
+        return '上移';
       case 'srs_deck_name':
         return '牌组名称';
       case 'srs_deck_name_invalid':
@@ -642927,6 +643731,8 @@ extension on _StringsZhCn {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             '已导入 ${n} 条，跳过 ${skipped} 条';
+      case 'srs_history_import_hint':
+        return '以前在 Fushi 里制过的卡（词、读音、释义、例句）';
       case 'srs_import':
         return '导入';
       case 'srs_import_background_started':
@@ -642935,6 +643741,10 @@ extension on _StringsZhCn {
         return '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
       case 'srs_import_failed':
         return ({required Object error}) => '导入失败：${error}';
+      case 'srs_import_file':
+        return '导入 .apkg / .colpkg 文件';
+      case 'srs_import_file_hint':
+        return '共享牌组，或从 Anki 导出的牌组文件';
       case 'srs_import_merge_notetypes':
         return '合并笔记模板';
       case 'srs_import_merge_notetypes_help':
@@ -643699,6 +644509,8 @@ extension on _StringsZhCn {
         return '还没有配置同步服务';
       case 'srs_sync_now':
         return '立即同步';
+      case 'srs_sync_setup_body':
+        return '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
       case 'srs_value_no':
         return '否';
       case 'srs_value_yes':
@@ -660458,6 +661270,8 @@ extension on _StringsZhHk {
         return 'Anki collections on this device';
       case 'srs_anki_migrate_grant_access':
         return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_hint':
+        return 'Move your whole Anki / AnkiDroid collection here, review history included';
       case 'srs_anki_migrate_intro':
         return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
       case 'srs_anki_migrate_ios_hint':
@@ -660503,6 +661317,8 @@ extension on _StringsZhHk {
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
       case 'srs_backup_change_location':
         return 'Change storage location';
+      case 'srs_backup_cloud_hint':
+        return 'Backups here stay on this device. To keep review data in the cloud or on your other devices, set up Sync & backup (cloud drive) or Fushi Interconnect; review data syncs along with them.';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -660895,11 +661711,6 @@ extension on _StringsZhHk {
         return 'New';
       case 'srs_count_review':
         return 'Due';
-      case 'srs_day_boundary_body':
-        return ({required Object hour}) =>
-            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
-      case 'srs_day_boundary_title':
-        return 'When does the day start';
       case 'srs_deck_browse_cards':
         return 'Browse cards in this deck';
       case 'srs_deck_collapse':
@@ -660915,6 +661726,20 @@ extension on _StringsZhHk {
         return 'Expand subdecks';
       case 'srs_deck_menu':
         return 'More actions';
+      case 'srs_deck_move':
+        return 'Move to…';
+      case 'srs_deck_move_down':
+        return 'Move down';
+      case 'srs_deck_move_drop_top_level':
+        return 'Drop here to move to the top level';
+      case 'srs_deck_move_into_own_subdeck':
+        return 'A deck can\'t go into its own subdeck';
+      case 'srs_deck_move_name_taken':
+        return 'A deck with the same name is already there';
+      case 'srs_deck_move_top_level':
+        return 'Top level';
+      case 'srs_deck_move_up':
+        return 'Move up';
       case 'srs_deck_name':
         return 'Deck name';
       case 'srs_deck_name_invalid':
@@ -661112,6 +661937,8 @@ extension on _StringsZhHk {
       case 'srs_history_import_done':
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
+      case 'srs_history_import_hint':
+        return 'Cards you mined in Fushi before (word, reading, definition, sentence)';
       case 'srs_import':
         return 'Import';
       case 'srs_import_background_started':
@@ -661120,6 +661947,10 @@ extension on _StringsZhHk {
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
         return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_file':
+        return 'Import .apkg / .colpkg file';
+      case 'srs_import_file_hint':
+        return 'Shared decks, or decks exported from Anki';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -661902,6 +662733,8 @@ extension on _StringsZhHk {
         return 'No sync service is set up';
       case 'srs_sync_now':
         return 'Sync now';
+      case 'srs_sync_setup_body':
+        return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
