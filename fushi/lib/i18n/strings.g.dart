@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150824 (8872 per locale)
+/// Strings: 150892 (8876 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9017,8 +9017,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_deck_browse_cards => 'Browse cards in this deck';
   String get srs_deck_collapse => 'Collapse subdecks';
   String get srs_deck_delete => 'Delete deck';
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   String get srs_deck_deleting => 'Deleting…';
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_menu => 'More actions';
@@ -27848,8 +27854,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -49661,8 +49677,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -71598,8 +71624,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -93623,8 +93659,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -115412,8 +115458,18 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -137243,8 +137299,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -158368,8 +158434,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -179219,8 +179295,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -200778,8 +200864,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -222639,8 +222735,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -244479,8 +244585,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -266070,8 +266186,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -287726,8 +287852,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -309378,8 +309514,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -329738,8 +329884,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_deck_delete => '删除牌组';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
+  String get srs_deck_delete_move_cards => '保留卡片';
+  @override
+  String get srs_deck_delete_move_cards_hint => '移到上级牌组（没有上级则移到默认牌组）';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      '删除「${name}」及其子牌组。其中的卡片怎么处理？';
+  @override
+  String get srs_deck_delete_with_cards => '连卡片一起删除';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      '只在这些牌组里有卡的笔记整条删除；在别的牌组还有卡的笔记保留，这里的卡移到上级牌组';
   @override
   String get srs_deck_deleting => '正在删除…';
   @override
@@ -349776,8 +349931,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_deck_delete => 'Delete deck';
   @override
-  String srs_deck_delete_confirm({required Object name}) =>
-      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_delete_move_cards => 'Keep cards';
+  @override
+  String get srs_deck_delete_move_cards_hint =>
+      'Move them to the parent deck (or the default deck)';
+  @override
+  String srs_deck_delete_prompt({required Object name}) =>
+      'Delete "${name}" and its subdecks. What should happen to their cards?';
+  @override
+  String get srs_deck_delete_with_cards => 'Delete cards too';
+  @override
+  String get srs_deck_delete_with_cards_hint =>
+      'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
   @override
   String get srs_deck_deleting => 'Deleting…';
   @override
@@ -368768,9 +368933,17 @@ extension on _StringsEn {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -387196,9 +387369,17 @@ extension on _StringsAr {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -405680,9 +405861,17 @@ extension on _StringsDe {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -424168,9 +424357,17 @@ extension on _StringsEs {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -442667,9 +442864,17 @@ extension on _StringsFr {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -461126,9 +461331,17 @@ extension on _StringsId {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -479594,9 +479807,17 @@ extension on _StringsIt {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -497996,9 +498217,17 @@ extension on _StringsJa {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -516347,9 +516576,17 @@ extension on _StringsKo {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -534788,9 +535025,17 @@ extension on _StringsNl {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -553260,9 +553505,17 @@ extension on _StringsPtBr {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -571736,9 +571989,17 @@ extension on _StringsRu {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -590172,9 +590433,17 @@ extension on _StringsTh {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -608626,9 +608895,17 @@ extension on _StringsTr {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -627075,9 +627352,17 @@ extension on _StringsVi {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
@@ -645372,9 +645657,16 @@ extension on _StringsZhCn {
         return '收起子牌组';
       case 'srs_deck_delete':
         return '删除牌组';
-      case 'srs_deck_delete_confirm':
-        return ({required Object name}) =>
-            '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
+      case 'srs_deck_delete_move_cards':
+        return '保留卡片';
+      case 'srs_deck_delete_move_cards_hint':
+        return '移到上级牌组（没有上级则移到默认牌组）';
+      case 'srs_deck_delete_prompt':
+        return ({required Object name}) => '删除「${name}」及其子牌组。其中的卡片怎么处理？';
+      case 'srs_deck_delete_with_cards':
+        return '连卡片一起删除';
+      case 'srs_deck_delete_with_cards_hint':
+        return '只在这些牌组里有卡的笔记整条删除；在别的牌组还有卡的笔记保留，这里的卡移到上级牌组';
       case 'srs_deck_deleting':
         return '正在删除…';
       case 'srs_deck_expand':
@@ -663628,9 +663920,17 @@ extension on _StringsZhHk {
         return 'Collapse subdecks';
       case 'srs_deck_delete':
         return 'Delete deck';
-      case 'srs_deck_delete_confirm':
+      case 'srs_deck_delete_move_cards':
+        return 'Keep cards';
+      case 'srs_deck_delete_move_cards_hint':
+        return 'Move them to the parent deck (or the default deck)';
+      case 'srs_deck_delete_prompt':
         return ({required Object name}) =>
-            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+            'Delete "${name}" and its subdecks. What should happen to their cards?';
+      case 'srs_deck_delete_with_cards':
+        return 'Delete cards too';
+      case 'srs_deck_delete_with_cards_hint':
+        return 'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
       case 'srs_deck_deleting':
         return 'Deleting…';
       case 'srs_deck_expand':
