@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150042 (8826 per locale)
+/// Strings: 150059 (8827 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3938,6 +3938,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get floating_ball_ocr_failed => 'Screen OCR failed';
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
   String get floating_ball_ocr_model_unavailable =>
       'The system OCR model is not ready yet';
   String get floating_ball_ocr_notification => 'Screen OCR in progress';
@@ -19065,6 +19067,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+  @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
   @override
   String get floating_ball_ocr_model_unavailable =>
       'نموذج OCR الخاص بالنظام غير جاهز بعد';
@@ -40568,6 +40573,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+  @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
   @override
   String get floating_ball_ocr_model_unavailable =>
       'Das System-OCR-Modell ist noch nicht bereit';
@@ -62375,6 +62383,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+  @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
   @override
   String get floating_ball_ocr_model_unavailable =>
       'El modelo de OCR del sistema aún no está listo';
@@ -84249,6 +84260,9 @@ class _StringsFr extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
+  @override
   String get floating_ball_ocr_model_unavailable =>
       'Le modèle OCR du système n\'est pas encore prêt';
   @override
@@ -106074,6 +106088,9 @@ class _StringsId extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
+  @override
   String get floating_ball_ocr_model_unavailable =>
       'Model OCR sistem belum siap';
   @override
@@ -127705,6 +127722,9 @@ class _StringsIt extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
+  @override
   String get floating_ball_ocr_model_unavailable =>
       'Il modello OCR di sistema non è ancora pronto';
   @override
@@ -149178,6 +149198,9 @@ class _StringsJa extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       'Windows に日本語の文字認識がありません。「設定 → 時刻と言語 → 言語と地域」で日本語（光学式文字認識を含む）を追加してください';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
+  @override
   String get floating_ball_ocr_model_unavailable => 'システムの OCR モデルがまだ準備できていません';
   @override
   String get floating_ball_ocr_notification => '画面 OCR を実行中';
@@ -169894,6 +169917,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+  @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
   @override
   String get floating_ball_ocr_model_unavailable => '시스템 OCR 모델이 아직 준비되지 않았습니다';
   @override
@@ -190922,6 +190948,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+  @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
   @override
   String get floating_ball_ocr_model_unavailable =>
       'Het OCR-model van het systeem is nog niet gereed';
@@ -212639,6 +212668,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+  @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
   @override
   String get floating_ball_ocr_model_unavailable =>
       'O modelo de OCR do sistema ainda não está pronto';
@@ -234374,6 +234406,9 @@ class _StringsRu extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
+  @override
   String get floating_ball_ocr_model_unavailable =>
       'Системная модель OCR ещё не готова';
   @override
@@ -256003,6 +256038,9 @@ class _StringsTh extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
+  @override
   String get floating_ball_ocr_model_unavailable =>
       'โมเดล OCR ของระบบยังไม่พร้อม';
   @override
@@ -277450,6 +277488,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+  @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
   @override
   String get floating_ball_ocr_model_unavailable =>
       'Sistem OCR modeli henüz hazır değil';
@@ -299025,6 +299066,9 @@ class _StringsVi extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
+  @override
   String get floating_ball_ocr_model_unavailable =>
       'Mô hình OCR của hệ thống chưa sẵn sàng';
   @override
@@ -320009,6 +320053,9 @@ class _StringsZhCn extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       '系统没有安装日语文字识别：到「设置 → 时间和语言 → 语言和区域」添加日语（含光学字符识别）';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi 没能弹出截屏确认框。请在系统设置里允许 Fushi「后台弹出界面」后再试。';
+  @override
   String get floating_ball_ocr_model_unavailable => '系统 OCR 模型尚未就绪';
   @override
   String get floating_ball_ocr_notification => '正在截屏识字';
@@ -339814,6 +339861,9 @@ class _StringsZhHk extends _StringsEn {
   String get floating_ball_ocr_language_missing =>
       '系統沒有安裝日語文字識別：到「設定 → 時間與語言 → 語言與地區」新增日語（含光學字元辨識）';
   @override
+  String get floating_ball_ocr_launch_blocked =>
+      'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
+  @override
   String get floating_ball_ocr_model_unavailable => '系統 OCR 模型尚未就緒';
   @override
   String get floating_ball_ocr_notification => '正在截屏識字';
@@ -359315,6 +359365,8 @@ extension on _StringsEn {
         return 'Screen OCR failed';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'The system OCR model is not ready yet';
       case 'floating_ball_ocr_notification':
@@ -377655,6 +377707,8 @@ extension on _StringsAr {
         return 'فشل OCR للشاشة';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'نموذج OCR الخاص بالنظام غير جاهز بعد';
       case 'floating_ball_ocr_notification':
@@ -396021,6 +396075,8 @@ extension on _StringsDe {
         return 'Bildschirm-OCR fehlgeschlagen';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'Das System-OCR-Modell ist noch nicht bereit';
       case 'floating_ball_ocr_notification':
@@ -414421,6 +414477,8 @@ extension on _StringsEs {
         return 'Error en el OCR de pantalla';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'El modelo de OCR del sistema aún no está listo';
       case 'floating_ball_ocr_notification':
@@ -432826,6 +432884,8 @@ extension on _StringsFr {
         return 'Échec de l\'OCR de l\'écran';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'Le modèle OCR du système n\'est pas encore prêt';
       case 'floating_ball_ocr_notification':
@@ -451212,6 +451272,8 @@ extension on _StringsId {
         return 'OCR layar gagal';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'Model OCR sistem belum siap';
       case 'floating_ball_ocr_notification':
@@ -469576,6 +469638,8 @@ extension on _StringsIt {
         return 'OCR dello schermo non riuscito';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'Il modello OCR di sistema non è ancora pronto';
       case 'floating_ball_ocr_notification':
@@ -487921,6 +487985,8 @@ extension on _StringsJa {
         return '画面 OCR に失敗しました';
       case 'floating_ball_ocr_language_missing':
         return 'Windows に日本語の文字認識がありません。「設定 → 時刻と言語 → 言語と地域」で日本語（光学式文字認識を含む）を追加してください';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'システムの OCR モデルがまだ準備できていません';
       case 'floating_ball_ocr_notification':
@@ -506180,6 +506246,8 @@ extension on _StringsKo {
         return '화면 OCR 실패';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return '시스템 OCR 모델이 아직 준비되지 않았습니다';
       case 'floating_ball_ocr_notification':
@@ -524490,6 +524558,8 @@ extension on _StringsNl {
         return 'Scherm-OCR mislukt';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'Het OCR-model van het systeem is nog niet gereed';
       case 'floating_ball_ocr_notification':
@@ -542874,6 +542944,8 @@ extension on _StringsPtBr {
         return 'Falha no OCR da tela';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'O modelo de OCR do sistema ainda não está pronto';
       case 'floating_ball_ocr_notification':
@@ -561258,6 +561330,8 @@ extension on _StringsRu {
         return 'Не удалось выполнить OCR экрана';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'Системная модель OCR ещё не готова';
       case 'floating_ball_ocr_notification':
@@ -579616,6 +579690,8 @@ extension on _StringsTh {
         return 'OCR หน้าจอไม่สำเร็จ';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'โมเดล OCR ของระบบยังไม่พร้อม';
       case 'floating_ball_ocr_notification':
@@ -597971,6 +598047,8 @@ extension on _StringsTr {
         return 'Ekran OCR başarısız oldu';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'Sistem OCR modeli henüz hazır değil';
       case 'floating_ball_ocr_notification':
@@ -616333,6 +616411,8 @@ extension on _StringsVi {
         return 'OCR màn hình thất bại';
       case 'floating_ball_ocr_language_missing':
         return 'Windows has no Japanese text recognizer. Add Japanese (with Optical character recognition) under Settings → Time & language → Language & region';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return 'Mô hình OCR của hệ thống chưa sẵn sàng';
       case 'floating_ball_ocr_notification':
@@ -634591,6 +634671,8 @@ extension on _StringsZhCn {
         return '截屏识字失败';
       case 'floating_ball_ocr_language_missing':
         return '系统没有安装日语文字识别：到「设置 → 时间和语言 → 语言和区域」添加日语（含光学字符识别）';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi 没能弹出截屏确认框。请在系统设置里允许 Fushi「后台弹出界面」后再试。';
       case 'floating_ball_ocr_model_unavailable':
         return '系统 OCR 模型尚未就绪';
       case 'floating_ball_ocr_notification':
@@ -652736,6 +652818,8 @@ extension on _StringsZhHk {
         return '截屏識字失敗';
       case 'floating_ball_ocr_language_missing':
         return '系統沒有安裝日語文字識別：到「設定 → 時間與語言 → 語言與地區」新增日語（含光學字元辨識）';
+      case 'floating_ball_ocr_launch_blocked':
+        return 'Fushi couldn\'t open the screen capture prompt. Allow Fushi to show pop-up windows while running in the background in system settings, then try again.';
       case 'floating_ball_ocr_model_unavailable':
         return '系統 OCR 模型尚未就緒';
       case 'floating_ball_ocr_notification':
