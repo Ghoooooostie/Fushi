@@ -5116,9 +5116,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       'Removes markup such as ruby and br tags';
   String get game_text_process_kind_strip_curly_braces =>
-      'Remove furigana braces';
+      'Curly-brace furigana to ruby';
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
   String get game_text_process_kind_strip_outside_quotes_desc =>
@@ -21103,7 +21103,7 @@ class _StringsAr extends _StringsEn {
       'إزالة أقواس الفوريغانا';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -42722,7 +42722,7 @@ class _StringsDe extends _StringsEn {
       'Furigana-Klammern entfernen';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -64586,7 +64586,7 @@ class _StringsEs extends _StringsEn {
       'Quitar llaves de furigana';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -86521,7 +86521,7 @@ class _StringsFr extends _StringsEn {
       'Supprimer les accolades de furigana';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -108365,7 +108365,7 @@ class _StringsId extends _StringsEn {
       'Hapus kurung furigana';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -130071,7 +130071,7 @@ class _StringsIt extends _StringsEn {
       'Rimuovi le graffe dei furigana';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -151477,10 +151477,10 @@ class _StringsJa extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       'ruby や br タグなどのマークアップを削除します';
   @override
-  String get game_text_process_kind_strip_curly_braces => '波括弧のふりがなを削除';
+  String get game_text_process_kind_strip_curly_braces => '波括弧のふりがなをルビに変換';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{漢字/かな}・{漢字:かな} は漢字を残し、それ以外の波括弧は丸ごと削除します';
+      '{漢字/かな}・{漢字:かな} の読みを漢字の上にルビとして表示し、それ以外の波括弧は丸ごと削除します';
   @override
   String get game_text_process_kind_strip_outside_quotes => '「」の外の文字を除去';
   @override
@@ -172256,7 +172256,7 @@ class _StringsKo extends _StringsEn {
   String get game_text_process_kind_strip_curly_braces => '후리가나 중괄호 제거';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -193451,7 +193451,7 @@ class _StringsNl extends _StringsEn {
       'Furigana-accolades verwijderen';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -215240,7 +215240,7 @@ class _StringsPtBr extends _StringsEn {
       'Remover chaves de furigana';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -237022,7 +237022,7 @@ class _StringsRu extends _StringsEn {
       'Удалять фигурные скобки фуриганы';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -258662,7 +258662,7 @@ class _StringsTh extends _StringsEn {
       'ลบวงเล็บปีกกาของฟุริกานะ';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -280204,7 +280204,7 @@ class _StringsTr extends _StringsEn {
       'Furigana küme parantezlerini kaldır';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -301826,7 +301826,7 @@ class _StringsVi extends _StringsEn {
       'Xóa ngoặc nhọn furigana';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+      '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
   @override
   String get game_text_process_kind_strip_outside_quotes =>
       'Strip text outside 「」';
@@ -322659,10 +322659,10 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       '移除 ruby、br 之类的标记';
   @override
-  String get game_text_process_kind_strip_curly_braces => '去除花括号注音';
+  String get game_text_process_kind_strip_curly_braces => '花括号注音转振假名';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{漢字/かな} 或 {漢字:かな} 保留汉字；其余花括号整体删除';
+      '{漢字/かな} 或 {漢字:かな} 的读音显示在汉字上方；其余花括号整体删除';
   @override
   String get game_text_process_kind_strip_outside_quotes => '去掉「」外的文字';
   @override
@@ -342528,10 +342528,10 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_process_kind_strip_angle_brackets_desc =>
       '移除 ruby、br 之類的標記';
   @override
-  String get game_text_process_kind_strip_curly_braces => '去除花括號注音';
+  String get game_text_process_kind_strip_curly_braces => '花括號注音轉振假名';
   @override
   String get game_text_process_kind_strip_curly_braces_detail =>
-      '{漢字/かな} 或 {漢字:かな} 保留漢字；其餘花括號整體刪除';
+      '{漢字/かな} 或 {漢字:かな} 的讀音顯示在漢字上方；其餘花括號整體刪除';
   @override
   String get game_text_process_kind_strip_outside_quotes => '去掉「」外的文字';
   @override
@@ -361936,9 +361936,9 @@ extension on _StringsEn {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return 'Removes markup such as ruby and br tags';
       case 'game_text_process_kind_strip_curly_braces':
-        return 'Remove furigana braces';
+        return 'Curly-brace furigana to ruby';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -380321,7 +380321,7 @@ extension on _StringsAr {
       case 'game_text_process_kind_strip_curly_braces':
         return 'إزالة أقواس الفوريغانا';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -398733,7 +398733,7 @@ extension on _StringsDe {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana-Klammern entfernen';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -417177,7 +417177,7 @@ extension on _StringsEs {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Quitar llaves de furigana';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -435626,7 +435626,7 @@ extension on _StringsFr {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Supprimer les accolades de furigana';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -454055,7 +454055,7 @@ extension on _StringsId {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Hapus kurung furigana';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -472464,7 +472464,7 @@ extension on _StringsIt {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Rimuovi le graffe dei furigana';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -490850,9 +490850,9 @@ extension on _StringsJa {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return 'ruby や br タグなどのマークアップを削除します';
       case 'game_text_process_kind_strip_curly_braces':
-        return '波括弧のふりがなを削除';
+        return '波括弧のふりがなをルビに変換';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{漢字/かな}・{漢字:かな} は漢字を残し、それ以外の波括弧は丸ごと削除します';
+        return '{漢字/かな}・{漢字:かな} の読みを漢字の上にルビとして表示し、それ以外の波括弧は丸ごと削除します';
       case 'game_text_process_kind_strip_outside_quotes':
         return '「」の外の文字を除去';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -509154,7 +509154,7 @@ extension on _StringsKo {
       case 'game_text_process_kind_strip_curly_braces':
         return '후리가나 중괄호 제거';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -527509,7 +527509,7 @@ extension on _StringsNl {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana-accolades verwijderen';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -545937,7 +545937,7 @@ extension on _StringsPtBr {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Remover chaves de furigana';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -564365,7 +564365,7 @@ extension on _StringsRu {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Удалять фигурные скобки фуриганы';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -582767,7 +582767,7 @@ extension on _StringsTh {
       case 'game_text_process_kind_strip_curly_braces':
         return 'ลบวงเล็บปีกกาของฟุริกานะ';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -601167,7 +601167,7 @@ extension on _StringsTr {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Furigana küme parantezlerini kaldır';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -619572,7 +619572,7 @@ extension on _StringsVi {
       case 'game_text_process_kind_strip_curly_braces':
         return 'Xóa ngoặc nhọn furigana';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{kanji/kana} or {kanji:kana} keeps the kanji; other braces are removed entirely';
+        return '{kanji/kana} or {kanji:kana} is shown as furigana above the kanji; other braces are removed entirely';
       case 'game_text_process_kind_strip_outside_quotes':
         return 'Strip text outside 「」';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -637869,9 +637869,9 @@ extension on _StringsZhCn {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return '移除 ruby、br 之类的标记';
       case 'game_text_process_kind_strip_curly_braces':
-        return '去除花括号注音';
+        return '花括号注音转振假名';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{漢字/かな} 或 {漢字:かな} 保留汉字；其余花括号整体删除';
+        return '{漢字/かな} 或 {漢字:かな} 的读音显示在汉字上方；其余花括号整体删除';
       case 'game_text_process_kind_strip_outside_quotes':
         return '去掉「」外的文字';
       case 'game_text_process_kind_strip_outside_quotes_desc':
@@ -656059,9 +656059,9 @@ extension on _StringsZhHk {
       case 'game_text_process_kind_strip_angle_brackets_desc':
         return '移除 ruby、br 之類的標記';
       case 'game_text_process_kind_strip_curly_braces':
-        return '去除花括號注音';
+        return '花括號注音轉振假名';
       case 'game_text_process_kind_strip_curly_braces_detail':
-        return '{漢字/かな} 或 {漢字:かな} 保留漢字；其餘花括號整體刪除';
+        return '{漢字/かな} 或 {漢字:かな} 的讀音顯示在漢字上方；其餘花括號整體刪除';
       case 'game_text_process_kind_strip_outside_quotes':
         return '去掉「」外的文字';
       case 'game_text_process_kind_strip_outside_quotes_desc':
