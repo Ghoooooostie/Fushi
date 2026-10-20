@@ -9578,7 +9578,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   String get srs_settings_rwkv_model_large => 'Large';
   String get srs_settings_rwkv_model_small => 'Small';
   String srs_settings_rwkv_preparing({
@@ -28781,7 +28781,7 @@ class _StringsAr extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -50571,7 +50571,7 @@ class _StringsDe extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -72486,7 +72486,7 @@ class _StringsEs extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -94488,7 +94488,7 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -116254,7 +116254,7 @@ class _StringsId extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -138064,7 +138064,7 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -159166,7 +159166,7 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -179993,7 +179993,7 @@ class _StringsKo extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -201529,7 +201529,7 @@ class _StringsNl extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -223368,7 +223368,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -245185,7 +245185,7 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -266753,7 +266753,7 @@ class _StringsTh extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -288386,7 +288386,7 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -310015,7 +310015,7 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -330265,7 +330265,7 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV 模型（本机）';
   @override
   String get srs_settings_rwkv_model_hint =>
-      '小模型：每张卡约占 2.9 KB 内存。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
+      '小模型（推荐）：每张卡约占 2.9 KB 内存，在真实复习记录上实测也略准一些。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
   @override
   String get srs_settings_rwkv_model_large => '大模型';
   @override
@@ -350372,7 +350372,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
-      'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
   @override
   String get srs_settings_rwkv_model_large => 'Large';
   @override
@@ -369209,7 +369209,7 @@ extension on _StringsEn {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -387617,7 +387617,7 @@ extension on _StringsAr {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -406081,7 +406081,7 @@ extension on _StringsDe {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -424549,7 +424549,7 @@ extension on _StringsEs {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -443028,7 +443028,7 @@ extension on _StringsFr {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -461467,7 +461467,7 @@ extension on _StringsId {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -479915,7 +479915,7 @@ extension on _StringsIt {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -498297,7 +498297,7 @@ extension on _StringsJa {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -516628,7 +516628,7 @@ extension on _StringsKo {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -535049,7 +535049,7 @@ extension on _StringsNl {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -553501,7 +553501,7 @@ extension on _StringsPtBr {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -571957,7 +571957,7 @@ extension on _StringsRu {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -590373,7 +590373,7 @@ extension on _StringsTh {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -608807,7 +608807,7 @@ extension on _StringsTr {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -627236,7 +627236,7 @@ extension on _StringsVi {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
@@ -645495,7 +645495,7 @@ extension on _StringsZhCn {
       case 'srs_settings_rwkv_model':
         return 'RWKV 模型（本机）';
       case 'srs_settings_rwkv_model_hint':
-        return '小模型：每张卡约占 2.9 KB 内存。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
+        return '小模型（推荐）：每张卡约占 2.9 KB 内存，在真实复习记录上实测也略准一些。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
       case 'srs_settings_rwkv_model_large':
         return '大模型';
       case 'srs_settings_rwkv_model_small':
@@ -663749,7 +663749,7 @@ extension on _StringsZhHk {
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
-        return 'Small: about 2.9 KB of memory per card. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
+        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
       case 'srs_settings_rwkv_model_large':
         return 'Large';
       case 'srs_settings_rwkv_model_small':
