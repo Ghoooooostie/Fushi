@@ -33,10 +33,12 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 3055 条。点号进各自文件。
+> 共 3057 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-3370](bugs/BUG-3370-reader-translation-span-wrap-stops.md) | ✅ | ✅ | 阅读器对照翻译：句子被 SPAN 包裹后收集停止（滚动/高亮后不翻译） |
+| [BUG-3369](bugs/BUG-3369-reader-translation-stops-halfway.md) | ✅ | ✅ | 阅读器段落对照翻译中途停止：限流/网络失败后段落永久冷却且无 UI 反馈 |
 | [BUG-3368](bugs/BUG-3368-lyrics-ruby-selection-highlight.md) | ✅ | ✅ | 歌词模式查词高亮漏掉带注音的字 |
 | [BUG-3367](bugs/BUG-3367-interconnect-playback-position-lww-no-conflict.md) | ✅ | ✅ | 互联视频/有声书播放位置纯 LWW 无冲突判定：两端各自看过后晚同步的一端被静默覆盖 |
 | [BUG-3366](bugs/BUG-3366-ios-lyrics-vertical-sweep-column-order.md) | ✅ | ✅ | iOS 竖排歌词扫过高亮不按阅读顺序跨列 |
