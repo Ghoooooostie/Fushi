@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 150382 (8846 per locale)
+/// Strings: 150399 (8847 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9685,6 +9685,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_sync_now => 'Sync now';
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   String get srs_value_no => 'No';
   String get srs_value_yes => 'Yes';
   String get srs_visual_add_field => 'Add field';
@@ -28953,6 +28955,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -50701,6 +50706,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -72574,6 +72582,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -94535,6 +94546,9 @@ class _StringsFr extends _StringsEn {
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
+  @override
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
@@ -116258,6 +116272,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -138027,6 +138044,9 @@ class _StringsIt extends _StringsEn {
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
+  @override
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
@@ -159087,6 +159107,9 @@ class _StringsJa extends _StringsEn {
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
+  @override
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
@@ -179871,6 +179894,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -201365,6 +201391,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -223163,6 +223192,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
+  @override
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
@@ -244938,6 +244970,9 @@ class _StringsRu extends _StringsEn {
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
+  @override
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
@@ -266463,6 +266498,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+  @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
   @override
   String get srs_value_no => 'No';
   @override
@@ -288055,6 +288093,9 @@ class _StringsTr extends _StringsEn {
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
+  @override
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
@@ -309642,6 +309683,9 @@ class _StringsVi extends _StringsEn {
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
+  String get srs_sync_store_unavailable =>
+      'SRS data isn\'t open on this device right now';
+  @override
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
@@ -329842,6 +329886,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_sync_setup_body =>
       '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
   @override
+  String get srs_sync_store_unavailable => '本机的 SRS 数据此刻没有打开';
+  @override
   String get srs_value_no => '否';
   @override
   String get srs_value_yes => '是';
@@ -349918,6 +349964,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_sync_setup_body =>
       'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
   @override
+  String get srs_sync_store_unavailable => '本機的 SRS 資料此刻沒有開啟';
+  @override
   String get srs_value_no => 'No';
   @override
   String get srs_value_yes => 'Yes';
@@ -368707,6 +368755,8 @@ extension on _StringsEn {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -387083,6 +387133,8 @@ extension on _StringsAr {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -405515,6 +405567,8 @@ extension on _StringsDe {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -423951,6 +424005,8 @@ extension on _StringsEs {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -442398,6 +442454,8 @@ extension on _StringsFr {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -460805,6 +460863,8 @@ extension on _StringsId {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -479221,6 +479281,8 @@ extension on _StringsIt {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -497571,6 +497633,8 @@ extension on _StringsJa {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -515870,6 +515934,8 @@ extension on _StringsKo {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -534259,6 +534325,8 @@ extension on _StringsNl {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -552679,6 +552747,8 @@ extension on _StringsPtBr {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -571103,6 +571173,8 @@ extension on _StringsRu {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -589487,6 +589559,8 @@ extension on _StringsTh {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -607889,6 +607963,8 @@ extension on _StringsTr {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -626286,6 +626362,8 @@ extension on _StringsVi {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return 'SRS data isn\'t open on this device right now';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
@@ -644511,6 +644589,8 @@ extension on _StringsZhCn {
         return '立即同步';
       case 'srs_sync_setup_body':
         return '复习数据随「同步与备份」里的云盘和「Fushi 互联」一起同步，没有单独的开关。这台设备上两者都还没配置好。';
+      case 'srs_sync_store_unavailable':
+        return '本机的 SRS 数据此刻没有打开';
       case 'srs_value_no':
         return '否';
       case 'srs_value_yes':
@@ -662734,6 +662814,8 @@ extension on _StringsZhHk {
         return 'Sync now';
       case 'srs_sync_setup_body':
         return 'Review data syncs along with cloud sync (Sync & backup) and Fushi Interconnect; there is no separate switch. Neither is set up on this device yet.';
+      case 'srs_sync_store_unavailable':
+        return '本機的 SRS 資料此刻沒有開啟';
       case 'srs_value_no':
         return 'No';
       case 'srs_value_yes':
