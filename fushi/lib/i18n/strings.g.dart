@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 151589 (8917 per locale)
+/// Strings: 151606 (8918 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
