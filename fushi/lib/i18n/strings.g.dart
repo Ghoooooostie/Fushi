@@ -2942,6 +2942,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_rename_label => 'Dictionary name';
   String get dict_reorder_hint_desktop => 'Drag to reorder · Alt+↑/↓';
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
   String get dict_selection_exit => 'Exit selection';
   String get dict_status_disabled => 'Disabled';
   String get dict_style_ai_applied =>
@@ -3019,7 +3021,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dictionaries_delete_failed => 'Failed to delete dictionaries';
   String get dictionaries_deleting_data => 'Deleting dictionary data...';
   String get dictionaries_menu_empty => 'Import a dictionary for use';
-  String get dictionary_collapse_follow_global => 'Follow global setting';
   String get dictionary_delete_failed => 'Failed to delete dictionary';
   String get dictionary_font_size => 'Dictionary font size';
   String get dictionary_font_size_zoom_hint =>
@@ -17442,6 +17443,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -17572,8 +17576,6 @@ class _StringsAr extends _StringsEn {
   String get dictionaries_deleting_data => 'جارٍ حذف بيانات القاموس...';
   @override
   String get dictionaries_menu_empty => 'استورد قاموساً للاستخدام';
-  @override
-  String get dictionary_collapse_follow_global => 'اتباع الإعداد العام';
   @override
   String get dictionary_delete_failed => 'فشل حذف القاموس';
   @override
@@ -39014,6 +39016,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -39150,8 +39155,6 @@ class _StringsDe extends _StringsEn {
   String get dictionaries_deleting_data => 'Wörterbuchdaten werden gelöscht...';
   @override
   String get dictionaries_menu_empty => 'Importieren Sie ein Wörterbuch';
-  @override
-  String get dictionary_collapse_follow_global => 'Globaler Einstellung folgen';
   @override
   String get dictionary_delete_failed =>
       'Löschen des Wörterbuchs fehlgeschlagen';
@@ -60924,6 +60927,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -61061,8 +61067,6 @@ class _StringsEs extends _StringsEn {
       'Eliminando datos del diccionario...';
   @override
   String get dictionaries_menu_empty => 'Importa un diccionario para usar';
-  @override
-  String get dictionary_collapse_follow_global => 'Seguir el ajuste global';
   @override
   String get dictionary_delete_failed => 'No se pudo eliminar el diccionario';
   @override
@@ -82900,6 +82904,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -83039,8 +83046,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Importez un dictionnaire pour l\'utiliser';
-  @override
-  String get dictionary_collapse_follow_global => 'Suivre le réglage global';
   @override
   String get dictionary_delete_failed =>
       'Échec de la suppression du dictionnaire';
@@ -104858,6 +104863,9 @@ class _StringsId extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -104991,8 +104999,6 @@ class _StringsId extends _StringsEn {
   String get dictionaries_deleting_data => 'Menghapus data kamus...';
   @override
   String get dictionaries_menu_empty => 'Impor kamus untuk digunakan';
-  @override
-  String get dictionary_collapse_follow_global => 'Ikuti pengaturan global';
   @override
   String get dictionary_delete_failed => 'Gagal menghapus kamus';
   @override
@@ -126577,6 +126583,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -126713,9 +126722,6 @@ class _StringsIt extends _StringsEn {
       'Eliminazione dati del dizionario...';
   @override
   String get dictionaries_menu_empty => 'Importa un dizionario per l\'uso';
-  @override
-  String get dictionary_collapse_follow_global =>
-      'Segui l\'impostazione globale';
   @override
   String get dictionary_delete_failed => 'Impossibile eliminare il dizionario';
   @override
@@ -148236,6 +148242,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -148364,8 +148373,6 @@ class _StringsJa extends _StringsEn {
   String get dictionaries_deleting_data => '辞書データを削除中...';
   @override
   String get dictionaries_menu_empty => '辞書をインポートしてください';
-  @override
-  String get dictionary_collapse_follow_global => '全体設定に従う';
   @override
   String get dictionary_delete_failed => '辞書の削除に失敗しました';
   @override
@@ -169049,6 +169056,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -169176,8 +169186,6 @@ class _StringsKo extends _StringsEn {
   String get dictionaries_deleting_data => '사전 데이터 삭제 중...';
   @override
   String get dictionaries_menu_empty => '사용할 사전을 가져오세요';
-  @override
-  String get dictionary_collapse_follow_global => '전역 설정 따르기';
   @override
   String get dictionary_delete_failed => '사전 삭제 실패';
   @override
@@ -190120,6 +190128,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -190256,8 +190267,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Importeer een woordenboek voor gebruik';
-  @override
-  String get dictionary_collapse_follow_global => 'Globale instelling volgen';
   @override
   String get dictionary_delete_failed => 'Verwijderen van woordenboek mislukt';
   @override
@@ -211935,6 +211944,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -212070,8 +212082,6 @@ class _StringsPtBr extends _StringsEn {
   String get dictionaries_deleting_data => 'Excluindo dados do dicionário...';
   @override
   String get dictionaries_menu_empty => 'Importe um dicionário para uso';
-  @override
-  String get dictionary_collapse_follow_global => 'Seguir configuração global';
   @override
   String get dictionary_delete_failed => 'Falha ao excluir dicionário';
   @override
@@ -233787,6 +233797,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -233921,8 +233934,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get dictionaries_menu_empty =>
       'Импортируйте словарь для использования';
-  @override
-  String get dictionary_collapse_follow_global => 'Как в общих настройках';
   @override
   String get dictionary_delete_failed => 'Не удалось удалить словарь';
   @override
@@ -255537,6 +255548,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -255670,8 +255684,6 @@ class _StringsTh extends _StringsEn {
   String get dictionaries_deleting_data => 'กำลังลบข้อมูลพจนานุกรม...';
   @override
   String get dictionaries_menu_empty => 'นำเข้าพจนานุกรมเพื่อใช้งาน';
-  @override
-  String get dictionary_collapse_follow_global => 'ตามการตั้งค่าส่วนกลาง';
   @override
   String get dictionary_delete_failed => 'ลบพจนานุกรมไม่สำเร็จ';
   @override
@@ -277076,6 +277088,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -277211,8 +277226,6 @@ class _StringsTr extends _StringsEn {
   String get dictionaries_deleting_data => 'Sözlük verileri siliniyor...';
   @override
   String get dictionaries_menu_empty => 'Kullanmak için bir sözlük içe aktarın';
-  @override
-  String get dictionary_collapse_follow_global => 'Genel ayarı izle';
   @override
   String get dictionary_delete_failed => 'Sözlük silinemedi';
   @override
@@ -298761,6 +298774,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -298895,8 +298911,6 @@ class _StringsVi extends _StringsEn {
   String get dictionaries_deleting_data => 'Đang xóa dữ liệu từ điển…';
   @override
   String get dictionaries_menu_empty => 'Nhập một từ điển để sử dụng';
-  @override
-  String get dictionary_collapse_follow_global => 'Theo cài đặt chung';
   @override
   String get dictionary_delete_failed => 'Không thể xóa từ điển';
   @override
@@ -319984,6 +319998,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => '长按拖动排序';
   @override
+  String dict_row_collapse_tooltip({required Object state}) => '默认展示：${state}';
+  @override
   String get dict_selection_exit => '退出选择';
   @override
   String get dict_status_disabled => '已停用';
@@ -320109,8 +320125,6 @@ class _StringsZhCn extends _StringsEn {
   String get dictionaries_deleting_data => '正在删除词典数据…';
   @override
   String get dictionaries_menu_empty => '请先导入词典以便使用';
-  @override
-  String get dictionary_collapse_follow_global => '跟随全局设置';
   @override
   String get dictionary_delete_failed => '删除词典失败';
   @override
@@ -339851,6 +339865,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dict_reorder_hint_touch => 'Long-press and drag to reorder';
   @override
+  String dict_row_collapse_tooltip({required Object state}) =>
+      'Default display: ${state}';
+  @override
   String get dict_selection_exit => 'Exit selection';
   @override
   String get dict_status_disabled => 'Disabled';
@@ -339976,8 +339993,6 @@ class _StringsZhHk extends _StringsEn {
   String get dictionaries_deleting_data => '正在刪除辭典資料…';
   @override
   String get dictionaries_menu_empty => '請先匯入辭典以便使用';
-  @override
-  String get dictionary_collapse_follow_global => '跟隨全局設定';
   @override
   String get dictionary_delete_failed => '刪除詞典失敗';
   @override
@@ -359599,6 +359614,8 @@ extension on _StringsEn {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -359718,8 +359735,6 @@ extension on _StringsEn {
         return 'Deleting dictionary data...';
       case 'dictionaries_menu_empty':
         return 'Import a dictionary for use';
-      case 'dictionary_collapse_follow_global':
-        return 'Follow global setting';
       case 'dictionary_delete_failed':
         return 'Failed to delete dictionary';
       case 'dictionary_font_size':
@@ -378024,6 +378039,8 @@ extension on _StringsAr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -378143,8 +378160,6 @@ extension on _StringsAr {
         return 'جارٍ حذف بيانات القاموس...';
       case 'dictionaries_menu_empty':
         return 'استورد قاموساً للاستخدام';
-      case 'dictionary_collapse_follow_global':
-        return 'اتباع الإعداد العام';
       case 'dictionary_delete_failed':
         return 'فشل حذف القاموس';
       case 'dictionary_font_size':
@@ -396467,6 +396482,8 @@ extension on _StringsDe {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -396588,8 +396605,6 @@ extension on _StringsDe {
         return 'Wörterbuchdaten werden gelöscht...';
       case 'dictionaries_menu_empty':
         return 'Importieren Sie ein Wörterbuch';
-      case 'dictionary_collapse_follow_global':
-        return 'Globaler Einstellung folgen';
       case 'dictionary_delete_failed':
         return 'Löschen des Wörterbuchs fehlgeschlagen';
       case 'dictionary_font_size':
@@ -414955,6 +414970,8 @@ extension on _StringsEs {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -415074,8 +415091,6 @@ extension on _StringsEs {
         return 'Eliminando datos del diccionario...';
       case 'dictionaries_menu_empty':
         return 'Importa un diccionario para usar';
-      case 'dictionary_collapse_follow_global':
-        return 'Seguir el ajuste global';
       case 'dictionary_delete_failed':
         return 'No se pudo eliminar el diccionario';
       case 'dictionary_font_size':
@@ -433439,6 +433454,8 @@ extension on _StringsFr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -433559,8 +433576,6 @@ extension on _StringsFr {
         return 'Suppression des données du dictionnaire...';
       case 'dictionaries_menu_empty':
         return 'Importez un dictionnaire pour l\'utiliser';
-      case 'dictionary_collapse_follow_global':
-        return 'Suivre le réglage global';
       case 'dictionary_delete_failed':
         return 'Échec de la suppression du dictionnaire';
       case 'dictionary_font_size':
@@ -451915,6 +451930,8 @@ extension on _StringsId {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -452034,8 +452051,6 @@ extension on _StringsId {
         return 'Menghapus data kamus...';
       case 'dictionaries_menu_empty':
         return 'Impor kamus untuk digunakan';
-      case 'dictionary_collapse_follow_global':
-        return 'Ikuti pengaturan global';
       case 'dictionary_delete_failed':
         return 'Gagal menghapus kamus';
       case 'dictionary_font_size':
@@ -470359,6 +470374,8 @@ extension on _StringsIt {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -470480,8 +470497,6 @@ extension on _StringsIt {
         return 'Eliminazione dati del dizionario...';
       case 'dictionaries_menu_empty':
         return 'Importa un dizionario per l\'uso';
-      case 'dictionary_collapse_follow_global':
-        return 'Segui l\'impostazione globale';
       case 'dictionary_delete_failed':
         return 'Impossibile eliminare il dizionario';
       case 'dictionary_font_size':
@@ -488799,6 +488814,8 @@ extension on _StringsJa {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -488918,8 +488935,6 @@ extension on _StringsJa {
         return '辞書データを削除中...';
       case 'dictionaries_menu_empty':
         return '辞書をインポートしてください';
-      case 'dictionary_collapse_follow_global':
-        return '全体設定に従う';
       case 'dictionary_delete_failed':
         return '辞書の削除に失敗しました';
       case 'dictionary_font_size':
@@ -507139,6 +507154,8 @@ extension on _StringsKo {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -507258,8 +507275,6 @@ extension on _StringsKo {
         return '사전 데이터 삭제 중...';
       case 'dictionaries_menu_empty':
         return '사용할 사전을 가져오세요';
-      case 'dictionary_collapse_follow_global':
-        return '전역 설정 따르기';
       case 'dictionary_delete_failed':
         return '사전 삭제 실패';
       case 'dictionary_font_size':
@@ -525529,6 +525544,8 @@ extension on _StringsNl {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -525649,8 +525666,6 @@ extension on _StringsNl {
         return 'Woordenboekgegevens verwijderen...';
       case 'dictionaries_menu_empty':
         return 'Importeer een woordenboek voor gebruik';
-      case 'dictionary_collapse_follow_global':
-        return 'Globale instelling volgen';
       case 'dictionary_delete_failed':
         return 'Verwijderen van woordenboek mislukt';
       case 'dictionary_font_size':
@@ -543997,6 +544012,8 @@ extension on _StringsPtBr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -544117,8 +544134,6 @@ extension on _StringsPtBr {
         return 'Excluindo dados do dicionário...';
       case 'dictionaries_menu_empty':
         return 'Importe um dicionário para uso';
-      case 'dictionary_collapse_follow_global':
-        return 'Seguir configuração global';
       case 'dictionary_delete_failed':
         return 'Falha ao excluir dicionário';
       case 'dictionary_font_size':
@@ -562462,6 +562477,8 @@ extension on _StringsRu {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -562582,8 +562599,6 @@ extension on _StringsRu {
         return 'Удаление данных словаря...';
       case 'dictionaries_menu_empty':
         return 'Импортируйте словарь для использования';
-      case 'dictionary_collapse_follow_global':
-        return 'Как в общих настройках';
       case 'dictionary_delete_failed':
         return 'Не удалось удалить словарь';
       case 'dictionary_font_size':
@@ -580907,6 +580922,8 @@ extension on _StringsTh {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -581026,8 +581043,6 @@ extension on _StringsTh {
         return 'กำลังลบข้อมูลพจนานุกรม...';
       case 'dictionaries_menu_empty':
         return 'นำเข้าพจนานุกรมเพื่อใช้งาน';
-      case 'dictionary_collapse_follow_global':
-        return 'ตามการตั้งค่าส่วนกลาง';
       case 'dictionary_delete_failed':
         return 'ลบพจนานุกรมไม่สำเร็จ';
       case 'dictionary_font_size':
@@ -599345,6 +599360,8 @@ extension on _StringsTr {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -599464,8 +599481,6 @@ extension on _StringsTr {
         return 'Sözlük verileri siliniyor...';
       case 'dictionaries_menu_empty':
         return 'Kullanmak için bir sözlük içe aktarın';
-      case 'dictionary_collapse_follow_global':
-        return 'Genel ayarı izle';
       case 'dictionary_delete_failed':
         return 'Sözlük silinemedi';
       case 'dictionary_font_size':
@@ -617790,6 +617805,8 @@ extension on _StringsVi {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -617910,8 +617927,6 @@ extension on _StringsVi {
         return 'Đang xóa dữ liệu từ điển…';
       case 'dictionaries_menu_empty':
         return 'Nhập một từ điển để sử dụng';
-      case 'dictionary_collapse_follow_global':
-        return 'Theo cài đặt chung';
       case 'dictionary_delete_failed':
         return 'Không thể xóa từ điển';
       case 'dictionary_font_size':
@@ -636162,6 +636177,8 @@ extension on _StringsZhCn {
         return '拖动排序 · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return '长按拖动排序';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => '默认展示：${state}';
       case 'dict_selection_exit':
         return '退出选择';
       case 'dict_status_disabled':
@@ -636281,8 +636298,6 @@ extension on _StringsZhCn {
         return '正在删除词典数据…';
       case 'dictionaries_menu_empty':
         return '请先导入词典以便使用';
-      case 'dictionary_collapse_follow_global':
-        return '跟随全局设置';
       case 'dictionary_delete_failed':
         return '删除词典失败';
       case 'dictionary_font_size':
@@ -654378,6 +654393,8 @@ extension on _StringsZhHk {
         return 'Drag to reorder · Alt+↑/↓';
       case 'dict_reorder_hint_touch':
         return 'Long-press and drag to reorder';
+      case 'dict_row_collapse_tooltip':
+        return ({required Object state}) => 'Default display: ${state}';
       case 'dict_selection_exit':
         return 'Exit selection';
       case 'dict_status_disabled':
@@ -654497,8 +654514,6 @@ extension on _StringsZhHk {
         return '正在刪除辭典資料…';
       case 'dictionaries_menu_empty':
         return '請先匯入辭典以便使用';
-      case 'dictionary_collapse_follow_global':
-        return '跟隨全局設定';
       case 'dictionary_delete_failed':
         return '刪除詞典失敗';
       case 'dictionary_font_size':
