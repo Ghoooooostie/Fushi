@@ -9176,6 +9176,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_import_file => 'Import .apkg / .colpkg file';
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
   String get srs_import_merge_notetypes => 'Merge note types';
   String get srs_import_merge_notetypes_help =>
       'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
@@ -9193,13 +9195,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
   String srs_import_report_future({required Object n}) =>
       '${n} cards have times in the future and were imported without their schedule';
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   String srs_import_report_media_missing({required Object n}) =>
@@ -9230,13 +9233,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object removed,
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
   String get srs_import_report_title => 'Import finished';
   String get srs_import_reset_default => 'Restore default';
   String get srs_import_running => 'Importing…';
   String get srs_import_section_updates => 'Updates';
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   String get srs_import_task_cancel => 'Cancel import';
   String srs_import_task_cancelled({required Object name}) =>
       'Cancelled import of ${name}';
@@ -28116,6 +28116,9 @@ class _StringsAr extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -28142,7 +28145,7 @@ class _StringsAr extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -28152,6 +28155,8 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -28195,8 +28200,6 @@ class _StringsAr extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -28204,9 +28207,6 @@ class _StringsAr extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -49925,6 +49925,9 @@ class _StringsDe extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -49951,7 +49954,7 @@ class _StringsDe extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -49961,6 +49964,8 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -50004,8 +50009,6 @@ class _StringsDe extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -50013,9 +50016,6 @@ class _StringsDe extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -71859,6 +71859,9 @@ class _StringsEs extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -71885,7 +71888,7 @@ class _StringsEs extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -71895,6 +71898,8 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -71938,8 +71943,6 @@ class _StringsEs extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -71947,9 +71950,6 @@ class _StringsEs extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -93880,6 +93880,9 @@ class _StringsFr extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -93906,7 +93909,7 @@ class _StringsFr extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -93916,6 +93919,8 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -93959,8 +93964,6 @@ class _StringsFr extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -93968,9 +93971,6 @@ class _StringsFr extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -115665,6 +115665,9 @@ class _StringsId extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -115691,7 +115694,7 @@ class _StringsId extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -115701,6 +115704,8 @@ class _StringsId extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -115744,8 +115749,6 @@ class _StringsId extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -115753,9 +115756,6 @@ class _StringsId extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -137494,6 +137494,9 @@ class _StringsIt extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -137520,7 +137523,7 @@ class _StringsIt extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -137530,6 +137533,8 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -137573,8 +137578,6 @@ class _StringsIt extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -137582,9 +137585,6 @@ class _StringsIt extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -158615,6 +158615,9 @@ class _StringsJa extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -158641,7 +158644,7 @@ class _StringsJa extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -158651,6 +158654,8 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -158694,8 +158699,6 @@ class _StringsJa extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -158703,9 +158706,6 @@ class _StringsJa extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -179461,6 +179461,9 @@ class _StringsKo extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -179487,7 +179490,7 @@ class _StringsKo extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -179497,6 +179500,8 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -179540,8 +179545,6 @@ class _StringsKo extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -179549,9 +179552,6 @@ class _StringsKo extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -201016,6 +201016,9 @@ class _StringsNl extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -201042,7 +201045,7 @@ class _StringsNl extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -201052,6 +201055,8 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -201095,8 +201100,6 @@ class _StringsNl extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -201104,9 +201107,6 @@ class _StringsNl extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -222874,6 +222874,9 @@ class _StringsPtBr extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -222900,7 +222903,7 @@ class _StringsPtBr extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -222910,6 +222913,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -222953,8 +222958,6 @@ class _StringsPtBr extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -222962,9 +222965,6 @@ class _StringsPtBr extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -244710,6 +244710,9 @@ class _StringsRu extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -244736,7 +244739,7 @@ class _StringsRu extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -244746,6 +244749,8 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -244789,8 +244794,6 @@ class _StringsRu extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -244798,9 +244801,6 @@ class _StringsRu extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -266297,6 +266297,9 @@ class _StringsTh extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -266323,7 +266326,7 @@ class _StringsTh extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -266333,6 +266336,8 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -266376,8 +266381,6 @@ class _StringsTh extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -266385,9 +266388,6 @@ class _StringsTh extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -287949,6 +287949,9 @@ class _StringsTr extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -287975,7 +287978,7 @@ class _StringsTr extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -287985,6 +287988,8 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -288028,8 +288033,6 @@ class _StringsTr extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -288037,9 +288040,6 @@ class _StringsTr extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -309597,6 +309597,9 @@ class _StringsVi extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -309623,7 +309626,7 @@ class _StringsVi extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       'SRS review history restored: ${n} entries';
@@ -309633,6 +309636,8 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -309676,8 +309681,6 @@ class _StringsVi extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -309685,9 +309688,6 @@ class _StringsVi extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -329921,6 +329921,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_file_hint => '共享牌组，或从 Anki 导出的牌组文件';
   @override
+  String srs_import_kept_fsrs({required Object n}) => '已把 ${n} 个牌组切回 FSRS';
+  @override
   String get srs_import_merge_notetypes => '合并笔记模板';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -329946,7 +329948,7 @@ class _StringsZhCn extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      '预设「${preset}」带着 ${alg} 参数导入，对应牌组仍用 ${alg}。Fushi 默认用 RWKV（按此刻每张卡的回忆率排队），可点下面的「改用 RWKV」，或在牌组设置 › 算法里切换';
+      '预设「${preset}」带着 ${alg} 参数导入，对应牌组已改用 Fushi 默认的 RWKV（按此刻每张卡的回忆率排队）。${alg} 参数已保留：想继续用 ${alg}，点下面的「继续用 FSRS」，或在牌组设置 › 算法里切回';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       '恢复 SRS 复习记录：${n} 条';
@@ -329956,6 +329958,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       '预设「${preset}」的参数无效，未导入';
+  @override
+  String get srs_import_report_keep_fsrs => '继续用 FSRS';
   @override
   String srs_import_report_media({required Object n}) => '存入媒体文件：${n} 个';
   @override
@@ -329996,8 +330000,6 @@ class _StringsZhCn extends _StringsEn {
     required Object removed,
   }) => '牌组「${preset}」的步长 ${removed} 已移除，改由 FSRS 安排';
   @override
-  String get srs_import_report_switch_rwkv => '改用 RWKV';
-  @override
   String get srs_import_report_title => '导入完成';
   @override
   String get srs_import_reset_default => '恢复默认';
@@ -330005,8 +330007,6 @@ class _StringsZhCn extends _StringsEn {
   String get srs_import_running => '正在导入…';
   @override
   String get srs_import_section_updates => '更新';
-  @override
-  String srs_import_switched_rwkv({required Object n}) => '已把 ${n} 个牌组改用 RWKV';
   @override
   String get srs_import_task_cancel => '取消导入';
   @override
@@ -349992,6 +349992,9 @@ class _StringsZhHk extends _StringsEn {
   String get srs_import_file_hint =>
       'Shared decks, or decks exported from Anki';
   @override
+  String srs_import_kept_fsrs({required Object n}) =>
+      'Switched ${n} decks back to FSRS';
+  @override
   String get srs_import_merge_notetypes => 'Merge note types';
   @override
   String get srs_import_merge_notetypes_help =>
@@ -350018,7 +350021,7 @@ class _StringsZhHk extends _StringsEn {
     required Object preset,
     required Object alg,
   }) =>
-      'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+      'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
   @override
   String srs_import_report_fushi_restored({required Object n}) =>
       '恢復 SRS 複習記錄：${n} 條';
@@ -350028,6 +350031,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
@@ -350071,8 +350076,6 @@ class _StringsZhHk extends _StringsEn {
   }) =>
       'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
   @override
-  String get srs_import_report_switch_rwkv => 'Switch to RWKV';
-  @override
   String get srs_import_report_title => 'Import finished';
   @override
   String get srs_import_reset_default => 'Restore default';
@@ -350080,9 +350083,6 @@ class _StringsZhHk extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
-  @override
-  String srs_import_switched_rwkv({required Object n}) =>
-      'Switched ${n} decks to RWKV';
   @override
   String get srs_import_task_cancel => 'Cancel import';
   @override
@@ -368935,6 +368935,8 @@ extension on _StringsEn {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -368957,7 +368959,7 @@ extension on _StringsEn {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -368967,6 +368969,8 @@ extension on _StringsEn {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -369003,8 +369007,6 @@ extension on _StringsEn {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -369013,8 +369015,6 @@ extension on _StringsEn {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -387358,6 +387358,8 @@ extension on _StringsAr {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -387380,7 +387382,7 @@ extension on _StringsAr {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -387390,6 +387392,8 @@ extension on _StringsAr {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -387426,8 +387430,6 @@ extension on _StringsAr {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -387436,8 +387438,6 @@ extension on _StringsAr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -405837,6 +405837,8 @@ extension on _StringsDe {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -405859,7 +405861,7 @@ extension on _StringsDe {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -405869,6 +405871,8 @@ extension on _StringsDe {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -405905,8 +405909,6 @@ extension on _StringsDe {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -405915,8 +405917,6 @@ extension on _StringsDe {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -424320,6 +424320,8 @@ extension on _StringsEs {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -424342,7 +424344,7 @@ extension on _StringsEs {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -424352,6 +424354,8 @@ extension on _StringsEs {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -424388,8 +424392,6 @@ extension on _StringsEs {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -424398,8 +424400,6 @@ extension on _StringsEs {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -442814,6 +442814,8 @@ extension on _StringsFr {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -442836,7 +442838,7 @@ extension on _StringsFr {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -442846,6 +442848,8 @@ extension on _StringsFr {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -442882,8 +442886,6 @@ extension on _StringsFr {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -442892,8 +442894,6 @@ extension on _StringsFr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -461268,6 +461268,8 @@ extension on _StringsId {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -461290,7 +461292,7 @@ extension on _StringsId {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -461300,6 +461302,8 @@ extension on _StringsId {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -461336,8 +461340,6 @@ extension on _StringsId {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -461346,8 +461348,6 @@ extension on _StringsId {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -479731,6 +479731,8 @@ extension on _StringsIt {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -479753,7 +479755,7 @@ extension on _StringsIt {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -479763,6 +479765,8 @@ extension on _StringsIt {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -479799,8 +479803,6 @@ extension on _StringsIt {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -479809,8 +479811,6 @@ extension on _StringsIt {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -498128,6 +498128,8 @@ extension on _StringsJa {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -498150,7 +498152,7 @@ extension on _StringsJa {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -498160,6 +498162,8 @@ extension on _StringsJa {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -498196,8 +498200,6 @@ extension on _StringsJa {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -498206,8 +498208,6 @@ extension on _StringsJa {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -516474,6 +516474,8 @@ extension on _StringsKo {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -516496,7 +516498,7 @@ extension on _StringsKo {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -516506,6 +516508,8 @@ extension on _StringsKo {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -516542,8 +516546,6 @@ extension on _StringsKo {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -516552,8 +516554,6 @@ extension on _StringsKo {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -534910,6 +534910,8 @@ extension on _StringsNl {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -534932,7 +534934,7 @@ extension on _StringsNl {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -534942,6 +534944,8 @@ extension on _StringsNl {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -534978,8 +534982,6 @@ extension on _StringsNl {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -534988,8 +534990,6 @@ extension on _StringsNl {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -553377,6 +553377,8 @@ extension on _StringsPtBr {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -553399,7 +553401,7 @@ extension on _StringsPtBr {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -553409,6 +553411,8 @@ extension on _StringsPtBr {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -553445,8 +553449,6 @@ extension on _StringsPtBr {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -553455,8 +553457,6 @@ extension on _StringsPtBr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -571848,6 +571848,8 @@ extension on _StringsRu {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -571870,7 +571872,7 @@ extension on _StringsRu {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -571880,6 +571882,8 @@ extension on _StringsRu {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -571916,8 +571920,6 @@ extension on _StringsRu {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -571926,8 +571928,6 @@ extension on _StringsRu {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -590279,6 +590279,8 @@ extension on _StringsTh {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -590301,7 +590303,7 @@ extension on _StringsTh {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -590311,6 +590313,8 @@ extension on _StringsTh {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -590347,8 +590351,6 @@ extension on _StringsTh {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -590357,8 +590359,6 @@ extension on _StringsTh {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -608728,6 +608728,8 @@ extension on _StringsTr {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -608750,7 +608752,7 @@ extension on _StringsTr {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -608760,6 +608762,8 @@ extension on _StringsTr {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -608796,8 +608800,6 @@ extension on _StringsTr {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -608806,8 +608808,6 @@ extension on _StringsTr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -627172,6 +627172,8 @@ extension on _StringsVi {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -627194,7 +627196,7 @@ extension on _StringsVi {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) =>
             'SRS review history restored: ${n} entries';
@@ -627204,6 +627206,8 @@ extension on _StringsVi {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -627240,8 +627244,6 @@ extension on _StringsVi {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -627250,8 +627252,6 @@ extension on _StringsVi {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
@@ -645462,6 +645462,8 @@ extension on _StringsZhCn {
         return '导入 .apkg / .colpkg 文件';
       case 'srs_import_file_hint':
         return '共享牌组，或从 Anki 导出的牌组文件';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => '已把 ${n} 个牌组切回 FSRS';
       case 'srs_import_merge_notetypes':
         return '合并笔记模板';
       case 'srs_import_merge_notetypes_help':
@@ -645483,13 +645485,15 @@ extension on _StringsZhCn {
             '预设「${preset}」在 Anki 里没有 FSRS 参数（SM-2 或没优化过），对应牌组改用 Fushi 默认的 RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            '预设「${preset}」带着 ${alg} 参数导入，对应牌组仍用 ${alg}。Fushi 默认用 RWKV（按此刻每张卡的回忆率排队），可点下面的「改用 RWKV」，或在牌组设置 › 算法里切换';
+            '预设「${preset}」带着 ${alg} 参数导入，对应牌组已改用 Fushi 默认的 RWKV（按此刻每张卡的回忆率排队）。${alg} 参数已保留：想继续用 ${alg}，点下面的「继续用 FSRS」，或在牌组设置 › 算法里切回';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) => '恢复 SRS 复习记录：${n} 条';
       case 'srs_import_report_future':
         return ({required Object n}) => '有 ${n} 张卡的排程时间在未来，导入时没带排程';
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) => '预设「${preset}」的参数无效，未导入';
+      case 'srs_import_report_keep_fsrs':
+        return '继续用 FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => '存入媒体文件：${n} 个';
       case 'srs_import_report_media_missing':
@@ -645520,8 +645524,6 @@ extension on _StringsZhCn {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             '牌组「${preset}」的步长 ${removed} 已移除，改由 FSRS 安排';
-      case 'srs_import_report_switch_rwkv':
-        return '改用 RWKV';
       case 'srs_import_report_title':
         return '导入完成';
       case 'srs_import_reset_default':
@@ -645530,8 +645532,6 @@ extension on _StringsZhCn {
         return '正在导入…';
       case 'srs_import_section_updates':
         return '更新';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => '已把 ${n} 个牌组改用 RWKV';
       case 'srs_import_task_cancel':
         return '取消导入';
       case 'srs_import_task_cancelled':
@@ -663716,6 +663716,8 @@ extension on _StringsZhHk {
         return 'Import .apkg / .colpkg file';
       case 'srs_import_file_hint':
         return 'Shared decks, or decks exported from Anki';
+      case 'srs_import_kept_fsrs':
+        return ({required Object n}) => 'Switched ${n} decks back to FSRS';
       case 'srs_import_merge_notetypes':
         return 'Merge note types';
       case 'srs_import_merge_notetypes_help':
@@ -663738,7 +663740,7 @@ extension on _StringsZhHk {
             'Preset "${preset}" had no FSRS parameters in Anki (SM-2 or never optimized), so its decks use Fushi\'s default, RWKV';
       case 'srs_import_report_fsrs':
         return ({required Object preset, required Object alg}) =>
-            'Preset "${preset}" came with its ${alg} parameters, so its decks keep using ${alg}. Fushi\'s default is RWKV, which queues reviews by how well you remember each card right now; switch below or in deck settings › Algorithm';
+            'Preset "${preset}" came with ${alg} parameters; its decks now use Fushi\'s default, RWKV, which queues reviews by how well you remember each card right now. The ${alg} parameters are kept: to stay on ${alg}, choose Keep FSRS below or switch back in deck settings › Algorithm';
       case 'srs_import_report_fushi_restored':
         return ({required Object n}) => '恢復 SRS 複習記錄：${n} 條';
       case 'srs_import_report_future':
@@ -663747,6 +663749,8 @@ extension on _StringsZhHk {
       case 'srs_import_report_invalid_params':
         return ({required Object preset}) =>
             'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_keep_fsrs':
+        return 'Keep FSRS';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -663783,8 +663787,6 @@ extension on _StringsZhHk {
       case 'srs_import_report_steps_removed':
         return ({required Object preset, required Object removed}) =>
             'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
-      case 'srs_import_report_switch_rwkv':
-        return 'Switch to RWKV';
       case 'srs_import_report_title':
         return 'Import finished';
       case 'srs_import_reset_default':
@@ -663793,8 +663795,6 @@ extension on _StringsZhHk {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
-      case 'srs_import_switched_rwkv':
-        return ({required Object n}) => 'Switched ${n} decks to RWKV';
       case 'srs_import_task_cancel':
         return 'Cancel import';
       case 'srs_import_task_cancelled':
