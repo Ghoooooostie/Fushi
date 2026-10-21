@@ -21669,11 +21669,11 @@ class _StringsAr extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'اضبط القواميس واستورد كتابك الأول وأنشئ بطاقتك الأولى في بضع دقائق.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'عدم الإظهار مجددًا';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'متابعة الإعداد';
   @override
   String get home_panel_mode_auto => 'تلقائي';
   @override
@@ -25525,22 +25525,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'بدء درس البحث';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'مُنح';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'تقدّم التنزيلات والفصول والحلقات الجديدة وتنبيهات التحديث.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'الإشعارات';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'الكرة العائمة والقاموس العائم وكلمات الأغاني العائمة خارج التطبيق.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label =>
+      'الظهور فوق التطبيقات الأخرى';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'يفحص مجلدات الفيديو والمانغا والكتب المحلية بمساراتها الحقيقية.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'الوصول إلى جميع الملفات';
   @override
   String get onboarding_reopen => 'دليل البدء';
   @override
@@ -25569,12 +25570,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'جملة التدريب';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'تخطي';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'يضبط الدليل القواميس وكتابك الأول وإنشاء البطاقات. يمكنك إعادة فتحه في أي وقت من بطاقة الصفحة الرئيسية أو من الإعدادات › النظام.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'تخطي دليل البدء؟';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -25675,9 +25676,9 @@ class _StringsAr extends _StringsEn {
   String get onboarding_step_pack_title => 'الحزمة الموصى بها';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'يُبقي Android بعض هذه الأذونات مُعطَّلة افتراضيًا. فعِّل ما تحتاجه فقط، ويمكنك تغييرها لاحقًا من إعدادات النظام.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'أذونات النظام';
   @override
   String get onboarding_title => 'دليل البدء';
   @override
@@ -43669,11 +43670,11 @@ class _StringsDe extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Richte in wenigen Minuten Wörterbücher ein, importiere dein erstes Buch und erstelle deine erste Karte.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Nicht mehr anzeigen';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Einrichtung fortsetzen';
   @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
@@ -47610,22 +47611,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Nachschlage-Tutorial starten';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Erteilt';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Download-Fortschritt, neue Kapitel und Folgen sowie Update-Hinweise.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Benachrichtigungen';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'Schwebender Button, schwebendes Wörterbuch und schwebende Liedtexte außerhalb der App.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label =>
+      'Über anderen Apps einblenden';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Durchsucht lokale Video-, Manga- und Buchordner über ihren echten Pfad.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'Zugriff auf alle Dateien';
   @override
   String get onboarding_reopen => 'Erste-Schritte-Anleitung';
   @override
@@ -47654,12 +47656,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Übungssatz';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Überspringen';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'In der Einführung richtest du Wörterbücher, dein erstes Buch und das Kartenerstellen ein. Du kannst sie jederzeit über die Karte auf der Startseite oder unter Einstellungen › System wieder öffnen.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Einführung überspringen?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -47764,9 +47766,9 @@ class _StringsDe extends _StringsEn {
   String get onboarding_step_pack_title => 'Empfohlenes Paket';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android schaltet einige davon standardmäßig aus. Aktiviere nur, was du brauchst; du kannst sie später in den Systemeinstellungen ändern.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Systemberechtigungen';
   @override
   String get onboarding_title => 'Erste Schritte';
   @override
@@ -65906,11 +65908,11 @@ class _StringsEs extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Configura los diccionarios, importa tu primer libro y crea tu primera tarjeta en unos minutos.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'No volver a mostrar';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Continuar la configuración';
   @override
   String get home_panel_mode_auto => 'Automático';
   @override
@@ -69856,22 +69858,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Iniciar tutorial de consulta';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Concedido';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Progreso de descargas, nuevos capítulos y episodios, y avisos de actualización.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Notificaciones';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'La burbuja flotante, el diccionario flotante y la letra flotante fuera de la app.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label => 'Mostrar sobre otras apps';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Analiza carpetas locales de vídeo, manga y libros por su ruta real.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label =>
+      'Acceso a todos los archivos';
   @override
   String get onboarding_reopen => 'Guía de primeros pasos';
   @override
@@ -69900,12 +69903,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Frase de práctica';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Omitir';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'La guía configura los diccionarios, tu primer libro y la creación de tarjetas. Puedes volver a abrirla cuando quieras desde la tarjeta de la página de inicio o en Ajustes › Sistema.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => '¿Omitir la guía de inicio?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -70008,9 +70011,9 @@ class _StringsEs extends _StringsEn {
   String get onboarding_step_pack_title => 'Pack recomendado';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android desactiva algunos de estos por defecto. Activa solo lo que necesites; puedes cambiarlos más tarde en los ajustes del sistema.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Permisos del sistema';
   @override
   String get onboarding_title => 'Primeros pasos';
   @override
@@ -88218,11 +88221,11 @@ class _StringsFr extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Configurez les dictionnaires, importez votre premier livre et créez votre première carte en quelques minutes.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Ne plus afficher';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Reprendre la configuration';
   @override
   String get home_panel_mode_auto => 'Automatique';
   @override
@@ -92187,22 +92190,23 @@ class _StringsFr extends _StringsEn {
   String get onboarding_pack_tutorial_start =>
       'Lancer le tutoriel de recherche';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Accordée';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Progression des téléchargements, nouveaux chapitres et épisodes, rappels de mise à jour.';
   @override
   String get onboarding_permission_notifications_label => 'Notifications';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'La bulle flottante, le dictionnaire flottant et les paroles flottantes hors de l’appli.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label =>
+      'Superposition aux autres applis';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Analyse les dossiers locaux de vidéos, mangas et livres par leur chemin réel.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'Accès à tous les fichiers';
   @override
   String get onboarding_reopen => 'Guide de démarrage';
   @override
@@ -92231,12 +92235,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Phrase d\'entraînement';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Passer';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'Le guide configure les dictionnaires, votre premier livre et la création de cartes. Vous pouvez le rouvrir à tout moment depuis la carte de l’accueil ou dans Paramètres › Système.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Passer le guide de démarrage ?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -92341,9 +92345,9 @@ class _StringsFr extends _StringsEn {
   String get onboarding_step_pack_title => 'Pack recommandé';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android désactive certaines d’entre elles par défaut. N’activez que ce dont vous avez besoin ; vous pourrez les modifier plus tard dans les paramètres système.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Autorisations système';
   @override
   String get onboarding_title => 'Premiers pas';
   @override
@@ -110436,11 +110440,11 @@ class _StringsId extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Siapkan kamus, impor buku pertama, dan buat kartu pertama Anda dalam beberapa menit.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Jangan tampilkan lagi';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Lanjutkan penyiapan';
   @override
   String get home_panel_mode_auto => 'Otomatis';
   @override
@@ -114331,22 +114335,23 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Mulai tutorial pencarian';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Diizinkan';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Progres unduhan, bab dan episode baru, serta pengingat pembaruan.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Notifikasi';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'Bola mengambang, kamus mengambang, dan lirik mengambang di luar aplikasi.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label =>
+      'Tampilkan di atas aplikasi lain';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Memindai folder video, manga, dan buku lokal berdasarkan jalur aslinya.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'Akses semua file';
   @override
   String get onboarding_reopen => 'Panduan memulai';
   @override
@@ -114375,12 +114380,12 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Kalimat latihan';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Lewati';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'Panduan ini menyiapkan kamus, buku pertama, dan pembuatan kartu. Anda dapat membukanya lagi kapan saja dari kartu di beranda atau di Pengaturan › Sistem.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Lewati panduan memulai?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -114482,9 +114487,9 @@ class _StringsId extends _StringsEn {
   String get onboarding_step_pack_title => 'Paket rekomendasi';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android menonaktifkan beberapa izin ini secara default. Aktifkan yang Anda perlukan saja; Anda bisa mengubahnya nanti di pengaturan sistem.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Izin sistem';
   @override
   String get onboarding_title => 'Memulai';
   @override
@@ -132516,11 +132521,11 @@ class _StringsIt extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Configura i dizionari, importa il tuo primo libro e crea la tua prima scheda in pochi minuti.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Non mostrare più';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Continua la configurazione';
   @override
   String get home_panel_mode_auto => 'Automatico';
   @override
@@ -136449,22 +136454,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Avvia il tutorial di ricerca';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Concessa';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Avanzamento dei download, nuovi capitoli ed episodi e avvisi di aggiornamento.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Notifiche';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'La bolla mobile, il dizionario mobile e il testo mobile delle canzoni fuori dall’app.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label => 'Mostra sopra altre app';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Analizza le cartelle locali di video, manga e libri tramite il loro percorso reale.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'Accesso a tutti i file';
   @override
   String get onboarding_reopen => 'Guida per iniziare';
   @override
@@ -136493,12 +136498,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Frase di esercizio';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Salta';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'La guida configura i dizionari, il tuo primo libro e la creazione di schede. Puoi riaprirla quando vuoi dalla scheda nella home o da Impostazioni › Sistema.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Saltare la guida introduttiva?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -136601,9 +136606,9 @@ class _StringsIt extends _StringsEn {
   String get onboarding_step_pack_title => 'Pacchetto consigliato';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android ne tiene disattivate alcune per impostazione predefinita. Attiva solo ciò che ti serve; potrai cambiarle in seguito nelle impostazioni di sistema.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Autorizzazioni di sistema';
   @override
   String get onboarding_title => 'Per iniziare';
   @override
@@ -154285,11 +154290,11 @@ class _StringsJa extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      '数分で辞書の設定、最初の本のインポート、最初のカード作成まで進められます。';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => '今後表示しない';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'セットアップを続ける';
   @override
   String get home_panel_mode_auto => '自動';
   @override
@@ -158002,22 +158007,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => '検索チュートリアルを開始';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => '許可済み';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'ダウンロードの進行状況、新しい章・エピソード、アップデートのお知らせ。';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => '通知';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'アプリ外のフローティングボール、フローティング辞書、フローティング歌詞。';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label => '他のアプリの上に重ねて表示';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'ローカルの動画・漫画・本のフォルダを実際のパスでスキャンします。';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'すべてのファイルへのアクセス';
   @override
   String get onboarding_reopen => 'はじめにガイド';
   @override
@@ -158046,12 +158051,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => '練習用の文';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'スキップ';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      '辞書、最初の本、カード作成はガイドで設定します。スキップしても、ホームのガイドカードや「設定 › システム」からいつでも再開できます。';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'はじめにガイドをスキップしますか？';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -158149,9 +158154,9 @@ class _StringsJa extends _StringsEn {
   String get onboarding_step_pack_title => 'おすすめパック';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android では一部の権限が初期状態でオフです。必要なものだけオンにしてください。あとからシステム設定でいつでも変更できます。';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'システム権限';
   @override
   String get onboarding_title => 'はじめに';
   @override
@@ -175433,11 +175438,11 @@ class _StringsKo extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      '몇 분 만에 사전을 설정하고, 첫 책을 가져오고, 첫 카드를 만들어 보세요.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => '다시 표시 안 함';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => '설정 계속하기';
   @override
   String get home_panel_mode_auto => '자동';
   @override
@@ -179168,22 +179173,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => '검색 튜토리얼 시작';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => '허용됨';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      '다운로드 진행 상황, 새 챕터·에피소드, 업데이트 알림.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => '알림';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      '앱 밖의 플로팅 볼, 플로팅 사전, 플로팅 가사.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label => '다른 앱 위에 표시';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      '로컬 동영상·만화·책 폴더를 실제 경로로 검색합니다.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => '모든 파일 액세스';
   @override
   String get onboarding_reopen => '시작 가이드';
   @override
@@ -179212,12 +179217,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => '연습 문장';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => '건너뛰기';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      '사전, 첫 책, 카드 만들기는 가이드에서 설정합니다. 건너뛰어도 홈의 가이드 카드나 「설정 › 시스템」에서 언제든 다시 열 수 있습니다.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => '시작 가이드를 건너뛸까요?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -179312,9 +179317,9 @@ class _StringsKo extends _StringsEn {
   String get onboarding_step_pack_title => '추천 팩';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android는 이 중 일부를 기본적으로 꺼 둡니다. 필요한 것만 켜세요. 나중에 시스템 설정에서 언제든 바꿀 수 있습니다.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => '시스템 권한';
   @override
   String get onboarding_title => '시작하기';
   @override
@@ -197019,11 +197024,11 @@ class _StringsNl extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Stel woordenboeken in, importeer je eerste boek en maak je eerste kaart in een paar minuten.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Niet meer tonen';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Instellen hervatten';
   @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
@@ -200939,22 +200944,24 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Opzoektutorial starten';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Verleend';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Downloadvoortgang, nieuwe hoofdstukken en afleveringen en updatemeldingen.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Meldingen';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'De zwevende knop, het zwevende woordenboek en de zwevende songtekst buiten de app.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label =>
+      'Weergeven boven andere apps';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Scant lokale video-, manga- en boekmappen via hun echte pad.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label =>
+      'Toegang tot alle bestanden';
   @override
   String get onboarding_reopen => 'Aan-de-slaggids';
   @override
@@ -200983,12 +200990,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Oefenzin';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Overslaan';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'In de gids stel je woordenboeken, je eerste boek en het maken van kaarten in. Je kunt hem altijd opnieuw openen via de kaart op het startscherm of via Instellingen › Systeem.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Introductiegids overslaan?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -201090,9 +201097,9 @@ class _StringsNl extends _StringsEn {
   String get onboarding_step_pack_title => 'Aanbevolen pakket';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android zet sommige hiervan standaard uit. Zet alleen aan wat je nodig hebt; je kunt ze later wijzigen in de systeeminstellingen.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Systeemmachtigingen';
   @override
   String get onboarding_title => 'Aan de slag';
   @override
@@ -219183,11 +219190,11 @@ class _StringsPtBr extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Configure dicionários, importe seu primeiro livro e crie seu primeiro cartão em poucos minutos.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Não mostrar novamente';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Continuar a configuração';
   @override
   String get home_panel_mode_auto => 'Automático';
   @override
@@ -223111,22 +223118,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Iniciar tutorial de consulta';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Concedida';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Progresso de downloads, novos capítulos e episódios e avisos de atualização.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Notificações';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'A bolha flutuante, o dicionário flutuante e a letra flutuante fora do app.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label => 'Sobrepor a outros apps';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Verifica pastas locais de vídeo, mangá e livros pelo caminho real.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label =>
+      'Acesso a todos os arquivos';
   @override
   String get onboarding_reopen => 'Guia de primeiros passos';
   @override
@@ -223155,12 +223163,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Frase de prática';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Pular';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'O guia configura os dicionários, seu primeiro livro e a criação de cartões. Você pode reabri-lo a qualquer momento pelo cartão da tela inicial ou em Configurações › Sistema.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Pular o guia de introdução?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -223265,9 +223273,9 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_step_pack_title => 'Pacote recomendado';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'O Android deixa algumas delas desativadas por padrão. Ative só o que precisar; você pode alterá-las depois nas configurações do sistema.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Permissões do sistema';
   @override
   String get onboarding_title => 'Primeiros passos';
   @override
@@ -241340,11 +241348,11 @@ class _StringsRu extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'За несколько минут настройте словари, импортируйте первую книгу и создайте первую карточку.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Больше не показывать';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Продолжить настройку';
   @override
   String get home_panel_mode_auto => 'Авто';
   @override
@@ -245265,22 +245273,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Начать обучение поиску';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Предоставлено';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Ход загрузок, новые главы и серии, напоминания об обновлениях.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Уведомления';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'Плавающая кнопка, плавающий словарь и плавающий текст песен вне приложения.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label => 'Поверх других приложений';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Сканирование локальных папок с видео, мангой и книгами по реальному пути.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'Доступ ко всем файлам';
   @override
   String get onboarding_reopen => 'Руководство по началу работы';
   @override
@@ -245309,12 +245317,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Тренировочное предложение';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Пропустить';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'В руководстве настраиваются словари, первая книга и создание карточек. Его можно в любой момент открыть снова с карточки на главной или в разделе Настройки › Система.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Пропустить вводное руководство?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -245419,9 +245427,9 @@ class _StringsRu extends _StringsEn {
   String get onboarding_step_pack_title => 'Рекомендуемый набор';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android по умолчанию отключает некоторые из них. Включите только нужные; позже их можно изменить в настройках системы.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Системные разрешения';
   @override
   String get onboarding_title => 'Начало работы';
   @override
@@ -263351,11 +263359,11 @@ class _StringsTh extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'ตั้งค่าพจนานุกรม นำเข้าหนังสือเล่มแรก และสร้างการ์ดใบแรกได้ในไม่กี่นาที';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'ไม่ต้องแสดงอีก';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'ตั้งค่าต่อ';
   @override
   String get home_panel_mode_auto => 'อัตโนมัติ';
   @override
@@ -267209,22 +267217,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'เริ่มบทเรียนการค้นหา';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'อนุญาตแล้ว';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'ความคืบหน้าการดาวน์โหลด ตอนหรือบทใหม่ และการแจ้งเตือนอัปเดต';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'การแจ้งเตือน';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'ลูกบอลลอย พจนานุกรมลอย และเนื้อเพลงลอยนอกแอป';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label => 'แสดงทับแอปอื่น';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'สแกนโฟลเดอร์วิดีโอ มังงะ และหนังสือในเครื่องตามพาธจริง';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'สิทธิ์เข้าถึงไฟล์ทั้งหมด';
   @override
   String get onboarding_reopen => 'คู่มือเริ่มต้นใช้งาน';
   @override
@@ -267253,12 +267261,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'ประโยคฝึก';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'ข้าม';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'คู่มือจะช่วยตั้งค่าพจนานุกรม หนังสือเล่มแรก และการสร้างการ์ด หากข้ามไป คุณเปิดใหม่ได้ทุกเมื่อจากการ์ดในหน้าแรกหรือที่ การตั้งค่า › ระบบ';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'ข้ามคู่มือเริ่มต้นใช้งานหรือไม่';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -267360,9 +267368,9 @@ class _StringsTh extends _StringsEn {
   String get onboarding_step_pack_title => 'แพ็กแนะนำ';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android ปิดสิทธิ์บางรายการไว้เป็นค่าเริ่มต้น เปิดเฉพาะที่ต้องใช้ และเปลี่ยนภายหลังได้ในการตั้งค่าระบบ';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'สิทธิ์ของระบบ';
   @override
   String get onboarding_title => 'เริ่มต้นใช้งาน';
   @override
@@ -285271,11 +285279,11 @@ class _StringsTr extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Birkaç dakikada sözlükleri ayarlayın, ilk kitabınızı içe aktarın ve ilk kartınızı oluşturun.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Bir daha gösterme';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Kuruluma devam et';
   @override
   String get home_panel_mode_auto => 'Otomatik';
   @override
@@ -289166,22 +289174,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Arama eğitimini başlat';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'İzin verildi';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'İndirme ilerlemesi, yeni bölümler ve güncelleme hatırlatmaları.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Bildirimler';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'Uygulama dışında yüzen düğme, yüzen sözlük ve yüzen şarkı sözleri.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label =>
+      'Diğer uygulamaların üzerinde göster';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Yerel video, manga ve kitap klasörlerini gerçek yollarıyla tarar.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'Tüm dosyalara erişim';
   @override
   String get onboarding_reopen => 'Başlangıç rehberi';
   @override
@@ -289210,12 +289219,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Alıştırma cümlesi';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Atla';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'Rehber sözlükleri, ilk kitabınızı ve kart oluşturmayı ayarlar. İstediğiniz zaman ana sayfadaki rehber kartından veya Ayarlar › Sistem bölümünden yeniden açabilirsiniz.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Başlangıç rehberi atlansın mı?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -289317,9 +289326,9 @@ class _StringsTr extends _StringsEn {
   String get onboarding_step_pack_title => 'Önerilen paket';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android bunların bazılarını varsayılan olarak kapalı tutar. Yalnızca ihtiyacınız olanları açın; daha sonra sistem ayarlarından değiştirebilirsiniz.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Sistem izinleri';
   @override
   String get onboarding_title => 'Başlangıç';
   @override
@@ -307267,11 +307276,11 @@ class _StringsVi extends _StringsEn {
   String get home_nav_rail_expand => 'Expand navigation';
   @override
   String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      'Thiết lập từ điển, nhập cuốn sách đầu tiên và tạo thẻ đầu tiên chỉ trong vài phút.';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => 'Không hiển thị lại';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => 'Tiếp tục thiết lập';
   @override
   String get home_panel_mode_auto => 'Tự động';
   @override
@@ -311141,22 +311150,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Bắt đầu hướng dẫn tra từ';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => 'Đã cấp';
   @override
   String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+      'Tiến độ tải xuống, chương và tập mới, nhắc nhở cập nhật.';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => 'Thông báo';
   @override
   String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+      'Bong bóng nổi, từ điển nổi và lời bài hát nổi bên ngoài ứng dụng.';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label =>
+      'Hiển thị trên ứng dụng khác';
   @override
   String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+      'Quét các thư mục video, manga và sách trên máy theo đường dẫn thật.';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => 'Quyền truy cập mọi tệp';
   @override
   String get onboarding_reopen => 'Hướng dẫn bắt đầu';
   @override
@@ -311185,12 +311195,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => 'Câu luyện tập';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => 'Bỏ qua';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      'Hướng dẫn giúp thiết lập từ điển, cuốn sách đầu tiên và việc tạo thẻ. Bạn có thể mở lại bất cứ lúc nào từ thẻ trên trang chủ hoặc trong Cài đặt › Hệ thống.';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => 'Bỏ qua hướng dẫn bắt đầu?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -311291,9 +311301,9 @@ class _StringsVi extends _StringsEn {
   String get onboarding_step_pack_title => 'Gói khuyến nghị';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android tắt sẵn một số quyền này. Chỉ bật những gì bạn cần; bạn có thể thay đổi sau trong cài đặt hệ thống.';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => 'Quyền hệ thống';
   @override
   String get onboarding_title => 'Bắt đầu';
   @override
@@ -348678,12 +348688,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
-  String get home_onboarding_card_desc =>
-      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  String get home_onboarding_card_desc => '幾分鐘設定好詞典、匯入第一本書、做出第一張卡片。';
   @override
-  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_dismiss => '不再顯示';
   @override
-  String get home_onboarding_card_start => 'Continue setup';
+  String get home_onboarding_card_start => '繼續新手引導';
   @override
   String get home_panel_mode_auto => '自動';
   @override
@@ -352280,22 +352289,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => '開始查詞教程';
   @override
-  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_granted => '已開啟';
   @override
-  String get onboarding_permission_notifications_desc =>
-      'Download progress, new chapters and episodes, and update reminders.';
+  String get onboarding_permission_notifications_desc => '下載進度、新章節新劇集與更新提醒。';
   @override
-  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_notifications_label => '通知';
   @override
-  String get onboarding_permission_overlay_desc =>
-      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  String get onboarding_permission_overlay_desc => '應用程式外的懸浮球、懸浮詞典和懸浮歌詞。';
   @override
-  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_overlay_label => '懸浮視窗';
   @override
-  String get onboarding_permission_storage_desc =>
-      'Scan local video, manga and book folders by their real paths.';
+  String get onboarding_permission_storage_desc => '按真實路徑掃描本機的影片、漫畫和書籍資料夾。';
   @override
-  String get onboarding_permission_storage_label => 'All files access';
+  String get onboarding_permission_storage_label => '所有檔案存取權';
   @override
   String get onboarding_reopen => '新手引導';
   @override
@@ -352323,12 +352329,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_sample_sentence_label => '練習句子';
   @override
-  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_action => '略過';
   @override
   String get onboarding_skip_confirm_desc =>
-      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      '詞典、第一本書和製卡都在引導裏設定。略過後可以隨時從首頁的引導卡片或「設定 › 系統」重新開啟。';
   @override
-  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
+  String get onboarding_skip_confirm_title => '確定略過新手引導？';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -352419,9 +352425,9 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_step_pack_title => '推薦包';
   @override
   String get onboarding_step_permissions_body =>
-      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      'Android 預設關閉其中幾項。按需開啟即可，之後也可以在系統設定裏隨時更改。';
   @override
-  String get onboarding_step_permissions_title => 'System permissions';
+  String get onboarding_step_permissions_title => '系統權限';
   @override
   String get onboarding_title => '新手引導';
   @override
@@ -387126,11 +387132,11 @@ extension on _StringsAr {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'اضبط القواميس واستورد كتابك الأول وأنشئ بطاقتك الأولى في بضع دقائق.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'عدم الإظهار مجددًا';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'متابعة الإعداد';
       case 'home_panel_mode_auto':
         return 'تلقائي';
       case 'home_panel_mode_hidden':
@@ -390414,19 +390420,19 @@ extension on _StringsAr {
       case 'onboarding_pack_tutorial_start':
         return 'بدء درس البحث';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'مُنح';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'تقدّم التنزيلات والفصول والحلقات الجديدة وتنبيهات التحديث.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'الإشعارات';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'الكرة العائمة والقاموس العائم وكلمات الأغاني العائمة خارج التطبيق.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'الظهور فوق التطبيقات الأخرى';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'يفحص مجلدات الفيديو والمانغا والكتب المحلية بمساراتها الحقيقية.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'الوصول إلى جميع الملفات';
       case 'onboarding_reopen':
         return 'دليل البدء';
       case 'onboarding_review_anki_desc':
@@ -390450,11 +390456,11 @@ extension on _StringsAr {
       case 'onboarding_sample_sentence_label':
         return 'جملة التدريب';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'تخطي';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'يضبط الدليل القواميس وكتابك الأول وإنشاء البطاقات. يمكنك إعادة فتحه في أي وقت من بطاقة الصفحة الرئيسية أو من الإعدادات › النظام.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'تخطي دليل البدء؟';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -390536,9 +390542,9 @@ extension on _StringsAr {
       case 'onboarding_step_pack_title':
         return 'الحزمة الموصى بها';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'يُبقي Android بعض هذه الأذونات مُعطَّلة افتراضيًا. فعِّل ما تحتاجه فقط، ويمكنك تغييرها لاحقًا من إعدادات النظام.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'أذونات النظام';
       case 'onboarding_title':
         return 'دليل البدء';
       case 'onboarding_welcome_body':
@@ -405842,11 +405848,11 @@ extension on _StringsDe {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Richte in wenigen Minuten Wörterbücher ein, importiere dein erstes Buch und erstelle deine erste Karte.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Nicht mehr anzeigen';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Einrichtung fortsetzen';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -409152,19 +409158,19 @@ extension on _StringsDe {
       case 'onboarding_pack_tutorial_start':
         return 'Nachschlage-Tutorial starten';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Erteilt';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Download-Fortschritt, neue Kapitel und Folgen sowie Update-Hinweise.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Benachrichtigungen';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'Schwebender Button, schwebendes Wörterbuch und schwebende Liedtexte außerhalb der App.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Über anderen Apps einblenden';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Durchsucht lokale Video-, Manga- und Buchordner über ihren echten Pfad.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Zugriff auf alle Dateien';
       case 'onboarding_reopen':
         return 'Erste-Schritte-Anleitung';
       case 'onboarding_review_anki_desc':
@@ -409188,11 +409194,11 @@ extension on _StringsDe {
       case 'onboarding_sample_sentence_label':
         return 'Übungssatz';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Überspringen';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'In der Einführung richtest du Wörterbücher, dein erstes Buch und das Kartenerstellen ein. Du kannst sie jederzeit über die Karte auf der Startseite oder unter Einstellungen › System wieder öffnen.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Einführung überspringen?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -409274,9 +409280,9 @@ extension on _StringsDe {
       case 'onboarding_step_pack_title':
         return 'Empfohlenes Paket';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android schaltet einige davon standardmäßig aus. Aktiviere nur, was du brauchst; du kannst sie später in den Systemeinstellungen ändern.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Systemberechtigungen';
       case 'onboarding_title':
         return 'Erste Schritte';
       case 'onboarding_welcome_body':
@@ -424590,11 +424596,11 @@ extension on _StringsEs {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Configura los diccionarios, importa tu primer libro y crea tu primera tarjeta en unos minutos.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'No volver a mostrar';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Continuar la configuración';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -427894,19 +427900,19 @@ extension on _StringsEs {
       case 'onboarding_pack_tutorial_start':
         return 'Iniciar tutorial de consulta';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Concedido';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Progreso de descargas, nuevos capítulos y episodios, y avisos de actualización.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Notificaciones';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'La burbuja flotante, el diccionario flotante y la letra flotante fuera de la app.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Mostrar sobre otras apps';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Analiza carpetas locales de vídeo, manga y libros por su ruta real.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Acceso a todos los archivos';
       case 'onboarding_reopen':
         return 'Guía de primeros pasos';
       case 'onboarding_review_anki_desc':
@@ -427930,11 +427936,11 @@ extension on _StringsEs {
       case 'onboarding_sample_sentence_label':
         return 'Frase de práctica';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Omitir';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'La guía configura los diccionarios, tu primer libro y la creación de tarjetas. Puedes volver a abrirla cuando quieras desde la tarjeta de la página de inicio o en Ajustes › Sistema.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return '¿Omitir la guía de inicio?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -428016,9 +428022,9 @@ extension on _StringsEs {
       case 'onboarding_step_pack_title':
         return 'Pack recomendado';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android desactiva algunos de estos por defecto. Activa solo lo que necesites; puedes cambiarlos más tarde en los ajustes del sistema.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Permisos del sistema';
       case 'onboarding_title':
         return 'Primeros pasos';
       case 'onboarding_welcome_body':
@@ -443344,11 +443350,11 @@ extension on _StringsFr {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Configurez les dictionnaires, importez votre premier livre et créez votre première carte en quelques minutes.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Ne plus afficher';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Reprendre la configuration';
       case 'home_panel_mode_auto':
         return 'Automatique';
       case 'home_panel_mode_hidden':
@@ -446650,19 +446656,19 @@ extension on _StringsFr {
       case 'onboarding_pack_tutorial_start':
         return 'Lancer le tutoriel de recherche';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Accordée';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Progression des téléchargements, nouveaux chapitres et épisodes, rappels de mise à jour.';
       case 'onboarding_permission_notifications_label':
         return 'Notifications';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'La bulle flottante, le dictionnaire flottant et les paroles flottantes hors de l’appli.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Superposition aux autres applis';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Analyse les dossiers locaux de vidéos, mangas et livres par leur chemin réel.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Accès à tous les fichiers';
       case 'onboarding_reopen':
         return 'Guide de démarrage';
       case 'onboarding_review_anki_desc':
@@ -446686,11 +446692,11 @@ extension on _StringsFr {
       case 'onboarding_sample_sentence_label':
         return 'Phrase d\'entraînement';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Passer';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'Le guide configure les dictionnaires, votre premier livre et la création de cartes. Vous pouvez le rouvrir à tout moment depuis la carte de l’accueil ou dans Paramètres › Système.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Passer le guide de démarrage ?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -446772,9 +446778,9 @@ extension on _StringsFr {
       case 'onboarding_step_pack_title':
         return 'Pack recommandé';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android désactive certaines d’entre elles par défaut. N’activez que ce dont vous avez besoin ; vous pourrez les modifier plus tard dans les paramètres système.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Autorisations système';
       case 'onboarding_title':
         return 'Premiers pas';
       case 'onboarding_welcome_body':
@@ -462076,11 +462082,11 @@ extension on _StringsId {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Siapkan kamus, impor buku pertama, dan buat kartu pertama Anda dalam beberapa menit.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Jangan tampilkan lagi';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Lanjutkan penyiapan';
       case 'home_panel_mode_auto':
         return 'Otomatis';
       case 'home_panel_mode_hidden':
@@ -465368,19 +465374,19 @@ extension on _StringsId {
       case 'onboarding_pack_tutorial_start':
         return 'Mulai tutorial pencarian';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Diizinkan';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Progres unduhan, bab dan episode baru, serta pengingat pembaruan.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Notifikasi';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'Bola mengambang, kamus mengambang, dan lirik mengambang di luar aplikasi.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Tampilkan di atas aplikasi lain';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Memindai folder video, manga, dan buku lokal berdasarkan jalur aslinya.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Akses semua file';
       case 'onboarding_reopen':
         return 'Panduan memulai';
       case 'onboarding_review_anki_desc':
@@ -465404,11 +465410,11 @@ extension on _StringsId {
       case 'onboarding_sample_sentence_label':
         return 'Kalimat latihan';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Lewati';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'Panduan ini menyiapkan kamus, buku pertama, dan pembuatan kartu. Anda dapat membukanya lagi kapan saja dari kartu di beranda atau di Pengaturan › Sistem.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Lewati panduan memulai?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -465490,9 +465496,9 @@ extension on _StringsId {
       case 'onboarding_step_pack_title':
         return 'Paket rekomendasi';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android menonaktifkan beberapa izin ini secara default. Aktifkan yang Anda perlukan saja; Anda bisa mengubahnya nanti di pengaturan sistem.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Izin sistem';
       case 'onboarding_title':
         return 'Memulai';
       case 'onboarding_welcome_body':
@@ -480789,11 +480795,11 @@ extension on _StringsIt {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Configura i dizionari, importa il tuo primo libro e crea la tua prima scheda in pochi minuti.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Non mostrare più';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Continua la configurazione';
       case 'home_panel_mode_auto':
         return 'Automatico';
       case 'home_panel_mode_hidden':
@@ -484090,19 +484096,19 @@ extension on _StringsIt {
       case 'onboarding_pack_tutorial_start':
         return 'Avvia il tutorial di ricerca';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Concessa';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Avanzamento dei download, nuovi capitoli ed episodi e avvisi di aggiornamento.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Notifiche';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'La bolla mobile, il dizionario mobile e il testo mobile delle canzoni fuori dall’app.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Mostra sopra altre app';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Analizza le cartelle locali di video, manga e libri tramite il loro percorso reale.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Accesso a tutti i file';
       case 'onboarding_reopen':
         return 'Guida per iniziare';
       case 'onboarding_review_anki_desc':
@@ -484126,11 +484132,11 @@ extension on _StringsIt {
       case 'onboarding_sample_sentence_label':
         return 'Frase di esercizio';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Salta';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'La guida configura i dizionari, il tuo primo libro e la creazione di schede. Puoi riaprirla quando vuoi dalla scheda nella home o da Impostazioni › Sistema.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Saltare la guida introduttiva?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -484212,9 +484218,9 @@ extension on _StringsIt {
       case 'onboarding_step_pack_title':
         return 'Pacchetto consigliato';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android ne tiene disattivate alcune per impostazione predefinita. Attiva solo ciò che ti serve; potrai cambiarle in seguito nelle impostazioni di sistema.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Autorizzazioni di sistema';
       case 'onboarding_title':
         return 'Per iniziare';
       case 'onboarding_welcome_body':
@@ -499481,11 +499487,11 @@ extension on _StringsJa {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return '数分で辞書の設定、最初の本のインポート、最初のカード作成まで進められます。';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return '今後表示しない';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'セットアップを続ける';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -502752,19 +502758,19 @@ extension on _StringsJa {
       case 'onboarding_pack_tutorial_start':
         return '検索チュートリアルを開始';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return '許可済み';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'ダウンロードの進行状況、新しい章・エピソード、アップデートのお知らせ。';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return '通知';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'アプリ外のフローティングボール、フローティング辞書、フローティング歌詞。';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return '他のアプリの上に重ねて表示';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'ローカルの動画・漫画・本のフォルダを実際のパスでスキャンします。';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'すべてのファイルへのアクセス';
       case 'onboarding_reopen':
         return 'はじめにガイド';
       case 'onboarding_review_anki_desc':
@@ -502788,11 +502794,11 @@ extension on _StringsJa {
       case 'onboarding_sample_sentence_label':
         return '練習用の文';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'スキップ';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return '辞書、最初の本、カード作成はガイドで設定します。スキップしても、ホームのガイドカードや「設定 › システム」からいつでも再開できます。';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'はじめにガイドをスキップしますか？';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -502874,9 +502880,9 @@ extension on _StringsJa {
       case 'onboarding_step_pack_title':
         return 'おすすめパック';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android では一部の権限が初期状態でオフです。必要なものだけオンにしてください。あとからシステム設定でいつでも変更できます。';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'システム権限';
       case 'onboarding_title':
         return 'はじめに';
       case 'onboarding_welcome_body':
@@ -518087,11 +518093,11 @@ extension on _StringsKo {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return '몇 분 만에 사전을 설정하고, 첫 책을 가져오고, 첫 카드를 만들어 보세요.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return '다시 표시 안 함';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return '설정 계속하기';
       case 'home_panel_mode_auto':
         return '자동';
       case 'home_panel_mode_hidden':
@@ -521358,19 +521364,19 @@ extension on _StringsKo {
       case 'onboarding_pack_tutorial_start':
         return '검색 튜토리얼 시작';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return '허용됨';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return '다운로드 진행 상황, 새 챕터·에피소드, 업데이트 알림.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return '알림';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return '앱 밖의 플로팅 볼, 플로팅 사전, 플로팅 가사.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return '다른 앱 위에 표시';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return '로컬 동영상·만화·책 폴더를 실제 경로로 검색합니다.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return '모든 파일 액세스';
       case 'onboarding_reopen':
         return '시작 가이드';
       case 'onboarding_review_anki_desc':
@@ -521394,11 +521400,11 @@ extension on _StringsKo {
       case 'onboarding_sample_sentence_label':
         return '연습 문장';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return '건너뛰기';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return '사전, 첫 책, 카드 만들기는 가이드에서 설정합니다. 건너뛰어도 홈의 가이드 카드나 「설정 › 시스템」에서 언제든 다시 열 수 있습니다.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return '시작 가이드를 건너뛸까요?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -521480,9 +521486,9 @@ extension on _StringsKo {
       case 'onboarding_step_pack_title':
         return '추천 팩';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android는 이 중 일부를 기본적으로 꺼 둡니다. 필요한 것만 켜세요. 나중에 시스템 설정에서 언제든 바꿀 수 있습니다.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return '시스템 권한';
       case 'onboarding_title':
         return '시작하기';
       case 'onboarding_welcome_body':
@@ -536746,11 +536752,11 @@ extension on _StringsNl {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Stel woordenboeken in, importeer je eerste boek en maak je eerste kaart in een paar minuten.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Niet meer tonen';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Instellen hervatten';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -540052,19 +540058,19 @@ extension on _StringsNl {
       case 'onboarding_pack_tutorial_start':
         return 'Opzoektutorial starten';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Verleend';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Downloadvoortgang, nieuwe hoofdstukken en afleveringen en updatemeldingen.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Meldingen';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'De zwevende knop, het zwevende woordenboek en de zwevende songtekst buiten de app.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Weergeven boven andere apps';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Scant lokale video-, manga- en boekmappen via hun echte pad.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Toegang tot alle bestanden';
       case 'onboarding_reopen':
         return 'Aan-de-slaggids';
       case 'onboarding_review_anki_desc':
@@ -540088,11 +540094,11 @@ extension on _StringsNl {
       case 'onboarding_sample_sentence_label':
         return 'Oefenzin';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Overslaan';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'In de gids stel je woordenboeken, je eerste boek en het maken van kaarten in. Je kunt hem altijd opnieuw openen via de kaart op het startscherm of via Instellingen › Systeem.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Introductiegids overslaan?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -540174,9 +540180,9 @@ extension on _StringsNl {
       case 'onboarding_step_pack_title':
         return 'Aanbevolen pakket';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android zet sommige hiervan standaard uit. Zet alleen aan wat je nodig hebt; je kunt ze later wijzigen in de systeeminstellingen.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Systeemmachtigingen';
       case 'onboarding_title':
         return 'Aan de slag';
       case 'onboarding_welcome_body':
@@ -555478,11 +555484,11 @@ extension on _StringsPtBr {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Configure dicionários, importe seu primeiro livro e crie seu primeiro cartão em poucos minutos.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Não mostrar novamente';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Continuar a configuração';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -558780,19 +558786,19 @@ extension on _StringsPtBr {
       case 'onboarding_pack_tutorial_start':
         return 'Iniciar tutorial de consulta';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Concedida';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Progresso de downloads, novos capítulos e episódios e avisos de atualização.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Notificações';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'A bolha flutuante, o dicionário flutuante e a letra flutuante fora do app.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Sobrepor a outros apps';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Verifica pastas locais de vídeo, mangá e livros pelo caminho real.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Acesso a todos os arquivos';
       case 'onboarding_reopen':
         return 'Guia de primeiros passos';
       case 'onboarding_review_anki_desc':
@@ -558816,11 +558822,11 @@ extension on _StringsPtBr {
       case 'onboarding_sample_sentence_label':
         return 'Frase de prática';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Pular';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'O guia configura os dicionários, seu primeiro livro e a criação de cartões. Você pode reabri-lo a qualquer momento pelo cartão da tela inicial ou em Configurações › Sistema.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Pular o guia de introdução?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -558902,9 +558908,9 @@ extension on _StringsPtBr {
       case 'onboarding_step_pack_title':
         return 'Pacote recomendado';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'O Android deixa algumas delas desativadas por padrão. Ative só o que precisar; você pode alterá-las depois nas configurações do sistema.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Permissões do sistema';
       case 'onboarding_title':
         return 'Primeiros passos';
       case 'onboarding_welcome_body':
@@ -574210,11 +574216,11 @@ extension on _StringsRu {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'За несколько минут настройте словари, импортируйте первую книгу и создайте первую карточку.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Больше не показывать';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Продолжить настройку';
       case 'home_panel_mode_auto':
         return 'Авто';
       case 'home_panel_mode_hidden':
@@ -577512,19 +577518,19 @@ extension on _StringsRu {
       case 'onboarding_pack_tutorial_start':
         return 'Начать обучение поиску';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Предоставлено';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Ход загрузок, новые главы и серии, напоминания об обновлениях.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Уведомления';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'Плавающая кнопка, плавающий словарь и плавающий текст песен вне приложения.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Поверх других приложений';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Сканирование локальных папок с видео, мангой и книгами по реальному пути.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Доступ ко всем файлам';
       case 'onboarding_reopen':
         return 'Руководство по началу работы';
       case 'onboarding_review_anki_desc':
@@ -577548,11 +577554,11 @@ extension on _StringsRu {
       case 'onboarding_sample_sentence_label':
         return 'Тренировочное предложение';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Пропустить';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'В руководстве настраиваются словари, первая книга и создание карточек. Его можно в любой момент открыть снова с карточки на главной или в разделе Настройки › Система.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Пропустить вводное руководство?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -577634,9 +577640,9 @@ extension on _StringsRu {
       case 'onboarding_step_pack_title':
         return 'Рекомендуемый набор';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android по умолчанию отключает некоторые из них. Включите только нужные; позже их можно изменить в настройках системы.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Системные разрешения';
       case 'onboarding_title':
         return 'Начало работы';
       case 'onboarding_welcome_body':
@@ -592916,11 +592922,11 @@ extension on _StringsTh {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'ตั้งค่าพจนานุกรม นำเข้าหนังสือเล่มแรก และสร้างการ์ดใบแรกได้ในไม่กี่นาที';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'ไม่ต้องแสดงอีก';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'ตั้งค่าต่อ';
       case 'home_panel_mode_auto':
         return 'อัตโนมัติ';
       case 'home_panel_mode_hidden':
@@ -596206,19 +596212,19 @@ extension on _StringsTh {
       case 'onboarding_pack_tutorial_start':
         return 'เริ่มบทเรียนการค้นหา';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'อนุญาตแล้ว';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'ความคืบหน้าการดาวน์โหลด ตอนหรือบทใหม่ และการแจ้งเตือนอัปเดต';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'การแจ้งเตือน';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'ลูกบอลลอย พจนานุกรมลอย และเนื้อเพลงลอยนอกแอป';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'แสดงทับแอปอื่น';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'สแกนโฟลเดอร์วิดีโอ มังงะ และหนังสือในเครื่องตามพาธจริง';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'สิทธิ์เข้าถึงไฟล์ทั้งหมด';
       case 'onboarding_reopen':
         return 'คู่มือเริ่มต้นใช้งาน';
       case 'onboarding_review_anki_desc':
@@ -596242,11 +596248,11 @@ extension on _StringsTh {
       case 'onboarding_sample_sentence_label':
         return 'ประโยคฝึก';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'ข้าม';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'คู่มือจะช่วยตั้งค่าพจนานุกรม หนังสือเล่มแรก และการสร้างการ์ด หากข้ามไป คุณเปิดใหม่ได้ทุกเมื่อจากการ์ดในหน้าแรกหรือที่ การตั้งค่า › ระบบ';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'ข้ามคู่มือเริ่มต้นใช้งานหรือไม่';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -596328,9 +596334,9 @@ extension on _StringsTh {
       case 'onboarding_step_pack_title':
         return 'แพ็กแนะนำ';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android ปิดสิทธิ์บางรายการไว้เป็นค่าเริ่มต้น เปิดเฉพาะที่ต้องใช้ และเปลี่ยนภายหลังได้ในการตั้งค่าระบบ';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'สิทธิ์ของระบบ';
       case 'onboarding_title':
         return 'เริ่มต้นใช้งาน';
       case 'onboarding_welcome_body':
@@ -611620,11 +611626,11 @@ extension on _StringsTr {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Birkaç dakikada sözlükleri ayarlayın, ilk kitabınızı içe aktarın ve ilk kartınızı oluşturun.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Bir daha gösterme';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Kuruluma devam et';
       case 'home_panel_mode_auto':
         return 'Otomatik';
       case 'home_panel_mode_hidden':
@@ -614916,19 +614922,19 @@ extension on _StringsTr {
       case 'onboarding_pack_tutorial_start':
         return 'Arama eğitimini başlat';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'İzin verildi';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'İndirme ilerlemesi, yeni bölümler ve güncelleme hatırlatmaları.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Bildirimler';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'Uygulama dışında yüzen düğme, yüzen sözlük ve yüzen şarkı sözleri.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Diğer uygulamaların üzerinde göster';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Yerel video, manga ve kitap klasörlerini gerçek yollarıyla tarar.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Tüm dosyalara erişim';
       case 'onboarding_reopen':
         return 'Başlangıç rehberi';
       case 'onboarding_review_anki_desc':
@@ -614952,11 +614958,11 @@ extension on _StringsTr {
       case 'onboarding_sample_sentence_label':
         return 'Alıştırma cümlesi';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Atla';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'Rehber sözlükleri, ilk kitabınızı ve kart oluşturmayı ayarlar. İstediğiniz zaman ana sayfadaki rehber kartından veya Ayarlar › Sistem bölümünden yeniden açabilirsiniz.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Başlangıç rehberi atlansın mı?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -615038,9 +615044,9 @@ extension on _StringsTr {
       case 'onboarding_step_pack_title':
         return 'Önerilen paket';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android bunların bazılarını varsayılan olarak kapalı tutar. Yalnızca ihtiyacınız olanları açın; daha sonra sistem ayarlarından değiştirebilirsiniz.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Sistem izinleri';
       case 'onboarding_title':
         return 'Başlangıç';
       case 'onboarding_welcome_body':
@@ -630329,11 +630335,11 @@ extension on _StringsVi {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return 'Thiết lập từ điển, nhập cuốn sách đầu tiên và tạo thẻ đầu tiên chỉ trong vài phút.';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return 'Không hiển thị lại';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return 'Tiếp tục thiết lập';
       case 'home_panel_mode_auto':
         return 'Tự động';
       case 'home_panel_mode_hidden':
@@ -633619,19 +633625,19 @@ extension on _StringsVi {
       case 'onboarding_pack_tutorial_start':
         return 'Bắt đầu hướng dẫn tra từ';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return 'Đã cấp';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return 'Tiến độ tải xuống, chương và tập mới, nhắc nhở cập nhật.';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return 'Thông báo';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return 'Bong bóng nổi, từ điển nổi và lời bài hát nổi bên ngoài ứng dụng.';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return 'Hiển thị trên ứng dụng khác';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return 'Quét các thư mục video, manga và sách trên máy theo đường dẫn thật.';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return 'Quyền truy cập mọi tệp';
       case 'onboarding_reopen':
         return 'Hướng dẫn bắt đầu';
       case 'onboarding_review_anki_desc':
@@ -633655,11 +633661,11 @@ extension on _StringsVi {
       case 'onboarding_sample_sentence_label':
         return 'Câu luyện tập';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return 'Bỏ qua';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return 'Hướng dẫn giúp thiết lập từ điển, cuốn sách đầu tiên và việc tạo thẻ. Bạn có thể mở lại bất cứ lúc nào từ thẻ trên trang chủ hoặc trong Cài đặt › Hệ thống.';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return 'Bỏ qua hướng dẫn bắt đầu?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -633741,9 +633747,9 @@ extension on _StringsVi {
       case 'onboarding_step_pack_title':
         return 'Gói khuyến nghị';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android tắt sẵn một số quyền này. Chỉ bật những gì bạn cần; bạn có thể thay đổi sau trong cài đặt hệ thống.';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return 'Quyền hệ thống';
       case 'onboarding_title':
         return 'Bắt đầu';
       case 'onboarding_welcome_body':
@@ -667425,11 +667431,11 @@ extension on _StringsZhHk {
       case 'home_nav_rail_expand':
         return 'Expand navigation';
       case 'home_onboarding_card_desc':
-        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+        return '幾分鐘設定好詞典、匯入第一本書、做出第一張卡片。';
       case 'home_onboarding_card_dismiss':
-        return 'Don\'t show again';
+        return '不再顯示';
       case 'home_onboarding_card_start':
-        return 'Continue setup';
+        return '繼續新手引導';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -670688,19 +670694,19 @@ extension on _StringsZhHk {
       case 'onboarding_pack_tutorial_start':
         return '開始查詞教程';
       case 'onboarding_permission_granted':
-        return 'Granted';
+        return '已開啟';
       case 'onboarding_permission_notifications_desc':
-        return 'Download progress, new chapters and episodes, and update reminders.';
+        return '下載進度、新章節新劇集與更新提醒。';
       case 'onboarding_permission_notifications_label':
-        return 'Notifications';
+        return '通知';
       case 'onboarding_permission_overlay_desc':
-        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+        return '應用程式外的懸浮球、懸浮詞典和懸浮歌詞。';
       case 'onboarding_permission_overlay_label':
-        return 'Display over other apps';
+        return '懸浮視窗';
       case 'onboarding_permission_storage_desc':
-        return 'Scan local video, manga and book folders by their real paths.';
+        return '按真實路徑掃描本機的影片、漫畫和書籍資料夾。';
       case 'onboarding_permission_storage_label':
-        return 'All files access';
+        return '所有檔案存取權';
       case 'onboarding_reopen':
         return '新手引導';
       case 'onboarding_review_anki_desc':
@@ -670724,11 +670730,11 @@ extension on _StringsZhHk {
       case 'onboarding_sample_sentence_label':
         return '練習句子';
       case 'onboarding_skip_confirm_action':
-        return 'Skip';
+        return '略過';
       case 'onboarding_skip_confirm_desc':
-        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+        return '詞典、第一本書和製卡都在引導裏設定。略過後可以隨時從首頁的引導卡片或「設定 › 系統」重新開啟。';
       case 'onboarding_skip_confirm_title':
-        return 'Skip the getting started guide?';
+        return '確定略過新手引導？';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -670810,9 +670816,9 @@ extension on _StringsZhHk {
       case 'onboarding_step_pack_title':
         return '推薦包';
       case 'onboarding_step_permissions_body':
-        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+        return 'Android 預設關閉其中幾項。按需開啟即可，之後也可以在系統設定裏隨時更改。';
       case 'onboarding_step_permissions_title':
-        return 'System permissions';
+        return '系統權限';
       case 'onboarding_title':
         return '新手引導';
       case 'onboarding_welcome_body':
