@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152031 (8943 per locale)
+/// Strings: 152048 (8944 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -842,8 +842,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_duplicate_scope_deck_root => 'Root deck (all subdecks)';
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   String get anki_error_ankimobile_no_decks =>
@@ -12193,6 +12191,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_grouping_series => 'By work';
   String get video_source_grouping_series_hint =>
       'Recognize works and episodes from filenames, then match metadata.';
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   String get video_source_scrape_action => 'Scrape this source';
   String get video_source_scrape_ai_identify => 'Identify with AI';
   String video_source_scrape_ai_suggested({required Object percent}) =>
@@ -14049,9 +14051,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'أي الرزم يتم البحث فيها عند التحقق من وجود بطاقة مسبقاً. لـ AnkiConnect فقط؛ AnkiDroid يبحث دائماً في المجموعة بأكملها.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid غير مثبّت (أو أن واجهته البرمجية معطّلة)، لذا لا يمكن منح الوصول إلى البطاقات. ثبّت AnkiDroid وفعّل واجهته البرمجية، أو بدّل إلى AnkiConnect.';
@@ -33412,6 +33411,12 @@ class _StringsAr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'جلب بيانات هذا المصدر';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -35772,9 +35777,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Welche Decks durchsucht werden, um zu prüfen, ob eine Karte bereits existiert. Nur AnkiConnect; AnkiDroid durchsucht immer die gesamte Sammlung.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid ist nicht installiert (oder seine API ist deaktiviert), daher kann der Kartenzugriff nicht gewährt werden. Installiere AnkiDroid und aktiviere die API oder wechsle zu AnkiConnect.';
@@ -55488,6 +55490,12 @@ class _StringsDe extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Diese Quelle abrufen';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -57873,9 +57881,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Qué mazos se buscan al verificar si una tarjeta ya existe. Solo AnkiConnect; AnkiDroid siempre busca en toda la colección.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid no está instalado (o su API está desactivada), por lo que no se puede conceder el acceso a las tarjetas. Instala AnkiDroid y activa su API, o cambia a AnkiConnect.';
@@ -77638,6 +77643,12 @@ class _StringsEs extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Obtener metadatos de esta fuente';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -80032,9 +80043,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quels paquets sont recherchés pour vérifier si une carte existe déjà. AnkiConnect uniquement ; AnkiDroid recherche toujours dans toute la collection.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid n\'est pas installé (ou son API est désactivée) : l\'accès aux cartes ne peut donc pas être accordé. Installez AnkiDroid et activez son API, ou passez à AnkiConnect.';
@@ -99865,6 +99873,12 @@ class _StringsFr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Récupérer cette source';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -102263,9 +102277,6 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Dek mana yang dicari saat memeriksa apakah kartu sudah ada. Hanya AnkiConnect; AnkiDroid selalu mencari seluruh koleksi.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid tidak terpasang (atau API-nya dinonaktifkan), sehingga akses kartu tidak dapat diberikan. Pasang AnkiDroid dan aktifkan API-nya, atau beralih ke AnkiConnect.';
@@ -121785,6 +121796,12 @@ class _StringsId extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Scrape sumber ini';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -124161,9 +124178,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quali mazzi vengono cercati per verificare se una carta esiste già. Solo AnkiConnect; AnkiDroid cerca sempre nell\'intera collezione.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid non è installato (o la sua API è disattivata), quindi non è possibile concedere l\'accesso alle carte. Installa AnkiDroid e attiva la sua API, oppure passa ad AnkiConnect.';
@@ -143831,6 +143845,12 @@ class _StringsIt extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Scrape questa fonte';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -146165,9 +146185,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'カードが既に存在するかチェックする際に検索するデッキの範囲。AnkiConnect のみ。AnkiDroid は常にコレクション全体を検索します。';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid がインストールされていない（または API が無効）ため、カードへのアクセスを許可できません。AnkiDroid をインストールして API を有効にするか、AnkiConnect に切り替えてください。';
@@ -164928,6 +164945,12 @@ class _StringsJa extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'このソースをスクレイプ';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -167182,9 +167205,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '카드가 이미 존재하는지 확인할 때 검색할 덱. AnkiConnect 전용; AnkiDroid는 항상 전체 컬렉션을 검색합니다.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid가 설치되어 있지 않거나 API가 비활성화되어 있어 카드 접근 권한을 부여할 수 없습니다. AnkiDroid를 설치하고 API를 활성화하거나 AnkiConnect로 전환하세요.';
@@ -185993,6 +186013,12 @@ class _StringsKo extends _StringsEn {
   String get video_source_grouping_series_hint =>
       '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => '이 소스 스크래핑';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -188321,9 +188347,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Welke dekken worden doorzocht bij het controleren of een kaart al bestaat. Alleen AnkiConnect; AnkiDroid doorzoekt altijd de gehele collectie.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid is niet geïnstalleerd (of de API is uitgeschakeld), dus er kan geen toegang tot kaarten worden verleend. Installeer AnkiDroid en schakel de API in, of schakel over naar AnkiConnect.';
@@ -207943,6 +207966,12 @@ class _StringsNl extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Deze bron scrapen';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -210327,9 +210356,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quais baralhos são verificados ao checar se um cartão já existe. Apenas AnkiConnect; o AnkiDroid sempre busca na coleção inteira.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'O AnkiDroid não está instalado (ou sua API está desativada), então o acesso aos cartões não pôde ser concedido. Instale o AnkiDroid e ative a API dele, ou mude para o AnkiConnect.';
@@ -230010,6 +230036,12 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Buscar metadados desta fonte';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -232395,9 +232427,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'В каких колодах искать при проверке, существует ли карточка. Только для AnkiConnect; AnkiDroid всегда ищет по всей коллекции.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid не установлен (или его API отключён), поэтому доступ к карточкам не может быть предоставлен. Установите AnkiDroid и включите его API либо переключитесь на AnkiConnect.';
@@ -252027,6 +252056,12 @@ class _StringsRu extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action =>
       'Получить метаданные для этого источника';
   @override
@@ -254401,9 +254436,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'กำหนดว่าจะค้นหาสำรับใดเมื่อตรวจสอบว่าบัตรมีอยู่แล้วหรือไม่ เฉพาะ AnkiConnect เท่านั้น; AnkiDroid จะค้นหาทั้งคอลเลกชันเสมอ';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'ไม่ได้ติดตั้ง AnkiDroid (หรือ API ถูกปิดอยู่) จึงให้สิทธิ์เข้าถึงการ์ดไม่ได้ ติดตั้ง AnkiDroid และเปิดใช้ API หรือเปลี่ยนไปใช้ AnkiConnect';
@@ -273747,6 +273779,12 @@ class _StringsTh extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'ดึงข้อมูลแหล่งนี้';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -276111,9 +276149,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Bir kartın zaten var olup olmadığı kontrol edilirken hangi destelerin arandığını belirler. Yalnızca AnkiConnect; AnkiDroid her zaman tüm koleksiyonu arar.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid yüklü değil (ya da API\'si devre dışı), bu yüzden kart erişimi verilemiyor. AnkiDroid\'i yükleyip API\'sini etkinleştirin veya AnkiConnect\'e geçin.';
@@ -295639,6 +295674,12 @@ class _StringsTr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Bu kaynağı tara';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -298007,9 +298048,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Những bộ thẻ nào được tìm kiếm khi kiểm tra thẻ đã tồn tại. Chỉ AnkiConnect; AnkiDroid luôn tìm trong toàn bộ bộ sưu tập.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid chưa được cài đặt (hoặc API của nó đã bị tắt) nên không thể cấp quyền truy cập thẻ. Hãy cài AnkiDroid và bật API, hoặc chuyển sang AnkiConnect.';
@@ -317472,6 +317510,12 @@ class _StringsVi extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Quét nguồn này';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -319737,9 +319781,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '查询「这个词是否已经有卡」时搜索哪些卡组。仅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始终整库查重。';
-  @override
-  String get anki_error_all_fields_empty =>
-      '这张卡的所有字段都是空的，通常是所选笔记类型还没有配置字段映射。请在 Anki 设置里给它的字段配置映射。';
   @override
   String get anki_error_ankidroid_unavailable =>
       '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
@@ -337532,6 +337573,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_grouping_series_hint => '按文件名识别作品与分集，再匹配作品资料。';
   @override
+  String get video_source_restore_grouping_action => '恢复自动分组';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      '你解散过的系列会按文件名重新归组，和首次扫描的分组方式一样。你自己建的合集不受影响。';
+  @override
   String get video_source_scrape_action => '刮削此来源';
   @override
   String get video_source_scrape_ai_identify => 'AI 识别';
@@ -339687,9 +339733,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '查詢「這個詞是否已經有卡」時搜索哪些卡組。僅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始終整庫查重。';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       '未安裝 AnkiDroid（或其 API 被停用），無法授予卡片訪問權限。請安裝 AnkiDroid 並啟用其 API，或改用 AnkiConnect。';
@@ -357944,6 +357987,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_grouping_series_hint => '從檔案名稱識別作品及集數，再配對中繼資料。';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => '刮削此來源';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -360004,8 +360053,6 @@ extension on _StringsEn {
         return 'Root deck (all subdecks)';
       case 'anki_duplicate_scope_hint':
         return 'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -376645,6 +376692,10 @@ extension on _StringsEn {
         return 'By work';
       case 'video_source_grouping_series_hint':
         return 'Recognize works and episodes from filenames, then match metadata.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape this source';
       case 'video_source_scrape_ai_identify':
@@ -378593,8 +378644,6 @@ extension on _StringsAr {
         return 'الرزمة الجذرية (جميع الفرعية)';
       case 'anki_duplicate_scope_hint':
         return 'أي الرزم يتم البحث فيها عند التحقق من وجود بطاقة مسبقاً. لـ AnkiConnect فقط؛ AnkiDroid يبحث دائماً في المجموعة بأكملها.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid غير مثبّت (أو أن واجهته البرمجية معطّلة)، لذا لا يمكن منح الوصول إلى البطاقات. ثبّت AnkiDroid وفعّل واجهته البرمجية، أو بدّل إلى AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -395228,6 +395277,10 @@ extension on _StringsAr {
         return 'حسب العمل';
       case 'video_source_grouping_series_hint':
         return 'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'جلب بيانات هذا المصدر';
       case 'video_source_scrape_ai_identify':
@@ -397181,8 +397234,6 @@ extension on _StringsDe {
         return 'Stammdeck (alle Unterdecks)';
       case 'anki_duplicate_scope_hint':
         return 'Welche Decks durchsucht werden, um zu prüfen, ob eine Karte bereits existiert. Nur AnkiConnect; AnkiDroid durchsucht immer die gesamte Sammlung.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid ist nicht installiert (oder seine API ist deaktiviert), daher kann der Kartenzugriff nicht gewährt werden. Installiere AnkiDroid und aktiviere die API oder wechsle zu AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -413886,6 +413937,10 @@ extension on _StringsDe {
         return 'Nach Werk';
       case 'video_source_grouping_series_hint':
         return 'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Diese Quelle abrufen';
       case 'video_source_scrape_ai_identify':
@@ -415839,8 +415894,6 @@ extension on _StringsEs {
         return 'Mazo raíz (todos los submazos)';
       case 'anki_duplicate_scope_hint':
         return 'Qué mazos se buscan al verificar si una tarjeta ya existe. Solo AnkiConnect; AnkiDroid siempre busca en toda la colección.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid no está instalado (o su API está desactivada), por lo que no se puede conceder el acceso a las tarjetas. Instala AnkiDroid y activa su API, o cambia a AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -432529,6 +432582,10 @@ extension on _StringsEs {
         return 'Por obra';
       case 'video_source_grouping_series_hint':
         return 'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Obtener metadatos de esta fuente';
       case 'video_source_scrape_ai_identify':
@@ -434484,8 +434541,6 @@ extension on _StringsFr {
         return 'Paquet racine (tous les sous-paquets)';
       case 'anki_duplicate_scope_hint':
         return 'Quels paquets sont recherchés pour vérifier si une carte existe déjà. AnkiConnect uniquement ; AnkiDroid recherche toujours dans toute la collection.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid n\'est pas installé (ou son API est désactivée) : l\'accès aux cartes ne peut donc pas être accordé. Installez AnkiDroid et activez son API, ou passez à AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -451189,6 +451244,10 @@ extension on _StringsFr {
         return 'Par œuvre';
       case 'video_source_grouping_series_hint':
         return 'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Récupérer cette source';
       case 'video_source_scrape_ai_identify':
@@ -453141,8 +453200,6 @@ extension on _StringsId {
         return 'Dek utama (semua sub-dek)';
       case 'anki_duplicate_scope_hint':
         return 'Dek mana yang dicari saat memeriksa apakah kartu sudah ada. Hanya AnkiConnect; AnkiDroid selalu mencari seluruh koleksi.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid tidak terpasang (atau API-nya dinonaktifkan), sehingga akses kartu tidak dapat diberikan. Pasang AnkiDroid dan aktifkan API-nya, atau beralih ke AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -469794,6 +469851,10 @@ extension on _StringsId {
         return 'Berdasarkan karya';
       case 'video_source_grouping_series_hint':
         return 'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape sumber ini';
       case 'video_source_scrape_ai_identify':
@@ -471746,8 +471807,6 @@ extension on _StringsIt {
         return 'Mazzo radice (tutti i sottogruppi)';
       case 'anki_duplicate_scope_hint':
         return 'Quali mazzi vengono cercati per verificare se una carta esiste già. Solo AnkiConnect; AnkiDroid cerca sempre nell\'intera collezione.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid non è installato (o la sua API è disattivata), quindi non è possibile concedere l\'accesso alle carte. Installa AnkiDroid e attiva la sua API, oppure passa ad AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -488432,6 +488491,10 @@ extension on _StringsIt {
         return 'Per opera';
       case 'video_source_grouping_series_hint':
         return 'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape questa fonte';
       case 'video_source_scrape_ai_identify':
@@ -490377,8 +490440,6 @@ extension on _StringsJa {
         return 'ルートデッキ（すべてのサブデッキ）';
       case 'anki_duplicate_scope_hint':
         return 'カードが既に存在するかチェックする際に検索するデッキの範囲。AnkiConnect のみ。AnkiDroid は常にコレクション全体を検索します。';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid がインストールされていない（または API が無効）ため、カードへのアクセスを許可できません。AnkiDroid をインストールして API を有効にするか、AnkiConnect に切り替えてください。';
       case 'anki_error_ankimobile_no_decks':
@@ -506952,6 +507013,10 @@ extension on _StringsJa {
         return '作品別';
       case 'video_source_grouping_series_hint':
         return 'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'このソースをスクレイプ';
       case 'video_source_scrape_ai_identify':
@@ -508881,8 +508946,6 @@ extension on _StringsKo {
         return '최상위 덱 (모든 하위 덱)';
       case 'anki_duplicate_scope_hint':
         return '카드가 이미 존재하는지 확인할 때 검색할 덱. AnkiConnect 전용; AnkiDroid는 항상 전체 컬렉션을 검색합니다.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid가 설치되어 있지 않거나 API가 비활성화되어 있어 카드 접근 권한을 부여할 수 없습니다. AnkiDroid를 설치하고 API를 활성화하거나 AnkiConnect로 전환하세요.';
       case 'anki_error_ankimobile_no_decks':
@@ -525467,6 +525530,10 @@ extension on _StringsKo {
         return '작품별';
       case 'video_source_grouping_series_hint':
         return '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return '이 소스 스크래핑';
       case 'video_source_scrape_ai_identify':
@@ -527413,8 +527480,6 @@ extension on _StringsNl {
         return 'Hoofddeck (alle subdekken)';
       case 'anki_duplicate_scope_hint':
         return 'Welke dekken worden doorzocht bij het controleren of een kaart al bestaat. Alleen AnkiConnect; AnkiDroid doorzoekt altijd de gehele collectie.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid is niet geïnstalleerd (of de API is uitgeschakeld), dus er kan geen toegang tot kaarten worden verleend. Installeer AnkiDroid en schakel de API in, of schakel over naar AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -544093,6 +544158,10 @@ extension on _StringsNl {
         return 'Op werk';
       case 'video_source_grouping_series_hint':
         return 'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Deze bron scrapen';
       case 'video_source_scrape_ai_identify':
@@ -546047,8 +546116,6 @@ extension on _StringsPtBr {
         return 'Baralho raiz (todos os sub-baralhos)';
       case 'anki_duplicate_scope_hint':
         return 'Quais baralhos são verificados ao checar se um cartão já existe. Apenas AnkiConnect; o AnkiDroid sempre busca na coleção inteira.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'O AnkiDroid não está instalado (ou sua API está desativada), então o acesso aos cartões não pôde ser concedido. Instale o AnkiDroid e ative a API dele, ou mude para o AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -562721,6 +562788,10 @@ extension on _StringsPtBr {
         return 'Por obra';
       case 'video_source_grouping_series_hint':
         return 'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Buscar metadados desta fonte';
       case 'video_source_scrape_ai_identify':
@@ -564673,8 +564744,6 @@ extension on _StringsRu {
         return 'Корневая колода (все подколоды)';
       case 'anki_duplicate_scope_hint':
         return 'В каких колодах искать при проверке, существует ли карточка. Только для AnkiConnect; AnkiDroid всегда ищет по всей коллекции.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid не установлен (или его API отключён), поэтому доступ к карточкам не может быть предоставлен. Установите AnkiDroid и включите его API либо переключитесь на AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -581354,6 +581423,10 @@ extension on _StringsRu {
         return 'По произведениям';
       case 'video_source_grouping_series_hint':
         return 'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Получить метаданные для этого источника';
       case 'video_source_scrape_ai_identify':
@@ -583302,8 +583375,6 @@ extension on _StringsTh {
         return 'สำรับหลัก (ทุกสำรับย่อย)';
       case 'anki_duplicate_scope_hint':
         return 'กำหนดว่าจะค้นหาสำรับใดเมื่อตรวจสอบว่าบัตรมีอยู่แล้วหรือไม่ เฉพาะ AnkiConnect เท่านั้น; AnkiDroid จะค้นหาทั้งคอลเลกชันเสมอ';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'ไม่ได้ติดตั้ง AnkiDroid (หรือ API ถูกปิดอยู่) จึงให้สิทธิ์เข้าถึงการ์ดไม่ได้ ติดตั้ง AnkiDroid และเปิดใช้ API หรือเปลี่ยนไปใช้ AnkiConnect';
       case 'anki_error_ankimobile_no_decks':
@@ -599943,6 +600014,10 @@ extension on _StringsTh {
         return 'ตามผลงาน';
       case 'video_source_grouping_series_hint':
         return 'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'ดึงข้อมูลแหล่งนี้';
       case 'video_source_scrape_ai_identify':
@@ -601894,8 +601969,6 @@ extension on _StringsTr {
         return 'Kök deste (tüm alt desteler)';
       case 'anki_duplicate_scope_hint':
         return 'Bir kartın zaten var olup olmadığı kontrol edilirken hangi destelerin arandığını belirler. Yalnızca AnkiConnect; AnkiDroid her zaman tüm koleksiyonu arar.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid yüklü değil (ya da API\'si devre dışı), bu yüzden kart erişimi verilemiyor. AnkiDroid\'i yükleyip API\'sini etkinleştirin veya AnkiConnect\'e geçin.';
       case 'anki_error_ankimobile_no_decks':
@@ -618561,6 +618634,10 @@ extension on _StringsTr {
         return 'Esere göre';
       case 'video_source_grouping_series_hint':
         return 'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Bu kaynağı tara';
       case 'video_source_scrape_ai_identify':
@@ -620512,8 +620589,6 @@ extension on _StringsVi {
         return 'Bộ thẻ gốc (tất cả bộ con)';
       case 'anki_duplicate_scope_hint':
         return 'Những bộ thẻ nào được tìm kiếm khi kiểm tra thẻ đã tồn tại. Chỉ AnkiConnect; AnkiDroid luôn tìm trong toàn bộ bộ sưu tập.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid chưa được cài đặt (hoặc API của nó đã bị tắt) nên không thể cấp quyền truy cập thẻ. Hãy cài AnkiDroid và bật API, hoặc chuyển sang AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -637165,6 +637240,10 @@ extension on _StringsVi {
         return 'Theo tác phẩm';
       case 'video_source_grouping_series_hint':
         return 'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Quét nguồn này';
       case 'video_source_scrape_ai_identify':
@@ -639088,8 +639167,6 @@ extension on _StringsZhCn {
         return '根卡组（含全部子卡组）';
       case 'anki_duplicate_scope_hint':
         return '查询「这个词是否已经有卡」时搜索哪些卡组。仅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始终整库查重。';
-      case 'anki_error_all_fields_empty':
-        return '这张卡的所有字段都是空的，通常是所选笔记类型还没有配置字段映射。请在 Anki 设置里给它的字段配置映射。';
       case 'anki_error_ankidroid_unavailable':
         return '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
       case 'anki_error_ankimobile_no_decks':
@@ -655561,6 +655638,10 @@ extension on _StringsZhCn {
         return '按作品';
       case 'video_source_grouping_series_hint':
         return '按文件名识别作品与分集，再匹配作品资料。';
+      case 'video_source_restore_grouping_action':
+        return '恢复自动分组';
+      case 'video_source_restore_grouping_confirm':
+        return '你解散过的系列会按文件名重新归组，和首次扫描的分组方式一样。你自己建的合集不受影响。';
       case 'video_source_scrape_action':
         return '刮削此来源';
       case 'video_source_scrape_ai_identify':
@@ -657459,8 +657540,6 @@ extension on _StringsZhHk {
         return '根卡組（含全部子卡組）';
       case 'anki_duplicate_scope_hint':
         return '查詢「這個詞是否已經有卡」時搜索哪些卡組。僅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始終整庫查重。';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return '未安裝 AnkiDroid（或其 API 被停用），無法授予卡片訪問權限。請安裝 AnkiDroid 並啟用其 API，或改用 AnkiConnect。';
       case 'anki_error_ankimobile_no_decks':
@@ -673997,6 +674076,10 @@ extension on _StringsZhHk {
         return '按作品';
       case 'video_source_grouping_series_hint':
         return '從檔案名稱識別作品及集數，再配對中繼資料。';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return '刮削此來源';
       case 'video_source_scrape_ai_identify':
