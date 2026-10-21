@@ -204,7 +204,7 @@ Future<AppModel> _prefsBackedAppModel(
   final PreferencesRepository prefsRepo = PreferencesRepository(db);
   await prefsRepo.loadFromDb();
   final Directory tempDir = Directory.systemTemp.createTempSync(
-    'hibiki_settings_renderer_',
+    'fushi_settings_renderer_',
   );
   addTearDown(() async {
     if (tempDir.existsSync()) tempDir.deleteSync(recursive: true);
@@ -637,8 +637,8 @@ void main() {
     final AppModel appModel = await _prefsBackedAppModel(
       db,
       packageInfo: PackageInfo(
-        appName: 'Hibiki',
-        packageName: 'jp.hibiki.test',
+        appName: 'Fushi',
+        packageName: 'jp.fushi.test',
         version: '9.8.7',
         buildNumber: '654',
       ),
@@ -804,7 +804,7 @@ void main() {
     },
   );
 
-  testWidgets('lookup settings can edit the Yomitan API key', (
+  testWidgets('local services settings can edit the Fushi API key', (
     WidgetTester tester,
   ) async {
     final FushiDatabase db = _testDb();
@@ -820,14 +820,14 @@ void main() {
         database: db,
         appModel: appModel,
         builder: (SettingsContext settingsContext) {
-          final SettingsDestination lookup =
+          final SettingsDestination localServices =
               buildSettingsSchema(settingsContext).firstWhere(
                 (SettingsDestination destination) =>
-                    destination.id == SettingsDestinationId.lookup,
+                    destination.id == SettingsDestinationId.localServices,
               );
           return MaterialSettingsRenderer().buildDetailPage(
             settingsContext: settingsContext,
-            destination: lookup,
+            destination: localServices,
           );
         },
       ),
@@ -1512,8 +1512,8 @@ class _RendererTestAppModel extends AppModel {
 
   @override
   PackageInfo get packageInfo => PackageInfo(
-    appName: 'Hibiki',
-    packageName: 'jp.hibiki.test',
+    appName: 'Fushi',
+    packageName: 'jp.fushi.test',
     version: '1.0.0',
     buildNumber: '1',
   );

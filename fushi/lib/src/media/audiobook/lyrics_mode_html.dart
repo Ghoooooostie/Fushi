@@ -10,6 +10,7 @@ import 'package:fushi/src/media/audiobook/lyrics_player/lyrics_player_contract.d
 import 'package:fushi/src/models/cjk_font_families.dart' show CjkFontStyle;
 import 'package:fushi/src/models/content_font_chain.dart';
 import 'package:fushi/src/reader/reader_selection_scripts.dart';
+import 'package:fushi/src/reader/reader_vertical_punctuation_font.dart';
 
 class LyricsModeHtml {
   LyricsModeHtml._();
@@ -69,7 +70,6 @@ class LyricsModeHtml {
       '--ly-self': theme.alignStart ? 'stretch' : 'auto',
       '--ly-ctx-blur': '${theme.contextBlurPx.toStringAsFixed(1)}px',
       '--ly-radius': '${theme.rowRadius.toStringAsFixed(1)}px',
-      '--ly-hover': _css(theme.hoverFill),
       '--ly-pill-bg': _css(current.withValues(alpha: 0.16)),
       '--ly-pill-fg': _css(current),
       '--ly-past-k': theme.pastOpacityFactor.clamp(0.0, 1.0).toStringAsFixed(3),
@@ -136,6 +136,7 @@ class LyricsModeHtml {
     String? contentLanguage,
     String verticalTextOrientation = 'mixed',
     TargetPlatform? platform,
+    bool showSkippedText = true,
   }) {
     // 覆盖层主题：内联进 :root 与 body class，首帧即是最终观感（不等热更）。
     // 无主题（旧调用 / 单测）时变量全部缺省，CSS 的 var() 回落值与改动前逐值相同。
@@ -158,6 +159,23 @@ class LyricsModeHtml {
         ? null
         : LyricsCueTextResolver(book);
     for (int i = 0; i < cues.length; i++) {
+      // 跳读灰显：上一条与这一条之间没被任何 cue 认领的正文，作为一行灰色小字
+      // 夹在两行之间。它不是 `.cue`——不进当前句高亮 / 逐字扫过、不计时、点按不
+      // 跳播放、不进收藏 / 焦点 caret / 字号适配（JS 全部按 `.cue` 取行）。
+      // 透明度跟着相邻两行里离当前句近的那行走（`near-N`，setCue 同步改）。
+      final LyricsCueText? skipped = i == 0 || textResolver == null
+          ? null
+          : textResolver.skippedTextBetween(cues[i - 1], cues[i]);
+      if (skipped != null) {
+        final int gapDist = i - 1 >= currentIndex
+            ? i - 1 - currentIndex + 1
+            : currentIndex - i + 1;
+        final String gapCls = gapDist <= 3 ? 'ly-gap near-$gapDist' : 'ly-gap';
+        cueHtml.write(
+          '<div class="$gapCls" data-after="${i - 1}">'
+          '<span class="ly-gap-tx">${_cueInnerHtml(skipped)}</span></div>\n',
+        );
+      }
       final LyricsCueText cueText =
           textResolver?.resolveForCue(cues[i]) ??
           LyricsCueText.plain(cues[i].text);
@@ -233,6 +251,15 @@ body.ly-themed .lyrics-container > .cue {
   padding: 14px 10px;
   margin: 0 2px;
 }
+.lyrics-container > .ly-gap {
+  max-width: none;
+  max-inline-size: calc(100% / var(--cue-scale) - 1%);
+  padding: 8px 2px;
+}
+/* 盖过横排的 body.ly-themed .ly-gap（0 14px）：竖排的行首在上，与歌词列同一行首缩进。 */
+body.ly-themed .lyrics-container > .ly-gap {
+  padding: 14px 2px;
+}
 .lyrics-container > .cue.favorited::before {
   right: auto;
   top: auto;
@@ -249,6 +276,7 @@ body.ly-themed .lyrics-container > .cue {
     // 维度与 writing-mode 正交——blur CSS 只作用在 cue 元素上，与轴/竖排无关。
     final List<String> bodyClasses = <String>[
       if (blur) 'lyrics-blur',
+      if (!showSkippedText) 'ly-hide-skipped',
       ...?themed?.bodyClasses,
       // 竖排标记只服务主题态的扫过 / 渐隐方向；旧观感不加 class（输出与改动前一致）。
       if (vertical && themed != null) 'ly-vertical',
@@ -279,9 +307,20 @@ body.ly-themed .lyrics-container > .cue {
       platform: platform ?? defaultTargetPlatform,
       themed: theme != null,
     );
-    final String bodyFontFamily = fontFamilyCss.isEmpty
+    final String chainFontFamily = fontFamilyCss.isEmpty
         ? lyricsFallbackFonts
         : '$fontFamilyCss, $lyricsFallbackFonts';
+    // BUG-3606：竖排与正文同一套标点子集与同一判据（链首 + unicode-range）。
+    final bool verticalPunctuation = ReaderVerticalPunctuationFont.appliesTo(
+      vertical: vertical,
+      contentLanguage: contentLanguage,
+    );
+    final String bodyFontFamily = verticalPunctuation
+        ? ReaderVerticalPunctuationFont.prependTo(chainFontFamily)
+        : chainFontFamily;
+    final String bodyFontFaceCss = verticalPunctuation
+        ? '${ReaderVerticalPunctuationFont.fontFace()}\n$fontFaceCss'
+        : fontFaceCss;
 
     return '''
 <!DOCTYPE html>
@@ -309,7 +348,7 @@ html, body {
   scrollbar-width: thin;
   scrollbar-color: $textColor transparent;
 }
-$fontFaceCss
+$bodyFontFaceCss
 body { font-family: $bodyFontFamily; }
 ::-webkit-scrollbar {
   width: 8px;
@@ -377,6 +416,46 @@ body { font-family: $bodyFontFamily; }
 .cue.near-1 { opacity: var(--ly-op1, 0.55); transform: scale(var(--ly-near1-scale, 1.05)); }
 .cue.near-2 { opacity: var(--ly-op2, 0.35); }
 .cue.near-3 { opacity: var(--ly-op3, 0.25); }
+/* 跳读灰显：两行之间没被任何 cue 认领的正文（朗读者跳过 / 转录没对上）。次要文本
+   色（--ly-text，覆盖层主题下即非当前行色）+ 小字号 + 比相邻行再淡一档；透明度
+   阶梯跟着 near-N 走，与相邻行同进退。不可点、不参与高亮 / 扫过。 */
+.ly-gap {
+  position: relative;
+  text-align: var(--ly-align, center);
+  color: var(--ly-text, $textColor);
+  align-self: var(--ly-self, auto);
+  font-size: calc(var(--cue-font-size) * 0.62);
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 2px 8px;
+  max-width: calc(100% / var(--cue-scale) - 1%);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  opacity: calc(var(--ly-op4, 0.15) * var(--ly-gap-k, 0.8));
+  transition: opacity 0.35s ease-out, filter 0.3s ease-out;
+  cursor: default;
+}
+.ly-gap.near-1 { opacity: calc(var(--ly-op1, 0.55) * var(--ly-gap-k, 0.8)); }
+.ly-gap.near-2 { opacity: calc(var(--ly-op2, 0.35) * var(--ly-gap-k, 0.8)); }
+.ly-gap.near-3 { opacity: calc(var(--ly-op3, 0.25) * var(--ly-gap-k, 0.8)); }
+body.ly-themed .ly-gap { padding: 0 14px; }
+body.ly-browsing .ly-gap { opacity: calc(var(--ly-op-browse, 0.6) * var(--ly-gap-k, 0.8)); }
+body.ly-past-dim:not(.ly-browsing) .ly-gap:not(.current ~ .ly-gap) {
+  opacity: calc(var(--ly-op4, 0.15) * var(--ly-gap-k, 0.8) * var(--ly-past-k, 1));
+}
+body.ly-past-dim:not(.ly-browsing) .ly-gap.near-1:not(.current ~ .ly-gap) {
+  opacity: calc(var(--ly-op1, 0.55) * var(--ly-gap-k, 0.8) * var(--ly-past-k, 1));
+}
+body.ly-past-dim:not(.ly-browsing) .ly-gap.near-2:not(.current ~ .ly-gap) {
+  opacity: calc(var(--ly-op2, 0.35) * var(--ly-gap-k, 0.8) * var(--ly-past-k, 1));
+}
+body.ly-past-dim:not(.ly-browsing) .ly-gap.near-3:not(.current ~ .ly-gap) {
+  opacity: calc(var(--ly-op3, 0.25) * var(--ly-gap-k, 0.8) * var(--ly-past-k, 1));
+}
+body.ly-ctxblur .ly-gap { filter: blur(var(--ly-ctx-blur, 0px)); }
+body.ly-hide-skipped .ly-gap { display: none; }
+.ly-gap ruby { ruby-align: center; }
+.ly-gap rt { font-size: 0.5em; line-height: 1; }
 /* ── 覆盖层主题（Apple Music / MD3）──────────────────────────────────────
    整行粗体、行级圆角悬停底块；当前行弹簧放大（Niratan highlightAnimation：
    stiffness 322 / damping 24 → 轻微过冲），离开当前行用阻尼更大的收回。 */
@@ -414,9 +493,13 @@ body.ly-past-dim:not(.ly-browsing) .cue.near-3:not(.current ~ .cue) {
    __lyricsReduceMotion 改为直接落位）。 */
 body.ly-reduce .cue,
 body.ly-reduce #ly-follow { transition: none !important; }
+/* 帧率：屏外的行不做过渡。进出手动浏览态（body.ly-browsing）一次改全书几百行的
+   opacity，每行一条过渡、Chromium 给每条在动画的行临时建合成层，滚轮一动就卡一下。
+   屏外的行看不见，直接落值即可；视口附近的行由 IntersectionObserver 标 .ly-vis
+   （不支持时全部标上，退回改动前行为）。 */
+.cue:not(.ly-vis) { transition: none !important; }
 body.ly-ctxblur .cue:not(.current) { filter: blur(var(--ly-ctx-blur, 0px)); }
 @media (hover: hover) {
-  body.ly-themed .cue:hover { background-color: var(--ly-hover, transparent); }
   body.ly-themed .cue:not(.current):hover { opacity: 0.84; }
 }
 /* 逐字扫过：当前行按播放进度从左到右点亮（未读部分 = 当前色 × 0.4）。.tx 是行内
@@ -493,9 +576,10 @@ body.ly-fade.ly-vertical {
   padding: 9px 16px;
   font: 600 14px system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--ly-pill-fg, $textColor);
-  background: var(--ly-pill-bg, rgba(127,127,127,0.2));
-  -webkit-backdrop-filter: blur(20px) saturate(1.6);
-  backdrop-filter: blur(20px) saturate(1.6);
+  /* 悬浮面实色（Apple 2026-10-13 拍板；MD3 悬浮面同为实色）：着色层叠在页面底色上，
+     不再半透明 + 背景模糊（也就不受「降低透明度」影响）。 */
+  background: linear-gradient(var(--ly-pill-bg, rgba(127,127,127,0.2)),
+      var(--ly-pill-bg, rgba(127,127,127,0.2))), $backgroundColor;
   transition: opacity 0.24s ease-out, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   cursor: pointer;
   z-index: 10;
@@ -519,6 +603,9 @@ body.lyrics-blur .cue:hover,
 body.lyrics-blur .cue.revealed {
   filter: blur(0);
 }
+/* 未朗读的原文同样不可预读，悬停显形。 */
+body.lyrics-blur .ly-gap { filter: blur(8px); }
+body.lyrics-blur .ly-gap:hover { filter: blur(0); }
 ::highlight(fushi-selection) {
   background-color: var(--ly-hl, $accentColor);
   color: var(--ly-hl-text, $backgroundColor);
@@ -686,56 +773,85 @@ function _lyResume() {
   }
 }
 window.addEventListener('wheel', function() { _lyEnterBrowse(); }, {passive: true});
-// 竖排只能横向滚：鼠标滚轮只给 deltaY，Chromium / WebKit 不会把它转成横滚，桌面上
-// 滚轮就滚不动歌词。主方向是纵向的滚轮投影成横滚，往下滚 = 往后读 = 视口左移
-// （scrollLeft 变小，两种 RTL 约定同向）。触控板的横向手势（|dx| ≥ |dy|）照原生走。
-//
-// BUG-3282：投影后的横滚不能一步落位——一格滚轮 100px 瞬移，看起来就是一顿一顿
-// 的「有级」滚动（横排走的是浏览器原生平滑滚轮）。滚轮量累加进目标位置，按帧
-// 指数逼近（与原生平滑滚轮同观感）；连续滚动只推远目标、不重置动画。
-var _lyWheelTarget = null, _lyWheelRaf = 0;
+// 无极滚轮（横竖排同一套）：滚轮由这里接管，不交给浏览器原生的逐格动画。
+//  * 竖排只能横向滚：鼠标滚轮只给 deltaY，Chromium / WebKit 不会把它转成横滚。
+//    主方向是纵向的滚轮投影成横滚，往下滚 = 往后读 = 视口左移（scrollLeft 变小，
+//    两种 RTL 约定同向）。
+//  * BUG-3282 / 用户 2026-10-14「支持无极滑动」：一格滚轮 100px，原生平滑滚轮
+//    和旧的「每帧逼近 30%」都在约 50ms 内停稳，而相邻两格间隔 60–120ms——每格之间
+//    停一下，就是一顿一顿的「有级」滚动。滚轮量累加进目标位置，按**真实帧间隔**
+//    指数逼近（时间常数 _LY_WHEEL_TAU_MS，与刷新率无关），连续几格衔接成一段
+//    不停顿的滑行；连续滚动只推远目标、不重置动画。
+//  * 触控板 / 高精度滚轮（单次增量小）本身就是连续的，直接跟手，不加缓动延迟。
+//  * 触控板主方向与滚动轴垂直的手势（竖排时的纯横向两指滑）照原生走。
+var _LY_WHEEL_TAU_MS = 90;
+var _LY_WHEEL_PRECISE_PX = 40;
+var _lyWheelTarget = null, _lyWheelRaf = 0, _lyWheelLast = 0;
 function _lyWheelStop() {
   if (_lyWheelRaf) cancelAnimationFrame(_lyWheelRaf);
   _lyWheelRaf = 0;
   _lyWheelTarget = null;
 }
-// 纯函数：一帧之后的位置。剩余量 < 0.5px 直接落到目标。
-function __lyricsWheelStep(cur, target) {
-  var d = target - cur;
-  if (Math.abs(d) < 0.5) return target;
-  return cur + d * 0.3;
+function _lyAxisPos(s) { return __lyricsVertical ? s.scrollLeft : s.scrollTop; }
+function _lySetAxisPos(s, v) {
+  if (__lyricsVertical) s.scrollLeft = v;
+  else s.scrollTop = v;
 }
-function _lyWheelFrame() {
+// 纯函数：经过 dtMs 之后的位置（时间常数 tauMs 的指数逼近，dt 越长走得越多，
+// 与刷新率无关）。剩余量 < 1px 直接落到目标，不拖亚像素尾巴。
+function __lyricsWheelStep(cur, target, dtMs, tauMs) {
+  var d = target - cur;
+  if (Math.abs(d) < 1) return target;
+  var k = 1 - Math.exp(-Math.max(0, dtMs) / tauMs);
+  var next = cur + d * k;
+  return Math.abs(target - next) < 1 ? target : next;
+}
+function _lyWheelFrame(now) {
   _lyWheelRaf = 0;
   if (_lyWheelTarget === null) return;
+  // 跨帧时长钳到 50ms：后台 / 卡顿一帧后不一步飞到底。
+  var dt = Math.min(50, Math.max(0, now - _lyWheelLast));
+  _lyWheelLast = now;
   var s = _lyricsScrollTarget();
-  var before = s.scrollLeft;
-  var next = __lyricsWheelStep(before, _lyWheelTarget);
-  s.scrollLeft = next;
-  // 顶到滚动边界（scrollLeft 没动）或已到目标：结束，不让越界的目标空转。
-  if (next === _lyWheelTarget || s.scrollLeft === before) {
+  var before = _lyAxisPos(s);
+  var next = __lyricsWheelStep(before, _lyWheelTarget, dt, _LY_WHEEL_TAU_MS);
+  _lySetAxisPos(s, next);
+  // 顶到滚动边界（位置没动）或已到目标：结束，不让越界的目标空转。
+  if (next === _lyWheelTarget || (dt > 0 && _lyAxisPos(s) === before)) {
     _lyWheelTarget = null;
     return;
   }
   _lyWheelRaf = requestAnimationFrame(_lyWheelFrame);
 }
-if (__lyricsVertical) {
-  window.addEventListener('wheel', function(e) {
-    if (e.ctrlKey || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-    var px = e.deltaMode === 1 ? e.deltaY * 40
-        : e.deltaMode === 2 ? e.deltaY * window.innerWidth : e.deltaY;
-    e.preventDefault();
-    var s = _lyricsScrollTarget();
-    if (window.__lyricsReduceMotion) {
-      _lyWheelStop();
-      s.scrollLeft -= px;
-      return;
-    }
-    if (_lyWheelTarget === null) _lyWheelTarget = s.scrollLeft;
-    _lyWheelTarget -= px;
-    if (!_lyWheelRaf) _lyWheelRaf = requestAnimationFrame(_lyWheelFrame);
-  }, {passive: false});
-}
+window.addEventListener('wheel', function(e) {
+  if (e.ctrlKey) return;
+  var raw;
+  if (__lyricsVertical) {
+    if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+    raw = -e.deltaY;
+  } else {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    raw = e.deltaY;
+  }
+  var extent = __lyricsVertical ? window.innerWidth : window.innerHeight;
+  var px = e.deltaMode === 1 ? raw * 40 : e.deltaMode === 2 ? raw * extent : raw;
+  if (px === 0) return;
+  e.preventDefault();
+  var s = _lyricsScrollTarget();
+  if (window.__lyricsReduceMotion ||
+      (e.deltaMode === 0 && Math.abs(px) < _LY_WHEEL_PRECISE_PX)) {
+    // 跟手：在途的缓动目标一起平移，避免两路互相拉扯。
+    if (_lyWheelTarget !== null) _lyWheelTarget += px;
+    else _lySetAxisPos(s, _lyAxisPos(s) + px);
+    return;
+  }
+  if (_lyWheelTarget === null) {
+    _lyWheelTarget = _lyAxisPos(s);
+    _lyWheelLast = performance.now();
+  }
+  _lyWheelTarget += px;
+  if (!_lyWheelRaf) _lyWheelRaf = requestAnimationFrame(_lyWheelFrame);
+}, {passive: false});
 document.addEventListener('scroll', function() {
   if (performance.now() > _lyProgUntil) _lyEnterBrowse();
 }, {passive: true, capture: true});
@@ -743,6 +859,45 @@ document.addEventListener('scroll', function() {
 // ── cue 切换 ──
 var _currentIdx = -1;
 var _cues = document.querySelectorAll('.cue');
+// 跳读灰显行（不是 .cue）：按「夹在第几条 cue 之后」索引，setCue 时同步它们的
+// near-N（取相邻两行里离当前句近的那行）。
+var _lyGapAfter = {};
+(function() {
+  var gs = document.querySelectorAll('.ly-gap');
+  for (var g = 0; g < gs.length; g++) {
+    var after = parseInt(gs[g].getAttribute('data-after'), 10);
+    if (!isNaN(after)) _lyGapAfter[after] = gs[g];
+  }
+})();
+function _lyMarkGaps(index, add) {
+  for (var i = index - 3; i <= index + 2; i++) {
+    var gap = _lyGapAfter[i];
+    if (!gap) continue;
+    gap.classList.remove('near-1', 'near-2', 'near-3');
+    var d = (i >= index ? i - index : index - 1 - i) + 1;
+    if (add && d <= 3) gap.classList.add('near-' + d);
+  }
+}
+
+// 视口附近（上下 / 左右各多算一屏）的行标 .ly-vis，只有它们做过渡（见 CSS）。
+(function() {
+  if (typeof IntersectionObserver !== 'function') {
+    for (var i = 0; i < _cues.length; i++) _cues[i].classList.add('ly-vis');
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    for (var i = 0; i < entries.length; i++) {
+      entries[i].target.classList.toggle('ly-vis', entries[i].isIntersecting);
+    }
+  // root 必须是真正的滚动元素（BUG-784：通常是 body）：以视口为 root 时
+  // rootMargin 扩不出 body 自己的溢出裁剪，「多算一屏」就成了 0。
+  }, {
+    root: _lyricsScrollTarget() === document.documentElement
+        ? null : _lyricsScrollTarget(),
+    rootMargin: '100% 100% 100% 100%',
+  });
+  for (var j = 0; j < _cues.length; j++) io.observe(_cues[j]);
+})();
 
 // ── TODO-1080: over-long cue auto-shrink ──────────────────────────────────
 // A single sentence can be longer than the screen fits. In vertical-rl the cue
@@ -784,26 +939,36 @@ function _lyricsAvailExtent(container) {
   var padH = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
   return Math.max(1, (window.innerWidth - padH) / scale);
 }
-// Fit one cue: clear any prior override, measure at base size, and if it still
-// overflows the available extent, set an inline font-size scaled by the overflow
-// ratio down to the floor. Returns nothing; idempotent.
-function _lyricsFitCue(el, avail, base) {
-  el.style.fontSize = '';
-  // offsetHeight/offsetWidth are the layout-box extents and (unlike
-  // getBoundingClientRect) exclude the .current scale transform, so the
-  // measurement is scale-independent and the shared avail (already discounted
-  // by --cue-scale) applies uniformly to current and non-current cues alike.
-  var measured = __lyricsVertical ? el.offsetHeight : el.offsetWidth;
+// Fit one cue from its base-size measurement: if it overflows the available
+// extent, set an inline font-size scaled by the overflow ratio down to the floor.
+function _lyricsFitCue(el, measured, avail, base) {
   if (measured <= avail) return;
   var shrunk = Math.max(__LYRICS_MIN_FONT_PX, base * (avail / measured));
   if (shrunk < base) el.style.fontSize = shrunk + 'px';
 }
+// WKWebView 在被 Flutter 隐藏（歌词页就绪前 opacity 0）时视口是 0×0。零视口下没有
+// 可用的约束尺寸：每一句都「溢出」，竖排更是每字一列。此时一律不量，等 resize 带来
+// 真实视口再量（下方 resize 监听）。
+function __lyricsHasViewport() {
+  return window.innerWidth > 0 && window.innerHeight > 0;
+}
 function __lyricsFitCues() {
   var container = document.getElementById('lc');
   if (!container) return;
+  if (!__lyricsHasViewport()) return;
   var base = _lyricsBaseFontPx();
   var avail = _lyricsAvailExtent(container);
-  for (var i = 0; i < _cues.length; i++) _lyricsFitCue(_cues[i], avail, base);
+  // 读写分离：先统一清掉旧覆盖、再一次性量完、最后统一写。逐句「写→读」会让每一句
+  // 都触发一次整页同步布局（600 句竖排在零视口下实测 11–13 s，期间 WebContent 主线程
+  // 全程阻塞：就绪握手、resize、后续 loadData 全部排队）。
+  var n = _cues.length, measured = new Array(n), i, el;
+  for (i = 0; i < n; i++) { el = _cues[i]; el.style.fontSize = ''; }
+  // offsetHeight/offsetWidth are the layout-box extents and (unlike
+  // getBoundingClientRect) exclude the .current scale transform, so the
+  // measurement is scale-independent and the shared avail (already discounted
+  // by --cue-scale) applies uniformly to current and non-current cues alike.
+  for (i = 0; i < n; i++) { el = _cues[i]; measured[i] = __lyricsVertical ? el.offsetHeight : el.offsetWidth; }
+  for (i = 0; i < n; i++) _lyricsFitCue(_cues[i], measured[i], avail, base);
   // 字号变了列就变了（BUG-3366）。
   if (_currentIdx >= 0 && _currentIdx < _cues.length) _lyLayoutSweepColumns(_cues[_currentIdx]);
 }
@@ -814,7 +979,11 @@ var _lyricsFitPending = false;
 window.addEventListener('resize', function() {
   if (_lyricsFitPending) return;
   _lyricsFitPending = true;
-  requestAnimationFrame(function() { _lyricsFitPending = false; __lyricsFitCues(); });
+  requestAnimationFrame(function() {
+    _lyricsFitPending = false;
+    __lyricsFitCues();
+    _lyInitialPosition();
+  });
 });
 
 // scroll === false (audio-follow OFF) updates the current/near highlight but
@@ -829,7 +998,9 @@ function setCue(index, scroll) {
     for (var i = Math.max(0, old - 3), e = Math.min(len - 1, old + 3); i <= e; i++)
       _cues[i].classList.remove('current', 'near-1', 'near-2', 'near-3', 'revealed', 'ly-nosweep');
     _lySweepReset(_cues[old]);
+    _lyMarkGaps(old, false);
   }
+  _lyMarkGaps(index, true);
   for (var i = Math.max(0, index - 3), e = Math.min(len - 1, index + 3); i <= e; i++) {
     var d = Math.abs(i - index);
     if (d === 0) _cues[i].classList.add('current');
@@ -1138,7 +1309,7 @@ document.addEventListener('mousemove', function(e) {
   // BUG-2508：宿主（Flutter）侧接管悬停查词的平台上本腿让路（开关由 Dart 与
   // __hoverAutoLookup 一起在歌词页就绪时下发）。
   if (window.__fushiHostHoverLookup) return;
-  if (!e.shiftKey && !window.__hoverAutoLookup) { _shiftHoverLastX = -1; _shiftHoverLastY = -1; return; }
+  if (!e[window.__fushiHoverKey || 'shiftKey'] && !window.__hoverAutoLookup) { _shiftHoverLastX = -1; _shiftHoverLastY = -1; return; }
   var dx = e.clientX - _shiftHoverLastX, dy = e.clientY - _shiftHoverLastY;
   if (dx * dx + dy * dy < 64) return;
   _shiftHoverLastX = e.clientX; _shiftHoverLastY = e.clientY;
@@ -1168,6 +1339,12 @@ _lc.addEventListener('mousedown', function(e) {
   // 整个 arguments，语义与正文选区完全一致。
   window.fushiSelection.selectText = function(x, y, maxLen, fromHover) {
     var hitEl = document.elementFromPoint(x, y);
+    // 跳读灰显行不查词：它不属于任何 cue，查词 / 制卡会拿当前句的音频与句子
+    // 去配一段根本没念过的正文。
+    if (hitEl && hitEl.closest('.ly-gap')) {
+      window.__lyricsCueContext = null;
+      return;
+    }
     var cueEl = hitEl ? hitEl.closest('.cue') : null;
     if (cueEl) {
       // 查词高亮落在这一行：停掉逐字扫过（扫过用透明字 + 背景裁切，会把查词底块
@@ -1227,6 +1404,8 @@ window.__lyricsUpdateStyle = function(bgColor, textColor, accentColor, fontSize,
       // shrink overrides. Setting .cue's own font-size would beat the var and
       // strand overflowing cues at the un-shrunk size.
       root.style.setProperty('--cue-font-size', fontSize + 'px');
+    } else if (r.selectorText === '.ly-gap') {
+      if (!themed) r.style.color = textColor;
     } else if (r.selectorText === 'html, body') {
       r.style.setProperty('scrollbar-color', textColor + ' transparent');
     } else if (r.selectorText === '::-webkit-scrollbar-thumb') {
@@ -1268,6 +1447,17 @@ window.__lyricsSetBlur = function(on) {
   }
 };
 
+// 跳读灰显开关热更（`lyrics_show_skipped_text`）：只换 body class。行高变了，
+// 跟随态下把当前句重新对准锚点。
+window.__lyricsSetShowSkipped = function(on) {
+  var hide = !on;
+  if (document.body.classList.contains('ly-hide-skipped') === hide) return;
+  document.body.classList.toggle('ly-hide-skipped', hide);
+  if (_currentIdx >= 0 && _currentIdx < _cues.length && !_lyBrowsing) {
+    _lyricsScrollByAxis(_lyricsCenterDelta(_cues[_currentIdx]));
+  }
+};
+
 // TODO-1080: shrink any over-long cue before positioning so the initial-scroll
 // geometry (and the caret ring) is measured against the final, fitted sizes.
 __lyricsFitCues();
@@ -1276,10 +1466,16 @@ __lyricsFitCues();
 // TODO-907: 同样走 delta 增量滚动，横竖排一致；竖排 vertical-rl 的负向 scrollX
 // 用 scrollBy 增量打到位，不硬算绝对坐标。
 _currentIdx = $currentIndex;
-if ($currentIndex >= 0 && $currentIndex < _cues.length) {
-  var _initEl = _cues[$currentIndex];
-  if (_initEl) _lyricsScrollByAxis(_lyricsCenterDelta(_initEl));
+// 零视口下算出的居中增量没有意义（见 __lyricsHasViewport）：推迟到第一次拿到真实
+// 视口的 resize 再定位，只做一次。
+var _lyInitPending = true;
+function _lyInitialPosition() {
+  if (!_lyInitPending || !__lyricsHasViewport()) return;
+  _lyInitPending = false;
+  var el = (_currentIdx >= 0 && _currentIdx < _cues.length) ? _cues[_currentIdx] : null;
+  if (el) _lyricsScrollByAxis(_lyricsCenterDelta(el));
 }
+_lyInitialPosition();
 </script>
 </body>
 </html>

@@ -11,6 +11,7 @@ import 'package:fushi/src/media/audiobook/mining_sentence_draft.dart'
     show SentenceContextSlot;
 import 'package:fushi/src/pages/implementations/dictionary_popup_webview.dart'
     show MinePopupResult;
+import 'package:fushi/src/media/video/video_remote_control_layout.dart';
 import 'package:fushi/src/pages/implementations/video_remote/video_remote_models.dart';
 import 'package:fushi/src/pages/implementations/video_remote/video_remote_scaffold.dart';
 import 'package:fushi/src/pages/implementations/video_remote_page.dart';
@@ -119,6 +120,175 @@ void main() {
     await _flush(tester);
     host.client.close();
   }
+
+  group('episode / subtitle track / volume (feedback SS9coDLqrd)', () {
+    testWidgets('an older computer without capabilities greys the controls', (
+      WidgetTester tester,
+    ) async {
+      await open(tester);
+      final VideoRemotePageState state = page(tester);
+      expect(state.capabilities, isEmpty);
+      for (final VideoRemoteControlItem item in <VideoRemoteControlItem>[
+        VideoRemoteControlItem.episodes,
+        VideoRemoteControlItem.subtitleTrack,
+        VideoRemoteControlItem.volume,
+      ]) {
+        expect(state.controlEnabled(item), isFalse, reason: item.name);
+      }
+      expect(state.controlEnabled(VideoRemoteControlItem.playPause), isTrue);
+      await close(tester);
+    });
+
+    testWidgets('a single video keeps the episode control greyed', (
+      WidgetTester tester,
+    ) async {
+      host.capabilities = const <String>[
+        'volume',
+        'episodes',
+        'subtitleTracks',
+      ];
+      host.episodeCount = 1;
+      await open(tester);
+      final VideoRemotePageState state = page(tester);
+      expect(state.controlEnabled(VideoRemoteControlItem.episodes), isFalse);
+      expect(state.controlEnabled(VideoRemoteControlItem.volume), isTrue);
+      expect(
+        state.controlEnabled(VideoRemoteControlItem.subtitleTrack),
+        isTrue,
+      );
+      await close(tester);
+    });
+
+    testWidgets(
+      'on demand: picking a library video asks the computer to play it',
+      (WidgetTester tester) async {
+        host.capabilities = const <String>['openVideo'];
+        await open(tester);
+        expect(page(tester).canPickVideo, isTrue);
+        // 顶栏按宽度排布要在新按钮出现后的下一帧重新测宽。
+        await tester.pumpAndSettle();
+        expect(
+          find.byKey(const ValueKey<String>('video-remote-pick-video')),
+          findsOneWidget,
+        );
+        unawaited(page(tester).pickVideo());
+        await tester.pumpAndSettle();
+        expect(host.libraryQueries.single['offset'], 0);
+        expect(find.text('Other book'), findsOneWidget);
+        await tester.tap(find.text('Other book'));
+        await _wait(tester, () => host.openedVideos.isNotEmpty);
+        expect(host.openedVideos.single['bookUid'], 'other-book');
+        expect(host.openedVideos.single['requestId'], isA<String>());
+        await close(tester);
+      },
+    );
+
+    testWidgets('on demand: re-picking the playing video sends nothing', (
+      WidgetTester tester,
+    ) async {
+      host.capabilities = const <String>['openVideo'];
+      await open(tester);
+      unawaited(page(tester).pickVideo());
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Shared book'));
+      await tester.pumpAndSettle();
+      await _flush(tester);
+      expect(host.openedVideos, isEmpty);
+      await close(tester);
+    });
+
+    testWidgets('on demand: an older computer shows no pick button', (
+      WidgetTester tester,
+    ) async {
+      await open(tester);
+      expect(page(tester).canPickVideo, isFalse);
+      expect(
+        find.byKey(const ValueKey<String>('video-remote-pick-video')),
+        findsNothing,
+      );
+      await page(tester).pickVideo();
+      expect(host.libraryQueries, isEmpty);
+      await close(tester);
+    });
+
+    testWidgets('picking an episode sends the episode command', (
+      WidgetTester tester,
+    ) async {
+      host.capabilities = const <String>['episodes'];
+      host.episodeCount = 3;
+      await open(tester);
+      expect(
+        page(tester).controlEnabled(VideoRemoteControlItem.episodes),
+        isTrue,
+      );
+      unawaited(page(tester).pickEpisode());
+      await tester.pumpAndSettle();
+      expect(find.text('Episode title 2'), findsOneWidget);
+      await tester.tap(find.text('Episode title 2'));
+      await _wait(tester, () => host.commands.isNotEmpty);
+      expect(host.commands.single['action'], 'episode');
+      expect(host.commands.single['episodeIndex'], 2);
+      expect(host.commands.single['sessionId'], 'episode-0');
+      await close(tester);
+    });
+
+    testWidgets('choosing the current episode sends nothing', (
+      WidgetTester tester,
+    ) async {
+      host.capabilities = const <String>['episodes'];
+      host.episodeCount = 2;
+      await open(tester);
+      unawaited(page(tester).pickEpisode());
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Episode title 0'));
+      await tester.pumpAndSettle();
+      await _flush(tester);
+      expect(host.commands, isEmpty);
+      await close(tester);
+    });
+
+    testWidgets(
+      'subtitle picker turns subtitles off; unselectable rows stay inert',
+      (WidgetTester tester) async {
+        host.capabilities = const <String>['subtitleTracks'];
+        await open(tester);
+        unawaited(page(tester).pickSubtitleTrack());
+        await tester.pumpAndSettle();
+        expect(find.text('Japanese'), findsOneWidget);
+        await tester.tap(find.text('Bitmap'));
+        await tester.pumpAndSettle();
+        await _flush(tester);
+        expect(host.commands, isEmpty);
+        await tester.tap(find.text(t.video_subtitle_off));
+        await _wait(tester, () => host.commands.isNotEmpty);
+        expect(host.commands.single['action'], 'subtitleTrack');
+        expect(host.commands.single.containsKey('trackId'), isTrue);
+        expect(host.commands.single['trackId'], isNull);
+        await close(tester);
+      },
+    );
+
+    testWidgets('volume sends the clamped value and shows the host volume', (
+      WidgetTester tester,
+    ) async {
+      host.capabilities = const <String>['volume'];
+      await open(tester);
+      expect(page(tester).volume, 70);
+      await page(tester).setVolume(140);
+      expect(host.commands.single['action'], 'volume');
+      expect(host.commands.single['volume'], 100);
+      await close(tester);
+    });
+
+    testWidgets('an action_unsupported answer is shown as an update hint', (
+      WidgetTester tester,
+    ) async {
+      expect(
+        videoRemoteErrorText(const VideoRemoteError('action_unsupported')),
+        t.video_remote_error_action_unsupported,
+      );
+    });
+  });
 
   testWidgets(
     'history lookup confirms a different episode despite identical text and time',
@@ -535,6 +705,8 @@ final class _PhoneHost {
   final List<Map<String, dynamic>> mines = <Map<String, dynamic>>[];
   final List<String> ended = <String>[];
   final List<Map<String, dynamic>> contexts = <Map<String, dynamic>>[];
+  final List<Map<String, dynamic>> libraryQueries = <Map<String, dynamic>>[];
+  final List<Map<String, dynamic>> openedVideos = <Map<String, dynamic>>[];
   String? contextError;
 
   /// The next `lookupBegin` answers this error code (409) once.
@@ -549,7 +721,15 @@ final class _PhoneHost {
   int dictionaryMatch = 0;
   int section = 0, revision = 1;
 
+  /// Optional controls the fake computer advertises (empty = an older host
+  /// whose snapshot has no `capabilities`).
+  List<String> capabilities = const <String>[];
+  int episodeCount = 0;
+
   Map<String, dynamic> get state => <String, dynamic>{
+    if (capabilities.isNotEmpty) 'capabilities': capabilities,
+    if (capabilities.isNotEmpty) 'episodeCount': episodeCount,
+    if (capabilities.isNotEmpty) 'volume': 70,
     'available': available,
     'revision': revision,
     'sessionId': available ? 'episode-$section' : '',
@@ -637,6 +817,28 @@ final class _PhoneHost {
         available = false;
         revision++;
         return _response(<String, dynamic>{'ok': true});
+      case 'library':
+        libraryQueries.add(body);
+        return _response(<String, dynamic>{
+          'total': 2,
+          'offset': 0,
+          'currentBookUid': 'shared-book',
+          'items': <Map<String, dynamic>>[
+            <String, dynamic>{
+              'bookUid': 'shared-book',
+              'title': 'Shared book',
+              'positionMs': 0,
+            },
+            <String, dynamic>{
+              'bookUid': 'other-book',
+              'title': 'Other book',
+              'positionMs': 0,
+            },
+          ],
+        });
+      case 'openVideo':
+        openedVideos.add(body);
+        return _response(<String, dynamic>{'ok': true});
       case 'lookupBegin':
         lookups.add(body);
         final String? refused = lookupBeginError;
@@ -696,6 +898,34 @@ final class _PhoneHost {
       case 'command':
         commands.add(body);
         return _response(<String, dynamic>{'ok': true});
+      case 'playbackOptions':
+        return _response(<String, dynamic>{
+          'episodes': <Map<String, dynamic>>[
+            for (int i = 0; i < episodeCount; i++)
+              <String, dynamic>{
+                'index': i,
+                'title': 'Episode title $i',
+                'current': i == section,
+              },
+          ],
+          'subtitleTracks': <Map<String, dynamic>>[
+            <String, dynamic>{
+              'id': 'track-ja',
+              'label': 'Japanese',
+              'kind': 'embedded',
+              'selected': true,
+              'selectable': true,
+            },
+            <String, dynamic>{
+              'id': 'track-pgs',
+              'label': 'Bitmap',
+              'kind': 'graphic',
+              'selected': false,
+              'selectable': false,
+            },
+          ],
+          'subtitleOff': false,
+        });
       case 'disconnect':
         await disconnectGate?.future;
         releaseEvents();

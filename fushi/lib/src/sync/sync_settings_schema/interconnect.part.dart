@@ -1,7 +1,7 @@
 // GENERATED-NOTE: extracted from sync_settings_schema.dart (TODO-585).
 part of '../sync_settings_schema.dart';
 
-// Hibiki P2P interconnect: client config, host server mode, LAN discovery.
+// Fushi P2P interconnect: client config, host server mode, LAN discovery.
 // Shares the parent library's imports + private scope (_syncSettings / _showSnackBar / _SyncSettingsState); moved verbatim.
 
 /// 互联自绘块里的小节标题（「已保存的连接」「局域网设备」）：MD3 = titleSmall；
@@ -156,7 +156,7 @@ class _InterconnectSecretCard extends StatelessWidget {
   }
 }
 
-// ── Hibiki server config widget (connect to another Hibiki instance) ─
+// ── Fushi server config widget (connect to another Fushi instance) ───
 
 class _FushiServerConfigWidget extends StatefulWidget {
   const _FushiServerConfigWidget({required this.settingsContext});
@@ -511,7 +511,7 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
 
     // TODO-963 M2: 新增/重加地址后走「探测 → 配对」。手动输入 IP 也能发起配对（不再只挂
     // mDNS 发现设备）：ping 探测可达 + 取指纹做 TOFU → 双确认 → pair/v2 → 自动落
-    // token + 指纹（免手粘 token）。探测失败 / 非 hibiki 时静默保留地址（向后兼容：
+    // token + 指纹（免手粘 token）。探测失败 / 非 Fushi 时静默保留地址（向后兼容：
     // 用户仍可手填 token）。
     if (shouldPair) {
       await _attemptManualPair(normalizedResult);
@@ -553,7 +553,7 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
         capturedFingerprint = tofu.fingerprint;
       }
 
-      // /api/ping 探测：确认 hibiki + 支持 v2 + 取展示名/指纹（https 用捕获指纹钉扎读）。
+      // /api/ping 探测：确认是 Fushi + 支持 v2 + 取展示名/指纹（https 用捕获指纹钉扎读）。
       final FushiPingOutcome outcome = await probeFushiPing(
         baseUrl,
         pinnedFingerprint: capturedFingerprint,
@@ -582,7 +582,7 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
         return;
       }
       if (!ping.supportsPairV2) {
-        // 连上了、确实是 Hibiki，只是版本太旧——与「找不到设备」是两回事。
+        // 连上了、确实是 Fushi，只是版本太旧——与「找不到设备」是两回事。
         _showSnackBar(context, t.sync_pair_unavailable);
         return;
       }
@@ -621,13 +621,28 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
   /// 带 hostId 的条目删的是**那台 host**：同组其余地址都带着它的 token，只删一行
   /// 等于没解绑（剩下的照常同步，被删的 learned 地址 10 分钟内还会被学回来，
   /// 审查问题 8）。老条目（无 hostId）仍只删那一行，行为不变。
+  ///
+  /// 连带删掉不止一行时先确认：同一台 host 的地址在列表里是平铺的多行，不说清楚
+  /// 用户只会看到「删一行、整片消失」。
   Future<void> _deleteUrl(int index) async {
     final String url = _urls[index].url;
     final String? hostId = _urls[index].hostId;
-    await _mutateUrls((List<FushiClientUrl> current) => <FushiClientUrl>[
-          for (final FushiClientUrl u in current)
-            if (u.url != url && (hostId == null || u.hostId != hostId)) u,
-        ]);
+    final int removed = _urls.length -
+        withoutInterconnectHost(_urls, url: url, hostId: hostId).length;
+    if (removed > 1) {
+      final bool confirmed = await showFushiConfirmDialog(
+        context: context,
+        title: t.interconnect_peer_forget_title,
+        message: t.interconnect_peer_forget_confirm(count: removed),
+        confirmLabel: t.dialog_delete,
+        cancelLabel: t.cancel,
+        icon: FushiIcons.delete,
+        destructive: true,
+      );
+      if (!confirmed) return;
+    }
+    await _mutateUrls((List<FushiClientUrl> current) =>
+        withoutInterconnectHost(current, url: url, hostId: hostId));
   }
 
   /// [newIndex] 是**最终下标**（FushiReorderableColumn 语义），不是 SDK
@@ -871,7 +886,8 @@ class _FushiServerConfigWidgetState extends State<_FushiServerConfigWidget>
           // 现在改为：已连接就只显示状态，原始令牌收进「手动填写」折叠项——手动粘贴对端令牌
           // 连接的回退路径仍在，只是不再和 host 端令牌摆成两个对不上的数字。per-peer 签发/
           // 鉴权/按设备吊销等后端安全机制一概不动。
-          if (_tokenPresent)
+          // 全局 token 是回退凭据，删光对端不会清它；没有任何对端时谈不上「已连接」。
+          if (_tokenPresent && _urls.isNotEmpty)
             Padding(
               padding: const EdgeInsets.only(bottom: 8),
               // 「已连接」是成功态：M3E tertiary 色块（Apple 落系统绿淡染）。
@@ -989,6 +1005,8 @@ mixin _PairingV2FlowMixin<T extends StatefulWidget> on State<T> {
         // 仅当 host 回报 pinRequired 时才被调用；LAN 免 PIN 全程不弹 PIN 框。
         pinProvider: _promptPairPinInput,
         clientDeviceId: clientDeviceId,
+        // 证明 deviceId 真是本机：host 只给证明过设备钥匙的 peer「我的设备」资格。
+        deviceKey: await _pairRepo.getOrCreateInterconnectDeviceKey(),
       );
       if (!mounted) return;
       switch (outcome) {
@@ -1154,7 +1172,7 @@ mixin _PairingV2FlowMixin<T extends StatefulWidget> on State<T> {
 
   /// BUG-1741：把**配对前探测**的失败分型翻成人话。
   ///
-  /// 探测层此前把「证书对不上」「超时」「端口没人」「不是 Hibiki」全压成一个
+  /// 探测层此前把「证书对不上」「超时」「端口没人」「不是 Fushi」全压成一个
   /// null，UI 只能一律说「此地址未找到 Fushi 设备」——对着一台明明在线、只是证书
   /// 换了的机器说「这里没有设备」，用户的排查方向从第一步就是错的。
   ///
@@ -1253,6 +1271,12 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
   // 主机时加载，用于「移除已配对设备」列表；吊销后刷新。
   List<FushiPairedPeerRow> _pairedPeers = const <FushiPairedPeerRow>[];
 
+  /// 被标记为「我的设备」的已配对 peer（可跟随本机账户自动登录）。
+  Set<String> _ownerPeerIds = const <String>{};
+
+  /// 配对时证明过设备钥匙的已配对 peer：只有它们能被标成「我的设备」。
+  Set<String> _keyVerifiedPeerIds = const <String>{};
+
   // The FushiSyncServer + LAN broadcast are owned app-wide by
   // appModel.syncServerController now, NOT by this page (BUG-085). This widget
   // is a thin view that drives start/stop and reflects its running state.
@@ -1313,6 +1337,9 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
     // TODO-961 M1b: 预取已配对设备（server 开启时才展示列表，但不阻塞开关加载）。
     final List<FushiPairedPeerRow> peers =
         await _serverController.pairedPeers();
+    final Set<String> owners = await _serverController.ownerDevicePeerIds();
+    final Set<String> keyVerified =
+        await _serverController.deviceKeyVerifiedPeerIds();
     final List<String> publicUrls = await repo.getInterconnectPublicUrls();
     final bool p2pEnabled = await repo.isInterconnectP2pEnabled();
     final List<String> relayUrls = await repo.getInterconnectP2pRelayUrls();
@@ -1327,6 +1354,8 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
         _portController.text = '$port';
         _token = token;
         _pairedPeers = peers;
+        _ownerPeerIds = owners;
+        _keyVerifiedPeerIds = keyVerified;
         _loaded = true;
       });
       _syncSettings(widget.settingsContext).setServerEnabled(enabled);
@@ -1435,7 +1464,25 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
   Future<void> _reloadPairedPeers() async {
     final List<FushiPairedPeerRow> peers =
         await _serverController.pairedPeers();
-    if (mounted) setState(() => _pairedPeers = peers);
+    final Set<String> owners = await _serverController.ownerDevicePeerIds();
+    final Set<String> keyVerified =
+        await _serverController.deviceKeyVerifiedPeerIds();
+    if (mounted) {
+      setState(() {
+        _pairedPeers = peers;
+        _ownerPeerIds = owners;
+        _keyVerifiedPeerIds = keyVerified;
+      });
+    }
+  }
+
+  /// 标记 / 取消「我的设备」：只有被标记的已配对设备能跟随本机 Fushi 账户自动登录。
+  Future<void> _toggleOwnerDevice(FushiPairedPeerRow peer) async {
+    await _serverController.setOwnerDevicePeer(
+      peer.peerId,
+      !_ownerPeerIds.contains(peer.peerId),
+    );
+    await _reloadPairedPeers();
   }
 
   /// TODO-961 M1b: 移除一台已配对设备——删其 per-peer token 行，该设备下次请求即被
@@ -1645,6 +1692,20 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
     int index,
     FushiPairedPeerRow peer,
   ) {
+    final bool owner = _ownerPeerIds.contains(peer.peerId);
+    // 没证明过设备钥匙的 peer（旧版 client 配的）不能标成「我的设备」：不给按钮，
+    // 而不是给一个点了没反应的按钮。对方升级后重新配对一次即可。
+    final bool canMarkOwner =
+        owner || _keyVerifiedPeerIds.contains(peer.peerId);
+    final String? ip =
+        (peer.lastSeenIp != null && peer.lastSeenIp!.trim().isNotEmpty)
+        ? peer.lastSeenIp
+        : null;
+    final String? subtitle = owner
+        ? (ip == null
+              ? t.sync_paired_peer_owner_badge
+              : '${t.sync_paired_peer_owner_badge} · $ip')
+        : ip;
     return FushiStaggeredEntrance(
       key: ValueKey<Object>(peer.peerId),
       index: index,
@@ -1661,18 +1722,34 @@ class _ServerModeWidgetState extends State<_ServerModeWidget> {
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
         ),
-        subtitle: (peer.lastSeenIp != null &&
-                peer.lastSeenIp!.trim().isNotEmpty)
+        subtitle: subtitle != null
             ? Text(
-                peer.lastSeenIp!,
+                subtitle,
                 style: Theme.of(context).textTheme.bodySmall,
               )
             : null,
-        trailing: FushiIconButton(
-          icon: FushiIcons.delete,
-          size: 18,
-          tooltip: t.sync_paired_peer_remove,
-          onTap: () => _revokePeer(peer),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            if (canMarkOwner)
+              FushiIconButton(
+                icon: owner ? FushiIcons.personCheck : FushiIcons.person,
+                size: 18,
+                tooltip: owner
+                    ? t.sync_paired_peer_owner_unmark
+                    : t.sync_paired_peer_owner_mark,
+                enabledColor: owner
+                    ? Theme.of(context).colorScheme.primary
+                    : null,
+                onTap: () => _toggleOwnerDevice(peer),
+              ),
+            FushiIconButton(
+              icon: FushiIcons.delete,
+              size: 18,
+              tooltip: t.sync_paired_peer_remove,
+              onTap: () => _revokePeer(peer),
+            ),
+          ],
         ),
       ),
     );

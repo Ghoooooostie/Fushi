@@ -267,9 +267,14 @@ const List<String> kDictStylePreviewNoopHandlers = <String>[
   // WebView 占满自身区域、不裁剪，也没有外壳高度可重算，与 popupRendered 同样 no-op。
   'popupContentResized',
   'popupRendered',
+  // BUG-3492：卡在后台写入时的排队覆盖；预览不制卡。
+  'queueOverwrite',
   'reportJsError',
   'resolveWordAudio',
   'setSentenceContext',
+  // 复习词状态标记：预览不显示复习状态（回 null = 不渲染标记）、不打开卡片。
+  'srsOpenCard',
+  'srsTermStatus',
   'tapOutside',
   'textSelected',
   'updateEntry',

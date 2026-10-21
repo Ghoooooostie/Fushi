@@ -171,6 +171,8 @@ export function makeEnv(over = {}) {
     },
     sent,
     autoSnapshot: true,
+    // 项目数据（project_stats.js）的外部请求：测试里一律离线，要数据的用例自己换成假上游。
+    PROJECT_FETCH: async () => new Response('offline', { status: 503 }),
     ...over,
   };
 }
@@ -229,6 +231,8 @@ export async function call(env, method, path, opts = {}) {
     headers,
     body: method === 'GET' || method === 'HEAD' ? undefined : bytes,
   });
+  // Workers 运行时在 request.cf 上给出边缘判出的地区等元数据；Node 的 Request 没有，按需补上。
+  if (opts.cf) Object.defineProperty(req, 'cf', { value: opts.cf });
   const realNow = Date.now;
   Date.now = () => now;
   try {
@@ -282,6 +286,9 @@ export function entry(kind, refs, title, extra = {}) {
 }
 
 export const JPEG = new Uint8Array([0xff, 0xd8, 0xff, 0xe0, 0, 0x10, 0x4a, 0x46, 0x49, 0x46]);
+
+// 真 JPEG 构造器（封面哈希测试用）：独立模块，免得 node 直接跑的生成脚本把 worker.js 一起拉进来。
+export { coverJpeg, withExifOrientation } from './jpeg.js';
 
 /** PNG 头 + IHDR（宽高 w×h；服务端只读文件头，不解码像素）。 */
 export function pngHeader(w = 1, h = 1) {

@@ -187,6 +187,8 @@
   // 超时竞速保证 Promise 一定 settle（值取 > app 冷查询 P99；超时按失败处理，UI 显示可重试的
   // 失败文案而不是无限转圈）。
   var RUNTIME_MESSAGE_TIMEOUT_MS = 8000;
+  // 复习模块关着（/api/srs/term-status 404）后的退避截止时刻。
+  var srsDisabledUntil = 0;
   function sendRuntime(message) {
     return new Promise(function (resolve) {
       var settled = false;
@@ -738,6 +740,30 @@
           return !!(response && response.ok && response.data && response.data.duplicate === true);
         });
       }
+      if (name === 'srsTermStatus') {
+        // Fushi 复习词状态（与 bridge-shim 同契约）：回 null 或状态对象；app 的复习模块关着
+        // 时服务端 404 → 记住一段时间不再问。
+        if (Date.now() < srsDisabledUntil) return Promise.resolve(null);
+        var srsReq = args[0] || {};
+        return sendRuntime({
+          type: 'srsTermStatus', expression: srsReq.expression || '', reading: srsReq.reading || '',
+        }).then(function (response) {
+          if (response && response.status === 404) {
+            srsDisabledUntil = Date.now() + 60000;
+            return null;
+          }
+          var status = response && response.ok && response.data ? response.data.status : null;
+          return status && typeof status === 'object' ? status : null;
+        });
+      }
+      if (name === 'srsOpenCard') {
+        var srsOpen = args[0] || {};
+        return sendRuntime({
+          type: 'srsOpenCard', cardId: srsOpen.cardId || '', noteId: srsOpen.noteId || '',
+        }).then(function (response) {
+          return !!(response && response.ok && response.data && response.data.opened === true);
+        });
+      }
       if (name === 'openInAnki') {
         // Issue #1409：与 bridge-shim 同契约——回 'opened' / 'noMatch' / 'failed'，绝不回 null
         // （null = 宿主没接这根桥）；background 超时/失败/旧 app 无端点 → 'failed'。
@@ -832,7 +858,8 @@
     return new Promise(function (resolve) {
       if (!Number.isInteger(currentTabId)) return resolve(null);
       try {
-        chrome.tabs.sendMessage(currentTabId, message, function (response) {
+        // 只问顶层 frame：内嵌 UI frame（asbplayer 对话框，按需注入）里没有视频，抢答会把列表清空。
+        chrome.tabs.sendMessage(currentTabId, message, { frameId: 0 }, function (response) {
           try { if (chrome.runtime.lastError) return resolve(null); } catch (_) { return resolve(null); }
           resolve(response || null);
         });

@@ -210,9 +210,20 @@ namespace flutter_inappwebview_plugin
       // intended behavior. NOTE: all environments created against the same user
       // data folder must use identical options (mismatch fails with
       // 0x8007139F) — this is the plugin's single default-environment site.
+      //
+      // BUG-3497: `fushi.local` is a virtual host served entirely by the
+      // WebResourceRequested interceptor, yet Chromium still resolves it on
+      // every main-frame navigation. `.local` goes to Windows multicast name
+      // resolution (mDNS/LLMNR), which only fails after ~2.7 s and is not
+      // negatively cached, so every book open and chapter turn sat blank for
+      // ~2 s. The lookup already fails today (NavigationCompleted below turns
+      // that failure into success); `~NOTFOUND` makes it fail immediately
+      // without touching the system resolver. Keep the host in sync with
+      // kReaderResourceHost (guard: webview2_reader_host_resolver_guard_test).
       auto options = Make<CoreWebView2EnvironmentOptions>();
       options->put_AdditionalBrowserArguments(
-        L"--autoplay-policy=no-user-gesture-required");
+        L"--autoplay-policy=no-user-gesture-required "
+        L"--host-resolver-rules=\"MAP fushi.local ~NOTFOUND\"");
       hr = CreateCoreWebView2EnvironmentWithOptions(
         nullptr, userDataFolder.empty() ? nullptr : userDataFolder.c_str(),
         options.Get(),
@@ -258,7 +269,7 @@ namespace flutter_inappwebview_plugin
       // Deliberately UNCONDITIONAL — not a missing knob. Exposing it as a
       // setting would need a matching Dart field in
       // flutter_inappwebview_platform_interface, which lives in pub-cache and is
-      // NOT forked here (only this windows package is vendored). And no Hibiki
+      // NOT forked here (only this windows package is vendored). And no Fushi
       // surface wants a browser status bar: every WebView in this app renders
       // EPUB / dictionary content, never a browsing chrome.
       //
@@ -285,7 +296,7 @@ namespace flutter_inappwebview_plugin
     //
     // WebView2 defaults AllowExternalDrop=TRUE, which makes the runtime register
     // its own IDropTarget on the HOST top-level HWND so files can be dropped INTO
-    // the web page. Hibiki only renders trusted EPUB/dictionary HTML in WebView,
+    // the web page. Fushi only renders trusted EPUB/dictionary HTML in WebView,
     // so dropping OS files into the page is never wanted. Worse, that registration
     // fights desktop_drop, which calls RegisterDragDrop once for the whole window:
     // WebView2 silently takes over the host HWND's drop target while a reader /
@@ -926,6 +937,47 @@ namespace flutter_inappwebview_plugin
         return S_OK;
       }
     ).Get(), &windowCloseRequestedToken_));
+
+    // 进程失败：上游 Windows 实现从未接 ProcessFailed，主渲染进程 / 浏览器进程退出后 Dart 侧
+    // onRenderProcessGone 永不触发，WebView 停在死页面（黑屏回不来）。这里按 kind 转发：
+    // · RENDER_PROCESS_EXITED：主框架渲染进程没了，本 WebView 报废，宿主重建表面；
+    // · BROWSER_PROCESS_EXITED：整个浏览器进程（含环境）没了，宿主还要换新环境再重建。
+    // 其余 kind（iframe 渲染进程、GPU / 工具进程、无响应）WebView2 会自行恢复或不影响主页面，
+    // 不转发——转发了宿主会无谓重建、打断正常播放。
+    failedLog(webView->add_ProcessFailed(Callback<ICoreWebView2ProcessFailedEventHandler>(
+      [this, alive = alive_](ICoreWebView2* sender, ICoreWebView2ProcessFailedEventArgs* args)
+      {
+        if (!*alive || !channelDelegate) {
+          return S_OK;
+        }
+        COREWEBVIEW2_PROCESS_FAILED_KIND kind;
+        if (FAILED(args->get_ProcessFailedKind(&kind))) {
+          return S_OK;
+        }
+        std::string kindName;
+        if (kind == COREWEBVIEW2_PROCESS_FAILED_KIND_RENDER_PROCESS_EXITED) {
+          kindName = "render";
+        }
+        else if (kind == COREWEBVIEW2_PROCESS_FAILED_KIND_BROWSER_PROCESS_EXITED) {
+          kindName = "browser";
+        }
+        else {
+          return S_OK;
+        }
+        // 被正常终止（任务管理器结束 / 系统回收）不算崩溃；读不到原因（旧运行时）按崩溃处理。
+        bool didCrash = true;
+        wil::com_ptr<ICoreWebView2ProcessFailedEventArgs2> args2;
+        if (SUCCEEDED(args->QueryInterface(IID_PPV_ARGS(&args2)))) {
+          COREWEBVIEW2_PROCESS_FAILED_REASON reason;
+          if (SUCCEEDED(args2->get_Reason(&reason))) {
+            didCrash = reason != COREWEBVIEW2_PROCESS_FAILED_REASON_TERMINATED;
+          }
+        }
+        debugLog("ProcessFailed kind=" + kindName);
+        channelDelegate->onRenderProcessGone(didCrash, kindName);
+        return S_OK;
+      }
+    ).Get(), &processFailedToken_));
 
     failedLog(webView->add_PermissionRequested(Callback<ICoreWebView2PermissionRequestedEventHandler>(
       [this, alive = alive_](ICoreWebView2* sender, ICoreWebView2PermissionRequestedEventArgs* args)
@@ -1825,6 +1877,18 @@ namespace flutter_inappwebview_plugin
     failedLog(webViewController->put_Bounds(bounds));
   }
 
+  bool InAppWebView::setWindowedInputEnabled(bool enabled)
+  {
+    HWND child = nullptr;
+    if (surface_ || !webViewController ||
+      !succeededOrLog(webViewController->get_ParentWindow(&child)) || !child) {
+      return false;
+    }
+    // 禁用的子窗口不参与命中测试，整棵子树（含 WebView2 浏览器进程建的 HWND）一起跳过。
+    ::EnableWindow(child, enabled ? TRUE : FALSE);
+    return true;
+  }
+
   void InAppWebView::setSurfaceSize(size_t width, size_t height,
     float capture_scale_factor, float device_scale_factor)
   {
@@ -2252,6 +2316,7 @@ namespace flutter_inappwebview_plugin
       failedLog(webView->remove_NewWindowRequested(newWindowRequestedToken_));
       failedLog(webView->remove_WindowCloseRequested(windowCloseRequestedToken_));
       failedLog(webView->remove_PermissionRequested(permissionRequestedToken_));
+      failedLog(webView->remove_ProcessFailed(processFailedToken_));
       // DOMContentLoaded 注册在 ICoreWebView2_2 接口上，需重新 QueryInterface 该接口才能 remove。
       wil::com_ptr<ICoreWebView2_2> webView2;
       if (SUCCEEDED(webView->QueryInterface(IID_PPV_ARGS(&webView2)))) {

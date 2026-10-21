@@ -5,6 +5,7 @@ import 'package:fushi_engine/tts/providers/azure_tts_provider.dart';
 import 'package:fushi_engine/tts/providers/edge_tts_provider.dart';
 import 'package:fushi_engine/tts/providers/google_cloud_tts_provider.dart';
 import 'package:fushi_engine/tts/providers/gpt_sovits_tts_provider.dart';
+import 'package:fushi_engine/tts/providers/irodori_server_tts_provider.dart';
 import 'package:fushi_engine/tts/providers/irodori_tts_provider.dart';
 import 'package:fushi_engine/tts/providers/translate_tts_providers.dart';
 import 'package:fushi_engine/tts/tts_provider.dart';
@@ -16,6 +17,8 @@ import 'package:fushi/src/media/audiobook/tts/system_tts_provider.dart';
 String ttsProviderLabel(String providerId) => switch (providerId) {
   GptSovitsTtsDescriptor.providerId => t.audiobook_tts_provider_gpt_sovits,
   IrodoriTtsDescriptor.providerId => t.audiobook_tts_provider_irodori,
+  IrodoriServerTtsDescriptor.providerId =>
+    t.audiobook_tts_provider_irodori_server,
   EdgeTtsDescriptor.providerId => t.audiobook_tts_provider_edge,
   MicrosoftTranslatorTtsDescriptor.providerId =>
     t.audiobook_tts_provider_ms_translator,
@@ -57,9 +60,27 @@ String ttsParamLabel(String key) => switch (key) {
   GptSovitsTtsDescriptor.promptTextKey => t.audiobook_tts_param_prompt_text,
   GptSovitsTtsDescriptor.promptLangKey => t.audiobook_tts_param_prompt_lang,
   AzureTtsDescriptor.regionKey => t.audiobook_tts_param_region,
+  IrodoriServerTtsDescriptor.captionKey => t.audiobook_tts_param_caption,
   'api_key' => t.audiobook_tts_param_api_key,
   'voice' => t.audiobook_tts_param_voice,
   _ => key,
+};
+
+/// GPT-SoVITS 语言代码的可读名称（`ja` 是「日语，夹杂的英文按英文读」，
+/// `all_ja` 是「整句都按日语读」——只显示代码的话用户分不清）。未知代码原样返回。
+String ttsLanguageLabel(String code) => switch (code) {
+  'ja' => t.audiobook_tts_lang_ja,
+  'all_ja' => t.audiobook_tts_lang_all_ja,
+  'zh' => t.audiobook_tts_lang_zh,
+  'all_zh' => t.audiobook_tts_lang_all_zh,
+  'en' => t.audiobook_tts_lang_en,
+  'ko' => t.audiobook_tts_lang_ko,
+  'all_ko' => t.audiobook_tts_lang_all_ko,
+  'yue' => t.audiobook_tts_lang_yue,
+  'all_yue' => t.audiobook_tts_lang_all_yue,
+  'auto' => t.audiobook_tts_lang_auto,
+  'auto_yue' => t.audiobook_tts_lang_auto_yue,
+  _ => code,
 };
 
 /// 参数下方的说明（没有返回 null）。
@@ -71,6 +92,21 @@ String? ttsParamHint(String providerId, String key) =>
         t.audiobook_tts_param_bearer_hint,
       (IrodoriTtsDescriptor.providerId, IrodoriTtsDescriptor.endpointKey) =>
         t.audiobook_tts_param_irodori_endpoint_hint,
+      (
+        IrodoriServerTtsDescriptor.providerId,
+        IrodoriServerTtsDescriptor.endpointKey,
+      ) =>
+        t.audiobook_tts_param_irodori_server_endpoint_hint,
+      (
+        IrodoriServerTtsDescriptor.providerId,
+        IrodoriServerTtsDescriptor.captionKey,
+      ) =>
+        t.audiobook_tts_param_caption_hint,
+      (
+        IrodoriServerTtsDescriptor.providerId,
+        IrodoriServerTtsDescriptor.apiKeyKey,
+      ) =>
+        t.audiobook_tts_param_bearer_hint,
       _ => null,
     };
 

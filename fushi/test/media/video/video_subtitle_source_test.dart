@@ -7,6 +7,8 @@ import 'package:fushi_engine/media/video/ffmpeg_backend.dart';
 import 'package:fushi_engine/media/video/video_subtitle_source.dart';
 import 'package:path/path.dart' as p;
 
+import '../../helpers/unified_ffmpeg.dart';
+
 void main() {
   // B（浏览器扩展加载外挂字幕文件）：server 端点把用户上传的 srt/ass/vtt 文本解析成扩展
   // 面板可消费的 cue JSON。纯函数（parseSubtitleContent 无 IO），复用 app 内已测的 parser。
@@ -706,7 +708,7 @@ hello async vtt
     late File imported;
 
     setUp(() {
-      tempDir = Directory.systemTemp.createTempSync('hibiki_todo016_menu_');
+      tempDir = Directory.systemTemp.createTempSync('fushi_todo016_menu_');
       video = File(p.join(tempDir.path, 'Miss Kobayashi S01E01.mkv'))
         ..writeAsStringSync('fake video bytes');
       imported = File(p.join(
@@ -883,7 +885,7 @@ BUG-2094 secondary import.
     late Directory tempDir;
 
     setUp(() {
-      tempDir = Directory.systemTemp.createTempSync('hibiki_vsub_prewarm_');
+      tempDir = Directory.systemTemp.createTempSync('fushi_vsub_prewarm_');
     });
 
     tearDown(() {
@@ -1061,7 +1063,7 @@ BUG-2094 secondary import.
     late Directory tempDir;
 
     setUp(() {
-      tempDir = Directory.systemTemp.createTempSync('hibiki_vsub_enum_');
+      tempDir = Directory.systemTemp.createTempSync('fushi_vsub_enum_');
     });
 
     tearDown(() {
@@ -1165,7 +1167,7 @@ At least one output file must be specified
     late Directory tempDir;
 
     setUp(() {
-      tempDir = Directory.systemTemp.createTempSync('hibiki_vsub_default_');
+      tempDir = Directory.systemTemp.createTempSync('fushi_vsub_default_');
     });
 
     tearDown(() {
@@ -1866,7 +1868,7 @@ hello mov
 Future<String?> _workingFfmpegExecutable() async {
   for (final String executable in <String>[
     'ffmpeg',
-    p.normalize('../third_party/ffmpeg-min/windows/ffmpeg.exe'),
+    ?resolveBundledUnifiedFfmpegForTests()?.ffmpeg,
   ]) {
     try {
       final ProcessResult result = await Process.run(

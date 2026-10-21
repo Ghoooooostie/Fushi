@@ -112,30 +112,14 @@ extension _VideoClipExport on _VideoFushiPageState {
     _rebuild(() => _clipExporting = true);
     _showOsd(t.video_clip_exporting, severity: ToastSeverity.info);
 
-    final VideoClipExportResult result = await exportVideoClipViaFfmpeg(
+    final VideoClipExportResult result = await _exportClipFile(
+      controller: controller,
       inputPath: startPath,
       startMs: startMs,
       endMs: endMs,
       outputPath: outputPath,
       audioStreamIndex: audioStreamIndex,
       audioStreamCount: audioStreamCount,
-      subtitleContents: _clipExportSubtitleContents(
-        controller: controller,
-        startMs: startMs,
-        endMs: endMs,
-      ),
-      // 硬字幕烧录（BUG-2202）：cue 带时间轴，导出层探出画面尺寸后回调渲染。
-      // 内封软字幕轨已经不用了——mp4 里的 tx3g 会让整个片段在 QQ 这类 IM 里判为
-      // 不可播（见 resolveClipSubtitleCodec）。
-      subtitleCues: _clipExportSubtitleCues(
-        controller: controller,
-        startMs: startMs,
-        endMs: endMs,
-      ),
-      subtitleRenderer: _clipExportSubtitleRenderer(),
-      // 用户设的视频码率（0 = 跟随源，导出层归一成 null）。在这里取值而不是在
-      // 标起点时取：用户常在标完起点、按导出前才去快捷面板改码率。
-      videoBitrateKbps: appModel.videoClipExportVideoBitrateKbps,
     );
 
     if (!mounted) {
@@ -218,7 +202,7 @@ extension _VideoClipExport on _VideoFushiPageState {
 
   /// 收集片段区间内「用户正在看的字幕」，裁成 SRT 文本（主字幕一条、副字幕一条）。
   ///
-  /// 真相源是播放器内存里的 cue 列表，不是源文件的 `0:s:N`：Hibiki 的字幕全部由
+  /// 真相源是播放器内存里的 cue 列表，不是源文件的 `0:s:N`：Fushi 的字幕全部由
   /// Flutter overlay 渲染（libmpv 侧被 `setSubtitleTrack(no())` 关掉），外挂字幕在源
   /// 文件里压根没有对应流，内嵌轨也丢掉了用户调过的 [VideoPlayerController.delayMs]
   /// 偏移。从 cue 生成，导出的字幕恰好等于屏幕上看到的那条。
@@ -326,6 +310,42 @@ extension _VideoClipExport on _VideoFushiPageState {
     };
   }
 
+  /// 片段导出的 ffmpeg 一步（快捷键两段式导出与桌面 CLI `video clip` 共用）：
+  /// 当前看到的主 / 副字幕裁成 SRT、按 cue 烧录硬字幕、用户设的视频码率。
+  Future<VideoClipExportResult> _exportClipFile({
+    required VideoPlayerController controller,
+    required String inputPath,
+    required int startMs,
+    required int endMs,
+    required String outputPath,
+    required int? audioStreamIndex,
+    required int? audioStreamCount,
+  }) => exportVideoClipViaFfmpeg(
+    inputPath: inputPath,
+    startMs: startMs,
+    endMs: endMs,
+    outputPath: outputPath,
+    audioStreamIndex: audioStreamIndex,
+    audioStreamCount: audioStreamCount,
+    subtitleContents: _clipExportSubtitleContents(
+      controller: controller,
+      startMs: startMs,
+      endMs: endMs,
+    ),
+    // 硬字幕烧录（BUG-2202）：cue 带时间轴，导出层探出画面尺寸后回调渲染。
+    // 内封软字幕轨已经不用了——mp4 里的 tx3g 会让整个片段在 QQ 这类 IM 里判为
+    // 不可播（见 resolveClipSubtitleCodec）。
+    subtitleCues: _clipExportSubtitleCues(
+      controller: controller,
+      startMs: startMs,
+      endMs: endMs,
+    ),
+    subtitleRenderer: _clipExportSubtitleRenderer(),
+    // 用户设的视频码率（0 = 跟随源，导出层归一成 null）。在这里取值而不是在
+    // 标起点时取：用户常在标完起点、按导出前才去快捷面板改码率。
+    videoBitrateKbps: appModel.videoClipExportVideoBitrateKbps,
+  );
+
   void _clearClipExportState() {
     _clipExportGeneration++;
     _clipExportMarking = false;
@@ -337,9 +357,9 @@ extension _VideoClipExport on _VideoFushiPageState {
   }
 
   /// 片段导出的默认文件名：`<源名>_<起>-<止>.mp4`。扩展名恒 `.mp4`——绝不再跟随
-  /// 源容器（BUG-917：mkv/webm/avi/ts 源会让 ffmpeg 选中桌面精简 ffmpeg 白名单里
-  /// 不存在的 matroska/webm muxer → exit -22 EINVAL）。mp4 桌面 ffmpeg-min 能 mux，
-  /// 且任意播放器/浏览器通吃。
+  /// 源容器（BUG-917：mkv/webm/avi/ts 源会让 ffmpeg 选中旧桌面精简 ffmpeg-min 白名单里
+  /// 不存在的 matroska/webm muxer → exit -22 EINVAL；统一 FFmpeg 已含这些 muxer）。
+  /// mp4 任意播放器/浏览器通吃，故恒用 mp4。
   String _clipExportFileName({
     required String inputPath,
     required int startMs,

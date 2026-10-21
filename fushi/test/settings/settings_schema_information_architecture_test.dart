@@ -6,6 +6,7 @@ import 'package:fushi/src/settings/settings_context.dart';
 import 'package:fushi/src/settings/settings_search.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
 import 'package:fushi/src/settings/settings_schema_appearance.dart';
+import 'package:fushi/src/settings/settings_schema_local_services.dart';
 import 'package:fushi/src/settings/settings_schema_lookup.dart';
 import 'package:fushi/src/settings/settings_schema_manga.dart';
 import 'package:fushi/src/settings/settings_schema_models.dart';
@@ -117,6 +118,8 @@ void main() {
           // buildListeningSections）。同一本 EPUB 的「读」与「听」从此同分类。
           'listening.section.playback',
           'listening.section.floating_lyric',
+          // 悬浮字幕外观与排版（默认折叠，与 galgame 浮窗「窗口与可读性」同构）。
+          'listening.section.floating_lyric_appearance',
         ],
       );
     },
@@ -129,6 +132,7 @@ void main() {
           (buildVideoDestination(), 'video.section.danmaku'),
           (buildMangaDestination(), 'manga.section.ocr'),
           (buildLookupDestination(), 'lookup.section.integrations'),
+          (buildLocalServicesDestination(), 'local_services.section.fushi_api'),
         ]) {
       expect(
         _section(destination, sectionId).presentation,
@@ -214,12 +218,30 @@ void main() {
             .map((SettingsNavigationItem i) => i.id),
         isNot(contains('lookup.browser_extension')),
       );
+      // 浏览器扩展入口跟着 Fushi API 服务器搬进「本机服务」；查词页只留指路行。
       expect(
         _section(
           lookup,
           'lookup.section.integrations',
         ).items.map((SettingsItem i) => i.id),
-        contains('lookup.browser_extension'),
+        allOf(
+          contains('lookup.local_services'),
+          isNot(contains('lookup.fushi_api_server')),
+          isNot(contains('lookup.fushi_api_key')),
+        ),
+      );
+      expect(
+        _section(
+          buildLocalServicesDestination(),
+          'local_services.section.fushi_api',
+        ).items.map((SettingsItem i) => i.id),
+        containsAll(<String>[
+          'local_services.browser_extension',
+          'local_services.fushi_api_server',
+          'local_services.fushi_api_access',
+          'local_services.fushi_api_port',
+          'local_services.fushi_api_key',
+        ]),
       );
       expect(
         _section(lookup, 'lookup.section.audio').items.first.id,

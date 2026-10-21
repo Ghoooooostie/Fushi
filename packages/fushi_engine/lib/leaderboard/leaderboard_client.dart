@@ -24,12 +24,84 @@ import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 
 import 'package:fushi_engine/feedback/feedback_models.dart';
+import 'package:fushi_engine/leaderboard/install_identity.dart';
+import 'package:fushi_engine/leaderboard/leaderboard_device_link.dart';
 import 'package:fushi_engine/leaderboard/leaderboard_identity.dart';
 import 'package:fushi_engine/leaderboard/leaderboard_models.dart';
 import 'package:fushi_engine/leaderboard/leaderboard_signing.dart';
 
 /// 服务端返回的非 2xx。[code] 取响应 JSON 的 `error`（如 `bad_signature` / `rate_limited`），
 /// 响应不是约定形状时为 `http_<status>`。
+/// 封面投票的哈希没命中已有候选（服务端 409 `cover_bytes_required`），需要带图片字节重传。
+bool isCoverBytesRequired(Object e) =>
+    e is LeaderboardApiException &&
+    e.status == 409 &&
+    e.code == 'cover_bytes_required';
+
+/// 封面候选缩略图下载的大小上限（服务端封面上传上限 96KB，留余量）。
+const int kCoverCandidateImageMaxBytes = 128 * 1024;
+
+/// 服务端给出的、待本机比对的封面候选（services/leaderboard/src/media.js candidateRef）。
+class CoverCandidateRef {
+  const CoverCandidateRef({required this.id, required this.image});
+
+  factory CoverCandidateRef.fromJson(Map<String, dynamic> j) =>
+      CoverCandidateRef(
+        id: (j['id'] as num).toInt(),
+        image: j['image'] as String,
+      );
+
+  final int id;
+
+  /// 缩略图路径（`/img/<key>`，公开、边缘缓存）。
+  final String image;
+
+  @override
+  bool operator ==(Object other) =>
+      other is CoverCandidateRef && other.id == id && other.image == image;
+
+  @override
+  int get hashCode => Object.hash(id, image);
+}
+
+/// 封面投票 / 上传 / 查候选的结果。
+class CoverVoteResult {
+  const CoverVoteResult({
+    this.cover,
+    this.candidate,
+    this.confirmed = false,
+    this.voted = true,
+    this.legacyServer = false,
+  });
+
+  factory CoverVoteResult.fromJson(Map<String, dynamic> j) => CoverVoteResult(
+    cover: j['cover'] as String?,
+    candidate: j['candidate'] is Map
+        ? CoverCandidateRef.fromJson(
+            (j['candidate'] as Map<Object?, Object?>).cast<String, dynamic>(),
+          )
+        : null,
+    confirmed: j['confirmed'] == true,
+    voted: j['voted'] != false,
+    legacyServer: !j.containsKey('confirmed'),
+  );
+
+  /// 本账户所投封面的路径（没投票时为 null）。
+  final String? cover;
+
+  /// 服务端要客户端本机比对的候选（按哈希命中、还没有本账户的确认票时）。
+  final CoverCandidateRef? candidate;
+
+  /// 本账户的票是确认票（上传者 / URL 票 / 已比对通过）。
+  final bool confirmed;
+
+  /// 这次请求是否投了票（`check` 只查不投）。
+  final bool voted;
+
+  /// 服务端还不认识确认票协议（响应里没有 `confirmed`）：`check` 被当成普通哈希投票处理了。
+  final bool legacyServer;
+}
+
 class LeaderboardApiException implements Exception {
   const LeaderboardApiException(this.status, this.code, [this.detail]);
 
@@ -140,6 +212,7 @@ class LeaderboardClient {
   final Duration _requestTimeout;
   final Duration _uploadTimeout;
   int _lastSignedAt = 0;
+  int _lastInstallSignedAt = 0;
 
   /// 服务器时钟偏移（签名时刻与书架「读完时刻」上界都按它算）。
   final LeaderboardServerClock serverClock;
@@ -264,6 +337,25 @@ class LeaderboardClient {
     );
   }
 
+  /// 代另一台（已互联配对的）新设备把它的钥匙绑到本账户（`POST /v1/me/devices`）。
+  /// [proof] 由新设备用**它自己的**私钥签 [leaderboardDeviceLinkProofString] 得到——新设备
+  /// 只交出公钥与持有证明，私钥 / 恢复码从不离开新设备。返回**新设备视角**的账户
+  /// （`uploadDevice` 按新钥匙算），原样转交给新设备落档。
+  ///
+  /// 409 `too_many_devices`（满 10 台）/ `key_taken`（该钥匙已属于别的账户）；旧版服务端
+  /// 没有这个接口时 404。
+  Future<LeaderboardSelf> linkDevice(
+    LeaderboardDeviceLinkRequest request,
+  ) async {
+    _requireIdentity();
+    final JsonMap j = await _sendJson(
+      'POST',
+      '/v1/me/devices',
+      body: request.toJson(),
+    );
+    return LeaderboardSelf.fromJson(j);
+  }
+
   /// 解绑一台设备（204）。不能解绑本机（400 `cannot_remove_current`）；解绑的若是上传
   /// 设备，服务端清空上传设备。
   Future<void> removeDevice(String keyId) async {
@@ -326,26 +418,126 @@ class LeaderboardClient {
     return ShelfUploadResult.fromJson(j);
   }
 
-  /// 给缺封面的作品补传缩略图，返回封面路径；别人已抢先传过（409 cover_exists）返回 null。
+  /// 提交作品封面缩略图（服务端按人数投票选封面，见 services/leaderboard/src/cover_votes.js），
+  /// 返回本账户所投封面的路径。
+  ///
+  /// [hash] = 缩略图的 dHash（`coverDHash`）：服务端按它归并相近的图，命中已有候选只投票、
+  /// 不再存图。不带 [hash] 是旧协议：作品已有封面时服务端回 409 `cover_exists`，此时返回 null。
   Future<String?> uploadCover(
     String workId,
     Uint8List bytes, {
     String contentType = 'image/jpeg',
+    String? hash,
   }) async {
-    _requireIdentity();
     try {
-      final JsonMap j = await _sendJson(
-        'PUT',
-        '/v1/works/${_segment(workId)}/cover',
-        bytes: bytes,
+      return (await uploadCoverChecked(
+        workId,
+        bytes,
         contentType: contentType,
-        timeout: _uploadTimeout,
-      );
-      return j['cover'] as String?;
+        hash: hash,
+      )).cover;
     } on LeaderboardApiException catch (e) {
       if (e.status == 409 && e.code == 'cover_exists') return null;
       rethrow;
     }
+  }
+
+  /// [uploadCover] 的完整结果：没命中已有候选时存图建候选（[CoverVoteResult.confirmed] 为 true，
+  /// 上传者的票就是确认票）；命中时只投了未确认票，[CoverVoteResult.candidate] 是要本机比对的候选。
+  Future<CoverVoteResult> uploadCoverChecked(
+    String workId,
+    Uint8List bytes, {
+    String contentType = 'image/jpeg',
+    String? hash,
+  }) async {
+    _requireIdentity();
+    final JsonMap j = await _sendJson(
+      'PUT',
+      '/v1/works/${_segment(workId)}/cover',
+      query: hash == null ? null : <String, String>{'h': hash},
+      bytes: bytes,
+      contentType: contentType,
+      timeout: _uploadTimeout,
+    );
+    return CoverVoteResult.fromJson(j);
+  }
+
+  /// 只查 [hash] 命中哪个候选，不投票（确认票流程第一步，见 `cover_compare.dart`）。返回的
+  /// [CoverVoteResult.candidate] 是要本机比对的候选；[CoverVoteResult.confirmed] = 本账户已对它投过
+  /// 确认票。没命中抛 409 `cover_bytes_required`（[isCoverBytesRequired]）。
+  Future<CoverVoteResult> checkCover(String workId, String hash) =>
+      _coverVote(workId, <String, dynamic>{'hash': hash, 'check': true});
+
+  /// 本机比对通过：对候选 [candidateId] 投确认票。
+  Future<CoverVoteResult> confirmCover(
+    String workId,
+    String hash,
+    int candidateId,
+  ) => _coverVote(workId, <String, dynamic>{
+    'hash': hash,
+    'confirm': candidateId,
+  });
+
+  /// 本机比对不通过：记「不符」（撤掉投给它的票，之后对本账户跳过它），返回下一个命中的候选；
+  /// 没有了抛 409 `cover_bytes_required`（随后 [uploadCoverChecked] 上传自己的图）。
+  Future<CoverVoteResult> rejectCover(
+    String workId,
+    String hash,
+    int candidateId,
+  ) => _coverVote(workId, <String, dynamic>{
+    'hash': hash,
+    'mismatch': candidateId,
+  });
+
+  /// 下载候选缩略图（公开的 `/img/<key>`，不签名）。超过 [kCoverCandidateImageMaxBytes] 抛
+  /// [LeaderboardApiException]（`cover_image_too_large`）。
+  Future<Uint8List> fetchCoverImage(String path) async {
+    if (!path.startsWith('/img/')) {
+      throw ArgumentError.value(path, 'path', 'expected /img/<key>');
+    }
+    final http.Response res = await _send(
+      'GET',
+      path,
+      withAccount: false,
+      signed: false,
+    );
+    if (res.bodyBytes.length > kCoverCandidateImageMaxBytes) {
+      throw LeaderboardApiException(res.statusCode, 'cover_image_too_large');
+    }
+    return res.bodyBytes;
+  }
+
+  Future<CoverVoteResult> _coverVote(
+    String workId,
+    Map<String, dynamic> body,
+  ) async {
+    _requireIdentity();
+    final JsonMap j = await _sendJson(
+      'POST',
+      '/v1/works/${_segment(workId)}/cover/vote',
+      body: body,
+    );
+    return CoverVoteResult.fromJson(j);
+  }
+
+  /// 不带图片字节的封面投票：[hash]（缩略图 dHash）与 [url]（白名单图床地址）二选一。
+  /// 返回本账户所投封面的路径。哈希没命中已有候选时抛 409 `cover_bytes_required`
+  /// （[isCoverBytesRequired]），随后用 [uploadCover] 带上字节；URL 不在白名单抛 400
+  /// `bad_cover_url`。
+  Future<String?> voteCover(String workId, {String? hash, String? url}) async {
+    _requireIdentity();
+    if ((hash == null) == (url == null)) {
+      throw ArgumentError('exactly one of hash / url');
+    }
+    final JsonMap j = await _sendJson(
+      'POST',
+      '/v1/works/${_segment(workId)}/cover/vote',
+      body: <String, dynamic>{
+        if (hash != null) 'hash': hash,
+        if (url != null) 'url': url,
+      },
+    );
+    return j['cover'] as String?;
   }
 
   // ---- 读 ----
@@ -464,8 +656,46 @@ class LeaderboardClient {
     return (signed: true, headers: null);
   }
 
+  /// 安装统计心跳（`POST /v1/ping`，服务端 `services/leaderboard/src/installs.js`）：
+  /// 不带账户签名，只出示安装证明（[InstallAttestation]，见 install_identity.dart）；同一
+  /// installId 同一 UTC 日服务端只记一次。成功返回、失败抛 [LeaderboardApiException] /
+  /// [LeaderboardTimeoutException]，由调用方决定何时重试。可选维度（null 时不带该字段，
+  /// 服务端记 NULL / 保留上次的值）：[locale] App 当前界面语言（BCP 47），[arch] 宿主 CPU
+  /// 架构，[osVersion] 系统大版本，[source] 安装来源类别。
+  Future<void> ping({
+    required InstallAttestation install,
+    required String version,
+    required String platform,
+    required String channel,
+    String? locale,
+    String? arch,
+    String? osVersion,
+    String? source,
+  }) async {
+    await _send(
+      'POST',
+      '/v1/ping',
+      bytes: _encodeJson(<String, String>{
+        'installId': install.installId,
+        'version': version,
+        'platform': platform,
+        'channel': channel,
+        'locale': ?locale,
+        'arch': ?arch,
+        'osVersion': ?osVersion,
+        'source': ?source,
+      }),
+      contentType: _json,
+      withAccount: false,
+      signed: false,
+      install: install,
+    );
+  }
+
   /// 提交反馈。[linkAccount] 且本客户端有账户时带签名提交（开发者能看到反馈人昵称）；
-  /// 否则匿名。返回的 [FeedbackReceipt.ticket] 只给这一次。
+  /// 否则匿名。返回的 [FeedbackReceipt.ticket] 只给这一次。[install]（安装统计的本机
+  /// 安装证明）非空时上报其 installId 并出示安装签名，开发者处理台据此关联该安装的版本轨迹
+  /// （验过签的标「已验证」）。
   Future<FeedbackReceipt> submitFeedback({
     required FeedbackCategory category,
     required String title,
@@ -474,6 +704,8 @@ class LeaderboardClient {
     Map<String, Object?> meta = const <String, Object?>{},
     bool linkAccount = true,
     ({String id, String ticket})? reopenOf,
+    InstallAttestation? install,
+    String? submissionKey,
   }) async {
     final bool signs = linkAccount && _identity != null;
     final JsonMap j = await _sendJson(
@@ -490,8 +722,12 @@ class LeaderboardClient {
             'id': reopenOf.id,
             'ticket': reopenOf.ticket,
           },
+        if (install != null) 'installId': install.installId,
+        // 提交幂等键：同一次提交的重试带同一个键，服务端原样回同一张回执、不新建反馈。
+        if (submissionKey != null) 'submissionKey': submissionKey,
       },
       signed: signs,
+      install: install,
     );
     return FeedbackReceipt.fromJson(j);
   }
@@ -987,6 +1223,7 @@ class LeaderboardClient {
     bool signed = true,
     Map<String, String>? headers,
     Duration? timeout,
+    InstallAttestation? install,
   }) async {
     final http.Response res = await _send(
       method,
@@ -998,6 +1235,7 @@ class LeaderboardClient {
       signed: signed,
       headers: headers,
       timeout: timeout,
+      install: install,
     );
     try {
       final Object? decoded = jsonDecode(utf8.decode(res.bodyBytes));
@@ -1007,7 +1245,8 @@ class LeaderboardClient {
     }
   }
 
-  /// 发一个请求；签名请求遇 401 `stale_time` 时按该响应校准过的服务器偏移重签重发一次。
+  /// 发一个请求；签名请求遇 401 `stale_time`（账户签名）/ `stale_install_time`（安装签名）
+  /// 时按该响应校准过的服务器偏移重签重发一次。
   Future<http.Response> _send(
     String method,
     String path, {
@@ -1018,6 +1257,7 @@ class LeaderboardClient {
     bool signed = true,
     Map<String, String>? headers,
     Duration? timeout,
+    InstallAttestation? install,
   }) async {
     final bool signs = signed && _identity != null;
     for (int attempt = 0; ; attempt++) {
@@ -1032,6 +1272,7 @@ class LeaderboardClient {
           signed: signed,
           headers: headers,
           timeout: timeout ?? _requestTimeout,
+          install: install,
         );
       } on LeaderboardApiException catch (e) {
         if (signs &&
@@ -1041,15 +1282,16 @@ class LeaderboardClient {
           await _onAccountGone?.call(e);
           rethrow;
         }
-        if (!signs ||
-            attempt > 0 ||
-            e.status != 401 ||
-            e.code != 'stale_time') {
+        final bool staleAccount = signs && e.code == 'stale_time';
+        final bool staleInstall =
+            install != null && e.code == 'stale_install_time';
+        if (attempt > 0 || e.status != 401 || !(staleAccount || staleInstall)) {
           rethrow;
         }
         // 偏移刚由这个 401 的 Date 头校准；单调下界是按旧偏移推出来的，钟快时它仍停在
         // 未来，丢掉它。被判 stale 的请求服务端没有登记，不会与重签撞重放。
         _lastSignedAt = 0;
+        _lastInstallSignedAt = 0;
       }
     }
   }
@@ -1064,6 +1306,7 @@ class LeaderboardClient {
     required bool signed,
     required Map<String, String>? headers,
     required Duration timeout,
+    required InstallAttestation? install,
   }) async {
     final Uri url = _endpoint(path, query);
     final List<int> body = bytes ?? const <int>[];
@@ -1072,12 +1315,20 @@ class LeaderboardClient {
     if (bytes != null) req.bodyBytes = bytes;
     if (contentType != null) req.headers['Content-Type'] = contentType;
     req.headers['Accept'] = 'application/json';
+    final String pathWithQuery = url.hasQuery
+        ? '${url.path}?${url.query}'
+        : url.path;
+    if (install != null) {
+      // 安装签名单独一条单调时刻序列（服务端按安装签名串去重，与账户签名各自独立）。
+      final int installTime = max(serverNowMs(), _lastInstallSignedAt + 1);
+      _lastInstallSignedAt = installTime;
+      req.headers.addAll(
+        install.headersFor(method, pathWithQuery, installTime, body),
+      );
+    }
     final LeaderboardIdentity? id = signed ? _identity : null;
     if (id != null) {
       final int time = _nextSignTime();
-      final String pathWithQuery = url.hasQuery
-          ? '${url.path}?${url.query}'
-          : url.path;
       final String message = leaderboardSigningString(
         method,
         pathWithQuery,

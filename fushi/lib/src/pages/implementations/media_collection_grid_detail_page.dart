@@ -3,7 +3,10 @@ import 'package:fushi/src/shortcuts/context_menu_trigger.dart';
 
 import 'package:fushi/src/media/collections/add_to_collection_dialog.dart'
     show CollectionMemberVisibility, pickTargetCollectionForMembers;
+import 'package:fushi/src/media/collections/collection_ai_order.dart'
+    show CollectionAiClientFactory;
 import 'package:fushi/src/media/collections/collection_detail_hero.dart';
+import 'package:fushi_engine/ai/ai_settings.dart';
 import 'package:fushi/src/media/collections/collection_member_view.dart';
 import 'package:fushi/src/media/tags/tag_chips.dart';
 import 'package:fushi/src/media/tags/tag_picker_sheet.dart';
@@ -61,11 +64,20 @@ class MediaCollectionGridDetailPage extends StatefulWidget {
     this.memberInfoRefresh,
     this.onSetMembersCompleted,
     this.isMemberVisible,
+    this.collectionAiSettings,
+    this.aiClientFactory,
     super.key,
   });
 
   final FushiDatabase database;
   final MediaCollectionRow collection;
+
+  /// 「排序」菜单的「AI 排序」用的 AI 指派来源。null = 不显示该项（AI 模块关着，
+  /// 调用方按 `isAiModuleEnabled` 求值后传）。
+  final AiSettingsSource? collectionAiSettings;
+
+  /// 测试注入假 AI 客户端；生产为 null（默认构造）。
+  final CollectionAiClientFactory? aiClientFactory;
 
   /// 按成员 (mediaType, entryKey) 渲染卡片；返回 null = 该成员当前不可见（孤儿/被过滤），
   /// 详情页跳过它。
@@ -337,6 +349,18 @@ class _MediaCollectionGridDetailPageState
             (mediaType: r.mediaType, entryKey: r.entryKey),
         ]);
     widget.onChanged();
+  }
+
+  /// 「AI 排序」：卷号判不出的卷（汉字卷号 / 上下卷 / 外传）交 AI 定位后整表落盘；
+  /// 落了盘即切到手动序展示（偏好已由 [runDetailAiSort] 写成 manual）。
+  Future<void> _sortWithAi(AiSettingsSource settings) async {
+    final bool persisted = await runDetailAiSort(
+      settings: settings,
+      clientFactory: widget.aiClientFactory,
+    );
+    if (!persisted || !mounted) return;
+    setState(() => _sort = CollectionMemberSort.manual);
+    await _reload();
   }
 
   Future<void> _delete() async {
@@ -652,11 +676,8 @@ class _MediaCollectionGridDetailPageState
             tooltip: t.rename_collection,
             onTap: renameDetailCollection,
           ),
-          FushiIconButton(
-            icon: FushiIcons.tag,
-            tooltip: t.collection_detail_edit_tags,
-            onTap: _editCollectionTags,
-          ),
+          // 「编辑标签」只在 hero（标签 chip 旁）一处：顶栏再摆一颗同功能的标签钮
+          // 是重复入口（用户实报两个按钮功能重复）。
           if (_sort != CollectionMemberSort.manual)
             FushiIconButton(
               icon: FushiIcons.download,
@@ -869,6 +890,7 @@ class _MediaCollectionGridDetailPageState
                         showStatus: widget.memberInfoOf != null,
                         onTap: () => _activate(arranged[i]),
                         onLongPress: () => _toggleSelected(arranged[i]),
+                        longPressOpensMenu: !_selecting,
                         onMenu: (Offset p) =>
                             _showMemberMenu(arranged[i].row, p),
                       ),
@@ -934,6 +956,7 @@ class _MediaCollectionGridDetailPageState
                       selected: _selected.contains(e.key),
                       onTap: () => _activate(e),
                       onLongPress: () => _toggleSelected(e),
+                      longPressOpensMenu: !_selecting,
                       onMenu: (Offset p) => _showMemberMenu(e.row, p),
                       child: cards[e.key]!,
                     ),
@@ -1088,6 +1111,13 @@ class _MediaCollectionGridDetailPageState
               : () => _saveViewOrder(arranged),
           child: Text(t.collection_detail_save_order),
         ),
+        if (widget.collectionAiSettings case final AiSettingsSource settings)
+          MenuItemButton(
+            key: const ValueKey<String>('collection_detail_sort_ai'),
+            leadingIcon: const FushiIcon(FushiIcons.ai, size: 20),
+            onPressed: () => _sortWithAi(settings),
+            child: Text(t.collection_sort_ai),
+          ),
       ],
       builder: (BuildContext context, MenuController controller, Widget? _) =>
           FushiIconButton(
@@ -1395,8 +1425,32 @@ class _ViewModeToggle extends StatelessWidget {
   }
 }
 
-/// 非拖排网格里的一格：轻点打开（多选态切换勾选）、长按进多选、右键菜单；卡片本体
-/// 仍包在 [IgnorePointer] 里（手势统一由本格接管），多选态叠一枚勾选圆钮。
+/// 长按的分流：[longPressOpensMenu] 时弹上下文菜单（锚点取 [context] 盒子中心），
+/// 否则走 [onLongPress]（多选态切换勾选）。
+///
+/// 触屏没有右键，[ContextMenuTrigger] 只认鼠标按钮；此前非拖排网格 / 列表的长按恒
+/// 为「进多选」，触屏用户在合集里根本拿不到与库页同一份卡片菜单（iPad 用户实报
+/// 「合集里的漫画长按缺少各种功能」）。进多选另有工具条按钮。
+VoidCallback _memberLongPressHandler(
+  BuildContext context, {
+  required bool longPressOpensMenu,
+  required VoidCallback onLongPress,
+  required ValueChanged<Offset> onMenu,
+}) {
+  if (!longPressOpensMenu) return onLongPress;
+  return () {
+    final RenderObject? box = context.findRenderObject();
+    onMenu(
+      box is RenderBox && box.hasSize
+          ? box.localToGlobal(box.size.center(Offset.zero))
+          : Offset.zero,
+    );
+  };
+}
+
+/// 非拖排网格里的一格：轻点打开（多选态切换勾选）、长按弹卡片菜单（多选态切换
+/// 勾选）、右键菜单；卡片本体仍包在 [IgnorePointer] 里（手势统一由本格接管），
+/// 多选态叠一枚勾选圆钮。
 class _MemberGridTile extends StatelessWidget {
   const _MemberGridTile({
     required this.child,
@@ -1404,6 +1458,7 @@ class _MemberGridTile extends StatelessWidget {
     required this.selected,
     required this.onTap,
     required this.onLongPress,
+    required this.longPressOpensMenu,
     required this.onMenu,
     super.key,
   });
@@ -1413,6 +1468,7 @@ class _MemberGridTile extends StatelessWidget {
   final bool selected;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
+  final bool longPressOpensMenu;
   final ValueChanged<Offset> onMenu;
 
   @override
@@ -1426,7 +1482,12 @@ class _MemberGridTile extends StatelessWidget {
         child: InkWell(
           borderRadius: tokens.radii.cardRadius,
           onTap: onTap,
-          onLongPress: onLongPress,
+          onLongPress: _memberLongPressHandler(
+            context,
+            longPressOpensMenu: longPressOpensMenu,
+            onLongPress: onLongPress,
+            onMenu: onMenu,
+          ),
           child: Stack(
             fit: StackFit.expand,
             children: <Widget>[
@@ -1474,6 +1535,7 @@ class _MemberListRow extends StatelessWidget {
     required this.showStatus,
     required this.onTap,
     required this.onLongPress,
+    required this.longPressOpensMenu,
     required this.onMenu,
     super.key,
   });
@@ -1484,6 +1546,7 @@ class _MemberListRow extends StatelessWidget {
   final bool showStatus;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
+  final bool longPressOpensMenu;
   final ValueChanged<Offset> onMenu;
 
   @override
@@ -1537,7 +1600,12 @@ class _MemberListRow extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: onTap,
-            onLongPress: onLongPress,
+            onLongPress: _memberLongPressHandler(
+              context,
+              longPressOpensMenu: longPressOpensMenu,
+              onLongPress: onLongPress,
+              onMenu: onMenu,
+            ),
             child: Padding(
               padding: EdgeInsets.all(tokens.spacing.gap * 1.25),
               child: Row(

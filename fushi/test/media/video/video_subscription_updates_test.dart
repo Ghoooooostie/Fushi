@@ -83,6 +83,8 @@ void main() {
       );
 
   MediaCollectionRow collection(int id, {int? anilistId}) => MediaCollectionRow(
+        origin: 'user',
+        organizeAliases: '',
         id: id,
         name: 'C$id',
         collectionType: 'collection',
@@ -211,6 +213,23 @@ void main() {
       expect(u!.targetIndex, 3);
       expect(u.unwatchedCount, 3, reason: '跳过的第 1 集仍计入未看数');
       expect(u.latestUnwatchedImportedAtMs, 4, reason: 'null 入库时刻按 0 计');
+    });
+
+    test('最近播放那集只打开过（进度 0）→ 目标是它自己，不跳到后一集（BUG-3370）', () {
+      final VideoSubscriptionUpdate? u = selectVideoSubscriptionUpdate(
+        <VideoSeriesPlaybackState>[
+          completed(10),
+          const VideoSeriesPlaybackState(
+            lastWatchedAtMs: 20,
+            positionMs: 0,
+            completed: false,
+          ),
+          unwatched(),
+        ],
+        <int?>[1, 2, 3],
+      );
+      expect(u!.targetIndex, 1);
+      expect(u.unwatchedCount, 2);
     });
 
     test('最近播放之后没有未看 → 回落合集里第一集未看', () {

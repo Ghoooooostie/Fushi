@@ -3,6 +3,7 @@ import 'package:collection/collection.dart' show mergeSort;
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fushi/src/media/downloads/download_source_method.dart';
+import 'package:fushi/src/media/downloads/download_start_result.dart';
 import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 import 'package:fushi_engine/media/discovery/discovery_download_queue.dart';
 import 'package:fushi_engine/media/discovery/discovery_models.dart';
@@ -579,10 +580,12 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
       if (mounted) setState(() {});
     }
     try {
-      await startDiscoveryItemDownload(
-        context: context,
-        appModel: appModel,
-        item: item,
+      showDownloadStartNotices(
+        await startDiscoveryItemDownload(
+          context: context,
+          appModel: appModel,
+          item: item,
+        ),
       );
     } finally {
       if (torrent) {
@@ -1234,7 +1237,9 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
         width: 36,
         height: 54,
         child: DiscoveryImageCover(
-          image: AppCachedHttpImage(cover),
+          // 私有目录（Komga 等）的封面要带源给的凭据头，否则 401 永远是占位图
+          // （BUG-3535）。头只由源按同源规则填；磁盘缓存只按 URL 记键。
+          image: discoveryCoverImage(cover, entry.coverHeaders),
           placeholderIcon: Icons.insert_drive_file_outlined,
         ),
       ),
@@ -1371,3 +1376,15 @@ class _MediaDiscoveryPageState extends State<MediaDiscoveryPage> {
     );
   }
 }
+
+/// 发现页资源行的封面 provider：把源给的封面请求头原样交给磁盘缓存图片加载器
+/// （BUG-3535）。空表按「无头」处理——匿名封面不必因为一个空 Map 而换一种
+/// provider 形态。
+AppCachedHttpImage discoveryCoverImage(
+  String url,
+  Map<String, String>? headers,
+) =>
+    AppCachedHttpImage(
+      url,
+      headers: headers == null || headers.isEmpty ? null : headers,
+    );

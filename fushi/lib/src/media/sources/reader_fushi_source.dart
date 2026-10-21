@@ -16,13 +16,18 @@ import 'package:fushi/src/media/audiobook/lyrics_player/lyrics_theme_host.dart';
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
 import 'package:fushi_audio/fushi_audio.dart';
 import 'package:fushi/src/media/audiobook/book_import_dialog.dart';
+import 'package:fushi/src/media/manga/interconnect/interconnect_manga_source.dart'
+    show InterconnectMangaCatalog;
 import 'package:fushi/src/media/manga/library/online_manga_library_entry.dart';
+import 'package:fushi/src/reader/page_turn_animation.dart';
 import 'package:fushi/src/reader/reader_chrome_floating.dart';
+import 'package:fushi/src/reader/highlight_stroke_style.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi_engine/sync/deletion_propagation.dart';
 import 'package:fushi/src/shortcuts/visual/gamepad_glyphs.dart';
 import 'package:fushi/utils.dart';
 import 'package:fushi_engine/media/media_pref_keys.dart' as pref_keys;
+import 'package:fushi/src/lookup/hover_lookup_modifier.dart';
 export 'package:fushi_engine/media/media_pref_keys.dart'
     show kReaderSourcePersistedKey;
 
@@ -1079,6 +1084,14 @@ class ReaderFushiSource extends ReaderMediaSource {
         );
       }
 
+      // 跨端删除墓碑键：两端键不同的书写**对端键**（BUG-3443 同类）——经互联收下的
+      // 在线漫画取描述符里的对端键（本机键是单向哈希），从对端下载、落地键不同的书取
+      // 别名表。必须删行前取：deleteEpubBook 会级联删掉别名。
+      final String syncTombstoneKey = scope == DeleteScope.syncEverywhere
+          ? InterconnectMangaCatalog.peerBookKeyOf(bookRow?.sourceMetadata) ??
+              await db.syncDeletionBookKeyOf(bookKey)
+          : bookKey;
+
       // TODO-1195 part B: a user shelf delete records a tombstone so a later
       // backup MERGE import never resurrects this book from an old backup.
       final int deletedRows = await db.deleteEpubBook(bookKey, tombstone: true);
@@ -1090,7 +1103,7 @@ class ReaderFushiSource extends ReaderMediaSource {
       if (deletedRows > 0 && scope == DeleteScope.syncEverywhere) {
         try {
           await db.writeSyncDeletionTombstone(
-              'book', bookKey, DateTime.now().millisecondsSinceEpoch);
+              'book', syncTombstoneKey, DateTime.now().millisecondsSinceEpoch);
         } catch (_) {
           // best-effort：删除墓碑记账失败不影响书已删。
         }
@@ -1523,6 +1536,24 @@ class ReaderFushiSource extends ReaderMediaSource {
     onSettingsChangedLive?.call();
   }
 
+  /// 悬停查词按住的键（默认 Shift，可改 Ctrl / Alt；见 [HoverLookupModifier]）。阅读器 /
+  /// 歌词 / 漫画 / 视频字幕 / 字幕列表 / 网页档站点页面共用。
+  HoverLookupModifier get hoverLookupModifier =>
+      HoverLookupModifier.fromStorage(
+        getPreference<String>(
+          key: kHoverLookupModifierPrefKey,
+          defaultValue: HoverLookupModifier.shift.storageKey,
+        ),
+      );
+
+  Future<void> setHoverLookupModifier(HoverLookupModifier value) async {
+    await setPreference<String>(
+      key: kHoverLookupModifierPrefKey,
+      value: value.storageKey,
+    );
+    onSettingsChangedLive?.call();
+  }
+
   /// 0 = skip by sentence (default), 5/10/15/30 = skip by N seconds.
   int get skipActionSeconds =>
       getPreference<int>(key: 'skip_action_seconds', defaultValue: 0);
@@ -1621,6 +1652,62 @@ class ReaderFushiSource extends ReaderMediaSource {
   Future<void> setWheelPageTurnInterval(int value) async {
     await (readerSettings?.setWheelPageTurnInterval(value) ??
         setPreference<int>(key: 'wheel_page_turn_interval', value: value));
+  }
+
+  /// 翻页动画效果（只在翻页模式生效；小说默认淡入淡出）。落盘 key 与
+  /// [ReaderSettings.pageTurnAnimation] 同一个，`readerSettings` 为 null 的旁路
+  /// entry point 走偏好表兜底。
+  PageTurnAnimation get pageTurnAnimation =>
+      readerSettings?.pageTurnAnimation ??
+      PageTurnAnimation.fromKey(
+        getPreference<String?>(
+          key: ReaderSettings.pageTurnAnimationKey,
+          defaultValue: null,
+        ),
+        fallback: ReaderSettings.defaultPageTurnAnimation,
+      );
+
+  Future<void> setPageTurnAnimation(PageTurnAnimation value) async {
+    await (readerSettings?.setPageTurnAnimation(value) ??
+        setPreference<String>(
+          key: ReaderSettings.pageTurnAnimationKey,
+          value: value.key,
+        ));
+  }
+
+  PageTurnAnimationSpeed get pageTurnAnimationSpeed {
+    final ReaderSettings? settings = readerSettings;
+    if (settings != null) return settings.pageTurnAnimationSpeed;
+    final String? stored = getPreference<String?>(
+      key: ReaderSettings.pageTurnAnimationSpeedKey,
+      defaultValue: null,
+    );
+    return stored == null
+        ? ReaderSettings.defaultPageTurnAnimationSpeed
+        : PageTurnAnimationSpeed.fromKey(stored);
+  }
+
+  Future<void> setPageTurnAnimationSpeed(PageTurnAnimationSpeed value) async {
+    await (readerSettings?.setPageTurnAnimationSpeed(value) ??
+        setPreference<String>(
+          key: ReaderSettings.pageTurnAnimationSpeedKey,
+          value: value.key,
+        ));
+  }
+
+  bool get pageTurnFollowDrag =>
+      readerSettings?.pageTurnFollowDrag ??
+      getPreference<bool>(
+        key: ReaderSettings.pageTurnFollowDragKey,
+        defaultValue: ReaderSettings.defaultPageTurnFollowDrag,
+      );
+
+  Future<void> setPageTurnFollowDrag(bool value) async {
+    await (readerSettings?.setPageTurnFollowDrag(value) ??
+        setPreference<bool>(
+          key: ReaderSettings.pageTurnFollowDragKey,
+          value: value,
+        ));
   }
 
   /// 翻页滑动**灵敏度**（TODO-113 / BUG-2563），缩放 JS `_gestureEnd` 的距离阈值；
@@ -1963,6 +2050,16 @@ class ReaderFushiSource extends ReaderMediaSource {
     onSettingsChangedLive?.call();
   }
 
+  /// 歌词模式宽屏左右互换（`lyrics_panel_mirrored`，默认 `false`）。只影响
+  /// Flutter 覆盖层的布局，歌词页不用重载。
+  bool get lyricsPanelMirrored =>
+      readerSettings?.lyricsPanelMirrored ??
+      getPreference<bool>(key: 'lyrics_panel_mirrored', defaultValue: false);
+  Future<void> setLyricsPanelMirrored(bool v) async {
+    await (readerSettings?.setLyricsPanelMirrored(v) ??
+        setPreference<bool>(key: 'lyrics_panel_mirrored', value: v));
+  }
+
   /// 歌词模式逐字跟读渐变（`lyrics_sweep`，默认 `true`）。热更走
   /// `onSettingsChangedLive` → `_updateLyricsStyleLive` 换 body class。
   bool get lyricsSweep =>
@@ -1971,6 +2068,17 @@ class ReaderFushiSource extends ReaderMediaSource {
   Future<void> setLyricsSweep(bool v) async {
     await (readerSettings?.setLyricsSweep(v) ??
         setPreference<bool>(key: 'lyrics_sweep', value: v));
+    onSettingsChangedLive?.call();
+  }
+
+  /// 歌词模式灰显未朗读的原文（`lyrics_show_skipped_text`，默认 `true`）。热更走
+  /// `onSettingsChangedLive` → `_updateLyricsStyleLive` → `__lyricsSetShowSkipped`。
+  bool get lyricsShowSkippedText =>
+      readerSettings?.lyricsShowSkippedText ??
+      getPreference<bool>(key: 'lyrics_show_skipped_text', defaultValue: true);
+  Future<void> setLyricsShowSkippedText(bool v) async {
+    await (readerSettings?.setLyricsShowSkippedText(v) ??
+        setPreference<bool>(key: 'lyrics_show_skipped_text', value: v));
     onSettingsChangedLive?.call();
   }
 
@@ -1991,6 +2099,84 @@ class ReaderFushiSource extends ReaderMediaSource {
   Future<void> setAudioHighlightTextColor(int v) async {
     await (readerSettings?.setAudioHighlightTextColor(v) ??
         setPreference<int>(key: 'audio_highlight_text_color', value: v));
+    onSettingsChangedLive?.call();
+  }
+
+  /// 一类高亮的笔触配置（键见 [ReaderSettings.highlightStrokeConfig]）。
+  HighlightStrokeConfig highlightStrokeConfig(HighlightKind kind) {
+    final ReaderSettings? s = readerSettings;
+    if (s != null) return s.highlightStrokeConfig(kind);
+    final String p = kind.prefPrefix;
+    final HighlightStrokeConfig d = kind.defaults;
+    return HighlightStrokeConfig(
+      style: HighlightStrokeStyle.fromWire(
+        getPreference<String>(key: '${p}_style', defaultValue: d.style.wireName),
+      ),
+      thickness: getPreference<double>(
+        key: '${p}_thickness',
+        defaultValue: d.thickness,
+      ),
+      opacity: getPreference<double>(
+        key: '${p}_opacity',
+        defaultValue: d.opacity,
+      ),
+      coverRuby: getPreference<bool>(
+        key: '${p}_cover_ruby',
+        defaultValue: d.coverRuby,
+      ),
+      roughness: getPreference<double>(
+        key: '${p}_roughness',
+        defaultValue: d.roughness,
+      ),
+      animate: getPreference<bool>(
+        key: '${p}_animate',
+        defaultValue: d.animate,
+      ),
+    );
+  }
+
+  /// 写一类高亮的笔触配置（设置页一次改一项也走这里，只写变了的键），写完热刷新正文。
+  Future<void> setHighlightStrokeConfig(
+    HighlightKind kind,
+    HighlightStrokeConfig next,
+  ) async {
+    final ReaderSettings? s = readerSettings;
+    if (s != null) {
+      await s.setHighlightStrokeConfig(kind, next);
+    } else {
+      final String p = kind.prefPrefix;
+      final HighlightStrokeConfig prev = highlightStrokeConfig(kind);
+      if (next.style != prev.style) {
+        await setPreference<String>(
+          key: '${p}_style',
+          value: next.style.wireName,
+        );
+      }
+      if (next.thickness != prev.thickness) {
+        await setPreference<double>(
+          key: '${p}_thickness',
+          value: next.thickness,
+        );
+      }
+      if (next.opacity != prev.opacity) {
+        await setPreference<double>(key: '${p}_opacity', value: next.opacity);
+      }
+      if (next.coverRuby != prev.coverRuby) {
+        await setPreference<bool>(
+          key: '${p}_cover_ruby',
+          value: next.coverRuby,
+        );
+      }
+      if (next.roughness != prev.roughness) {
+        await setPreference<double>(
+          key: '${p}_roughness',
+          value: next.roughness,
+        );
+      }
+      if (next.animate != prev.animate) {
+        await setPreference<bool>(key: '${p}_animate', value: next.animate);
+      }
+    }
     onSettingsChangedLive?.call();
   }
 
@@ -2295,6 +2481,16 @@ class ReaderFushiSource extends ReaderMediaSource {
   Future<void> setReaderPageColumns(int v) async {
     await (readerSettings?.setPageColumns(v) ??
         setPreference<int>(key: 'page_columns', value: v));
+    onSettingsChangedLive?.call();
+  }
+
+  // 默认与 [ReaderSettings.pageCrease] 同为 false。纯 CSS 键，只触发样式热下发。
+  bool get readerPageCrease =>
+      readerSettings?.pageCrease ??
+      getPreference<bool>(key: 'page_crease', defaultValue: false);
+  Future<void> setReaderPageCrease(bool v) async {
+    await (readerSettings?.setPageCrease(v) ??
+        setPreference<bool>(key: 'page_crease', value: v));
     onSettingsChangedLive?.call();
   }
 

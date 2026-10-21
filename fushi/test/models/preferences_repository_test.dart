@@ -7,6 +7,8 @@ import 'package:fushi_engine/ai/ai_feature.dart';
 import 'package:fushi_engine/ai/ai_provider_config.dart';
 import 'package:fushi/src/models/module_id.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
+import 'package:fushi/src/lookup/effective_lookup_size.dart'
+    show kLookupPopupDefaultHeight, kLookupPopupDefaultWidth;
 
 FushiDatabase _testDb() {
   return FushiDatabase.forTesting(
@@ -59,16 +61,19 @@ void main() {
       expect(repo.onboardingCompleted, true);
     });
 
-    test('module toggles default to true and round-trip', () async {
-      // 「功能模块」显隐默认全开——升级用户底栏不变（Never break userspace）。
+    test('module toggles default per module and round-trip', () async {
+      // 「功能模块」显隐默认开——升级用户底栏不变（Never break userspace）。复习
+      // （ModuleId.srs）出厂默认同样开（所有者 2026-10-16），但本安装的老 / 新用户
+      // 判定（settleSrsMiningTargetInstallDefault）还没跑过时按关读（老用户不提醒）。
       // 按 [ModuleId.values] 遍历而非手抄七个模块：加模块时本用例自动覆盖到它，
       // 也钉住「一个模块一个键」（同键复用会在写全 false 后被读回暴露）。
       for (final ModuleId module in ModuleId.values) {
         expect(
           repo.moduleEnabled(module),
-          true,
-          reason: '${module.name} 默认应为开',
+          module != ModuleId.srs,
+          reason: '${module.name} 的出厂默认不对',
         );
+        expect(module.defaultEnabled, isTrue);
       }
       for (final ModuleId module in ModuleId.values) {
         await repo.setModuleEnabled(module, false);
@@ -142,12 +147,12 @@ void main() {
       expect(repo.dictionaryFontSize, 16.0);
     });
 
-    test('popupMaxWidth defaults to 400.0', () {
-      expect(repo.popupMaxWidth, 400.0);
+    test('popupMaxWidth defaults to kLookupPopupDefaultWidth', () {
+      expect(repo.popupMaxWidth, kLookupPopupDefaultWidth);
     });
 
-    test('popupMaxHeight defaults to 360.0', () {
-      expect(repo.popupMaxHeight, 360.0);
+    test('popupMaxHeight defaults to kLookupPopupDefaultHeight', () {
+      expect(repo.popupMaxHeight, kLookupPopupDefaultHeight);
     });
 
     test('popupInstantScroll defaults to false (smooth/animated scroll)', () {
@@ -333,8 +338,8 @@ void main() {
       expect(repo.reverseNavigationBar, false);
     });
 
-    test('startupDefaultDictionaryTab defaults to false', () {
-      expect(repo.startupDefaultDictionaryTab, false);
+    test('startupModule defaults to null (first visible page)', () {
+      expect(repo.startupModule, isNull);
     });
 
     test('videoSubtitleListAutoScroll defaults to true (TODO-613)', () {
@@ -577,13 +582,47 @@ void main() {
       expect(repo.reverseNavigationBar, false);
     });
 
-    test('setStartupDefaultDictionaryTab persists bool', () async {
-      await repo.setStartupDefaultDictionaryTab(true);
+    test('setStartupModule persists module and default', () async {
+      await repo.setStartupModule(ModuleId.video);
 
       final repo2 = PreferencesRepository(db);
       await repo2.loadFromDb();
-      expect(repo2.startupDefaultDictionaryTab, true);
+      expect(repo2.startupModule, ModuleId.video);
       repo2.dispose();
+
+      await repo.setStartupModule(null);
+      final repo3 = PreferencesRepository(db);
+      await repo3.loadFromDb();
+      expect(repo3.startupModule, isNull);
+      repo3.dispose();
+    });
+
+    test('startupModule migrates legacy "open lookup on startup" switch',
+        () async {
+      // 升级前开了「启动时打开查词」、从没写过新键：启动页 = 查词。
+      await repo.setPref(
+        PreferencesRepository.legacyStartupDictionaryTabKey,
+        true,
+      );
+      final repo2 = PreferencesRepository(db);
+      await repo2.loadFromDb();
+      expect(repo2.startupModule, ModuleId.lookup);
+      repo2.dispose();
+
+      // 新键一旦写过（哪怕写回默认），旧开关不再生效。
+      await repo.setStartupModule(null);
+      final repo3 = PreferencesRepository(db);
+      await repo3.loadFromDb();
+      expect(repo3.startupModule, isNull);
+      repo3.dispose();
+    });
+
+    test('startupModule ignores legacy switch when it is off', () async {
+      await repo.setPref(
+        PreferencesRepository.legacyStartupDictionaryTabKey,
+        false,
+      );
+      expect(repo.startupModule, isNull);
     });
 
     test('yomitan api server prefs round-trip', () async {

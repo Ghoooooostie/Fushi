@@ -32,8 +32,9 @@ ModuleId? moduleOfHomeTab(HomeTab tab) => switch (tab) {
   HomeTab.video => ModuleId.video,
   HomeTab.browse => ModuleId.browse,
   HomeTab.dictionaries => ModuleId.lookup,
+  HomeTab.srs => ModuleId.srs,
   HomeTab.games => ModuleId.games,
-  HomeTab.browserExtension => ModuleId.browserExtension,
+  HomeTab.web => ModuleId.web,
 };
 
 /// 某个顶层 tab 此刻是否可达。`_selectTab` / 任何「点了要跳过去」的入口渲染判据
@@ -50,8 +51,9 @@ HomeTab? homeTabOfModule(ModuleId module) => switch (module) {
   ModuleId.video => HomeTab.video,
   ModuleId.browse => HomeTab.browse,
   ModuleId.lookup => HomeTab.dictionaries,
+  ModuleId.srs => HomeTab.srs,
   ModuleId.games => HomeTab.games,
-  ModuleId.browserExtension => HomeTab.browserExtension,
+  ModuleId.web => HomeTab.web,
   ModuleId.listening ||
   ModuleId.cardCreation ||
   ModuleId.services ||
@@ -99,6 +101,9 @@ ModuleId? moduleOfSettingsDestination(SettingsDestinationId id) => switch (id) {
   SettingsDestinationId.profiles => null,
   SettingsDestinationId.reading => null,
   SettingsDestinationId.lookup => null,
+  // 本机服务（Fushi API）刻意不挂模块门：它同时服务浏览器扩展、yomitan-api 客户端与
+  // 复习的 AnkiConnect 端点，移动端同样可用（见 app_model 启动处同款说明）。
+  SettingsDestinationId.localServices => null,
   SettingsDestinationId.storage => null,
   SettingsDestinationId.system => null,
   SettingsDestinationId.readerQuickSettings => null,

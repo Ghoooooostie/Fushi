@@ -39,7 +39,7 @@ void main() {
     final PreferencesRepository prefsRepo = PreferencesRepository(db);
     await prefsRepo.loadFromDb();
     final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_game_cover_menu_');
+        Directory.systemTemp.createTempSync('fushi_game_cover_menu_');
     addTearDown(() {
       try {
         tmpDir.deleteSync(recursive: true);
@@ -89,6 +89,9 @@ void main() {
         t.game_scrape,
         t.add_to_collection,
         t.tag_label,
+        // 私密（v122 作品级标记：不上传排行榜、不推 Bangumi）：与标签同属「每作品
+        // 归类」，紧随其后，与书架 / 视频卡同一条动作。
+        t.media_privacy_action,
         // 内容语言（内容字体链）：决定这个游戏的 hook 文本 / 查词卡词头用哪条字体
         // 链。hook 文本没有任何语言声明可读，用户指定是它唯一的真值来源，所以与
         // 标签同属「每游戏配置」，紧随其后。
@@ -179,7 +182,7 @@ void main() {
 
   testWidgets('有封面文件时卡片渲染封面图而非占位图标', (WidgetTester tester) async {
     final Directory dir =
-        Directory.systemTemp.createTempSync('hibiki_game_cover_render_');
+        Directory.systemTemp.createTempSync('fushi_game_cover_render_');
     addTearDown(() {
       try {
         dir.deleteSync(recursive: true);

@@ -41,7 +41,7 @@ List<String> effectiveFontTargetFamilies(
   for (final FontPreviewCandidate candidate in enabledInOrder) {
     final String? family = candidate.family;
     if (family == null || family.isEmpty) continue;
-    if (target == FontTarget.gameLookup &&
+    if (fontTargetIsNativeOverlay(target) &&
         !AppFontLoader.nativeOverlayCanUse(candidate.path)) {
       continue;
     }
@@ -51,10 +51,26 @@ List<String> effectiveFontTargetFamilies(
   return families;
 }
 
+/// 这个用途是否由 Windows native 分层窗（`FloatingLyricWindow`，DirectWrite）
+/// 消费：只吃第一条可用的 `.ttf/.otf/.ttc`。
+bool fontTargetIsNativeOverlay(FontTarget target) => switch (target) {
+  FontTarget.gameLookup || FontTarget.floatingLyric => true,
+  FontTarget.appUi ||
+  FontTarget.body ||
+  FontTarget.dictionary ||
+  FontTarget.videoSubtitle ||
+  FontTarget.srsCard => false,
+};
+
 /// 这个用途是否只取链上第一款字体（其余条目对它无效）。
 bool fontTargetUsesFirstFontOnly(FontTarget target) => switch (target) {
-  FontTarget.videoSubtitle || FontTarget.gameLookup => true,
-  FontTarget.appUi || FontTarget.body || FontTarget.dictionary => false,
+  FontTarget.videoSubtitle ||
+  FontTarget.gameLookup ||
+  FontTarget.floatingLyric => true,
+  FontTarget.appUi ||
+  FontTarget.body ||
+  FontTarget.dictionary ||
+  FontTarget.srsCard => false,
 };
 
 /// 各用途的实时样张：照着真实表面的形态画一块缩样，用该用途**实际生效**的字体链
@@ -88,6 +104,8 @@ class FontTargetPreview extends StatelessWidget {
     final ColorScheme scheme = Theme.of(context).colorScheme;
     final String hint = families.isEmpty
         ? t.font_preview_default_font
+        // 格式限制提示文案点名「游戏文本浮窗」，只挂在 gameLookup 上；
+        // floatingLyric 同样只认 TTF/OTF/TTC，待有专属文案再补。
         : target == FontTarget.gameLookup
         ? '${t.font_preview_first_only_hint} ${t.font_preview_game_overlay_hint}'
         : fontTargetUsesFirstFontOnly(target)
@@ -107,16 +125,15 @@ class FontTargetPreview extends StatelessWidget {
                 families: families,
                 sampleText: sampleText,
               ),
-              FontTarget.dictionary => _DictionaryPreview(families: families),
+              FontTarget.dictionary ||
+              FontTarget.srsCard => _DictionaryPreview(families: families),
               FontTarget.videoSubtitle => _SubtitlePreview(
                 families: families,
                 style: subtitleStyle,
                 sampleText: sampleText,
               ),
-              FontTarget.gameLookup => _GameOverlayPreview(
-                families: families,
-                sampleText: sampleText,
-              ),
+              FontTarget.gameLookup || FontTarget.floatingLyric =>
+                _GameOverlayPreview(families: families, sampleText: sampleText),
             },
           ),
         ),

@@ -40,6 +40,7 @@ import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/ocr/system_ocr_channel.dart';
 import 'package:fushi/src/ocr/system_ocr_setup_dialog.dart';
 import 'package:fushi/src/platform/mobile/android_picture_in_picture.dart';
+import 'package:fushi/src/platform/sensor_housing_edge.dart';
 import 'package:fushi/src/reader/reader_desktop_chrome.dart';
 import 'package:fushi/src/reader/reader_floating_ball.dart';
 import 'package:fushi/src/sync/desktop_lookup_service.dart';
@@ -92,17 +93,12 @@ Rect appFloatingBallViewport(
   EdgeInsets viewPadding, {
   AxisDirection? sensorHousingEdge,
 }) {
-  final double left = sensorHousingEdge == AxisDirection.right
-      ? 0
-      : viewPadding.left;
-  final double right = sensorHousingEdge == AxisDirection.left
-      ? 0
-      : viewPadding.right;
+  final EdgeInsets inset = obstructedSafeInsets(viewPadding, sensorHousingEdge);
   return Rect.fromLTRB(
-    left,
-    viewPadding.top,
-    window.width - right,
-    window.height - viewPadding.bottom,
+    inset.left,
+    inset.top,
+    window.width - inset.right,
+    window.height - inset.bottom,
   );
 }
 
@@ -128,6 +124,9 @@ Map<String, String> floatingBallNativeLabels() => <String, String>{
   'ocr_no_text': t.floating_ball_ocr_empty,
   'ocr_model_unavailable': t.floating_ball_ocr_model_unavailable,
   'ocr_failed': t.floating_ball_ocr_failed,
+  // 截屏确认框的宿主 Activity 被系统静默拦下（vivo「后台弹出界面」等）时的提示
+  // （BUG-3603，原生 ScreenCaptureRequestActivity.LABEL_LAUNCH_BLOCKED）。
+  'ocr_launch_blocked': t.floating_ball_ocr_launch_blocked,
 };
 
 /// 全局按钮的图标：应用内球与原生系统球共用这一张表（FushiIcons 语义图标；
@@ -379,6 +378,8 @@ class _AppFloatingBallHostState extends ConsumerState<AppFloatingBallHost>
 
   void _onSensorHousingEdge(AxisDirection? edge) {
     if (!mounted || edge == _sensorHousingEdge) return;
+    // 同步给全应用共享的一份（视频字幕列表侧栏等贴边布局也要按它让位）。
+    sensorHousingEdge.value = edge;
     setState(() => _sensorHousingEdge = edge);
   }
 
@@ -862,6 +863,14 @@ class _AppFloatingBallHostState extends ConsumerState<AppFloatingBallHost>
           },
           colors: colors,
         );
+    // 原生取帧路径的诊断（HDR 显示器走 scRGB 取帧 / 为什么回落 GDI，BUG-3480）。
+    final String? captureDiagnostic = capture.diagnostic;
+    if (captureDiagnostic != null) {
+      ErrorLogService.instance.logDiagnostic(
+        'floating_ball.screen_ocr_capture',
+        captureDiagnostic,
+      );
+    }
     final Uint8List? png = capture.png;
     final Rect? screen = capture.screen;
     if (png == null || screen == null) {
@@ -943,6 +952,10 @@ class _AppFloatingBallHostState extends ConsumerState<AppFloatingBallHost>
   }
 
   /// 系统球 / 常驻通知上点了关闭：服务已经自己停了，把「应用外」开关同步关掉。
+  ///
+  /// 「不自动恢复」时连「应用内显示」一起关：Fushi 在前台时系统球让位给应用内球
+  /// （BUG-3201），用户眼里两者是同一颗球，选了不恢复却在回到 Fushi 时又看到它，
+  /// 违背设置提示「关掉后要在这里重新打开」，与应用内球的「关闭」也不对称。
   void _onSystemBallClosedByUser() {
     unawaited(() async {
       // 清掉原生的持久标记，免得下次启动再处理一遍。
@@ -958,6 +971,10 @@ class _AppFloatingBallHostState extends ConsumerState<AppFloatingBallHost>
         return;
       }
       await prefs.setFloatingBallSystem(false);
+      if (!prefs.floatingBallAutoRestore.restoresInApp &&
+          prefs.floatingBallInApp) {
+        await prefs.setFloatingBallInApp(false);
+      }
     }());
   }
 

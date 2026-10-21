@@ -16,12 +16,12 @@ import 'package:media_kit_video/media_kit_video.dart'
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/models.dart';
 import 'package:fushi/src/focus/page_focus_ownership.dart';
+import 'package:fushi/src/utils/components/fushi_adaptive_action_strip.dart';
+import 'package:fushi/src/utils/components/fushi_floating_toolbar.dart'
+    show fushiTopBarActionsBudget;
 import 'package:fushi/src/focus/panel_focus_scope.dart';
-import 'package:fushi/src/focus/webview_key_bridge.dart';
 import 'package:fushi/src/media/sources/reader_fushi_source.dart';
 import 'package:fushi_engine/media/video/video_book_repository.dart';
-import 'package:fushi/src/media/video/video_chrome_colors.dart'
-    show videoChromeNeutralForeground;
 import 'package:fushi/src/media/video/video_m3e_chrome.dart';
 import 'package:fushi/src/media/video/video_m3e_panel_theme.dart';
 import 'package:fushi/src/media/video/video_player_controller.dart';
@@ -31,6 +31,9 @@ import 'package:fushi/src/media/video/video_subtitle_overlay.dart';
 import 'package:fushi/src/media/video/video_watch_tracker.dart';
 import 'package:fushi/src/media/video/web_video_bridge.dart';
 import 'package:fushi/src/media/video/web_video_hosting.dart';
+import 'package:fushi/src/media/video/web_video_session.dart';
+import 'package:fushi/src/media/video/underlay_composition.dart'
+    show underlayCompositionSupported;
 import 'package:fushi/src/media/video/web_video_shaders.dart';
 import 'package:fushi/src/media/video/video_shader_tier.dart';
 import 'package:fushi/src/lookup/global_lookup_controller.dart';
@@ -56,7 +59,7 @@ import 'package:fushi/src/pages/implementations/dictionary_popup_layer.dart';
 import 'package:fushi/src/pages/implementations/stat_activity.dart'
     show statTodayKey;
 import 'package:fushi/src/pages/implementations/video_fushi_page.dart'
-    show resolveVideoLookupAnchorCue, subtitleLookupTerm;
+    show VideoFushiPage, resolveVideoLookupAnchorCue, subtitleLookupTerm;
 import 'package:fushi/src/shortcuts/input_binding.dart';
 import 'package:fushi/src/shortcuts/shortcut_action.dart';
 import 'package:fushi/src/shortcuts/window_fullscreen_hosts.dart'
@@ -78,16 +81,7 @@ import 'package:fushi/src/utils/components/fushi_loading_view.dart';
 import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
 import 'package:fushi/src/utils/components/fushi_typography.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
-
-/// JS→Dart 单一 handler 名（glue 的 `HANDLER`），载荷按 `type` 分派。
-const String kWebVideoJsHandler = 'fushiWebVideo';
-
-/// WebView2 持焦时截获视频快捷键交回 Dart 的桥 handler 名。
-const String kWebVideoKeyBridgeHandler = 'fushiWebVideoKeys';
-
-/// 流媒体书断点写库的最小位置（与视频页远端分支 `_persistRemotePosition` 的 BUG-996 阈值
-/// 同口径）：播放头不足 5 秒不算「看过」，不覆盖已有进度。
-const int kWebVideoMinPersistPositionMs = 5000;
+import 'package:fushi/src/webview/web_payload_limits.dart';
 
 /// 内置网页播放器（Windows）：在 WebView2 里由站点自己的播放器播放（Netflix / YouTube /
 /// TVer / B 站……），Fushi 只做「围绕视频」的那一层——字幕列表面板、画面字幕叠层逐词查词、
@@ -127,33 +121,13 @@ class WebVideoFushiPage extends ConsumerStatefulWidget {
   /// 传 false 只在 fork 将来有 HWND 窗口宿主模式（不经捕获）时才有意义。
   final bool softwareDrm;
 
-  /// 可捕获 WebView2 环境单例：`--disable-direct-composition`。fork 的显示链路本身就是 WGC 捕获，
-  /// Chromium 把 DRM 视频放进 DComp overlay 时纹理里是黑的（真机：默认环境视频区纯黑、加该参数
-  /// 清晰可见）。environment 级参数不能运行期切换，且同 user data folder 的多个 env 参数必须逐字
-  /// 一致，故用独立目录（独立 cookie 罐：站点登录在网页播放器里做一次即可）。
-  static Future<WebViewEnvironment>? _capturableEnv;
+  /// 可捕获（内置档）WebView2 环境：与原生播放器页的网页档共用同一份单例（同一 user data
+  /// folder 只能有一套浏览器参数），实现见 [webVideoCapturableEnvironment]。
+  static String capturableUserDataFolder() =>
+      webVideoCapturableUserDataFolder();
 
-  /// 目录：测试 runner 给了 `FUSHI_WEBVIEW2_USER_DATA_FOLDER` 就放它旁边（隔离），否则
-  /// `%LOCALAPPDATA%\Fushi\WebVideoWebView2`（与 runner 的 OverlayUserDataFolder 命名法一致）。
-  static String capturableUserDataFolder() {
-    final String? testFolder =
-        Platform.environment['FUSHI_WEBVIEW2_USER_DATA_FOLDER'];
-    if (testFolder != null && testFolder.isNotEmpty) {
-      return '$testFolder-webvideo';
-    }
-    final String base = Platform.environment['LOCALAPPDATA'] ?? '.';
-    return '$base\\Fushi\\WebVideoWebView2';
-  }
-
-  static Future<WebViewEnvironment> capturableEnvironment() {
-    return _capturableEnv ??= WebViewEnvironment.create(
-      settings: WebViewEnvironmentSettings(
-        userDataFolder: capturableUserDataFolder(),
-        additionalBrowserArguments:
-            '--autoplay-policy=no-user-gesture-required --disable-direct-composition',
-      ),
-    );
-  }
+  static Future<WebViewEnvironment> capturableEnvironment() =>
+      webVideoCapturableEnvironment();
 
   /// 打开本页的唯一入口：路由层包 [FushiAppUiScaleNeutralizer]（WebView2 是平台纹理，
   /// 落在缩放画布里会被栅格化再放大 → 糊；与 `VideoFushiPage.neutralized` 同理）。
@@ -171,32 +145,11 @@ class WebVideoFushiPage extends ConsumerStatefulWidget {
     ),
   );
 
-  /// 窗口宿主档（4K）环境：**不带** `--disable-direct-composition`（硬件 PlayReady 的受保护输出
-  /// 要走 DComp overlay），带 fork 的窗口宿主哨兵；浏览器参数与可捕获环境不同 → 必须独立 user
-  /// data folder（同目录的环境参数必须逐字一致）→ 独立 cookie 罐，登录态由页面从内置档复制。
-  static Future<WebViewEnvironment>? _windowedEnv;
+  /// 窗口宿主档（4K）环境：同上，见 [webVideoWindowedEnvironment]。
+  static String windowedUserDataFolder() => webVideoWindowedUserDataFolder();
 
-  static String windowedUserDataFolder() {
-    // 硬件 PlayReady（MF CDM）要求 profile 住在 %LOCALAPPDATA% 下：真机实测 profile 放在仓库目录
-    // （itest 隔离根）时 Netflix 报 D7702-1003，同一份代码 profile 挪到 LOCALAPPDATA 即起播；
-    // 生产默认路径本来就在 LOCALAPPDATA（capturableUserDataFolder），itest 用此覆盖指到
-    // LOCALAPPDATA 下的独立测试目录（不碰用户真实 profile）。
-    final String? override =
-        Platform.environment['FUSHI_WEB_VIDEO_4K_USER_DATA_FOLDER'];
-    if (override != null && override.isNotEmpty) return override;
-    return '${capturableUserDataFolder()}-4k';
-  }
-
-  static Future<WebViewEnvironment> windowedEnvironment() {
-    return _windowedEnv ??= WebViewEnvironment.create(
-      settings: WebViewEnvironmentSettings(
-        userDataFolder: windowedUserDataFolder(),
-        additionalBrowserArguments:
-            '--autoplay-policy=no-user-gesture-required '
-            '$kWebVideoWindowedHostingSentinel',
-      ),
-    );
-  }
+  static Future<WebViewEnvironment> windowedEnvironment() =>
+      webVideoWindowedEnvironment();
 
   /// 集成测试钩子（debug/profile only，assert 注册；与 `HomePage.debugSelectTab` 同范式）：
   /// 离屏 / 非焦点下焦点驱动偶发不触发，真机验证用这些直达读状态 / 开列表 / seek。
@@ -340,6 +293,9 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
   String? _activeTrackKey;
   String _videoKey = '';
   WebVideoPlaybackState? _state;
+
+  /// WebView 自己报的当前地址（导航回调给的，可信）；页面上报的 href 对它核主机。
+  String? _webViewUrl;
 
   /// M3E 顶栏胶囊的显隐（[VideoM3eChromeSlide] 的输入）：本页顶栏只随全屏整体卸载，
   /// 挂载即可见；每次（重新）挂载都从上方弹入。
@@ -575,20 +531,14 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
       GlobalLookupController.instance.onHidden = _onGlobalLookupHidden;
       _ownsGlobalLookupOnHidden = true;
     }
-    final List<String> assets = <String>[
-      // 垫片必须排第一：站点脚本一跑就会抓走原始 EME 函数引用。
-      if (_softwareDrm) kWebVideoEmeShimAsset,
-      ...webVideoBridgeAssetsForHost(uri.host),
-      kWebVideoAdaptersAsset,
-      kWebVideoProvidersAsset,
-      kWebVideoGlueAsset,
-      if (_windowed) kWebVideoDomSubtitlesAsset,
-    ];
-    final List<String> sources = <String>[];
-    for (final String asset in assets) {
-      sources.add(await rootBundle.loadString(asset));
-    }
-    sources.add(_keyBridgeScript());
+    // 注入脚本 / 环境 / cookie 与原生播放器页的网页档同一套实现（web_video_session.dart）。
+    final UnmodifiableListView<UserScript> scripts =
+        await loadWebVideoUserScripts(
+          softwareDrm: _softwareDrm,
+          hideNativeSubtitles: _hideNativeSubtitles,
+          domOverlay: _windowed,
+          keyBridgeScript: webVideoKeyBridgeScript(_appModel.shortcutRegistry),
+        );
     _env = _windowed
         ? await WebVideoFushiPage.windowedEnvironment()
         : await WebVideoFushiPage.capturableEnvironment();
@@ -599,36 +549,9 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
     unawaited(_refreshMinePending());
     setState(() {
       _row = row;
-      _userScripts = UnmodifiableListView<UserScript>(<UserScript>[
-        for (final String src in sources)
-          UserScript(
-            source: src,
-            injectionTime: UserScriptInjectionTime.AT_DOCUMENT_START,
-          ),
-      ]);
+      _userScripts = scripts;
     });
     WidgetsBinding.instance.addPostFrameCallback((_) => _seedWarmPopup());
-  }
-
-  /// WebView2 持焦期间截获视频作用域全部键盘绑定（token 直接取注册表序列化形式，
-  /// 用户改绑后重开本页即生效），交回 [_onKeyToken] 走同一份动作表。
-  String _keyBridgeScript() {
-    final Set<String> tokens = <String>{};
-    for (final ShortcutAction action in <ShortcutAction>{
-      ...ShortcutAction.actionsForScope(ShortcutScope.video),
-      ShortcutAction.globalBack,
-    }) {
-      for (final InputBinding b
-          in _appModel.shortcutRegistry.bindingsFor(action).keyboardBindings) {
-        tokens.add(b.serialize());
-      }
-    }
-    return webViewKeyBridgeScript(
-      handlerName: kWebVideoKeyBridgeHandler,
-      keys: tokens.toList(growable: false),
-      forwardRepeats: false,
-      stopPropagation: true,
-    );
   }
 
   void _seedWarmPopup() {
@@ -687,7 +610,10 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
   }
 
   void _onState(Map<dynamic, dynamic> msg) {
-    final WebVideoPlaybackState? state = parseWebVideoStatePayload(msg);
+    final WebVideoPlaybackState? state = parseWebVideoStatePayload(
+      msg,
+      webViewUrl: _webViewUrl,
+    );
     if (state == null) return;
     final bool videoChanged = state.videoKey != _videoKey;
     final bool fullscreenChanged = state.fullscreen != _fullscreen;
@@ -841,8 +767,6 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
             db.getPref(videoWatchCoveragePrefKey(widget.bookUid)),
         saveCoverage: (String json) =>
             db.setPref(videoWatchCoveragePrefKey(widget.bookUid), json),
-        markCompleted: (String uid) =>
-            db.markVideoCompleted(uid, DateTime.now()),
       )..attach(_controller);
       _watchTracker = tracker;
     }
@@ -1291,47 +1215,38 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
   Future<void> _copyLoginCookiesFromBuiltin(Uri uri) async {
     final WebViewEnvironment? to = _env;
     if (to == null) return;
-    try {
-      final WebViewEnvironment from =
-          await WebVideoFushiPage.capturableEnvironment();
-      final WebUri url = WebUri('${uri.scheme}://${uri.host}/');
-      final List<Cookie> cookies = await CookieManager.instance(
-        webViewEnvironment: from,
-      ).getCookies(url: url);
-      final CookieManager dst = CookieManager.instance(webViewEnvironment: to);
-      for (final Cookie c in cookies) {
-        await dst.setCookie(
-          url: url,
-          name: c.name,
-          value: c.value.toString(),
-          domain: c.domain,
-          path: c.path ?? '/',
-          // 会话 cookie 不带 expires（fork 已把 CDP 的秒转成毫秒、会话回 null）。
-          expiresDate: c.isSessionOnly == true ? null : c.expiresDate,
-          isSecure: c.isSecure,
-          isHttpOnly: c.isHttpOnly,
-        );
-      }
-    } catch (e) {
-      ErrorLogService.instance.log('web_video', 'cookie copy: $e');
-    }
+    await copyWebVideoLoginCookies(uri: uri, to: to);
   }
 
-  /// 切宿主档 / 交接制卡：同一本书原地重开本页。
+  /// 切宿主档 / 交接制卡：同一本书原地重开。
+  ///
+  /// 切到 4K 窗口档且引擎能做底层合成时，交给原生播放器页（[VideoFushiPage] 的网页档：
+  /// 站点画面垫在原生控件下面，控件与本地视频完全同一套）；否则（内置档 / 原版引擎上的
+  /// 窗口档）原地重开本页。
   Future<void> _reopen({
     required WebVideoHosting hosting,
     bool autoRunMineQueue = false,
   }) async {
     if (!mounted) return;
+    final bool nativePage =
+        hosting == WebVideoHosting.windowed &&
+        !autoRunMineQueue &&
+        await underlayCompositionSupported();
+    if (!context.mounted) return;
     await Navigator.of(context).pushReplacement(
       adaptivePageRoute<void>(
         context: context,
-        builder: (_) => WebVideoFushiPage.neutralized(
-          bookUid: widget.bookUid,
-          repo: widget.repo,
-          hosting: hosting,
-          autoRunMineQueue: autoRunMineQueue,
-        ),
+        builder: (_) => nativePage
+            ? VideoFushiPage.neutralized(
+                bookUid: widget.bookUid,
+                repo: widget.repo,
+              )
+            : WebVideoFushiPage.neutralized(
+                bookUid: widget.bookUid,
+                repo: widget.repo,
+                hosting: hosting,
+                autoRunMineQueue: autoRunMineQueue,
+              ),
       ),
     );
   }
@@ -1446,66 +1361,67 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
     if (!mounted || _overlayInert) return const SizedBox.shrink();
     // BUG-2953：浮层自带导航层，弹窗里唤出的菜单画在浮层之上（见 LookupOverlayNavigator）。
     return LookupOverlayNavigator(
-     child: FushiAppUiScaleNeutralizer(
-      child: Theme(
-        data: _appModel.overrideDictionaryTheme ?? Theme.of(overlayContext),
-        child: LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-            if (!mounted || _overlayInert) return const SizedBox.shrink();
-            final Size screen = Size(
-              constraints.maxWidth,
-              constraints.maxHeight,
-            );
-            return Stack(
-              clipBehavior: Clip.none,
-              children: <Widget>[
-                if (shouldShowLookupDismissBarrier(
-                  hasVisiblePopup: _popup.hasVisiblePopup,
-                  isSearching: _popup.isSearchingUi,
-                  hiddenByDialog: lookupPopupHiddenByDialog,
-                ))
-                  Positioned.fill(
-                    child: LookupDismissBarrier(
-                      onTapDismiss: _onDismissBarrierTap,
-                      onSwipeDismiss: () =>
-                          _popNestedPopupAt(_popup.lastVisibleIndex),
-                      swipeEnabled:
-                          ReaderFushiSource.instance.enableSwipeToClose,
-                      // BUG-2770：触摸半边未设置时所有平台默认开。
-                      touchSwipeEnabled:
-                          ReaderFushiSource.instance.enableTouchSwipeToClose,
-                      sensitivity:
-                          ReaderFushiSource.instance.dismissSwipeSensitivity,
-                      // 弹窗可见时 barrier 吃掉全部指针，页面根收不到——「浮窗矩形
-                      // 之外」按鼠标非主键这半边只能在这里接（见钩子文档）。
-                      onNonPrimaryButtonDown: onDismissBarrierNonPrimaryButton,
+      child: FushiAppUiScaleNeutralizer(
+        child: Theme(
+          data: _appModel.overrideDictionaryTheme ?? Theme.of(overlayContext),
+          child: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              if (!mounted || _overlayInert) return const SizedBox.shrink();
+              final Size screen = Size(
+                constraints.maxWidth,
+                constraints.maxHeight,
+              );
+              return Stack(
+                clipBehavior: Clip.none,
+                children: <Widget>[
+                  if (shouldShowLookupDismissBarrier(
+                    hasVisiblePopup: _popup.hasVisiblePopup,
+                    isSearching: _popup.isSearchingUi,
+                    hiddenByDialog: lookupPopupHiddenByDialog,
+                  ))
+                    Positioned.fill(
+                      child: LookupDismissBarrier(
+                        onTapDismiss: _onDismissBarrierTap,
+                        onSwipeDismiss: () =>
+                            _popNestedPopupAt(_popup.lastVisibleIndex),
+                        swipeEnabled:
+                            ReaderFushiSource.instance.enableSwipeToClose,
+                        // BUG-2770：触摸半边未设置时所有平台默认开。
+                        touchSwipeEnabled:
+                            ReaderFushiSource.instance.enableTouchSwipeToClose,
+                        sensitivity:
+                            ReaderFushiSource.instance.dismissSwipeSensitivity,
+                        // 弹窗可见时 barrier 吃掉全部指针，页面根收不到——「浮窗矩形
+                        // 之外」按鼠标非主键这半边只能在这里接（见钩子文档）。
+                        onNonPrimaryButtonDown:
+                            onDismissBarrierNonPrimaryButton,
+                      ),
                     ),
-                  ),
-                if (_popup.isSearchingUi && _popup.pendingRect != null)
-                  buildPopupLoadingPlaceholder(
-                    rect: _popup.pendingRect!,
-                    screen: screen,
-                  ),
-                for (int i = 0; i < _popup.entries.length; i++)
-                  buildNestedPopupLayer(
-                    index: i,
-                    screen: screen,
-                    controller: _popup,
-                    onPush: (String text, Rect rect) => pushNestedPopup(
-                      query: text,
-                      selectionRect: rect,
+                  if (_popup.isSearchingUi && _popup.pendingRect != null)
+                    buildPopupLoadingPlaceholder(
+                      rect: _popup.pendingRect!,
+                      screen: screen,
+                    ),
+                  for (int i = 0; i < _popup.entries.length; i++)
+                    buildNestedPopupLayer(
+                      index: i,
+                      screen: screen,
                       controller: _popup,
-                      autoRead: true,
+                      onPush: (String text, Rect rect) => pushNestedPopup(
+                        query: text,
+                        selectionRect: rect,
+                        controller: _popup,
+                        autoRead: true,
+                      ),
+                      onPop: _popNestedPopupAt,
                     ),
-                    onPop: _popNestedPopupAt,
-                  ),
-                ...buildParkedRealmLayers(screen: screen, controller: _popup),
-              ],
-            );
-          },
+                  ...buildParkedRealmLayers(screen: screen, controller: _popup),
+                ],
+              );
+            },
+          ),
         ),
       ),
-     ),
     );
   }
 
@@ -1659,10 +1575,11 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
     WidgetsBinding.instance.addPostFrameCallback((_) => _syncPopupOverlay());
     final ColorScheme cs = Theme.of(context).colorScheme;
     final bool m3e = videoM3eChrome(context);
-    // 失败 / 加载态的页底：M3E（非墨水屏）与播放页同一块黑底，正文进面板中性深色主题；
+    // 失败 / 加载态的页底：M3E（非墨水屏）深色模式与播放页同一块黑底、日间模式是
+    // 面板方案的浅色 surface（[videoM3ePanelBackdrop]），正文进面板主题；
     // Apple / 墨水屏保持主题页底（墨水屏不铺大面积黑）。
     final Color? stateBackground = videoM3ePanelNeutral(context)
-        ? Colors.black
+        ? videoM3ePanelBackdrop(cs)
         : null;
     final String? fail = _failReason;
     if (fail != null) {
@@ -1715,30 +1632,33 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
                 child: ColoredBox(
                   color: Colors.black,
                   child: Stack(
-                  children: <Widget>[
-                    Positioned.fill(
-                      child: KeyedSubtree(
-                        key: _deathGuard.rebuildKey,
-                        child: _buildWebView(row, scripts),
-                      ),
-                    ),
-                    if (!_overlayHidden && !_windowed)
+                    children: <Widget>[
                       Positioned.fill(
-                        child: IgnorePointer(
-                          ignoring: _controller.currentCue == null,
-                          child: VideoSubtitleOverlay(
-                            controller: _controller,
-                            onCharTap: _handleSubtitleLookupTap,
-                            hoverAutoLookupEnabled:
-                                ReaderFushiSource.instance.hoverAutoLookup,
-                            hitTester: _subtitleHitTester,
-                            isCueFavorited: _isCueFavorited,
-                            fontFamily: _appModel.subtitleFontFamily,
-                          ),
+                        child: KeyedSubtree(
+                          key: _deathGuard.rebuildKey,
+                          child: _buildWebView(row, scripts),
                         ),
                       ),
-                  ],
-                ),
+                      if (!_overlayHidden && !_windowed)
+                        Positioned.fill(
+                          child: IgnorePointer(
+                            ignoring: _controller.currentCue == null,
+                            child: VideoSubtitleOverlay(
+                              controller: _controller,
+                              onCharTap: _handleSubtitleLookupTap,
+                              hoverAutoLookupEnabled:
+                                  ReaderFushiSource.instance.hoverAutoLookup,
+                              hoverLookupModifier: ReaderFushiSource
+                                  .instance
+                                  .hoverLookupModifier,
+                              hitTester: _subtitleHitTester,
+                              isCueFavorited: _isCueFavorited,
+                              fontFamily: _appModel.subtitleFontFamily,
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
                 ),
               ),
               if (_listVisible) _listPanelEntrance(_buildListPanel(cs)),
@@ -1821,7 +1741,10 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
     final List<WebVideoTrack> mine = _currentVideoTracks();
     return <PopupMenuEntry<String>>[
       if (mine.isEmpty)
-        PopupMenuItem<String>(enabled: false, child: Text(t.web_video_no_tracks)),
+        PopupMenuItem<String>(
+          enabled: false,
+          child: Text(t.web_video_no_tracks),
+        ),
       for (final WebVideoTrack track in mine)
         CheckedPopupMenuItem<String>(
           value: track.key,
@@ -1851,7 +1774,8 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
   /// 与原生播放器顶栏同一根弹簧；墨水屏 / 减弱动态效果下直接到位）。
   Widget _buildM3eTopBar(VideoBookRow? row) {
     final FushiTypography type = context.fushiType;
-    const Color fg = videoChromeNeutralForeground;
+    // 胶囊前景跟胶囊底走（随 app 日间 / 深色模式，墨水屏恒白）。
+    final Color fg = videoM3eChromeForegroundOf(context);
     final ({int done, int total})? progress = row == null
         ? null
         : _mineProgress;
@@ -1927,9 +1851,9 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
         ],
       ),
     );
-    final List<Widget> actions = row == null
-        ? const <Widget>[]
-        : _m3eTopBarActions();
+    final List<FushiAdaptiveAction> actions = row == null
+        ? const <FushiAdaptiveAction>[]
+        : _webBarActions(m3e: true);
     return SafeArea(
       bottom: false,
       child: SizedBox(
@@ -1940,27 +1864,41 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
             enabled: true,
             visible: _m3eChromeVisible,
             hiddenOffset: const Offset(0, -16),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: Align(
-                    alignment: AlignmentDirectional.centerStart,
-                    child: titlePill,
-                  ),
-                ),
-                if (actions.isNotEmpty) ...<Widget>[
-                  const SizedBox(width: 8),
-                  VideoM3eFloatingSurface(
-                    enabled: true,
-                    padding: const EdgeInsets.all(4),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      spacing: 2,
-                      children: actions,
+            // 动作默认全部平铺，窄窗放不下才收进「⋯」（用户 2026-10-06）：预算 =
+            // 整行宽扣掉返回胶囊、标题保底与间距，再扣动作胶囊自己的内边距 8。
+            child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints box) => Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Align(
+                      alignment: AlignmentDirectional.centerStart,
+                      child: titlePill,
                     ),
                   ),
+                  if (actions.isNotEmpty) ...<Widget>[
+                    const SizedBox(width: 8),
+                    VideoM3eFloatingSurface(
+                      enabled: true,
+                      padding: const EdgeInsets.all(4),
+                      child: FushiAdaptiveActionStrip(
+                        key: const ValueKey<String>('web-video-top-actions'),
+                        moreKey: const ValueKey<String>(
+                          'web-video-top-actions-more',
+                        ),
+                        foldFromStart: true,
+                        maxWidth:
+                            fushiTopBarActionsBudget(
+                              maxWidth: box.maxWidth,
+                              leadingCount: 1,
+                              hasTitle: true,
+                            ) -
+                            8,
+                        actions: actions,
+                      ),
+                    ),
+                  ],
                 ],
-              ],
+              ),
             ),
           ),
         ),
@@ -1968,78 +1906,223 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
     );
   }
 
-  /// M3E 右侧按钮组：与 Apple 顶栏同一组动作、同一顺序；状态型按钮激活时走 tonal
-  /// 色块（字幕列表已开 / 已隐藏站点字幕 / 超分已生效 / 已选轨 → secondary，停止
-  /// 制卡 → error），与原生播放器「中性面 + 关键处 tonal 色块」同口径。
-  List<Widget> _m3eTopBarActions() => <Widget>[
-    _m3eMenuButton<WebVideoHosting>(
-      menuKey: _hostingMenuKey,
-      tooltip: t.web_video_hosting_menu,
-      icon: _windowed ? FushiIcons.tv : FushiIcons.video,
-      itemBuilder: _hostingMenuItems,
-      onSelected: (WebVideoHosting h) => unawaited(_switchHosting(h)),
-    ),
-    if (!_windowed)
-      _m3eMenuButton<VideoShaderTier>(
-        menuKey: _shaderMenuKey,
-        tooltip: t.video_shader_tier_off,
-        icon: FushiIcons.ai,
-        selected: _shaderActive,
-        itemBuilder: _shaderMenuItems,
-        onSelected: (VideoShaderTier tier) => unawaited(_selectShaderTier(tier)),
+  /// 顶栏动作（M3E 与 Apple 同一组、同一顺序）。列表**末尾优先级最高**
+  /// （[FushiAdaptiveActionStrip.foldFromStart]）：窗口窄到放不下时先收进
+  /// 「⋯」的是最左的宿主 / 超分档，全屏与字幕列表最后收。[m3e] 决定平铺形态：
+  /// true = M3E 浮动胶囊里的 [VideoM3eIconButton]，false = Apple 顶栏的
+  /// [FushiIconButtonControl] / [FushiPopupMenuButton]。
+  List<FushiAdaptiveAction> _webBarActions({required bool m3e}) {
+    Widget iconButton({
+      required String tooltip,
+      required Widget icon,
+      required VoidCallback? onPressed,
+      bool selected = false,
+      VideoM3eButtonTone tone = VideoM3eButtonTone.neutral,
+    }) => m3e
+        ? _m3eIconAction(
+            tooltip: tooltip,
+            icon: icon,
+            onPressed: onPressed,
+            selected: selected,
+            tone: tone,
+          )
+        : FushiIconButtonControl(
+            tooltip: tooltip,
+            icon: icon,
+            onPressed: onPressed,
+          );
+
+    // 子菜单型动作收进「⋯」时就地展开：标题行 + 原菜单项（选中回调包成 value）。
+    List<PopupMenuEntry<VoidCallback>> folded<T>(
+      String header,
+      List<PopupMenuEntry<T>> entries,
+      void Function(T value) onSelected,
+    ) => <PopupMenuEntry<VoidCallback>>[
+      PopupMenuItem<VoidCallback>(
+        enabled: false,
+        height: 28,
+        child: Text(header, style: Theme.of(context).textTheme.labelSmall),
       ),
-    if (_windowed)
-      // 窗口宿主档不能录/截（画面归硬件 DRM）：队列交给内置档重放。
-      _m3eIconAction(
-        tooltip: t.web_video_mine_switch_builtin(count: _minePending),
-        icon: _minePendingGlyph(),
-        onPressed: _minePending == 0 ? null : _openBuiltinForMining,
-      )
-    else if (_mineRunning)
-      _m3eIconAction(
-        tooltip: t.web_video_mine_queue_stop,
-        icon: const FushiIcon(FushiIcons.stop),
-        tone: VideoM3eButtonTone.error,
-        onPressed: () => _mineStopRequested = true,
-      )
-    else
-      _m3eIconAction(
-        tooltip: t.web_video_mine_queue_run,
-        icon: _minePendingGlyph(),
-        onPressed: _minePending == 0 ? null : () => unawaited(_runMineQueue()),
+      for (final PopupMenuEntry<T> e in entries)
+        if (e is CheckedPopupMenuItem<T>)
+          CheckedPopupMenuItem<VoidCallback>(
+            value: () => onSelected(e.value as T),
+            checked: e.checked,
+            enabled: e.enabled,
+            child: e.child,
+          )
+        else if (e is PopupMenuItem<T>)
+          PopupMenuItem<VoidCallback>(
+            value: () => onSelected(e.value as T),
+            enabled: e.enabled && e.value != null,
+            child: e.child,
+          ),
+    ];
+
+    Widget menu<T>({
+      required GlobalKey<PopupMenuButtonState<T>> menuKey,
+      required String tooltip,
+      required IconData icon,
+      required PopupMenuItemBuilder<T> itemBuilder,
+      required PopupMenuItemSelected<T> onSelected,
+      bool selected = false,
+    }) => m3e
+        ? _m3eMenuButton<T>(
+            menuKey: menuKey,
+            tooltip: tooltip,
+            icon: icon,
+            itemBuilder: itemBuilder,
+            onSelected: onSelected,
+            selected: selected,
+          )
+        : FushiPopupMenuButton<T>(
+            tooltip: tooltip,
+            icon: FushiIcon(FushiIcons.resolve(icon, filled: selected)),
+            onSelected: onSelected,
+            itemBuilder: itemBuilder,
+          );
+
+    return <FushiAdaptiveAction>[
+      FushiAdaptiveAction(
+        icon: _windowed ? FushiIcons.tv : FushiIcons.video,
+        label: t.web_video_hosting_menu,
+        onPressed: null,
+        inlineBuilder: (BuildContext _) => menu<WebVideoHosting>(
+          menuKey: _hostingMenuKey,
+          tooltip: t.web_video_hosting_menu,
+          icon: _windowed ? FushiIcons.tv : FushiIcons.video,
+          itemBuilder: _hostingMenuItems,
+          onSelected: (WebVideoHosting h) => unawaited(_switchHosting(h)),
+        ),
+        foldedEntries: (BuildContext c) => folded<WebVideoHosting>(
+          t.web_video_hosting_menu,
+          _hostingMenuItems(c),
+          (WebVideoHosting h) => unawaited(_switchHosting(h)),
+        ),
       ),
-    _m3eMenuButton<String>(
-      menuKey: _trackMenuKey,
-      tooltip: t.web_video_track_menu,
-      icon: FushiIcons.subtitles,
-      selected: _activeTrackKey != null,
-      itemBuilder: _trackMenuItems,
-      onSelected: _selectTrack,
-    ),
-    _m3eIconAction(
-      tooltip: t.web_video_hide_native_subtitles,
-      icon: FushiIcon(
-        _hideNativeSubtitles
+      if (!_windowed)
+        FushiAdaptiveAction(
+          icon: FushiIcons.ai,
+          label: t.video_shader_tier_off,
+          onPressed: null,
+          selected: _shaderActive,
+          inlineBuilder: (BuildContext _) => menu<VideoShaderTier>(
+            menuKey: _shaderMenuKey,
+            tooltip: t.video_shader_tier_off,
+            icon: FushiIcons.ai,
+            selected: _shaderActive,
+            itemBuilder: _shaderMenuItems,
+            onSelected: (VideoShaderTier tier) =>
+                unawaited(_selectShaderTier(tier)),
+          ),
+          foldedEntries: (BuildContext c) => folded<VideoShaderTier>(
+            t.video_shader_tier_off,
+            _shaderMenuItems(c),
+            (VideoShaderTier tier) => unawaited(_selectShaderTier(tier)),
+          ),
+        ),
+      if (_windowed)
+        // 窗口宿主档不能录/截（画面归硬件 DRM）：队列交给内置档重放。
+        FushiAdaptiveAction(
+          icon: FushiIcons.ankiCard,
+          label: t.web_video_mine_switch_builtin(count: _minePending),
+          onPressed: _minePending == 0 ? null : _openBuiltinForMining,
+          inlineBuilder: (BuildContext _) => iconButton(
+            tooltip: t.web_video_mine_switch_builtin(count: _minePending),
+            icon: _minePendingGlyph(),
+            onPressed: _minePending == 0 ? null : _openBuiltinForMining,
+          ),
+        )
+      else if (_mineRunning)
+        FushiAdaptiveAction(
+          icon: FushiIcons.stop,
+          label: t.web_video_mine_queue_stop,
+          onPressed: () => _mineStopRequested = true,
+          inlineBuilder: (BuildContext _) => iconButton(
+            tooltip: t.web_video_mine_queue_stop,
+            icon: const FushiIcon(FushiIcons.stop),
+            tone: VideoM3eButtonTone.error,
+            onPressed: () => _mineStopRequested = true,
+          ),
+        )
+      else
+        FushiAdaptiveAction(
+          icon: FushiIcons.ankiCard,
+          label: t.web_video_mine_queue_run,
+          onPressed: _minePending == 0
+              ? null
+              : () => unawaited(_runMineQueue()),
+          inlineBuilder: (BuildContext _) => iconButton(
+            tooltip: t.web_video_mine_queue_run,
+            icon: _minePendingGlyph(),
+            onPressed: _minePending == 0
+                ? null
+                : () => unawaited(_runMineQueue()),
+          ),
+        ),
+      FushiAdaptiveAction(
+        icon: FushiIcons.subtitles,
+        label: t.web_video_track_menu,
+        onPressed: null,
+        selected: _activeTrackKey != null,
+        inlineBuilder: (BuildContext _) => menu<String>(
+          menuKey: _trackMenuKey,
+          tooltip: t.web_video_track_menu,
+          icon: FushiIcons.subtitles,
+          selected: _activeTrackKey != null,
+          itemBuilder: _trackMenuItems,
+          onSelected: _selectTrack,
+        ),
+        foldedEntries: (BuildContext c) => folded<String>(
+          t.web_video_track_menu,
+          _trackMenuItems(c),
+          _selectTrack,
+        ),
+      ),
+      FushiAdaptiveAction(
+        icon: _hideNativeSubtitles
             ? FushiIcons.visibilityOff
             : FushiIcons.visibility,
+        label: t.web_video_hide_native_subtitles,
+        onPressed: _toggleNativeSubtitlesHidden,
+        selected: _hideNativeSubtitles,
+        inlineBuilder: (BuildContext _) => iconButton(
+          tooltip: t.web_video_hide_native_subtitles,
+          icon: FushiIcon(
+            _hideNativeSubtitles
+                ? FushiIcons.visibilityOff
+                : FushiIcons.visibility,
+          ),
+          selected: _hideNativeSubtitles,
+          onPressed: _toggleNativeSubtitlesHidden,
+        ),
       ),
-      selected: _hideNativeSubtitles,
-      onPressed: _toggleNativeSubtitlesHidden,
-    ),
-    _m3eIconAction(
-      tooltip: t.video_subtitle_list,
-      icon: FushiIcon(
-        FushiIcons.resolve(FushiIcons.listView, filled: _listVisible),
+      FushiAdaptiveAction(
+        icon: FushiIcons.listView,
+        label: t.video_subtitle_list,
+        onPressed: _toggleList,
+        selected: _listVisible,
+        inlineBuilder: (BuildContext _) => iconButton(
+          tooltip: t.video_subtitle_list,
+          icon: FushiIcon(
+            FushiIcons.resolve(FushiIcons.listView, filled: _listVisible),
+          ),
+          selected: _listVisible,
+          onPressed: _toggleList,
+        ),
       ),
-      selected: _listVisible,
-      onPressed: _toggleList,
-    ),
-    _m3eIconAction(
-      tooltip: t.video_control_fullscreen,
-      icon: const FushiIcon(FushiIcons.fullscreen),
-      onPressed: () => unawaited(_toggleFullscreen()),
-    ),
-  ];
+      FushiAdaptiveAction(
+        icon: FushiIcons.fullscreen,
+        label: t.video_control_fullscreen,
+        onPressed: () => unawaited(_toggleFullscreen()),
+        inlineBuilder: (BuildContext _) => iconButton(
+          tooltip: t.video_control_fullscreen,
+          icon: const FushiIcon(FushiIcons.fullscreen),
+          onPressed: () => unawaited(_toggleFullscreen()),
+        ),
+      ),
+    ];
+  }
 
   /// M3E 顶栏的一枚图标钮（tooltip + [VideoM3eIconButton]）。
   Widget _m3eIconAction({
@@ -2124,69 +2207,13 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
         overflow: TextOverflow.ellipsis,
       ),
       actions: <Widget>[
-        FushiPopupMenuButton<WebVideoHosting>(
-          tooltip: t.web_video_hosting_menu,
-          icon: FushiIcon(_windowed ? FushiIcons.tv : FushiIcons.video),
-          onSelected: (WebVideoHosting h) => unawaited(_switchHosting(h)),
-          itemBuilder: _hostingMenuItems,
-        ),
-        if (!_windowed)
-          FushiPopupMenuButton<VideoShaderTier>(
-            tooltip: t.video_shader_tier_off,
-            icon: FushiIcon(
-              FushiIcons.resolve(FushiIcons.ai, filled: _shaderActive),
-            ),
-            onSelected: (VideoShaderTier tier) =>
-                unawaited(_selectShaderTier(tier)),
-            itemBuilder: _shaderMenuItems,
-          ),
-        if (_windowed)
-          // 窗口宿主档不能录/截（画面归硬件 DRM）：队列交给内置档重放。
-          FushiIconButtonControl(
-            tooltip: t.web_video_mine_switch_builtin(count: _minePending),
-            icon: _minePendingGlyph(),
-            onPressed: _minePending == 0 ? null : _openBuiltinForMining,
-          )
-        else if (_mineRunning)
-          FushiIconButtonControl(
-            tooltip: t.web_video_mine_queue_stop,
-            icon: const FushiIcon(FushiIcons.stop),
-            onPressed: () => _mineStopRequested = true,
-          )
-        else
-          FushiIconButtonControl(
-            tooltip: t.web_video_mine_queue_run,
-            icon: _minePendingGlyph(),
-            onPressed: _minePending == 0
-                ? null
-                : () => unawaited(_runMineQueue()),
-          ),
-        FushiPopupMenuButton<String>(
-          tooltip: t.web_video_track_menu,
-          icon: const FushiIcon(FushiIcons.subtitles),
-          onSelected: _selectTrack,
-          itemBuilder: _trackMenuItems,
-        ),
-        FushiIconButtonControl(
-          tooltip: t.web_video_hide_native_subtitles,
-          icon: FushiIcon(
-            _hideNativeSubtitles
-                ? FushiIcons.visibilityOff
-                : FushiIcons.visibility,
-          ),
-          onPressed: _toggleNativeSubtitlesHidden,
-        ),
-        FushiIconButtonControl(
-          tooltip: t.video_subtitle_list,
-          icon: FushiIcon(
-            FushiIcons.resolve(FushiIcons.listView, filled: _listVisible),
-          ),
-          onPressed: _toggleList,
-        ),
-        FushiIconButtonControl(
-          tooltip: t.video_control_fullscreen,
-          icon: const FushiIcon(FushiIcons.fullscreen),
-          onPressed: () => unawaited(_toggleFullscreen()),
+        // 同 M3E 顶栏：动作默认全部平铺，窄窗放不下才收进「⋯」。
+        FushiAdaptiveActionStrip(
+          key: const ValueKey<String>('web-video-top-actions'),
+          moreKey: const ValueKey<String>('web-video-top-actions-more'),
+          foldFromStart: true,
+          reservedWidth: FushiAdaptiveActionStrip.titleBarReservedWidth,
+          actions: _webBarActions(m3e: false),
         ),
       ],
     );
@@ -2216,17 +2243,29 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
         unawaited(_applyShaderTier());
         controller.addJavaScriptHandler(
           handlerName: kWebVideoJsHandler,
-          callback: _onJsMessage,
+          callback: limitWebPayload(
+            kWebVideoJsHandler,
+            kWebPayloadLargeMaxChars,
+            _onJsMessage,
+          ),
         );
         controller.addJavaScriptHandler(
           handlerName: kWebVideoKeyBridgeHandler,
-          callback: (List<dynamic> args) {
-            _onKeyToken(args);
-            return null;
-          },
+          callback: limitWebPayload(
+            kWebVideoKeyBridgeHandler,
+            kWebPayloadTinyMaxChars,
+            (List<dynamic> args) {
+              _onKeyToken(args);
+              return null;
+            },
+          ),
         );
       },
+      onUpdateVisitedHistory:
+          (InAppWebViewController _, WebUri? url, bool? __) =>
+              _webViewUrl = url?.toString() ?? _webViewUrl,
       onLoadStop: (InAppWebViewController controller, WebUri? url) {
+        _webViewUrl = url?.toString() ?? _webViewUrl;
         unawaited(_setNativeSubtitlesHidden(_hideNativeSubtitles));
         // BUG-2260：队列换集走 loadUrl 整页重载，上一份文档里的 chrome 隐藏 <style> 随之消失，
         // 之后每张卡都带控制条/分级提示。隐藏态归 Dart 所有，新文档就绪时按 _mineRunning 重挂。
@@ -2279,6 +2318,7 @@ class _WebVideoFushiPageState extends ConsumerState<WebVideoFushiPage>
         onFontScaleIndexChanged: (int value) =>
             unawaited(_appModel.setVideoSubtitleListFontScaleIndex(value)),
         hoverAutoLookupEnabled: ReaderFushiSource.instance.hoverAutoLookup,
+        hoverLookupModifier: ReaderFushiSource.instance.hoverLookupModifier,
         onClose: _toggleList,
         colorScheme: cs,
         title: t.video_subtitle_list,

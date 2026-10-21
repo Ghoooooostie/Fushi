@@ -106,6 +106,14 @@ final class FfiLookupResults extends Struct {
   external int count;
 }
 
+/// `fushidicts_tokenize` 的返回：每段的 UTF-16 码元数（+ 可选的每段读音）。
+final class FfiTokenizeResult extends Struct {
+  external Pointer<Int32> lengths;
+  external Pointer<Pointer<Utf8>> readings;
+  @Int32()
+  external int count;
+}
+
 final class FfiImportResult extends Struct {
   @Int32()
   external int success;
@@ -227,6 +235,22 @@ typedef _LookupPopupJsonDart = Pointer<Utf8> Function(Pointer<Void> handle,
 
 typedef _FreeStringDart = void Function(Pointer<Utf8> s);
 
+// [text] 是带长 UTF-8 缓冲（[textBytes] 字节，不靠结尾 NUL 定界）：Dart 字符串里
+// 合法的 U+0000 是正文的一部分（HBK-AUDIT-007）。
+typedef _TokenizeNative = FfiTokenizeResult Function(Pointer<Void> handle,
+    Pointer<Uint8> text, Int32 textBytes, Int32 scanLength, Int32 withReadings);
+typedef _TokenizeDart = FfiTokenizeResult Function(Pointer<Void> handle,
+    Pointer<Uint8> text, int textBytes, int scanLength, int withReadings);
+
+typedef _FreeTokenizeResultDart = void Function(Pointer<FfiTokenizeResult> r);
+
+typedef _MatchLengthNative = Int32 Function(
+    Pointer<Void> handle, Pointer<Utf8> text, Int32 scanLength);
+typedef _MatchLengthDart = int Function(
+    Pointer<Void> handle, Pointer<Utf8> text, int scanLength);
+
+typedef _RetainDart = int Function(Pointer<Void> handle);
+
 // ── bindings class ──────────────────────────────────────────────────
 
 class FushidictsFfiBindings {
@@ -253,6 +277,10 @@ class FushidictsFfiBindings {
         'fushidicts_create');
     destroy = _lib.lookupFunction<Void Function(Pointer<Void>), _DestroyDart>(
         'fushidicts_destroy');
+    retain = _lib.lookupFunction<Int32 Function(Pointer<Void>), _RetainDart>(
+        'fushidicts_retain');
+    release = _lib.lookupFunction<Void Function(Pointer<Void>), _DestroyDart>(
+        'fushidicts_release');
     addTermDict = _lib.lookupFunction<_AddDictNative, _AddDictDart>(
         'fushidicts_add_term_dict');
     addFreqDict = _lib.lookupFunction<_AddDictNative, _AddDictDart>(
@@ -302,6 +330,13 @@ class FushidictsFfiBindings {
     freeString =
         _lib.lookupFunction<Void Function(Pointer<Utf8>), _FreeStringDart>(
             'fushidicts_free_string');
+    tokenize = _lib.lookupFunction<_TokenizeNative, _TokenizeDart>(
+        'fushidicts_tokenize');
+    freeTokenizeResult = _lib.lookupFunction<
+        Void Function(Pointer<FfiTokenizeResult>),
+        _FreeTokenizeResultDart>('fushidicts_free_tokenize_result');
+    matchLength = _lib.lookupFunction<_MatchLengthNative, _MatchLengthDart>(
+        'fushidicts_match_length');
   }
   late final DynamicLibrary _lib;
 
@@ -309,7 +344,14 @@ class FushidictsFfiBindings {
   late final _ProbeDictContentDart probeDictContent;
   late final _FreeImportResultDart freeImportResult;
   late final _CreateDart create;
+  /// `fushidicts_destroy` 是**退役**：还掉宿主的引用，在飞借用（[retain]）都还完才销毁。
   late final _DestroyDart destroy;
+
+  /// 借一个句柄引用（1 = 借到，0 = 已退役）。调用方必须自己仍持有一个引用。
+  late final _RetainDart retain;
+
+  /// 还一个 [retain] 借来的引用；最后一个归还时销毁句柄（解除文件映射）。
+  late final _DestroyDart release;
   late final _AddDictDart addTermDict;
   late final _AddDictDart addFreqDict;
   late final _AddDictDart addPitchDict;
@@ -328,6 +370,31 @@ class FushidictsFfiBindings {
   late final _FreeKanjiResultsDart freeKanjiResults;
   late final _LookupPopupJsonDart lookupPopupJson;
   late final _FreeStringDart freeString;
+  late final _TokenizeDart tokenize;
+  late final _FreeTokenizeResultDart freeTokenizeResult;
+  late final _MatchLengthDart matchLength;
+}
+
+// ── 已导入词典的 redirect_glossary.flag 迁移（按需解析） ──────────────
+
+typedef _EnsureRedirectFlagNative = Int32 Function(Pointer<Utf8> dir);
+typedef EnsureRedirectFlagDart = int Function(Pointer<Utf8> dir);
+
+/// `fushidicts_ensure_redirect_flag` 的绑定，**用到时才解析**（理由同
+/// [lookupZstdDecompressFile]：这是一次性迁移，随包旧库缺这个导出时只让迁移报
+/// 「不支持」，不能连累整套查词绑定在构造时抛）。
+///
+/// 原生语义（`query.cpp` 的 `ensure_redirect_glossary_flag`）：已有与当前 blobs.bin
+/// 大小一致的标记文件就直接读它返回；否则整本扫描（单本最多约 1 s）并写回标记。
+/// 返回 1 = 含纯重定向 glossary，0 = 不含，-1 = 读不了。不需要查询句柄。
+EnsureRedirectFlagDart? lookupEnsureRedirectFlag() {
+  try {
+    return _openNativeLib()
+        .lookupFunction<_EnsureRedirectFlagNative, EnsureRedirectFlagDart>(
+            'fushidicts_ensure_redirect_flag');
+  } on ArgumentError {
+    return null;
+  }
 }
 
 // ── zstd 文件解压（按需解析） ───────────────────────────────────────

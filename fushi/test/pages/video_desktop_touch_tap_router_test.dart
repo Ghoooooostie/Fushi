@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/gestures.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -71,9 +73,7 @@ void main() {
     );
   }
 
-  testWidgets('touch 单击：控制条隐藏时唤出、可见时收起，不改播放态', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('touch 单击：控制条隐藏时唤出、可见时收起，不改播放态', (WidgetTester tester) async {
     final List<DesktopControlsTapAction> actions = <DesktopControlsTapAction>[];
     await tester.pumpWidget(harness(actions: actions));
 
@@ -104,9 +104,7 @@ void main() {
     ]);
   });
 
-  testWidgets('touch 双击（页面层的左/右快退快进手势）不会顺带暂停再恢复', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('touch 双击（页面层的左/右快退快进手势）不会顺带暂停再恢复', (WidgetTester tester) async {
     // 页面外层 Listener（_handleVideoPointerUp）按 400ms / 48px 认双击并分左右区
     // seek；此前桌面点击层把两次 tap 都当 playOrPause，双击 seek 时画面先停后放。
     final List<DesktopControlsTapAction> actions = <DesktopControlsTapAction>[];
@@ -120,9 +118,7 @@ void main() {
     expect(actions, isNot(contains(DesktopControlsTapAction.playOrPause)));
   });
 
-  testWidgets('touch 点底栏带（按钮间隙 / 进度条旁）只续命，不收起', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('touch 点底栏带（按钮间隙 / 进度条旁）只续命，不收起', (WidgetTester tester) async {
     final List<DesktopControlsTapAction> actions = <DesktopControlsTapAction>[];
     await tester.pumpWidget(harness(actions: actions, initiallyVisible: true));
     await tester.tapAt(bottomStrip, kind: PointerDeviceKind.touch);
@@ -132,9 +128,7 @@ void main() {
     ]);
   });
 
-  testWidgets('鼠标单击行为不变：画面区播放/暂停，底栏带不动作', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('鼠标单击行为不变：画面区播放/暂停，底栏带不动作', (WidgetTester tester) async {
     final List<DesktopControlsTapAction> actions = <DesktopControlsTapAction>[];
     await tester.pumpWidget(harness(actions: actions));
     await tester.tapAt(center, kind: PointerDeviceKind.mouse);
@@ -180,9 +174,7 @@ void main() {
     ]);
   });
 
-  testWidgets('BUG-374：点到控制条按钮时按钮赢竞技场，点击层不动作', (
-    WidgetTester tester,
-  ) async {
+  testWidgets('BUG-374：点到控制条按钮时按钮赢竞技场，点击层不动作', (WidgetTester tester) async {
     final List<DesktopControlsTapAction> actions = <DesktopControlsTapAction>[];
     int buttonTaps = 0;
     await tester.pumpWidget(
@@ -215,14 +207,13 @@ void main() {
       bool visible = false,
       bool playPause = true,
       bool touchToggles = true,
-    }) =>
-        resolveDesktopControlsTap(
-          kind: kind,
-          inPlayPauseRegion: inRegion,
-          controlsVisible: visible,
-          playAndPauseOnTap: playPause,
-          touchTapTogglesControls: touchToggles,
-        );
+    }) => resolveDesktopControlsTap(
+      kind: kind,
+      inPlayPauseRegion: inRegion,
+      controlsVisible: visible,
+      playAndPauseOnTap: playPause,
+      touchTapTogglesControls: touchToggles,
+    );
 
     test('触控类指针', () {
       expect(isTouchLikePointerKind(PointerDeviceKind.touch), isTrue);
@@ -241,7 +232,9 @@ void main() {
       ]) {
         expect(resolve(kind), DesktopControlsTapAction.playOrPause);
         expect(
-            resolve(kind, visible: true), DesktopControlsTapAction.playOrPause);
+          resolve(kind, visible: true),
+          DesktopControlsTapAction.playOrPause,
+        );
         expect(resolve(kind, inRegion: false), DesktopControlsTapAction.none);
         expect(resolve(kind, playPause: false), DesktopControlsTapAction.none);
       }
@@ -251,13 +244,143 @@ void main() {
       const PointerDeviceKind touch = PointerDeviceKind.touch;
       expect(resolve(touch), DesktopControlsTapAction.showControls);
       expect(
-          resolve(touch, visible: true), DesktopControlsTapAction.hideControls);
-      expect(resolve(touch, visible: true, inRegion: false),
-          DesktopControlsTapAction.keepControlsAlive);
-      expect(resolve(touch, playPause: false),
-          DesktopControlsTapAction.showControls);
-      expect(resolve(touch, touchToggles: false),
-          DesktopControlsTapAction.playOrPause);
+        resolve(touch, visible: true),
+        DesktopControlsTapAction.hideControls,
+      );
+      expect(
+        resolve(touch, visible: true, inRegion: false),
+        DesktopControlsTapAction.keepControlsAlive,
+      );
+      expect(
+        resolve(touch, playPause: false),
+        DesktopControlsTapAction.showControls,
+      );
+      expect(
+        resolve(touch, touchToggles: false),
+        DesktopControlsTapAction.playOrPause,
+      );
+    });
+  });
+
+  group('控件区判定走真实 hit-test（VideoControlsChromeRegion）', () {
+    // 底栏控件区 120 高（远高于旧口径推出的条带），里面放一条只走 Listener、不进
+    // 手势竞技场的「进度条」——点击层照样会赢它的点击，只能靠控件区判据保持安静。
+    const double chromeHeight = 120;
+
+    Widget routerHarness(List<DesktopControlsTapAction> actions) {
+      return MaterialApp(
+        home: Center(
+          child: SizedBox.fromSize(
+            size: surfaceSize,
+            child: Builder(
+              builder: (BuildContext context) => MaterialDesktopTapRouter(
+                playAndPauseOnTap: true,
+                touchTapTogglesControls: true,
+                controlsVisible: true,
+                // 与 material_desktop.dart 的 isInPlayPauseRegion 同式。
+                isInPlayPauseRegion: (Offset global) =>
+                    !VideoControlsChromeRegion.hitsRegion(
+                      globalPosition: global,
+                      viewId: View.of(context).viewId,
+                    ),
+                onAction: actions.add,
+                child: Stack(
+                  children: <Widget>[
+                    const Positioned.fill(
+                      child: ColoredBox(color: Color(0xFF000000)),
+                    ),
+                    Positioned(
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      height: chromeHeight,
+                      child: VideoControlsChromeRegion(
+                        child: Align(
+                          alignment: Alignment.topCenter,
+                          child: Listener(
+                            onPointerDown: (_) {},
+                            child: const SizedBox(
+                              height: 36,
+                              width: double.infinity,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
+    testWidgets('鼠标点控件区（进度条上缘 / 按钮间空隙）不 playOrPause，区外照常', (
+      WidgetTester tester,
+    ) async {
+      final List<DesktopControlsTapAction> actions =
+          <DesktopControlsTapAction>[];
+      await tester.pumpWidget(routerHarness(actions));
+      final Offset topLeft = tester.getTopLeft(
+        find.byType(MaterialDesktopTapRouter),
+      );
+      // 进度条最上缘往下 2px。
+      await tester.tapAt(
+        topLeft + Offset(400, surfaceSize.height - chromeHeight + 2),
+        kind: PointerDeviceKind.mouse,
+      );
+      await tester.pump(const Duration(seconds: 1));
+      // 控件区底部空隙。
+      await tester.tapAt(
+        topLeft + Offset(40, surfaceSize.height - 10),
+        kind: PointerDeviceKind.mouse,
+      );
+      await tester.pump(const Duration(seconds: 1));
+      expect(actions, isEmpty);
+      // 控件区之上是画面：照常播放/暂停。
+      await tester.tapAt(
+        topLeft + Offset(400, surfaceSize.height - chromeHeight - 4),
+        kind: PointerDeviceKind.mouse,
+      );
+      await tester.pump();
+      expect(actions, <DesktopControlsTapAction>[
+        DesktopControlsTapAction.playOrPause,
+      ]);
+    });
+
+    testWidgets('触屏点控件区只续命，不收起', (WidgetTester tester) async {
+      final List<DesktopControlsTapAction> actions =
+          <DesktopControlsTapAction>[];
+      await tester.pumpWidget(routerHarness(actions));
+      final Offset topLeft = tester.getTopLeft(
+        find.byType(MaterialDesktopTapRouter),
+      );
+      await tester.tapAt(
+        topLeft + Offset(40, surfaceSize.height - 10),
+        kind: PointerDeviceKind.touch,
+      );
+      await tester.pump();
+      expect(actions, <DesktopControlsTapAction>[
+        DesktopControlsTapAction.keepControlsAlive,
+      ]);
+    });
+
+    test('material_desktop 的播放区判据走 hit-test，不再推几何条带', () {
+      final String source = File(
+        '../third_party/media_kit_video/lib/media_kit_video_controls/'
+        'src/controls/material_desktop.dart',
+      ).readAsStringSync();
+      final int start = source.indexOf('isInPlayPauseRegion: (Offset');
+      expect(start, greaterThanOrEqualTo(0));
+      final int end = source.indexOf('onAction:', start);
+      final String body = source.substring(start, end);
+      expect(
+        body.contains('VideoControlsChromeRegion.hitsRegion('),
+        isTrue,
+        reason: '控件区必须按真实渲染树判，几何推导会随底栏改版漂移',
+      );
+      expect(body.contains('globalToLocal'), isFalse, reason: '不要再按坐标推控件区');
     });
   });
 
@@ -266,8 +389,11 @@ void main() {
 
     test('桌面控制条主题开启触屏分流', () {
       final String flat = corpus.replaceAll(RegExp(r'\s+'), '');
-      expect(flat.contains('touchTapTogglesControls:true,'), isTrue,
-          reason: '_desktopControlsTheme 必须开启 touchTapTogglesControls');
+      expect(
+        flat.contains('touchTapTogglesControls:true,'),
+        isTrue,
+        reason: '_desktopControlsTheme 必须开启 touchTapTogglesControls',
+      );
     });
 
     test('双击左/右 seek 不看指针类型；指针类型只决定落空双击（中带）的动作', () {
@@ -281,11 +407,17 @@ void main() {
       final int seekIdx = body.indexOf('_handleDoubleTapSeek(');
       final int kindIdx = body.indexOf('event.kind');
       expect(seekIdx, greaterThanOrEqualTo(0));
-      expect(kindIdx, greaterThan(seekIdx),
-          reason: '双击左/右 seek 必须对 touch 与 mouse 同样生效（先于指针类型判定）');
+      expect(
+        kindIdx,
+        greaterThan(seekIdx),
+        reason: '双击左/右 seek 必须对 touch 与 mouse 同样生效（先于指针类型判定）',
+      );
       expect('event.kind'.allMatches(body).length, 1);
-      expect(body.contains('isTouchLikePointerKind(event.kind)'), isTrue,
-          reason: '指针类型只经 isTouchLikePointerKind 喂给中带判据');
+      expect(
+        body.contains('isTouchLikePointerKind(event.kind)'),
+        isTrue,
+        reason: '指针类型只经 isTouchLikePointerKind 喂给中带判据',
+      );
     });
   });
 }

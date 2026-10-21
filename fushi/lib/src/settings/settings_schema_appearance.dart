@@ -2,13 +2,16 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/utils/adaptive/nav_bar_style.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/pages.dart';
+import 'package:fushi/src/models/home_dashboard_panel.dart';
 import 'package:fushi/src/models/module_id.dart';
 import 'package:fushi/src/models/module_registry.dart';
 import 'package:fushi/src/settings/settings_actions.dart';
 import 'package:fushi/src/settings/settings_context.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
+import 'package:fushi/src/settings/nav_module_order_list.dart';
 import 'package:fushi/src/sync/desktop_lookup_service.dart';
 import 'package:fushi/src/utils/misc/app_icon_preferences.dart'
     show currentAppIconSelection;
@@ -28,7 +31,9 @@ String _moduleItemId(ModuleId module) => switch (module) {
   ModuleId.games => 'system.module_games',
   ModuleId.browse => 'system.module_downloads',
   ModuleId.lookup => 'system.module_lookup',
-  ModuleId.browserExtension => 'system.module_browser_extension',
+  // 2026-10-14 新增（复习 / Fushi 内置 SRS），跟随同一前缀。
+  ModuleId.srs => 'system.module_srs',
+  ModuleId.web => 'system.module_browser_extension',
   ModuleId.listening => 'system.module_listening',
   ModuleId.cardCreation => 'system.module_card_creation',
   ModuleId.services => 'system.module_services',
@@ -44,7 +49,7 @@ String _moduleItemId(ModuleId module) => switch (module) {
 /// 各改各的必然漂移，用户看到的就是设置项名字对不上底栏。
 /// 有底栏 tab 的模块取 [homeNavItemFor]（底栏改名这里自动跟着改）；没有 tab 的五个
 /// 取它自己那个设置一级分类的标题与图标（同理，分类改名这里自动跟着改）。
-({String label, IconData icon}) _moduleNavIdentity(ModuleId module) {
+({String label, IconData icon}) moduleNavIdentity(ModuleId module) {
   final HomeTab? tab = homeTabOfModule(module);
   if (tab != null) {
     final AdaptiveNavItem navItem = homeNavItemFor(tab);
@@ -77,53 +82,101 @@ String _moduleItemId(ModuleId module) => switch (module) {
     ModuleId.games ||
     ModuleId.browse ||
     ModuleId.lookup ||
-    ModuleId.browserExtension => throw StateError(
-      '$module 有对应 HomeTab，标识应走 homeNavItemFor',
-    ),
+    ModuleId.srs ||
+    ModuleId.web => throw StateError('$module 有对应 HomeTab，标识应走 homeNavItemFor'),
   };
 }
 
-/// 「功能模块」里的单个模块开关。
+/// [module] 在本平台上是否存在（galgame 仅 Windows、浏览器扩展仅桌面、下载
+/// 中心不进 App Store）。判据与读取端同源（[ModuleId.availableOn]），不在这里
+/// 另写一份 Platform 判断。
+bool _moduleAvailableHere(ModuleId module) => module.availableOn(
+  isWindows: Platform.isWindows,
+  isDesktop: DesktopLookupService.isDesktop,
+  isIOS: Platform.isIOS,
+  isAndroid: Platform.isAndroid,
+);
+
+/// 翻转一个模块开关。导航模块的拖拽列表与无 tab 模块的开关行共用这一份。
+Future<void> _applyModuleEnabled(
+  SettingsContext settingsContext,
+  ModuleId module,
+  bool enabled,
+) async {
+  // 「至少保留一个导航模块」：最后一个有 tab 的模块关不掉（否则打开 app 只剩
+  // 设置这一页）。拒绝时开关保持开着，并说明原因。
+  if (!enabled &&
+      isLastNavigationModule(
+        module,
+        settingsContext.appModel.moduleVisibility,
+      )) {
+    final BuildContext ctx = settingsContext.context;
+    if (ctx.mounted) {
+      ScaffoldMessenger.of(ctx).showSnackBar(
+        FushiSnackBar(content: Text(t.settings_module_keep_one_navigation)),
+      );
+    }
+    settingsContext.refresh();
+    return;
+  }
+  await settingsContext.appModel.setModuleEnabled(module, enabled);
+  settingsContext.refresh();
+}
+
+/// 「功能模块」行的副标题。复习默认关：开关本身要说清它是什么，否则用户不知道
+/// 打开后会多出什么。导航模块的拖拽列表与无 tab 模块的开关行共用这一份。
+String? moduleSwitchHint(ModuleId module) =>
+    module == ModuleId.srs ? t.srs_module_switch_hint : null;
+
+/// 「功能模块」里没有底栏 tab 的模块（听书 / 制卡 / 在线服务 / AI / 同步）的开关。
+/// 有 tab 的模块不走这里，而是进 [NavModuleOrderList]（开关 + 拖拽排序）。
 SettingsSwitchItem _moduleSwitch(ModuleId module) {
-  final ({String label, IconData icon}) identity = _moduleNavIdentity(module);
+  final ({String label, IconData icon}) identity = moduleNavIdentity(module);
   return SettingsSwitchItem(
     id: _moduleItemId(module),
     title: identity.label,
     icon: identity.icon,
-    // 平台上不存在的模块不出开关（galgame 仅 Windows、浏览器扩展仅桌面、下载
-    // 中心不进 App Store）。判据与读取端同源（[ModuleId.availableOn]），不在这里
-    // 另写一份 Platform 判断。
-    visible: (_) => module.availableOn(
-      isWindows: Platform.isWindows,
-      isDesktop: DesktopLookupService.isDesktop,
-      isIOS: Platform.isIOS,
-      isAndroid: Platform.isAndroid,
-    ),
+    subtitle: moduleSwitchHint(module),
+    visible: (_) => _moduleAvailableHere(module),
     value: (SettingsContext settingsContext) =>
         settingsContext.appModel.moduleEnabled(module),
-    onChanged: (SettingsContext settingsContext, bool enabled) async {
-      // 「至少保留一个导航模块」：最后一个有 tab 的模块关不掉（否则打开 app 只剩
-      // 设置这一页）。拒绝时开关保持开着，并说明原因。
-      if (!enabled &&
-          isLastNavigationModule(
-            module,
-            settingsContext.appModel.moduleVisibility,
-          )) {
-        final BuildContext ctx = settingsContext.context;
-        if (ctx.mounted) {
-          ScaffoldMessenger.of(ctx).showSnackBar(
-            FushiSnackBar(content: Text(t.settings_module_keep_one_navigation)),
-          );
-        }
-        settingsContext.refresh();
-        return;
-      }
-      await settingsContext.appModel.setModuleEnabled(module, enabled);
-      settingsContext.refresh();
-    },
-    defaultValue: true,
+    onChanged: (SettingsContext settingsContext, bool enabled) =>
+        _applyModuleEnabled(settingsContext, module, enabled),
+    // 与读取端（PreferencesRepository.moduleEnabled）同一真值：复习默认关。
+    defaultValue: module.defaultEnabled,
   );
 }
+
+/// 导航模块的开关 + 拖拽排序（与词典管理同一套交互）。顺序就是底栏 / 侧栏 tab
+/// 顺序，见 `homeActiveTabs`。
+/// 本平台存在的导航模块，按用户顺序。列表渲染与设置搜索关键词共用。
+List<ModuleId> _orderedNavModules(
+  SettingsContext settingsContext,
+) => <ModuleId>[
+  for (final ModuleId module
+      in settingsContext.appModel.moduleVisibility.ordered)
+    if (homeTabOfModule(module) != null && _moduleAvailableHere(module)) module,
+];
+
+SettingsCustomItem _navModuleOrderItem() => SettingsCustomItem(
+  id: 'appearance.nav_module_order',
+  searchTitle: t.settings_module_nav_order,
+  // 合成一个列表后各模块不再是独立的 schema 行；把模块名挂成关键词，搜「视频」
+  // 仍能直达这块（结果行露出命中的「视频」）。
+  searchKeywords: (SettingsContext settingsContext) => <String>[
+    for (final ModuleId module in _orderedNavModules(settingsContext))
+      moduleNavIdentity(module).label,
+  ],
+  icon: FushiIcons.home,
+  builder: (SettingsContext settingsContext) => NavModuleOrderList(
+    settingsContext: settingsContext,
+    modules: _orderedNavModules(settingsContext),
+    identityOf: moduleNavIdentity,
+    hintOf: moduleSwitchHint,
+    onEnabledChanged: (ModuleId module, bool enabled) =>
+        _applyModuleEnabled(settingsContext, module, enabled),
+  ),
+);
 
 SettingsDestination buildAppearanceDestination() {
   return SettingsDestination(
@@ -319,7 +372,7 @@ SettingsDestination buildAppearanceDestination() {
           ),
         ],
       ),
-      // 「功能模块」：13 个模块的总开关，值域与顺序都是 [ModuleId]。
+      // 「功能模块」：14 个模块的总开关，值域与顺序都是 [ModuleId]。
       //
       // **本区管的不再只是底栏**。这些开关原来只喂 `homeActiveTabs()`（底栏/侧栏
       // tab 列表），于是「关掉视频」之后设置页仍列着「视频」「在线服务」，首页活动
@@ -341,11 +394,27 @@ SettingsDestination buildAppearanceDestination() {
         id: 'appearance.section.modules',
         presentation: SettingsSectionPresentation.alwaysExpanded,
         title: t.settings_section_modules,
-        // 遍历 ModuleId.values 生成，不再逐个手写：加模块只加一个 enum 值，
-        // 枚举顺序就是这里的展示顺序（库页 → 工具页 → 横切能力 → 设备数据）。
-        // 平台上不存在的模块由 _moduleSwitch 自己的 visible 判掉。
+        // 有底栏 tab 的模块收进一个可拖拽排序的列表（用户排的顺序就是底栏顺序）；
+        // 没有 tab 的横切模块仍是逐个开关，按枚举顺序。两者都遍历 ModuleId.values
+        // 生成，加模块只加一个 enum 值。平台上不存在的模块各自判掉。
         items: <SettingsItem>[
-          for (final ModuleId module in ModuleId.values) _moduleSwitch(module),
+          _navModuleOrderItem(),
+          for (final ModuleId module in ModuleId.values)
+            if (homeTabOfModule(module) == null) _moduleSwitch(module),
+        ],
+      ),
+      // 「首页面板」：首页 dashboard 上按用户情况出现的可选面板
+      // （[HomeDashboardPanel] 注册表），每个面板一行 自动 / 显示 / 隐藏。首页
+      // 模块关着时整段隐藏；面板所属模块关着时那一行隐藏。
+      SettingsSection(
+        id: 'appearance.section.home_panels',
+        presentation: SettingsSectionPresentation.alwaysExpanded,
+        title: t.settings_section_home_panels,
+        visible: (SettingsContext c) =>
+            c.appModel.moduleVisibility.isEnabled(ModuleId.home),
+        items: <SettingsItem>[
+          for (final HomeDashboardPanel panel in HomeDashboardPanel.values)
+            _homePanelModeItem(panel),
         ],
       ),
       SettingsSection(
@@ -425,11 +494,80 @@ SettingsDestination buildAppearanceDestination() {
             },
             defaultValue: false,
           ),
-          // 「启动时打开查词」(id 'appearance.startup_default_dictionary_tab') 已归位到
-          // 「系统 · 通用」分区（它管的是启动落地页/导航行为，与主题/明暗等外观无关）；
-          // id / 持久化 key 保持不变（历史命名 appearance 前缀，仅换展示分类）。
+          // 手机底栏形态：平铺（放不下收进「更多」）/ 分页滑动（所有入口同级，
+          // 底栏横滑翻页、按住拖选）。
+          SettingsSegmentedItem<AdaptiveNavBarStyle>(
+            id: 'appearance.nav_bar_style',
+            title: t.home_nav_bar_style,
+            icon: FushiIcons.swipe,
+            options: <SettingsSegmentOption<AdaptiveNavBarStyle>>[
+              SettingsSegmentOption<AdaptiveNavBarStyle>(
+                value: AdaptiveNavBarStyle.flat,
+                label: t.home_nav_bar_style_flat,
+              ),
+              SettingsSegmentOption<AdaptiveNavBarStyle>(
+                value: AdaptiveNavBarStyle.pager,
+                label: t.home_nav_bar_style_pager,
+              ),
+            ],
+            selected: (SettingsContext settingsContext) =>
+                settingsContext.appModel.navBarStyle,
+            onChanged:
+                (SettingsContext settingsContext, AdaptiveNavBarStyle value) =>
+                    settingsContext.appModel
+                        .setNavBarStyle(value)
+                        .then((_) => settingsContext.refresh()),
+            defaultValue: AdaptiveNavBarStyle.defaultStyle,
+          ),
+          // 「启动页」(id 'appearance.startup_default_dictionary_tab'，前身是开关
+          // 「启动时打开查词」) 在「系统 · 通用」分区（它管的是启动落地页/导航行为，
+          // 与主题/明暗等外观无关）；id 保持不变（历史命名 appearance 前缀）。
         ],
       ),
     ],
+  );
+}
+
+/// 「首页面板」分区里一个面板的显示档（自动 / 显示 / 隐藏）。
+SettingsItem _homePanelModeItem(HomeDashboardPanel panel) {
+  final (
+    String title,
+    String hint,
+    IconData icon,
+    ModuleId module,
+  ) = switch (panel) {
+    HomeDashboardPanel.srsReview => (
+      t.nav_srs,
+      t.home_panel_srs_hint,
+      FushiIcons.repeat,
+      ModuleId.srs,
+    ),
+  };
+  return SettingsSegmentedItem<HomeDashboardPanelMode>(
+    id: 'appearance.home_panel.${panel.id}',
+    title: title,
+    subtitle: hint,
+    icon: icon,
+    visible: (SettingsContext c) =>
+        c.appModel.moduleVisibility.isEnabled(module),
+    options: <SettingsSegmentOption<HomeDashboardPanelMode>>[
+      SettingsSegmentOption<HomeDashboardPanelMode>(
+        value: HomeDashboardPanelMode.auto,
+        label: t.home_panel_mode_auto,
+      ),
+      SettingsSegmentOption<HomeDashboardPanelMode>(
+        value: HomeDashboardPanelMode.shown,
+        label: t.home_panel_mode_shown,
+      ),
+      SettingsSegmentOption<HomeDashboardPanelMode>(
+        value: HomeDashboardPanelMode.hidden,
+        label: t.home_panel_mode_hidden,
+      ),
+    ],
+    selected: (SettingsContext c) => c.appModel.homeDashboardPanelMode(panel),
+    onChanged: (SettingsContext c, HomeDashboardPanelMode value) => c.appModel
+        .setHomeDashboardPanelMode(panel, value)
+        .then((_) => c.refresh()),
+    defaultValue: HomeDashboardPanelMode.auto,
   );
 }

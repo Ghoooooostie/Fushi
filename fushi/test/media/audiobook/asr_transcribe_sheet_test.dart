@@ -92,8 +92,8 @@ class _FakeService extends AsrTranscriptionService {
             buildFactory: _unusedOnnxFactory,
           ),
           pcm: _FakePcm(),
-          openStore: (AsrLanguage l) async =>
-              AsrModelStore(jobsDir, asrModelPackFor(l)),
+          openStore: (AsrLanguage l, AsrAudioProfile profile) async =>
+              AsrModelStore(jobsDir, asrModelPackFor(l, profile: profile)),
           jobsRoot: () async => jobsDir,
         );
 
@@ -165,6 +165,7 @@ class _FakeService extends AsrTranscriptionService {
   Future<String?> finishedSrtPath(
     List<String> audioPaths,
     AsrLanguage language,
+    {List<AsrSegmentSpan>? segments}
   ) async =>
       existingSrt;
 
@@ -172,11 +173,16 @@ class _FakeService extends AsrTranscriptionService {
   Future<AsrJobState?> existingState(
     List<String> audioPaths,
     AsrLanguage language,
+    {List<AsrSegmentSpan>? segments}
   ) async =>
       null;
 
   @override
-  Future<void> discard(List<String> audioPaths, AsrLanguage language) async {
+  Future<void> discard(
+    List<String> audioPaths,
+    AsrLanguage language, {
+    List<AsrSegmentSpan>? segments,
+  }) async {
     discardCalls++;
     existingSrt = null;
   }
@@ -187,6 +193,7 @@ class _FakeService extends AsrTranscriptionService {
     required AsrLanguage language,
     required AsrEncoderVariant variant,
     required AsrAccelerationPreference preference,
+    List<AsrSegmentSpan>? segments,
   }) async {
     lastStartLanguage = language;
     lastStartPreference = preference;
@@ -853,7 +860,7 @@ void main() {
     final _FakeService service = _FakeService(ready: true, jobsDir: tmp)
       ..startError = StateError(
         'PlatformException(ORT_ERROR, Load model from '
-        r'D:\hibiki\support\asr_models\reazonspeech-k2-v2\'
+        r'D:\fushi\support\asr_models\reazonspeech-k2-v2\'
         'encoder-epoch-99-avg-1.onnx failed:Protobuf parsing failed., '
         'false, null)',
       );
@@ -1072,7 +1079,16 @@ void main() {
       final String id = catalog.customPacks.single.id;
       expect(id, startsWith(kAsrCustomPackIdPrefix));
       expect(catalog.choices[AsrLanguage.japanese.tag], id);
-      expect(asrModelRegistry.packForLanguage(AsrLanguage.japanese)?.id, id);
+      // 这个弹层服务的是有声书（cleanSpeech），选择记在老键上、按它生效。
+      expect(
+        asrModelRegistry
+            .packForLanguage(
+              AsrLanguage.japanese,
+              profile: AsrAudioProfile.cleanSpeech,
+            )
+            ?.id,
+        id,
+      );
     });
   });
 }

@@ -150,7 +150,7 @@ void main() {
 
     test('onPositionWrite is wired for remote (not null)', () {
       final String region2 = region(
-        'controller.setPauseAtSubtitleEnd',
+        'controller.setSecondaryDelayMs(',
         'if (!mounted)',
       );
       expect(
@@ -187,7 +187,7 @@ void main() {
       expect(
         _flat(src),
         contains(
-          _flat('String get _activeBookUid => _discBookUid ?? widget.bookUid;'),
+          _flat('String get _activeBookUid => _discBookUid ?? _webEpisodeBookUid ?? widget.bookUid;'),
         ),
         reason: '非原盘会话必须仍回落 widget.bookUid，不能改变远端断点身份',
       );
@@ -225,7 +225,8 @@ void main() {
         );
         // 且 best-effort 上报到 host（跨设备真相源），失败不抛。
         expect(
-          persist.contains('client.putRemoteVideoPosition('),
+          // BUG-3490：上报经回看闸门（回看中不发），不再直调 client。
+          persist.contains('_remoteReportGate.position('),
           isTrue,
           reason: 'remote position must be uploaded to host (TODO-653)',
         );

@@ -8,7 +8,7 @@
 // screens, renders one screen at a time onto a `fushi-vn-stage`, advances on
 // `paginate("forward")`, and restores by char-offset -> screen index.
 //
-// Hibiki adaptations vs hoshi a (see [vnShellScript]):
+// Fushi adaptations vs hoshi a (see [vnShellScript]):
 //   * The 4 injected dependency scripts (text-semantics / vn-content-stream /
 //     vn-range-map / media-semantics) are inlined ahead of `window.fushiReader`.
 //   * `notifyRestoreComplete` forwards to InAppWebView's `onRestoreComplete`
@@ -18,7 +18,7 @@
 //     image semantics.
 //   * Sasayaki cues always take the inline `.fushi-sentence-audio-cue` wrapper
 //     path, in e-ink too. hoshi swaps to a native rect overlay under e-ink
-//     (`popupHost.renderSentenceAudioHighlight`); Hibiki never ported that host,
+//     (`popupHost.renderSentenceAudioHighlight`); Fushi never ported that host,
 //     so the branch rendered nothing at all and the read-along highlight was
 //     invisible in VN + e-ink. The wrapper class is what the e-ink CSS bar rule
 //     in `ReaderContentStyles` targets, so one path now serves every mode.
@@ -436,6 +436,35 @@ $imageRevealSemantics
       return entry.startMatchable + normalizeText(entry.text.slice(0, end)).length;
     },
 
+    // BUG-3630：章内 raw 偏移（码点计数，与 sourceTextRawOffsets 同一坐标）→ 源章节里的
+    // （文本节点, UTF-16 偏移）。屏是源章节的切片克隆，一句话可能被切屏切成两半；取句要回到
+    // 源章节才能拿到整句。落在两个节点交界时取「从这里开始的那个字」所在节点（下一节点的 0），
+    // 空节点跳过；超出末尾时落到最后一个节点的末尾。
+    sourcePositionForRawOffset: function(rawOffset) {
+      var target = Number(rawOffset);
+      var entries = this.textEntries;
+      if (!Number.isFinite(target) || target < 0 || !entries.length) return null;
+      var low = 0;
+      var high = entries.length - 1;
+      while (low < high) {
+        var mid = Math.ceil((low + high) / 2);
+        if (entries[mid].startRaw <= target) low = mid;
+        else high = mid - 1;
+      }
+      while (low > 0 && entries[low].startRaw === entries[low].endRaw &&
+          entries[low - 1].endRaw >= target) {
+        low--;
+      }
+      var entry = entries[low];
+      var remaining = Math.max(0, Math.min(target, entry.endRaw) - entry.startRaw);
+      var end = 0;
+      while (remaining > 0 && end < entry.text.length) {
+        end += String.fromCodePoint(entry.text.codePointAt(end)).length;
+        remaining--;
+      }
+      return { node: entry.node, offset: end };
+    },
+
     indexSourcePreorder: function() {
       var index = 0;
       var visit = (function(node) {
@@ -836,6 +865,8 @@ window.fushiReader = {
   sentenceAudioCueMap: new Map(),
   sentenceAudioCuesSignature: null,
   cueWrappers: new Map(),
+  // BUG-3518：WebKit 上当前屏的句子不包裹，登记成 live Range（见选区脚本 window.__fushiCueRanges）。
+  cueRanges: new Map(),
 $kSentenceAudioRubyGapJs
   cueSourceRanges: new Map(),
   nodeStartOffsets: new WeakMap(),
@@ -918,8 +949,8 @@ $kSentenceAudioRubyGapJs
     return rect || target.getBoundingClientRect();
   },
   notifyRestoreComplete: function() {
-    // Hibiki adaptation: hoshi a posts to a native @JavascriptInterface
-    // (FushiReaderRestore). Hibiki is InAppWebView, so forward to the same
+    // Fushi adaptation: hoshi a posts to a native @JavascriptInterface
+    // (FushiReaderRestore). Fushi is InAppWebView, so forward to the same
     // 'onRestoreComplete' handler the paginated/continuous shells use.
     if (window.flutter_inappwebview && window.flutter_inappwebview.callHandler) {
       window.flutter_inappwebview.callHandler(
@@ -952,9 +983,26 @@ $kSentenceAudioRubyGapJs
   },
   getMatchableOffset: function(node, offset) {
     var rawStart = this.nodeStartRawOffsets.get(node);
+    // BUG-3630：取句回到源章节（见 sourceTextPosition），句首 / 句尾节点是源节点而不是
+    // 当前屏的克隆，按源节点自己的章内 raw 偏移换算。
+    if (rawStart === undefined) rawStart = this.sourceTextRawOffsetForNode(node);
     if (rawStart === undefined || !this.contentStream) return null;
     var prefix = (node.textContent || '').slice(0, offset);
     return this.contentStream.matchableOffsetForRawOffset(
+      rawStart + this.countRawChars(prefix));
+  },
+  // BUG-3630：当前屏克隆里的（文本节点, 偏移）→ 源章节里的同一位置。VN 只把一屏的切片
+  // 克隆进 document，切屏可以落在一句话中间（量尺装不下时按字切，ruby 是原子单元），
+  // 在克隆上取句会被屏首 / 屏尾截断——用户报「書|きと同じ…」制卡只拿到半句。选区脚本的
+  // getSentenceContext 先经这里回到源章节再按标点取句，句子边界与分页 / 连续模式一致。
+  // 不是当前屏克隆的节点（源节点本身、未登记偏移的节点）返回 null，调用方原地取句。
+  sourceTextPosition: function(node, offset) {
+    if (!node || !this.contentStream ||
+        typeof this.contentStream.sourcePositionForRawOffset !== 'function') return null;
+    var rawStart = this.nodeStartRawOffsets.get(node);
+    if (rawStart === undefined) return null;
+    var prefix = (node.textContent || '').slice(0, offset);
+    return this.contentStream.sourcePositionForRawOffset(
       rawStart + this.countRawChars(prefix));
   },
   waitForImages: function() {
@@ -963,17 +1011,6 @@ $kSentenceAudioRubyGapJs
       : [];
     var promises = images.map(function(img) {
       return new Promise(function(resolve) {
-        // VN keeps the source chapter in a detached root while it builds the
-        // screen descriptors. A lazy image in a detached tree is not eligible
-        // for intersection-based loading, so its load/error event never fires
-        // and the chapter ready promise remains pending forever. Make the
-        // loading policy explicit before waiting; eager images still resolve
-        // through the normal load/error path and already-complete images take
-        // the fast path below.
-        if (img && img.getAttribute && img.getAttribute('loading') === 'lazy' &&
-            img.setAttribute) {
-          img.setAttribute('loading', 'eager');
-        }
         if (img.complete) {
           resolve();
           return;
@@ -1093,11 +1130,21 @@ $sharedInitViewport
     // BUG-1688：「实际 VN 视口」就是 `.fushi-vn-screen` 这个盒——它已扣掉 chrome
     // 预留带与用户边距。原来读 window.innerWidth/Height（整个视口）会把插图算到
     // 能盖住顶栏/底栏的尺寸。取不到盒时才回退整视口（首屏极早期调用）。
+    // BUG-3395：用户左右边距是屏盒的 padding，rect 宽高是 border-box、含 padding。按它
+    // 算上限时，边距一加大（右边距 9%）插图就比内容盒宽，只能往一侧溢出被裁（iOS 实机
+    // 插图左缘切掉一截、整体偏右）。上限取扣掉 padding 的内容盒。
     var screenBox = this.screen && this.screen.getBoundingClientRect
       ? this.screen.getBoundingClientRect()
       : null;
-    var vw = Math.max(1, (screenBox && screenBox.width) || window.innerWidth || 0);
-    var vh = Math.max(1, (screenBox && screenBox.height) || window.innerHeight || 0);
+    var padX = 0;
+    var padY = 0;
+    if (screenBox && screenBox.width > 0 && screenBox.height > 0) {
+      var screenStyle = window.getComputedStyle(this.screen);
+      padX = (parseFloat(screenStyle.paddingLeft) || 0) + (parseFloat(screenStyle.paddingRight) || 0);
+      padY = (parseFloat(screenStyle.paddingTop) || 0) + (parseFloat(screenStyle.paddingBottom) || 0);
+    }
+    var vw = Math.max(1, ((screenBox && screenBox.width) || window.innerWidth || 0) - padX);
+    var vh = Math.max(1, ((screenBox && screenBox.height) || window.innerHeight || 0) - padY);
     root.style.setProperty('--fushi-image-max-width', Math.max(1, Math.floor(vw * ratio)) + 'px');
     root.style.setProperty('--fushi-image-max-height', vh + 'px');
   },
@@ -1122,11 +1169,10 @@ $sharedInitViewport
     } else {
       baseScreens = this.buildBlockScreens();
     }
-    // BUG-1244：纯图片 screen 没有字符范围。有声书逐句跟随按 cue 字符偏移直接跳到
-    // 下一条文字 screen 时会永久略过这种零宽 screen，图片在整次自动播放里都不可见。
-    // 把连续的前导图片附到下一句/下一块一起渲；章尾没有下一句时附到上一屏，保证媒体
-    // 至少随相邻文字出现一次。
-    baseScreens = this.attachMediaScreensToAdjacentText(baseScreens);
+    // BUG-3395：纯图片 screen 保持独立一屏、按整屏上限铺满。BUG-1244 曾把它附到下一
+    // 句/下一块同屏渲染，但插图按整屏上限排版，同屏文字被挤出可视区（竖排整段落到屏
+    // 左外侧，有声书正读的那句看不见）。「逐句跟随不略过零宽图片屏」改由跟随路径自己
+    // 处理：跨过图片屏且开了图片暂停时先停在图上（pauseAtCrossedMediaScreen）。
     this.baseScreens = baseScreens;
     this.screens = this.mergeSentenceAudioCrossScreenScreens(baseScreens);
     if (!this.screens.length) {
@@ -1167,60 +1213,28 @@ $sharedInitViewport
       render: render
     };
   },
-  attachMediaScreensToAdjacentText: function(screens) {
-    if (!Array.isArray(screens) || !screens.length) return screens || [];
-    var result = [];
-    var pendingMedia = [];
-    for (var i = 0; i < screens.length; i++) {
-      var screen = screens[i];
-      var mediaOnly = !!screen.mediaStop &&
-        this.screenStartCharCount(screen) === this.screenEndCharCount(screen);
-      if (mediaOnly) {
-        pendingMedia.push(screen);
-        continue;
-      }
-      if (pendingMedia.length) {
-        result.push(this.mergeAdjacentScreenParts(pendingMedia.concat([screen])));
-        pendingMedia = [];
-      } else {
-        result.push(screen);
-      }
-    }
-    if (pendingMedia.length) {
-      if (result.length) {
-        var previous = result.pop();
-        result.push(this.mergeAdjacentScreenParts([previous].concat(pendingMedia)));
-      } else {
-        result.push(this.mergeAdjacentScreenParts(pendingMedia));
-      }
-    }
-    return result;
+  isMediaOnlyScreen: function(screen) {
+    return !!(screen && screen.mediaStop) &&
+      this.screenStartCharCount(screen) === this.screenEndCharCount(screen);
   },
-  mergeAdjacentScreenParts: function(parts) {
-    var first = parts[0];
-    var last = parts[parts.length - 1];
-    var ids = new Set();
-    parts.forEach(function(part) {
-      (part.ids || new Set()).forEach(function(id) { ids.add(id); });
-    });
-    return this.screenDescriptor({
-      startCharCount: this.screenStartCharCount(first),
-      endCharCount: parts.reduce(function(max, part) {
-        return Math.max(max, this.screenEndCharCount(part));
-      }.bind(this), this.screenEndCharCount(first)),
-      startRawCount: this.screenStartRawCount(first),
-      endRawCount: parts.reduce(function(max, part) {
-        return Math.max(max, this.screenEndRawCount(part));
-      }.bind(this), this.screenEndRawCount(last)),
-      ids: ids,
-      splittable: false,
-      mediaStop: true,
-      render: function() {
-        var fragment = document.createDocumentFragment();
-        parts.forEach(function(part) { fragment.appendChild(part.render()); });
-        return fragment;
+  // BUG-3395（取代 BUG-1244「把图附到相邻文字同屏」）：纯图片屏没有字符范围，逐句
+  // 跟随按 cue 偏移直接跳到下一条文字屏会略过它。跟随向前跨过图片屏（或音频刚从上
+  // 一章读进本章、目标屏之前有章首图）且宿主开了图片暂停（pauseEnabled =
+  // imagePauseSec > 0，与分页 / 连续模式 TODO-724 同一个门）时，先整屏停在图上并发
+  // onImageDetected；Dart 暂停 imagePauseSec 秒，恢复时 snapReaderToAudio 重新跟随
+  // 当前 cue，落到句子屏。图片暂停关闭时跳过插图，与另两种 view mode 一致。
+  pauseAtCrossedMediaScreen: function(targetIndex, pauseEnabled, fromChapterStart) {
+    if (!pauseEnabled || !this.screens || !this.screens.length) return false;
+    var from = fromChapterStart ? -1 : this.currentScreenIndex;
+    for (var i = from + 1; i < targetIndex; i++) {
+      if (!this.isMediaOnlyScreen(this.screens[i])) continue;
+      this.renderScreen(i, true);
+      if (window.flutter_inappwebview && window.flutter_inappwebview.callHandler) {
+        window.flutter_inappwebview.callHandler('onImageDetected');
       }
-    });
+      return true;
+    }
+    return false;
   },
   normalizedScreenCount: function(value, fallback) {
     var parsed = Number(value);
@@ -2629,6 +2643,8 @@ $sharedInitViewport
     }
     this.setupReaderImages(this.screen);
     this.buildNodeOffsets();
+    // 换屏后窄条层按新屏重画（旧屏的 Range 已游离，新屏的位置要重量）。
+    if (window.__fushiLanes) window.__fushiLanes.repaint();
     if (this.revealComplete) this.applyCurrentScreenHighlights();
     if (this.revealComplete) this.refreshSentenceAudioCuePresentation();
   },
@@ -2790,6 +2806,7 @@ $sharedInitViewport
     this.revealCursor = 0;
     this.revealComplete = true;
     this.buildNodeOffsets();
+    if (window.__fushiLanes) window.__fushiLanes.repaint();
     this.applyCurrentScreenHighlights();
     this.refreshSentenceAudioCuePresentation();
   },
@@ -2849,9 +2866,12 @@ $sharedInitViewport
       wrapperGroups.push(wrappers);
     });
     highlights.wrappers.clear();
-    for (var i = 0; i < wrapperGroups.length; i++) {
-      this.unwrap(wrapperGroups[i]);
-    }
+    var self = this;
+    this.withLiveRangeBatch(function() {
+      for (var i = 0; i < wrapperGroups.length; i++) {
+        self.unwrap(wrapperGroups[i]);
+      }
+    });
   },
   applyCurrentScreenHighlights: function() {
     var highlights = Array.isArray(this.initialHighlights) ? this.initialHighlights : [];
@@ -3007,10 +3027,30 @@ $sharedInitViewport
     }
   },
   sentenceAudioInlineTargetsForCue: function(cueId) {
-    return this.cueWrappers.get(cueId) || [];
+    return this.cueWrappers.get(cueId) || (this.cueRanges && this.cueRanges.get(cueId)) || [];
   },
   wrapSentenceAudioCueRanges: function(cueRanges) {
+    var self = this;
+    return this.withLiveRangeBatch(function() {
+      return self.wrapSentenceAudioCueRangesInBatch(cueRanges);
+    });
+  },
+  wrapSentenceAudioCueRangesInBatch: function(cueRanges) {
     var wrapped = new Map();
+    // BUG-3518：WebKit 上切开文本节点会丢掉切口处的字距调整、整行后移；VN 又是播放到那句才包裹，
+    // 排版恰好在高亮出现那一刻变动（句子被「顶开」）。那边改登记 Range，不动 DOM。
+    var rangeLayer = window.__fushiCueRanges;
+    if (rangeLayer && rangeLayer.enabled()) {
+      if (!this.cueRanges) this.cueRanges = new Map();
+      for (var r = 0; r < cueRanges.length; r++) {
+        var built = rangeLayer.build(cueRanges[r].ranges);
+        if (!built.length) continue;
+        this.cueRanges.set(cueRanges[r].id, built);
+        wrapped.set(cueRanges[r].id, built);
+      }
+      rangeLayer.track(this.cueRanges);
+      return wrapped;
+    }
     for (var i = cueRanges.length - 1; i >= 0; i--) {
       var id = cueRanges[i].id;
       var ranges = cueRanges[i].ranges;
@@ -3046,12 +3086,14 @@ $sharedInitViewport
     this.prepareSentenceAudioInlineTargets(cueRanges);
   },
   clearInlineSentenceAudioCue: function(cueId) {
+    if (window.__fushiCueRanges && (!cueId || (this.cueRanges && this.cueRanges.has(cueId)))) {
+      window.__fushiCueRanges.hide();
+    }
     var clearWrappers = function(wrappers) {
       wrappers.forEach(function(wrapper) {
         wrapper.classList.remove('fushi-sentence-audio-active');
       });
     };
-    this.clearSentenceAudioRubyGaps();
     if (cueId) {
       clearWrappers(this.cueWrappers.get(cueId) || []);
       return;
@@ -3059,29 +3101,43 @@ $sharedInitViewport
     this.cueWrappers.forEach(clearWrappers);
   },
   applyInlineSentenceAudioCue: function(cueId) {
+    var ranges = this.cueRanges && this.cueRanges.get(cueId);
+    if (ranges && ranges.length) {
+      window.__fushiCueRanges.show(ranges);
+      return true;
+    }
     var wrappers = this.cueWrappers.get(cueId) || [];
     wrappers.forEach(function(wrapper) {
       wrapper.classList.add('fushi-sentence-audio-active');
     });
-    // BUG-2917：注音撑出的缝用 box-shadow 补色（与分页 / 连续模式同一实现）。
-    this.fillSentenceAudioRubyGaps(wrappers);
+    // 底色由窄条层（__fushiLanes）按 active class 画：同一行里被注音拆开的 wrapper 并成一条，
+    // 不再逐缝补 box-shadow（与分页 / 连续模式相同）。
     return wrappers.length > 0;
   },
   clearSentenceAudioCuePresentation: function() {
     this.clearInlineSentenceAudioCue();
   },
   clearCurrentSentenceAudioScreenTargets: function() {
-    this.clearSentenceAudioRubyGaps();
     this.cueSourceRanges.clear();
     this.cueWrappers.clear();
+    if (this.cueRanges && this.cueRanges.size) {
+      if (window.__fushiCueRanges) window.__fushiCueRanges.hide();
+      this.cueRanges.clear();
+    }
   },
   clearSentenceAudioTargets: function() {
     this.clearSentenceAudioCuePresentation();
     var self = this;
-    this.cueWrappers.forEach(function(wrappers) {
-      self.unwrap(wrappers);
+    this.withLiveRangeBatch(function() {
+      self.cueWrappers.forEach(function(wrappers) {
+        self.unwrap(wrappers);
+      });
     });
     this.cueWrappers.clear();
+    if (this.cueRanges) {
+      if (window.__fushiCueRanges) window.__fushiCueRanges.untrack(this.cueRanges);
+      this.cueRanges.clear();
+    }
     this.cueSourceRanges.clear();
     this.buildNodeOffsets();
   },
@@ -3101,7 +3157,7 @@ $sharedInitViewport
     this.buildNodeOffsets();
     if (this.activeCueId) this.refreshSentenceAudioCuePresentation();
   },
-  highlightSentenceAudioCue: function(cue, reveal) {
+  highlightSentenceAudioCue: function(cue, reveal, pauseEnabled, fromChapterStart) {
     var cueObject = this.sentenceAudioCueForInput(cue);
     var cueId = typeof cue === 'string' ? cue : cueObject && cueObject.id;
     if (!cueId) return null;
@@ -3115,6 +3171,9 @@ $sharedInitViewport
     if (targetIndex < 0) {
       this.refreshSentenceAudioCuePresentation();
       return null;
+    }
+    if (reveal && this.pauseAtCrossedMediaScreen(targetIndex, pauseEnabled, fromChapterStart)) {
+      return this.calculateProgress();
     }
     if (targetIndex !== this.currentScreenIndex) {
       if (!reveal) {
@@ -3163,7 +3222,7 @@ $sharedInitViewport
 
 
 
-// ── Hibiki host-compat shims (TODO-909) ──────────────────────────────────────
+// ── Fushi host-compat shims (TODO-909) ──────────────────────────────────────
 // The Dart side calls a few methods on window.fushiReader that hoshi a's VN
 // object does not define. Add minimal, correct equivalents so the shared Dart
 // reader paths behave under VN mode.
@@ -3309,7 +3368,7 @@ $sharedInitViewport
     // screenIndexForCharOffset 判成 -1、静默丢弃——正是 BUG-1742 本身的形状。
     // 宿主（audiobook_bridge.dart）是 fire-and-forget 的 evaluateJavascript，不消费
     // 返回值，改成 Promise 对调用方零影响。
-    vn.highlightSelectorCue = async function(selector, reveal) {
+    vn.highlightSelectorCue = async function(selector, reveal, pauseEnabled, fromChapterStart) {
       if (!selector) return null;
       await this.ensureReady();
       var root = this.contentRoot();
@@ -3334,6 +3393,9 @@ $sharedInitViewport
           if (clone && clone.classList) clone.classList.add('fushi-active');
         } catch (_ignored) {}
       }).bind(this);
+      if (reveal && this.pauseAtCrossedMediaScreen(index, pauseEnabled, fromChapterStart)) {
+        return this.calculateProgress();
+      }
       if (index !== this.currentScreenIndex) {
         // reveal=false 是「别打断用户当前阅读位置」的显式请求，不许翻屏。
         if (!reveal) return null;
@@ -3503,7 +3565,7 @@ $sharedInitViewport
   }
 })();
 
-// Hibiki adaptation: initialize on load, then run the restore script. This MUST
+// Fushi adaptation: initialize on load, then run the restore script. This MUST
 // run AFTER the host-compat shim IIFE above: a charOffset restore calls
 // window.fushiReader.restoreToCharOffset, which only the shim defines. Placed
 // before the shim it threw a synchronous TypeError that aborted the outer

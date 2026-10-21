@@ -33,6 +33,7 @@ void main() {
       'backup',
       'sync',
       'dl',
+      'sub',
       'mediaserver',
       'peer',
       'storage',
@@ -233,9 +234,10 @@ void main() {
         () => build('dl', 'add', <String>['https://x/a.epub', '--kind', 'tv']),
         usageError(),
       );
+      // 磁链 / 种子也能按域入库（第二轮）。
       expect(
-        () => build('dl', 'add', <String>[magnet, '--kind', 'novel']),
-        usageError(),
+        build('dl', 'add', <String>[magnet, '--kind', 'novel']).body,
+        <String, Object?>{'target': magnet, 'mediaKind': 'novel'},
       );
       expect(() => build('dl', 'add', <String>[]), usageError());
       expect(
@@ -244,11 +246,170 @@ void main() {
       );
     });
 
-    test('cancel / retry', () {
+    test('cancel / pause / retry / resume', () {
       final CtlRequestSpec c = build('dl', 'cancel', <String>['j1']);
       expect((c.method, c.path), ('POST', '/api/admin/downloads/j1/cancel'));
+      final CtlRequestSpec pause = build('dl', 'pause', <String>['j1']);
+      expect((pause.method, pause.path), (c.method, c.path));
       final CtlRequestSpec r = build('dl', 'retry', <String>['j1']);
       expect((r.method, r.path), ('POST', '/api/admin/downloads/j1/retry'));
+      final CtlRequestSpec res = build('dl', 'resume', <String>['direct:3']);
+      expect(
+        (res.method, res.path),
+        ('POST', '/api/admin/downloads/direct%3A3/resume'),
+      );
+      expect(() => build('dl', 'resume', <String>[]), usageError());
+    });
+
+    test('add 种子完整参数：目标库 / 字幕 / 文件 / 身份 / 设备 / 优先级', () {
+      final CtlRequestSpec r = build('dl', 'add', <String>[
+        'a.torrent',
+        '--kind',
+        'tv',
+        '--source',
+        '3',
+        '--subtitles',
+        'bestEffort',
+        '--files',
+        '0,2',
+        '--files',
+        '5',
+        '--year',
+        '2024',
+        '--provider',
+        'anidb',
+        '--external-id',
+        '123',
+        '--device',
+        'host-1',
+        '--priority',
+        'high',
+      ]);
+      expect(r.body, <String, Object?>{
+        'target': p.normalize(p.absolute('a.torrent')),
+        'mediaKind': 'tv',
+        'source': 3,
+        'subtitlePolicy': 'bestEffort',
+        'files': <String>['0', '2', '5'],
+        'year': 2024,
+        'metadataProvider': 'anidb',
+        'externalId': '123',
+        'device': 'host-1',
+        'priority': 1,
+      });
+      expect(
+        build('dl', 'add', <String>[
+          'magnet:?xt=urn:btih:a',
+          '--priority',
+          '-5',
+          '--device',
+          'local',
+        ]).body,
+        containsPair('priority', -5),
+      );
+    });
+
+    test('add 参数组合错误', () {
+      const String magnet = 'magnet:?xt=urn:btih:a';
+      // 磁链没有文件清单。
+      expect(
+        () => build('dl', 'add', <String>[magnet, '--files', '1']),
+        usageError(),
+      );
+      // 资料源与 id 成对。
+      expect(
+        () => build('dl', 'add', <String>[magnet, '--provider', 'tmdb']),
+        usageError(),
+      );
+      // 非视频不收目标库 / 年份。
+      expect(
+        () => build('dl', 'add', <String>[
+          magnet,
+          '--kind',
+          'manga',
+          '--source',
+          '1',
+        ]),
+        usageError(),
+      );
+      // 直链不收种子专属参数。
+      expect(
+        () => build('dl', 'add', <String>[
+          'https://x/a.epub',
+          '--kind',
+          'novel',
+          '--subtitles',
+          'required',
+        ]),
+        usageError(),
+      );
+      expect(
+        () => build('dl', 'add', <String>[magnet, '--priority', 'urgent']),
+        usageError(),
+      );
+      expect(
+        () => build('dl', 'add', <String>[magnet, '--source', 'x']),
+        usageError(),
+      );
+    });
+
+    test('--device：远端任务的 ls / get / cancel / retry / rm', () {
+      final CtlRequestSpec ls = build('dl', 'ls', <String>['--device', 'h1']);
+      expect(ls.query, <String, String>{'device': 'h1'});
+      expect(build('dl', 'ls', <String>[]).query, isEmpty);
+      expect(
+        build('dl', 'get', <String>['j1', '--device', 'PC']).query,
+        <String, String>{'device': 'PC'},
+      );
+      for (final String cmd in <String>['cancel', 'pause', 'retry']) {
+        expect(
+          build('dl', cmd, <String>['j1', '--device', 'h1']).body,
+          <String, Object?>{'device': 'h1'},
+          reason: cmd,
+        );
+        expect(build('dl', cmd, <String>['j1']).body, isEmpty, reason: cmd);
+      }
+      expect(
+        build('dl', 'rm', <String>['j1', '-y', '--device', 'h1']).query,
+        <String, String>{'confirm': 'true', 'device': 'h1'},
+      );
+      // BUG-3437：远端任务也能选删不删文件（host 不支持时由 app 侧明确报错）。
+      expect(
+        build('dl', 'rm', <String>[
+          'j1',
+          '-y',
+          '--device',
+          'h1',
+          '--delete-files',
+        ]).query,
+        <String, String>{
+          'confirm': 'true',
+          'deleteFiles': 'true',
+          'device': 'h1',
+        },
+      );
+    });
+
+    test('priority / detail / targets', () {
+      final CtlRequestSpec pr = build('dl', 'priority', <String>['j1', 'low']);
+      expect(
+        (pr.method, pr.path),
+        ('POST', '/api/admin/downloads/j1/priority'),
+      );
+      expect(pr.body, <String, Object?>{'priority': -1});
+      expect(
+        build('dl', 'priority', <String>['j1', '7']).body,
+        <String, Object?>{'priority': 7},
+      );
+      expect(() => build('dl', 'priority', <String>['j1']), usageError());
+      expect(
+        () => build('dl', 'priority', <String>['j1', 'top']),
+        usageError(),
+      );
+      final CtlRequestSpec d = build('dl', 'detail', <String>['j/1']);
+      expect((d.method, d.path), ('GET', '/api/admin/downloads/j%2F1/details'));
+      final CtlRequestSpec t = build('dl', 'targets', <String>[]);
+      expect((t.method, t.path), ('GET', '/api/admin/download-targets'));
     });
 
     test('rm 必须 --yes；--delete-files 透传', () {
@@ -337,6 +498,40 @@ void main() {
       expect((r.method, r.path), ('POST', '/api/admin/peers/pair'));
       expect(r.body, <String, Object?>{'link': link});
       expect(() => build('peer', 'pair', <String>['https://x']), usageError());
+      // --yes：跳过 app 确认框直接配对。
+      expect(
+        build('peer', 'pair', <String>[link, '--yes']).body,
+        <String, Object?>{'link': link, 'confirm': true},
+      );
+    });
+
+    test('pair-link 签发 / --revoke 作废', () {
+      final CtlRequestSpec issue = build('peer', 'pair-link', <String>[]);
+      expect(
+        (issue.method, issue.path),
+        ('POST', '/api/admin/peers/pair-link'),
+      );
+      final CtlRequestSpec revoke = build('peer', 'pair-link', <String>[
+        '--revoke',
+      ]);
+      expect(
+        (revoke.method, revoke.path),
+        ('DELETE', '/api/admin/peers/pair-link'),
+      );
+    });
+
+    test('revoke / forget 必须 --yes，id 按段编码', () {
+      expect(() => build('peer', 'revoke', <String>['p1']), usageError());
+      final CtlRequestSpec r = build('peer', 'revoke', <String>['p/1', '-y']);
+      expect((r.method, r.path), ('DELETE', '/api/admin/peers/clients/p%2F1'));
+      expect(r.query, <String, String>{'confirm': 'true'});
+      expect(() => build('peer', 'forget', <String>['host-1']), usageError());
+      final CtlRequestSpec f = build('peer', 'forget', <String>[
+        'https://192.168.1.2:7000',
+        '--yes',
+      ]);
+      expect(f.path, '/api/admin/peers/hosts/https%3A%2F%2F192.168.1.2%3A7000');
+      expect(f.query, <String, String>{'confirm': 'true'});
     });
   });
 
@@ -347,6 +542,129 @@ void main() {
       final CtlRequestSpec usage = build('storage', 'usage', <String>[]);
       expect((usage.method, usage.path), ('GET', '/api/admin/storage/usage'));
     });
+
+    test('migrate：真迁移要 --yes，--dry-run 不要；目录转绝对路径', () {
+      expect(() => build('storage', 'migrate', <String>['d']), usageError());
+      expect(() => build('storage', 'migrate', <String>[]), usageError());
+      final CtlRequestSpec dry = build('storage', 'migrate', <String>[
+        'd',
+        '--dry-run',
+      ]);
+      expect((dry.method, dry.path), ('POST', '/api/admin/storage/migrate'));
+      expect(dry.body, <String, Object?>{
+        'path': p.normalize(p.absolute('d')),
+        'dryRun': true,
+      });
+      expect(
+        build('storage', 'migrate', <String>['d', '-y']).body,
+        <String, Object?>{
+          'path': p.normalize(p.absolute('d')),
+          'confirm': true,
+        },
+      );
+      final CtlRequestSpec st = build('storage', 'migrate-status', <String>[]);
+      expect((st.method, st.path), ('GET', '/api/admin/storage/migrate'));
+    });
+  });
+
+  group('backup 第二轮', () {
+    test('create 指定书 / 视频与后台模式', () {
+      final CtlRequestSpec r = build('backup', 'create', <String>[
+        '--book',
+        'bk1',
+        '--book',
+        'bk2',
+        '--video',
+        'v1',
+        '--no-wait',
+      ]);
+      expect(r.body, <String, Object?>{
+        'output': p.normalize(p.current),
+        'books': <String>['bk1', 'bk2'],
+        'videos': <String>['v1'],
+        'wait': false,
+      });
+      final CtlRequestSpec st = build('backup', 'status', <String>[]);
+      expect((st.method, st.path), ('GET', '/api/admin/backups/status'));
+    });
+  });
+
+  group('sub', () {
+    test('ls / get / items / check（单条与全部）', () {
+      expect(build('sub', 'ls', <String>[]).path, '/api/admin/subscriptions');
+      expect(
+        build('sub', 'get', <String>['video-discovery-1']).path,
+        '/api/admin/subscriptions/video-discovery-1',
+      );
+      expect(
+        build('sub', 'items', <String>['a/b']).path,
+        '/api/admin/subscriptions/a%2Fb/items',
+      );
+      final CtlRequestSpec all = build('sub', 'check', <String>[]);
+      expect(all.method, 'POST');
+      expect(all.path, '/api/admin/subscriptions/check');
+      expect(
+        build('sub', 'check', <String>['s1']).path,
+        '/api/admin/subscriptions/s1/check',
+      );
+      expect(() => build('sub', 'get', <String>[]), usageError());
+    });
+
+    test('enable / disable 走同一条路由，body 区分', () {
+      final CtlRequestSpec on = build('sub', 'enable', <String>['s1']);
+      expect(on.path, '/api/admin/subscriptions/s1/enable');
+      expect(on.body, <String, Object?>{'enabled': true});
+      expect(build('sub', 'disable', <String>['s1']).body, <String, Object?>{
+        'enabled': false,
+      });
+    });
+
+    test('edit 只带给出的项；--start-after none 清空；规则空串 = 去掉', () {
+      final CtlRequestSpec r = build('sub', 'edit', <String>[
+        's1',
+        '--query',
+        'Nia Liston 1080p',
+        '--start-after',
+        '3',
+        '--subtitles',
+        'required',
+        '--source',
+        '7',
+        '--group',
+        'SubsPlease,Erai-raws',
+        '--resolution',
+        '',
+      ]);
+      expect(r.method, 'PUT');
+      expect(r.path, '/api/admin/subscriptions/s1');
+      expect(r.body, <String, Object?>{
+        'searchQuery': 'Nia Liston 1080p',
+        'startAfterEpisode': 3,
+        'subtitlePolicy': 'required',
+        'source': 7,
+        'releaseGroups': <String>['SubsPlease', 'Erai-raws'],
+        'resolutions': <String>[],
+      });
+      final CtlRequestSpec clear = build('sub', 'edit', <String>[
+        's1',
+        '--start-after',
+        'none',
+      ]);
+      expect(clear.body, <String, Object?>{'startAfterEpisode': null});
+      expect(() => build('sub', 'edit', <String>['s1']), usageError());
+      expect(
+        () => build('sub', 'edit', <String>['s1', '--start-after', 'x']),
+        usageError(),
+      );
+    });
+
+    test('rm 必须 --yes，并带 confirm', () {
+      expect(() => build('sub', 'rm', <String>['s1']), usageError());
+      final CtlRequestSpec r = build('sub', 'rm', <String>['s1', '--yes']);
+      expect(r.method, 'DELETE');
+      expect(r.path, '/api/admin/subscriptions/s1');
+      expect(r.query, <String, String>{'confirm': 'true'});
+    });
   });
 
   group('render', () {
@@ -355,6 +673,37 @@ void main() {
             .firstWhere((CtlCommandGroup g) => g.name == group)
             .find(command)!
             .render!(data);
+
+    test('sub ls 状态列：启用 / 已停用 / 已完成 / 出错；后端未就绪有提示', () {
+      final String out = render('sub', 'ls', <String, Object?>{
+        'supported': false,
+        'subscriptions': <Object?>[
+          <String, Object?>{'subscriptionId': 'a', 'enabled': true},
+          <String, Object?>{'subscriptionId': 'b', 'enabled': false},
+          <String, Object?>{
+            'subscriptionId': 'c',
+            'enabled': false,
+            'fulfilledAt': 1,
+          },
+          <String, Object?>{
+            'subscriptionId': 'd',
+            'enabled': true,
+            'lastError': 'boom',
+          },
+        ],
+      });
+      expect(out, startsWith('本机下载后端未就绪'));
+      for (final String s in <String>['启用', '已停用', '已完成', '出错：boom']) {
+        expect(out, contains(s));
+      }
+      expect(
+        render('sub', 'ls', <String, Object?>{
+          'supported': true,
+          'subscriptions': <Object?>[],
+        }),
+        contains('没有订阅'),
+      );
+    });
 
     test('dl ls 表格与空表', () {
       expect(
@@ -404,6 +753,87 @@ void main() {
       });
       expect(text, contains('cloud（webDav）'));
       expect(text, contains('interconnect（fushiServer）'));
+    });
+
+    test('dl add 远端 / dl detail / dl targets / pair-link / migrate', () {
+      expect(
+        render('dl', 'add', <String, Object?>{
+          'jobId': 'r1',
+          'title': 'T',
+          'device': 'PC',
+          'remote': true,
+        }),
+        '已入队：r1（T） → PC',
+      );
+      final String detail = render('dl', 'detail', <String, Object?>{
+        'jobId': 'j1',
+        'title': 'T',
+        'lifecycle': 'active',
+        'stage': 'download',
+        'torrent': <String, Object?>{
+          'name': 'N',
+          'state': 'downloading',
+          'downRateBps': 2048,
+          'upRateBps': 0,
+        },
+        'location': '/dl/N',
+        'files': <Object?>[
+          <String, Object?>{
+            'index': 0,
+            'name': 'ep1.mkv',
+            'bytes': 1024,
+            'progress': 0.5,
+          },
+        ],
+      });
+      expect(detail, contains('ep1.mkv'));
+      expect(detail, contains('50%'));
+      expect(detail, contains('位置：/dl/N'));
+      final String targets = render('dl', 'targets', <String, Object?>{
+        'localBackend': 'embedded',
+        'executionDevice': 'local',
+        'sources': <Object?>[
+          <String, Object?>{
+            'id': 3,
+            'label': 'Anime',
+            'rootPath': '/v',
+            'default': true,
+          },
+        ],
+        'hosts': <Object?>[],
+      });
+      expect(targets, contains('Anime'));
+      expect(
+        render('dl', 'ls', <String, Object?>{
+          'device': 'PC',
+          'remote': true,
+          'jobs': <Object?>[],
+        }),
+        '互联 host「PC」上的任务：\n（没有任务）',
+      );
+      expect(targets, contains('（无在线 host）'));
+      expect(
+        render('peer', 'pair-link', <String, Object?>{
+          'link': 'fushi://pair?h=x',
+          'oneTime': true,
+        }),
+        startsWith('fushi://pair?h=x'),
+      );
+      expect(
+        render('storage', 'migrate-status', <String, Object?>{
+          'active': true,
+          'copiedFiles': 3,
+          'totalFiles': 10,
+        }),
+        '正在迁移：3 / 10 个文件',
+      );
+      expect(
+        render('backup', 'status', <String, Object?>{
+          'active': true,
+          'progress': 0.25,
+        }),
+        '正在导出备份：25%',
+      );
     });
 
     test('sync run 两种结果', () {

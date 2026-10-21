@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:isolate';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:fushi/src/utils/misc/channel_constants.dart';
 import 'package:fushi_engine/utils/misc/desktop_audio_clipper.dart';
@@ -61,6 +62,26 @@ class TtsChannel {
 
   /// 主入口 `main()` 调一次；见 [_hostPlaybackRegistered]。
   static void markHostPlaybackRegistered() => _hostPlaybackRegistered = true;
+
+  /// 原生 `TtsChannelHandler` 每挂到本引擎一次就发一次的通知名。
+  static const String nativeHandlerAttachedMethod = 'nativeHandlerAttached';
+
+  /// 原生 `TtsChannelHandler` 挂在 Activity 上（`onCreate` 新建、`onDestroy` 关库），
+  /// 而引擎由 audio_service 缓存、比 Activity 活得久（BUG-2280）：Activity 重建后
+  /// 新 handler 的本地音频库列表是空的，Dart 却只在 `initialise()` 绑过一次；引擎
+  /// 先于 Activity 被后台拉起时，那一次绑定还会撞上 MissingPluginException。两种
+  /// 情况下查词都静默拿不到本地音频，直到重启进程（BUG-3439）。原生 handler 注册后
+  /// 主动发 [nativeHandlerAttachedMethod]，这里收到就调 [rebind] 把配置重新推过去。
+  /// 主入口 `main()` 在 `initialise()` 之前装一次。
+  static void onNativeHandlerAttached(Future<void> Function() rebind) {
+    _channel.setMethodCallHandler((MethodCall call) async {
+      if (call.method != nativeHandlerAttachedMethod) {
+        throw MissingPluginException('TtsChannel: ${call.method}');
+      }
+      await rebind();
+      return null;
+    });
+  }
 
   /// Desktop only: the configured local-audio SQLite DB configs (path +
   /// per-db enabled source order), mirrored here by [setLocalAudioDbs]
@@ -349,8 +370,8 @@ class TtsChannel {
   /// 同契约）；视频制卡的句子音频在 Android 上早已直接走 ffmpeg。统一到 ffmpeg 后
   /// ①② 一次消除：ffmpeg 天然支持任意输入容器/编码（`.m4b/.opus/.flac/HE-AAC` 都能
   /// 解），不再依赖设备 MediaCodec / 手写 MP4 box 解析器。输出仍是 `.aac`（adts 容器）
-  /// ——这是桌面 ffmpeg-min 极简构建唯一能 mux 的音频容器（BUG-460，无 mp4/ipod/m4a
-  /// muxer），全平台统一不改。桌面行为逐字节不变（同一函数）。
+  /// ——这是旧桌面 ffmpeg-min 极简构建唯一能 mux 的音频容器（BUG-460，无 mp4/ipod/m4a
+  /// muxer；统一 FFmpeg 已含），全平台统一不改（既有输出契约，兼容外部 ffmpeg）。桌面行为逐字节不变（同一函数）。
   Future<String?> extractAudioSegment({
     required String inputPath,
     required int startMs,

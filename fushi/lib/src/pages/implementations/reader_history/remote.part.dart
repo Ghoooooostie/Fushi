@@ -8,7 +8,7 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
         _pageWidget.remoteBookClientLoader;
     if (injected != null) return injected();
 
-    // 互联（局域网 hibiki server）已从 backendType 解耦成独立开关，可与云备份并存：
+    // 互联（局域网 fushi server）已从 backendType 解耦成独立开关，可与云备份并存：
     // 互联启用且已配对对端时优先用它的 live 库 API，否则回退云盘备份后端（经
     // CloudRemoteBookClient 适配，TODO-665 阶段1）；鉴权失败返 null（不显示远端区）。
     // 判定与「已从本机移除的远端书」找回列表共用一条。
@@ -47,6 +47,14 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
     _remoteBookClient = client;
     if (client == null) return null;
     try {
+      // 「从所有设备删除」过的书（BUG-3508）：墓碑送达 host 前 host 清单里还有它，
+      // 本地行一删去重就命不中，刚删的书会以云端占位卡回到书架上。**先于取清单读**
+      // （见 loadPendingRemoteDeletionKeys）。
+      final Set<String> deletedBookKeys = await loadPendingRemoteDeletionKeys(
+        appModel.database,
+        SyncTombstoneKind.book,
+        remoteLibrarySourceId: client.remoteLibrarySourceId,
+      );
       // BUG-1180：经共享缓存取清单——切回书架 tab（[_onShellTabActivated]）不再必然
       // 打一轮网络，TTL 内直接复用；首页 dashboard 刚拉过的同一份列表也在这里命中。
       // 缓存只包住「问对端要清单」这一步，下面的本地库查询与去重仍每次照跑，所以本地
@@ -104,9 +112,8 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
       final List<RemoteBookInfo> notAdopted = <RemoteBookInfo>[
         for (final RemoteBookInfo book in withContent)
           if (!book.hasMangaChapters ||
-              !localKeys.contains(OnlineMangaLibraryService.bookKeyOf(
-                InterconnectMangaCatalog.entryFor(book),
-              )))
+              !localKeys.contains(
+                  InterconnectMangaCatalog.localBookKeyFor(book.downloadId)))
             book,
       ];
       // 纯 SRT（standalone）远端有声书：仅互联后端有 live 有声书 API。列出对端全部
@@ -132,16 +139,20 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
           : await remoteBookSourceHost(appModel.database, client);
       return _RemoteBookState(
         books: dedupeRemoteBooks(
-          remote: <RemoteBookInfo>[
-            for (final RemoteBookInfo book in notAdopted)
-              if (!isRemoteBookHidden(
-                hidden,
-                sourceId: client.remoteLibrarySourceId,
-                sourceHost: sourceHost,
-                remoteId: book.downloadId,
-              ))
-                book,
-          ],
+          remote: filterOutLocallyDeletedRemoteBooks(
+            remote: <RemoteBookInfo>[
+              for (final RemoteBookInfo book in notAdopted)
+                if (!isRemoteBookHidden(
+                  hidden,
+                  sourceId: client.remoteLibrarySourceId,
+                  sourceHost: sourceHost,
+                  remoteId: book.downloadId,
+                ))
+                  book,
+            ],
+            deletedKeys: deletedBookKeys,
+            keyOf: sanitizeTtuFilename,
+          ),
           localBookKeys: localKeys,
           keyOf: sanitizeTtuFilename,
         ),
@@ -896,6 +907,24 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
               : resolveExtractedEpubRoot(existingBook.extractDir) != null);
       final String? localBookKey = (hasExistingContent ? existingBook.bookKey : null) ??
           await _importRemoteBookFile(dest, mangaTitleHint: book.title);
+      // BUG-3452：刚从对端落地的书沿用它在对端的入库时刻。书架「最近阅读」对没有
+      // 阅读记录的书回落到入库时刻、「导入时间」直接按它排；不改的话入库时刻 = 下载
+      // 那一刻，对端没读过的书一下完就顶到最前，和下载前占位卡的位置（同样按 host
+      // 的入库时刻排）对不上。只动这次新导入的行：已在本机的书（有声书补拉重试）
+      // 是用户自己的入库记录，不改；旧 host 不带该字段时保持本机时刻。
+      // 只改 importedAt（原始入库时刻）：本机开始拥有的时刻 localAddedAt 由
+      // insertEpubBook 记成落地那一刻、这里不动——删除墓碑仲裁与首页「最近添加」
+      // 读的是它（v118）。
+      final int? hostImportedAt = book.importedAt;
+      if (!hasExistingContent &&
+          localBookKey != null &&
+          hostImportedAt != null &&
+          hostImportedAt > 0) {
+        final FushiDatabase db = appModel.database;
+        await (db.update(db.epubBooks)
+              ..where(($EpubBooksTable t) => t.bookKey.equals(localBookKey)))
+            .write(EpubBooksCompanion(importedAt: Value<int>(hostImportedAt)));
+      }
       if (localBookKey != null) {
         final EpubBookRow? localBook = await appModel.database.getEpubBook(
           localBookKey,
@@ -905,6 +934,9 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
             appModel.database,
           ).adoptBook(book, localBook: localBook);
         }
+        // 本机身份（入库行 + 别名 + 合集归属）此刻已齐：占位卡立刻让位，不等整个
+        // 任务（进度回填、有声书包）跑完。
+        _onRemoteBookLanded(book.downloadId);
       }
       // 漫画：把 host 端按本阅读模式作为初始值落地（互联完整支持批次；一次性，
       // 之后两端各自记忆）。best-effort，不阻塞下载主流程。
@@ -977,6 +1009,9 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
       // 远端书时不再丢「阅读记录」（放在有声书下载之前、独立吞错，保证进度回填不被
       // 有声书失败连带跳过）。
       await _downloadRemoteBookProgress(book, client, localBookKey);
+      // BUG-3452：刚写进的对端阅读时刻要进「最近阅读」排序。最后阅读时间 provider
+      // 平时只在关书时失效，不失效的话这本书查不到阅读记录、回落到入库时刻。
+      if (mounted) ref.invalidate(bookLastReadAtProvider);
       // BUG-990：EPUB 已落库、有声书未落库的空窗起点——标记本地 bookKey「有声书下载中」，
       // 让被 provider 自动刷新顶替出来的本地卡（EPUB / SRT）继续显示加载覆盖层，不露出
       // 「无转圈的普通书」。清理统一在下方 finally（覆盖成功 / 失败全部出口）。
@@ -998,6 +1033,30 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
         _markAudiobookDownloading(markedAudiobookKey, downloading: false);
       }
     }
+  }
+
+  /// 对端书在本机落地（入库 + 别名 / 合集归属已写完）后的书架收尾（BUG-3452）。
+  ///
+  /// 占位卡的去重与合集折叠此前只在整个下载任务结束后才重算（[_downloadRemoteBook]
+  /// 尾部的刷新），而本地卡在入库那一刻就经书集合流冒出来：中间这段（拉进度、下
+  /// 有声书包，后者可以很久）里旧占位卡还在——合集归属已提升到本地 uid 后它掉出
+  /// 合集、以「未下载」散卡挂在合集外，合集里本地卡与占位卡并存时册数翻倍。
+  ///
+  /// 这里立刻：① 把它记进 [_landedRemoteDownloadIds]，渲染时不再画它的占位卡；
+  /// ② 重载折叠映射（新书的 uid / 入库时刻 / 合集归属）与远端清单（TTL 内不联网，
+  /// 只按本地现状重新去重）。那一轮远端清单回来后去重已是权威结果，记号随即摘掉
+  /// ——本地书之后被删，占位卡照常回来。任务在 app 级管理器里跑、页面可能已卸载：
+  /// 未挂载时什么都不做（重建的页面实例首帧就会按 DB 现状重新取数）。
+  void _onRemoteBookLanded(String downloadId) {
+    if (!mounted) return;
+    _landedRemoteDownloadIds.add(downloadId);
+    final Future<_RemoteBookState?> reload = _loadRemoteBooks();
+    // 先于 FutureBuilder 的订阅注册：同一轮完成回调里先摘记号、再按新清单重建。
+    unawaited(reload.then((_) => _landedRemoteDownloadIds.remove(downloadId)));
+    _rebuild(() {
+      _remoteBooksFuture = reload;
+      _shelfMapsFuture = _loadShelfMaps();
+    });
   }
 
   /// BUG-990 空窗覆盖层的页面态开关。任务活在 app 级管理器里、可能在页面

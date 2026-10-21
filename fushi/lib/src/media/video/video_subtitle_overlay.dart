@@ -9,7 +9,6 @@ import 'package:flutter/rendering.dart'
     show BoxHitTestEntry, BoxHitTestResult, RenderProxyBox;
 import 'package:flutter/scheduler.dart' show Ticker;
 import 'package:fushi/src/models/content_font_chain.dart';
-import 'package:flutter/services.dart' show HardwareKeyboard;
 
 import 'package:fushi/src/media/video/ass_font_metrics.dart';
 import 'package:fushi/src/media/video/subtitle_pos_mapping.dart';
@@ -17,6 +16,7 @@ import 'package:fushi/src/media/video/video_player_controller.dart';
 import 'package:fushi/src/media/video/video_subtitle_style.dart';
 import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 import 'package:fushi_audio/fushi_audio.dart';
+import 'package:fushi/src/lookup/hover_lookup_modifier.dart';
 
 /// 命中字幕某字符的结果：整条字幕、被点 grapheme 下标、该字符的全局屏幕矩形、
 /// **该字符所属的那条 cue**。与 [VideoSubtitleOverlay.onCharTap] 的回调四元组同构。
@@ -507,6 +507,7 @@ class VideoSubtitleOverlay extends StatefulWidget {
     this.onCharTap,
     this.onCharHover,
     this.hoverAutoLookupEnabled = false,
+    this.hoverLookupModifier = HoverLookupModifier.shift,
     this.onHoverChanged,
     this.hitTester,
     this.caretEntryIndex,
@@ -517,6 +518,7 @@ class VideoSubtitleOverlay extends StatefulWidget {
     this.secondaryBlurEnabled = false,
     this.secondaryHidden = false,
     this.obscureRevealOnInteraction = true,
+    this.secondaryObscureRevealOnInteraction = true,
     this.lookupPopupVisible = false,
     this.fontSize = 36,
     this.textColor,
@@ -566,6 +568,9 @@ class VideoSubtitleOverlay extends StatefulWidget {
   /// Shift+悬停门控。由页面侧从 `ReaderFushiSource.instance.hoverAutoLookup` 传入。
   /// 移动端无 OS hover，本标志为何值都不产生 hover 事件、自然不触发。
   final bool hoverAutoLookupEnabled;
+
+  /// 悬停查词按住的键（设置「悬停查词按键」）。
+  final HoverLookupModifier hoverLookupModifier;
 
   /// 鼠标进 / 出**字幕盒本身**（非整片视频区）时回调（BUG-283）。桌面用：字幕盒覆盖在
   /// media_kit 控制条之上，鼠标停字幕上读字 / 查词时，media_kit 控制条 2s 自动隐藏会让
@@ -634,9 +639,13 @@ class VideoSubtitleOverlay extends StatefulWidget {
   /// 点击（遮蔽态热区的 onTap），以及自动显形的暂停 / 查词浮层（`userIsReading`，见
   /// [_buildSubtitleLayer]）。只堵前两者会让开关半失效——用户关掉后照旧「一暂停字幕
   /// 就冒出来」。热区本身照常挂——它还负责拦掉落在盒面上的字符点击（隐藏
-  /// 态字符仍登记在查词表里，撤掉热区就成了「点不可见的字也能查词」）。主 / 副字幕共用
-  /// 本开关（用户诉求是「显形这个行为」的总闸，不是逐层设置）。
+  /// 态字符仍登记在查词表里，撤掉热区就成了「点不可见的字也能查词」）。本开关只管
+  /// **主字幕**层，副字幕层见 [secondaryObscureRevealOnInteraction]。
   final bool obscureRevealOnInteraction;
+
+  /// 副字幕层的「临时显形」开关，语义与门控来源同 [obscureRevealOnInteraction]。
+  /// 用户要求主 / 副分开配置（常见用法：主字幕暂停时显形，副字幕（翻译）始终遮住）。
+  final bool secondaryObscureRevealOnInteraction;
 
   /// 查词浮层栈此刻是否还有可见层（BUG-2235，页面侧 `_hasVisiblePopup` 的派生值）。
   ///
@@ -1100,7 +1109,7 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
     // TODO-756b：开了“悬停即查词”则纯悬停即触发，无需 Shift；否则退回 756a 的
     // Shift 门控。两路都共用同一节流锚与命中链路（onCharHover），仅门控判据不同。
     if (!widget.hoverAutoLookupEnabled &&
-        !HardwareKeyboard.instance.isShiftPressed) {
+        !widget.hoverLookupModifier.isPressed()) {
       // 未开“悬停即查词”且未按 Shift：复位节流锚，使下次按 Shift 重新进入即触发
       // （不被旧锚误判为同位置）。
       _lastShiftHoverPos = Offset.zero;
@@ -1185,6 +1194,9 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
         oldWidget.obscureRevealOnInteraction) {
       _revealed = false;
       _tapRevealed = false;
+    }
+    if (!widget.secondaryObscureRevealOnInteraction &&
+        oldWidget.secondaryObscureRevealOnInteraction) {
       _secondaryRevealed = false;
       _secondaryTapRevealed = false;
     }
@@ -1200,6 +1212,11 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
   bool _revealedFor({required bool isSecondary}) => isSecondary
       ? (_secondaryRevealed || _secondaryTapRevealed)
       : (_revealed || _tapRevealed);
+
+  /// 该层是否允许临时显形（主 / 副各自的开关）。
+  bool _revealOnInteractionFor({required bool isSecondary}) => isSecondary
+      ? widget.secondaryObscureRevealOnInteraction
+      : widget.obscureRevealOnInteraction;
 
   /// [byTap] 区分显形来源：true = 点击热区（移动端唯一通道，随活动集换轮失效），
   /// false = 桌面悬停（由 onExit 复位）。写错来源会让复位路径接不上（显形态锁死）。
@@ -1372,10 +1389,12 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
     // 「重播本句」会起播，只看 isPlaying 会在重播期间把字幕遮回去）。
     //
     // BUG-2256：这条自动显形与悬停 / 点击显形是**同一种行为**（遮蔽让位给「用户想看
-    // 一眼」），因此归同一个总闸 [obscureRevealOnInteraction] 管。关掉总闸后遮蔽恒定
+    // 一眼」），因此归该层同一个显形开关管（主 [obscureRevealOnInteraction] / 副
+    // [secondaryObscureRevealOnInteraction]）。关掉后该层遮蔽恒定
     // 生效：暂停、查词浮层、悬停、点击都不再揭开——用户关它就是要「遮蔽始终保持」，
     // 只堵住悬停 / 点击而漏掉暂停等于开关半失效（用户报：隐藏了字幕，一暂停就冒出来）。
-    final bool userIsReading = widget.obscureRevealOnInteraction &&
+    final bool userIsReading =
+        _revealOnInteractionFor(isSecondary: isSecondary) &&
         (!widget.controller.isPlaying || widget.lookupPopupVisible);
     final bool obscureActive = !revealed && !userIsReading;
     final bool blurred = obscureBlurEnabled && obscureActive;
@@ -1804,7 +1823,14 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
     // TODO-1372/BUG-698：组内跨帧稳定槽位（锚点侧在前，不变量见 [_groupSlots]）。Column
     // 自顶向下渲染：底部锚组反转（slot0 贴底、新 cue 往上长），顶部/中部锚组顺序（slot0
     // 贴顶、新 cue 往下长；中部锚组增长对称外扩，重叠罕见，接受半高偏移）。
-    final List<_GroupSlot> slots = _syncGroupSlots(slotKey, cues);
+    // 纯字幕模式（BUG-3608）：位置语义归零后整层折进一个堆叠组，入槽次序按作者排版的
+    // 竖直次序（\pos y / 锚点+MarginV），否则先写的行恒贴锚点——作者用 \pos 排成「先写
+    // 的在上」的同时间戳两行会上下颠倒。尊重样式时位置由分组键承载，不走这里。
+    final List<AudioCue> slotOrder = widget.respectAssStyle
+        ? cues
+        : orderPlainCuesByAuthoredPosition(cues,
+            anchorBottom: effectiveV == SubtitleVAlign.bottom);
+    final List<_GroupSlot> slots = _syncGroupSlots(slotKey, slotOrder);
     final Iterable<_GroupSlot> topToBottom =
         effectiveV == SubtitleVAlign.bottom ? slots.reversed : slots;
     Widget content = Column(
@@ -1997,7 +2023,9 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
               // 关掉「交互显形」时热区照挂、只是不显形：它的第二职责（拦掉落在盒面上的
               // 字符点击）与显形无关，撤掉会让隐藏态的不可见字符重新可点查词。
               onTap: () {
-                if (!widget.obscureRevealOnInteraction) return;
+                if (!_revealOnInteractionFor(isSecondary: isSecondary)) {
+                  return;
+                }
                 _setRevealed(true, isSecondary: isSecondary, byTap: true);
               },
             ),
@@ -2015,9 +2043,9 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
     final bool layerObscureEnabled =
         (isSecondary ? widget.secondaryBlurEnabled : widget.blurEnabled) ||
             (isSecondary ? widget.secondaryHidden : widget.subtitleHidden);
-    // 「交互显形」总闸关掉后，悬停不再显形（②③ 两个用途仍各按自己的条件挂）。
-    final bool hoverRevealEnabled =
-        layerObscureEnabled && widget.obscureRevealOnInteraction;
+    // 该层「交互显形」关掉后，悬停不再显形（②③ 两个用途仍各按自己的条件挂）。
+    final bool hoverRevealEnabled = layerObscureEnabled &&
+        _revealOnInteractionFor(isSecondary: isSecondary);
     final bool needHover = hoverRevealEnabled ||
         widget.onHoverChanged != null ||
         widget.onCharHover != null;
@@ -2517,7 +2545,7 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
     final int? fillArgb = ds?.colorArgb ?? cs?.primaryColorArgb;
     Color fill = fillArgb != null
         ? Color(fillArgb)
-        : (widget.textColor ?? Theme.of(context).colorScheme.onSurface);
+        : (widget.textColor ?? kDefaultSubtitleTextColor);
     final double? fillOp = ds?.fillOpacity;
     if (fillOp != null) fill = fill.withValues(alpha: fillOp);
     fill = _applyDynamicFill(TextStyle(color: fill), fill, markup, true,
@@ -2914,7 +2942,7 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
         widget.fontFamily;
     final Color baseColor = (respect && cue?.primaryColorArgb != null)
         ? Color(cue!.primaryColorArgb!)
-        : (widget.textColor ?? Theme.of(context).colorScheme.onSurface);
+        : (widget.textColor ?? kDefaultSubtitleTextColor);
     // ASS 绝对字号（PlayRes 像素）按 显示区高 / PlayResY 缩放到播放尺寸（TODO-1246）；
     // cueStyle 无字号时回退用户统一样式（已含 subtitleScreenScaleFactor）。
     final double assFontScale = respect ? _assFontScale(markup) : 1.0;
@@ -3575,7 +3603,7 @@ class _VideoSubtitleOverlayState extends State<VideoSubtitleOverlay>
 /// 1080p 下 `Text_JP` 缩放后 45 会被基线夹回 75、与 `OP_JP` 相同，故只有高分屏触发。
 ///
 /// 为什么 libass/mpv 不跳：它**每条事件各自独立定位**，没有「组」也没有「组代表」这个
-/// 共享量。分组是 Hibiki 为消除同位叠印引入的，代价就是引入了这个共享量——那么它就必须
+/// 共享量。分组是 Fushi 为消除同位叠印引入的，代价就是引入了这个共享量——那么它就必须
 /// 由**分组键唯一决定**，不能由「谁碰巧当代表」决定。
 ///
 /// 本函数即该不变量的载体：**同分组键 → 同基线**。既然判据宣称「原始 MarginV ≤ 用户基线
@@ -3757,6 +3785,61 @@ List<(String, List<AudioCue>)> sortCueGroupsForPaint(
       return byOrder != 0 ? byOrder : a.compareTo(b);
     });
   return <(String, List<AudioCue>)>[for (final int i in idx) groups[i]];
+}
+
+/// 一条 cue 在**作者排版**里的竖直位置（0=画面顶，1=画面底），供纯字幕模式排行序用
+/// （BUG-3608）。\pos 取 y 分数、\move 取起点 y；无显式位置按 \an 竖直锚点 + MarginV
+/// （有 PlayResY 才折算）近似：底部 `1 - MarginV/PlayResY`、顶部 `MarginV/PlayResY`、中部
+/// 0.5。无 markup（srt/vtt）视作底部（1.0）。
+double _authoredVerticalFraction(SubtitleMarkup? m) {
+  if (m == null) return 1.0;
+  final SubtitlePos? pos = m.posFraction;
+  if (pos != null) return pos.yFraction;
+  final SubtitleMove? move = m.move;
+  if (move != null) return move.y1Fraction;
+  final double? playResY = m.playResY;
+  final double mv = m.cueStyle?.marginV ?? 0;
+  final double mvFraction = (playResY != null && playResY > 0 && mv > 0)
+      ? (mv / playResY).clamp(0.0, 1.0).toDouble()
+      : 0.0;
+  switch (m.anchor?.vertical ?? SubtitleVAlign.bottom) {
+    case SubtitleVAlign.top:
+      return mvFraction;
+    case SubtitleVAlign.middle:
+      return 0.5;
+    case SubtitleVAlign.bottom:
+      return 1.0 - mvFraction;
+  }
+}
+
+/// 纯字幕模式（respectAssStyle 关，BUG-915）把整层 cue 折进**一个**锚定堆叠组、位置
+/// 语义归零后，组内行序按**作者排版的竖直次序**排（BUG-3608）：返回「锚点侧在前」的
+/// 顺序（与 `_syncGroupSlots` 的槽位次序同构）——[anchorBottom] 时最靠下的在前（slot0
+/// 贴底），否则最靠上的在前（slot0 贴顶）。
+///
+/// 病根：旧实现直接按活动集发现顺序（文件序）入槽，底部锚组 slot0 贴底，于是先写的行
+/// 恒在下面。作者用 `\pos` 把同时间戳的两行**显式**排成上下（文件序第一行 y=900 在上、
+/// 第二行 y=1020 在下）时，纯字幕模式把它们上下颠倒；asbplayer 剥掉位置后按文件序自上
+/// 而下排，恰好与这类字幕的作者次序一致，所以「asb 正常、Fushi 反了」。
+///
+/// 竖直位置相同（典型：无 \pos 的同锚点同 MarginV 对白）保持发现顺序（稳定排序），即
+/// 沿用 libass 碰撞语义「先出的贴锚点、后出的往外推」，既有纯 SRT / 普通 ASS 行为不变。
+@visibleForTesting
+List<AudioCue> orderPlainCuesByAuthoredPosition(
+  List<AudioCue> cues, {
+  required bool anchorBottom,
+}) {
+  if (cues.length < 2) return cues;
+  final List<double> ys = <double>[
+    for (final AudioCue c in cues) _authoredVerticalFraction(c.markup),
+  ];
+  final List<int> idx = List<int>.generate(cues.length, (int i) => i)
+    ..sort((int a, int b) {
+      final int byY =
+          anchorBottom ? ys[b].compareTo(ys[a]) : ys[a].compareTo(ys[b]);
+      return byY != 0 ? byY : a.compareTo(b);
+    });
+  return <AudioCue>[for (final int i in idx) cues[i]];
 }
 
 /// ASS `\p` 矢量绘图画笔：路径坐标（归一化分数）减去包围盒左上角后乘 [scaleX]/[scaleY]

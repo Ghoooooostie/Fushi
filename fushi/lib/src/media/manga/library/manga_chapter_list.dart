@@ -67,6 +67,7 @@ class MangaChapterList extends StatelessWidget {
     this.jobsByChapterKey = const <String, MangaDownloadJobRow>{},
     this.onDownload,
     this.onDeleteDownload,
+    this.onRevealDownload,
     this.onRetryDownload,
     this.onOcr,
     this.ocrRunningChapterKey,
@@ -109,6 +110,10 @@ class MangaChapterList extends StatelessWidget {
   /// 溢出菜单里的下载动作；null = 不出现对应项。
   final void Function(OnlineMangaChapter chapter)? onDownload;
   final void Function(OnlineMangaChapter chapter)? onDeleteDownload;
+
+  /// 「打开文件位置」（只对已下载的章出现）；null = 不出现（移动端没有文件管理器
+  /// 契约，宿主据此不接）。
+  final void Function(OnlineMangaChapter chapter)? onRevealDownload;
   final void Function(OnlineMangaChapter chapter)? onRetryDownload;
 
   /// 「识别本章」（只对已下载的章出现）；null = 不出现。
@@ -116,7 +121,9 @@ class MangaChapterList extends StatelessWidget {
 
   /// OCR 状态位（BUG-2481）：正在识别的那一章 + 页进度，以及排队中的章。
   final String? ocrRunningChapterKey;
-  final ({int done, int total})? ocrProgress;
+
+  /// [uploading] = 远程引擎还在上传页图（计数是已上传页数，BUG-3605）。
+  final ({int done, int total, bool uploading})? ocrProgress;
   final Set<String> ocrQueuedChapterKeys;
 
   /// 空章节列表的解释（BUG-2510）：该源只取哪种语言的章 + 同扩展其它语言的源。
@@ -378,7 +385,13 @@ class MangaChapterList extends StatelessWidget {
         ),
         _ChapterDownloadState.notDownloaded => t.manga_chapter_not_downloaded,
       },
-      if (chapter.key == ocrRunningChapterKey)
+      if (chapter.key == ocrRunningChapterKey &&
+          (ocrProgress?.uploading ?? false))
+        t.manga_remote_ocr_uploading(
+          done: ocrProgress?.done ?? 0,
+          total: ocrProgress?.total ?? 0,
+        )
+      else if (chapter.key == ocrRunningChapterKey)
         t.manga_chapter_ocr_status_running(
           done: '${ocrProgress?.done ?? 0}',
           total: '${ocrProgress?.total ?? 0}',
@@ -409,6 +422,7 @@ class MangaChapterList extends StatelessWidget {
         onMarkUpToRead != null ||
         onDownload != null ||
         onDeleteDownload != null ||
+        onRevealDownload != null ||
         onRetryDownload != null ||
         onOcr != null;
     if (!hasMenu) return null;
@@ -446,6 +460,13 @@ class MangaChapterList extends StatelessWidget {
             value: 'ocr',
             label: t.manga_chapter_ocr_action,
           ),
+        if (onRevealDownload != null &&
+            download == _ChapterDownloadState.downloaded)
+          FushiPopupMenuItem<String>(
+            key: const ValueKey<String>('manga_chapter_reveal'),
+            value: 'reveal-download',
+            label: t.media_file_location_open,
+          ),
         if (onDeleteDownload != null &&
             download == _ChapterDownloadState.downloaded)
           FushiPopupMenuItem<String>(
@@ -463,6 +484,8 @@ class MangaChapterList extends StatelessWidget {
             onDownload?.call(chapter);
           case 'retry-download':
             onRetryDownload?.call(chapter);
+          case 'reveal-download':
+            onRevealDownload?.call(chapter);
           case 'delete-download':
             onDeleteDownload?.call(chapter);
           case 'ocr':

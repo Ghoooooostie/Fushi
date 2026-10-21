@@ -8,6 +8,12 @@ import 'package:fushi/src/utils/components/glass/fushi_glass_feedback.dart';
 import 'package:fushi/src/utils/components/glass/fushi_glass_lists.dart'
     show FushiBadgeControl;
 import 'package:fushi/src/focus/fushi_focus_scroll.dart';
+import 'package:flutter/foundation.dart' show listEquals;
+import 'package:flutter/gestures.dart'
+    show
+        DragStartBehavior,
+        HorizontalDragGestureRecognizer,
+        LongPressGestureRecognizer;
 import 'package:flutter/rendering.dart' show OverflowBoxFit, RenderFlex;
 import 'package:flutter/services.dart';
 import 'package:fushi/i18n/strings.g.dart';
@@ -17,6 +23,7 @@ import 'package:fushi/src/focus/fushi_focus_target.dart';
 import 'package:fushi/src/shortcuts/gamepad_service.dart';
 import 'package:fushi/src/shortcuts/input_binding.dart';
 import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
+import 'package:fushi/src/utils/adaptive/nav_bar_style.dart';
 import 'package:fushi/src/utils/components/fushi_glass_surface.dart';
 import 'package:fushi/src/utils/components/fushi_haptics.dart';
 import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
@@ -87,13 +94,13 @@ Widget _maybeBadge({
 /// so integration tests can locate the top-level destinations without depending
 /// on the private widget type or the stock NavigationBar/NavigationRail (which
 /// this no longer uses on Material).
-const Key fushiMaterialNavKey = ValueKey<String>('hibiki-material-nav');
+const Key fushiMaterialNavKey = ValueKey<String>('fushi-material-nav');
 
 /// Marks the macOS-native (macos_ui) shell's content subtree so integration
 /// tests can locate the top-level destinations without depending on the
 /// MacosWindow/Sidebar internals. Mirrors [fushiMaterialNavKey] for the macOS
 /// design system.
-const Key fushiMacosNavKey = ValueKey<String>('hibiki-macos-nav');
+const Key fushiMacosNavKey = ValueKey<String>('fushi-macos-nav');
 
 /// Height of the mobile bottom bar's **content box**, in logical pixels —
 /// the system gesture inset is let through by [SafeArea] on top of this.
@@ -257,6 +264,12 @@ const double _kGlassSidebarCollapsedCellWidth = 60;
 /// / MD3 FAB）挪到胶囊**起始侧**（LTR 即左侧），整条底栏成为关闭时的镜像；
 /// 胶囊收起时也缩向末端，紧贴 FAB 的另一侧不留空洞。目的地顺序本身由调用方
 /// 传入的 [items] 决定（已按反转排好）。
+///
+/// [barStyle]：底栏形态（用户偏好 `nav_bar_style`，见 [AdaptiveNavBarStyle]）。
+/// 分页滑动（MD3）：查词并进胶囊、所有目的地同级，每页 5 个，在底栏上横滑翻页；
+/// 按住约 0.3 秒进入拖选（震一下），手指停在哪一格就选哪一格，拖到胶囊左右
+/// 边缘停一下自动翻页，松手切过去。目的地不超过 5 个时与平铺同一排。Apple
+/// 胶囊同语义分页（2026-10-16），分页状态 / 手势与 MD3 共用 [_NavPagedRow]。
 Widget adaptiveBottomBar({
   required BuildContext context,
   required int currentIndex,
@@ -270,6 +283,7 @@ Widget adaptiveBottomBar({
   AdaptiveNavFab? materialFab,
   bool searchLeading = false,
   ValueChanged<int>? onDragSelect,
+  AdaptiveNavBarStyle barStyle = AdaptiveNavBarStyle.flat,
 }) {
   if (isCupertinoPlatform(context)) {
     // Cupertino keeps the stock tab bar as a single whole-bar gamepad stop. iOS
@@ -312,6 +326,7 @@ Widget adaptiveBottomBar({
     materialFab: materialFab,
     searchLeading: searchLeading,
     onDragSelect: onDragSelect,
+    barStyle: barStyle,
   );
 }
 
@@ -338,7 +353,11 @@ class _MaterialNavCluster extends StatelessWidget {
     this.materialFab,
     this.searchLeading = false,
     this.onDragSelect,
+    this.barStyle = AdaptiveNavBarStyle.flat,
   });
+
+  /// 底栏形态，见 [adaptiveBottomBar]；MD3 悬浮胶囊与 Apple 胶囊都读，侧栏不读。
+  final AdaptiveNavBarStyle barStyle;
 
   /// MD3 悬浮底栏「长按拎起选中指示器、拖到目标模块松手」的落地回调（参数同
   /// [onTap] 的序号）。null = 不启用长按拖选（侧栏、玻璃底栏、调用方没接）。
@@ -391,11 +410,15 @@ class _MaterialNavCluster extends StatelessWidget {
     int i, {
     bool iconOnly = false,
     double? cellWidth,
+    bool? looksSelected,
+    bool glassOwnLens = false,
   }) {
     return _NavFocusCell(
       id: FushiFocusId('$idPrefix-$i'),
+      glassOwnLens: glassOwnLens,
       item: items[i],
-      selected: i == currentIndex,
+      // 分页底栏拖选中：选中药丸画在手指罩着的那一格（只是外观）。
+      selected: looksSelected ?? i == currentIndex,
       horizontal: axis == Axis.horizontal,
       extended: axis == Axis.vertical && extended,
       iconOnly: iconOnly,
@@ -407,11 +430,56 @@ class _MaterialNavCluster extends StatelessWidget {
     );
   }
 
+  /// 分页滑动的一排（MD3 悬浮胶囊与 Apple 胶囊共用）：每页 [_kNavPageSize]
+  /// 格，底栏横滑翻页、长按拖选（见 [_NavPagedRow]）。不挂整条胶囊的滑动
+  /// 指示器，各格自己画选中态（MD3 药丸 / Apple lens，[glass]）。
+  /// 拖选落地：MD3 走 [onDragSelect]（宿主据此播模块切换转场），没接时退回
+  /// [onTap]；Apple 保持 iOS 标签栏的点按切换语义（同胶囊拖动 lens 的落地），
+  /// 一律走 [onTap]。
+  Widget _buildPagedRow(
+    BuildContext context,
+    double width,
+    List<int> indices, {
+    bool glass = false,
+  }) {
+    final List<List<int>> pages = <List<int>>[
+      for (int start = 0; start < indices.length; start += _kNavPageSize)
+        indices.sublist(start, math.min(indices.length, start + _kNavPageSize)),
+    ];
+    final double cellWidth = width / _kNavPageSize;
+    final ValueChanged<int> dragSelect = glass
+        ? onTap
+        : (onDragSelect ?? onTap);
+    return _NavPagedRow(
+      pages: pages,
+      currentIndex: currentIndex,
+      cellBuilder: (int i, bool? looksSelected) => _cell(
+        context,
+        i,
+        cellWidth: cellWidth,
+        looksSelected: looksSelected,
+        glassOwnLens: glass,
+      ),
+      onDragSelect: dragSelect,
+    );
+  }
+
+  /// 底栏是否按「分页滑动」画：偏好选了分页、且进胶囊的目的地多于一页。
+  /// 不多于 [_kNavPageSize] 个时与平铺同一排（MD3 / Apple 同一判据）。
+  bool _pagedFor(List<int> capsuleIndices) =>
+      barStyle == AdaptiveNavBarStyle.pager &&
+      capsuleIndices.length > _kNavPageSize;
+
   /// Apple 设计系统（iOS 26）的悬浮标签栏本体：一枚放目的地的玻璃胶囊，
   /// [glassSearchIndex] 那一项拆成右侧的圆形玻璃钮。下滑最小化时胶囊收成
   /// 只剩当前项图标的圆（宽度动画；减弱动态效果下瞬间到位），其余目的地
   /// 淡出并移出焦点遍历 / 命中测试。焦点 id 与展开态一致（`nav-bar-<序号>`），
   /// 最小化圆用单独的 `nav-mini-bar`。
+  ///
+  /// 分页滑动（[barStyle]，2026-10-16 用户「apple 也要分页」）：与 MD3 同语义
+  /// ——查词仍是右侧圆钮，其余目的地多于一页时胶囊里换成共用的
+  /// [_NavPagedRow]（横滑翻页、页点、按住拖选、边缘停留翻页）；胶囊自己的
+  /// 「横拖 lens」让位给翻页手势，选中态由各格自己画 lens。
   Widget _buildGlassTabBar(BuildContext context) {
     final int? rawSearch = glassSearchIndex;
     final int? search =
@@ -442,12 +510,15 @@ class _MaterialNavCluster extends StatelessWidget {
         final double innerFull = fullWidth - 2 * _kGlassNavBarInnerPadding;
         const double innerMini =
             _kGlassNavBarMinimizedWidth - 2 * _kGlassNavBarInnerPadding;
-        final Widget fullRow = Row(
-          children: <Widget>[
-            for (final int i in capsuleIndices)
-              Expanded(child: _cell(context, i)),
-          ],
-        );
+        final bool paged = _pagedFor(capsuleIndices);
+        final Widget fullRow = paged
+            ? _buildPagedRow(context, innerFull, capsuleIndices, glass: true)
+            : Row(
+                children: <Widget>[
+                  for (final int i in capsuleIndices)
+                    Expanded(child: _cell(context, i)),
+                ],
+              );
         // 隐藏的那一层不挂焦点目标：FushiFocus 按几何找方向邻居，透明但仍注册
         // 的目标会让 D-pad 落到看不见的格子上。
         final Widget miniCell = selectedInCapsule
@@ -484,7 +555,9 @@ class _MaterialNavCluster extends StatelessWidget {
           );
         }
 
-        final int? selectedPos = selectedInCapsule
+        // 分页时胶囊不画统一 lens（它按整枚胶囊的格数对齐，翻页后对不上），
+        // 由各格自己画（[_NavFocusCell.glassOwnLens]）。
+        final int? selectedPos = selectedInCapsule && !paged
             ? capsuleIndices.indexOf(currentIndex)
             : null;
         // 搜索圆钮：默认在胶囊右侧；反转底栏方向时挪到左侧（[searchLeading]）。
@@ -514,6 +587,8 @@ class _MaterialNavCluster extends StatelessWidget {
                 minimized: minimized,
                 itemCount: capsuleIndices.length,
                 selectedPos: selectedPos,
+                // 分页时横拖归翻页（[_NavPagedRow]），胶囊不再横拖滑 lens。
+                swipeSelect: !paged,
                 duration: duration,
                 curve: curve,
                 onSelectPos: (int pos) {
@@ -664,6 +739,9 @@ class _MaterialNavCluster extends StatelessWidget {
       );
     }
     final double width = box.maxWidth;
+    if (_pagedFor(indices)) {
+      return _buildPagedRow(context, width, indices);
+    }
     final TextStyle style =
         (Theme.of(context).textTheme.labelMedium ?? const TextStyle()).copyWith(
           fontWeight: FontWeight.w600,
@@ -2196,6 +2274,407 @@ class _FloatingNavSurface extends StatelessWidget {
   }
 }
 
+/// 分页底栏每页的格数。
+const int _kNavPageSize = 5;
+
+/// 按住多久进入拖选（短于系统长按：底栏上的长按只服务拖选）。
+const Duration _kNavPagedSelectHold = Duration(milliseconds: 300);
+
+/// 拖选中手指在胶囊左右边缘这么宽的范围内（含胶囊外）停住就翻页。
+const double _kNavPagedEdgeZone = 20;
+
+/// 停在边缘多久翻一页；一直停着就每隔这么久再翻一页。
+const Duration _kNavPagedEdgeDwell = Duration(milliseconds: 450);
+
+/// 底栏分页行：[pages] 每页一组目的地（每页 [_kNavPageSize] 格）。MD3 悬浮
+/// 胶囊与 Apple 胶囊共用这一份状态 / 手势，外观只差在格子（[cellBuilder]）
+/// 与页点样式。
+/// - 横滑：手指跟手拖动整排，松手拖过 1/4 页或甩一下就翻到相邻页（spatial
+///   弹簧带回弹），底部一排小圆点提示页数与当前页；
+/// - 按住约 0.3 秒：进入拖选（震一下），手指罩着哪一格就把选中药丸画在哪一格、
+///   换格轻震；拖到胶囊左右边缘停一下自动翻页；松手切到罩着的那一项（落在空格 /
+///   当前项上 = 取消）；
+/// - 当前项换到别的页（如正文横滑切模块）时自动翻过去；分组变了（开关模块）
+///   直接落到当前项所在页。
+class _NavPagedRow extends StatefulWidget {
+  const _NavPagedRow({
+    required this.pages,
+    required this.currentIndex,
+    required this.cellBuilder,
+    required this.onDragSelect,
+  });
+
+  final List<List<int>> pages;
+  final int currentIndex;
+
+  /// 画一格；`looksSelected` 非空时按它画选中态（拖选中），否则按当前项。
+  final Widget Function(int index, bool? looksSelected) cellBuilder;
+
+  /// 拖选松手落在某一项上。
+  final ValueChanged<int> onDragSelect;
+
+  @override
+  State<_NavPagedRow> createState() => _NavPagedRowState();
+}
+
+class _NavPagedRowState extends State<_NavPagedRow>
+    with SingleTickerProviderStateMixin {
+  /// 以「页」为单位的连续位置：0 = 第一页，1 = 第二页……拖动时取小数。
+  late final AnimationController _position = AnimationController.unbounded(
+    vsync: this,
+  );
+  late int _page = _pageOf(widget.currentIndex) ?? 0;
+  double _width = 1;
+
+  /// 拖选态：手指罩着的目的地（null = 空格 / 胶囊外）。
+  bool _selecting = false;
+  int? _hover;
+  Offset? _selectPoint;
+  int _edgeDirection = 0;
+  Timer? _edgeTimer;
+
+  /// 焦点（方向键 / 手柄 / Tab）此刻停在哪一页的哪一格（null = 不在本行）。
+  /// 停在当前页首格 / 末格时，相邻那一页放进焦点遍历（[_pageFocusable]），
+  /// 方向键再往外走就能进去、进去即翻页（[_onCellFocusChange]）。
+  int? _focusPage;
+  int? _focusSlot;
+
+  @override
+  void initState() {
+    super.initState();
+    _position.value = _page.toDouble();
+  }
+
+  @override
+  void didUpdateWidget(_NavPagedRow oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // 分组变了（开关模块）：旧页号已无意义，直接落到当前项所在页。
+    if (!_samePages(oldWidget.pages, widget.pages)) {
+      _page = _pageOf(widget.currentIndex) ?? 0;
+      _position.value = _page.toDouble();
+      _focusPage = null;
+      _focusSlot = null;
+      return;
+    }
+    if (oldWidget.currentIndex != widget.currentIndex && !_selecting) {
+      final int? page = _pageOf(widget.currentIndex);
+      if (page != null && page != _page) _settleTo(page);
+    }
+  }
+
+  @override
+  void dispose() {
+    _edgeTimer?.cancel();
+    _position.dispose();
+    super.dispose();
+  }
+
+  static bool _samePages(List<List<int>> a, List<List<int>> b) {
+    if (a.length != b.length) return false;
+    for (int p = 0; p < a.length; p++) {
+      if (!listEquals(a[p], b[p])) return false;
+    }
+    return true;
+  }
+
+  int? _pageOf(int index) {
+    for (int p = 0; p < widget.pages.length; p++) {
+      if (widget.pages[p].contains(index)) return p;
+    }
+    return null;
+  }
+
+  void _settleTo(int page, {double velocity = 0}) {
+    setState(() => _page = page);
+    // 减弱动态效果 / 墨水屏下 token 是降级版，直接落到终值。
+    unawaited(
+      _position.fushiSpringTo(
+        page.toDouble(),
+        context.fushiMotion.spatialFast,
+        velocity: velocity,
+      ),
+    );
+  }
+
+  /// 第 [page] 页的格此刻是否进焦点遍历。
+  ///
+  /// 当前页恒进；别页默认**不进**——被动焦点修复（进页 / 焦点丢失时自动落点）
+  /// 按阅读顺序挑首个目标，看不见的页若一直可聚焦，修复会把焦点落到屏幕外、再
+  /// 把整排翻走。只在焦点停在当前页的边缘格时放开紧挨着的那一页：此时主焦点
+  /// 可用、被动修复不会动它，而显式方向输入（几何上最近的就是相邻页紧挨着的
+  /// 那一格）终于够得着别页的目的地。
+  bool _pageFocusable(int page) {
+    if (page == _page) return true;
+    final int? slot = _focusSlot;
+    if (_focusPage != _page || slot == null) return false;
+    if (page == _page + 1) return slot == widget.pages[_page].length - 1;
+    if (page == _page - 1) return slot == 0;
+    return false;
+  }
+
+  /// 焦点进 / 出某一格。进了别页的格（方向键越过当前页边缘）就翻到那一页。
+  void _onCellFocusChange(int page, int slot, bool hasFocus) {
+    if (!mounted) return;
+    if (!hasFocus) {
+      if (page == _focusPage && slot == _focusSlot) {
+        setState(() {
+          _focusPage = null;
+          _focusSlot = null;
+        });
+      }
+      return;
+    }
+    setState(() {
+      _focusPage = page;
+      _focusSlot = slot;
+    });
+    if (page != _page && !_selecting) _settleTo(page);
+  }
+
+  // ---- 横滑翻页 ----
+
+  void _onDragUpdate(DragUpdateDetails details) {
+    final int last = widget.pages.length - 1;
+    double next = _position.value - details.delta.dx / _width;
+    // 首页 / 末页之外有阻尼，不让整排被拖空。
+    if (next < 0 || next > last) {
+      next = _position.value - details.delta.dx / _width / 3;
+    }
+    _position.value = next.clamp(-0.3, last + 0.3);
+  }
+
+  void _onDragEnd(DragEndDetails details) {
+    final double velocity = -details.velocity.pixelsPerSecond.dx / _width;
+    // 胶囊窄（每页只有一个手掌宽），半页门槛太苛：拖过 1/4 页或甩一下就翻。
+    final double moved = _position.value - _page;
+    int target = _page;
+    if (velocity.abs() > 0.8) {
+      target = velocity > 0 ? _page + 1 : _page - 1;
+    } else if (moved.abs() > 0.25) {
+      target = moved > 0 ? _page + 1 : _page - 1;
+    }
+    target = target.clamp(0, widget.pages.length - 1);
+    if (target != _page) fushiSelectionHaptic(context);
+    _settleTo(target, velocity: velocity);
+  }
+
+  // ---- 长按拖选 ----
+
+  /// 手指位置（本行局部坐标）罩着的目的地：按格宽算第几格，胶囊外 / 空格 = null。
+  int? _targetAt(Offset point) {
+    if (point.dx < 0 || point.dx >= _width) return null;
+    final int slot = (point.dx / (_width / _kNavPageSize)).floor();
+    final List<int> page = widget.pages[_page];
+    return slot < page.length ? page[slot] : null;
+  }
+
+  void _updateHover(Offset point) {
+    _selectPoint = point;
+    final int? hover = _targetAt(point);
+    if (hover != _hover) {
+      if (hover != null) fushiSelectionHaptic(context);
+      setState(() => _hover = hover);
+    }
+    final int direction = point.dx < _kNavPagedEdgeZone
+        ? -1
+        : (point.dx > _width - _kNavPagedEdgeZone ? 1 : 0);
+    if (direction == _edgeDirection) return;
+    _edgeDirection = direction;
+    _edgeTimer?.cancel();
+    _edgeTimer = direction == 0
+        ? null
+        : Timer.periodic(_kNavPagedEdgeDwell, (_) => _edgeFlip());
+  }
+
+  /// 拖选中停在边缘：往那一侧翻一页，罩着的格按新页重算。
+  void _edgeFlip() {
+    final int next = _page + _edgeDirection;
+    if (!mounted || next < 0 || next >= widget.pages.length) return;
+    fushiSelectionHaptic(context);
+    _settleTo(next);
+    final Offset? point = _selectPoint;
+    if (point != null) {
+      final int? hover = _targetAt(point);
+      if (hover != _hover) setState(() => _hover = hover);
+    }
+  }
+
+  void _onSelectStart(LongPressStartDetails details) {
+    // 进入拖选态：一记「拎起」震动，和平铺底栏长按拎起指示器同一手感。
+    fushiLiftHaptic(context);
+    setState(() => _selecting = true);
+    _updateHover(details.localPosition);
+  }
+
+  void _onSelectMove(LongPressMoveUpdateDetails details) =>
+      _updateHover(details.localPosition);
+
+  void _onSelectEnd(LongPressEndDetails details) {
+    final int? target = _hover;
+    _stopSelecting();
+    if (target != null && target != widget.currentIndex) {
+      widget.onDragSelect(target);
+    }
+  }
+
+  void _stopSelecting() {
+    _edgeTimer?.cancel();
+    _edgeTimer = null;
+    _edgeDirection = 0;
+    _selectPoint = null;
+    if (!_selecting && _hover == null) return;
+    setState(() {
+      _selecting = false;
+      _hover = null;
+    });
+  }
+
+  Widget _pageRow(int p) {
+    final List<int> page = widget.pages[p];
+    return Row(
+      children: <Widget>[
+        for (int k = 0; k < _kNavPageSize; k++)
+          Expanded(
+            child: k < page.length
+                // 只听焦点进出（定位「焦点在哪页哪格」），自己不是落点。
+                ? Focus(
+                    canRequestFocus: false,
+                    skipTraversal: true,
+                    includeSemantics: false,
+                    onFocusChange: (bool has) => _onCellFocusChange(p, k, has),
+                    child: widget.cellBuilder(
+                      page[k],
+                      _selecting ? page[k] == _hover : null,
+                    ),
+                  )
+                : const SizedBox.shrink(),
+          ),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // 页点：MD3 是当前页拉长的短胶囊（胶囊前景色）；Apple 是 iOS 页控件的
+    // 等大小圆点，当前页实色、其余淡（label 色）。
+    final bool glass = isGlassDesign(context);
+    final _FloatingBarStyle? bar = _FloatingBarStyle.maybeOf(context);
+    final Color dot = glass
+        ? appleColorsOf(context).label
+        : (bar?.content ?? Theme.of(context).colorScheme.onSurface);
+    final double dotSize = glass ? 5 : 4;
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints box) {
+        _width = math.max(1, box.maxWidth);
+        return RawGestureDetector(
+          behavior: HitTestBehavior.translucent,
+          // 翻页 / 拖选是纯指针手势，不进语义树；读屏 / 手柄靠各格自己的焦点与
+          // 点击语义，焦点移到别页的格子上时随当前项自动翻过去。
+          excludeFromSemantics: true,
+          gestures: <Type, GestureRecognizerFactory>{
+            // 横向位移先过线 = 翻页；按住不动先到 0.3 秒 = 拖选。两者在手势
+            // 竞技场里谁先成立谁赢，赢了另一个就放弃这根指针。
+            HorizontalDragGestureRecognizer:
+                GestureRecognizerFactoryWithHandlers<
+                  HorizontalDragGestureRecognizer
+                >(HorizontalDragGestureRecognizer.new, (
+                  HorizontalDragGestureRecognizer r,
+                ) {
+                  r
+                    // 从按下点起算位移：判定拖动前的触摸余量也算进翻页距离，
+                    // 整排贴着手指走。
+                    ..dragStartBehavior = DragStartBehavior.down
+                    ..onUpdate = _onDragUpdate
+                    ..onEnd = _onDragEnd;
+                }),
+            LongPressGestureRecognizer:
+                GestureRecognizerFactoryWithHandlers<
+                  LongPressGestureRecognizer
+                >(
+                  () => LongPressGestureRecognizer(
+                    duration: _kNavPagedSelectHold,
+                  ),
+                  (LongPressGestureRecognizer r) {
+                    r
+                      ..onLongPressStart = _onSelectStart
+                      ..onLongPressMoveUpdate = _onSelectMove
+                      ..onLongPressEnd = _onSelectEnd
+                      ..onLongPressCancel = _stopSelecting;
+                  },
+                ),
+          },
+          child: Stack(
+            children: <Widget>[
+              ClipRect(
+                child: AnimatedBuilder(
+                  animation: _position,
+                  builder: (BuildContext context, Widget? _) {
+                    final double pos = _position.value;
+                    return Stack(
+                      children: <Widget>[
+                        for (int p = 0; p < widget.pages.length; p++)
+                          if ((p - pos).abs() < 1.5)
+                            Positioned.fill(
+                              // 按页号保身份：窗口里的页集合随翻页增减，按下标
+                              // 复用元素会把别页的格（及其焦点节点）错配过来。
+                              key: ValueKey<int>(p),
+                              child: Transform.translate(
+                                offset: Offset((p - pos) * _width, 0),
+                                // 看不见的页不接指针；焦点遍历见
+                                // [_pageFocusable]（焦点停在边缘格时放开相邻
+                                // 页，否则键盘 / 手柄永远够不着别页的目的地）。
+                                child: ExcludeFocus(
+                                  excluding: !_pageFocusable(p),
+                                  child: IgnorePointer(
+                                    ignoring: p != _page,
+                                    child: _pageRow(p),
+                                  ),
+                                ),
+                              ),
+                            ),
+                      ],
+                    );
+                  },
+                ),
+              ),
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: 3,
+                child: IgnorePointer(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      for (int p = 0; p < widget.pages.length; p++)
+                        AnimatedContainer(
+                          duration: fushiMotionDuration(
+                            context,
+                            FushiMotion.short,
+                          ),
+                          margin: EdgeInsets.symmetric(
+                            horizontal: glass ? 2.5 : 2,
+                          ),
+                          width: p == _page && !glass ? 10 : dotSize,
+                          height: dotSize,
+                          decoration: BoxDecoration(
+                            color: dot.withValues(
+                              alpha: p == _page ? 0.9 : (glass ? 0.3 : 0.35),
+                            ),
+                            borderRadius: BorderRadius.circular(dotSize / 2),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
 /// MD3 悬浮底栏「更多」格：目的地多到格宽放不下标签时，超出的（按用户的模块
 /// 顺序排在后面的那些）收进这里，点开是列出它们的菜单。当前页在其中时这一格
 /// 显示为选中（药丸实底），菜单里当前项加粗带勾。独立焦点目标
@@ -2313,14 +2792,18 @@ class _NavMoreCellState extends State<_NavMoreCell> {
   }
 }
 
-/// rail 与其右侧内容区的宽度同步：包住 `Row(rail, Expanded(内容))`，内容区用
-/// [NavRailSyncedContent] 包一层。
+/// rail 与其右侧内容区的宽度同步：包住 `Row(rail, Expanded(内容))`，内容里
+/// **看不见的**保活子树用 [NavRailSyncedContent] 包一层。
 ///
 /// rail 展开 / 收起时宽度逐帧变化，`Expanded` 内容的宽度约束随之逐帧变化，整棵
-/// 内容树（含 Offstage 保活的各 tab 页——Offstage 仍参与布局）每帧重排、重绘，
-/// 侧栏动画随之掉帧。过渡期间内容区改按**两态里较宽的内容宽**排版、随 rail
-/// 边缘平移并裁掉右侧溢出：约束不变即跳过子树布局，加上 [RepaintBoundary]
-/// 连重绘也省掉；一次切换至多重排一次（收起在开始时、展开在结束时）。
+/// 内容树（含 Offstage 保活的各 tab 页——Offstage 仍参与布局）每帧重排，侧栏
+/// 动画随之掉帧。被 Offstage 藏起的保活 tab 在过渡期间改按**两态里较宽的内容
+/// 宽**排版：约束不变即跳过子树布局，一次切换至多重排一次（收起在开始时、展开
+/// 在结束时）；它不绘制，宽度错一点也看不见。
+///
+/// 可见内容**不能**这样钉宽：钉在较宽一端时右侧贴边的内容（顶栏动作、卡片右侧
+/// 数值）整段过渡被裁掉、结束时再一次性重排弹回——展开 / 收起侧栏时右边闪烁
+/// （BUG-3447）。可见 tab 照常随 rail 逐帧重排，与拖动窗口边缘同一代价。
 class NavRailContentSync extends StatefulWidget {
   const NavRailContentSync({super.key, required this.child});
 
@@ -2357,18 +2840,26 @@ class _NavRailContentSyncScope extends InheritedWidget {
       lag != oldWidget.lag;
 }
 
-/// [NavRailContentSync] 的内容侧：静止时与直接放 [child] 几何一致；rail 过渡中
-/// 把 [child] 钉在恒定宽度上。树结构恒定（不随动画增删层级），子树状态不重挂。
+/// [NavRailContentSync] 的内容侧：静止或 [hidden] 为 false 时与直接放 [child]
+/// 几何一致；[hidden] 为 true 时 rail 过渡中把 [child] 钉在恒定宽度上。树结构
+/// 恒定（不随动画或 [hidden] 增删层级），子树状态不重挂。
 class NavRailSyncedContent extends StatelessWidget {
-  const NavRailSyncedContent({super.key, required this.child});
+  const NavRailSyncedContent({
+    super.key,
+    required this.hidden,
+    required this.child,
+  });
 
+  /// [child] 当前是否不可见（Offstage 藏起的保活 tab）。只有不可见的子树才钉宽，
+  /// 见 [NavRailContentSync]。
+  final bool hidden;
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        final double excess = constraints.hasBoundedWidth
+        final double excess = hidden && constraints.hasBoundedWidth
             ? NavRailContentSync._of(context)?._railExcess ?? 0
             : 0;
         final double width = math.max(0.0, constraints.maxWidth + excess);
@@ -2378,7 +2869,7 @@ class NavRailSyncedContent extends StatelessWidget {
             alignment: AlignmentDirectional.centerStart,
             minWidth: excess == 0 ? constraints.minWidth : width,
             maxWidth: excess == 0 ? constraints.maxWidth : width,
-            child: RepaintBoundary(child: child),
+            child: child,
           ),
         );
       },
@@ -2412,7 +2903,7 @@ class _AnimatedRailWidthState extends State<_AnimatedRailWidth>
   );
 
   /// 本次过渡两端里较窄的一端（静止时 = 当前宽）；[NavRailContentSync] 据此让
-  /// 内容区在整个过渡里保持同一宽度。
+  /// 藏起的保活子树在整个过渡里保持同一宽度（可见内容照常逐帧跟随，BUG-3447）。
   late double _narrowEnd = widget.width;
 
   @override
@@ -2569,7 +3060,12 @@ class _GlassTabCapsule extends StatefulWidget {
     required this.curve,
     required this.onSelectPos,
     required this.children,
+    this.swipeSelect = true,
   });
+
+  /// 按住横拖让 lens 在各项间滑行、松手切过去。分页底栏关掉它：横拖归翻页
+  /// （[_NavPagedRow]），否则两个横向拖动识别器在竞技场里抢同一根指针。
+  final bool swipeSelect;
 
   /// 胶囊目标宽（展开 = 可用宽减搜索圆钮，最小化 = 胶囊高）。
   final double width;
@@ -2739,10 +3235,12 @@ class _GlassTabCapsuleState extends State<_GlassTabCapsule> {
       child: GestureDetector(
         behavior: HitTestBehavior.translucent,
         excludeFromSemantics: true,
-        onHorizontalDragStart: _onDragStart,
-        onHorizontalDragUpdate: _onDragUpdate,
-        onHorizontalDragEnd: (DragEndDetails _) => _onDragEnd(),
-        onHorizontalDragCancel: _onDragEnd,
+        onHorizontalDragStart: widget.swipeSelect ? _onDragStart : null,
+        onHorizontalDragUpdate: widget.swipeSelect ? _onDragUpdate : null,
+        onHorizontalDragEnd: widget.swipeSelect
+            ? (DragEndDetails _) => _onDragEnd()
+            : null,
+        onHorizontalDragCancel: widget.swipeSelect ? _onDragEnd : null,
         child: SpringBuilder(
           value: morph && _down ? 1.04 : 1.0,
           spring: GlassSpring.snappy(
@@ -2911,6 +3409,7 @@ class _NavFocusCell extends StatefulWidget {
     this.extended = true,
     this.iconOnly = false,
     this.cellWidth,
+    this.glassOwnLens = false,
   });
 
   final FushiFocusId id;
@@ -2918,6 +3417,9 @@ class _NavFocusCell extends StatefulWidget {
   final bool selected;
   final bool horizontal;
   final VoidCallback onSelect;
+
+  /// Apple 分页底栏的格：自己画选中 lens（胶囊的统一 lens 只在平铺时画）。
+  final bool glassOwnLens;
 
   /// 侧栏是否展开（见 [_MaterialNavCluster.extended]）。
   final bool extended;
@@ -2985,6 +3487,7 @@ class _NavFocusCellState extends State<_NavFocusCell> {
       pillWidth: metrics.pillWidth,
       compactLabel: metrics.compact,
       indicatorKey: _indicatorKey,
+      glassOwnLens: widget.glassOwnLens,
     );
     final bool labelsHidden =
         !(_FloatingBarStyle.maybeOf(context)?.showLabels ?? true);
@@ -3137,10 +3640,15 @@ class _FushiNavTile extends StatelessWidget {
     this.pillWidth = AdaptiveNavTileMetrics.fullPillWidth,
     this.compactLabel = false,
     this.indicatorKey,
+    this.glassOwnLens = false,
   });
 
   final AdaptiveNavItem item;
   final bool selected;
+
+  /// Apple 底栏胶囊里的格自己画选中 lens（分页底栏；平铺时 lens 由
+  /// [_GlassTabCapsule] 统一画）。
+  final bool glassOwnLens;
 
   /// 底栏（图标在上、小字在下）还是侧栏行。
   final bool horizontal;
@@ -3232,8 +3740,16 @@ class _FushiNavTile extends StatelessWidget {
       //
       // 底栏纯图标（与 MD3 底栏同一规则，用户 2026-10-12「底部栏跟安卓一样文字
       // 也去掉」）：文字只进 tooltip 与无障碍语义，不再画在图标下面。
+      //
+      // 分页底栏（[glassOwnLens]）：胶囊的统一 lens 按整枚胶囊格数对齐、翻页
+      // 后对不上，改由格自己画同款 lens（实色档高一阶底 / 玻璃档透明 + 细高光
+      // 边 + 柔和投影），选中 / 拖选换格时随 [duration] 淡入淡出。长按归拖选，
+      // tooltip 只留悬停（名称仍在语义里）。
+      const double cellHeight =
+          kGlassNavBarCapsuleHeight - 2 * _kGlassNavBarInnerPadding;
       return FushiTooltip(
         message: item.label,
+        triggerMode: glassOwnLens ? TooltipTriggerMode.manual : null,
         child: Semantics(
           label: item.label,
           selected: selected,
@@ -3241,8 +3757,16 @@ class _FushiNavTile extends StatelessWidget {
             duration: duration,
             curve: FushiMotion.standard,
             width: double.infinity,
-            height: kGlassNavBarCapsuleHeight - 2 * _kGlassNavBarInnerPadding,
+            height: cellHeight,
             alignment: Alignment.center,
+            decoration: glassOwnLens
+                ? BoxDecoration(
+                    color: lensFill,
+                    borderRadius: BorderRadius.circular(cellHeight / 2),
+                    border: lensRim,
+                    boxShadow: lensShadow,
+                  )
+                : null,
             child: glyph(24, color: tabFg),
           ),
         ),

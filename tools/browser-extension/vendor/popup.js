@@ -77,7 +77,7 @@ function __fushiEventInsidePopup(e){
     }
 }
 /* BUG-688: the extension floating popup scrolls on the SHADOW HOST
-   (#hibiki-popup-host has overflow-y:auto + max-height; #entries-container is
+   (#fushi-popup-host has overflow-y:auto + max-height; #entries-container is
    neutralized to overflow:visible inside the shadow), while the in-app popup
    scrolls the document itself. These two resolve the wheel-scroll surface:
    - __fushiShadowHost(): the shadow host element, or null in-app / pre-shadow.
@@ -142,7 +142,7 @@ window.__fushiReportJsError = function(source, message, stack) {
 
 //
 //  popup.js
-//  Hibiki (adapted from Hoshi Reader for Android InAppWebView)
+//  Fushi (adapted from Hoshi Reader for Android InAppWebView)
 //
 //  Copyright © 2026 Manhhao.
 //  Copyright © 2023-2025 Yomitan Authors.
@@ -259,6 +259,86 @@ async function refreshRenderedMineStates(target) {
     return pending.length;
 }
 window.fushiRefreshMineStates = refreshRenderedMineStates;
+
+// Fushi 复习（SRS）词状态小标记（「复习中 · 3天后」/「新卡」/「已暂停」）。
+//
+// 与「已制卡 ✓ / 可制卡 +」是两件独立的事：✓ 问的是 Anki（duplicateCheck，bool
+// 契约不变），这里问的是 Fushi 自己的复习库（srsTermStatus，回 null 或
+// {queue, dueLabel, suspended, cardId, noteId, cardCount, tooltip}）。两边都有这个
+// 词时两个标记同时出现。
+//
+// 开关：app 内宿主注入 window.__fushiSrsEnabled（复习模块开 = true / 关 = false）。
+// **false 时既不渲染也不发任何桥调用**（模块关着 = 零开销）。浏览器扩展没有注入
+// 通道 → undefined → 照常问桥；扩展 shim 在服务端回 404（模块关）后会记住一段时间
+// 不再转发。文案（dueLabel / tooltip）由宿主本地化好再下发，本文件不带任何语言串。
+function applySrsStatusBadge(badge, status) {
+    const ok = status && typeof status === 'object' &&
+        typeof status.cardId === 'string' && status.cardId !== '';
+    badge.__fushiSrsStatus = ok ? status : null;
+    badge.classList.toggle('srs-status-hidden', !ok);
+    for (const kind of ['new', 'learning', 'review', 'suspended']) {
+        badge.classList.remove(`srs-status-${kind}`);
+    }
+    if (!ok) {
+        badge.textContent = '';
+        setInlineButtonTip(badge, '');
+        return;
+    }
+    const kind = status.suspended === true
+        ? 'suspended'
+        : status.queue === 'new'
+            ? 'new'
+            : status.queue === 'review' ? 'review' : 'learning';
+    badge.classList.add(`srs-status-${kind}`);
+    badge.textContent = String(status.dueLabel || '');
+    // 不用原生 title（离屏 WebView2 上会飞，BUG-842），走 DOM 自绘提示。
+    setInlineButtonTip(badge, String(status.tooltip || status.dueLabel || ''));
+}
+
+function createSrsStatusBadge(expression, reading) {
+    if (window.__fushiSrsEnabled === false) return null;
+    const bridge = window.flutter_inappwebview;
+    if (!bridge || typeof bridge.callHandler !== 'function') return null;
+    const badge = el('button', {
+        className: 'inline-action-button srs-status-badge srs-status-hidden',
+        type: 'button',
+        onclick: async (event) => {
+            event.stopPropagation();
+            const status = badge.__fushiSrsStatus;
+            if (!status || !status.cardId) return;
+            if (badge.dataset.busy === '1') return;
+            badge.dataset.busy = '1';
+            try {
+                await bridge.callHandler('srsOpenCard', {
+                    cardId: status.cardId,
+                    noteId: typeof status.noteId === 'string' ? status.noteId : '',
+                });
+            } catch (e) {
+                console.error('srsOpenCard failed', e);
+            } finally {
+                badge.dataset.busy = '';
+            }
+        },
+    });
+    const fetchStatus = () => bridge.callHandler(
+        'srsTermStatus', { expression: expression || '', reading: reading || '' });
+    badge.__fushiRefreshSrsStatus = async () => {
+        try {
+            invalidateEntryStateCheck(badge);
+            applySrsStatusBadge(badge, await fetchStatus());
+        } catch (e) {
+            // 纯装饰：失败保持现状。
+            console.error('refreshSrsStatus failed', e);
+        }
+    };
+    scheduleEntryStateCheck(
+        badge,
+        `srs\u0000${mineEntryKey(expression, reading)}`,
+        fetchStatus,
+        (status) => applySrsStatusBadge(badge, status),
+    );
+    return badge;
+}
 
 // BUG-1833 follow-up: favorite/Anki state is decoration for each result header,
 // not a prerequisite for revealing the dictionary card. A large lookup can
@@ -1219,6 +1299,17 @@ function isFlowEscapingStructuredContentStyle(property, value) {
     return false;
 }
 
+// 词典给行内节点加 white-space:nowrap，本意是「这组词别拆开」（日本語シソーラス 的
+// `肝所　0412.05 ≪勘所（意味）≫` 一整组就是一个 nowrap span）。但 nowrap 让
+// `.glossary-group` 的 overflow-wrap:anywhere（BUG-1827）失效，组宽超过卡片时整组
+// 画到卡外。改写成原子 inline-block + max-width:100%：放得下的整组换到下一行（与
+// nowrap 同效），比一整行还宽时才在组内按父级的 white-space 折行。只动行内节点；
+// 词典显式给了 display 的、块级标签的 nowrap 照原样。
+function isInlineStructuredContentElement(element) {
+    const tag = element.tagName;
+    return tag === 'SPAN' || tag === 'A';
+}
+
 function setStructuredContentElementStyle(element, style) {
     for (const [property, value] of Object.entries(style)) {
         if (isFlowEscapingStructuredContentStyle(property, value)) {
@@ -1229,6 +1320,11 @@ function setStructuredContentElementStyle(element, style) {
         } else {
             element.style[property] = value;
         }
+    }
+    if (style.whiteSpace === 'nowrap' && style.display === undefined && isInlineStructuredContentElement(element)) {
+        element.style.whiteSpace = '';
+        element.style.display = 'inline-block';
+        element.style.maxWidth = '100%';
     }
 }
 
@@ -1335,9 +1431,11 @@ function rewriteExportedGlossaryAnchors(root) {
         if (/^https?:\/\//i.test(href) || href.startsWith('#')) {
             return;
         }
+        // 词头只取基字：textContent 会把 <rt> 振假名拼进去（「歯が立たない」→
+        // 「歯はが立たたない」），与 handleGlossaryAnchorClick 同一口径（BUG-2456）。
         const word = /^(?:sound|image|dictmedia):/i.test(href)
             ? ''
-            : (anchor.textContent || '').trim();
+            : linkVisibleBaseText(anchor);
         if (!word) {
             anchor.removeAttribute('href');
             return;
@@ -2459,6 +2557,14 @@ async function minedCardAction(expression, reading, frequencies, pitches, rules,
     return await window.flutter_inappwebview.callHandler('minedCardAction', fields);
 }
 
+// BUG-3492：卡还在后台写入 Anki（按钮显示「已加入」）时的覆盖请求。宿主收下后排到那次
+// 写入之后、落地自动覆盖，回 {accepted, message}；没接这根桥的宿主回 null / accepted:false。
+async function queueOverwrite(expression, reading, frequencies, pitches, rules, matched, entryIndex, popupSelectionText) {
+    const fields = await buildMinePayload(
+        expression, reading, frequencies, pitches, rules, matched, entryIndex, popupSelectionText);
+    return await window.flutter_inappwebview.callHandler('queueOverwrite', fields);
+}
+
 // BUG-1064 —— app 外表面的「卡片已在 Anki 中」操作面板（IN-PAGE 版）。
 //
 // 宿主分两类：
@@ -3475,13 +3581,13 @@ function isRedirectGlossary(glossary) {
 
 function createGlossarySectionWrapper(entry) {
     // TODO-804: a term dictionary disabled in 词典管理 (its show/hide switch off)
-    // is added to hiddenDictionaryNames by the host. Term dictionaries are still
-    // registered in the native engine (see AppModel.bucketDictPaths — hidden term
-    // dicts stay in the bucket because filtering happens at render time), so the
-    // FFI lookup still returns their glossaries. Drop them here, the single
-    // grouping point shared by every term-glossary render path, so a disabled
-    // dictionary's definitions never surface in the lookup popup. Mirrors how
-    // collapsedDictionaryNames is consumed in createGlossarySection.
+    // is added to hiddenDictionaryNames by the host. Since BUG-3454 hidden
+    // dictionaries are no longer loaded into the native engine at all
+    // (AppModel.bucketDictPaths); this filter stays as a second line of defence
+    // for the window between a toggle and the scheduled engine reload. Drop them
+    // here, the single grouping point shared by every term-glossary render path,
+    // so a disabled dictionary's definitions never surface in the lookup popup.
+    // Mirrors how collapsedDictionaryNames is consumed in createGlossarySection.
     const hiddenDictionaryNames = window.hiddenDictionaryNames || [];
     const grouped = {};
     // glossaryIndex 是**原始** entry.glossaries 下标，不是分组后的序号：它是屏幕 DOM 与
@@ -3606,7 +3712,7 @@ function showAudioError(button) {
 }
 
 // BUG-842：Windows 桌面查词弹窗是 WebView2 离屏合成（CompositionController→DirectComposition
-// visual→WGC 捕获→Flutter texture，再经 HibikiAppUiScale 的 FittedBox 拉伸）。HTML `title`
+// visual→WGC 捕获→Flutter texture，再经 FushiAppUiScale 的 FittedBox 拉伸）。HTML `title`
 // 的原生工具提示是 WebView2 生成的独立 top-level OS 窗口，按「父 HWND 原点 + WebView 内部未
 // 拉伸的逻辑坐标」定位，与纹理真正合成的位置（弹窗卡片）错位，于是提示「飞」到窗口角落。
 // 同型的原生右键菜单错位已由 dictionary_popup_webview.dart 换 Flutter showMenu 规避，但 title
@@ -4431,6 +4537,12 @@ function createEntryHeader(entry, idx) {
 
     buttonsContainer.appendChild(createFavoriteButton(expression, reading, idx));
 
+    // Fushi 复习词状态（复习模块关着时为 null，既不渲染也不发桥调用）。
+    const srsBadge = createSrsStatusBadge(expression, reading);
+    if (srsBadge) {
+        buttonsContainer.appendChild(srsBadge);
+    }
+
     // BUG-185 (TODO-084/087): the mine button's "已制卡 ✓ / 可制卡 +" state is
     // DETECTED AT LOOKUP TIME and reflects Anki's REAL card existence.
     //
@@ -4461,10 +4573,14 @@ function createEntryHeader(entry, idx) {
     //   word, or re-querying, supersedes it back to an ordinary ✓ (only the most
     //   recent card stays editable). AnkiDroid returns no id → never green ✓⤺.
     let queuedLocally = false;
-    const isEntryQueued = () => typeof window.fushiIsEntryQueued === 'function'
+    const hostOwnsQueue = () => typeof window.fushiIsEntryQueued === 'function';
+    const isEntryQueued = () => hostOwnsQueue()
         ? window.fushiIsEntryQueued({ expression, reading }) === true
         : queuedLocally;
     const setMineState = (isMined) => {
+        // BUG-3492：Anki 里已经有这张卡 = 后台那次制卡已经落地，本弹窗记的「已加入」
+        // 标记就此作废（宿主落地后推来的刷新、点击时的回问都经这里）。
+        if (isMined) queuedLocally = false;
         // 本按钮的制卡态至少有过一次真值（lookup-time 探测，或点按钮后的回问）。
         // 「范围未知」的宿主刷新只重问这类按钮，见 refreshRenderedMineStates。
         mineButton.__fushiMineStateKnown = true;
@@ -4527,13 +4643,45 @@ function createEntryHeader(entry, idx) {
             // in finally — it is the ONLY thing that disables the button, never a
             // permanent lock (BUG-077).
             if (mineButton.dataset.mining === '1') return;
-            if (isEntryQueued()) {
+            // 宿主自己持有制卡队列（浏览器扩展）：排队中就是排队中，它的队列会如实回答。
+            if (hostOwnsQueue() && isEntryQueued()) {
                 setMineState(mineButton.dataset.mined === '1');
                 return;
             }
             mineButton.dataset.mining = '1';
             mineButton.disabled = true;
             try {
+                // BUG-3492：app 内（在线视频后台制卡）的「已加入」只是本弹窗记下的一个
+                // 标记，卡落地后没有任何东西会把它撤掉——以前这里一律 return，于是同一个
+                // 弹窗里再点 ✓、或从「高级制卡」回点，都永远没反应，只有关掉弹窗重新查词
+                // （新弹窗没有这个标记）才能走覆盖。现在先问一次 Anki：卡已经在了 →
+                // setMineState(true) 撤掉标记，落到下面已制卡的正常路径（操作单 / 覆盖）；
+                // 还没落地 → 把这次覆盖交给宿主排队（所有者拍板的方案 B：写入落地后自动
+                // 覆盖、同词只留最后一次）；宿主不收（没有后台写入这条路）就就地说明。
+                if (queuedLocally && !hostOwnsQueue()) {
+                    const landed = await window.flutter_inappwebview.callHandler(
+                        'duplicateCheck', { expression, reading });
+                    if (landed !== true) {
+                        const reply = await queueOverwrite(
+                            expression, reading, frequencies, pitches, rules, matched, idx, lastSelection);
+                        const accepted = !!(reply && reply.accepted === true);
+                        const message = reply && typeof reply.message === 'string' ? reply.message : '';
+                        // 宿主说这次后台写入在上面那次回问之后才结束（赛跑窗口）：落地了 →
+                        // 落到下面已制卡的正常路径；失败了 → 撤掉「已加入」，卡不在 Anki 里，
+                        // 不能再说「还在写入」。
+                        const settled = !accepted && reply ? reply.settled : null;
+                        if (settled !== 'landed') {
+                            if (settled === 'failed') queuedLocally = false;
+                            setMineState(false);
+                            const hint = message || (accepted
+                                ? ''
+                                : (window.i18nMineStillQueued || '还在写入 Anki，稍后再试'));
+                            if (hint) showInlineHint(mineButton, hint);
+                            return;
+                        }
+                    }
+                    setMineState(true);
+                }
                 // IntersectionObserver may not have delivered its first callback
                 // yet. Join/start the scheduled duplicateCheck before consulting
                 // data-mined, then invalidate late decoration work for this click.
@@ -4706,6 +4854,10 @@ function createEntryHeader(entry, idx) {
                 // stuck disabled.
                 mineButton.dataset.mining = '';
                 mineButton.disabled = false;
+                // 制卡目标含 Fushi 复习时，这一下可能刚把卡写进复习库：重问一次词状态。
+                if (srsBadge) {
+                    srsBadge.__fushiRefreshSrsStatus();
+                }
             }
         }
     });
@@ -6197,23 +6349,62 @@ function rubyUnitsAreTouching(a, b) {
     return node === b;
 }
 
-function applyCustomCSS() {
-    __fushiOverlayParent().querySelectorAll('style.fushi-custom-css').forEach(el => el.remove());
+// P2-F（2026-10-20）：自定义 CSS 按「键 → <style> 节点」diff 落地，未变的一个都不动。
+// 旧实现每次渲染（首词条、尾批、增量追加各一次）都把全部 style.fushi-custom-css 删掉
+// 再整批重插——哪怕内容一字未变，每次增删 <style> 都让整个文档的样式失效重算，词条
+// 越多越贵。现在与 ensureDictionaryStyle 同一思路：节点按键常驻，文本变了才改
+// textContent，键集合或顺序变了才重排。键：全局 CSS 用以 NUL 开头的保留键（词典名
+// 不可能含 NUL，不会撞车），词典 CSS 用词典名。
+const __FUSHI_GLOBAL_CUSTOM_CSS_KEY = '\u0000global';
+// 已落地的节点，按应在文档里出现的顺序（全局在前，词典按 customDictCSS 的键序）。
+let __fushiCustomCssNodes = [];
+function __fushiDesiredCustomCss() {
+    const desired = [];
     if (window.globalDictCSS) {
-        const style = document.createElement('style');
-        style.className = 'fushi-custom-css';
-        style.textContent = window.globalDictCSS;
-        __fushiOverlayParent().appendChild(style);
+        desired.push({ key: __FUSHI_GLOBAL_CUSTOM_CSS_KEY, raw: window.globalDictCSS, dictName: null });
     }
     if (window.customDictCSS && typeof window.customDictCSS === 'object') {
         for (const [dictName, css] of Object.entries(window.customDictCSS)) {
             if (!css) continue;
-            const style = document.createElement('style');
-            style.className = 'fushi-custom-css';
-            style.textContent = constructDictCss(css, dictName);
-            __fushiOverlayParent().appendChild(style);
+            desired.push({ key: dictName, raw: css, dictName: dictName });
         }
     }
+    return desired;
+}
+function applyCustomCSS() {
+    const parent = __fushiOverlayParent();
+    const desired = __fushiDesiredCustomCss();
+    const current = __fushiCustomCssNodes;
+    // 原位更新的前提：同一组键、同一顺序、节点都还挂在当前 realm 根下。任一不满足就
+    // 整批重建（键集合变化 = 用户改了设置，罕见），保持「全局在前」的层叠顺序不变。
+    let inPlace = current.length === desired.length;
+    for (let i = 0; inPlace && i < desired.length; i++) {
+        const node = current[i];
+        inPlace = node.key === desired[i].key && node.style.parentNode === parent;
+    }
+    if (inPlace) {
+        for (let i = 0; i < desired.length; i++) {
+            const node = current[i];
+            if (node.raw === desired[i].raw) continue;
+            node.raw = desired[i].raw;
+            node.style.textContent = desired[i].dictName === null
+                ? desired[i].raw
+                : constructDictCss(desired[i].raw, desired[i].dictName);
+        }
+        return;
+    }
+    // 连同不在表里的遗留节点（换过 realm 根、旧版本插入的）一起清掉，再按序重建。
+    parent.querySelectorAll('style.fushi-custom-css').forEach(el => el.remove());
+    for (const node of current) {
+        try { node.style.remove(); } catch (_) { /* 已随旧 realm 根一起移除 */ }
+    }
+    __fushiCustomCssNodes = desired.map((d) => {
+        const style = document.createElement('style');
+        style.className = 'fushi-custom-css';
+        style.textContent = d.dictName === null ? d.raw : constructDictCss(d.raw, d.dictName);
+        parent.appendChild(style);
+        return { key: d.key, raw: d.raw, style: style };
+    });
 }
 
 // TODO-094 S5: kanji dictionary card. A single-character lookup carries
@@ -6515,7 +6706,7 @@ function _firePopupRendered(stillRendering) {
 }
 
 // ===== N 列 masonry 词典方框排列（照抄 Niratan Features/Popup/popup.js layoutMasonry，
-//        一般化到 Hibiki 的 --dict-columns N 列）=====
+//        一般化到 Fushi 的 --dict-columns N 列）=====
 // develop 原本用 CSS grid `.glossary-section > .category-body`(repeat(--dict-columns,1fr))
 // 行对齐排列：同一行的词典卡片被该行最高者顶到同一水平线，矮卡片下方留空隙（Niratan 的
 // 紧密堆则无此空隙）。这里在 grid 之上叠一层运行时 masonry——cols>1 且多卡时用 inline-style

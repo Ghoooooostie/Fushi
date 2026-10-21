@@ -2977,6 +2977,17 @@ class $SrtBooksTable extends SrtBooks
     type: DriftSqlType.int,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _localAddedAtMeta = const VerificationMeta(
+    'localAddedAt',
+  );
+  @override
+  late final GeneratedColumn<int> localAddedAt = GeneratedColumn<int>(
+    'local_added_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _bookKeyMeta = const VerificationMeta(
     'bookKey',
   );
@@ -3011,6 +3022,7 @@ class $SrtBooksTable extends SrtBooks
     srtPath,
     coverPath,
     importedAt,
+    localAddedAt,
     bookKey,
     language,
   ];
@@ -3088,6 +3100,15 @@ class $SrtBooksTable extends SrtBooks
     } else if (isInserting) {
       context.missing(_importedAtMeta);
     }
+    if (data.containsKey('local_added_at')) {
+      context.handle(
+        _localAddedAtMeta,
+        localAddedAt.isAcceptableOrUnknown(
+          data['local_added_at']!,
+          _localAddedAtMeta,
+        ),
+      );
+    }
     if (data.containsKey('book_key')) {
       context.handle(
         _bookKeyMeta,
@@ -3145,6 +3166,10 @@ class $SrtBooksTable extends SrtBooks
         DriftSqlType.int,
         data['${effectivePrefix}imported_at'],
       )!,
+      localAddedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}local_added_at'],
+      ),
       bookKey: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}book_key'],
@@ -3171,7 +3196,14 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
   final String? audioPathsJson;
   final String srtPath;
   final String? coverPath;
+
+  /// 原始入库时刻（毫秒，跨设备保留、展示与排序用；同步资产包导入时沿用包内值）。
   final int importedAt;
+
+  /// v118：本机开始拥有这条字幕书的时刻（毫秒，设备本地，同 [EpubBooks.localAddedAt]
+  /// 的语义与理由）。写入单点 [FushiDatabase.upsertSrtBook]：插入时未携带 → now；
+  /// 冲突转更新时永不改写。v118 迁移以 importedAt 回填存量行。
+  final int? localAddedAt;
   final String bookKey;
 
   /// v88：字幕书/有声书的内容语言（BCP-47）。SRT 文件本身不声明语言，所以这一列
@@ -3187,6 +3219,7 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
     required this.srtPath,
     this.coverPath,
     required this.importedAt,
+    this.localAddedAt,
     required this.bookKey,
     this.language,
   });
@@ -3210,6 +3243,9 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
       map['cover_path'] = Variable<String>(coverPath);
     }
     map['imported_at'] = Variable<int>(importedAt);
+    if (!nullToAbsent || localAddedAt != null) {
+      map['local_added_at'] = Variable<int>(localAddedAt);
+    }
     map['book_key'] = Variable<String>(bookKey);
     if (!nullToAbsent || language != null) {
       map['language'] = Variable<String>(language);
@@ -3236,6 +3272,9 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
           ? const Value.absent()
           : Value(coverPath),
       importedAt: Value(importedAt),
+      localAddedAt: localAddedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(localAddedAt),
       bookKey: Value(bookKey),
       language: language == null && nullToAbsent
           ? const Value.absent()
@@ -3258,6 +3297,7 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
       srtPath: serializer.fromJson<String>(json['srtPath']),
       coverPath: serializer.fromJson<String?>(json['coverPath']),
       importedAt: serializer.fromJson<int>(json['importedAt']),
+      localAddedAt: serializer.fromJson<int?>(json['localAddedAt']),
       bookKey: serializer.fromJson<String>(json['bookKey']),
       language: serializer.fromJson<String?>(json['language']),
     );
@@ -3275,6 +3315,7 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
       'srtPath': serializer.toJson<String>(srtPath),
       'coverPath': serializer.toJson<String?>(coverPath),
       'importedAt': serializer.toJson<int>(importedAt),
+      'localAddedAt': serializer.toJson<int?>(localAddedAt),
       'bookKey': serializer.toJson<String>(bookKey),
       'language': serializer.toJson<String?>(language),
     };
@@ -3290,6 +3331,7 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
     String? srtPath,
     Value<String?> coverPath = const Value.absent(),
     int? importedAt,
+    Value<int?> localAddedAt = const Value.absent(),
     String? bookKey,
     Value<String?> language = const Value.absent(),
   }) => SrtBookRow(
@@ -3304,6 +3346,7 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
     srtPath: srtPath ?? this.srtPath,
     coverPath: coverPath.present ? coverPath.value : this.coverPath,
     importedAt: importedAt ?? this.importedAt,
+    localAddedAt: localAddedAt.present ? localAddedAt.value : this.localAddedAt,
     bookKey: bookKey ?? this.bookKey,
     language: language.present ? language.value : this.language,
   );
@@ -3322,6 +3365,9 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
       importedAt: data.importedAt.present
           ? data.importedAt.value
           : this.importedAt,
+      localAddedAt: data.localAddedAt.present
+          ? data.localAddedAt.value
+          : this.localAddedAt,
       bookKey: data.bookKey.present ? data.bookKey.value : this.bookKey,
       language: data.language.present ? data.language.value : this.language,
     );
@@ -3339,6 +3385,7 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
           ..write('srtPath: $srtPath, ')
           ..write('coverPath: $coverPath, ')
           ..write('importedAt: $importedAt, ')
+          ..write('localAddedAt: $localAddedAt, ')
           ..write('bookKey: $bookKey, ')
           ..write('language: $language')
           ..write(')'))
@@ -3356,6 +3403,7 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
     srtPath,
     coverPath,
     importedAt,
+    localAddedAt,
     bookKey,
     language,
   );
@@ -3372,6 +3420,7 @@ class SrtBookRow extends DataClass implements Insertable<SrtBookRow> {
           other.srtPath == this.srtPath &&
           other.coverPath == this.coverPath &&
           other.importedAt == this.importedAt &&
+          other.localAddedAt == this.localAddedAt &&
           other.bookKey == this.bookKey &&
           other.language == this.language);
 }
@@ -3386,6 +3435,7 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
   final Value<String> srtPath;
   final Value<String?> coverPath;
   final Value<int> importedAt;
+  final Value<int?> localAddedAt;
   final Value<String> bookKey;
   final Value<String?> language;
   const SrtBooksCompanion({
@@ -3398,6 +3448,7 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
     this.srtPath = const Value.absent(),
     this.coverPath = const Value.absent(),
     this.importedAt = const Value.absent(),
+    this.localAddedAt = const Value.absent(),
     this.bookKey = const Value.absent(),
     this.language = const Value.absent(),
   });
@@ -3411,6 +3462,7 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
     required String srtPath,
     this.coverPath = const Value.absent(),
     required int importedAt,
+    this.localAddedAt = const Value.absent(),
     this.bookKey = const Value.absent(),
     this.language = const Value.absent(),
   }) : uid = Value(uid),
@@ -3427,6 +3479,7 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
     Expression<String>? srtPath,
     Expression<String>? coverPath,
     Expression<int>? importedAt,
+    Expression<int>? localAddedAt,
     Expression<String>? bookKey,
     Expression<String>? language,
   }) {
@@ -3440,6 +3493,7 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
       if (srtPath != null) 'srt_path': srtPath,
       if (coverPath != null) 'cover_path': coverPath,
       if (importedAt != null) 'imported_at': importedAt,
+      if (localAddedAt != null) 'local_added_at': localAddedAt,
       if (bookKey != null) 'book_key': bookKey,
       if (language != null) 'language': language,
     });
@@ -3455,6 +3509,7 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
     Value<String>? srtPath,
     Value<String?>? coverPath,
     Value<int>? importedAt,
+    Value<int?>? localAddedAt,
     Value<String>? bookKey,
     Value<String?>? language,
   }) {
@@ -3468,6 +3523,7 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
       srtPath: srtPath ?? this.srtPath,
       coverPath: coverPath ?? this.coverPath,
       importedAt: importedAt ?? this.importedAt,
+      localAddedAt: localAddedAt ?? this.localAddedAt,
       bookKey: bookKey ?? this.bookKey,
       language: language ?? this.language,
     );
@@ -3503,6 +3559,9 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
     if (importedAt.present) {
       map['imported_at'] = Variable<int>(importedAt.value);
     }
+    if (localAddedAt.present) {
+      map['local_added_at'] = Variable<int>(localAddedAt.value);
+    }
     if (bookKey.present) {
       map['book_key'] = Variable<String>(bookKey.value);
     }
@@ -3524,6 +3583,7 @@ class SrtBooksCompanion extends UpdateCompanion<SrtBookRow> {
           ..write('srtPath: $srtPath, ')
           ..write('coverPath: $coverPath, ')
           ..write('importedAt: $importedAt, ')
+          ..write('localAddedAt: $localAddedAt, ')
           ..write('bookKey: $bookKey, ')
           ..write('language: $language')
           ..write(')'))
@@ -7594,6 +7654,17 @@ class $EpubBooksTable extends EpubBooks
     type: DriftSqlType.int,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _localAddedAtMeta = const VerificationMeta(
+    'localAddedAt',
+  );
+  @override
+  late final GeneratedColumn<int> localAddedAt = GeneratedColumn<int>(
+    'local_added_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _languageMeta = const VerificationMeta(
     'language',
   );
@@ -7674,6 +7745,7 @@ class $EpubBooksTable extends EpubBooks
     tocJson,
     sourceMetadata,
     importedAt,
+    localAddedAt,
     language,
     format,
     mangaReadingMode,
@@ -7788,6 +7860,15 @@ class $EpubBooksTable extends EpubBooks
     } else if (isInserting) {
       context.missing(_importedAtMeta);
     }
+    if (data.containsKey('local_added_at')) {
+      context.handle(
+        _localAddedAtMeta,
+        localAddedAt.isAcceptableOrUnknown(
+          data['local_added_at']!,
+          _localAddedAtMeta,
+        ),
+      );
+    }
     if (data.containsKey('language')) {
       context.handle(
         _languageMeta,
@@ -7887,6 +7968,10 @@ class $EpubBooksTable extends EpubBooks
         DriftSqlType.int,
         data['${effectivePrefix}imported_at'],
       )!,
+      localAddedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}local_added_at'],
+      ),
       language: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}language'],
@@ -7943,7 +8028,25 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
   final String chaptersJson;
   final String? tocJson;
   final String? sourceMetadata;
+
+  /// 条目的**原始入库时刻**（毫秒）：跨设备保留、用户可见——书架「导入时间」排序、
+  /// 「最近阅读」对没读过的书的回落键、合集组内回退序都按它。互联下载的书写对端的
+  /// 入库时刻（BUG-3452），所以它**不是**「本机从什么时候起拥有这本书」，那件事见
+  /// [localAddedAt]。
   final int importedAt;
+
+  /// v118：本机**开始拥有**这本书的时刻（毫秒）。与 [importedAt] 是两个事实：
+  /// 互联下载把 importedAt 写成对端入库时刻，而删除墓碑仲裁（「删除发生在本机
+  /// 拥有之后才管得着它」，BUG-2044）与首页「最近添加」要的是本机落地那一刻——
+  /// 共用一列时，对端早已入库、本机刚下载的书会被第三台设备在其间的「从所有设备
+  /// 删除」追着弹确认，也进不了「最近添加」。
+  ///
+  /// 设备本地语义：不进互联 / 云同步 wire。备份按整行随包、恢复时保留备份内的值
+  /// （恢复 = 重现快照时刻的拥有事实，见 `FushiDatabase.insertEpubBook`）。写入
+  /// 单点是 [FushiDatabase.insertEpubBook]（未携带 → 当时 now）；此后不再改写。
+  /// null = 时刻未知（墓碑仲裁按「无从仲裁」处理，宁可多问一次）。v118 迁移以
+  /// importedAt 回填存量行。
+  final int? localAddedAt;
 
   /// v87：书的内容语言（BCP-47，如 `ja` / `zh-Hant`），决定正文用哪条字体链。
   ///
@@ -7995,6 +8098,7 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
     this.tocJson,
     this.sourceMetadata,
     required this.importedAt,
+    this.localAddedAt,
     this.language,
     required this.format,
     this.mangaReadingMode,
@@ -8025,6 +8129,9 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
       map['source_metadata'] = Variable<String>(sourceMetadata);
     }
     map['imported_at'] = Variable<int>(importedAt);
+    if (!nullToAbsent || localAddedAt != null) {
+      map['local_added_at'] = Variable<int>(localAddedAt);
+    }
     if (!nullToAbsent || language != null) {
       map['language'] = Variable<String>(language);
     }
@@ -8066,6 +8173,9 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
           ? const Value.absent()
           : Value(sourceMetadata),
       importedAt: Value(importedAt),
+      localAddedAt: localAddedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(localAddedAt),
       language: language == null && nullToAbsent
           ? const Value.absent()
           : Value(language),
@@ -8101,6 +8211,7 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
       tocJson: serializer.fromJson<String?>(json['tocJson']),
       sourceMetadata: serializer.fromJson<String?>(json['sourceMetadata']),
       importedAt: serializer.fromJson<int>(json['importedAt']),
+      localAddedAt: serializer.fromJson<int?>(json['localAddedAt']),
       language: serializer.fromJson<String?>(json['language']),
       format: serializer.fromJson<String>(json['format']),
       mangaReadingMode: serializer.fromJson<String?>(json['mangaReadingMode']),
@@ -8125,6 +8236,7 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
       'tocJson': serializer.toJson<String?>(tocJson),
       'sourceMetadata': serializer.toJson<String?>(sourceMetadata),
       'importedAt': serializer.toJson<int>(importedAt),
+      'localAddedAt': serializer.toJson<int?>(localAddedAt),
       'language': serializer.toJson<String?>(language),
       'format': serializer.toJson<String>(format),
       'mangaReadingMode': serializer.toJson<String?>(mangaReadingMode),
@@ -8147,6 +8259,7 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
     Value<String?> tocJson = const Value.absent(),
     Value<String?> sourceMetadata = const Value.absent(),
     int? importedAt,
+    Value<int?> localAddedAt = const Value.absent(),
     Value<String?> language = const Value.absent(),
     String? format,
     Value<String?> mangaReadingMode = const Value.absent(),
@@ -8168,6 +8281,7 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
         ? sourceMetadata.value
         : this.sourceMetadata,
     importedAt: importedAt ?? this.importedAt,
+    localAddedAt: localAddedAt.present ? localAddedAt.value : this.localAddedAt,
     language: language.present ? language.value : this.language,
     format: format ?? this.format,
     mangaReadingMode: mangaReadingMode.present
@@ -8201,6 +8315,9 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
       importedAt: data.importedAt.present
           ? data.importedAt.value
           : this.importedAt,
+      localAddedAt: data.localAddedAt.present
+          ? data.localAddedAt.value
+          : this.localAddedAt,
       language: data.language.present ? data.language.value : this.language,
       format: data.format.present ? data.format.value : this.format,
       mangaReadingMode: data.mangaReadingMode.present
@@ -8229,6 +8346,7 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
           ..write('tocJson: $tocJson, ')
           ..write('sourceMetadata: $sourceMetadata, ')
           ..write('importedAt: $importedAt, ')
+          ..write('localAddedAt: $localAddedAt, ')
           ..write('language: $language, ')
           ..write('format: $format, ')
           ..write('mangaReadingMode: $mangaReadingMode, ')
@@ -8253,6 +8371,7 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
     tocJson,
     sourceMetadata,
     importedAt,
+    localAddedAt,
     language,
     format,
     mangaReadingMode,
@@ -8276,6 +8395,7 @@ class EpubBookRow extends DataClass implements Insertable<EpubBookRow> {
           other.tocJson == this.tocJson &&
           other.sourceMetadata == this.sourceMetadata &&
           other.importedAt == this.importedAt &&
+          other.localAddedAt == this.localAddedAt &&
           other.language == this.language &&
           other.format == this.format &&
           other.mangaReadingMode == this.mangaReadingMode &&
@@ -8297,6 +8417,7 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
   final Value<String?> tocJson;
   final Value<String?> sourceMetadata;
   final Value<int> importedAt;
+  final Value<int?> localAddedAt;
   final Value<String?> language;
   final Value<String> format;
   final Value<String?> mangaReadingMode;
@@ -8317,6 +8438,7 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
     this.tocJson = const Value.absent(),
     this.sourceMetadata = const Value.absent(),
     this.importedAt = const Value.absent(),
+    this.localAddedAt = const Value.absent(),
     this.language = const Value.absent(),
     this.format = const Value.absent(),
     this.mangaReadingMode = const Value.absent(),
@@ -8338,6 +8460,7 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
     this.tocJson = const Value.absent(),
     this.sourceMetadata = const Value.absent(),
     required int importedAt,
+    this.localAddedAt = const Value.absent(),
     this.language = const Value.absent(),
     this.format = const Value.absent(),
     this.mangaReadingMode = const Value.absent(),
@@ -8365,6 +8488,7 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
     Expression<String>? tocJson,
     Expression<String>? sourceMetadata,
     Expression<int>? importedAt,
+    Expression<int>? localAddedAt,
     Expression<String>? language,
     Expression<String>? format,
     Expression<String>? mangaReadingMode,
@@ -8386,6 +8510,7 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
       if (tocJson != null) 'toc_json': tocJson,
       if (sourceMetadata != null) 'source_metadata': sourceMetadata,
       if (importedAt != null) 'imported_at': importedAt,
+      if (localAddedAt != null) 'local_added_at': localAddedAt,
       if (language != null) 'language': language,
       if (format != null) 'format': format,
       if (mangaReadingMode != null) 'manga_reading_mode': mangaReadingMode,
@@ -8409,6 +8534,7 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
     Value<String?>? tocJson,
     Value<String?>? sourceMetadata,
     Value<int>? importedAt,
+    Value<int?>? localAddedAt,
     Value<String?>? language,
     Value<String>? format,
     Value<String?>? mangaReadingMode,
@@ -8430,6 +8556,7 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
       tocJson: tocJson ?? this.tocJson,
       sourceMetadata: sourceMetadata ?? this.sourceMetadata,
       importedAt: importedAt ?? this.importedAt,
+      localAddedAt: localAddedAt ?? this.localAddedAt,
       language: language ?? this.language,
       format: format ?? this.format,
       mangaReadingMode: mangaReadingMode ?? this.mangaReadingMode,
@@ -8479,6 +8606,9 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
     if (importedAt.present) {
       map['imported_at'] = Variable<int>(importedAt.value);
     }
+    if (localAddedAt.present) {
+      map['local_added_at'] = Variable<int>(localAddedAt.value);
+    }
     if (language.present) {
       map['language'] = Variable<String>(language.value);
     }
@@ -8518,6 +8648,7 @@ class EpubBooksCompanion extends UpdateCompanion<EpubBookRow> {
           ..write('tocJson: $tocJson, ')
           ..write('sourceMetadata: $sourceMetadata, ')
           ..write('importedAt: $importedAt, ')
+          ..write('localAddedAt: $localAddedAt, ')
           ..write('language: $language, ')
           ..write('format: $format, ')
           ..write('mangaReadingMode: $mangaReadingMode, ')
@@ -9229,6 +9360,15 @@ class $ProfilesTable extends Profiles
     requiredDuringInsert: true,
     defaultConstraints: GeneratedColumn.constraintIsAlways('UNIQUE'),
   );
+  static const VerificationMeta _uidMeta = const VerificationMeta('uid');
+  @override
+  late final GeneratedColumn<String> uid = GeneratedColumn<String>(
+    'uid',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _createdAtMeta = const VerificationMeta(
     'createdAt',
   );
@@ -9252,7 +9392,7 @@ class $ProfilesTable extends Profiles
     requiredDuringInsert: true,
   );
   @override
-  List<GeneratedColumn> get $columns => [id, name, createdAt, updatedAt];
+  List<GeneratedColumn> get $columns => [id, name, uid, createdAt, updatedAt];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
@@ -9275,6 +9415,12 @@ class $ProfilesTable extends Profiles
       );
     } else if (isInserting) {
       context.missing(_nameMeta);
+    }
+    if (data.containsKey('uid')) {
+      context.handle(
+        _uidMeta,
+        uid.isAcceptableOrUnknown(data['uid']!, _uidMeta),
+      );
     }
     if (data.containsKey('created_at')) {
       context.handle(
@@ -9309,6 +9455,10 @@ class $ProfilesTable extends Profiles
         DriftSqlType.string,
         data['${effectivePrefix}name'],
       )!,
+      uid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}uid'],
+      ),
       createdAt: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
         data['${effectivePrefix}created_at'],
@@ -9329,11 +9479,17 @@ class $ProfilesTable extends Profiles
 class ProfileRow extends DataClass implements Insertable<ProfileRow> {
   final int id;
   final String name;
+
+  /// v117：profile 的全局身份（UUIDv7）。不同设备上的同一个本机自增 id 不代表同一个 profile；
+  /// SRS 的一切行与同步路径都用它（docs/specs/2026-10-14-fushi-srs-design.md 铁律 E）。
+  /// 迁移时为存量行生成；可空只为兼容迁移顺序，读取方经 FushiDatabase.profileUidOf 惰性补齐。
+  final String? uid;
   final int createdAt;
   final int updatedAt;
   const ProfileRow({
     required this.id,
     required this.name,
+    this.uid,
     required this.createdAt,
     required this.updatedAt,
   });
@@ -9342,6 +9498,9 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
     final map = <String, Expression>{};
     map['id'] = Variable<int>(id);
     map['name'] = Variable<String>(name);
+    if (!nullToAbsent || uid != null) {
+      map['uid'] = Variable<String>(uid);
+    }
     map['created_at'] = Variable<int>(createdAt);
     map['updated_at'] = Variable<int>(updatedAt);
     return map;
@@ -9351,6 +9510,7 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
     return ProfilesCompanion(
       id: Value(id),
       name: Value(name),
+      uid: uid == null && nullToAbsent ? const Value.absent() : Value(uid),
       createdAt: Value(createdAt),
       updatedAt: Value(updatedAt),
     );
@@ -9364,6 +9524,7 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
     return ProfileRow(
       id: serializer.fromJson<int>(json['id']),
       name: serializer.fromJson<String>(json['name']),
+      uid: serializer.fromJson<String?>(json['uid']),
       createdAt: serializer.fromJson<int>(json['createdAt']),
       updatedAt: serializer.fromJson<int>(json['updatedAt']),
     );
@@ -9374,6 +9535,7 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
     return <String, dynamic>{
       'id': serializer.toJson<int>(id),
       'name': serializer.toJson<String>(name),
+      'uid': serializer.toJson<String?>(uid),
       'createdAt': serializer.toJson<int>(createdAt),
       'updatedAt': serializer.toJson<int>(updatedAt),
     };
@@ -9382,11 +9544,13 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
   ProfileRow copyWith({
     int? id,
     String? name,
+    Value<String?> uid = const Value.absent(),
     int? createdAt,
     int? updatedAt,
   }) => ProfileRow(
     id: id ?? this.id,
     name: name ?? this.name,
+    uid: uid.present ? uid.value : this.uid,
     createdAt: createdAt ?? this.createdAt,
     updatedAt: updatedAt ?? this.updatedAt,
   );
@@ -9394,6 +9558,7 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
     return ProfileRow(
       id: data.id.present ? data.id.value : this.id,
       name: data.name.present ? data.name.value : this.name,
+      uid: data.uid.present ? data.uid.value : this.uid,
       createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
       updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
     );
@@ -9404,6 +9569,7 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
     return (StringBuffer('ProfileRow(')
           ..write('id: $id, ')
           ..write('name: $name, ')
+          ..write('uid: $uid, ')
           ..write('createdAt: $createdAt, ')
           ..write('updatedAt: $updatedAt')
           ..write(')'))
@@ -9411,13 +9577,14 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
   }
 
   @override
-  int get hashCode => Object.hash(id, name, createdAt, updatedAt);
+  int get hashCode => Object.hash(id, name, uid, createdAt, updatedAt);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       (other is ProfileRow &&
           other.id == this.id &&
           other.name == this.name &&
+          other.uid == this.uid &&
           other.createdAt == this.createdAt &&
           other.updatedAt == this.updatedAt);
 }
@@ -9425,17 +9592,20 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
 class ProfilesCompanion extends UpdateCompanion<ProfileRow> {
   final Value<int> id;
   final Value<String> name;
+  final Value<String?> uid;
   final Value<int> createdAt;
   final Value<int> updatedAt;
   const ProfilesCompanion({
     this.id = const Value.absent(),
     this.name = const Value.absent(),
+    this.uid = const Value.absent(),
     this.createdAt = const Value.absent(),
     this.updatedAt = const Value.absent(),
   });
   ProfilesCompanion.insert({
     this.id = const Value.absent(),
     required String name,
+    this.uid = const Value.absent(),
     required int createdAt,
     required int updatedAt,
   }) : name = Value(name),
@@ -9444,12 +9614,14 @@ class ProfilesCompanion extends UpdateCompanion<ProfileRow> {
   static Insertable<ProfileRow> custom({
     Expression<int>? id,
     Expression<String>? name,
+    Expression<String>? uid,
     Expression<int>? createdAt,
     Expression<int>? updatedAt,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
       if (name != null) 'name': name,
+      if (uid != null) 'uid': uid,
       if (createdAt != null) 'created_at': createdAt,
       if (updatedAt != null) 'updated_at': updatedAt,
     });
@@ -9458,12 +9630,14 @@ class ProfilesCompanion extends UpdateCompanion<ProfileRow> {
   ProfilesCompanion copyWith({
     Value<int>? id,
     Value<String>? name,
+    Value<String?>? uid,
     Value<int>? createdAt,
     Value<int>? updatedAt,
   }) {
     return ProfilesCompanion(
       id: id ?? this.id,
       name: name ?? this.name,
+      uid: uid ?? this.uid,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
     );
@@ -9477,6 +9651,9 @@ class ProfilesCompanion extends UpdateCompanion<ProfileRow> {
     }
     if (name.present) {
       map['name'] = Variable<String>(name.value);
+    }
+    if (uid.present) {
+      map['uid'] = Variable<String>(uid.value);
     }
     if (createdAt.present) {
       map['created_at'] = Variable<int>(createdAt.value);
@@ -9492,6 +9669,7 @@ class ProfilesCompanion extends UpdateCompanion<ProfileRow> {
     return (StringBuffer('ProfilesCompanion(')
           ..write('id: $id, ')
           ..write('name: $name, ')
+          ..write('uid: $uid, ')
           ..write('createdAt: $createdAt, ')
           ..write('updatedAt: $updatedAt')
           ..write(')'))
@@ -10943,6 +11121,17 @@ class $VideoBooksTable extends VideoBooks
     type: DriftSqlType.int,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _localAddedAtMeta = const VerificationMeta(
+    'localAddedAt',
+  );
+  @override
+  late final GeneratedColumn<int> localAddedAt = GeneratedColumn<int>(
+    'local_added_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _playlistJsonMeta = const VerificationMeta(
     'playlistJson',
   );
@@ -11051,6 +11240,7 @@ class $VideoBooksTable extends VideoBooks
     lastPositionMs,
     lastPlayedAt,
     importedAt,
+    localAddedAt,
     playlistJson,
     currentEpisode,
     audioTrackId,
@@ -11175,6 +11365,15 @@ class $VideoBooksTable extends VideoBooks
       context.handle(
         _importedAtMeta,
         importedAt.isAcceptableOrUnknown(data['imported_at']!, _importedAtMeta),
+      );
+    }
+    if (data.containsKey('local_added_at')) {
+      context.handle(
+        _localAddedAtMeta,
+        localAddedAt.isAcceptableOrUnknown(
+          data['local_added_at']!,
+          _localAddedAtMeta,
+        ),
       );
     }
     if (data.containsKey('playlist_json')) {
@@ -11304,6 +11503,10 @@ class $VideoBooksTable extends VideoBooks
         DriftSqlType.int,
         data['${effectivePrefix}imported_at'],
       ),
+      localAddedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}local_added_at'],
+      ),
       playlistJson: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}playlist_json'],
@@ -11388,8 +11591,15 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
 
   /// 导入时间（毫秒戳，同 [EpubBooks].importedAt / [SrtBooks].importedAt int
   /// 范式）；null = 旧数据无导入时间。v57 前是 drift DateTime（Unix 秒存储），
-  /// v57 迁移统一为 int 毫秒。
+  /// v57 迁移统一为 int 毫秒。互联下载登记镜像 host 的值（BUG-2463），所以它是
+  /// 「原始入库时刻」，不是「本机从什么时候起拥有」——后者见 [localAddedAt]。
   final int? importedAt;
+
+  /// v118：本机开始拥有这条视频的时刻（毫秒，设备本地，同 [EpubBooks.localAddedAt]
+  /// 的语义与理由）。写入单点 [FushiDatabase.upsertVideoBook]：插入时未携带 → now；
+  /// 冲突转更新时永不改写（重复登记同一 bookUid 不算重新拥有）。v118 迁移以
+  /// importedAt 回填存量行；importedAt 为 null 的旧行仍为 null（时刻未知）。
+  final int? localAddedAt;
 
   /// m3u8 多集播放列表 JSON：`[{title,path}]`（绝对路径）。单视频导入时为 null。
   final String? playlistJson;
@@ -11440,6 +11650,7 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
     required this.lastPositionMs,
     this.lastPlayedAt,
     this.importedAt,
+    this.localAddedAt,
     this.playlistJson,
     required this.currentEpisode,
     this.audioTrackId,
@@ -11484,6 +11695,9 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
     }
     if (!nullToAbsent || importedAt != null) {
       map['imported_at'] = Variable<int>(importedAt);
+    }
+    if (!nullToAbsent || localAddedAt != null) {
+      map['local_added_at'] = Variable<int>(localAddedAt);
     }
     if (!nullToAbsent || playlistJson != null) {
       map['playlist_json'] = Variable<String>(playlistJson);
@@ -11541,6 +11755,9 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
       importedAt: importedAt == null && nullToAbsent
           ? const Value.absent()
           : Value(importedAt),
+      localAddedAt: localAddedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(localAddedAt),
       playlistJson: playlistJson == null && nullToAbsent
           ? const Value.absent()
           : Value(playlistJson),
@@ -11589,6 +11806,7 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
       lastPositionMs: serializer.fromJson<int>(json['lastPositionMs']),
       lastPlayedAt: serializer.fromJson<int?>(json['lastPlayedAt']),
       importedAt: serializer.fromJson<int?>(json['importedAt']),
+      localAddedAt: serializer.fromJson<int?>(json['localAddedAt']),
       playlistJson: serializer.fromJson<String?>(json['playlistJson']),
       currentEpisode: serializer.fromJson<int>(json['currentEpisode']),
       audioTrackId: serializer.fromJson<String?>(json['audioTrackId']),
@@ -11618,6 +11836,7 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
       'lastPositionMs': serializer.toJson<int>(lastPositionMs),
       'lastPlayedAt': serializer.toJson<int?>(lastPlayedAt),
       'importedAt': serializer.toJson<int?>(importedAt),
+      'localAddedAt': serializer.toJson<int?>(localAddedAt),
       'playlistJson': serializer.toJson<String?>(playlistJson),
       'currentEpisode': serializer.toJson<int>(currentEpisode),
       'audioTrackId': serializer.toJson<String?>(audioTrackId),
@@ -11643,6 +11862,7 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
     int? lastPositionMs,
     Value<int?> lastPlayedAt = const Value.absent(),
     Value<int?> importedAt = const Value.absent(),
+    Value<int?> localAddedAt = const Value.absent(),
     Value<String?> playlistJson = const Value.absent(),
     int? currentEpisode,
     Value<String?> audioTrackId = const Value.absent(),
@@ -11675,6 +11895,7 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
     lastPositionMs: lastPositionMs ?? this.lastPositionMs,
     lastPlayedAt: lastPlayedAt.present ? lastPlayedAt.value : this.lastPlayedAt,
     importedAt: importedAt.present ? importedAt.value : this.importedAt,
+    localAddedAt: localAddedAt.present ? localAddedAt.value : this.localAddedAt,
     playlistJson: playlistJson.present ? playlistJson.value : this.playlistJson,
     currentEpisode: currentEpisode ?? this.currentEpisode,
     audioTrackId: audioTrackId.present ? audioTrackId.value : this.audioTrackId,
@@ -11719,6 +11940,9 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
       importedAt: data.importedAt.present
           ? data.importedAt.value
           : this.importedAt,
+      localAddedAt: data.localAddedAt.present
+          ? data.localAddedAt.value
+          : this.localAddedAt,
       playlistJson: data.playlistJson.present
           ? data.playlistJson.value
           : this.playlistJson,
@@ -11758,6 +11982,7 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
           ..write('lastPositionMs: $lastPositionMs, ')
           ..write('lastPlayedAt: $lastPlayedAt, ')
           ..write('importedAt: $importedAt, ')
+          ..write('localAddedAt: $localAddedAt, ')
           ..write('playlistJson: $playlistJson, ')
           ..write('currentEpisode: $currentEpisode, ')
           ..write('audioTrackId: $audioTrackId, ')
@@ -11785,6 +12010,7 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
     lastPositionMs,
     lastPlayedAt,
     importedAt,
+    localAddedAt,
     playlistJson,
     currentEpisode,
     audioTrackId,
@@ -11811,6 +12037,7 @@ class VideoBookRow extends DataClass implements Insertable<VideoBookRow> {
           other.lastPositionMs == this.lastPositionMs &&
           other.lastPlayedAt == this.lastPlayedAt &&
           other.importedAt == this.importedAt &&
+          other.localAddedAt == this.localAddedAt &&
           other.playlistJson == this.playlistJson &&
           other.currentEpisode == this.currentEpisode &&
           other.audioTrackId == this.audioTrackId &&
@@ -11835,6 +12062,7 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
   final Value<int> lastPositionMs;
   final Value<int?> lastPlayedAt;
   final Value<int?> importedAt;
+  final Value<int?> localAddedAt;
   final Value<String?> playlistJson;
   final Value<int> currentEpisode;
   final Value<String?> audioTrackId;
@@ -11858,6 +12086,7 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
     this.lastPositionMs = const Value.absent(),
     this.lastPlayedAt = const Value.absent(),
     this.importedAt = const Value.absent(),
+    this.localAddedAt = const Value.absent(),
     this.playlistJson = const Value.absent(),
     this.currentEpisode = const Value.absent(),
     this.audioTrackId = const Value.absent(),
@@ -11882,6 +12111,7 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
     this.lastPositionMs = const Value.absent(),
     this.lastPlayedAt = const Value.absent(),
     this.importedAt = const Value.absent(),
+    this.localAddedAt = const Value.absent(),
     this.playlistJson = const Value.absent(),
     this.currentEpisode = const Value.absent(),
     this.audioTrackId = const Value.absent(),
@@ -11908,6 +12138,7 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
     Expression<int>? lastPositionMs,
     Expression<int>? lastPlayedAt,
     Expression<int>? importedAt,
+    Expression<int>? localAddedAt,
     Expression<String>? playlistJson,
     Expression<int>? currentEpisode,
     Expression<String>? audioTrackId,
@@ -11934,6 +12165,7 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
       if (lastPositionMs != null) 'last_position_ms': lastPositionMs,
       if (lastPlayedAt != null) 'last_played_at': lastPlayedAt,
       if (importedAt != null) 'imported_at': importedAt,
+      if (localAddedAt != null) 'local_added_at': localAddedAt,
       if (playlistJson != null) 'playlist_json': playlistJson,
       if (currentEpisode != null) 'current_episode': currentEpisode,
       if (audioTrackId != null) 'audio_track_id': audioTrackId,
@@ -11960,6 +12192,7 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
     Value<int>? lastPositionMs,
     Value<int?>? lastPlayedAt,
     Value<int?>? importedAt,
+    Value<int?>? localAddedAt,
     Value<String?>? playlistJson,
     Value<int>? currentEpisode,
     Value<String?>? audioTrackId,
@@ -11986,6 +12219,7 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
       lastPositionMs: lastPositionMs ?? this.lastPositionMs,
       lastPlayedAt: lastPlayedAt ?? this.lastPlayedAt,
       importedAt: importedAt ?? this.importedAt,
+      localAddedAt: localAddedAt ?? this.localAddedAt,
       playlistJson: playlistJson ?? this.playlistJson,
       currentEpisode: currentEpisode ?? this.currentEpisode,
       audioTrackId: audioTrackId ?? this.audioTrackId,
@@ -12044,6 +12278,9 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
     if (importedAt.present) {
       map['imported_at'] = Variable<int>(importedAt.value);
     }
+    if (localAddedAt.present) {
+      map['local_added_at'] = Variable<int>(localAddedAt.value);
+    }
     if (playlistJson.present) {
       map['playlist_json'] = Variable<String>(playlistJson.value);
     }
@@ -12090,6 +12327,7 @@ class VideoBooksCompanion extends UpdateCompanion<VideoBookRow> {
           ..write('lastPositionMs: $lastPositionMs, ')
           ..write('lastPlayedAt: $lastPlayedAt, ')
           ..write('importedAt: $importedAt, ')
+          ..write('localAddedAt: $localAddedAt, ')
           ..write('playlistJson: $playlistJson, ')
           ..write('currentEpisode: $currentEpisode, ')
           ..write('audioTrackId: $audioTrackId, ')
@@ -15706,6 +15944,39 @@ class $MediaCollectionsTable extends MediaCollections
         type: DriftSqlType.string,
         requiredDuringInsert: false,
       );
+  static const VerificationMeta _originMeta = const VerificationMeta('origin');
+  @override
+  late final GeneratedColumn<String> origin = GeneratedColumn<String>(
+    'origin',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('user'),
+  );
+  static const VerificationMeta _organizeKeyMeta = const VerificationMeta(
+    'organizeKey',
+  );
+  @override
+  late final GeneratedColumn<String> organizeKey = GeneratedColumn<String>(
+    'organize_key',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _organizeAliasesMeta = const VerificationMeta(
+    'organizeAliases',
+  );
+  @override
+  late final GeneratedColumn<String> organizeAliases = GeneratedColumn<String>(
+    'organize_aliases',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -15723,6 +15994,9 @@ class $MediaCollectionsTable extends MediaCollections
     secondarySubtitleDelayMs,
     subtitleLanguage,
     subtitleReleaseGroup,
+    origin,
+    organizeKey,
+    organizeAliases,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -15854,6 +16128,30 @@ class $MediaCollectionsTable extends MediaCollections
         ),
       );
     }
+    if (data.containsKey('origin')) {
+      context.handle(
+        _originMeta,
+        origin.isAcceptableOrUnknown(data['origin']!, _originMeta),
+      );
+    }
+    if (data.containsKey('organize_key')) {
+      context.handle(
+        _organizeKeyMeta,
+        organizeKey.isAcceptableOrUnknown(
+          data['organize_key']!,
+          _organizeKeyMeta,
+        ),
+      );
+    }
+    if (data.containsKey('organize_aliases')) {
+      context.handle(
+        _organizeAliasesMeta,
+        organizeAliases.isAcceptableOrUnknown(
+          data['organize_aliases']!,
+          _organizeAliasesMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -15923,6 +16221,18 @@ class $MediaCollectionsTable extends MediaCollections
         DriftSqlType.string,
         data['${effectivePrefix}subtitle_release_group'],
       ),
+      origin: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}origin'],
+      )!,
+      organizeKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}organize_key'],
+      ),
+      organizeAliases: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}organize_aliases'],
+      )!,
     );
   }
 
@@ -16024,6 +16334,26 @@ class MediaCollectionRow extends DataClass
   /// **NULL = 没人配过**（消费方走默认选轨），非 NULL 覆盖每集。无损迁移：
   /// nullable 无 default → 旧库既有行全 NULL = 行为与旧版一致。
   final String? subtitleReleaseGroup;
+
+  /// 合集由谁建 / 归谁管（schema v124，AI 整理库 spec
+  /// `docs/specs/2026-10-20-ai-library-organize-design.md` §5.1）：
+  /// `user`（用户或其它非整理器路径建的，整理器永不改它）/ `rule`（规则归组器）/
+  /// `ai`（AI 整理）/ `folder`（目录自动合集）。**只升不降**：`ai` / `rule` 合集一旦
+  /// 被用户编辑（加减成员、改名、手动排序、合并）就转成 `user`，跨端同步按秩取大
+  /// （[collectionOriginRank]），所以转过的永远转不回来。迁移时存量行一律 `user`、
+  /// `sourceFolderPath` 非空的回填 `folder`——分不清的宁可当用户的。
+  final String origin;
+
+  /// 整理分组身份键（schema v124，spec §6）：同一个系列在每台设备上算出同一个键
+  /// （外部 id 键 `anilist:` / `tmdb:` / `vndb:`，否则原语言标题归一化键 `t:`）。
+  /// 整理收敛（`organize_convergence.dart`）按它把各端各自建的同系列合集认成一个。
+  /// NULL = 不是整理器建的、也没从整理合集转来。
+  final String? organizeKey;
+
+  /// 本合集吸收过的其它分组键（schema v124，spec §8.3）：换行分隔、字典序、去重。
+  /// 只增不删（跨端按并集合并）：合并掉的合集即使被旧对端复活，它的键也仍指向本合集，
+  /// 下一轮收敛照样并回来。空串 = 没吸收过。
+  final String organizeAliases;
   const MediaCollectionRow({
     required this.id,
     this.sourceFolderPath,
@@ -16040,6 +16370,9 @@ class MediaCollectionRow extends DataClass
     this.secondarySubtitleDelayMs,
     this.subtitleLanguage,
     this.subtitleReleaseGroup,
+    required this.origin,
+    this.organizeKey,
+    required this.organizeAliases,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -16079,6 +16412,11 @@ class MediaCollectionRow extends DataClass
     if (!nullToAbsent || subtitleReleaseGroup != null) {
       map['subtitle_release_group'] = Variable<String>(subtitleReleaseGroup);
     }
+    map['origin'] = Variable<String>(origin);
+    if (!nullToAbsent || organizeKey != null) {
+      map['organize_key'] = Variable<String>(organizeKey);
+    }
+    map['organize_aliases'] = Variable<String>(organizeAliases);
     return map;
   }
 
@@ -16117,6 +16455,11 @@ class MediaCollectionRow extends DataClass
       subtitleReleaseGroup: subtitleReleaseGroup == null && nullToAbsent
           ? const Value.absent()
           : Value(subtitleReleaseGroup),
+      origin: Value(origin),
+      organizeKey: organizeKey == null && nullToAbsent
+          ? const Value.absent()
+          : Value(organizeKey),
+      organizeAliases: Value(organizeAliases),
     );
   }
 
@@ -16145,6 +16488,9 @@ class MediaCollectionRow extends DataClass
       subtitleReleaseGroup: serializer.fromJson<String?>(
         json['subtitleReleaseGroup'],
       ),
+      origin: serializer.fromJson<String>(json['origin']),
+      organizeKey: serializer.fromJson<String?>(json['organizeKey']),
+      organizeAliases: serializer.fromJson<String>(json['organizeAliases']),
     );
   }
   @override
@@ -16168,6 +16514,9 @@ class MediaCollectionRow extends DataClass
       ),
       'subtitleLanguage': serializer.toJson<String?>(subtitleLanguage),
       'subtitleReleaseGroup': serializer.toJson<String?>(subtitleReleaseGroup),
+      'origin': serializer.toJson<String>(origin),
+      'organizeKey': serializer.toJson<String?>(organizeKey),
+      'organizeAliases': serializer.toJson<String>(organizeAliases),
     };
   }
 
@@ -16187,6 +16536,9 @@ class MediaCollectionRow extends DataClass
     Value<int?> secondarySubtitleDelayMs = const Value.absent(),
     Value<String?> subtitleLanguage = const Value.absent(),
     Value<String?> subtitleReleaseGroup = const Value.absent(),
+    String? origin,
+    Value<String?> organizeKey = const Value.absent(),
+    String? organizeAliases,
   }) => MediaCollectionRow(
     id: id ?? this.id,
     sourceFolderPath: sourceFolderPath.present
@@ -16213,6 +16565,9 @@ class MediaCollectionRow extends DataClass
     subtitleReleaseGroup: subtitleReleaseGroup.present
         ? subtitleReleaseGroup.value
         : this.subtitleReleaseGroup,
+    origin: origin ?? this.origin,
+    organizeKey: organizeKey.present ? organizeKey.value : this.organizeKey,
+    organizeAliases: organizeAliases ?? this.organizeAliases,
   );
   MediaCollectionRow copyWithCompanion(MediaCollectionsCompanion data) {
     return MediaCollectionRow(
@@ -16249,6 +16604,13 @@ class MediaCollectionRow extends DataClass
       subtitleReleaseGroup: data.subtitleReleaseGroup.present
           ? data.subtitleReleaseGroup.value
           : this.subtitleReleaseGroup,
+      origin: data.origin.present ? data.origin.value : this.origin,
+      organizeKey: data.organizeKey.present
+          ? data.organizeKey.value
+          : this.organizeKey,
+      organizeAliases: data.organizeAliases.present
+          ? data.organizeAliases.value
+          : this.organizeAliases,
     );
   }
 
@@ -16269,7 +16631,10 @@ class MediaCollectionRow extends DataClass
           ..write('subtitleDelayMs: $subtitleDelayMs, ')
           ..write('secondarySubtitleDelayMs: $secondarySubtitleDelayMs, ')
           ..write('subtitleLanguage: $subtitleLanguage, ')
-          ..write('subtitleReleaseGroup: $subtitleReleaseGroup')
+          ..write('subtitleReleaseGroup: $subtitleReleaseGroup, ')
+          ..write('origin: $origin, ')
+          ..write('organizeKey: $organizeKey, ')
+          ..write('organizeAliases: $organizeAliases')
           ..write(')'))
         .toString();
   }
@@ -16291,6 +16656,9 @@ class MediaCollectionRow extends DataClass
     secondarySubtitleDelayMs,
     subtitleLanguage,
     subtitleReleaseGroup,
+    origin,
+    organizeKey,
+    organizeAliases,
   );
   @override
   bool operator ==(Object other) =>
@@ -16310,7 +16678,10 @@ class MediaCollectionRow extends DataClass
           other.subtitleDelayMs == this.subtitleDelayMs &&
           other.secondarySubtitleDelayMs == this.secondarySubtitleDelayMs &&
           other.subtitleLanguage == this.subtitleLanguage &&
-          other.subtitleReleaseGroup == this.subtitleReleaseGroup);
+          other.subtitleReleaseGroup == this.subtitleReleaseGroup &&
+          other.origin == this.origin &&
+          other.organizeKey == this.organizeKey &&
+          other.organizeAliases == this.organizeAliases);
 }
 
 class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
@@ -16329,6 +16700,9 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
   final Value<int?> secondarySubtitleDelayMs;
   final Value<String?> subtitleLanguage;
   final Value<String?> subtitleReleaseGroup;
+  final Value<String> origin;
+  final Value<String?> organizeKey;
+  final Value<String> organizeAliases;
   const MediaCollectionsCompanion({
     this.id = const Value.absent(),
     this.sourceFolderPath = const Value.absent(),
@@ -16345,6 +16719,9 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
     this.secondarySubtitleDelayMs = const Value.absent(),
     this.subtitleLanguage = const Value.absent(),
     this.subtitleReleaseGroup = const Value.absent(),
+    this.origin = const Value.absent(),
+    this.organizeKey = const Value.absent(),
+    this.organizeAliases = const Value.absent(),
   });
   MediaCollectionsCompanion.insert({
     this.id = const Value.absent(),
@@ -16362,6 +16739,9 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
     this.secondarySubtitleDelayMs = const Value.absent(),
     this.subtitleLanguage = const Value.absent(),
     this.subtitleReleaseGroup = const Value.absent(),
+    this.origin = const Value.absent(),
+    this.organizeKey = const Value.absent(),
+    this.organizeAliases = const Value.absent(),
   }) : name = Value(name),
        createdAt = Value(createdAt);
   static Insertable<MediaCollectionRow> custom({
@@ -16380,6 +16760,9 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
     Expression<int>? secondarySubtitleDelayMs,
     Expression<String>? subtitleLanguage,
     Expression<String>? subtitleReleaseGroup,
+    Expression<String>? origin,
+    Expression<String>? organizeKey,
+    Expression<String>? organizeAliases,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -16399,6 +16782,9 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
       if (subtitleLanguage != null) 'subtitle_language': subtitleLanguage,
       if (subtitleReleaseGroup != null)
         'subtitle_release_group': subtitleReleaseGroup,
+      if (origin != null) 'origin': origin,
+      if (organizeKey != null) 'organize_key': organizeKey,
+      if (organizeAliases != null) 'organize_aliases': organizeAliases,
     });
   }
 
@@ -16418,6 +16804,9 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
     Value<int?>? secondarySubtitleDelayMs,
     Value<String?>? subtitleLanguage,
     Value<String?>? subtitleReleaseGroup,
+    Value<String>? origin,
+    Value<String?>? organizeKey,
+    Value<String>? organizeAliases,
   }) {
     return MediaCollectionsCompanion(
       id: id ?? this.id,
@@ -16436,6 +16825,9 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
           secondarySubtitleDelayMs ?? this.secondarySubtitleDelayMs,
       subtitleLanguage: subtitleLanguage ?? this.subtitleLanguage,
       subtitleReleaseGroup: subtitleReleaseGroup ?? this.subtitleReleaseGroup,
+      origin: origin ?? this.origin,
+      organizeKey: organizeKey ?? this.organizeKey,
+      organizeAliases: organizeAliases ?? this.organizeAliases,
     );
   }
 
@@ -16491,6 +16883,15 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
         subtitleReleaseGroup.value,
       );
     }
+    if (origin.present) {
+      map['origin'] = Variable<String>(origin.value);
+    }
+    if (organizeKey.present) {
+      map['organize_key'] = Variable<String>(organizeKey.value);
+    }
+    if (organizeAliases.present) {
+      map['organize_aliases'] = Variable<String>(organizeAliases.value);
+    }
     return map;
   }
 
@@ -16511,7 +16912,10 @@ class MediaCollectionsCompanion extends UpdateCompanion<MediaCollectionRow> {
           ..write('subtitleDelayMs: $subtitleDelayMs, ')
           ..write('secondarySubtitleDelayMs: $secondarySubtitleDelayMs, ')
           ..write('subtitleLanguage: $subtitleLanguage, ')
-          ..write('subtitleReleaseGroup: $subtitleReleaseGroup')
+          ..write('subtitleReleaseGroup: $subtitleReleaseGroup, ')
+          ..write('origin: $origin, ')
+          ..write('organizeKey: $organizeKey, ')
+          ..write('organizeAliases: $organizeAliases')
           ..write(')'))
         .toString();
   }
@@ -16921,6 +17325,32 @@ class $CollectionMemberTombstonesTable extends CollectionMemberTombstones
     type: DriftSqlType.int,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _organizeKeyMeta = const VerificationMeta(
+    'organizeKey',
+  );
+  @override
+  late final GeneratedColumn<String> organizeKey = GeneratedColumn<String>(
+    'organize_key',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _organizeMergedMeta = const VerificationMeta(
+    'organizeMerged',
+  );
+  @override
+  late final GeneratedColumn<bool> organizeMerged = GeneratedColumn<bool>(
+    'organize_merged',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("organize_merged" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     collectionName,
@@ -16928,6 +17358,8 @@ class $CollectionMemberTombstonesTable extends CollectionMemberTombstones
     mediaType,
     entryKey,
     deletedAt,
+    organizeKey,
+    organizeMerged,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -16987,6 +17419,24 @@ class $CollectionMemberTombstonesTable extends CollectionMemberTombstones
     } else if (isInserting) {
       context.missing(_deletedAtMeta);
     }
+    if (data.containsKey('organize_key')) {
+      context.handle(
+        _organizeKeyMeta,
+        organizeKey.isAcceptableOrUnknown(
+          data['organize_key']!,
+          _organizeKeyMeta,
+        ),
+      );
+    }
+    if (data.containsKey('organize_merged')) {
+      context.handle(
+        _organizeMergedMeta,
+        organizeMerged.isAcceptableOrUnknown(
+          data['organize_merged']!,
+          _organizeMergedMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -17024,6 +17474,14 @@ class $CollectionMemberTombstonesTable extends CollectionMemberTombstones
         DriftSqlType.int,
         data['${effectivePrefix}deleted_at'],
       )!,
+      organizeKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}organize_key'],
+      ),
+      organizeMerged: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}organize_merged'],
+      )!,
     );
   }
 
@@ -17049,12 +17507,26 @@ class CollectionMemberTombstoneRow extends DataClass
 
   /// 移出/删除毫秒戳（LWW 比较键；重复移出 upsert 取新）。
   final int deletedAt;
+
+  /// 合集级删除哨兵行（mediaType = entryKey = ''）上被删合集的整理分组键（schema
+  /// v124，spec §5.2）。键不在任何活合集的 [MediaCollections.organizeKey] /
+  /// [MediaCollections.organizeAliases] 里 = 用户**拒绝**了这个 AI 分组（删了或撤销
+  /// 了），任何设备上的 AI 都不再建它；键在某个活合集的别名里 = 只是被合并掉了。
+  /// 成员墓碑行恒 NULL。
+  final String? organizeKey;
+
+  /// 合集级删除哨兵行：这次删除是整理器把它**并进了别的合集**（true），还是用户删的
+  /// （false，默认）。只看键找不找得到吸收者分不清这两者——吸收者可能还没同步过来；
+  /// 分不清就会把并掉的当成用户拒绝、把成员丢回散条目（schema v124，spec §8.5）。
+  final bool organizeMerged;
   const CollectionMemberTombstoneRow({
     required this.collectionName,
     required this.collectionType,
     required this.mediaType,
     required this.entryKey,
     required this.deletedAt,
+    this.organizeKey,
+    required this.organizeMerged,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -17064,6 +17536,10 @@ class CollectionMemberTombstoneRow extends DataClass
     map['media_type'] = Variable<String>(mediaType);
     map['entry_key'] = Variable<String>(entryKey);
     map['deleted_at'] = Variable<int>(deletedAt);
+    if (!nullToAbsent || organizeKey != null) {
+      map['organize_key'] = Variable<String>(organizeKey);
+    }
+    map['organize_merged'] = Variable<bool>(organizeMerged);
     return map;
   }
 
@@ -17074,6 +17550,10 @@ class CollectionMemberTombstoneRow extends DataClass
       mediaType: Value(mediaType),
       entryKey: Value(entryKey),
       deletedAt: Value(deletedAt),
+      organizeKey: organizeKey == null && nullToAbsent
+          ? const Value.absent()
+          : Value(organizeKey),
+      organizeMerged: Value(organizeMerged),
     );
   }
 
@@ -17088,6 +17568,8 @@ class CollectionMemberTombstoneRow extends DataClass
       mediaType: serializer.fromJson<String>(json['mediaType']),
       entryKey: serializer.fromJson<String>(json['entryKey']),
       deletedAt: serializer.fromJson<int>(json['deletedAt']),
+      organizeKey: serializer.fromJson<String?>(json['organizeKey']),
+      organizeMerged: serializer.fromJson<bool>(json['organizeMerged']),
     );
   }
   @override
@@ -17099,6 +17581,8 @@ class CollectionMemberTombstoneRow extends DataClass
       'mediaType': serializer.toJson<String>(mediaType),
       'entryKey': serializer.toJson<String>(entryKey),
       'deletedAt': serializer.toJson<int>(deletedAt),
+      'organizeKey': serializer.toJson<String?>(organizeKey),
+      'organizeMerged': serializer.toJson<bool>(organizeMerged),
     };
   }
 
@@ -17108,12 +17592,16 @@ class CollectionMemberTombstoneRow extends DataClass
     String? mediaType,
     String? entryKey,
     int? deletedAt,
+    Value<String?> organizeKey = const Value.absent(),
+    bool? organizeMerged,
   }) => CollectionMemberTombstoneRow(
     collectionName: collectionName ?? this.collectionName,
     collectionType: collectionType ?? this.collectionType,
     mediaType: mediaType ?? this.mediaType,
     entryKey: entryKey ?? this.entryKey,
     deletedAt: deletedAt ?? this.deletedAt,
+    organizeKey: organizeKey.present ? organizeKey.value : this.organizeKey,
+    organizeMerged: organizeMerged ?? this.organizeMerged,
   );
   CollectionMemberTombstoneRow copyWithCompanion(
     CollectionMemberTombstonesCompanion data,
@@ -17128,6 +17616,12 @@ class CollectionMemberTombstoneRow extends DataClass
       mediaType: data.mediaType.present ? data.mediaType.value : this.mediaType,
       entryKey: data.entryKey.present ? data.entryKey.value : this.entryKey,
       deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
+      organizeKey: data.organizeKey.present
+          ? data.organizeKey.value
+          : this.organizeKey,
+      organizeMerged: data.organizeMerged.present
+          ? data.organizeMerged.value
+          : this.organizeMerged,
     );
   }
 
@@ -17138,7 +17632,9 @@ class CollectionMemberTombstoneRow extends DataClass
           ..write('collectionType: $collectionType, ')
           ..write('mediaType: $mediaType, ')
           ..write('entryKey: $entryKey, ')
-          ..write('deletedAt: $deletedAt')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('organizeKey: $organizeKey, ')
+          ..write('organizeMerged: $organizeMerged')
           ..write(')'))
         .toString();
   }
@@ -17150,6 +17646,8 @@ class CollectionMemberTombstoneRow extends DataClass
     mediaType,
     entryKey,
     deletedAt,
+    organizeKey,
+    organizeMerged,
   );
   @override
   bool operator ==(Object other) =>
@@ -17159,7 +17657,9 @@ class CollectionMemberTombstoneRow extends DataClass
           other.collectionType == this.collectionType &&
           other.mediaType == this.mediaType &&
           other.entryKey == this.entryKey &&
-          other.deletedAt == this.deletedAt);
+          other.deletedAt == this.deletedAt &&
+          other.organizeKey == this.organizeKey &&
+          other.organizeMerged == this.organizeMerged);
 }
 
 class CollectionMemberTombstonesCompanion
@@ -17169,6 +17669,8 @@ class CollectionMemberTombstonesCompanion
   final Value<String> mediaType;
   final Value<String> entryKey;
   final Value<int> deletedAt;
+  final Value<String?> organizeKey;
+  final Value<bool> organizeMerged;
   final Value<int> rowid;
   const CollectionMemberTombstonesCompanion({
     this.collectionName = const Value.absent(),
@@ -17176,6 +17678,8 @@ class CollectionMemberTombstonesCompanion
     this.mediaType = const Value.absent(),
     this.entryKey = const Value.absent(),
     this.deletedAt = const Value.absent(),
+    this.organizeKey = const Value.absent(),
+    this.organizeMerged = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   CollectionMemberTombstonesCompanion.insert({
@@ -17184,6 +17688,8 @@ class CollectionMemberTombstonesCompanion
     required String mediaType,
     required String entryKey,
     required int deletedAt,
+    this.organizeKey = const Value.absent(),
+    this.organizeMerged = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : collectionName = Value(collectionName),
        collectionType = Value(collectionType),
@@ -17196,6 +17702,8 @@ class CollectionMemberTombstonesCompanion
     Expression<String>? mediaType,
     Expression<String>? entryKey,
     Expression<int>? deletedAt,
+    Expression<String>? organizeKey,
+    Expression<bool>? organizeMerged,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -17204,6 +17712,8 @@ class CollectionMemberTombstonesCompanion
       if (mediaType != null) 'media_type': mediaType,
       if (entryKey != null) 'entry_key': entryKey,
       if (deletedAt != null) 'deleted_at': deletedAt,
+      if (organizeKey != null) 'organize_key': organizeKey,
+      if (organizeMerged != null) 'organize_merged': organizeMerged,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -17214,6 +17724,8 @@ class CollectionMemberTombstonesCompanion
     Value<String>? mediaType,
     Value<String>? entryKey,
     Value<int>? deletedAt,
+    Value<String?>? organizeKey,
+    Value<bool>? organizeMerged,
     Value<int>? rowid,
   }) {
     return CollectionMemberTombstonesCompanion(
@@ -17222,6 +17734,8 @@ class CollectionMemberTombstonesCompanion
       mediaType: mediaType ?? this.mediaType,
       entryKey: entryKey ?? this.entryKey,
       deletedAt: deletedAt ?? this.deletedAt,
+      organizeKey: organizeKey ?? this.organizeKey,
+      organizeMerged: organizeMerged ?? this.organizeMerged,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -17244,6 +17758,12 @@ class CollectionMemberTombstonesCompanion
     if (deletedAt.present) {
       map['deleted_at'] = Variable<int>(deletedAt.value);
     }
+    if (organizeKey.present) {
+      map['organize_key'] = Variable<String>(organizeKey.value);
+    }
+    if (organizeMerged.present) {
+      map['organize_merged'] = Variable<bool>(organizeMerged.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -17258,6 +17778,8 @@ class CollectionMemberTombstonesCompanion
           ..write('mediaType: $mediaType, ')
           ..write('entryKey: $entryKey, ')
           ..write('deletedAt: $deletedAt, ')
+          ..write('organizeKey: $organizeKey, ')
+          ..write('organizeMerged: $organizeMerged, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -34133,6 +34655,17 @@ class $VideoMetadataCharactersTable extends VideoMetadataCharacters
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _originalNameMeta = const VerificationMeta(
+    'originalName',
+  );
+  @override
+  late final GeneratedColumn<String> originalName = GeneratedColumn<String>(
+    'original_name',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _descriptionMeta = const VerificationMeta(
     'description',
   );
@@ -34181,6 +34714,7 @@ class $VideoMetadataCharactersTable extends VideoMetadataCharacters
   List<GeneratedColumn> get $columns => [
     characterKey,
     name,
+    originalName,
     description,
     imageUrl,
     imagePath,
@@ -34216,6 +34750,15 @@ class $VideoMetadataCharactersTable extends VideoMetadataCharacters
       );
     } else if (isInserting) {
       context.missing(_nameMeta);
+    }
+    if (data.containsKey('original_name')) {
+      context.handle(
+        _originalNameMeta,
+        originalName.isAcceptableOrUnknown(
+          data['original_name']!,
+          _originalNameMeta,
+        ),
+      );
     }
     if (data.containsKey('description')) {
       context.handle(
@@ -34266,6 +34809,10 @@ class $VideoMetadataCharactersTable extends VideoMetadataCharacters
         DriftSqlType.string,
         data['${effectivePrefix}name'],
       )!,
+      originalName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}original_name'],
+      ),
       description: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}description'],
@@ -34295,6 +34842,11 @@ class VideoMetadataCharacterRow extends DataClass
     implements Insertable<VideoMetadataCharacterRow> {
   final String characterKey;
   final String name;
+
+  /// v119：角色日文原名（MAL `/characters/{id}` 的 `name_kanji`）。[name] 是刮削源
+  /// 的显示名（AniDB / MAL 多为罗马音）；视频字幕 AI 校对的专名表要的是日文写法。
+  /// NULL = 源没给 / 没取（AniDB anime XML 不带角色日文名）。
+  final String? originalName;
   final String? description;
   final String? imageUrl;
   final String? imagePath;
@@ -34302,6 +34854,7 @@ class VideoMetadataCharacterRow extends DataClass
   const VideoMetadataCharacterRow({
     required this.characterKey,
     required this.name,
+    this.originalName,
     this.description,
     this.imageUrl,
     this.imagePath,
@@ -34312,6 +34865,9 @@ class VideoMetadataCharacterRow extends DataClass
     final map = <String, Expression>{};
     map['character_key'] = Variable<String>(characterKey);
     map['name'] = Variable<String>(name);
+    if (!nullToAbsent || originalName != null) {
+      map['original_name'] = Variable<String>(originalName);
+    }
     if (!nullToAbsent || description != null) {
       map['description'] = Variable<String>(description);
     }
@@ -34329,6 +34885,9 @@ class VideoMetadataCharacterRow extends DataClass
     return VideoMetadataCharactersCompanion(
       characterKey: Value(characterKey),
       name: Value(name),
+      originalName: originalName == null && nullToAbsent
+          ? const Value.absent()
+          : Value(originalName),
       description: description == null && nullToAbsent
           ? const Value.absent()
           : Value(description),
@@ -34350,6 +34909,7 @@ class VideoMetadataCharacterRow extends DataClass
     return VideoMetadataCharacterRow(
       characterKey: serializer.fromJson<String>(json['characterKey']),
       name: serializer.fromJson<String>(json['name']),
+      originalName: serializer.fromJson<String?>(json['originalName']),
       description: serializer.fromJson<String?>(json['description']),
       imageUrl: serializer.fromJson<String?>(json['imageUrl']),
       imagePath: serializer.fromJson<String?>(json['imagePath']),
@@ -34362,6 +34922,7 @@ class VideoMetadataCharacterRow extends DataClass
     return <String, dynamic>{
       'characterKey': serializer.toJson<String>(characterKey),
       'name': serializer.toJson<String>(name),
+      'originalName': serializer.toJson<String?>(originalName),
       'description': serializer.toJson<String?>(description),
       'imageUrl': serializer.toJson<String?>(imageUrl),
       'imagePath': serializer.toJson<String?>(imagePath),
@@ -34372,6 +34933,7 @@ class VideoMetadataCharacterRow extends DataClass
   VideoMetadataCharacterRow copyWith({
     String? characterKey,
     String? name,
+    Value<String?> originalName = const Value.absent(),
     Value<String?> description = const Value.absent(),
     Value<String?> imageUrl = const Value.absent(),
     Value<String?> imagePath = const Value.absent(),
@@ -34379,6 +34941,7 @@ class VideoMetadataCharacterRow extends DataClass
   }) => VideoMetadataCharacterRow(
     characterKey: characterKey ?? this.characterKey,
     name: name ?? this.name,
+    originalName: originalName.present ? originalName.value : this.originalName,
     description: description.present ? description.value : this.description,
     imageUrl: imageUrl.present ? imageUrl.value : this.imageUrl,
     imagePath: imagePath.present ? imagePath.value : this.imagePath,
@@ -34392,6 +34955,9 @@ class VideoMetadataCharacterRow extends DataClass
           ? data.characterKey.value
           : this.characterKey,
       name: data.name.present ? data.name.value : this.name,
+      originalName: data.originalName.present
+          ? data.originalName.value
+          : this.originalName,
       description: data.description.present
           ? data.description.value
           : this.description,
@@ -34406,6 +34972,7 @@ class VideoMetadataCharacterRow extends DataClass
     return (StringBuffer('VideoMetadataCharacterRow(')
           ..write('characterKey: $characterKey, ')
           ..write('name: $name, ')
+          ..write('originalName: $originalName, ')
           ..write('description: $description, ')
           ..write('imageUrl: $imageUrl, ')
           ..write('imagePath: $imagePath, ')
@@ -34418,6 +34985,7 @@ class VideoMetadataCharacterRow extends DataClass
   int get hashCode => Object.hash(
     characterKey,
     name,
+    originalName,
     description,
     imageUrl,
     imagePath,
@@ -34429,6 +34997,7 @@ class VideoMetadataCharacterRow extends DataClass
       (other is VideoMetadataCharacterRow &&
           other.characterKey == this.characterKey &&
           other.name == this.name &&
+          other.originalName == this.originalName &&
           other.description == this.description &&
           other.imageUrl == this.imageUrl &&
           other.imagePath == this.imagePath &&
@@ -34439,6 +35008,7 @@ class VideoMetadataCharactersCompanion
     extends UpdateCompanion<VideoMetadataCharacterRow> {
   final Value<String> characterKey;
   final Value<String> name;
+  final Value<String?> originalName;
   final Value<String?> description;
   final Value<String?> imageUrl;
   final Value<String?> imagePath;
@@ -34447,6 +35017,7 @@ class VideoMetadataCharactersCompanion
   const VideoMetadataCharactersCompanion({
     this.characterKey = const Value.absent(),
     this.name = const Value.absent(),
+    this.originalName = const Value.absent(),
     this.description = const Value.absent(),
     this.imageUrl = const Value.absent(),
     this.imagePath = const Value.absent(),
@@ -34456,6 +35027,7 @@ class VideoMetadataCharactersCompanion
   VideoMetadataCharactersCompanion.insert({
     required String characterKey,
     required String name,
+    this.originalName = const Value.absent(),
     this.description = const Value.absent(),
     this.imageUrl = const Value.absent(),
     this.imagePath = const Value.absent(),
@@ -34467,6 +35039,7 @@ class VideoMetadataCharactersCompanion
   static Insertable<VideoMetadataCharacterRow> custom({
     Expression<String>? characterKey,
     Expression<String>? name,
+    Expression<String>? originalName,
     Expression<String>? description,
     Expression<String>? imageUrl,
     Expression<String>? imagePath,
@@ -34476,6 +35049,7 @@ class VideoMetadataCharactersCompanion
     return RawValuesInsertable({
       if (characterKey != null) 'character_key': characterKey,
       if (name != null) 'name': name,
+      if (originalName != null) 'original_name': originalName,
       if (description != null) 'description': description,
       if (imageUrl != null) 'image_url': imageUrl,
       if (imagePath != null) 'image_path': imagePath,
@@ -34487,6 +35061,7 @@ class VideoMetadataCharactersCompanion
   VideoMetadataCharactersCompanion copyWith({
     Value<String>? characterKey,
     Value<String>? name,
+    Value<String?>? originalName,
     Value<String?>? description,
     Value<String?>? imageUrl,
     Value<String?>? imagePath,
@@ -34496,6 +35071,7 @@ class VideoMetadataCharactersCompanion
     return VideoMetadataCharactersCompanion(
       characterKey: characterKey ?? this.characterKey,
       name: name ?? this.name,
+      originalName: originalName ?? this.originalName,
       description: description ?? this.description,
       imageUrl: imageUrl ?? this.imageUrl,
       imagePath: imagePath ?? this.imagePath,
@@ -34512,6 +35088,9 @@ class VideoMetadataCharactersCompanion
     }
     if (name.present) {
       map['name'] = Variable<String>(name.value);
+    }
+    if (originalName.present) {
+      map['original_name'] = Variable<String>(originalName.value);
     }
     if (description.present) {
       map['description'] = Variable<String>(description.value);
@@ -34536,6 +35115,7 @@ class VideoMetadataCharactersCompanion
     return (StringBuffer('VideoMetadataCharactersCompanion(')
           ..write('characterKey: $characterKey, ')
           ..write('name: $name, ')
+          ..write('originalName: $originalName, ')
           ..write('description: $description, ')
           ..write('imageUrl: $imageUrl, ')
           ..write('imagePath: $imagePath, ')
@@ -42815,7 +43395,7 @@ class VideoDownloadJobRow extends DataClass
   final String? identityJson;
 
   /// 后端连接身份与去重身份。敏感凭据不进数据库；backendProfileId 是下载配置档
-  /// 的字符串身份，不是 Hibiki 用户 Profile，故没有 FK 到 Profiles。
+  /// 的字符串身份，不是 Fushi 用户 Profile，故没有 FK 到 Profiles。
   final String backendKind;
   final String? backendTaskId;
   final String? backendProfileId;
@@ -55975,6 +56555,6763 @@ class PendingMineQueueCompanion extends UpdateCompanion<PendingMineRow> {
   }
 }
 
+class $SrsEntitiesTable extends SrsEntities
+    with TableInfo<$SrsEntitiesTable, SrsEntityRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsEntitiesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
+  @override
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+    'kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _payloadJsonMeta = const VerificationMeta(
+    'payloadJson',
+  );
+  @override
+  late final GeneratedColumn<String> payloadJson = GeneratedColumn<String>(
+    'payload_json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<int> createdAt = GeneratedColumn<int>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    profileUid,
+    kind,
+    payloadJson,
+    createdAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_entities';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsEntityRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('kind')) {
+      context.handle(
+        _kindMeta,
+        kind.isAcceptableOrUnknown(data['kind']!, _kindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kindMeta);
+    }
+    if (data.containsKey('payload_json')) {
+      context.handle(
+        _payloadJsonMeta,
+        payloadJson.isAcceptableOrUnknown(
+          data['payload_json']!,
+          _payloadJsonMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_payloadJsonMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  SrsEntityRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsEntityRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      kind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kind'],
+      )!,
+      payloadJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}payload_json'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}created_at'],
+      )!,
+    );
+  }
+
+  @override
+  $SrsEntitiesTable createAlias(String alias) {
+    return $SrsEntitiesTable(attachedDatabase, alias);
+  }
+}
+
+class SrsEntityRow extends DataClass implements Insertable<SrsEntityRow> {
+  final String id;
+  final String profileUid;
+
+  /// deck / notetype / note（SrsEntityKind.wire）。
+  final String kind;
+
+  /// 规范 JSON（SrsEntityRecord.payload）。
+  final String payloadJson;
+  final int createdAt;
+  const SrsEntityRow({
+    required this.id,
+    required this.profileUid,
+    required this.kind,
+    required this.payloadJson,
+    required this.createdAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['profile_uid'] = Variable<String>(profileUid);
+    map['kind'] = Variable<String>(kind);
+    map['payload_json'] = Variable<String>(payloadJson);
+    map['created_at'] = Variable<int>(createdAt);
+    return map;
+  }
+
+  SrsEntitiesCompanion toCompanion(bool nullToAbsent) {
+    return SrsEntitiesCompanion(
+      id: Value(id),
+      profileUid: Value(profileUid),
+      kind: Value(kind),
+      payloadJson: Value(payloadJson),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory SrsEntityRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsEntityRow(
+      id: serializer.fromJson<String>(json['id']),
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      kind: serializer.fromJson<String>(json['kind']),
+      payloadJson: serializer.fromJson<String>(json['payloadJson']),
+      createdAt: serializer.fromJson<int>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'profileUid': serializer.toJson<String>(profileUid),
+      'kind': serializer.toJson<String>(kind),
+      'payloadJson': serializer.toJson<String>(payloadJson),
+      'createdAt': serializer.toJson<int>(createdAt),
+    };
+  }
+
+  SrsEntityRow copyWith({
+    String? id,
+    String? profileUid,
+    String? kind,
+    String? payloadJson,
+    int? createdAt,
+  }) => SrsEntityRow(
+    id: id ?? this.id,
+    profileUid: profileUid ?? this.profileUid,
+    kind: kind ?? this.kind,
+    payloadJson: payloadJson ?? this.payloadJson,
+    createdAt: createdAt ?? this.createdAt,
+  );
+  SrsEntityRow copyWithCompanion(SrsEntitiesCompanion data) {
+    return SrsEntityRow(
+      id: data.id.present ? data.id.value : this.id,
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      kind: data.kind.present ? data.kind.value : this.kind,
+      payloadJson: data.payloadJson.present
+          ? data.payloadJson.value
+          : this.payloadJson,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsEntityRow(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('kind: $kind, ')
+          ..write('payloadJson: $payloadJson, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, profileUid, kind, payloadJson, createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsEntityRow &&
+          other.id == this.id &&
+          other.profileUid == this.profileUid &&
+          other.kind == this.kind &&
+          other.payloadJson == this.payloadJson &&
+          other.createdAt == this.createdAt);
+}
+
+class SrsEntitiesCompanion extends UpdateCompanion<SrsEntityRow> {
+  final Value<String> id;
+  final Value<String> profileUid;
+  final Value<String> kind;
+  final Value<String> payloadJson;
+  final Value<int> createdAt;
+  final Value<int> rowid;
+  const SrsEntitiesCompanion({
+    this.id = const Value.absent(),
+    this.profileUid = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.payloadJson = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsEntitiesCompanion.insert({
+    required String id,
+    required String profileUid,
+    required String kind,
+    required String payloadJson,
+    this.createdAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       profileUid = Value(profileUid),
+       kind = Value(kind),
+       payloadJson = Value(payloadJson);
+  static Insertable<SrsEntityRow> custom({
+    Expression<String>? id,
+    Expression<String>? profileUid,
+    Expression<String>? kind,
+    Expression<String>? payloadJson,
+    Expression<int>? createdAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (kind != null) 'kind': kind,
+      if (payloadJson != null) 'payload_json': payloadJson,
+      if (createdAt != null) 'created_at': createdAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsEntitiesCompanion copyWith({
+    Value<String>? id,
+    Value<String>? profileUid,
+    Value<String>? kind,
+    Value<String>? payloadJson,
+    Value<int>? createdAt,
+    Value<int>? rowid,
+  }) {
+    return SrsEntitiesCompanion(
+      id: id ?? this.id,
+      profileUid: profileUid ?? this.profileUid,
+      kind: kind ?? this.kind,
+      payloadJson: payloadJson ?? this.payloadJson,
+      createdAt: createdAt ?? this.createdAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
+    }
+    if (payloadJson.present) {
+      map['payload_json'] = Variable<String>(payloadJson.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<int>(createdAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsEntitiesCompanion(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('kind: $kind, ')
+          ..write('payloadJson: $payloadJson, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $SrsFieldEditsTable extends SrsFieldEdits
+    with TableInfo<$SrsFieldEditsTable, SrsFieldEditRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsFieldEditsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _entityKindMeta = const VerificationMeta(
+    'entityKind',
+  );
+  @override
+  late final GeneratedColumn<String> entityKind = GeneratedColumn<String>(
+    'entity_kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _entityIdMeta = const VerificationMeta(
+    'entityId',
+  );
+  @override
+  late final GeneratedColumn<String> entityId = GeneratedColumn<String>(
+    'entity_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _fieldKeyMeta = const VerificationMeta(
+    'fieldKey',
+  );
+  @override
+  late final GeneratedColumn<String> fieldKey = GeneratedColumn<String>(
+    'field_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _writerIdMeta = const VerificationMeta(
+    'writerId',
+  );
+  @override
+  late final GeneratedColumn<String> writerId = GeneratedColumn<String>(
+    'writer_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _seqMeta = const VerificationMeta('seq');
+  @override
+  late final GeneratedColumn<int> seq = GeneratedColumn<int>(
+    'seq',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _jsonMeta = const VerificationMeta('json');
+  @override
+  late final GeneratedColumn<String> json = GeneratedColumn<String>(
+    'json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    profileUid,
+    entityKind,
+    entityId,
+    fieldKey,
+    writerId,
+    seq,
+    json,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_field_edits';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsFieldEditRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('entity_kind')) {
+      context.handle(
+        _entityKindMeta,
+        entityKind.isAcceptableOrUnknown(data['entity_kind']!, _entityKindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_entityKindMeta);
+    }
+    if (data.containsKey('entity_id')) {
+      context.handle(
+        _entityIdMeta,
+        entityId.isAcceptableOrUnknown(data['entity_id']!, _entityIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_entityIdMeta);
+    }
+    if (data.containsKey('field_key')) {
+      context.handle(
+        _fieldKeyMeta,
+        fieldKey.isAcceptableOrUnknown(data['field_key']!, _fieldKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_fieldKeyMeta);
+    }
+    if (data.containsKey('writer_id')) {
+      context.handle(
+        _writerIdMeta,
+        writerId.isAcceptableOrUnknown(data['writer_id']!, _writerIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_writerIdMeta);
+    }
+    if (data.containsKey('seq')) {
+      context.handle(
+        _seqMeta,
+        seq.isAcceptableOrUnknown(data['seq']!, _seqMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_seqMeta);
+    }
+    if (data.containsKey('json')) {
+      context.handle(
+        _jsonMeta,
+        json.isAcceptableOrUnknown(data['json']!, _jsonMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_jsonMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  SrsFieldEditRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsFieldEditRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      entityKind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}entity_kind'],
+      )!,
+      entityId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}entity_id'],
+      )!,
+      fieldKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}field_key'],
+      )!,
+      writerId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}writer_id'],
+      )!,
+      seq: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}seq'],
+      )!,
+      json: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}json'],
+      )!,
+    );
+  }
+
+  @override
+  $SrsFieldEditsTable createAlias(String alias) {
+    return $SrsFieldEditsTable(attachedDatabase, alias);
+  }
+}
+
+class SrsFieldEditRow extends DataClass implements Insertable<SrsFieldEditRow> {
+  final String id;
+  final String profileUid;
+  final String entityKind;
+  final String entityId;
+  final String fieldKey;
+  final String writerId;
+  final int seq;
+
+  /// 完整事件的规范 JSON（含 ctx / 值 / hlc），读回时整条解析，不靠列拼装。
+  final String json;
+  const SrsFieldEditRow({
+    required this.id,
+    required this.profileUid,
+    required this.entityKind,
+    required this.entityId,
+    required this.fieldKey,
+    required this.writerId,
+    required this.seq,
+    required this.json,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['profile_uid'] = Variable<String>(profileUid);
+    map['entity_kind'] = Variable<String>(entityKind);
+    map['entity_id'] = Variable<String>(entityId);
+    map['field_key'] = Variable<String>(fieldKey);
+    map['writer_id'] = Variable<String>(writerId);
+    map['seq'] = Variable<int>(seq);
+    map['json'] = Variable<String>(json);
+    return map;
+  }
+
+  SrsFieldEditsCompanion toCompanion(bool nullToAbsent) {
+    return SrsFieldEditsCompanion(
+      id: Value(id),
+      profileUid: Value(profileUid),
+      entityKind: Value(entityKind),
+      entityId: Value(entityId),
+      fieldKey: Value(fieldKey),
+      writerId: Value(writerId),
+      seq: Value(seq),
+      json: Value(json),
+    );
+  }
+
+  factory SrsFieldEditRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsFieldEditRow(
+      id: serializer.fromJson<String>(json['id']),
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      entityKind: serializer.fromJson<String>(json['entityKind']),
+      entityId: serializer.fromJson<String>(json['entityId']),
+      fieldKey: serializer.fromJson<String>(json['fieldKey']),
+      writerId: serializer.fromJson<String>(json['writerId']),
+      seq: serializer.fromJson<int>(json['seq']),
+      json: serializer.fromJson<String>(json['json']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'profileUid': serializer.toJson<String>(profileUid),
+      'entityKind': serializer.toJson<String>(entityKind),
+      'entityId': serializer.toJson<String>(entityId),
+      'fieldKey': serializer.toJson<String>(fieldKey),
+      'writerId': serializer.toJson<String>(writerId),
+      'seq': serializer.toJson<int>(seq),
+      'json': serializer.toJson<String>(json),
+    };
+  }
+
+  SrsFieldEditRow copyWith({
+    String? id,
+    String? profileUid,
+    String? entityKind,
+    String? entityId,
+    String? fieldKey,
+    String? writerId,
+    int? seq,
+    String? json,
+  }) => SrsFieldEditRow(
+    id: id ?? this.id,
+    profileUid: profileUid ?? this.profileUid,
+    entityKind: entityKind ?? this.entityKind,
+    entityId: entityId ?? this.entityId,
+    fieldKey: fieldKey ?? this.fieldKey,
+    writerId: writerId ?? this.writerId,
+    seq: seq ?? this.seq,
+    json: json ?? this.json,
+  );
+  SrsFieldEditRow copyWithCompanion(SrsFieldEditsCompanion data) {
+    return SrsFieldEditRow(
+      id: data.id.present ? data.id.value : this.id,
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      entityKind: data.entityKind.present
+          ? data.entityKind.value
+          : this.entityKind,
+      entityId: data.entityId.present ? data.entityId.value : this.entityId,
+      fieldKey: data.fieldKey.present ? data.fieldKey.value : this.fieldKey,
+      writerId: data.writerId.present ? data.writerId.value : this.writerId,
+      seq: data.seq.present ? data.seq.value : this.seq,
+      json: data.json.present ? data.json.value : this.json,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsFieldEditRow(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('entityKind: $entityKind, ')
+          ..write('entityId: $entityId, ')
+          ..write('fieldKey: $fieldKey, ')
+          ..write('writerId: $writerId, ')
+          ..write('seq: $seq, ')
+          ..write('json: $json')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    profileUid,
+    entityKind,
+    entityId,
+    fieldKey,
+    writerId,
+    seq,
+    json,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsFieldEditRow &&
+          other.id == this.id &&
+          other.profileUid == this.profileUid &&
+          other.entityKind == this.entityKind &&
+          other.entityId == this.entityId &&
+          other.fieldKey == this.fieldKey &&
+          other.writerId == this.writerId &&
+          other.seq == this.seq &&
+          other.json == this.json);
+}
+
+class SrsFieldEditsCompanion extends UpdateCompanion<SrsFieldEditRow> {
+  final Value<String> id;
+  final Value<String> profileUid;
+  final Value<String> entityKind;
+  final Value<String> entityId;
+  final Value<String> fieldKey;
+  final Value<String> writerId;
+  final Value<int> seq;
+  final Value<String> json;
+  final Value<int> rowid;
+  const SrsFieldEditsCompanion({
+    this.id = const Value.absent(),
+    this.profileUid = const Value.absent(),
+    this.entityKind = const Value.absent(),
+    this.entityId = const Value.absent(),
+    this.fieldKey = const Value.absent(),
+    this.writerId = const Value.absent(),
+    this.seq = const Value.absent(),
+    this.json = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsFieldEditsCompanion.insert({
+    required String id,
+    required String profileUid,
+    required String entityKind,
+    required String entityId,
+    required String fieldKey,
+    required String writerId,
+    required int seq,
+    required String json,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       profileUid = Value(profileUid),
+       entityKind = Value(entityKind),
+       entityId = Value(entityId),
+       fieldKey = Value(fieldKey),
+       writerId = Value(writerId),
+       seq = Value(seq),
+       json = Value(json);
+  static Insertable<SrsFieldEditRow> custom({
+    Expression<String>? id,
+    Expression<String>? profileUid,
+    Expression<String>? entityKind,
+    Expression<String>? entityId,
+    Expression<String>? fieldKey,
+    Expression<String>? writerId,
+    Expression<int>? seq,
+    Expression<String>? json,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (entityKind != null) 'entity_kind': entityKind,
+      if (entityId != null) 'entity_id': entityId,
+      if (fieldKey != null) 'field_key': fieldKey,
+      if (writerId != null) 'writer_id': writerId,
+      if (seq != null) 'seq': seq,
+      if (json != null) 'json': json,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsFieldEditsCompanion copyWith({
+    Value<String>? id,
+    Value<String>? profileUid,
+    Value<String>? entityKind,
+    Value<String>? entityId,
+    Value<String>? fieldKey,
+    Value<String>? writerId,
+    Value<int>? seq,
+    Value<String>? json,
+    Value<int>? rowid,
+  }) {
+    return SrsFieldEditsCompanion(
+      id: id ?? this.id,
+      profileUid: profileUid ?? this.profileUid,
+      entityKind: entityKind ?? this.entityKind,
+      entityId: entityId ?? this.entityId,
+      fieldKey: fieldKey ?? this.fieldKey,
+      writerId: writerId ?? this.writerId,
+      seq: seq ?? this.seq,
+      json: json ?? this.json,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (entityKind.present) {
+      map['entity_kind'] = Variable<String>(entityKind.value);
+    }
+    if (entityId.present) {
+      map['entity_id'] = Variable<String>(entityId.value);
+    }
+    if (fieldKey.present) {
+      map['field_key'] = Variable<String>(fieldKey.value);
+    }
+    if (writerId.present) {
+      map['writer_id'] = Variable<String>(writerId.value);
+    }
+    if (seq.present) {
+      map['seq'] = Variable<int>(seq.value);
+    }
+    if (json.present) {
+      map['json'] = Variable<String>(json.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsFieldEditsCompanion(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('entityKind: $entityKind, ')
+          ..write('entityId: $entityId, ')
+          ..write('fieldKey: $fieldKey, ')
+          ..write('writerId: $writerId, ')
+          ..write('seq: $seq, ')
+          ..write('json: $json, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $SrsReviewLogsTable extends SrsReviewLogs
+    with TableInfo<$SrsReviewLogsTable, SrsReviewLogRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsReviewLogsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _cardIdMeta = const VerificationMeta('cardId');
+  @override
+  late final GeneratedColumn<String> cardId = GeneratedColumn<String>(
+    'card_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
+  @override
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+    'kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _ratingMeta = const VerificationMeta('rating');
+  @override
+  late final GeneratedColumn<int> rating = GeneratedColumn<int>(
+    'rating',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _occurredAtMeta = const VerificationMeta(
+    'occurredAt',
+  );
+  @override
+  late final GeneratedColumn<int> occurredAt = GeneratedColumn<int>(
+    'occurred_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _reviewTypeMeta = const VerificationMeta(
+    'reviewType',
+  );
+  @override
+  late final GeneratedColumn<String> reviewType = GeneratedColumn<String>(
+    'review_type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _originMeta = const VerificationMeta('origin');
+  @override
+  late final GeneratedColumn<String> origin = GeneratedColumn<String>(
+    'origin',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _durationMsMeta = const VerificationMeta(
+    'durationMs',
+  );
+  @override
+  late final GeneratedColumn<int> durationMs = GeneratedColumn<int>(
+    'duration_ms',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _jsonMeta = const VerificationMeta('json');
+  @override
+  late final GeneratedColumn<String> json = GeneratedColumn<String>(
+    'json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    profileUid,
+    cardId,
+    kind,
+    rating,
+    occurredAt,
+    reviewType,
+    origin,
+    durationMs,
+    json,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_review_logs';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsReviewLogRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('card_id')) {
+      context.handle(
+        _cardIdMeta,
+        cardId.isAcceptableOrUnknown(data['card_id']!, _cardIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_cardIdMeta);
+    }
+    if (data.containsKey('kind')) {
+      context.handle(
+        _kindMeta,
+        kind.isAcceptableOrUnknown(data['kind']!, _kindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kindMeta);
+    }
+    if (data.containsKey('rating')) {
+      context.handle(
+        _ratingMeta,
+        rating.isAcceptableOrUnknown(data['rating']!, _ratingMeta),
+      );
+    }
+    if (data.containsKey('occurred_at')) {
+      context.handle(
+        _occurredAtMeta,
+        occurredAt.isAcceptableOrUnknown(data['occurred_at']!, _occurredAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_occurredAtMeta);
+    }
+    if (data.containsKey('review_type')) {
+      context.handle(
+        _reviewTypeMeta,
+        reviewType.isAcceptableOrUnknown(data['review_type']!, _reviewTypeMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_reviewTypeMeta);
+    }
+    if (data.containsKey('origin')) {
+      context.handle(
+        _originMeta,
+        origin.isAcceptableOrUnknown(data['origin']!, _originMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_originMeta);
+    }
+    if (data.containsKey('duration_ms')) {
+      context.handle(
+        _durationMsMeta,
+        durationMs.isAcceptableOrUnknown(data['duration_ms']!, _durationMsMeta),
+      );
+    }
+    if (data.containsKey('json')) {
+      context.handle(
+        _jsonMeta,
+        json.isAcceptableOrUnknown(data['json']!, _jsonMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_jsonMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  SrsReviewLogRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsReviewLogRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      cardId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}card_id'],
+      )!,
+      kind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kind'],
+      )!,
+      rating: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}rating'],
+      ),
+      occurredAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}occurred_at'],
+      )!,
+      reviewType: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}review_type'],
+      )!,
+      origin: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}origin'],
+      )!,
+      durationMs: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}duration_ms'],
+      )!,
+      json: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}json'],
+      )!,
+    );
+  }
+
+  @override
+  $SrsReviewLogsTable createAlias(String alias) {
+    return $SrsReviewLogsTable(attachedDatabase, alias);
+  }
+}
+
+class SrsReviewLogRow extends DataClass implements Insertable<SrsReviewLogRow> {
+  final String id;
+  final String profileUid;
+  final String cardId;
+  final String kind;
+  final int? rating;
+  final int occurredAt;
+  final String reviewType;
+  final String origin;
+  final int durationMs;
+  final String json;
+  const SrsReviewLogRow({
+    required this.id,
+    required this.profileUid,
+    required this.cardId,
+    required this.kind,
+    this.rating,
+    required this.occurredAt,
+    required this.reviewType,
+    required this.origin,
+    required this.durationMs,
+    required this.json,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['profile_uid'] = Variable<String>(profileUid);
+    map['card_id'] = Variable<String>(cardId);
+    map['kind'] = Variable<String>(kind);
+    if (!nullToAbsent || rating != null) {
+      map['rating'] = Variable<int>(rating);
+    }
+    map['occurred_at'] = Variable<int>(occurredAt);
+    map['review_type'] = Variable<String>(reviewType);
+    map['origin'] = Variable<String>(origin);
+    map['duration_ms'] = Variable<int>(durationMs);
+    map['json'] = Variable<String>(json);
+    return map;
+  }
+
+  SrsReviewLogsCompanion toCompanion(bool nullToAbsent) {
+    return SrsReviewLogsCompanion(
+      id: Value(id),
+      profileUid: Value(profileUid),
+      cardId: Value(cardId),
+      kind: Value(kind),
+      rating: rating == null && nullToAbsent
+          ? const Value.absent()
+          : Value(rating),
+      occurredAt: Value(occurredAt),
+      reviewType: Value(reviewType),
+      origin: Value(origin),
+      durationMs: Value(durationMs),
+      json: Value(json),
+    );
+  }
+
+  factory SrsReviewLogRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsReviewLogRow(
+      id: serializer.fromJson<String>(json['id']),
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      cardId: serializer.fromJson<String>(json['cardId']),
+      kind: serializer.fromJson<String>(json['kind']),
+      rating: serializer.fromJson<int?>(json['rating']),
+      occurredAt: serializer.fromJson<int>(json['occurredAt']),
+      reviewType: serializer.fromJson<String>(json['reviewType']),
+      origin: serializer.fromJson<String>(json['origin']),
+      durationMs: serializer.fromJson<int>(json['durationMs']),
+      json: serializer.fromJson<String>(json['json']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'profileUid': serializer.toJson<String>(profileUid),
+      'cardId': serializer.toJson<String>(cardId),
+      'kind': serializer.toJson<String>(kind),
+      'rating': serializer.toJson<int?>(rating),
+      'occurredAt': serializer.toJson<int>(occurredAt),
+      'reviewType': serializer.toJson<String>(reviewType),
+      'origin': serializer.toJson<String>(origin),
+      'durationMs': serializer.toJson<int>(durationMs),
+      'json': serializer.toJson<String>(json),
+    };
+  }
+
+  SrsReviewLogRow copyWith({
+    String? id,
+    String? profileUid,
+    String? cardId,
+    String? kind,
+    Value<int?> rating = const Value.absent(),
+    int? occurredAt,
+    String? reviewType,
+    String? origin,
+    int? durationMs,
+    String? json,
+  }) => SrsReviewLogRow(
+    id: id ?? this.id,
+    profileUid: profileUid ?? this.profileUid,
+    cardId: cardId ?? this.cardId,
+    kind: kind ?? this.kind,
+    rating: rating.present ? rating.value : this.rating,
+    occurredAt: occurredAt ?? this.occurredAt,
+    reviewType: reviewType ?? this.reviewType,
+    origin: origin ?? this.origin,
+    durationMs: durationMs ?? this.durationMs,
+    json: json ?? this.json,
+  );
+  SrsReviewLogRow copyWithCompanion(SrsReviewLogsCompanion data) {
+    return SrsReviewLogRow(
+      id: data.id.present ? data.id.value : this.id,
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      cardId: data.cardId.present ? data.cardId.value : this.cardId,
+      kind: data.kind.present ? data.kind.value : this.kind,
+      rating: data.rating.present ? data.rating.value : this.rating,
+      occurredAt: data.occurredAt.present
+          ? data.occurredAt.value
+          : this.occurredAt,
+      reviewType: data.reviewType.present
+          ? data.reviewType.value
+          : this.reviewType,
+      origin: data.origin.present ? data.origin.value : this.origin,
+      durationMs: data.durationMs.present
+          ? data.durationMs.value
+          : this.durationMs,
+      json: data.json.present ? data.json.value : this.json,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsReviewLogRow(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('cardId: $cardId, ')
+          ..write('kind: $kind, ')
+          ..write('rating: $rating, ')
+          ..write('occurredAt: $occurredAt, ')
+          ..write('reviewType: $reviewType, ')
+          ..write('origin: $origin, ')
+          ..write('durationMs: $durationMs, ')
+          ..write('json: $json')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    profileUid,
+    cardId,
+    kind,
+    rating,
+    occurredAt,
+    reviewType,
+    origin,
+    durationMs,
+    json,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsReviewLogRow &&
+          other.id == this.id &&
+          other.profileUid == this.profileUid &&
+          other.cardId == this.cardId &&
+          other.kind == this.kind &&
+          other.rating == this.rating &&
+          other.occurredAt == this.occurredAt &&
+          other.reviewType == this.reviewType &&
+          other.origin == this.origin &&
+          other.durationMs == this.durationMs &&
+          other.json == this.json);
+}
+
+class SrsReviewLogsCompanion extends UpdateCompanion<SrsReviewLogRow> {
+  final Value<String> id;
+  final Value<String> profileUid;
+  final Value<String> cardId;
+  final Value<String> kind;
+  final Value<int?> rating;
+  final Value<int> occurredAt;
+  final Value<String> reviewType;
+  final Value<String> origin;
+  final Value<int> durationMs;
+  final Value<String> json;
+  final Value<int> rowid;
+  const SrsReviewLogsCompanion({
+    this.id = const Value.absent(),
+    this.profileUid = const Value.absent(),
+    this.cardId = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.rating = const Value.absent(),
+    this.occurredAt = const Value.absent(),
+    this.reviewType = const Value.absent(),
+    this.origin = const Value.absent(),
+    this.durationMs = const Value.absent(),
+    this.json = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsReviewLogsCompanion.insert({
+    required String id,
+    required String profileUid,
+    required String cardId,
+    required String kind,
+    this.rating = const Value.absent(),
+    required int occurredAt,
+    required String reviewType,
+    required String origin,
+    this.durationMs = const Value.absent(),
+    required String json,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       profileUid = Value(profileUid),
+       cardId = Value(cardId),
+       kind = Value(kind),
+       occurredAt = Value(occurredAt),
+       reviewType = Value(reviewType),
+       origin = Value(origin),
+       json = Value(json);
+  static Insertable<SrsReviewLogRow> custom({
+    Expression<String>? id,
+    Expression<String>? profileUid,
+    Expression<String>? cardId,
+    Expression<String>? kind,
+    Expression<int>? rating,
+    Expression<int>? occurredAt,
+    Expression<String>? reviewType,
+    Expression<String>? origin,
+    Expression<int>? durationMs,
+    Expression<String>? json,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (cardId != null) 'card_id': cardId,
+      if (kind != null) 'kind': kind,
+      if (rating != null) 'rating': rating,
+      if (occurredAt != null) 'occurred_at': occurredAt,
+      if (reviewType != null) 'review_type': reviewType,
+      if (origin != null) 'origin': origin,
+      if (durationMs != null) 'duration_ms': durationMs,
+      if (json != null) 'json': json,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsReviewLogsCompanion copyWith({
+    Value<String>? id,
+    Value<String>? profileUid,
+    Value<String>? cardId,
+    Value<String>? kind,
+    Value<int?>? rating,
+    Value<int>? occurredAt,
+    Value<String>? reviewType,
+    Value<String>? origin,
+    Value<int>? durationMs,
+    Value<String>? json,
+    Value<int>? rowid,
+  }) {
+    return SrsReviewLogsCompanion(
+      id: id ?? this.id,
+      profileUid: profileUid ?? this.profileUid,
+      cardId: cardId ?? this.cardId,
+      kind: kind ?? this.kind,
+      rating: rating ?? this.rating,
+      occurredAt: occurredAt ?? this.occurredAt,
+      reviewType: reviewType ?? this.reviewType,
+      origin: origin ?? this.origin,
+      durationMs: durationMs ?? this.durationMs,
+      json: json ?? this.json,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (cardId.present) {
+      map['card_id'] = Variable<String>(cardId.value);
+    }
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
+    }
+    if (rating.present) {
+      map['rating'] = Variable<int>(rating.value);
+    }
+    if (occurredAt.present) {
+      map['occurred_at'] = Variable<int>(occurredAt.value);
+    }
+    if (reviewType.present) {
+      map['review_type'] = Variable<String>(reviewType.value);
+    }
+    if (origin.present) {
+      map['origin'] = Variable<String>(origin.value);
+    }
+    if (durationMs.present) {
+      map['duration_ms'] = Variable<int>(durationMs.value);
+    }
+    if (json.present) {
+      map['json'] = Variable<String>(json.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsReviewLogsCompanion(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('cardId: $cardId, ')
+          ..write('kind: $kind, ')
+          ..write('rating: $rating, ')
+          ..write('occurredAt: $occurredAt, ')
+          ..write('reviewType: $reviewType, ')
+          ..write('origin: $origin, ')
+          ..write('durationMs: $durationMs, ')
+          ..write('json: $json, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $SrsUnknownEventsTable extends SrsUnknownEvents
+    with TableInfo<$SrsUnknownEventsTable, SrsUnknownEventRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsUnknownEventsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _jsonMeta = const VerificationMeta('json');
+  @override
+  late final GeneratedColumn<String> json = GeneratedColumn<String>(
+    'json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [id, profileUid, json];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_unknown_events';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsUnknownEventRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('json')) {
+      context.handle(
+        _jsonMeta,
+        json.isAcceptableOrUnknown(data['json']!, _jsonMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_jsonMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  SrsUnknownEventRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsUnknownEventRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      json: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}json'],
+      )!,
+    );
+  }
+
+  @override
+  $SrsUnknownEventsTable createAlias(String alias) {
+    return $SrsUnknownEventsTable(attachedDatabase, alias);
+  }
+}
+
+class SrsUnknownEventRow extends DataClass
+    implements Insertable<SrsUnknownEventRow> {
+  final String id;
+  final String profileUid;
+  final String json;
+  const SrsUnknownEventRow({
+    required this.id,
+    required this.profileUid,
+    required this.json,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['profile_uid'] = Variable<String>(profileUid);
+    map['json'] = Variable<String>(json);
+    return map;
+  }
+
+  SrsUnknownEventsCompanion toCompanion(bool nullToAbsent) {
+    return SrsUnknownEventsCompanion(
+      id: Value(id),
+      profileUid: Value(profileUid),
+      json: Value(json),
+    );
+  }
+
+  factory SrsUnknownEventRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsUnknownEventRow(
+      id: serializer.fromJson<String>(json['id']),
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      json: serializer.fromJson<String>(json['json']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'profileUid': serializer.toJson<String>(profileUid),
+      'json': serializer.toJson<String>(json),
+    };
+  }
+
+  SrsUnknownEventRow copyWith({String? id, String? profileUid, String? json}) =>
+      SrsUnknownEventRow(
+        id: id ?? this.id,
+        profileUid: profileUid ?? this.profileUid,
+        json: json ?? this.json,
+      );
+  SrsUnknownEventRow copyWithCompanion(SrsUnknownEventsCompanion data) {
+    return SrsUnknownEventRow(
+      id: data.id.present ? data.id.value : this.id,
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      json: data.json.present ? data.json.value : this.json,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsUnknownEventRow(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('json: $json')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, profileUid, json);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsUnknownEventRow &&
+          other.id == this.id &&
+          other.profileUid == this.profileUid &&
+          other.json == this.json);
+}
+
+class SrsUnknownEventsCompanion extends UpdateCompanion<SrsUnknownEventRow> {
+  final Value<String> id;
+  final Value<String> profileUid;
+  final Value<String> json;
+  final Value<int> rowid;
+  const SrsUnknownEventsCompanion({
+    this.id = const Value.absent(),
+    this.profileUid = const Value.absent(),
+    this.json = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsUnknownEventsCompanion.insert({
+    required String id,
+    required String profileUid,
+    required String json,
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       profileUid = Value(profileUid),
+       json = Value(json);
+  static Insertable<SrsUnknownEventRow> custom({
+    Expression<String>? id,
+    Expression<String>? profileUid,
+    Expression<String>? json,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (json != null) 'json': json,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsUnknownEventsCompanion copyWith({
+    Value<String>? id,
+    Value<String>? profileUid,
+    Value<String>? json,
+    Value<int>? rowid,
+  }) {
+    return SrsUnknownEventsCompanion(
+      id: id ?? this.id,
+      profileUid: profileUid ?? this.profileUid,
+      json: json ?? this.json,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (json.present) {
+      map['json'] = Variable<String>(json.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsUnknownEventsCompanion(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('json: $json, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $SrsEventLocalTable extends SrsEventLocal
+    with TableInfo<$SrsEventLocalTable, SrsEventLocalRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsEventLocalTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _eventIdMeta = const VerificationMeta(
+    'eventId',
+  );
+  @override
+  late final GeneratedColumn<String> eventId = GeneratedColumn<String>(
+    'event_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _outboxSeqMeta = const VerificationMeta(
+    'outboxSeq',
+  );
+  @override
+  late final GeneratedColumn<int> outboxSeq = GeneratedColumn<int>(
+    'outbox_seq',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _serverTimeMeta = const VerificationMeta(
+    'serverTime',
+  );
+  @override
+  late final GeneratedColumn<int> serverTime = GeneratedColumn<int>(
+    'server_time',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _receivedAtMeta = const VerificationMeta(
+    'receivedAt',
+  );
+  @override
+  late final GeneratedColumn<int> receivedAt = GeneratedColumn<int>(
+    'received_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    eventId,
+    profileUid,
+    outboxSeq,
+    serverTime,
+    receivedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_event_local';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsEventLocalRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('event_id')) {
+      context.handle(
+        _eventIdMeta,
+        eventId.isAcceptableOrUnknown(data['event_id']!, _eventIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_eventIdMeta);
+    }
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('outbox_seq')) {
+      context.handle(
+        _outboxSeqMeta,
+        outboxSeq.isAcceptableOrUnknown(data['outbox_seq']!, _outboxSeqMeta),
+      );
+    }
+    if (data.containsKey('server_time')) {
+      context.handle(
+        _serverTimeMeta,
+        serverTime.isAcceptableOrUnknown(data['server_time']!, _serverTimeMeta),
+      );
+    }
+    if (data.containsKey('received_at')) {
+      context.handle(
+        _receivedAtMeta,
+        receivedAt.isAcceptableOrUnknown(data['received_at']!, _receivedAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {eventId};
+  @override
+  SrsEventLocalRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsEventLocalRow(
+      eventId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}event_id'],
+      )!,
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      outboxSeq: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}outbox_seq'],
+      ),
+      serverTime: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}server_time'],
+      ),
+      receivedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}received_at'],
+      )!,
+    );
+  }
+
+  @override
+  $SrsEventLocalTable createAlias(String alias) {
+    return $SrsEventLocalTable(attachedDatabase, alias);
+  }
+}
+
+class SrsEventLocalRow extends DataClass
+    implements Insertable<SrsEventLocalRow> {
+  final String eventId;
+  final String profileUid;
+
+  /// 本机产生的事件在发件箱里的顺序；null = 对端来的或已发布。
+  final int? outboxSeq;
+
+  /// S(e)：所有已见到的、包含该事件的批次的 S 的最小值。
+  final int? serverTime;
+  final int receivedAt;
+  const SrsEventLocalRow({
+    required this.eventId,
+    required this.profileUid,
+    this.outboxSeq,
+    this.serverTime,
+    required this.receivedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['event_id'] = Variable<String>(eventId);
+    map['profile_uid'] = Variable<String>(profileUid);
+    if (!nullToAbsent || outboxSeq != null) {
+      map['outbox_seq'] = Variable<int>(outboxSeq);
+    }
+    if (!nullToAbsent || serverTime != null) {
+      map['server_time'] = Variable<int>(serverTime);
+    }
+    map['received_at'] = Variable<int>(receivedAt);
+    return map;
+  }
+
+  SrsEventLocalCompanion toCompanion(bool nullToAbsent) {
+    return SrsEventLocalCompanion(
+      eventId: Value(eventId),
+      profileUid: Value(profileUid),
+      outboxSeq: outboxSeq == null && nullToAbsent
+          ? const Value.absent()
+          : Value(outboxSeq),
+      serverTime: serverTime == null && nullToAbsent
+          ? const Value.absent()
+          : Value(serverTime),
+      receivedAt: Value(receivedAt),
+    );
+  }
+
+  factory SrsEventLocalRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsEventLocalRow(
+      eventId: serializer.fromJson<String>(json['eventId']),
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      outboxSeq: serializer.fromJson<int?>(json['outboxSeq']),
+      serverTime: serializer.fromJson<int?>(json['serverTime']),
+      receivedAt: serializer.fromJson<int>(json['receivedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'eventId': serializer.toJson<String>(eventId),
+      'profileUid': serializer.toJson<String>(profileUid),
+      'outboxSeq': serializer.toJson<int?>(outboxSeq),
+      'serverTime': serializer.toJson<int?>(serverTime),
+      'receivedAt': serializer.toJson<int>(receivedAt),
+    };
+  }
+
+  SrsEventLocalRow copyWith({
+    String? eventId,
+    String? profileUid,
+    Value<int?> outboxSeq = const Value.absent(),
+    Value<int?> serverTime = const Value.absent(),
+    int? receivedAt,
+  }) => SrsEventLocalRow(
+    eventId: eventId ?? this.eventId,
+    profileUid: profileUid ?? this.profileUid,
+    outboxSeq: outboxSeq.present ? outboxSeq.value : this.outboxSeq,
+    serverTime: serverTime.present ? serverTime.value : this.serverTime,
+    receivedAt: receivedAt ?? this.receivedAt,
+  );
+  SrsEventLocalRow copyWithCompanion(SrsEventLocalCompanion data) {
+    return SrsEventLocalRow(
+      eventId: data.eventId.present ? data.eventId.value : this.eventId,
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      outboxSeq: data.outboxSeq.present ? data.outboxSeq.value : this.outboxSeq,
+      serverTime: data.serverTime.present
+          ? data.serverTime.value
+          : this.serverTime,
+      receivedAt: data.receivedAt.present
+          ? data.receivedAt.value
+          : this.receivedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsEventLocalRow(')
+          ..write('eventId: $eventId, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('outboxSeq: $outboxSeq, ')
+          ..write('serverTime: $serverTime, ')
+          ..write('receivedAt: $receivedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(eventId, profileUid, outboxSeq, serverTime, receivedAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsEventLocalRow &&
+          other.eventId == this.eventId &&
+          other.profileUid == this.profileUid &&
+          other.outboxSeq == this.outboxSeq &&
+          other.serverTime == this.serverTime &&
+          other.receivedAt == this.receivedAt);
+}
+
+class SrsEventLocalCompanion extends UpdateCompanion<SrsEventLocalRow> {
+  final Value<String> eventId;
+  final Value<String> profileUid;
+  final Value<int?> outboxSeq;
+  final Value<int?> serverTime;
+  final Value<int> receivedAt;
+  final Value<int> rowid;
+  const SrsEventLocalCompanion({
+    this.eventId = const Value.absent(),
+    this.profileUid = const Value.absent(),
+    this.outboxSeq = const Value.absent(),
+    this.serverTime = const Value.absent(),
+    this.receivedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsEventLocalCompanion.insert({
+    required String eventId,
+    required String profileUid,
+    this.outboxSeq = const Value.absent(),
+    this.serverTime = const Value.absent(),
+    this.receivedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : eventId = Value(eventId),
+       profileUid = Value(profileUid);
+  static Insertable<SrsEventLocalRow> custom({
+    Expression<String>? eventId,
+    Expression<String>? profileUid,
+    Expression<int>? outboxSeq,
+    Expression<int>? serverTime,
+    Expression<int>? receivedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (eventId != null) 'event_id': eventId,
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (outboxSeq != null) 'outbox_seq': outboxSeq,
+      if (serverTime != null) 'server_time': serverTime,
+      if (receivedAt != null) 'received_at': receivedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsEventLocalCompanion copyWith({
+    Value<String>? eventId,
+    Value<String>? profileUid,
+    Value<int?>? outboxSeq,
+    Value<int?>? serverTime,
+    Value<int>? receivedAt,
+    Value<int>? rowid,
+  }) {
+    return SrsEventLocalCompanion(
+      eventId: eventId ?? this.eventId,
+      profileUid: profileUid ?? this.profileUid,
+      outboxSeq: outboxSeq ?? this.outboxSeq,
+      serverTime: serverTime ?? this.serverTime,
+      receivedAt: receivedAt ?? this.receivedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (eventId.present) {
+      map['event_id'] = Variable<String>(eventId.value);
+    }
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (outboxSeq.present) {
+      map['outbox_seq'] = Variable<int>(outboxSeq.value);
+    }
+    if (serverTime.present) {
+      map['server_time'] = Variable<int>(serverTime.value);
+    }
+    if (receivedAt.present) {
+      map['received_at'] = Variable<int>(receivedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsEventLocalCompanion(')
+          ..write('eventId: $eventId, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('outboxSeq: $outboxSeq, ')
+          ..write('serverTime: $serverTime, ')
+          ..write('receivedAt: $receivedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $SrsLocalStateTable extends SrsLocalState
+    with TableInfo<$SrsLocalStateTable, SrsLocalStateRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsLocalStateTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _jsonMeta = const VerificationMeta('json');
+  @override
+  late final GeneratedColumn<String> json = GeneratedColumn<String>(
+    'json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [profileUid, json];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_local_state';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsLocalStateRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('json')) {
+      context.handle(
+        _jsonMeta,
+        json.isAcceptableOrUnknown(data['json']!, _jsonMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_jsonMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {profileUid};
+  @override
+  SrsLocalStateRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsLocalStateRow(
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      json: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}json'],
+      )!,
+    );
+  }
+
+  @override
+  $SrsLocalStateTable createAlias(String alias) {
+    return $SrsLocalStateTable(attachedDatabase, alias);
+  }
+}
+
+class SrsLocalStateRow extends DataClass
+    implements Insertable<SrsLocalStateRow> {
+  final String profileUid;
+  final String json;
+  const SrsLocalStateRow({required this.profileUid, required this.json});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['profile_uid'] = Variable<String>(profileUid);
+    map['json'] = Variable<String>(json);
+    return map;
+  }
+
+  SrsLocalStateCompanion toCompanion(bool nullToAbsent) {
+    return SrsLocalStateCompanion(
+      profileUid: Value(profileUid),
+      json: Value(json),
+    );
+  }
+
+  factory SrsLocalStateRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsLocalStateRow(
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      json: serializer.fromJson<String>(json['json']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'profileUid': serializer.toJson<String>(profileUid),
+      'json': serializer.toJson<String>(json),
+    };
+  }
+
+  SrsLocalStateRow copyWith({String? profileUid, String? json}) =>
+      SrsLocalStateRow(
+        profileUid: profileUid ?? this.profileUid,
+        json: json ?? this.json,
+      );
+  SrsLocalStateRow copyWithCompanion(SrsLocalStateCompanion data) {
+    return SrsLocalStateRow(
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      json: data.json.present ? data.json.value : this.json,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsLocalStateRow(')
+          ..write('profileUid: $profileUid, ')
+          ..write('json: $json')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(profileUid, json);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsLocalStateRow &&
+          other.profileUid == this.profileUid &&
+          other.json == this.json);
+}
+
+class SrsLocalStateCompanion extends UpdateCompanion<SrsLocalStateRow> {
+  final Value<String> profileUid;
+  final Value<String> json;
+  final Value<int> rowid;
+  const SrsLocalStateCompanion({
+    this.profileUid = const Value.absent(),
+    this.json = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsLocalStateCompanion.insert({
+    required String profileUid,
+    required String json,
+    this.rowid = const Value.absent(),
+  }) : profileUid = Value(profileUid),
+       json = Value(json);
+  static Insertable<SrsLocalStateRow> custom({
+    Expression<String>? profileUid,
+    Expression<String>? json,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (json != null) 'json': json,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsLocalStateCompanion copyWith({
+    Value<String>? profileUid,
+    Value<String>? json,
+    Value<int>? rowid,
+  }) {
+    return SrsLocalStateCompanion(
+      profileUid: profileUid ?? this.profileUid,
+      json: json ?? this.json,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (json.present) {
+      map['json'] = Variable<String>(json.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsLocalStateCompanion(')
+          ..write('profileUid: $profileUid, ')
+          ..write('json: $json, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $SrsNotesCacheTable extends SrsNotesCache
+    with TableInfo<$SrsNotesCacheTable, SrsNoteCacheRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsNotesCacheTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _noteTypeIdMeta = const VerificationMeta(
+    'noteTypeId',
+  );
+  @override
+  late final GeneratedColumn<String> noteTypeId = GeneratedColumn<String>(
+    'note_type_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _guidMeta = const VerificationMeta('guid');
+  @override
+  late final GeneratedColumn<String> guid = GeneratedColumn<String>(
+    'guid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
+  @override
+  late final GeneratedColumn<int> createdAt = GeneratedColumn<int>(
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _deckIdMeta = const VerificationMeta('deckId');
+  @override
+  late final GeneratedColumn<String> deckId = GeneratedColumn<String>(
+    'deck_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _deletedAtMeta = const VerificationMeta(
+    'deletedAt',
+  );
+  @override
+  late final GeneratedColumn<int> deletedAt = GeneratedColumn<int>(
+    'deleted_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _termKeyMeta = const VerificationMeta(
+    'termKey',
+  );
+  @override
+  late final GeneratedColumn<String> termKey = GeneratedColumn<String>(
+    'term_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _readingKeyMeta = const VerificationMeta(
+    'readingKey',
+  );
+  @override
+  late final GeneratedColumn<String> readingKey = GeneratedColumn<String>(
+    'reading_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _sortFieldMeta = const VerificationMeta(
+    'sortField',
+  );
+  @override
+  late final GeneratedColumn<String> sortField = GeneratedColumn<String>(
+    'sort_field',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _tagsJsonMeta = const VerificationMeta(
+    'tagsJson',
+  );
+  @override
+  late final GeneratedColumn<String> tagsJson = GeneratedColumn<String>(
+    'tags_json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('[]'),
+  );
+  static const VerificationMeta _pendingDecisionMeta = const VerificationMeta(
+    'pendingDecision',
+  );
+  @override
+  late final GeneratedColumn<bool> pendingDecision = GeneratedColumn<bool>(
+    'pending_decision',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("pending_decision" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<int> updatedAt = GeneratedColumn<int>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    profileUid,
+    noteTypeId,
+    guid,
+    createdAt,
+    deckId,
+    deletedAt,
+    termKey,
+    readingKey,
+    sortField,
+    tagsJson,
+    pendingDecision,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_notes_cache';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsNoteCacheRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('note_type_id')) {
+      context.handle(
+        _noteTypeIdMeta,
+        noteTypeId.isAcceptableOrUnknown(
+          data['note_type_id']!,
+          _noteTypeIdMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_noteTypeIdMeta);
+    }
+    if (data.containsKey('guid')) {
+      context.handle(
+        _guidMeta,
+        guid.isAcceptableOrUnknown(data['guid']!, _guidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_guidMeta);
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_createdAtMeta);
+    }
+    if (data.containsKey('deck_id')) {
+      context.handle(
+        _deckIdMeta,
+        deckId.isAcceptableOrUnknown(data['deck_id']!, _deckIdMeta),
+      );
+    }
+    if (data.containsKey('deleted_at')) {
+      context.handle(
+        _deletedAtMeta,
+        deletedAt.isAcceptableOrUnknown(data['deleted_at']!, _deletedAtMeta),
+      );
+    }
+    if (data.containsKey('term_key')) {
+      context.handle(
+        _termKeyMeta,
+        termKey.isAcceptableOrUnknown(data['term_key']!, _termKeyMeta),
+      );
+    }
+    if (data.containsKey('reading_key')) {
+      context.handle(
+        _readingKeyMeta,
+        readingKey.isAcceptableOrUnknown(data['reading_key']!, _readingKeyMeta),
+      );
+    }
+    if (data.containsKey('sort_field')) {
+      context.handle(
+        _sortFieldMeta,
+        sortField.isAcceptableOrUnknown(data['sort_field']!, _sortFieldMeta),
+      );
+    }
+    if (data.containsKey('tags_json')) {
+      context.handle(
+        _tagsJsonMeta,
+        tagsJson.isAcceptableOrUnknown(data['tags_json']!, _tagsJsonMeta),
+      );
+    }
+    if (data.containsKey('pending_decision')) {
+      context.handle(
+        _pendingDecisionMeta,
+        pendingDecision.isAcceptableOrUnknown(
+          data['pending_decision']!,
+          _pendingDecisionMeta,
+        ),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  SrsNoteCacheRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsNoteCacheRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      noteTypeId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}note_type_id'],
+      )!,
+      guid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}guid'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}created_at'],
+      )!,
+      deckId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}deck_id'],
+      ),
+      deletedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}deleted_at'],
+      ),
+      termKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}term_key'],
+      )!,
+      readingKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}reading_key'],
+      )!,
+      sortField: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}sort_field'],
+      )!,
+      tagsJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}tags_json'],
+      )!,
+      pendingDecision: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}pending_decision'],
+      )!,
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}updated_at'],
+      )!,
+    );
+  }
+
+  @override
+  $SrsNotesCacheTable createAlias(String alias) {
+    return $SrsNotesCacheTable(attachedDatabase, alias);
+  }
+}
+
+class SrsNoteCacheRow extends DataClass implements Insertable<SrsNoteCacheRow> {
+  final String id;
+  final String profileUid;
+  final String noteTypeId;
+  final String guid;
+  final int createdAt;
+  final String? deckId;
+  final int? deletedAt;
+
+  /// 词状态索引：词形 / 读音归一化（第六轮审查第 20 条）。
+  final String termKey;
+  final String readingKey;
+
+  /// 排序 / 列表显示用的第一个字段（去 HTML）。
+  final String sortField;
+  final String tagsJson;
+  final bool pendingDecision;
+  final int updatedAt;
+  const SrsNoteCacheRow({
+    required this.id,
+    required this.profileUid,
+    required this.noteTypeId,
+    required this.guid,
+    required this.createdAt,
+    this.deckId,
+    this.deletedAt,
+    required this.termKey,
+    required this.readingKey,
+    required this.sortField,
+    required this.tagsJson,
+    required this.pendingDecision,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['profile_uid'] = Variable<String>(profileUid);
+    map['note_type_id'] = Variable<String>(noteTypeId);
+    map['guid'] = Variable<String>(guid);
+    map['created_at'] = Variable<int>(createdAt);
+    if (!nullToAbsent || deckId != null) {
+      map['deck_id'] = Variable<String>(deckId);
+    }
+    if (!nullToAbsent || deletedAt != null) {
+      map['deleted_at'] = Variable<int>(deletedAt);
+    }
+    map['term_key'] = Variable<String>(termKey);
+    map['reading_key'] = Variable<String>(readingKey);
+    map['sort_field'] = Variable<String>(sortField);
+    map['tags_json'] = Variable<String>(tagsJson);
+    map['pending_decision'] = Variable<bool>(pendingDecision);
+    map['updated_at'] = Variable<int>(updatedAt);
+    return map;
+  }
+
+  SrsNotesCacheCompanion toCompanion(bool nullToAbsent) {
+    return SrsNotesCacheCompanion(
+      id: Value(id),
+      profileUid: Value(profileUid),
+      noteTypeId: Value(noteTypeId),
+      guid: Value(guid),
+      createdAt: Value(createdAt),
+      deckId: deckId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deckId),
+      deletedAt: deletedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deletedAt),
+      termKey: Value(termKey),
+      readingKey: Value(readingKey),
+      sortField: Value(sortField),
+      tagsJson: Value(tagsJson),
+      pendingDecision: Value(pendingDecision),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory SrsNoteCacheRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsNoteCacheRow(
+      id: serializer.fromJson<String>(json['id']),
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      noteTypeId: serializer.fromJson<String>(json['noteTypeId']),
+      guid: serializer.fromJson<String>(json['guid']),
+      createdAt: serializer.fromJson<int>(json['createdAt']),
+      deckId: serializer.fromJson<String?>(json['deckId']),
+      deletedAt: serializer.fromJson<int?>(json['deletedAt']),
+      termKey: serializer.fromJson<String>(json['termKey']),
+      readingKey: serializer.fromJson<String>(json['readingKey']),
+      sortField: serializer.fromJson<String>(json['sortField']),
+      tagsJson: serializer.fromJson<String>(json['tagsJson']),
+      pendingDecision: serializer.fromJson<bool>(json['pendingDecision']),
+      updatedAt: serializer.fromJson<int>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'profileUid': serializer.toJson<String>(profileUid),
+      'noteTypeId': serializer.toJson<String>(noteTypeId),
+      'guid': serializer.toJson<String>(guid),
+      'createdAt': serializer.toJson<int>(createdAt),
+      'deckId': serializer.toJson<String?>(deckId),
+      'deletedAt': serializer.toJson<int?>(deletedAt),
+      'termKey': serializer.toJson<String>(termKey),
+      'readingKey': serializer.toJson<String>(readingKey),
+      'sortField': serializer.toJson<String>(sortField),
+      'tagsJson': serializer.toJson<String>(tagsJson),
+      'pendingDecision': serializer.toJson<bool>(pendingDecision),
+      'updatedAt': serializer.toJson<int>(updatedAt),
+    };
+  }
+
+  SrsNoteCacheRow copyWith({
+    String? id,
+    String? profileUid,
+    String? noteTypeId,
+    String? guid,
+    int? createdAt,
+    Value<String?> deckId = const Value.absent(),
+    Value<int?> deletedAt = const Value.absent(),
+    String? termKey,
+    String? readingKey,
+    String? sortField,
+    String? tagsJson,
+    bool? pendingDecision,
+    int? updatedAt,
+  }) => SrsNoteCacheRow(
+    id: id ?? this.id,
+    profileUid: profileUid ?? this.profileUid,
+    noteTypeId: noteTypeId ?? this.noteTypeId,
+    guid: guid ?? this.guid,
+    createdAt: createdAt ?? this.createdAt,
+    deckId: deckId.present ? deckId.value : this.deckId,
+    deletedAt: deletedAt.present ? deletedAt.value : this.deletedAt,
+    termKey: termKey ?? this.termKey,
+    readingKey: readingKey ?? this.readingKey,
+    sortField: sortField ?? this.sortField,
+    tagsJson: tagsJson ?? this.tagsJson,
+    pendingDecision: pendingDecision ?? this.pendingDecision,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  SrsNoteCacheRow copyWithCompanion(SrsNotesCacheCompanion data) {
+    return SrsNoteCacheRow(
+      id: data.id.present ? data.id.value : this.id,
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      noteTypeId: data.noteTypeId.present
+          ? data.noteTypeId.value
+          : this.noteTypeId,
+      guid: data.guid.present ? data.guid.value : this.guid,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      deckId: data.deckId.present ? data.deckId.value : this.deckId,
+      deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
+      termKey: data.termKey.present ? data.termKey.value : this.termKey,
+      readingKey: data.readingKey.present
+          ? data.readingKey.value
+          : this.readingKey,
+      sortField: data.sortField.present ? data.sortField.value : this.sortField,
+      tagsJson: data.tagsJson.present ? data.tagsJson.value : this.tagsJson,
+      pendingDecision: data.pendingDecision.present
+          ? data.pendingDecision.value
+          : this.pendingDecision,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsNoteCacheRow(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('noteTypeId: $noteTypeId, ')
+          ..write('guid: $guid, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('deckId: $deckId, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('termKey: $termKey, ')
+          ..write('readingKey: $readingKey, ')
+          ..write('sortField: $sortField, ')
+          ..write('tagsJson: $tagsJson, ')
+          ..write('pendingDecision: $pendingDecision, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    profileUid,
+    noteTypeId,
+    guid,
+    createdAt,
+    deckId,
+    deletedAt,
+    termKey,
+    readingKey,
+    sortField,
+    tagsJson,
+    pendingDecision,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsNoteCacheRow &&
+          other.id == this.id &&
+          other.profileUid == this.profileUid &&
+          other.noteTypeId == this.noteTypeId &&
+          other.guid == this.guid &&
+          other.createdAt == this.createdAt &&
+          other.deckId == this.deckId &&
+          other.deletedAt == this.deletedAt &&
+          other.termKey == this.termKey &&
+          other.readingKey == this.readingKey &&
+          other.sortField == this.sortField &&
+          other.tagsJson == this.tagsJson &&
+          other.pendingDecision == this.pendingDecision &&
+          other.updatedAt == this.updatedAt);
+}
+
+class SrsNotesCacheCompanion extends UpdateCompanion<SrsNoteCacheRow> {
+  final Value<String> id;
+  final Value<String> profileUid;
+  final Value<String> noteTypeId;
+  final Value<String> guid;
+  final Value<int> createdAt;
+  final Value<String?> deckId;
+  final Value<int?> deletedAt;
+  final Value<String> termKey;
+  final Value<String> readingKey;
+  final Value<String> sortField;
+  final Value<String> tagsJson;
+  final Value<bool> pendingDecision;
+  final Value<int> updatedAt;
+  final Value<int> rowid;
+  const SrsNotesCacheCompanion({
+    this.id = const Value.absent(),
+    this.profileUid = const Value.absent(),
+    this.noteTypeId = const Value.absent(),
+    this.guid = const Value.absent(),
+    this.createdAt = const Value.absent(),
+    this.deckId = const Value.absent(),
+    this.deletedAt = const Value.absent(),
+    this.termKey = const Value.absent(),
+    this.readingKey = const Value.absent(),
+    this.sortField = const Value.absent(),
+    this.tagsJson = const Value.absent(),
+    this.pendingDecision = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsNotesCacheCompanion.insert({
+    required String id,
+    required String profileUid,
+    required String noteTypeId,
+    required String guid,
+    required int createdAt,
+    this.deckId = const Value.absent(),
+    this.deletedAt = const Value.absent(),
+    this.termKey = const Value.absent(),
+    this.readingKey = const Value.absent(),
+    this.sortField = const Value.absent(),
+    this.tagsJson = const Value.absent(),
+    this.pendingDecision = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       profileUid = Value(profileUid),
+       noteTypeId = Value(noteTypeId),
+       guid = Value(guid),
+       createdAt = Value(createdAt);
+  static Insertable<SrsNoteCacheRow> custom({
+    Expression<String>? id,
+    Expression<String>? profileUid,
+    Expression<String>? noteTypeId,
+    Expression<String>? guid,
+    Expression<int>? createdAt,
+    Expression<String>? deckId,
+    Expression<int>? deletedAt,
+    Expression<String>? termKey,
+    Expression<String>? readingKey,
+    Expression<String>? sortField,
+    Expression<String>? tagsJson,
+    Expression<bool>? pendingDecision,
+    Expression<int>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (noteTypeId != null) 'note_type_id': noteTypeId,
+      if (guid != null) 'guid': guid,
+      if (createdAt != null) 'created_at': createdAt,
+      if (deckId != null) 'deck_id': deckId,
+      if (deletedAt != null) 'deleted_at': deletedAt,
+      if (termKey != null) 'term_key': termKey,
+      if (readingKey != null) 'reading_key': readingKey,
+      if (sortField != null) 'sort_field': sortField,
+      if (tagsJson != null) 'tags_json': tagsJson,
+      if (pendingDecision != null) 'pending_decision': pendingDecision,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsNotesCacheCompanion copyWith({
+    Value<String>? id,
+    Value<String>? profileUid,
+    Value<String>? noteTypeId,
+    Value<String>? guid,
+    Value<int>? createdAt,
+    Value<String?>? deckId,
+    Value<int?>? deletedAt,
+    Value<String>? termKey,
+    Value<String>? readingKey,
+    Value<String>? sortField,
+    Value<String>? tagsJson,
+    Value<bool>? pendingDecision,
+    Value<int>? updatedAt,
+    Value<int>? rowid,
+  }) {
+    return SrsNotesCacheCompanion(
+      id: id ?? this.id,
+      profileUid: profileUid ?? this.profileUid,
+      noteTypeId: noteTypeId ?? this.noteTypeId,
+      guid: guid ?? this.guid,
+      createdAt: createdAt ?? this.createdAt,
+      deckId: deckId ?? this.deckId,
+      deletedAt: deletedAt ?? this.deletedAt,
+      termKey: termKey ?? this.termKey,
+      readingKey: readingKey ?? this.readingKey,
+      sortField: sortField ?? this.sortField,
+      tagsJson: tagsJson ?? this.tagsJson,
+      pendingDecision: pendingDecision ?? this.pendingDecision,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (noteTypeId.present) {
+      map['note_type_id'] = Variable<String>(noteTypeId.value);
+    }
+    if (guid.present) {
+      map['guid'] = Variable<String>(guid.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<int>(createdAt.value);
+    }
+    if (deckId.present) {
+      map['deck_id'] = Variable<String>(deckId.value);
+    }
+    if (deletedAt.present) {
+      map['deleted_at'] = Variable<int>(deletedAt.value);
+    }
+    if (termKey.present) {
+      map['term_key'] = Variable<String>(termKey.value);
+    }
+    if (readingKey.present) {
+      map['reading_key'] = Variable<String>(readingKey.value);
+    }
+    if (sortField.present) {
+      map['sort_field'] = Variable<String>(sortField.value);
+    }
+    if (tagsJson.present) {
+      map['tags_json'] = Variable<String>(tagsJson.value);
+    }
+    if (pendingDecision.present) {
+      map['pending_decision'] = Variable<bool>(pendingDecision.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<int>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsNotesCacheCompanion(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('noteTypeId: $noteTypeId, ')
+          ..write('guid: $guid, ')
+          ..write('createdAt: $createdAt, ')
+          ..write('deckId: $deckId, ')
+          ..write('deletedAt: $deletedAt, ')
+          ..write('termKey: $termKey, ')
+          ..write('readingKey: $readingKey, ')
+          ..write('sortField: $sortField, ')
+          ..write('tagsJson: $tagsJson, ')
+          ..write('pendingDecision: $pendingDecision, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $SrsCardsCacheTable extends SrsCardsCache
+    with TableInfo<$SrsCardsCacheTable, SrsCardCacheRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsCardsCacheTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<String> id = GeneratedColumn<String>(
+    'id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _noteIdMeta = const VerificationMeta('noteId');
+  @override
+  late final GeneratedColumn<String> noteId = GeneratedColumn<String>(
+    'note_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _templateIdMeta = const VerificationMeta(
+    'templateId',
+  );
+  @override
+  late final GeneratedColumn<String> templateId = GeneratedColumn<String>(
+    'template_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _clozeOrdMeta = const VerificationMeta(
+    'clozeOrd',
+  );
+  @override
+  late final GeneratedColumn<int> clozeOrd = GeneratedColumn<int>(
+    'cloze_ord',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _deckIdMeta = const VerificationMeta('deckId');
+  @override
+  late final GeneratedColumn<String> deckId = GeneratedColumn<String>(
+    'deck_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _suspendedMeta = const VerificationMeta(
+    'suspended',
+  );
+  @override
+  late final GeneratedColumn<bool> suspended = GeneratedColumn<bool>(
+    'suspended',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("suspended" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _buriedUntilDayMeta = const VerificationMeta(
+    'buriedUntilDay',
+  );
+  @override
+  late final GeneratedColumn<int> buriedUntilDay = GeneratedColumn<int>(
+    'buried_until_day',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _flagMeta = const VerificationMeta('flag');
+  @override
+  late final GeneratedColumn<int> flag = GeneratedColumn<int>(
+    'flag',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _hiddenMeta = const VerificationMeta('hidden');
+  @override
+  late final GeneratedColumn<bool> hidden = GeneratedColumn<bool>(
+    'hidden',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("hidden" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
+  static const VerificationMeta _queueMeta = const VerificationMeta('queue');
+  @override
+  late final GeneratedColumn<String> queue = GeneratedColumn<String>(
+    'queue',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('new'),
+  );
+  static const VerificationMeta _dueDayMeta = const VerificationMeta('dueDay');
+  @override
+  late final GeneratedColumn<int> dueDay = GeneratedColumn<int>(
+    'due_day',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _dueAtMeta = const VerificationMeta('dueAt');
+  @override
+  late final GeneratedColumn<int> dueAt = GeneratedColumn<int>(
+    'due_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _scheduledDaysMeta = const VerificationMeta(
+    'scheduledDays',
+  );
+  @override
+  late final GeneratedColumn<int> scheduledDays = GeneratedColumn<int>(
+    'scheduled_days',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _repsMeta = const VerificationMeta('reps');
+  @override
+  late final GeneratedColumn<int> reps = GeneratedColumn<int>(
+    'reps',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _lapsesMeta = const VerificationMeta('lapses');
+  @override
+  late final GeneratedColumn<int> lapses = GeneratedColumn<int>(
+    'lapses',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _stabilityMeta = const VerificationMeta(
+    'stability',
+  );
+  @override
+  late final GeneratedColumn<double> stability = GeneratedColumn<double>(
+    'stability',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _difficultyMeta = const VerificationMeta(
+    'difficulty',
+  );
+  @override
+  late final GeneratedColumn<double> difficulty = GeneratedColumn<double>(
+    'difficulty',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _lastReviewedAtMeta = const VerificationMeta(
+    'lastReviewedAt',
+  );
+  @override
+  late final GeneratedColumn<int> lastReviewedAt = GeneratedColumn<int>(
+    'last_reviewed_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _lastLogIdMeta = const VerificationMeta(
+    'lastLogId',
+  );
+  @override
+  late final GeneratedColumn<String> lastLogId = GeneratedColumn<String>(
+    'last_log_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _schedulerMeta = const VerificationMeta(
+    'scheduler',
+  );
+  @override
+  late final GeneratedColumn<String> scheduler = GeneratedColumn<String>(
+    'scheduler',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('fushi'),
+  );
+  static const VerificationMeta _noteCreatedAtMeta = const VerificationMeta(
+    'noteCreatedAt',
+  );
+  @override
+  late final GeneratedColumn<int> noteCreatedAt = GeneratedColumn<int>(
+    'note_created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _newPositionMeta = const VerificationMeta(
+    'newPosition',
+  );
+  @override
+  late final GeneratedColumn<int> newPosition = GeneratedColumn<int>(
+    'new_position',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    profileUid,
+    noteId,
+    templateId,
+    clozeOrd,
+    deckId,
+    suspended,
+    buriedUntilDay,
+    flag,
+    hidden,
+    queue,
+    dueDay,
+    dueAt,
+    scheduledDays,
+    reps,
+    lapses,
+    stability,
+    difficulty,
+    lastReviewedAt,
+    lastLogId,
+    scheduler,
+    noteCreatedAt,
+    newPosition,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_cards_cache';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsCardCacheRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    } else if (isInserting) {
+      context.missing(_idMeta);
+    }
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('note_id')) {
+      context.handle(
+        _noteIdMeta,
+        noteId.isAcceptableOrUnknown(data['note_id']!, _noteIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_noteIdMeta);
+    }
+    if (data.containsKey('template_id')) {
+      context.handle(
+        _templateIdMeta,
+        templateId.isAcceptableOrUnknown(data['template_id']!, _templateIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_templateIdMeta);
+    }
+    if (data.containsKey('cloze_ord')) {
+      context.handle(
+        _clozeOrdMeta,
+        clozeOrd.isAcceptableOrUnknown(data['cloze_ord']!, _clozeOrdMeta),
+      );
+    }
+    if (data.containsKey('deck_id')) {
+      context.handle(
+        _deckIdMeta,
+        deckId.isAcceptableOrUnknown(data['deck_id']!, _deckIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_deckIdMeta);
+    }
+    if (data.containsKey('suspended')) {
+      context.handle(
+        _suspendedMeta,
+        suspended.isAcceptableOrUnknown(data['suspended']!, _suspendedMeta),
+      );
+    }
+    if (data.containsKey('buried_until_day')) {
+      context.handle(
+        _buriedUntilDayMeta,
+        buriedUntilDay.isAcceptableOrUnknown(
+          data['buried_until_day']!,
+          _buriedUntilDayMeta,
+        ),
+      );
+    }
+    if (data.containsKey('flag')) {
+      context.handle(
+        _flagMeta,
+        flag.isAcceptableOrUnknown(data['flag']!, _flagMeta),
+      );
+    }
+    if (data.containsKey('hidden')) {
+      context.handle(
+        _hiddenMeta,
+        hidden.isAcceptableOrUnknown(data['hidden']!, _hiddenMeta),
+      );
+    }
+    if (data.containsKey('queue')) {
+      context.handle(
+        _queueMeta,
+        queue.isAcceptableOrUnknown(data['queue']!, _queueMeta),
+      );
+    }
+    if (data.containsKey('due_day')) {
+      context.handle(
+        _dueDayMeta,
+        dueDay.isAcceptableOrUnknown(data['due_day']!, _dueDayMeta),
+      );
+    }
+    if (data.containsKey('due_at')) {
+      context.handle(
+        _dueAtMeta,
+        dueAt.isAcceptableOrUnknown(data['due_at']!, _dueAtMeta),
+      );
+    }
+    if (data.containsKey('scheduled_days')) {
+      context.handle(
+        _scheduledDaysMeta,
+        scheduledDays.isAcceptableOrUnknown(
+          data['scheduled_days']!,
+          _scheduledDaysMeta,
+        ),
+      );
+    }
+    if (data.containsKey('reps')) {
+      context.handle(
+        _repsMeta,
+        reps.isAcceptableOrUnknown(data['reps']!, _repsMeta),
+      );
+    }
+    if (data.containsKey('lapses')) {
+      context.handle(
+        _lapsesMeta,
+        lapses.isAcceptableOrUnknown(data['lapses']!, _lapsesMeta),
+      );
+    }
+    if (data.containsKey('stability')) {
+      context.handle(
+        _stabilityMeta,
+        stability.isAcceptableOrUnknown(data['stability']!, _stabilityMeta),
+      );
+    }
+    if (data.containsKey('difficulty')) {
+      context.handle(
+        _difficultyMeta,
+        difficulty.isAcceptableOrUnknown(data['difficulty']!, _difficultyMeta),
+      );
+    }
+    if (data.containsKey('last_reviewed_at')) {
+      context.handle(
+        _lastReviewedAtMeta,
+        lastReviewedAt.isAcceptableOrUnknown(
+          data['last_reviewed_at']!,
+          _lastReviewedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('last_log_id')) {
+      context.handle(
+        _lastLogIdMeta,
+        lastLogId.isAcceptableOrUnknown(data['last_log_id']!, _lastLogIdMeta),
+      );
+    }
+    if (data.containsKey('scheduler')) {
+      context.handle(
+        _schedulerMeta,
+        scheduler.isAcceptableOrUnknown(data['scheduler']!, _schedulerMeta),
+      );
+    }
+    if (data.containsKey('note_created_at')) {
+      context.handle(
+        _noteCreatedAtMeta,
+        noteCreatedAt.isAcceptableOrUnknown(
+          data['note_created_at']!,
+          _noteCreatedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('new_position')) {
+      context.handle(
+        _newPositionMeta,
+        newPosition.isAcceptableOrUnknown(
+          data['new_position']!,
+          _newPositionMeta,
+        ),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  SrsCardCacheRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsCardCacheRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}id'],
+      )!,
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      noteId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}note_id'],
+      )!,
+      templateId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}template_id'],
+      )!,
+      clozeOrd: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}cloze_ord'],
+      )!,
+      deckId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}deck_id'],
+      )!,
+      suspended: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}suspended'],
+      )!,
+      buriedUntilDay: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}buried_until_day'],
+      ),
+      flag: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}flag'],
+      )!,
+      hidden: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}hidden'],
+      )!,
+      queue: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}queue'],
+      )!,
+      dueDay: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}due_day'],
+      ),
+      dueAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}due_at'],
+      ),
+      scheduledDays: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}scheduled_days'],
+      )!,
+      reps: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}reps'],
+      )!,
+      lapses: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}lapses'],
+      )!,
+      stability: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}stability'],
+      ),
+      difficulty: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}difficulty'],
+      ),
+      lastReviewedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}last_reviewed_at'],
+      ),
+      lastLogId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}last_log_id'],
+      ),
+      scheduler: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}scheduler'],
+      )!,
+      noteCreatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}note_created_at'],
+      )!,
+      newPosition: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}new_position'],
+      ),
+    );
+  }
+
+  @override
+  $SrsCardsCacheTable createAlias(String alias) {
+    return $SrsCardsCacheTable(attachedDatabase, alias);
+  }
+}
+
+class SrsCardCacheRow extends DataClass implements Insertable<SrsCardCacheRow> {
+  final String id;
+  final String profileUid;
+  final String noteId;
+  final String templateId;
+  final int clozeOrd;
+  final String deckId;
+  final bool suspended;
+  final int? buriedUntilDay;
+  final int flag;
+
+  /// 生成门（铁律 D，第六轮审查第 13 条）：笔记已删 / 模板已删 / 条件模板为空 / cN 已删时为真，
+  /// 查询层据此不显示、不进队列，不写任何同步行。
+  final bool hidden;
+  final String queue;
+  final int? dueDay;
+  final int? dueAt;
+  final int scheduledDays;
+  final int reps;
+  final int lapses;
+  final double? stability;
+  final double? difficulty;
+  final int? lastReviewedAt;
+  final String? lastLogId;
+  final String scheduler;
+
+  /// 新卡出卡顺序的兜底键（笔记 createdAt, cardId）：没有 [newPosition] 的新卡按它排。
+  final int noteCreatedAt;
+
+  /// v123：新卡在出卡队列里的位置（卡片修改记录 `newPos` 的生效值，「按词频重排新卡」
+  /// 写它）。NULL = 从没排过：有位置的新卡先出（位置升序），没位置的排在后面并保持
+  /// 原有的（笔记 createdAt, cardId）顺序——老数据出卡顺序不变。
+  final int? newPosition;
+  const SrsCardCacheRow({
+    required this.id,
+    required this.profileUid,
+    required this.noteId,
+    required this.templateId,
+    required this.clozeOrd,
+    required this.deckId,
+    required this.suspended,
+    this.buriedUntilDay,
+    required this.flag,
+    required this.hidden,
+    required this.queue,
+    this.dueDay,
+    this.dueAt,
+    required this.scheduledDays,
+    required this.reps,
+    required this.lapses,
+    this.stability,
+    this.difficulty,
+    this.lastReviewedAt,
+    this.lastLogId,
+    required this.scheduler,
+    required this.noteCreatedAt,
+    this.newPosition,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<String>(id);
+    map['profile_uid'] = Variable<String>(profileUid);
+    map['note_id'] = Variable<String>(noteId);
+    map['template_id'] = Variable<String>(templateId);
+    map['cloze_ord'] = Variable<int>(clozeOrd);
+    map['deck_id'] = Variable<String>(deckId);
+    map['suspended'] = Variable<bool>(suspended);
+    if (!nullToAbsent || buriedUntilDay != null) {
+      map['buried_until_day'] = Variable<int>(buriedUntilDay);
+    }
+    map['flag'] = Variable<int>(flag);
+    map['hidden'] = Variable<bool>(hidden);
+    map['queue'] = Variable<String>(queue);
+    if (!nullToAbsent || dueDay != null) {
+      map['due_day'] = Variable<int>(dueDay);
+    }
+    if (!nullToAbsent || dueAt != null) {
+      map['due_at'] = Variable<int>(dueAt);
+    }
+    map['scheduled_days'] = Variable<int>(scheduledDays);
+    map['reps'] = Variable<int>(reps);
+    map['lapses'] = Variable<int>(lapses);
+    if (!nullToAbsent || stability != null) {
+      map['stability'] = Variable<double>(stability);
+    }
+    if (!nullToAbsent || difficulty != null) {
+      map['difficulty'] = Variable<double>(difficulty);
+    }
+    if (!nullToAbsent || lastReviewedAt != null) {
+      map['last_reviewed_at'] = Variable<int>(lastReviewedAt);
+    }
+    if (!nullToAbsent || lastLogId != null) {
+      map['last_log_id'] = Variable<String>(lastLogId);
+    }
+    map['scheduler'] = Variable<String>(scheduler);
+    map['note_created_at'] = Variable<int>(noteCreatedAt);
+    if (!nullToAbsent || newPosition != null) {
+      map['new_position'] = Variable<int>(newPosition);
+    }
+    return map;
+  }
+
+  SrsCardsCacheCompanion toCompanion(bool nullToAbsent) {
+    return SrsCardsCacheCompanion(
+      id: Value(id),
+      profileUid: Value(profileUid),
+      noteId: Value(noteId),
+      templateId: Value(templateId),
+      clozeOrd: Value(clozeOrd),
+      deckId: Value(deckId),
+      suspended: Value(suspended),
+      buriedUntilDay: buriedUntilDay == null && nullToAbsent
+          ? const Value.absent()
+          : Value(buriedUntilDay),
+      flag: Value(flag),
+      hidden: Value(hidden),
+      queue: Value(queue),
+      dueDay: dueDay == null && nullToAbsent
+          ? const Value.absent()
+          : Value(dueDay),
+      dueAt: dueAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(dueAt),
+      scheduledDays: Value(scheduledDays),
+      reps: Value(reps),
+      lapses: Value(lapses),
+      stability: stability == null && nullToAbsent
+          ? const Value.absent()
+          : Value(stability),
+      difficulty: difficulty == null && nullToAbsent
+          ? const Value.absent()
+          : Value(difficulty),
+      lastReviewedAt: lastReviewedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastReviewedAt),
+      lastLogId: lastLogId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(lastLogId),
+      scheduler: Value(scheduler),
+      noteCreatedAt: Value(noteCreatedAt),
+      newPosition: newPosition == null && nullToAbsent
+          ? const Value.absent()
+          : Value(newPosition),
+    );
+  }
+
+  factory SrsCardCacheRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsCardCacheRow(
+      id: serializer.fromJson<String>(json['id']),
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      noteId: serializer.fromJson<String>(json['noteId']),
+      templateId: serializer.fromJson<String>(json['templateId']),
+      clozeOrd: serializer.fromJson<int>(json['clozeOrd']),
+      deckId: serializer.fromJson<String>(json['deckId']),
+      suspended: serializer.fromJson<bool>(json['suspended']),
+      buriedUntilDay: serializer.fromJson<int?>(json['buriedUntilDay']),
+      flag: serializer.fromJson<int>(json['flag']),
+      hidden: serializer.fromJson<bool>(json['hidden']),
+      queue: serializer.fromJson<String>(json['queue']),
+      dueDay: serializer.fromJson<int?>(json['dueDay']),
+      dueAt: serializer.fromJson<int?>(json['dueAt']),
+      scheduledDays: serializer.fromJson<int>(json['scheduledDays']),
+      reps: serializer.fromJson<int>(json['reps']),
+      lapses: serializer.fromJson<int>(json['lapses']),
+      stability: serializer.fromJson<double?>(json['stability']),
+      difficulty: serializer.fromJson<double?>(json['difficulty']),
+      lastReviewedAt: serializer.fromJson<int?>(json['lastReviewedAt']),
+      lastLogId: serializer.fromJson<String?>(json['lastLogId']),
+      scheduler: serializer.fromJson<String>(json['scheduler']),
+      noteCreatedAt: serializer.fromJson<int>(json['noteCreatedAt']),
+      newPosition: serializer.fromJson<int?>(json['newPosition']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<String>(id),
+      'profileUid': serializer.toJson<String>(profileUid),
+      'noteId': serializer.toJson<String>(noteId),
+      'templateId': serializer.toJson<String>(templateId),
+      'clozeOrd': serializer.toJson<int>(clozeOrd),
+      'deckId': serializer.toJson<String>(deckId),
+      'suspended': serializer.toJson<bool>(suspended),
+      'buriedUntilDay': serializer.toJson<int?>(buriedUntilDay),
+      'flag': serializer.toJson<int>(flag),
+      'hidden': serializer.toJson<bool>(hidden),
+      'queue': serializer.toJson<String>(queue),
+      'dueDay': serializer.toJson<int?>(dueDay),
+      'dueAt': serializer.toJson<int?>(dueAt),
+      'scheduledDays': serializer.toJson<int>(scheduledDays),
+      'reps': serializer.toJson<int>(reps),
+      'lapses': serializer.toJson<int>(lapses),
+      'stability': serializer.toJson<double?>(stability),
+      'difficulty': serializer.toJson<double?>(difficulty),
+      'lastReviewedAt': serializer.toJson<int?>(lastReviewedAt),
+      'lastLogId': serializer.toJson<String?>(lastLogId),
+      'scheduler': serializer.toJson<String>(scheduler),
+      'noteCreatedAt': serializer.toJson<int>(noteCreatedAt),
+      'newPosition': serializer.toJson<int?>(newPosition),
+    };
+  }
+
+  SrsCardCacheRow copyWith({
+    String? id,
+    String? profileUid,
+    String? noteId,
+    String? templateId,
+    int? clozeOrd,
+    String? deckId,
+    bool? suspended,
+    Value<int?> buriedUntilDay = const Value.absent(),
+    int? flag,
+    bool? hidden,
+    String? queue,
+    Value<int?> dueDay = const Value.absent(),
+    Value<int?> dueAt = const Value.absent(),
+    int? scheduledDays,
+    int? reps,
+    int? lapses,
+    Value<double?> stability = const Value.absent(),
+    Value<double?> difficulty = const Value.absent(),
+    Value<int?> lastReviewedAt = const Value.absent(),
+    Value<String?> lastLogId = const Value.absent(),
+    String? scheduler,
+    int? noteCreatedAt,
+    Value<int?> newPosition = const Value.absent(),
+  }) => SrsCardCacheRow(
+    id: id ?? this.id,
+    profileUid: profileUid ?? this.profileUid,
+    noteId: noteId ?? this.noteId,
+    templateId: templateId ?? this.templateId,
+    clozeOrd: clozeOrd ?? this.clozeOrd,
+    deckId: deckId ?? this.deckId,
+    suspended: suspended ?? this.suspended,
+    buriedUntilDay: buriedUntilDay.present
+        ? buriedUntilDay.value
+        : this.buriedUntilDay,
+    flag: flag ?? this.flag,
+    hidden: hidden ?? this.hidden,
+    queue: queue ?? this.queue,
+    dueDay: dueDay.present ? dueDay.value : this.dueDay,
+    dueAt: dueAt.present ? dueAt.value : this.dueAt,
+    scheduledDays: scheduledDays ?? this.scheduledDays,
+    reps: reps ?? this.reps,
+    lapses: lapses ?? this.lapses,
+    stability: stability.present ? stability.value : this.stability,
+    difficulty: difficulty.present ? difficulty.value : this.difficulty,
+    lastReviewedAt: lastReviewedAt.present
+        ? lastReviewedAt.value
+        : this.lastReviewedAt,
+    lastLogId: lastLogId.present ? lastLogId.value : this.lastLogId,
+    scheduler: scheduler ?? this.scheduler,
+    noteCreatedAt: noteCreatedAt ?? this.noteCreatedAt,
+    newPosition: newPosition.present ? newPosition.value : this.newPosition,
+  );
+  SrsCardCacheRow copyWithCompanion(SrsCardsCacheCompanion data) {
+    return SrsCardCacheRow(
+      id: data.id.present ? data.id.value : this.id,
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      noteId: data.noteId.present ? data.noteId.value : this.noteId,
+      templateId: data.templateId.present
+          ? data.templateId.value
+          : this.templateId,
+      clozeOrd: data.clozeOrd.present ? data.clozeOrd.value : this.clozeOrd,
+      deckId: data.deckId.present ? data.deckId.value : this.deckId,
+      suspended: data.suspended.present ? data.suspended.value : this.suspended,
+      buriedUntilDay: data.buriedUntilDay.present
+          ? data.buriedUntilDay.value
+          : this.buriedUntilDay,
+      flag: data.flag.present ? data.flag.value : this.flag,
+      hidden: data.hidden.present ? data.hidden.value : this.hidden,
+      queue: data.queue.present ? data.queue.value : this.queue,
+      dueDay: data.dueDay.present ? data.dueDay.value : this.dueDay,
+      dueAt: data.dueAt.present ? data.dueAt.value : this.dueAt,
+      scheduledDays: data.scheduledDays.present
+          ? data.scheduledDays.value
+          : this.scheduledDays,
+      reps: data.reps.present ? data.reps.value : this.reps,
+      lapses: data.lapses.present ? data.lapses.value : this.lapses,
+      stability: data.stability.present ? data.stability.value : this.stability,
+      difficulty: data.difficulty.present
+          ? data.difficulty.value
+          : this.difficulty,
+      lastReviewedAt: data.lastReviewedAt.present
+          ? data.lastReviewedAt.value
+          : this.lastReviewedAt,
+      lastLogId: data.lastLogId.present ? data.lastLogId.value : this.lastLogId,
+      scheduler: data.scheduler.present ? data.scheduler.value : this.scheduler,
+      noteCreatedAt: data.noteCreatedAt.present
+          ? data.noteCreatedAt.value
+          : this.noteCreatedAt,
+      newPosition: data.newPosition.present
+          ? data.newPosition.value
+          : this.newPosition,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsCardCacheRow(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('noteId: $noteId, ')
+          ..write('templateId: $templateId, ')
+          ..write('clozeOrd: $clozeOrd, ')
+          ..write('deckId: $deckId, ')
+          ..write('suspended: $suspended, ')
+          ..write('buriedUntilDay: $buriedUntilDay, ')
+          ..write('flag: $flag, ')
+          ..write('hidden: $hidden, ')
+          ..write('queue: $queue, ')
+          ..write('dueDay: $dueDay, ')
+          ..write('dueAt: $dueAt, ')
+          ..write('scheduledDays: $scheduledDays, ')
+          ..write('reps: $reps, ')
+          ..write('lapses: $lapses, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('lastLogId: $lastLogId, ')
+          ..write('scheduler: $scheduler, ')
+          ..write('noteCreatedAt: $noteCreatedAt, ')
+          ..write('newPosition: $newPosition')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hashAll([
+    id,
+    profileUid,
+    noteId,
+    templateId,
+    clozeOrd,
+    deckId,
+    suspended,
+    buriedUntilDay,
+    flag,
+    hidden,
+    queue,
+    dueDay,
+    dueAt,
+    scheduledDays,
+    reps,
+    lapses,
+    stability,
+    difficulty,
+    lastReviewedAt,
+    lastLogId,
+    scheduler,
+    noteCreatedAt,
+    newPosition,
+  ]);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsCardCacheRow &&
+          other.id == this.id &&
+          other.profileUid == this.profileUid &&
+          other.noteId == this.noteId &&
+          other.templateId == this.templateId &&
+          other.clozeOrd == this.clozeOrd &&
+          other.deckId == this.deckId &&
+          other.suspended == this.suspended &&
+          other.buriedUntilDay == this.buriedUntilDay &&
+          other.flag == this.flag &&
+          other.hidden == this.hidden &&
+          other.queue == this.queue &&
+          other.dueDay == this.dueDay &&
+          other.dueAt == this.dueAt &&
+          other.scheduledDays == this.scheduledDays &&
+          other.reps == this.reps &&
+          other.lapses == this.lapses &&
+          other.stability == this.stability &&
+          other.difficulty == this.difficulty &&
+          other.lastReviewedAt == this.lastReviewedAt &&
+          other.lastLogId == this.lastLogId &&
+          other.scheduler == this.scheduler &&
+          other.noteCreatedAt == this.noteCreatedAt &&
+          other.newPosition == this.newPosition);
+}
+
+class SrsCardsCacheCompanion extends UpdateCompanion<SrsCardCacheRow> {
+  final Value<String> id;
+  final Value<String> profileUid;
+  final Value<String> noteId;
+  final Value<String> templateId;
+  final Value<int> clozeOrd;
+  final Value<String> deckId;
+  final Value<bool> suspended;
+  final Value<int?> buriedUntilDay;
+  final Value<int> flag;
+  final Value<bool> hidden;
+  final Value<String> queue;
+  final Value<int?> dueDay;
+  final Value<int?> dueAt;
+  final Value<int> scheduledDays;
+  final Value<int> reps;
+  final Value<int> lapses;
+  final Value<double?> stability;
+  final Value<double?> difficulty;
+  final Value<int?> lastReviewedAt;
+  final Value<String?> lastLogId;
+  final Value<String> scheduler;
+  final Value<int> noteCreatedAt;
+  final Value<int?> newPosition;
+  final Value<int> rowid;
+  const SrsCardsCacheCompanion({
+    this.id = const Value.absent(),
+    this.profileUid = const Value.absent(),
+    this.noteId = const Value.absent(),
+    this.templateId = const Value.absent(),
+    this.clozeOrd = const Value.absent(),
+    this.deckId = const Value.absent(),
+    this.suspended = const Value.absent(),
+    this.buriedUntilDay = const Value.absent(),
+    this.flag = const Value.absent(),
+    this.hidden = const Value.absent(),
+    this.queue = const Value.absent(),
+    this.dueDay = const Value.absent(),
+    this.dueAt = const Value.absent(),
+    this.scheduledDays = const Value.absent(),
+    this.reps = const Value.absent(),
+    this.lapses = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+    this.lastLogId = const Value.absent(),
+    this.scheduler = const Value.absent(),
+    this.noteCreatedAt = const Value.absent(),
+    this.newPosition = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsCardsCacheCompanion.insert({
+    required String id,
+    required String profileUid,
+    required String noteId,
+    required String templateId,
+    this.clozeOrd = const Value.absent(),
+    required String deckId,
+    this.suspended = const Value.absent(),
+    this.buriedUntilDay = const Value.absent(),
+    this.flag = const Value.absent(),
+    this.hidden = const Value.absent(),
+    this.queue = const Value.absent(),
+    this.dueDay = const Value.absent(),
+    this.dueAt = const Value.absent(),
+    this.scheduledDays = const Value.absent(),
+    this.reps = const Value.absent(),
+    this.lapses = const Value.absent(),
+    this.stability = const Value.absent(),
+    this.difficulty = const Value.absent(),
+    this.lastReviewedAt = const Value.absent(),
+    this.lastLogId = const Value.absent(),
+    this.scheduler = const Value.absent(),
+    this.noteCreatedAt = const Value.absent(),
+    this.newPosition = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : id = Value(id),
+       profileUid = Value(profileUid),
+       noteId = Value(noteId),
+       templateId = Value(templateId),
+       deckId = Value(deckId);
+  static Insertable<SrsCardCacheRow> custom({
+    Expression<String>? id,
+    Expression<String>? profileUid,
+    Expression<String>? noteId,
+    Expression<String>? templateId,
+    Expression<int>? clozeOrd,
+    Expression<String>? deckId,
+    Expression<bool>? suspended,
+    Expression<int>? buriedUntilDay,
+    Expression<int>? flag,
+    Expression<bool>? hidden,
+    Expression<String>? queue,
+    Expression<int>? dueDay,
+    Expression<int>? dueAt,
+    Expression<int>? scheduledDays,
+    Expression<int>? reps,
+    Expression<int>? lapses,
+    Expression<double>? stability,
+    Expression<double>? difficulty,
+    Expression<int>? lastReviewedAt,
+    Expression<String>? lastLogId,
+    Expression<String>? scheduler,
+    Expression<int>? noteCreatedAt,
+    Expression<int>? newPosition,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (noteId != null) 'note_id': noteId,
+      if (templateId != null) 'template_id': templateId,
+      if (clozeOrd != null) 'cloze_ord': clozeOrd,
+      if (deckId != null) 'deck_id': deckId,
+      if (suspended != null) 'suspended': suspended,
+      if (buriedUntilDay != null) 'buried_until_day': buriedUntilDay,
+      if (flag != null) 'flag': flag,
+      if (hidden != null) 'hidden': hidden,
+      if (queue != null) 'queue': queue,
+      if (dueDay != null) 'due_day': dueDay,
+      if (dueAt != null) 'due_at': dueAt,
+      if (scheduledDays != null) 'scheduled_days': scheduledDays,
+      if (reps != null) 'reps': reps,
+      if (lapses != null) 'lapses': lapses,
+      if (stability != null) 'stability': stability,
+      if (difficulty != null) 'difficulty': difficulty,
+      if (lastReviewedAt != null) 'last_reviewed_at': lastReviewedAt,
+      if (lastLogId != null) 'last_log_id': lastLogId,
+      if (scheduler != null) 'scheduler': scheduler,
+      if (noteCreatedAt != null) 'note_created_at': noteCreatedAt,
+      if (newPosition != null) 'new_position': newPosition,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsCardsCacheCompanion copyWith({
+    Value<String>? id,
+    Value<String>? profileUid,
+    Value<String>? noteId,
+    Value<String>? templateId,
+    Value<int>? clozeOrd,
+    Value<String>? deckId,
+    Value<bool>? suspended,
+    Value<int?>? buriedUntilDay,
+    Value<int>? flag,
+    Value<bool>? hidden,
+    Value<String>? queue,
+    Value<int?>? dueDay,
+    Value<int?>? dueAt,
+    Value<int>? scheduledDays,
+    Value<int>? reps,
+    Value<int>? lapses,
+    Value<double?>? stability,
+    Value<double?>? difficulty,
+    Value<int?>? lastReviewedAt,
+    Value<String?>? lastLogId,
+    Value<String>? scheduler,
+    Value<int>? noteCreatedAt,
+    Value<int?>? newPosition,
+    Value<int>? rowid,
+  }) {
+    return SrsCardsCacheCompanion(
+      id: id ?? this.id,
+      profileUid: profileUid ?? this.profileUid,
+      noteId: noteId ?? this.noteId,
+      templateId: templateId ?? this.templateId,
+      clozeOrd: clozeOrd ?? this.clozeOrd,
+      deckId: deckId ?? this.deckId,
+      suspended: suspended ?? this.suspended,
+      buriedUntilDay: buriedUntilDay ?? this.buriedUntilDay,
+      flag: flag ?? this.flag,
+      hidden: hidden ?? this.hidden,
+      queue: queue ?? this.queue,
+      dueDay: dueDay ?? this.dueDay,
+      dueAt: dueAt ?? this.dueAt,
+      scheduledDays: scheduledDays ?? this.scheduledDays,
+      reps: reps ?? this.reps,
+      lapses: lapses ?? this.lapses,
+      stability: stability ?? this.stability,
+      difficulty: difficulty ?? this.difficulty,
+      lastReviewedAt: lastReviewedAt ?? this.lastReviewedAt,
+      lastLogId: lastLogId ?? this.lastLogId,
+      scheduler: scheduler ?? this.scheduler,
+      noteCreatedAt: noteCreatedAt ?? this.noteCreatedAt,
+      newPosition: newPosition ?? this.newPosition,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<String>(id.value);
+    }
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (noteId.present) {
+      map['note_id'] = Variable<String>(noteId.value);
+    }
+    if (templateId.present) {
+      map['template_id'] = Variable<String>(templateId.value);
+    }
+    if (clozeOrd.present) {
+      map['cloze_ord'] = Variable<int>(clozeOrd.value);
+    }
+    if (deckId.present) {
+      map['deck_id'] = Variable<String>(deckId.value);
+    }
+    if (suspended.present) {
+      map['suspended'] = Variable<bool>(suspended.value);
+    }
+    if (buriedUntilDay.present) {
+      map['buried_until_day'] = Variable<int>(buriedUntilDay.value);
+    }
+    if (flag.present) {
+      map['flag'] = Variable<int>(flag.value);
+    }
+    if (hidden.present) {
+      map['hidden'] = Variable<bool>(hidden.value);
+    }
+    if (queue.present) {
+      map['queue'] = Variable<String>(queue.value);
+    }
+    if (dueDay.present) {
+      map['due_day'] = Variable<int>(dueDay.value);
+    }
+    if (dueAt.present) {
+      map['due_at'] = Variable<int>(dueAt.value);
+    }
+    if (scheduledDays.present) {
+      map['scheduled_days'] = Variable<int>(scheduledDays.value);
+    }
+    if (reps.present) {
+      map['reps'] = Variable<int>(reps.value);
+    }
+    if (lapses.present) {
+      map['lapses'] = Variable<int>(lapses.value);
+    }
+    if (stability.present) {
+      map['stability'] = Variable<double>(stability.value);
+    }
+    if (difficulty.present) {
+      map['difficulty'] = Variable<double>(difficulty.value);
+    }
+    if (lastReviewedAt.present) {
+      map['last_reviewed_at'] = Variable<int>(lastReviewedAt.value);
+    }
+    if (lastLogId.present) {
+      map['last_log_id'] = Variable<String>(lastLogId.value);
+    }
+    if (scheduler.present) {
+      map['scheduler'] = Variable<String>(scheduler.value);
+    }
+    if (noteCreatedAt.present) {
+      map['note_created_at'] = Variable<int>(noteCreatedAt.value);
+    }
+    if (newPosition.present) {
+      map['new_position'] = Variable<int>(newPosition.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsCardsCacheCompanion(')
+          ..write('id: $id, ')
+          ..write('profileUid: $profileUid, ')
+          ..write('noteId: $noteId, ')
+          ..write('templateId: $templateId, ')
+          ..write('clozeOrd: $clozeOrd, ')
+          ..write('deckId: $deckId, ')
+          ..write('suspended: $suspended, ')
+          ..write('buriedUntilDay: $buriedUntilDay, ')
+          ..write('flag: $flag, ')
+          ..write('hidden: $hidden, ')
+          ..write('queue: $queue, ')
+          ..write('dueDay: $dueDay, ')
+          ..write('dueAt: $dueAt, ')
+          ..write('scheduledDays: $scheduledDays, ')
+          ..write('reps: $reps, ')
+          ..write('lapses: $lapses, ')
+          ..write('stability: $stability, ')
+          ..write('difficulty: $difficulty, ')
+          ..write('lastReviewedAt: $lastReviewedAt, ')
+          ..write('lastLogId: $lastLogId, ')
+          ..write('scheduler: $scheduler, ')
+          ..write('noteCreatedAt: $noteCreatedAt, ')
+          ..write('newPosition: $newPosition, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $VideoSubtitleGlossariesTable extends VideoSubtitleGlossaries
+    with TableInfo<$VideoSubtitleGlossariesTable, VideoSubtitleGlossaryRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $VideoSubtitleGlossariesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _workKeyMeta = const VerificationMeta(
+    'workKey',
+  );
+  @override
+  late final GeneratedColumn<String> workKey = GeneratedColumn<String>(
+    'work_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _glossaryJsonMeta = const VerificationMeta(
+    'glossaryJson',
+  );
+  @override
+  late final GeneratedColumn<String> glossaryJson = GeneratedColumn<String>(
+    'glossary_json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _sourceFingerprintMeta = const VerificationMeta(
+    'sourceFingerprint',
+  );
+  @override
+  late final GeneratedColumn<String> sourceFingerprint =
+      GeneratedColumn<String>(
+        'source_fingerprint',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+        defaultValue: const Constant(''),
+      );
+  static const VerificationMeta _userEditedAtMeta = const VerificationMeta(
+    'userEditedAt',
+  );
+  @override
+  late final GeneratedColumn<int> userEditedAt = GeneratedColumn<int>(
+    'user_edited_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<int> updatedAt = GeneratedColumn<int>(
+    'updated_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    workKey,
+    glossaryJson,
+    sourceFingerprint,
+    userEditedAt,
+    updatedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'video_subtitle_glossaries';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<VideoSubtitleGlossaryRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('work_key')) {
+      context.handle(
+        _workKeyMeta,
+        workKey.isAcceptableOrUnknown(data['work_key']!, _workKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_workKeyMeta);
+    }
+    if (data.containsKey('glossary_json')) {
+      context.handle(
+        _glossaryJsonMeta,
+        glossaryJson.isAcceptableOrUnknown(
+          data['glossary_json']!,
+          _glossaryJsonMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_glossaryJsonMeta);
+    }
+    if (data.containsKey('source_fingerprint')) {
+      context.handle(
+        _sourceFingerprintMeta,
+        sourceFingerprint.isAcceptableOrUnknown(
+          data['source_fingerprint']!,
+          _sourceFingerprintMeta,
+        ),
+      );
+    }
+    if (data.containsKey('user_edited_at')) {
+      context.handle(
+        _userEditedAtMeta,
+        userEditedAt.isAcceptableOrUnknown(
+          data['user_edited_at']!,
+          _userEditedAtMeta,
+        ),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_updatedAtMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {workKey};
+  @override
+  VideoSubtitleGlossaryRow map(
+    Map<String, dynamic> data, {
+    String? tablePrefix,
+  }) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return VideoSubtitleGlossaryRow(
+      workKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}work_key'],
+      )!,
+      glossaryJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}glossary_json'],
+      )!,
+      sourceFingerprint: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}source_fingerprint'],
+      )!,
+      userEditedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}user_edited_at'],
+      ),
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}updated_at'],
+      )!,
+    );
+  }
+
+  @override
+  $VideoSubtitleGlossariesTable createAlias(String alias) {
+    return $VideoSubtitleGlossariesTable(attachedDatabase, alias);
+  }
+}
+
+class VideoSubtitleGlossaryRow extends DataClass
+    implements Insertable<VideoSubtitleGlossaryRow> {
+  final String workKey;
+  final String glossaryJson;
+
+  /// 生成时所用资料的指纹（与 JSON 里的 `sourceFingerprint` 同值）；'' = 纯手填。
+  final String sourceFingerprint;
+
+  /// 用户最近一次编辑的时刻（毫秒）；NULL = 没编辑过。
+  final int? userEditedAt;
+  final int updatedAt;
+  const VideoSubtitleGlossaryRow({
+    required this.workKey,
+    required this.glossaryJson,
+    required this.sourceFingerprint,
+    this.userEditedAt,
+    required this.updatedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['work_key'] = Variable<String>(workKey);
+    map['glossary_json'] = Variable<String>(glossaryJson);
+    map['source_fingerprint'] = Variable<String>(sourceFingerprint);
+    if (!nullToAbsent || userEditedAt != null) {
+      map['user_edited_at'] = Variable<int>(userEditedAt);
+    }
+    map['updated_at'] = Variable<int>(updatedAt);
+    return map;
+  }
+
+  VideoSubtitleGlossariesCompanion toCompanion(bool nullToAbsent) {
+    return VideoSubtitleGlossariesCompanion(
+      workKey: Value(workKey),
+      glossaryJson: Value(glossaryJson),
+      sourceFingerprint: Value(sourceFingerprint),
+      userEditedAt: userEditedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(userEditedAt),
+      updatedAt: Value(updatedAt),
+    );
+  }
+
+  factory VideoSubtitleGlossaryRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return VideoSubtitleGlossaryRow(
+      workKey: serializer.fromJson<String>(json['workKey']),
+      glossaryJson: serializer.fromJson<String>(json['glossaryJson']),
+      sourceFingerprint: serializer.fromJson<String>(json['sourceFingerprint']),
+      userEditedAt: serializer.fromJson<int?>(json['userEditedAt']),
+      updatedAt: serializer.fromJson<int>(json['updatedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'workKey': serializer.toJson<String>(workKey),
+      'glossaryJson': serializer.toJson<String>(glossaryJson),
+      'sourceFingerprint': serializer.toJson<String>(sourceFingerprint),
+      'userEditedAt': serializer.toJson<int?>(userEditedAt),
+      'updatedAt': serializer.toJson<int>(updatedAt),
+    };
+  }
+
+  VideoSubtitleGlossaryRow copyWith({
+    String? workKey,
+    String? glossaryJson,
+    String? sourceFingerprint,
+    Value<int?> userEditedAt = const Value.absent(),
+    int? updatedAt,
+  }) => VideoSubtitleGlossaryRow(
+    workKey: workKey ?? this.workKey,
+    glossaryJson: glossaryJson ?? this.glossaryJson,
+    sourceFingerprint: sourceFingerprint ?? this.sourceFingerprint,
+    userEditedAt: userEditedAt.present ? userEditedAt.value : this.userEditedAt,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+  VideoSubtitleGlossaryRow copyWithCompanion(
+    VideoSubtitleGlossariesCompanion data,
+  ) {
+    return VideoSubtitleGlossaryRow(
+      workKey: data.workKey.present ? data.workKey.value : this.workKey,
+      glossaryJson: data.glossaryJson.present
+          ? data.glossaryJson.value
+          : this.glossaryJson,
+      sourceFingerprint: data.sourceFingerprint.present
+          ? data.sourceFingerprint.value
+          : this.sourceFingerprint,
+      userEditedAt: data.userEditedAt.present
+          ? data.userEditedAt.value
+          : this.userEditedAt,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VideoSubtitleGlossaryRow(')
+          ..write('workKey: $workKey, ')
+          ..write('glossaryJson: $glossaryJson, ')
+          ..write('sourceFingerprint: $sourceFingerprint, ')
+          ..write('userEditedAt: $userEditedAt, ')
+          ..write('updatedAt: $updatedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    workKey,
+    glossaryJson,
+    sourceFingerprint,
+    userEditedAt,
+    updatedAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is VideoSubtitleGlossaryRow &&
+          other.workKey == this.workKey &&
+          other.glossaryJson == this.glossaryJson &&
+          other.sourceFingerprint == this.sourceFingerprint &&
+          other.userEditedAt == this.userEditedAt &&
+          other.updatedAt == this.updatedAt);
+}
+
+class VideoSubtitleGlossariesCompanion
+    extends UpdateCompanion<VideoSubtitleGlossaryRow> {
+  final Value<String> workKey;
+  final Value<String> glossaryJson;
+  final Value<String> sourceFingerprint;
+  final Value<int?> userEditedAt;
+  final Value<int> updatedAt;
+  final Value<int> rowid;
+  const VideoSubtitleGlossariesCompanion({
+    this.workKey = const Value.absent(),
+    this.glossaryJson = const Value.absent(),
+    this.sourceFingerprint = const Value.absent(),
+    this.userEditedAt = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  VideoSubtitleGlossariesCompanion.insert({
+    required String workKey,
+    required String glossaryJson,
+    this.sourceFingerprint = const Value.absent(),
+    this.userEditedAt = const Value.absent(),
+    required int updatedAt,
+    this.rowid = const Value.absent(),
+  }) : workKey = Value(workKey),
+       glossaryJson = Value(glossaryJson),
+       updatedAt = Value(updatedAt);
+  static Insertable<VideoSubtitleGlossaryRow> custom({
+    Expression<String>? workKey,
+    Expression<String>? glossaryJson,
+    Expression<String>? sourceFingerprint,
+    Expression<int>? userEditedAt,
+    Expression<int>? updatedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (workKey != null) 'work_key': workKey,
+      if (glossaryJson != null) 'glossary_json': glossaryJson,
+      if (sourceFingerprint != null) 'source_fingerprint': sourceFingerprint,
+      if (userEditedAt != null) 'user_edited_at': userEditedAt,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  VideoSubtitleGlossariesCompanion copyWith({
+    Value<String>? workKey,
+    Value<String>? glossaryJson,
+    Value<String>? sourceFingerprint,
+    Value<int?>? userEditedAt,
+    Value<int>? updatedAt,
+    Value<int>? rowid,
+  }) {
+    return VideoSubtitleGlossariesCompanion(
+      workKey: workKey ?? this.workKey,
+      glossaryJson: glossaryJson ?? this.glossaryJson,
+      sourceFingerprint: sourceFingerprint ?? this.sourceFingerprint,
+      userEditedAt: userEditedAt ?? this.userEditedAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (workKey.present) {
+      map['work_key'] = Variable<String>(workKey.value);
+    }
+    if (glossaryJson.present) {
+      map['glossary_json'] = Variable<String>(glossaryJson.value);
+    }
+    if (sourceFingerprint.present) {
+      map['source_fingerprint'] = Variable<String>(sourceFingerprint.value);
+    }
+    if (userEditedAt.present) {
+      map['user_edited_at'] = Variable<int>(userEditedAt.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<int>(updatedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VideoSubtitleGlossariesCompanion(')
+          ..write('workKey: $workKey, ')
+          ..write('glossaryJson: $glossaryJson, ')
+          ..write('sourceFingerprint: $sourceFingerprint, ')
+          ..write('userEditedAt: $userEditedAt, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $SrsSentBatchesTable extends SrsSentBatches
+    with TableInfo<$SrsSentBatchesTable, SrsSentBatchRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $SrsSentBatchesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _profileUidMeta = const VerificationMeta(
+    'profileUid',
+  );
+  @override
+  late final GeneratedColumn<String> profileUid = GeneratedColumn<String>(
+    'profile_uid',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _writerIdMeta = const VerificationMeta(
+    'writerId',
+  );
+  @override
+  late final GeneratedColumn<String> writerId = GeneratedColumn<String>(
+    'writer_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _batchNoMeta = const VerificationMeta(
+    'batchNo',
+  );
+  @override
+  late final GeneratedColumn<int> batchNo = GeneratedColumn<int>(
+    'batch_no',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _bytesMeta = const VerificationMeta('bytes');
+  @override
+  late final GeneratedColumn<Uint8List> bytes = GeneratedColumn<Uint8List>(
+    'bytes',
+    aliasedName,
+    false,
+    type: DriftSqlType.blob,
+    requiredDuringInsert: true,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [profileUid, writerId, batchNo, bytes];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'srs_sent_batches';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<SrsSentBatchRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('profile_uid')) {
+      context.handle(
+        _profileUidMeta,
+        profileUid.isAcceptableOrUnknown(data['profile_uid']!, _profileUidMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_profileUidMeta);
+    }
+    if (data.containsKey('writer_id')) {
+      context.handle(
+        _writerIdMeta,
+        writerId.isAcceptableOrUnknown(data['writer_id']!, _writerIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_writerIdMeta);
+    }
+    if (data.containsKey('batch_no')) {
+      context.handle(
+        _batchNoMeta,
+        batchNo.isAcceptableOrUnknown(data['batch_no']!, _batchNoMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_batchNoMeta);
+    }
+    if (data.containsKey('bytes')) {
+      context.handle(
+        _bytesMeta,
+        bytes.isAcceptableOrUnknown(data['bytes']!, _bytesMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_bytesMeta);
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {profileUid, writerId, batchNo};
+  @override
+  SrsSentBatchRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return SrsSentBatchRow(
+      profileUid: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}profile_uid'],
+      )!,
+      writerId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}writer_id'],
+      )!,
+      batchNo: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}batch_no'],
+      )!,
+      bytes: attachedDatabase.typeMapping.read(
+        DriftSqlType.blob,
+        data['${effectivePrefix}bytes'],
+      )!,
+    );
+  }
+
+  @override
+  $SrsSentBatchesTable createAlias(String alias) {
+    return $SrsSentBatchesTable(attachedDatabase, alias);
+  }
+}
+
+class SrsSentBatchRow extends DataClass implements Insertable<SrsSentBatchRow> {
+  final String profileUid;
+  final String writerId;
+
+  /// 批次号（写入者内从 1 起连续）。
+  final int batchNo;
+
+  /// 冻结后的批次文件字节（自校验格式，见 fushi_srs `SrsBatch`）。
+  final Uint8List bytes;
+  const SrsSentBatchRow({
+    required this.profileUid,
+    required this.writerId,
+    required this.batchNo,
+    required this.bytes,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['profile_uid'] = Variable<String>(profileUid);
+    map['writer_id'] = Variable<String>(writerId);
+    map['batch_no'] = Variable<int>(batchNo);
+    map['bytes'] = Variable<Uint8List>(bytes);
+    return map;
+  }
+
+  SrsSentBatchesCompanion toCompanion(bool nullToAbsent) {
+    return SrsSentBatchesCompanion(
+      profileUid: Value(profileUid),
+      writerId: Value(writerId),
+      batchNo: Value(batchNo),
+      bytes: Value(bytes),
+    );
+  }
+
+  factory SrsSentBatchRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return SrsSentBatchRow(
+      profileUid: serializer.fromJson<String>(json['profileUid']),
+      writerId: serializer.fromJson<String>(json['writerId']),
+      batchNo: serializer.fromJson<int>(json['batchNo']),
+      bytes: serializer.fromJson<Uint8List>(json['bytes']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'profileUid': serializer.toJson<String>(profileUid),
+      'writerId': serializer.toJson<String>(writerId),
+      'batchNo': serializer.toJson<int>(batchNo),
+      'bytes': serializer.toJson<Uint8List>(bytes),
+    };
+  }
+
+  SrsSentBatchRow copyWith({
+    String? profileUid,
+    String? writerId,
+    int? batchNo,
+    Uint8List? bytes,
+  }) => SrsSentBatchRow(
+    profileUid: profileUid ?? this.profileUid,
+    writerId: writerId ?? this.writerId,
+    batchNo: batchNo ?? this.batchNo,
+    bytes: bytes ?? this.bytes,
+  );
+  SrsSentBatchRow copyWithCompanion(SrsSentBatchesCompanion data) {
+    return SrsSentBatchRow(
+      profileUid: data.profileUid.present
+          ? data.profileUid.value
+          : this.profileUid,
+      writerId: data.writerId.present ? data.writerId.value : this.writerId,
+      batchNo: data.batchNo.present ? data.batchNo.value : this.batchNo,
+      bytes: data.bytes.present ? data.bytes.value : this.bytes,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsSentBatchRow(')
+          ..write('profileUid: $profileUid, ')
+          ..write('writerId: $writerId, ')
+          ..write('batchNo: $batchNo, ')
+          ..write('bytes: $bytes')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    profileUid,
+    writerId,
+    batchNo,
+    $driftBlobEquality.hash(bytes),
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is SrsSentBatchRow &&
+          other.profileUid == this.profileUid &&
+          other.writerId == this.writerId &&
+          other.batchNo == this.batchNo &&
+          $driftBlobEquality.equals(other.bytes, this.bytes));
+}
+
+class SrsSentBatchesCompanion extends UpdateCompanion<SrsSentBatchRow> {
+  final Value<String> profileUid;
+  final Value<String> writerId;
+  final Value<int> batchNo;
+  final Value<Uint8List> bytes;
+  final Value<int> rowid;
+  const SrsSentBatchesCompanion({
+    this.profileUid = const Value.absent(),
+    this.writerId = const Value.absent(),
+    this.batchNo = const Value.absent(),
+    this.bytes = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  SrsSentBatchesCompanion.insert({
+    required String profileUid,
+    required String writerId,
+    required int batchNo,
+    required Uint8List bytes,
+    this.rowid = const Value.absent(),
+  }) : profileUid = Value(profileUid),
+       writerId = Value(writerId),
+       batchNo = Value(batchNo),
+       bytes = Value(bytes);
+  static Insertable<SrsSentBatchRow> custom({
+    Expression<String>? profileUid,
+    Expression<String>? writerId,
+    Expression<int>? batchNo,
+    Expression<Uint8List>? bytes,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (profileUid != null) 'profile_uid': profileUid,
+      if (writerId != null) 'writer_id': writerId,
+      if (batchNo != null) 'batch_no': batchNo,
+      if (bytes != null) 'bytes': bytes,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  SrsSentBatchesCompanion copyWith({
+    Value<String>? profileUid,
+    Value<String>? writerId,
+    Value<int>? batchNo,
+    Value<Uint8List>? bytes,
+    Value<int>? rowid,
+  }) {
+    return SrsSentBatchesCompanion(
+      profileUid: profileUid ?? this.profileUid,
+      writerId: writerId ?? this.writerId,
+      batchNo: batchNo ?? this.batchNo,
+      bytes: bytes ?? this.bytes,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (profileUid.present) {
+      map['profile_uid'] = Variable<String>(profileUid.value);
+    }
+    if (writerId.present) {
+      map['writer_id'] = Variable<String>(writerId.value);
+    }
+    if (batchNo.present) {
+      map['batch_no'] = Variable<int>(batchNo.value);
+    }
+    if (bytes.present) {
+      map['bytes'] = Variable<Uint8List>(bytes.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('SrsSentBatchesCompanion(')
+          ..write('profileUid: $profileUid, ')
+          ..write('writerId: $writerId, ')
+          ..write('batchNo: $batchNo, ')
+          ..write('bytes: $bytes, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $MediaPrivacyFlagsTable extends MediaPrivacyFlags
+    with TableInfo<$MediaPrivacyFlagsTable, MediaPrivacyFlagRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $MediaPrivacyFlagsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _mediaKindMeta = const VerificationMeta(
+    'mediaKind',
+  );
+  @override
+  late final GeneratedColumn<String> mediaKind = GeneratedColumn<String>(
+    'media_kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _entryKeyMeta = const VerificationMeta(
+    'entryKey',
+  );
+  @override
+  late final GeneratedColumn<String> entryKey = GeneratedColumn<String>(
+    'entry_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _privateAtMeta = const VerificationMeta(
+    'privateAt',
+  );
+  @override
+  late final GeneratedColumn<int> privateAt = GeneratedColumn<int>(
+    'private_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _clearedAtMeta = const VerificationMeta(
+    'clearedAt',
+  );
+  @override
+  late final GeneratedColumn<int> clearedAt = GeneratedColumn<int>(
+    'cleared_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    mediaKind,
+    entryKey,
+    privateAt,
+    clearedAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'media_privacy_flags';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<MediaPrivacyFlagRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('media_kind')) {
+      context.handle(
+        _mediaKindMeta,
+        mediaKind.isAcceptableOrUnknown(data['media_kind']!, _mediaKindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_mediaKindMeta);
+    }
+    if (data.containsKey('entry_key')) {
+      context.handle(
+        _entryKeyMeta,
+        entryKey.isAcceptableOrUnknown(data['entry_key']!, _entryKeyMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_entryKeyMeta);
+    }
+    if (data.containsKey('private_at')) {
+      context.handle(
+        _privateAtMeta,
+        privateAt.isAcceptableOrUnknown(data['private_at']!, _privateAtMeta),
+      );
+    }
+    if (data.containsKey('cleared_at')) {
+      context.handle(
+        _clearedAtMeta,
+        clearedAt.isAcceptableOrUnknown(data['cleared_at']!, _clearedAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {mediaKind, entryKey};
+  @override
+  MediaPrivacyFlagRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return MediaPrivacyFlagRow(
+      mediaKind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}media_kind'],
+      )!,
+      entryKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}entry_key'],
+      )!,
+      privateAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}private_at'],
+      ),
+      clearedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}cleared_at'],
+      ),
+    );
+  }
+
+  @override
+  $MediaPrivacyFlagsTable createAlias(String alias) {
+    return $MediaPrivacyFlagsTable(attachedDatabase, alias);
+  }
+}
+
+class MediaPrivacyFlagRow extends DataClass
+    implements Insertable<MediaPrivacyFlagRow> {
+  final String mediaKind;
+  final String entryKey;
+
+  /// 最近一次设为私密的毫秒戳；NULL = 从没设过。
+  final int? privateAt;
+
+  /// 最近一次取消私密的毫秒戳；NULL = 从没取消过。
+  final int? clearedAt;
+  const MediaPrivacyFlagRow({
+    required this.mediaKind,
+    required this.entryKey,
+    this.privateAt,
+    this.clearedAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['media_kind'] = Variable<String>(mediaKind);
+    map['entry_key'] = Variable<String>(entryKey);
+    if (!nullToAbsent || privateAt != null) {
+      map['private_at'] = Variable<int>(privateAt);
+    }
+    if (!nullToAbsent || clearedAt != null) {
+      map['cleared_at'] = Variable<int>(clearedAt);
+    }
+    return map;
+  }
+
+  MediaPrivacyFlagsCompanion toCompanion(bool nullToAbsent) {
+    return MediaPrivacyFlagsCompanion(
+      mediaKind: Value(mediaKind),
+      entryKey: Value(entryKey),
+      privateAt: privateAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(privateAt),
+      clearedAt: clearedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(clearedAt),
+    );
+  }
+
+  factory MediaPrivacyFlagRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return MediaPrivacyFlagRow(
+      mediaKind: serializer.fromJson<String>(json['mediaKind']),
+      entryKey: serializer.fromJson<String>(json['entryKey']),
+      privateAt: serializer.fromJson<int?>(json['privateAt']),
+      clearedAt: serializer.fromJson<int?>(json['clearedAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'mediaKind': serializer.toJson<String>(mediaKind),
+      'entryKey': serializer.toJson<String>(entryKey),
+      'privateAt': serializer.toJson<int?>(privateAt),
+      'clearedAt': serializer.toJson<int?>(clearedAt),
+    };
+  }
+
+  MediaPrivacyFlagRow copyWith({
+    String? mediaKind,
+    String? entryKey,
+    Value<int?> privateAt = const Value.absent(),
+    Value<int?> clearedAt = const Value.absent(),
+  }) => MediaPrivacyFlagRow(
+    mediaKind: mediaKind ?? this.mediaKind,
+    entryKey: entryKey ?? this.entryKey,
+    privateAt: privateAt.present ? privateAt.value : this.privateAt,
+    clearedAt: clearedAt.present ? clearedAt.value : this.clearedAt,
+  );
+  MediaPrivacyFlagRow copyWithCompanion(MediaPrivacyFlagsCompanion data) {
+    return MediaPrivacyFlagRow(
+      mediaKind: data.mediaKind.present ? data.mediaKind.value : this.mediaKind,
+      entryKey: data.entryKey.present ? data.entryKey.value : this.entryKey,
+      privateAt: data.privateAt.present ? data.privateAt.value : this.privateAt,
+      clearedAt: data.clearedAt.present ? data.clearedAt.value : this.clearedAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('MediaPrivacyFlagRow(')
+          ..write('mediaKind: $mediaKind, ')
+          ..write('entryKey: $entryKey, ')
+          ..write('privateAt: $privateAt, ')
+          ..write('clearedAt: $clearedAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(mediaKind, entryKey, privateAt, clearedAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is MediaPrivacyFlagRow &&
+          other.mediaKind == this.mediaKind &&
+          other.entryKey == this.entryKey &&
+          other.privateAt == this.privateAt &&
+          other.clearedAt == this.clearedAt);
+}
+
+class MediaPrivacyFlagsCompanion extends UpdateCompanion<MediaPrivacyFlagRow> {
+  final Value<String> mediaKind;
+  final Value<String> entryKey;
+  final Value<int?> privateAt;
+  final Value<int?> clearedAt;
+  final Value<int> rowid;
+  const MediaPrivacyFlagsCompanion({
+    this.mediaKind = const Value.absent(),
+    this.entryKey = const Value.absent(),
+    this.privateAt = const Value.absent(),
+    this.clearedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  });
+  MediaPrivacyFlagsCompanion.insert({
+    required String mediaKind,
+    required String entryKey,
+    this.privateAt = const Value.absent(),
+    this.clearedAt = const Value.absent(),
+    this.rowid = const Value.absent(),
+  }) : mediaKind = Value(mediaKind),
+       entryKey = Value(entryKey);
+  static Insertable<MediaPrivacyFlagRow> custom({
+    Expression<String>? mediaKind,
+    Expression<String>? entryKey,
+    Expression<int>? privateAt,
+    Expression<int>? clearedAt,
+    Expression<int>? rowid,
+  }) {
+    return RawValuesInsertable({
+      if (mediaKind != null) 'media_kind': mediaKind,
+      if (entryKey != null) 'entry_key': entryKey,
+      if (privateAt != null) 'private_at': privateAt,
+      if (clearedAt != null) 'cleared_at': clearedAt,
+      if (rowid != null) 'rowid': rowid,
+    });
+  }
+
+  MediaPrivacyFlagsCompanion copyWith({
+    Value<String>? mediaKind,
+    Value<String>? entryKey,
+    Value<int?>? privateAt,
+    Value<int?>? clearedAt,
+    Value<int>? rowid,
+  }) {
+    return MediaPrivacyFlagsCompanion(
+      mediaKind: mediaKind ?? this.mediaKind,
+      entryKey: entryKey ?? this.entryKey,
+      privateAt: privateAt ?? this.privateAt,
+      clearedAt: clearedAt ?? this.clearedAt,
+      rowid: rowid ?? this.rowid,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (mediaKind.present) {
+      map['media_kind'] = Variable<String>(mediaKind.value);
+    }
+    if (entryKey.present) {
+      map['entry_key'] = Variable<String>(entryKey.value);
+    }
+    if (privateAt.present) {
+      map['private_at'] = Variable<int>(privateAt.value);
+    }
+    if (clearedAt.present) {
+      map['cleared_at'] = Variable<int>(clearedAt.value);
+    }
+    if (rowid.present) {
+      map['rowid'] = Variable<int>(rowid.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('MediaPrivacyFlagsCompanion(')
+          ..write('mediaKind: $mediaKind, ')
+          ..write('entryKey: $entryKey, ')
+          ..write('privateAt: $privateAt, ')
+          ..write('clearedAt: $clearedAt, ')
+          ..write('rowid: $rowid')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $LibraryOrganizeRunsTable extends LibraryOrganizeRuns
+    with TableInfo<$LibraryOrganizeRunsTable, LibraryOrganizeRunRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $LibraryOrganizeRunsTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _domainMeta = const VerificationMeta('domain');
+  @override
+  late final GeneratedColumn<String> domain = GeneratedColumn<String>(
+    'domain',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _triggerMeta = const VerificationMeta(
+    'trigger',
+  );
+  @override
+  late final GeneratedColumn<String> trigger = GeneratedColumn<String>(
+    'trigger',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _startedAtMeta = const VerificationMeta(
+    'startedAt',
+  );
+  @override
+  late final GeneratedColumn<int> startedAt = GeneratedColumn<int>(
+    'started_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _finishedAtMeta = const VerificationMeta(
+    'finishedAt',
+  );
+  @override
+  late final GeneratedColumn<int> finishedAt = GeneratedColumn<int>(
+    'finished_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _statusMeta = const VerificationMeta('status');
+  @override
+  late final GeneratedColumn<String> status = GeneratedColumn<String>(
+    'status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _providerNameMeta = const VerificationMeta(
+    'providerName',
+  );
+  @override
+  late final GeneratedColumn<String> providerName = GeneratedColumn<String>(
+    'provider_name',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _modelMeta = const VerificationMeta('model');
+  @override
+  late final GeneratedColumn<String> model = GeneratedColumn<String>(
+    'model',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(''),
+  );
+  static const VerificationMeta _requestCountMeta = const VerificationMeta(
+    'requestCount',
+  );
+  @override
+  late final GeneratedColumn<int> requestCount = GeneratedColumn<int>(
+    'request_count',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _inputTokensMeta = const VerificationMeta(
+    'inputTokens',
+  );
+  @override
+  late final GeneratedColumn<int> inputTokens = GeneratedColumn<int>(
+    'input_tokens',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _outputTokensMeta = const VerificationMeta(
+    'outputTokens',
+  );
+  @override
+  late final GeneratedColumn<int> outputTokens = GeneratedColumn<int>(
+    'output_tokens',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
+  static const VerificationMeta _errorMeta = const VerificationMeta('error');
+  @override
+  late final GeneratedColumn<String> error = GeneratedColumn<String>(
+    'error',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    domain,
+    trigger,
+    startedAt,
+    finishedAt,
+    status,
+    providerName,
+    model,
+    requestCount,
+    inputTokens,
+    outputTokens,
+    error,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'library_organize_runs';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<LibraryOrganizeRunRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('domain')) {
+      context.handle(
+        _domainMeta,
+        domain.isAcceptableOrUnknown(data['domain']!, _domainMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_domainMeta);
+    }
+    if (data.containsKey('trigger')) {
+      context.handle(
+        _triggerMeta,
+        trigger.isAcceptableOrUnknown(data['trigger']!, _triggerMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_triggerMeta);
+    }
+    if (data.containsKey('started_at')) {
+      context.handle(
+        _startedAtMeta,
+        startedAt.isAcceptableOrUnknown(data['started_at']!, _startedAtMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_startedAtMeta);
+    }
+    if (data.containsKey('finished_at')) {
+      context.handle(
+        _finishedAtMeta,
+        finishedAt.isAcceptableOrUnknown(data['finished_at']!, _finishedAtMeta),
+      );
+    }
+    if (data.containsKey('status')) {
+      context.handle(
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_statusMeta);
+    }
+    if (data.containsKey('provider_name')) {
+      context.handle(
+        _providerNameMeta,
+        providerName.isAcceptableOrUnknown(
+          data['provider_name']!,
+          _providerNameMeta,
+        ),
+      );
+    }
+    if (data.containsKey('model')) {
+      context.handle(
+        _modelMeta,
+        model.isAcceptableOrUnknown(data['model']!, _modelMeta),
+      );
+    }
+    if (data.containsKey('request_count')) {
+      context.handle(
+        _requestCountMeta,
+        requestCount.isAcceptableOrUnknown(
+          data['request_count']!,
+          _requestCountMeta,
+        ),
+      );
+    }
+    if (data.containsKey('input_tokens')) {
+      context.handle(
+        _inputTokensMeta,
+        inputTokens.isAcceptableOrUnknown(
+          data['input_tokens']!,
+          _inputTokensMeta,
+        ),
+      );
+    }
+    if (data.containsKey('output_tokens')) {
+      context.handle(
+        _outputTokensMeta,
+        outputTokens.isAcceptableOrUnknown(
+          data['output_tokens']!,
+          _outputTokensMeta,
+        ),
+      );
+    }
+    if (data.containsKey('error')) {
+      context.handle(
+        _errorMeta,
+        error.isAcceptableOrUnknown(data['error']!, _errorMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  LibraryOrganizeRunRow map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return LibraryOrganizeRunRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      domain: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}domain'],
+      )!,
+      trigger: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}trigger'],
+      )!,
+      startedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}started_at'],
+      )!,
+      finishedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}finished_at'],
+      ),
+      status: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}status'],
+      )!,
+      providerName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}provider_name'],
+      )!,
+      model: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}model'],
+      )!,
+      requestCount: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}request_count'],
+      )!,
+      inputTokens: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}input_tokens'],
+      )!,
+      outputTokens: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}output_tokens'],
+      )!,
+      error: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}error'],
+      ),
+    );
+  }
+
+  @override
+  $LibraryOrganizeRunsTable createAlias(String alias) {
+    return $LibraryOrganizeRunsTable(attachedDatabase, alias);
+  }
+}
+
+class LibraryOrganizeRunRow extends DataClass
+    implements Insertable<LibraryOrganizeRunRow> {
+  final int id;
+
+  /// `CollectionShelfDomain.name`：books / manga / video / games。
+  final String domain;
+
+  /// `manual` | `auto`。
+  final String trigger;
+  final int startedAt;
+  final int? finishedAt;
+
+  /// `running` | `done` | `failed` | `cancelled` | `skipped`。
+  final String status;
+  final String providerName;
+  final String model;
+  final int requestCount;
+  final int inputTokens;
+  final int outputTokens;
+
+  /// 失败 / 跳过的脱敏原因码（`AiChatFailure.message` 或本地原因）；成功为 NULL。
+  final String? error;
+  const LibraryOrganizeRunRow({
+    required this.id,
+    required this.domain,
+    required this.trigger,
+    required this.startedAt,
+    this.finishedAt,
+    required this.status,
+    required this.providerName,
+    required this.model,
+    required this.requestCount,
+    required this.inputTokens,
+    required this.outputTokens,
+    this.error,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['domain'] = Variable<String>(domain);
+    map['trigger'] = Variable<String>(trigger);
+    map['started_at'] = Variable<int>(startedAt);
+    if (!nullToAbsent || finishedAt != null) {
+      map['finished_at'] = Variable<int>(finishedAt);
+    }
+    map['status'] = Variable<String>(status);
+    map['provider_name'] = Variable<String>(providerName);
+    map['model'] = Variable<String>(model);
+    map['request_count'] = Variable<int>(requestCount);
+    map['input_tokens'] = Variable<int>(inputTokens);
+    map['output_tokens'] = Variable<int>(outputTokens);
+    if (!nullToAbsent || error != null) {
+      map['error'] = Variable<String>(error);
+    }
+    return map;
+  }
+
+  LibraryOrganizeRunsCompanion toCompanion(bool nullToAbsent) {
+    return LibraryOrganizeRunsCompanion(
+      id: Value(id),
+      domain: Value(domain),
+      trigger: Value(trigger),
+      startedAt: Value(startedAt),
+      finishedAt: finishedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(finishedAt),
+      status: Value(status),
+      providerName: Value(providerName),
+      model: Value(model),
+      requestCount: Value(requestCount),
+      inputTokens: Value(inputTokens),
+      outputTokens: Value(outputTokens),
+      error: error == null && nullToAbsent
+          ? const Value.absent()
+          : Value(error),
+    );
+  }
+
+  factory LibraryOrganizeRunRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return LibraryOrganizeRunRow(
+      id: serializer.fromJson<int>(json['id']),
+      domain: serializer.fromJson<String>(json['domain']),
+      trigger: serializer.fromJson<String>(json['trigger']),
+      startedAt: serializer.fromJson<int>(json['startedAt']),
+      finishedAt: serializer.fromJson<int?>(json['finishedAt']),
+      status: serializer.fromJson<String>(json['status']),
+      providerName: serializer.fromJson<String>(json['providerName']),
+      model: serializer.fromJson<String>(json['model']),
+      requestCount: serializer.fromJson<int>(json['requestCount']),
+      inputTokens: serializer.fromJson<int>(json['inputTokens']),
+      outputTokens: serializer.fromJson<int>(json['outputTokens']),
+      error: serializer.fromJson<String?>(json['error']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'domain': serializer.toJson<String>(domain),
+      'trigger': serializer.toJson<String>(trigger),
+      'startedAt': serializer.toJson<int>(startedAt),
+      'finishedAt': serializer.toJson<int?>(finishedAt),
+      'status': serializer.toJson<String>(status),
+      'providerName': serializer.toJson<String>(providerName),
+      'model': serializer.toJson<String>(model),
+      'requestCount': serializer.toJson<int>(requestCount),
+      'inputTokens': serializer.toJson<int>(inputTokens),
+      'outputTokens': serializer.toJson<int>(outputTokens),
+      'error': serializer.toJson<String?>(error),
+    };
+  }
+
+  LibraryOrganizeRunRow copyWith({
+    int? id,
+    String? domain,
+    String? trigger,
+    int? startedAt,
+    Value<int?> finishedAt = const Value.absent(),
+    String? status,
+    String? providerName,
+    String? model,
+    int? requestCount,
+    int? inputTokens,
+    int? outputTokens,
+    Value<String?> error = const Value.absent(),
+  }) => LibraryOrganizeRunRow(
+    id: id ?? this.id,
+    domain: domain ?? this.domain,
+    trigger: trigger ?? this.trigger,
+    startedAt: startedAt ?? this.startedAt,
+    finishedAt: finishedAt.present ? finishedAt.value : this.finishedAt,
+    status: status ?? this.status,
+    providerName: providerName ?? this.providerName,
+    model: model ?? this.model,
+    requestCount: requestCount ?? this.requestCount,
+    inputTokens: inputTokens ?? this.inputTokens,
+    outputTokens: outputTokens ?? this.outputTokens,
+    error: error.present ? error.value : this.error,
+  );
+  LibraryOrganizeRunRow copyWithCompanion(LibraryOrganizeRunsCompanion data) {
+    return LibraryOrganizeRunRow(
+      id: data.id.present ? data.id.value : this.id,
+      domain: data.domain.present ? data.domain.value : this.domain,
+      trigger: data.trigger.present ? data.trigger.value : this.trigger,
+      startedAt: data.startedAt.present ? data.startedAt.value : this.startedAt,
+      finishedAt: data.finishedAt.present
+          ? data.finishedAt.value
+          : this.finishedAt,
+      status: data.status.present ? data.status.value : this.status,
+      providerName: data.providerName.present
+          ? data.providerName.value
+          : this.providerName,
+      model: data.model.present ? data.model.value : this.model,
+      requestCount: data.requestCount.present
+          ? data.requestCount.value
+          : this.requestCount,
+      inputTokens: data.inputTokens.present
+          ? data.inputTokens.value
+          : this.inputTokens,
+      outputTokens: data.outputTokens.present
+          ? data.outputTokens.value
+          : this.outputTokens,
+      error: data.error.present ? data.error.value : this.error,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LibraryOrganizeRunRow(')
+          ..write('id: $id, ')
+          ..write('domain: $domain, ')
+          ..write('trigger: $trigger, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('finishedAt: $finishedAt, ')
+          ..write('status: $status, ')
+          ..write('providerName: $providerName, ')
+          ..write('model: $model, ')
+          ..write('requestCount: $requestCount, ')
+          ..write('inputTokens: $inputTokens, ')
+          ..write('outputTokens: $outputTokens, ')
+          ..write('error: $error')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    domain,
+    trigger,
+    startedAt,
+    finishedAt,
+    status,
+    providerName,
+    model,
+    requestCount,
+    inputTokens,
+    outputTokens,
+    error,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is LibraryOrganizeRunRow &&
+          other.id == this.id &&
+          other.domain == this.domain &&
+          other.trigger == this.trigger &&
+          other.startedAt == this.startedAt &&
+          other.finishedAt == this.finishedAt &&
+          other.status == this.status &&
+          other.providerName == this.providerName &&
+          other.model == this.model &&
+          other.requestCount == this.requestCount &&
+          other.inputTokens == this.inputTokens &&
+          other.outputTokens == this.outputTokens &&
+          other.error == this.error);
+}
+
+class LibraryOrganizeRunsCompanion
+    extends UpdateCompanion<LibraryOrganizeRunRow> {
+  final Value<int> id;
+  final Value<String> domain;
+  final Value<String> trigger;
+  final Value<int> startedAt;
+  final Value<int?> finishedAt;
+  final Value<String> status;
+  final Value<String> providerName;
+  final Value<String> model;
+  final Value<int> requestCount;
+  final Value<int> inputTokens;
+  final Value<int> outputTokens;
+  final Value<String?> error;
+  const LibraryOrganizeRunsCompanion({
+    this.id = const Value.absent(),
+    this.domain = const Value.absent(),
+    this.trigger = const Value.absent(),
+    this.startedAt = const Value.absent(),
+    this.finishedAt = const Value.absent(),
+    this.status = const Value.absent(),
+    this.providerName = const Value.absent(),
+    this.model = const Value.absent(),
+    this.requestCount = const Value.absent(),
+    this.inputTokens = const Value.absent(),
+    this.outputTokens = const Value.absent(),
+    this.error = const Value.absent(),
+  });
+  LibraryOrganizeRunsCompanion.insert({
+    this.id = const Value.absent(),
+    required String domain,
+    required String trigger,
+    required int startedAt,
+    this.finishedAt = const Value.absent(),
+    required String status,
+    this.providerName = const Value.absent(),
+    this.model = const Value.absent(),
+    this.requestCount = const Value.absent(),
+    this.inputTokens = const Value.absent(),
+    this.outputTokens = const Value.absent(),
+    this.error = const Value.absent(),
+  }) : domain = Value(domain),
+       trigger = Value(trigger),
+       startedAt = Value(startedAt),
+       status = Value(status);
+  static Insertable<LibraryOrganizeRunRow> custom({
+    Expression<int>? id,
+    Expression<String>? domain,
+    Expression<String>? trigger,
+    Expression<int>? startedAt,
+    Expression<int>? finishedAt,
+    Expression<String>? status,
+    Expression<String>? providerName,
+    Expression<String>? model,
+    Expression<int>? requestCount,
+    Expression<int>? inputTokens,
+    Expression<int>? outputTokens,
+    Expression<String>? error,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (domain != null) 'domain': domain,
+      if (trigger != null) 'trigger': trigger,
+      if (startedAt != null) 'started_at': startedAt,
+      if (finishedAt != null) 'finished_at': finishedAt,
+      if (status != null) 'status': status,
+      if (providerName != null) 'provider_name': providerName,
+      if (model != null) 'model': model,
+      if (requestCount != null) 'request_count': requestCount,
+      if (inputTokens != null) 'input_tokens': inputTokens,
+      if (outputTokens != null) 'output_tokens': outputTokens,
+      if (error != null) 'error': error,
+    });
+  }
+
+  LibraryOrganizeRunsCompanion copyWith({
+    Value<int>? id,
+    Value<String>? domain,
+    Value<String>? trigger,
+    Value<int>? startedAt,
+    Value<int?>? finishedAt,
+    Value<String>? status,
+    Value<String>? providerName,
+    Value<String>? model,
+    Value<int>? requestCount,
+    Value<int>? inputTokens,
+    Value<int>? outputTokens,
+    Value<String?>? error,
+  }) {
+    return LibraryOrganizeRunsCompanion(
+      id: id ?? this.id,
+      domain: domain ?? this.domain,
+      trigger: trigger ?? this.trigger,
+      startedAt: startedAt ?? this.startedAt,
+      finishedAt: finishedAt ?? this.finishedAt,
+      status: status ?? this.status,
+      providerName: providerName ?? this.providerName,
+      model: model ?? this.model,
+      requestCount: requestCount ?? this.requestCount,
+      inputTokens: inputTokens ?? this.inputTokens,
+      outputTokens: outputTokens ?? this.outputTokens,
+      error: error ?? this.error,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (domain.present) {
+      map['domain'] = Variable<String>(domain.value);
+    }
+    if (trigger.present) {
+      map['trigger'] = Variable<String>(trigger.value);
+    }
+    if (startedAt.present) {
+      map['started_at'] = Variable<int>(startedAt.value);
+    }
+    if (finishedAt.present) {
+      map['finished_at'] = Variable<int>(finishedAt.value);
+    }
+    if (status.present) {
+      map['status'] = Variable<String>(status.value);
+    }
+    if (providerName.present) {
+      map['provider_name'] = Variable<String>(providerName.value);
+    }
+    if (model.present) {
+      map['model'] = Variable<String>(model.value);
+    }
+    if (requestCount.present) {
+      map['request_count'] = Variable<int>(requestCount.value);
+    }
+    if (inputTokens.present) {
+      map['input_tokens'] = Variable<int>(inputTokens.value);
+    }
+    if (outputTokens.present) {
+      map['output_tokens'] = Variable<int>(outputTokens.value);
+    }
+    if (error.present) {
+      map['error'] = Variable<String>(error.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LibraryOrganizeRunsCompanion(')
+          ..write('id: $id, ')
+          ..write('domain: $domain, ')
+          ..write('trigger: $trigger, ')
+          ..write('startedAt: $startedAt, ')
+          ..write('finishedAt: $finishedAt, ')
+          ..write('status: $status, ')
+          ..write('providerName: $providerName, ')
+          ..write('model: $model, ')
+          ..write('requestCount: $requestCount, ')
+          ..write('inputTokens: $inputTokens, ')
+          ..write('outputTokens: $outputTokens, ')
+          ..write('error: $error')
+          ..write(')'))
+        .toString();
+  }
+}
+
+class $LibraryOrganizeChangesTable extends LibraryOrganizeChanges
+    with TableInfo<$LibraryOrganizeChangesTable, LibraryOrganizeChangeRow> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $LibraryOrganizeChangesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+    'id',
+    aliasedName,
+    false,
+    hasAutoIncrement: true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'PRIMARY KEY AUTOINCREMENT',
+    ),
+  );
+  static const VerificationMeta _runIdMeta = const VerificationMeta('runId');
+  @override
+  late final GeneratedColumn<int> runId = GeneratedColumn<int>(
+    'run_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'REFERENCES library_organize_runs (id) ON DELETE CASCADE',
+    ),
+  );
+  static const VerificationMeta _kindMeta = const VerificationMeta('kind');
+  @override
+  late final GeneratedColumn<String> kind = GeneratedColumn<String>(
+    'kind',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _collectionNameMeta = const VerificationMeta(
+    'collectionName',
+  );
+  @override
+  late final GeneratedColumn<String> collectionName = GeneratedColumn<String>(
+    'collection_name',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _collectionTypeMeta = const VerificationMeta(
+    'collectionType',
+  );
+  @override
+  late final GeneratedColumn<String> collectionType = GeneratedColumn<String>(
+    'collection_type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _organizeKeyMeta = const VerificationMeta(
+    'organizeKey',
+  );
+  @override
+  late final GeneratedColumn<String> organizeKey = GeneratedColumn<String>(
+    'organize_key',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _sourceMeta = const VerificationMeta('source');
+  @override
+  late final GeneratedColumn<String> source = GeneratedColumn<String>(
+    'source',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _confidenceMeta = const VerificationMeta(
+    'confidence',
+  );
+  @override
+  late final GeneratedColumn<String> confidence = GeneratedColumn<String>(
+    'confidence',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _payloadJsonMeta = const VerificationMeta(
+    'payloadJson',
+  );
+  @override
+  late final GeneratedColumn<String> payloadJson = GeneratedColumn<String>(
+    'payload_json',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _undoneAtMeta = const VerificationMeta(
+    'undoneAt',
+  );
+  @override
+  late final GeneratedColumn<int> undoneAt = GeneratedColumn<int>(
+    'undone_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+  );
+  @override
+  List<GeneratedColumn> get $columns => [
+    id,
+    runId,
+    kind,
+    collectionName,
+    collectionType,
+    organizeKey,
+    source,
+    confidence,
+    payloadJson,
+    undoneAt,
+  ];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'library_organize_changes';
+  @override
+  VerificationContext validateIntegrity(
+    Insertable<LibraryOrganizeChangeRow> instance, {
+    bool isInserting = false,
+  }) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('run_id')) {
+      context.handle(
+        _runIdMeta,
+        runId.isAcceptableOrUnknown(data['run_id']!, _runIdMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_runIdMeta);
+    }
+    if (data.containsKey('kind')) {
+      context.handle(
+        _kindMeta,
+        kind.isAcceptableOrUnknown(data['kind']!, _kindMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_kindMeta);
+    }
+    if (data.containsKey('collection_name')) {
+      context.handle(
+        _collectionNameMeta,
+        collectionName.isAcceptableOrUnknown(
+          data['collection_name']!,
+          _collectionNameMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_collectionNameMeta);
+    }
+    if (data.containsKey('collection_type')) {
+      context.handle(
+        _collectionTypeMeta,
+        collectionType.isAcceptableOrUnknown(
+          data['collection_type']!,
+          _collectionTypeMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_collectionTypeMeta);
+    }
+    if (data.containsKey('organize_key')) {
+      context.handle(
+        _organizeKeyMeta,
+        organizeKey.isAcceptableOrUnknown(
+          data['organize_key']!,
+          _organizeKeyMeta,
+        ),
+      );
+    }
+    if (data.containsKey('source')) {
+      context.handle(
+        _sourceMeta,
+        source.isAcceptableOrUnknown(data['source']!, _sourceMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_sourceMeta);
+    }
+    if (data.containsKey('confidence')) {
+      context.handle(
+        _confidenceMeta,
+        confidence.isAcceptableOrUnknown(data['confidence']!, _confidenceMeta),
+      );
+    } else if (isInserting) {
+      context.missing(_confidenceMeta);
+    }
+    if (data.containsKey('payload_json')) {
+      context.handle(
+        _payloadJsonMeta,
+        payloadJson.isAcceptableOrUnknown(
+          data['payload_json']!,
+          _payloadJsonMeta,
+        ),
+      );
+    } else if (isInserting) {
+      context.missing(_payloadJsonMeta);
+    }
+    if (data.containsKey('undone_at')) {
+      context.handle(
+        _undoneAtMeta,
+        undoneAt.isAcceptableOrUnknown(data['undone_at']!, _undoneAtMeta),
+      );
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  LibraryOrganizeChangeRow map(
+    Map<String, dynamic> data, {
+    String? tablePrefix,
+  }) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return LibraryOrganizeChangeRow(
+      id: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}id'],
+      )!,
+      runId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}run_id'],
+      )!,
+      kind: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kind'],
+      )!,
+      collectionName: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}collection_name'],
+      )!,
+      collectionType: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}collection_type'],
+      )!,
+      organizeKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}organize_key'],
+      ),
+      source: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}source'],
+      )!,
+      confidence: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}confidence'],
+      )!,
+      payloadJson: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}payload_json'],
+      )!,
+      undoneAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}undone_at'],
+      ),
+    );
+  }
+
+  @override
+  $LibraryOrganizeChangesTable createAlias(String alias) {
+    return $LibraryOrganizeChangesTable(attachedDatabase, alias);
+  }
+}
+
+class LibraryOrganizeChangeRow extends DataClass
+    implements Insertable<LibraryOrganizeChangeRow> {
+  final int id;
+  final int runId;
+
+  /// `create` | `add` | `merge` | `evict` | `tag`。
+  final String kind;
+
+  /// 改动落在哪个合集（自然键；改名 / 合并后按记录时的名字找）。
+  final String collectionName;
+  final String collectionType;
+  final String? organizeKey;
+
+  /// `rule` | `ai`：这一处是规则定的还是 AI 定的。
+  final String source;
+
+  /// `high` | `medium`（规则恒 high）。
+  final String confidence;
+
+  /// 撤销所需的全部细节（JSON）：成员清单、被合并合集的快照、标签名等。
+  final String payloadJson;
+
+  /// 撤销时刻；NULL = 未撤销。
+  final int? undoneAt;
+  const LibraryOrganizeChangeRow({
+    required this.id,
+    required this.runId,
+    required this.kind,
+    required this.collectionName,
+    required this.collectionType,
+    this.organizeKey,
+    required this.source,
+    required this.confidence,
+    required this.payloadJson,
+    this.undoneAt,
+  });
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['run_id'] = Variable<int>(runId);
+    map['kind'] = Variable<String>(kind);
+    map['collection_name'] = Variable<String>(collectionName);
+    map['collection_type'] = Variable<String>(collectionType);
+    if (!nullToAbsent || organizeKey != null) {
+      map['organize_key'] = Variable<String>(organizeKey);
+    }
+    map['source'] = Variable<String>(source);
+    map['confidence'] = Variable<String>(confidence);
+    map['payload_json'] = Variable<String>(payloadJson);
+    if (!nullToAbsent || undoneAt != null) {
+      map['undone_at'] = Variable<int>(undoneAt);
+    }
+    return map;
+  }
+
+  LibraryOrganizeChangesCompanion toCompanion(bool nullToAbsent) {
+    return LibraryOrganizeChangesCompanion(
+      id: Value(id),
+      runId: Value(runId),
+      kind: Value(kind),
+      collectionName: Value(collectionName),
+      collectionType: Value(collectionType),
+      organizeKey: organizeKey == null && nullToAbsent
+          ? const Value.absent()
+          : Value(organizeKey),
+      source: Value(source),
+      confidence: Value(confidence),
+      payloadJson: Value(payloadJson),
+      undoneAt: undoneAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(undoneAt),
+    );
+  }
+
+  factory LibraryOrganizeChangeRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return LibraryOrganizeChangeRow(
+      id: serializer.fromJson<int>(json['id']),
+      runId: serializer.fromJson<int>(json['runId']),
+      kind: serializer.fromJson<String>(json['kind']),
+      collectionName: serializer.fromJson<String>(json['collectionName']),
+      collectionType: serializer.fromJson<String>(json['collectionType']),
+      organizeKey: serializer.fromJson<String?>(json['organizeKey']),
+      source: serializer.fromJson<String>(json['source']),
+      confidence: serializer.fromJson<String>(json['confidence']),
+      payloadJson: serializer.fromJson<String>(json['payloadJson']),
+      undoneAt: serializer.fromJson<int?>(json['undoneAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'runId': serializer.toJson<int>(runId),
+      'kind': serializer.toJson<String>(kind),
+      'collectionName': serializer.toJson<String>(collectionName),
+      'collectionType': serializer.toJson<String>(collectionType),
+      'organizeKey': serializer.toJson<String?>(organizeKey),
+      'source': serializer.toJson<String>(source),
+      'confidence': serializer.toJson<String>(confidence),
+      'payloadJson': serializer.toJson<String>(payloadJson),
+      'undoneAt': serializer.toJson<int?>(undoneAt),
+    };
+  }
+
+  LibraryOrganizeChangeRow copyWith({
+    int? id,
+    int? runId,
+    String? kind,
+    String? collectionName,
+    String? collectionType,
+    Value<String?> organizeKey = const Value.absent(),
+    String? source,
+    String? confidence,
+    String? payloadJson,
+    Value<int?> undoneAt = const Value.absent(),
+  }) => LibraryOrganizeChangeRow(
+    id: id ?? this.id,
+    runId: runId ?? this.runId,
+    kind: kind ?? this.kind,
+    collectionName: collectionName ?? this.collectionName,
+    collectionType: collectionType ?? this.collectionType,
+    organizeKey: organizeKey.present ? organizeKey.value : this.organizeKey,
+    source: source ?? this.source,
+    confidence: confidence ?? this.confidence,
+    payloadJson: payloadJson ?? this.payloadJson,
+    undoneAt: undoneAt.present ? undoneAt.value : this.undoneAt,
+  );
+  LibraryOrganizeChangeRow copyWithCompanion(
+    LibraryOrganizeChangesCompanion data,
+  ) {
+    return LibraryOrganizeChangeRow(
+      id: data.id.present ? data.id.value : this.id,
+      runId: data.runId.present ? data.runId.value : this.runId,
+      kind: data.kind.present ? data.kind.value : this.kind,
+      collectionName: data.collectionName.present
+          ? data.collectionName.value
+          : this.collectionName,
+      collectionType: data.collectionType.present
+          ? data.collectionType.value
+          : this.collectionType,
+      organizeKey: data.organizeKey.present
+          ? data.organizeKey.value
+          : this.organizeKey,
+      source: data.source.present ? data.source.value : this.source,
+      confidence: data.confidence.present
+          ? data.confidence.value
+          : this.confidence,
+      payloadJson: data.payloadJson.present
+          ? data.payloadJson.value
+          : this.payloadJson,
+      undoneAt: data.undoneAt.present ? data.undoneAt.value : this.undoneAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LibraryOrganizeChangeRow(')
+          ..write('id: $id, ')
+          ..write('runId: $runId, ')
+          ..write('kind: $kind, ')
+          ..write('collectionName: $collectionName, ')
+          ..write('collectionType: $collectionType, ')
+          ..write('organizeKey: $organizeKey, ')
+          ..write('source: $source, ')
+          ..write('confidence: $confidence, ')
+          ..write('payloadJson: $payloadJson, ')
+          ..write('undoneAt: $undoneAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    id,
+    runId,
+    kind,
+    collectionName,
+    collectionType,
+    organizeKey,
+    source,
+    confidence,
+    payloadJson,
+    undoneAt,
+  );
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is LibraryOrganizeChangeRow &&
+          other.id == this.id &&
+          other.runId == this.runId &&
+          other.kind == this.kind &&
+          other.collectionName == this.collectionName &&
+          other.collectionType == this.collectionType &&
+          other.organizeKey == this.organizeKey &&
+          other.source == this.source &&
+          other.confidence == this.confidence &&
+          other.payloadJson == this.payloadJson &&
+          other.undoneAt == this.undoneAt);
+}
+
+class LibraryOrganizeChangesCompanion
+    extends UpdateCompanion<LibraryOrganizeChangeRow> {
+  final Value<int> id;
+  final Value<int> runId;
+  final Value<String> kind;
+  final Value<String> collectionName;
+  final Value<String> collectionType;
+  final Value<String?> organizeKey;
+  final Value<String> source;
+  final Value<String> confidence;
+  final Value<String> payloadJson;
+  final Value<int?> undoneAt;
+  const LibraryOrganizeChangesCompanion({
+    this.id = const Value.absent(),
+    this.runId = const Value.absent(),
+    this.kind = const Value.absent(),
+    this.collectionName = const Value.absent(),
+    this.collectionType = const Value.absent(),
+    this.organizeKey = const Value.absent(),
+    this.source = const Value.absent(),
+    this.confidence = const Value.absent(),
+    this.payloadJson = const Value.absent(),
+    this.undoneAt = const Value.absent(),
+  });
+  LibraryOrganizeChangesCompanion.insert({
+    this.id = const Value.absent(),
+    required int runId,
+    required String kind,
+    required String collectionName,
+    required String collectionType,
+    this.organizeKey = const Value.absent(),
+    required String source,
+    required String confidence,
+    required String payloadJson,
+    this.undoneAt = const Value.absent(),
+  }) : runId = Value(runId),
+       kind = Value(kind),
+       collectionName = Value(collectionName),
+       collectionType = Value(collectionType),
+       source = Value(source),
+       confidence = Value(confidence),
+       payloadJson = Value(payloadJson);
+  static Insertable<LibraryOrganizeChangeRow> custom({
+    Expression<int>? id,
+    Expression<int>? runId,
+    Expression<String>? kind,
+    Expression<String>? collectionName,
+    Expression<String>? collectionType,
+    Expression<String>? organizeKey,
+    Expression<String>? source,
+    Expression<String>? confidence,
+    Expression<String>? payloadJson,
+    Expression<int>? undoneAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (runId != null) 'run_id': runId,
+      if (kind != null) 'kind': kind,
+      if (collectionName != null) 'collection_name': collectionName,
+      if (collectionType != null) 'collection_type': collectionType,
+      if (organizeKey != null) 'organize_key': organizeKey,
+      if (source != null) 'source': source,
+      if (confidence != null) 'confidence': confidence,
+      if (payloadJson != null) 'payload_json': payloadJson,
+      if (undoneAt != null) 'undone_at': undoneAt,
+    });
+  }
+
+  LibraryOrganizeChangesCompanion copyWith({
+    Value<int>? id,
+    Value<int>? runId,
+    Value<String>? kind,
+    Value<String>? collectionName,
+    Value<String>? collectionType,
+    Value<String?>? organizeKey,
+    Value<String>? source,
+    Value<String>? confidence,
+    Value<String>? payloadJson,
+    Value<int?>? undoneAt,
+  }) {
+    return LibraryOrganizeChangesCompanion(
+      id: id ?? this.id,
+      runId: runId ?? this.runId,
+      kind: kind ?? this.kind,
+      collectionName: collectionName ?? this.collectionName,
+      collectionType: collectionType ?? this.collectionType,
+      organizeKey: organizeKey ?? this.organizeKey,
+      source: source ?? this.source,
+      confidence: confidence ?? this.confidence,
+      payloadJson: payloadJson ?? this.payloadJson,
+      undoneAt: undoneAt ?? this.undoneAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (runId.present) {
+      map['run_id'] = Variable<int>(runId.value);
+    }
+    if (kind.present) {
+      map['kind'] = Variable<String>(kind.value);
+    }
+    if (collectionName.present) {
+      map['collection_name'] = Variable<String>(collectionName.value);
+    }
+    if (collectionType.present) {
+      map['collection_type'] = Variable<String>(collectionType.value);
+    }
+    if (organizeKey.present) {
+      map['organize_key'] = Variable<String>(organizeKey.value);
+    }
+    if (source.present) {
+      map['source'] = Variable<String>(source.value);
+    }
+    if (confidence.present) {
+      map['confidence'] = Variable<String>(confidence.value);
+    }
+    if (payloadJson.present) {
+      map['payload_json'] = Variable<String>(payloadJson.value);
+    }
+    if (undoneAt.present) {
+      map['undone_at'] = Variable<int>(undoneAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('LibraryOrganizeChangesCompanion(')
+          ..write('id: $id, ')
+          ..write('runId: $runId, ')
+          ..write('kind: $kind, ')
+          ..write('collectionName: $collectionName, ')
+          ..write('collectionType: $collectionType, ')
+          ..write('organizeKey: $organizeKey, ')
+          ..write('source: $source, ')
+          ..write('confidence: $confidence, ')
+          ..write('payloadJson: $payloadJson, ')
+          ..write('undoneAt: $undoneAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 abstract class _$FushiDatabase extends GeneratedDatabase {
   _$FushiDatabase(QueryExecutor e) : super(e);
   $FushiDatabaseManager get managers => $FushiDatabaseManager(this);
@@ -56143,6 +63480,25 @@ abstract class _$FushiDatabase extends GeneratedDatabase {
   late final $PendingMineQueueTable pendingMineQueue = $PendingMineQueueTable(
     this,
   );
+  late final $SrsEntitiesTable srsEntities = $SrsEntitiesTable(this);
+  late final $SrsFieldEditsTable srsFieldEdits = $SrsFieldEditsTable(this);
+  late final $SrsReviewLogsTable srsReviewLogs = $SrsReviewLogsTable(this);
+  late final $SrsUnknownEventsTable srsUnknownEvents = $SrsUnknownEventsTable(
+    this,
+  );
+  late final $SrsEventLocalTable srsEventLocal = $SrsEventLocalTable(this);
+  late final $SrsLocalStateTable srsLocalState = $SrsLocalStateTable(this);
+  late final $SrsNotesCacheTable srsNotesCache = $SrsNotesCacheTable(this);
+  late final $SrsCardsCacheTable srsCardsCache = $SrsCardsCacheTable(this);
+  late final $VideoSubtitleGlossariesTable videoSubtitleGlossaries =
+      $VideoSubtitleGlossariesTable(this);
+  late final $SrsSentBatchesTable srsSentBatches = $SrsSentBatchesTable(this);
+  late final $MediaPrivacyFlagsTable mediaPrivacyFlags =
+      $MediaPrivacyFlagsTable(this);
+  late final $LibraryOrganizeRunsTable libraryOrganizeRuns =
+      $LibraryOrganizeRunsTable(this);
+  late final $LibraryOrganizeChangesTable libraryOrganizeChanges =
+      $LibraryOrganizeChangesTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -56238,6 +63594,19 @@ abstract class _$FushiDatabase extends GeneratedDatabase {
     anidbFileIdentities,
     videoEpisodeBindingOverrides,
     pendingMineQueue,
+    srsEntities,
+    srsFieldEdits,
+    srsReviewLogs,
+    srsUnknownEvents,
+    srsEventLocal,
+    srsLocalState,
+    srsNotesCache,
+    srsCardsCache,
+    videoSubtitleGlossaries,
+    srsSentBatches,
+    mediaPrivacyFlags,
+    libraryOrganizeRuns,
+    libraryOrganizeChanges,
   ];
   @override
   StreamQueryUpdateRules get streamUpdateRules => const StreamQueryUpdateRules([
@@ -56709,6 +64078,15 @@ abstract class _$FushiDatabase extends GeneratedDatabase {
       ),
       result: [
         TableUpdate('video_episode_binding_overrides', kind: UpdateKind.delete),
+      ],
+    ),
+    WritePropagation(
+      on: TableUpdateQuery.onTableName(
+        'library_organize_runs',
+        limitUpdateKind: UpdateKind.delete,
+      ),
+      result: [
+        TableUpdate('library_organize_changes', kind: UpdateKind.delete),
       ],
     ),
   ]);
@@ -58134,6 +65512,7 @@ typedef $$SrtBooksTableCreateCompanionBuilder =
       required String srtPath,
       Value<String?> coverPath,
       required int importedAt,
+      Value<int?> localAddedAt,
       Value<String> bookKey,
       Value<String?> language,
     });
@@ -58148,6 +65527,7 @@ typedef $$SrtBooksTableUpdateCompanionBuilder =
       Value<String> srtPath,
       Value<String?> coverPath,
       Value<int> importedAt,
+      Value<int?> localAddedAt,
       Value<String> bookKey,
       Value<String?> language,
     });
@@ -58203,6 +65583,11 @@ class $$SrtBooksTableFilterComposer
 
   ColumnFilters<int> get importedAt => $composableBuilder(
     column: $table.importedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -58271,6 +65656,11 @@ class $$SrtBooksTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get bookKey => $composableBuilder(
     column: $table.bookKey,
     builder: (column) => ColumnOrderings(column),
@@ -58322,6 +65712,11 @@ class $$SrtBooksTableAnnotationComposer
     builder: (column) => column,
   );
 
+  GeneratedColumn<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
+    builder: (column) => column,
+  );
+
   GeneratedColumn<String> get bookKey =>
       $composableBuilder(column: $table.bookKey, builder: (column) => column);
 
@@ -58369,6 +65764,7 @@ class $$SrtBooksTableTableManager
                 Value<String> srtPath = const Value.absent(),
                 Value<String?> coverPath = const Value.absent(),
                 Value<int> importedAt = const Value.absent(),
+                Value<int?> localAddedAt = const Value.absent(),
                 Value<String> bookKey = const Value.absent(),
                 Value<String?> language = const Value.absent(),
               }) => SrtBooksCompanion(
@@ -58381,6 +65777,7 @@ class $$SrtBooksTableTableManager
                 srtPath: srtPath,
                 coverPath: coverPath,
                 importedAt: importedAt,
+                localAddedAt: localAddedAt,
                 bookKey: bookKey,
                 language: language,
               ),
@@ -58395,6 +65792,7 @@ class $$SrtBooksTableTableManager
                 required String srtPath,
                 Value<String?> coverPath = const Value.absent(),
                 required int importedAt,
+                Value<int?> localAddedAt = const Value.absent(),
                 Value<String> bookKey = const Value.absent(),
                 Value<String?> language = const Value.absent(),
               }) => SrtBooksCompanion.insert(
@@ -58407,6 +65805,7 @@ class $$SrtBooksTableTableManager
                 srtPath: srtPath,
                 coverPath: coverPath,
                 importedAt: importedAt,
+                localAddedAt: localAddedAt,
                 bookKey: bookKey,
                 language: language,
               ),
@@ -61163,6 +68562,7 @@ typedef $$EpubBooksTableCreateCompanionBuilder =
       Value<String?> tocJson,
       Value<String?> sourceMetadata,
       required int importedAt,
+      Value<int?> localAddedAt,
       Value<String?> language,
       Value<String> format,
       Value<String?> mangaReadingMode,
@@ -61185,6 +68585,7 @@ typedef $$EpubBooksTableUpdateCompanionBuilder =
       Value<String?> tocJson,
       Value<String?> sourceMetadata,
       Value<int> importedAt,
+      Value<int?> localAddedAt,
       Value<String?> language,
       Value<String> format,
       Value<String?> mangaReadingMode,
@@ -61282,6 +68683,11 @@ class $$EpubBooksTableFilterComposer
 
   ColumnFilters<int> get importedAt => $composableBuilder(
     column: $table.importedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -61403,6 +68809,11 @@ class $$EpubBooksTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get language => $composableBuilder(
     column: $table.language,
     builder: (column) => ColumnOrderings(column),
@@ -61507,6 +68918,11 @@ class $$EpubBooksTableAnnotationComposer
     builder: (column) => column,
   );
 
+  GeneratedColumn<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
+    builder: (column) => column,
+  );
+
   GeneratedColumn<String> get language =>
       $composableBuilder(column: $table.language, builder: (column) => column);
 
@@ -61590,6 +69006,7 @@ class $$EpubBooksTableTableManager
                 Value<String?> tocJson = const Value.absent(),
                 Value<String?> sourceMetadata = const Value.absent(),
                 Value<int> importedAt = const Value.absent(),
+                Value<int?> localAddedAt = const Value.absent(),
                 Value<String?> language = const Value.absent(),
                 Value<String> format = const Value.absent(),
                 Value<String?> mangaReadingMode = const Value.absent(),
@@ -61610,6 +69027,7 @@ class $$EpubBooksTableTableManager
                 tocJson: tocJson,
                 sourceMetadata: sourceMetadata,
                 importedAt: importedAt,
+                localAddedAt: localAddedAt,
                 language: language,
                 format: format,
                 mangaReadingMode: mangaReadingMode,
@@ -61632,6 +69050,7 @@ class $$EpubBooksTableTableManager
                 Value<String?> tocJson = const Value.absent(),
                 Value<String?> sourceMetadata = const Value.absent(),
                 required int importedAt,
+                Value<int?> localAddedAt = const Value.absent(),
                 Value<String?> language = const Value.absent(),
                 Value<String> format = const Value.absent(),
                 Value<String?> mangaReadingMode = const Value.absent(),
@@ -61652,6 +69071,7 @@ class $$EpubBooksTableTableManager
                 tocJson: tocJson,
                 sourceMetadata: sourceMetadata,
                 importedAt: importedAt,
+                localAddedAt: localAddedAt,
                 language: language,
                 format: format,
                 mangaReadingMode: mangaReadingMode,
@@ -62339,6 +69759,7 @@ typedef $$ProfilesTableCreateCompanionBuilder =
     ProfilesCompanion Function({
       Value<int> id,
       required String name,
+      Value<String?> uid,
       required int createdAt,
       required int updatedAt,
     });
@@ -62346,6 +69767,7 @@ typedef $$ProfilesTableUpdateCompanionBuilder =
     ProfilesCompanion Function({
       Value<int> id,
       Value<String> name,
+      Value<String?> uid,
       Value<int> createdAt,
       Value<int> updatedAt,
     });
@@ -62452,6 +69874,11 @@ class $$ProfilesTableFilterComposer
 
   ColumnFilters<String> get name => $composableBuilder(
     column: $table.name,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get uid => $composableBuilder(
+    column: $table.uid,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -62585,6 +70012,11 @@ class $$ProfilesTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get uid => $composableBuilder(
+    column: $table.uid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<int> get createdAt => $composableBuilder(
     column: $table.createdAt,
     builder: (column) => ColumnOrderings(column),
@@ -62610,6 +70042,9 @@ class $$ProfilesTableAnnotationComposer
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get uid =>
+      $composableBuilder(column: $table.uid, builder: (column) => column);
 
   GeneratedColumn<int> get createdAt =>
       $composableBuilder(column: $table.createdAt, builder: (column) => column);
@@ -62754,11 +70189,13 @@ class $$ProfilesTableTableManager
               ({
                 Value<int> id = const Value.absent(),
                 Value<String> name = const Value.absent(),
+                Value<String?> uid = const Value.absent(),
                 Value<int> createdAt = const Value.absent(),
                 Value<int> updatedAt = const Value.absent(),
               }) => ProfilesCompanion(
                 id: id,
                 name: name,
+                uid: uid,
                 createdAt: createdAt,
                 updatedAt: updatedAt,
               ),
@@ -62766,11 +70203,13 @@ class $$ProfilesTableTableManager
               ({
                 Value<int> id = const Value.absent(),
                 required String name,
+                Value<String?> uid = const Value.absent(),
                 required int createdAt,
                 required int updatedAt,
               }) => ProfilesCompanion.insert(
                 id: id,
                 name: name,
+                uid: uid,
                 createdAt: createdAt,
                 updatedAt: updatedAt,
               ),
@@ -64232,6 +71671,7 @@ typedef $$VideoBooksTableCreateCompanionBuilder =
       Value<int> lastPositionMs,
       Value<int?> lastPlayedAt,
       Value<int?> importedAt,
+      Value<int?> localAddedAt,
       Value<String?> playlistJson,
       Value<int> currentEpisode,
       Value<String?> audioTrackId,
@@ -64257,6 +71697,7 @@ typedef $$VideoBooksTableUpdateCompanionBuilder =
       Value<int> lastPositionMs,
       Value<int?> lastPlayedAt,
       Value<int?> importedAt,
+      Value<int?> localAddedAt,
       Value<String?> playlistJson,
       Value<int> currentEpisode,
       Value<String?> audioTrackId,
@@ -64511,6 +71952,11 @@ class $$VideoBooksTableFilterComposer
 
   ColumnFilters<int> get importedAt => $composableBuilder(
     column: $table.importedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -64802,6 +72248,11 @@ class $$VideoBooksTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get playlistJson => $composableBuilder(
     column: $table.playlistJson,
     builder: (column) => ColumnOrderings(column),
@@ -64922,6 +72373,11 @@ class $$VideoBooksTableAnnotationComposer
 
   GeneratedColumn<int> get importedAt => $composableBuilder(
     column: $table.importedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get localAddedAt => $composableBuilder(
+    column: $table.localAddedAt,
     builder: (column) => column,
   );
 
@@ -65188,6 +72644,7 @@ class $$VideoBooksTableTableManager
                 Value<int> lastPositionMs = const Value.absent(),
                 Value<int?> lastPlayedAt = const Value.absent(),
                 Value<int?> importedAt = const Value.absent(),
+                Value<int?> localAddedAt = const Value.absent(),
                 Value<String?> playlistJson = const Value.absent(),
                 Value<int> currentEpisode = const Value.absent(),
                 Value<String?> audioTrackId = const Value.absent(),
@@ -65211,6 +72668,7 @@ class $$VideoBooksTableTableManager
                 lastPositionMs: lastPositionMs,
                 lastPlayedAt: lastPlayedAt,
                 importedAt: importedAt,
+                localAddedAt: localAddedAt,
                 playlistJson: playlistJson,
                 currentEpisode: currentEpisode,
                 audioTrackId: audioTrackId,
@@ -65236,6 +72694,7 @@ class $$VideoBooksTableTableManager
                 Value<int> lastPositionMs = const Value.absent(),
                 Value<int?> lastPlayedAt = const Value.absent(),
                 Value<int?> importedAt = const Value.absent(),
+                Value<int?> localAddedAt = const Value.absent(),
                 Value<String?> playlistJson = const Value.absent(),
                 Value<int> currentEpisode = const Value.absent(),
                 Value<String?> audioTrackId = const Value.absent(),
@@ -65259,6 +72718,7 @@ class $$VideoBooksTableTableManager
                 lastPositionMs: lastPositionMs,
                 lastPlayedAt: lastPlayedAt,
                 importedAt: importedAt,
+                localAddedAt: localAddedAt,
                 playlistJson: playlistJson,
                 currentEpisode: currentEpisode,
                 audioTrackId: audioTrackId,
@@ -67490,6 +74950,9 @@ typedef $$MediaCollectionsTableCreateCompanionBuilder =
       Value<int?> secondarySubtitleDelayMs,
       Value<String?> subtitleLanguage,
       Value<String?> subtitleReleaseGroup,
+      Value<String> origin,
+      Value<String?> organizeKey,
+      Value<String> organizeAliases,
     });
 typedef $$MediaCollectionsTableUpdateCompanionBuilder =
     MediaCollectionsCompanion Function({
@@ -67508,6 +74971,9 @@ typedef $$MediaCollectionsTableUpdateCompanionBuilder =
       Value<int?> secondarySubtitleDelayMs,
       Value<String?> subtitleLanguage,
       Value<String?> subtitleReleaseGroup,
+      Value<String> origin,
+      Value<String?> organizeKey,
+      Value<String> organizeAliases,
     });
 
 final class $$MediaCollectionsTableReferences
@@ -67750,6 +75216,21 @@ class $$MediaCollectionsTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<String> get origin => $composableBuilder(
+    column: $table.origin,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get organizeAliases => $composableBuilder(
+    column: $table.organizeAliases,
+    builder: (column) => ColumnFilters(column),
+  );
+
   Expression<bool> mediaCollectionItemsRefs(
     Expression<bool> Function($$MediaCollectionItemsTableFilterComposer f) f,
   ) {
@@ -67986,6 +75467,21 @@ class $$MediaCollectionsTableOrderingComposer
     column: $table.subtitleReleaseGroup,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<String> get origin => $composableBuilder(
+    column: $table.origin,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get organizeAliases => $composableBuilder(
+    column: $table.organizeAliases,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$MediaCollectionsTableAnnotationComposer
@@ -68057,6 +75553,19 @@ class $$MediaCollectionsTableAnnotationComposer
 
   GeneratedColumn<String> get subtitleReleaseGroup => $composableBuilder(
     column: $table.subtitleReleaseGroup,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get origin =>
+      $composableBuilder(column: $table.origin, builder: (column) => column);
+
+  GeneratedColumn<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get organizeAliases => $composableBuilder(
+    column: $table.organizeAliases,
     builder: (column) => column,
   );
 
@@ -68271,6 +75780,9 @@ class $$MediaCollectionsTableTableManager
                 Value<int?> secondarySubtitleDelayMs = const Value.absent(),
                 Value<String?> subtitleLanguage = const Value.absent(),
                 Value<String?> subtitleReleaseGroup = const Value.absent(),
+                Value<String> origin = const Value.absent(),
+                Value<String?> organizeKey = const Value.absent(),
+                Value<String> organizeAliases = const Value.absent(),
               }) => MediaCollectionsCompanion(
                 id: id,
                 sourceFolderPath: sourceFolderPath,
@@ -68287,6 +75799,9 @@ class $$MediaCollectionsTableTableManager
                 secondarySubtitleDelayMs: secondarySubtitleDelayMs,
                 subtitleLanguage: subtitleLanguage,
                 subtitleReleaseGroup: subtitleReleaseGroup,
+                origin: origin,
+                organizeKey: organizeKey,
+                organizeAliases: organizeAliases,
               ),
           createCompanionCallback:
               ({
@@ -68305,6 +75820,9 @@ class $$MediaCollectionsTableTableManager
                 Value<int?> secondarySubtitleDelayMs = const Value.absent(),
                 Value<String?> subtitleLanguage = const Value.absent(),
                 Value<String?> subtitleReleaseGroup = const Value.absent(),
+                Value<String> origin = const Value.absent(),
+                Value<String?> organizeKey = const Value.absent(),
+                Value<String> organizeAliases = const Value.absent(),
               }) => MediaCollectionsCompanion.insert(
                 id: id,
                 sourceFolderPath: sourceFolderPath,
@@ -68321,6 +75839,9 @@ class $$MediaCollectionsTableTableManager
                 secondarySubtitleDelayMs: secondarySubtitleDelayMs,
                 subtitleLanguage: subtitleLanguage,
                 subtitleReleaseGroup: subtitleReleaseGroup,
+                origin: origin,
+                organizeKey: organizeKey,
+                organizeAliases: organizeAliases,
               ),
           withReferenceMapper: (p0) => p0
               .map(
@@ -68834,6 +76355,8 @@ typedef $$CollectionMemberTombstonesTableCreateCompanionBuilder =
       required String mediaType,
       required String entryKey,
       required int deletedAt,
+      Value<String?> organizeKey,
+      Value<bool> organizeMerged,
       Value<int> rowid,
     });
 typedef $$CollectionMemberTombstonesTableUpdateCompanionBuilder =
@@ -68843,6 +76366,8 @@ typedef $$CollectionMemberTombstonesTableUpdateCompanionBuilder =
       Value<String> mediaType,
       Value<String> entryKey,
       Value<int> deletedAt,
+      Value<String?> organizeKey,
+      Value<bool> organizeMerged,
       Value<int> rowid,
     });
 
@@ -68877,6 +76402,16 @@ class $$CollectionMemberTombstonesTableFilterComposer
 
   ColumnFilters<int> get deletedAt => $composableBuilder(
     column: $table.deletedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get organizeMerged => $composableBuilder(
+    column: $table.organizeMerged,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -68914,6 +76449,16 @@ class $$CollectionMemberTombstonesTableOrderingComposer
     column: $table.deletedAt,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get organizeMerged => $composableBuilder(
+    column: $table.organizeMerged,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$CollectionMemberTombstonesTableAnnotationComposer
@@ -68943,6 +76488,16 @@ class $$CollectionMemberTombstonesTableAnnotationComposer
 
   GeneratedColumn<int> get deletedAt =>
       $composableBuilder(column: $table.deletedAt, builder: (column) => column);
+
+  GeneratedColumn<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<bool> get organizeMerged => $composableBuilder(
+    column: $table.organizeMerged,
+    builder: (column) => column,
+  );
 }
 
 class $$CollectionMemberTombstonesTableTableManager
@@ -68996,6 +76551,8 @@ class $$CollectionMemberTombstonesTableTableManager
                 Value<String> mediaType = const Value.absent(),
                 Value<String> entryKey = const Value.absent(),
                 Value<int> deletedAt = const Value.absent(),
+                Value<String?> organizeKey = const Value.absent(),
+                Value<bool> organizeMerged = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => CollectionMemberTombstonesCompanion(
                 collectionName: collectionName,
@@ -69003,6 +76560,8 @@ class $$CollectionMemberTombstonesTableTableManager
                 mediaType: mediaType,
                 entryKey: entryKey,
                 deletedAt: deletedAt,
+                organizeKey: organizeKey,
+                organizeMerged: organizeMerged,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -69012,6 +76571,8 @@ class $$CollectionMemberTombstonesTableTableManager
                 required String mediaType,
                 required String entryKey,
                 required int deletedAt,
+                Value<String?> organizeKey = const Value.absent(),
+                Value<bool> organizeMerged = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => CollectionMemberTombstonesCompanion.insert(
                 collectionName: collectionName,
@@ -69019,6 +76580,8 @@ class $$CollectionMemberTombstonesTableTableManager
                 mediaType: mediaType,
                 entryKey: entryKey,
                 deletedAt: deletedAt,
+                organizeKey: organizeKey,
+                organizeMerged: organizeMerged,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
@@ -81246,6 +88809,7 @@ typedef $$VideoMetadataCharactersTableCreateCompanionBuilder =
     VideoMetadataCharactersCompanion Function({
       required String characterKey,
       required String name,
+      Value<String?> originalName,
       Value<String?> description,
       Value<String?> imageUrl,
       Value<String?> imagePath,
@@ -81256,6 +88820,7 @@ typedef $$VideoMetadataCharactersTableUpdateCompanionBuilder =
     VideoMetadataCharactersCompanion Function({
       Value<String> characterKey,
       Value<String> name,
+      Value<String?> originalName,
       Value<String?> description,
       Value<String?> imageUrl,
       Value<String?> imagePath,
@@ -81391,6 +88956,11 @@ class $$VideoMetadataCharactersTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<String> get originalName => $composableBuilder(
+    column: $table.originalName,
+    builder: (column) => ColumnFilters(column),
+  );
+
   ColumnFilters<String> get description => $composableBuilder(
     column: $table.description,
     builder: (column) => ColumnFilters(column),
@@ -81510,6 +89080,11 @@ class $$VideoMetadataCharactersTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get originalName => $composableBuilder(
+    column: $table.originalName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get description => $composableBuilder(
     column: $table.description,
     builder: (column) => ColumnOrderings(column),
@@ -81547,6 +89122,11 @@ class $$VideoMetadataCharactersTableAnnotationComposer
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get originalName => $composableBuilder(
+    column: $table.originalName,
+    builder: (column) => column,
+  );
 
   GeneratedColumn<String> get description => $composableBuilder(
     column: $table.description,
@@ -81689,6 +89269,7 @@ class $$VideoMetadataCharactersTableTableManager
               ({
                 Value<String> characterKey = const Value.absent(),
                 Value<String> name = const Value.absent(),
+                Value<String?> originalName = const Value.absent(),
                 Value<String?> description = const Value.absent(),
                 Value<String?> imageUrl = const Value.absent(),
                 Value<String?> imagePath = const Value.absent(),
@@ -81697,6 +89278,7 @@ class $$VideoMetadataCharactersTableTableManager
               }) => VideoMetadataCharactersCompanion(
                 characterKey: characterKey,
                 name: name,
+                originalName: originalName,
                 description: description,
                 imageUrl: imageUrl,
                 imagePath: imagePath,
@@ -81707,6 +89289,7 @@ class $$VideoMetadataCharactersTableTableManager
               ({
                 required String characterKey,
                 required String name,
+                Value<String?> originalName = const Value.absent(),
                 Value<String?> description = const Value.absent(),
                 Value<String?> imageUrl = const Value.absent(),
                 Value<String?> imagePath = const Value.absent(),
@@ -81715,6 +89298,7 @@ class $$VideoMetadataCharactersTableTableManager
               }) => VideoMetadataCharactersCompanion.insert(
                 characterKey: characterKey,
                 name: name,
+                originalName: originalName,
                 description: description,
                 imageUrl: imageUrl,
                 imagePath: imagePath,
@@ -96723,6 +104307,3770 @@ typedef $$PendingMineQueueTableProcessedTableManager =
       PendingMineRow,
       PrefetchHooks Function()
     >;
+typedef $$SrsEntitiesTableCreateCompanionBuilder =
+    SrsEntitiesCompanion Function({
+      required String id,
+      required String profileUid,
+      required String kind,
+      required String payloadJson,
+      Value<int> createdAt,
+      Value<int> rowid,
+    });
+typedef $$SrsEntitiesTableUpdateCompanionBuilder =
+    SrsEntitiesCompanion Function({
+      Value<String> id,
+      Value<String> profileUid,
+      Value<String> kind,
+      Value<String> payloadJson,
+      Value<int> createdAt,
+      Value<int> rowid,
+    });
+
+class $$SrsEntitiesTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsEntitiesTable> {
+  $$SrsEntitiesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsEntitiesTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsEntitiesTable> {
+  $$SrsEntitiesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsEntitiesTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsEntitiesTable> {
+  $$SrsEntitiesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
+
+  GeneratedColumn<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$SrsEntitiesTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsEntitiesTable,
+          SrsEntityRow,
+          $$SrsEntitiesTableFilterComposer,
+          $$SrsEntitiesTableOrderingComposer,
+          $$SrsEntitiesTableAnnotationComposer,
+          $$SrsEntitiesTableCreateCompanionBuilder,
+          $$SrsEntitiesTableUpdateCompanionBuilder,
+          (
+            SrsEntityRow,
+            BaseReferences<_$FushiDatabase, $SrsEntitiesTable, SrsEntityRow>,
+          ),
+          SrsEntityRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsEntitiesTableTableManager(_$FushiDatabase db, $SrsEntitiesTable table)
+    : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsEntitiesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsEntitiesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsEntitiesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> profileUid = const Value.absent(),
+                Value<String> kind = const Value.absent(),
+                Value<String> payloadJson = const Value.absent(),
+                Value<int> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsEntitiesCompanion(
+                id: id,
+                profileUid: profileUid,
+                kind: kind,
+                payloadJson: payloadJson,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String profileUid,
+                required String kind,
+                required String payloadJson,
+                Value<int> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsEntitiesCompanion.insert(
+                id: id,
+                profileUid: profileUid,
+                kind: kind,
+                payloadJson: payloadJson,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsEntitiesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsEntitiesTable,
+      SrsEntityRow,
+      $$SrsEntitiesTableFilterComposer,
+      $$SrsEntitiesTableOrderingComposer,
+      $$SrsEntitiesTableAnnotationComposer,
+      $$SrsEntitiesTableCreateCompanionBuilder,
+      $$SrsEntitiesTableUpdateCompanionBuilder,
+      (
+        SrsEntityRow,
+        BaseReferences<_$FushiDatabase, $SrsEntitiesTable, SrsEntityRow>,
+      ),
+      SrsEntityRow,
+      PrefetchHooks Function()
+    >;
+typedef $$SrsFieldEditsTableCreateCompanionBuilder =
+    SrsFieldEditsCompanion Function({
+      required String id,
+      required String profileUid,
+      required String entityKind,
+      required String entityId,
+      required String fieldKey,
+      required String writerId,
+      required int seq,
+      required String json,
+      Value<int> rowid,
+    });
+typedef $$SrsFieldEditsTableUpdateCompanionBuilder =
+    SrsFieldEditsCompanion Function({
+      Value<String> id,
+      Value<String> profileUid,
+      Value<String> entityKind,
+      Value<String> entityId,
+      Value<String> fieldKey,
+      Value<String> writerId,
+      Value<int> seq,
+      Value<String> json,
+      Value<int> rowid,
+    });
+
+class $$SrsFieldEditsTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsFieldEditsTable> {
+  $$SrsFieldEditsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get entityKind => $composableBuilder(
+    column: $table.entityKind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get entityId => $composableBuilder(
+    column: $table.entityId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get fieldKey => $composableBuilder(
+    column: $table.fieldKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get writerId => $composableBuilder(
+    column: $table.writerId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get seq => $composableBuilder(
+    column: $table.seq,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get json => $composableBuilder(
+    column: $table.json,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsFieldEditsTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsFieldEditsTable> {
+  $$SrsFieldEditsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get entityKind => $composableBuilder(
+    column: $table.entityKind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get entityId => $composableBuilder(
+    column: $table.entityId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get fieldKey => $composableBuilder(
+    column: $table.fieldKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get writerId => $composableBuilder(
+    column: $table.writerId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get seq => $composableBuilder(
+    column: $table.seq,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get json => $composableBuilder(
+    column: $table.json,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsFieldEditsTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsFieldEditsTable> {
+  $$SrsFieldEditsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get entityKind => $composableBuilder(
+    column: $table.entityKind,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get entityId =>
+      $composableBuilder(column: $table.entityId, builder: (column) => column);
+
+  GeneratedColumn<String> get fieldKey =>
+      $composableBuilder(column: $table.fieldKey, builder: (column) => column);
+
+  GeneratedColumn<String> get writerId =>
+      $composableBuilder(column: $table.writerId, builder: (column) => column);
+
+  GeneratedColumn<int> get seq =>
+      $composableBuilder(column: $table.seq, builder: (column) => column);
+
+  GeneratedColumn<String> get json =>
+      $composableBuilder(column: $table.json, builder: (column) => column);
+}
+
+class $$SrsFieldEditsTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsFieldEditsTable,
+          SrsFieldEditRow,
+          $$SrsFieldEditsTableFilterComposer,
+          $$SrsFieldEditsTableOrderingComposer,
+          $$SrsFieldEditsTableAnnotationComposer,
+          $$SrsFieldEditsTableCreateCompanionBuilder,
+          $$SrsFieldEditsTableUpdateCompanionBuilder,
+          (
+            SrsFieldEditRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $SrsFieldEditsTable,
+              SrsFieldEditRow
+            >,
+          ),
+          SrsFieldEditRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsFieldEditsTableTableManager(
+    _$FushiDatabase db,
+    $SrsFieldEditsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsFieldEditsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsFieldEditsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsFieldEditsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> profileUid = const Value.absent(),
+                Value<String> entityKind = const Value.absent(),
+                Value<String> entityId = const Value.absent(),
+                Value<String> fieldKey = const Value.absent(),
+                Value<String> writerId = const Value.absent(),
+                Value<int> seq = const Value.absent(),
+                Value<String> json = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsFieldEditsCompanion(
+                id: id,
+                profileUid: profileUid,
+                entityKind: entityKind,
+                entityId: entityId,
+                fieldKey: fieldKey,
+                writerId: writerId,
+                seq: seq,
+                json: json,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String profileUid,
+                required String entityKind,
+                required String entityId,
+                required String fieldKey,
+                required String writerId,
+                required int seq,
+                required String json,
+                Value<int> rowid = const Value.absent(),
+              }) => SrsFieldEditsCompanion.insert(
+                id: id,
+                profileUid: profileUid,
+                entityKind: entityKind,
+                entityId: entityId,
+                fieldKey: fieldKey,
+                writerId: writerId,
+                seq: seq,
+                json: json,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsFieldEditsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsFieldEditsTable,
+      SrsFieldEditRow,
+      $$SrsFieldEditsTableFilterComposer,
+      $$SrsFieldEditsTableOrderingComposer,
+      $$SrsFieldEditsTableAnnotationComposer,
+      $$SrsFieldEditsTableCreateCompanionBuilder,
+      $$SrsFieldEditsTableUpdateCompanionBuilder,
+      (
+        SrsFieldEditRow,
+        BaseReferences<_$FushiDatabase, $SrsFieldEditsTable, SrsFieldEditRow>,
+      ),
+      SrsFieldEditRow,
+      PrefetchHooks Function()
+    >;
+typedef $$SrsReviewLogsTableCreateCompanionBuilder =
+    SrsReviewLogsCompanion Function({
+      required String id,
+      required String profileUid,
+      required String cardId,
+      required String kind,
+      Value<int?> rating,
+      required int occurredAt,
+      required String reviewType,
+      required String origin,
+      Value<int> durationMs,
+      required String json,
+      Value<int> rowid,
+    });
+typedef $$SrsReviewLogsTableUpdateCompanionBuilder =
+    SrsReviewLogsCompanion Function({
+      Value<String> id,
+      Value<String> profileUid,
+      Value<String> cardId,
+      Value<String> kind,
+      Value<int?> rating,
+      Value<int> occurredAt,
+      Value<String> reviewType,
+      Value<String> origin,
+      Value<int> durationMs,
+      Value<String> json,
+      Value<int> rowid,
+    });
+
+class $$SrsReviewLogsTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsReviewLogsTable> {
+  $$SrsReviewLogsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get cardId => $composableBuilder(
+    column: $table.cardId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get rating => $composableBuilder(
+    column: $table.rating,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get occurredAt => $composableBuilder(
+    column: $table.occurredAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get reviewType => $composableBuilder(
+    column: $table.reviewType,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get origin => $composableBuilder(
+    column: $table.origin,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get durationMs => $composableBuilder(
+    column: $table.durationMs,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get json => $composableBuilder(
+    column: $table.json,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsReviewLogsTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsReviewLogsTable> {
+  $$SrsReviewLogsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get cardId => $composableBuilder(
+    column: $table.cardId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get rating => $composableBuilder(
+    column: $table.rating,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get occurredAt => $composableBuilder(
+    column: $table.occurredAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get reviewType => $composableBuilder(
+    column: $table.reviewType,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get origin => $composableBuilder(
+    column: $table.origin,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get durationMs => $composableBuilder(
+    column: $table.durationMs,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get json => $composableBuilder(
+    column: $table.json,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsReviewLogsTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsReviewLogsTable> {
+  $$SrsReviewLogsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get cardId =>
+      $composableBuilder(column: $table.cardId, builder: (column) => column);
+
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
+
+  GeneratedColumn<int> get rating =>
+      $composableBuilder(column: $table.rating, builder: (column) => column);
+
+  GeneratedColumn<int> get occurredAt => $composableBuilder(
+    column: $table.occurredAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get reviewType => $composableBuilder(
+    column: $table.reviewType,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get origin =>
+      $composableBuilder(column: $table.origin, builder: (column) => column);
+
+  GeneratedColumn<int> get durationMs => $composableBuilder(
+    column: $table.durationMs,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get json =>
+      $composableBuilder(column: $table.json, builder: (column) => column);
+}
+
+class $$SrsReviewLogsTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsReviewLogsTable,
+          SrsReviewLogRow,
+          $$SrsReviewLogsTableFilterComposer,
+          $$SrsReviewLogsTableOrderingComposer,
+          $$SrsReviewLogsTableAnnotationComposer,
+          $$SrsReviewLogsTableCreateCompanionBuilder,
+          $$SrsReviewLogsTableUpdateCompanionBuilder,
+          (
+            SrsReviewLogRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $SrsReviewLogsTable,
+              SrsReviewLogRow
+            >,
+          ),
+          SrsReviewLogRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsReviewLogsTableTableManager(
+    _$FushiDatabase db,
+    $SrsReviewLogsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsReviewLogsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsReviewLogsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsReviewLogsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> profileUid = const Value.absent(),
+                Value<String> cardId = const Value.absent(),
+                Value<String> kind = const Value.absent(),
+                Value<int?> rating = const Value.absent(),
+                Value<int> occurredAt = const Value.absent(),
+                Value<String> reviewType = const Value.absent(),
+                Value<String> origin = const Value.absent(),
+                Value<int> durationMs = const Value.absent(),
+                Value<String> json = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsReviewLogsCompanion(
+                id: id,
+                profileUid: profileUid,
+                cardId: cardId,
+                kind: kind,
+                rating: rating,
+                occurredAt: occurredAt,
+                reviewType: reviewType,
+                origin: origin,
+                durationMs: durationMs,
+                json: json,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String profileUid,
+                required String cardId,
+                required String kind,
+                Value<int?> rating = const Value.absent(),
+                required int occurredAt,
+                required String reviewType,
+                required String origin,
+                Value<int> durationMs = const Value.absent(),
+                required String json,
+                Value<int> rowid = const Value.absent(),
+              }) => SrsReviewLogsCompanion.insert(
+                id: id,
+                profileUid: profileUid,
+                cardId: cardId,
+                kind: kind,
+                rating: rating,
+                occurredAt: occurredAt,
+                reviewType: reviewType,
+                origin: origin,
+                durationMs: durationMs,
+                json: json,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsReviewLogsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsReviewLogsTable,
+      SrsReviewLogRow,
+      $$SrsReviewLogsTableFilterComposer,
+      $$SrsReviewLogsTableOrderingComposer,
+      $$SrsReviewLogsTableAnnotationComposer,
+      $$SrsReviewLogsTableCreateCompanionBuilder,
+      $$SrsReviewLogsTableUpdateCompanionBuilder,
+      (
+        SrsReviewLogRow,
+        BaseReferences<_$FushiDatabase, $SrsReviewLogsTable, SrsReviewLogRow>,
+      ),
+      SrsReviewLogRow,
+      PrefetchHooks Function()
+    >;
+typedef $$SrsUnknownEventsTableCreateCompanionBuilder =
+    SrsUnknownEventsCompanion Function({
+      required String id,
+      required String profileUid,
+      required String json,
+      Value<int> rowid,
+    });
+typedef $$SrsUnknownEventsTableUpdateCompanionBuilder =
+    SrsUnknownEventsCompanion Function({
+      Value<String> id,
+      Value<String> profileUid,
+      Value<String> json,
+      Value<int> rowid,
+    });
+
+class $$SrsUnknownEventsTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsUnknownEventsTable> {
+  $$SrsUnknownEventsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get json => $composableBuilder(
+    column: $table.json,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsUnknownEventsTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsUnknownEventsTable> {
+  $$SrsUnknownEventsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get json => $composableBuilder(
+    column: $table.json,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsUnknownEventsTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsUnknownEventsTable> {
+  $$SrsUnknownEventsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get json =>
+      $composableBuilder(column: $table.json, builder: (column) => column);
+}
+
+class $$SrsUnknownEventsTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsUnknownEventsTable,
+          SrsUnknownEventRow,
+          $$SrsUnknownEventsTableFilterComposer,
+          $$SrsUnknownEventsTableOrderingComposer,
+          $$SrsUnknownEventsTableAnnotationComposer,
+          $$SrsUnknownEventsTableCreateCompanionBuilder,
+          $$SrsUnknownEventsTableUpdateCompanionBuilder,
+          (
+            SrsUnknownEventRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $SrsUnknownEventsTable,
+              SrsUnknownEventRow
+            >,
+          ),
+          SrsUnknownEventRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsUnknownEventsTableTableManager(
+    _$FushiDatabase db,
+    $SrsUnknownEventsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsUnknownEventsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsUnknownEventsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsUnknownEventsTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> profileUid = const Value.absent(),
+                Value<String> json = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsUnknownEventsCompanion(
+                id: id,
+                profileUid: profileUid,
+                json: json,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String profileUid,
+                required String json,
+                Value<int> rowid = const Value.absent(),
+              }) => SrsUnknownEventsCompanion.insert(
+                id: id,
+                profileUid: profileUid,
+                json: json,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsUnknownEventsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsUnknownEventsTable,
+      SrsUnknownEventRow,
+      $$SrsUnknownEventsTableFilterComposer,
+      $$SrsUnknownEventsTableOrderingComposer,
+      $$SrsUnknownEventsTableAnnotationComposer,
+      $$SrsUnknownEventsTableCreateCompanionBuilder,
+      $$SrsUnknownEventsTableUpdateCompanionBuilder,
+      (
+        SrsUnknownEventRow,
+        BaseReferences<
+          _$FushiDatabase,
+          $SrsUnknownEventsTable,
+          SrsUnknownEventRow
+        >,
+      ),
+      SrsUnknownEventRow,
+      PrefetchHooks Function()
+    >;
+typedef $$SrsEventLocalTableCreateCompanionBuilder =
+    SrsEventLocalCompanion Function({
+      required String eventId,
+      required String profileUid,
+      Value<int?> outboxSeq,
+      Value<int?> serverTime,
+      Value<int> receivedAt,
+      Value<int> rowid,
+    });
+typedef $$SrsEventLocalTableUpdateCompanionBuilder =
+    SrsEventLocalCompanion Function({
+      Value<String> eventId,
+      Value<String> profileUid,
+      Value<int?> outboxSeq,
+      Value<int?> serverTime,
+      Value<int> receivedAt,
+      Value<int> rowid,
+    });
+
+class $$SrsEventLocalTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsEventLocalTable> {
+  $$SrsEventLocalTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get eventId => $composableBuilder(
+    column: $table.eventId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get outboxSeq => $composableBuilder(
+    column: $table.outboxSeq,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get serverTime => $composableBuilder(
+    column: $table.serverTime,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get receivedAt => $composableBuilder(
+    column: $table.receivedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsEventLocalTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsEventLocalTable> {
+  $$SrsEventLocalTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get eventId => $composableBuilder(
+    column: $table.eventId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get outboxSeq => $composableBuilder(
+    column: $table.outboxSeq,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get serverTime => $composableBuilder(
+    column: $table.serverTime,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get receivedAt => $composableBuilder(
+    column: $table.receivedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsEventLocalTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsEventLocalTable> {
+  $$SrsEventLocalTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get eventId =>
+      $composableBuilder(column: $table.eventId, builder: (column) => column);
+
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get outboxSeq =>
+      $composableBuilder(column: $table.outboxSeq, builder: (column) => column);
+
+  GeneratedColumn<int> get serverTime => $composableBuilder(
+    column: $table.serverTime,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get receivedAt => $composableBuilder(
+    column: $table.receivedAt,
+    builder: (column) => column,
+  );
+}
+
+class $$SrsEventLocalTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsEventLocalTable,
+          SrsEventLocalRow,
+          $$SrsEventLocalTableFilterComposer,
+          $$SrsEventLocalTableOrderingComposer,
+          $$SrsEventLocalTableAnnotationComposer,
+          $$SrsEventLocalTableCreateCompanionBuilder,
+          $$SrsEventLocalTableUpdateCompanionBuilder,
+          (
+            SrsEventLocalRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $SrsEventLocalTable,
+              SrsEventLocalRow
+            >,
+          ),
+          SrsEventLocalRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsEventLocalTableTableManager(
+    _$FushiDatabase db,
+    $SrsEventLocalTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsEventLocalTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsEventLocalTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsEventLocalTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> eventId = const Value.absent(),
+                Value<String> profileUid = const Value.absent(),
+                Value<int?> outboxSeq = const Value.absent(),
+                Value<int?> serverTime = const Value.absent(),
+                Value<int> receivedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsEventLocalCompanion(
+                eventId: eventId,
+                profileUid: profileUid,
+                outboxSeq: outboxSeq,
+                serverTime: serverTime,
+                receivedAt: receivedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String eventId,
+                required String profileUid,
+                Value<int?> outboxSeq = const Value.absent(),
+                Value<int?> serverTime = const Value.absent(),
+                Value<int> receivedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsEventLocalCompanion.insert(
+                eventId: eventId,
+                profileUid: profileUid,
+                outboxSeq: outboxSeq,
+                serverTime: serverTime,
+                receivedAt: receivedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsEventLocalTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsEventLocalTable,
+      SrsEventLocalRow,
+      $$SrsEventLocalTableFilterComposer,
+      $$SrsEventLocalTableOrderingComposer,
+      $$SrsEventLocalTableAnnotationComposer,
+      $$SrsEventLocalTableCreateCompanionBuilder,
+      $$SrsEventLocalTableUpdateCompanionBuilder,
+      (
+        SrsEventLocalRow,
+        BaseReferences<_$FushiDatabase, $SrsEventLocalTable, SrsEventLocalRow>,
+      ),
+      SrsEventLocalRow,
+      PrefetchHooks Function()
+    >;
+typedef $$SrsLocalStateTableCreateCompanionBuilder =
+    SrsLocalStateCompanion Function({
+      required String profileUid,
+      required String json,
+      Value<int> rowid,
+    });
+typedef $$SrsLocalStateTableUpdateCompanionBuilder =
+    SrsLocalStateCompanion Function({
+      Value<String> profileUid,
+      Value<String> json,
+      Value<int> rowid,
+    });
+
+class $$SrsLocalStateTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsLocalStateTable> {
+  $$SrsLocalStateTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get json => $composableBuilder(
+    column: $table.json,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsLocalStateTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsLocalStateTable> {
+  $$SrsLocalStateTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get json => $composableBuilder(
+    column: $table.json,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsLocalStateTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsLocalStateTable> {
+  $$SrsLocalStateTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get json =>
+      $composableBuilder(column: $table.json, builder: (column) => column);
+}
+
+class $$SrsLocalStateTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsLocalStateTable,
+          SrsLocalStateRow,
+          $$SrsLocalStateTableFilterComposer,
+          $$SrsLocalStateTableOrderingComposer,
+          $$SrsLocalStateTableAnnotationComposer,
+          $$SrsLocalStateTableCreateCompanionBuilder,
+          $$SrsLocalStateTableUpdateCompanionBuilder,
+          (
+            SrsLocalStateRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $SrsLocalStateTable,
+              SrsLocalStateRow
+            >,
+          ),
+          SrsLocalStateRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsLocalStateTableTableManager(
+    _$FushiDatabase db,
+    $SrsLocalStateTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsLocalStateTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsLocalStateTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsLocalStateTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> profileUid = const Value.absent(),
+                Value<String> json = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsLocalStateCompanion(
+                profileUid: profileUid,
+                json: json,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String profileUid,
+                required String json,
+                Value<int> rowid = const Value.absent(),
+              }) => SrsLocalStateCompanion.insert(
+                profileUid: profileUid,
+                json: json,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsLocalStateTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsLocalStateTable,
+      SrsLocalStateRow,
+      $$SrsLocalStateTableFilterComposer,
+      $$SrsLocalStateTableOrderingComposer,
+      $$SrsLocalStateTableAnnotationComposer,
+      $$SrsLocalStateTableCreateCompanionBuilder,
+      $$SrsLocalStateTableUpdateCompanionBuilder,
+      (
+        SrsLocalStateRow,
+        BaseReferences<_$FushiDatabase, $SrsLocalStateTable, SrsLocalStateRow>,
+      ),
+      SrsLocalStateRow,
+      PrefetchHooks Function()
+    >;
+typedef $$SrsNotesCacheTableCreateCompanionBuilder =
+    SrsNotesCacheCompanion Function({
+      required String id,
+      required String profileUid,
+      required String noteTypeId,
+      required String guid,
+      required int createdAt,
+      Value<String?> deckId,
+      Value<int?> deletedAt,
+      Value<String> termKey,
+      Value<String> readingKey,
+      Value<String> sortField,
+      Value<String> tagsJson,
+      Value<bool> pendingDecision,
+      Value<int> updatedAt,
+      Value<int> rowid,
+    });
+typedef $$SrsNotesCacheTableUpdateCompanionBuilder =
+    SrsNotesCacheCompanion Function({
+      Value<String> id,
+      Value<String> profileUid,
+      Value<String> noteTypeId,
+      Value<String> guid,
+      Value<int> createdAt,
+      Value<String?> deckId,
+      Value<int?> deletedAt,
+      Value<String> termKey,
+      Value<String> readingKey,
+      Value<String> sortField,
+      Value<String> tagsJson,
+      Value<bool> pendingDecision,
+      Value<int> updatedAt,
+      Value<int> rowid,
+    });
+
+class $$SrsNotesCacheTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsNotesCacheTable> {
+  $$SrsNotesCacheTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get noteTypeId => $composableBuilder(
+    column: $table.noteTypeId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get guid => $composableBuilder(
+    column: $table.guid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get deckId => $composableBuilder(
+    column: $table.deckId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get termKey => $composableBuilder(
+    column: $table.termKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get readingKey => $composableBuilder(
+    column: $table.readingKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sortField => $composableBuilder(
+    column: $table.sortField,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get tagsJson => $composableBuilder(
+    column: $table.tagsJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get pendingDecision => $composableBuilder(
+    column: $table.pendingDecision,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsNotesCacheTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsNotesCacheTable> {
+  $$SrsNotesCacheTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get noteTypeId => $composableBuilder(
+    column: $table.noteTypeId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get guid => $composableBuilder(
+    column: $table.guid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get createdAt => $composableBuilder(
+    column: $table.createdAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get deckId => $composableBuilder(
+    column: $table.deckId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get termKey => $composableBuilder(
+    column: $table.termKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get readingKey => $composableBuilder(
+    column: $table.readingKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sortField => $composableBuilder(
+    column: $table.sortField,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get tagsJson => $composableBuilder(
+    column: $table.tagsJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get pendingDecision => $composableBuilder(
+    column: $table.pendingDecision,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsNotesCacheTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsNotesCacheTable> {
+  $$SrsNotesCacheTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get noteTypeId => $composableBuilder(
+    column: $table.noteTypeId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get guid =>
+      $composableBuilder(column: $table.guid, builder: (column) => column);
+
+  GeneratedColumn<int> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<String> get deckId =>
+      $composableBuilder(column: $table.deckId, builder: (column) => column);
+
+  GeneratedColumn<int> get deletedAt =>
+      $composableBuilder(column: $table.deletedAt, builder: (column) => column);
+
+  GeneratedColumn<String> get termKey =>
+      $composableBuilder(column: $table.termKey, builder: (column) => column);
+
+  GeneratedColumn<String> get readingKey => $composableBuilder(
+    column: $table.readingKey,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get sortField =>
+      $composableBuilder(column: $table.sortField, builder: (column) => column);
+
+  GeneratedColumn<String> get tagsJson =>
+      $composableBuilder(column: $table.tagsJson, builder: (column) => column);
+
+  GeneratedColumn<bool> get pendingDecision => $composableBuilder(
+    column: $table.pendingDecision,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$SrsNotesCacheTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsNotesCacheTable,
+          SrsNoteCacheRow,
+          $$SrsNotesCacheTableFilterComposer,
+          $$SrsNotesCacheTableOrderingComposer,
+          $$SrsNotesCacheTableAnnotationComposer,
+          $$SrsNotesCacheTableCreateCompanionBuilder,
+          $$SrsNotesCacheTableUpdateCompanionBuilder,
+          (
+            SrsNoteCacheRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $SrsNotesCacheTable,
+              SrsNoteCacheRow
+            >,
+          ),
+          SrsNoteCacheRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsNotesCacheTableTableManager(
+    _$FushiDatabase db,
+    $SrsNotesCacheTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsNotesCacheTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsNotesCacheTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsNotesCacheTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> profileUid = const Value.absent(),
+                Value<String> noteTypeId = const Value.absent(),
+                Value<String> guid = const Value.absent(),
+                Value<int> createdAt = const Value.absent(),
+                Value<String?> deckId = const Value.absent(),
+                Value<int?> deletedAt = const Value.absent(),
+                Value<String> termKey = const Value.absent(),
+                Value<String> readingKey = const Value.absent(),
+                Value<String> sortField = const Value.absent(),
+                Value<String> tagsJson = const Value.absent(),
+                Value<bool> pendingDecision = const Value.absent(),
+                Value<int> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsNotesCacheCompanion(
+                id: id,
+                profileUid: profileUid,
+                noteTypeId: noteTypeId,
+                guid: guid,
+                createdAt: createdAt,
+                deckId: deckId,
+                deletedAt: deletedAt,
+                termKey: termKey,
+                readingKey: readingKey,
+                sortField: sortField,
+                tagsJson: tagsJson,
+                pendingDecision: pendingDecision,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String profileUid,
+                required String noteTypeId,
+                required String guid,
+                required int createdAt,
+                Value<String?> deckId = const Value.absent(),
+                Value<int?> deletedAt = const Value.absent(),
+                Value<String> termKey = const Value.absent(),
+                Value<String> readingKey = const Value.absent(),
+                Value<String> sortField = const Value.absent(),
+                Value<String> tagsJson = const Value.absent(),
+                Value<bool> pendingDecision = const Value.absent(),
+                Value<int> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsNotesCacheCompanion.insert(
+                id: id,
+                profileUid: profileUid,
+                noteTypeId: noteTypeId,
+                guid: guid,
+                createdAt: createdAt,
+                deckId: deckId,
+                deletedAt: deletedAt,
+                termKey: termKey,
+                readingKey: readingKey,
+                sortField: sortField,
+                tagsJson: tagsJson,
+                pendingDecision: pendingDecision,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsNotesCacheTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsNotesCacheTable,
+      SrsNoteCacheRow,
+      $$SrsNotesCacheTableFilterComposer,
+      $$SrsNotesCacheTableOrderingComposer,
+      $$SrsNotesCacheTableAnnotationComposer,
+      $$SrsNotesCacheTableCreateCompanionBuilder,
+      $$SrsNotesCacheTableUpdateCompanionBuilder,
+      (
+        SrsNoteCacheRow,
+        BaseReferences<_$FushiDatabase, $SrsNotesCacheTable, SrsNoteCacheRow>,
+      ),
+      SrsNoteCacheRow,
+      PrefetchHooks Function()
+    >;
+typedef $$SrsCardsCacheTableCreateCompanionBuilder =
+    SrsCardsCacheCompanion Function({
+      required String id,
+      required String profileUid,
+      required String noteId,
+      required String templateId,
+      Value<int> clozeOrd,
+      required String deckId,
+      Value<bool> suspended,
+      Value<int?> buriedUntilDay,
+      Value<int> flag,
+      Value<bool> hidden,
+      Value<String> queue,
+      Value<int?> dueDay,
+      Value<int?> dueAt,
+      Value<int> scheduledDays,
+      Value<int> reps,
+      Value<int> lapses,
+      Value<double?> stability,
+      Value<double?> difficulty,
+      Value<int?> lastReviewedAt,
+      Value<String?> lastLogId,
+      Value<String> scheduler,
+      Value<int> noteCreatedAt,
+      Value<int?> newPosition,
+      Value<int> rowid,
+    });
+typedef $$SrsCardsCacheTableUpdateCompanionBuilder =
+    SrsCardsCacheCompanion Function({
+      Value<String> id,
+      Value<String> profileUid,
+      Value<String> noteId,
+      Value<String> templateId,
+      Value<int> clozeOrd,
+      Value<String> deckId,
+      Value<bool> suspended,
+      Value<int?> buriedUntilDay,
+      Value<int> flag,
+      Value<bool> hidden,
+      Value<String> queue,
+      Value<int?> dueDay,
+      Value<int?> dueAt,
+      Value<int> scheduledDays,
+      Value<int> reps,
+      Value<int> lapses,
+      Value<double?> stability,
+      Value<double?> difficulty,
+      Value<int?> lastReviewedAt,
+      Value<String?> lastLogId,
+      Value<String> scheduler,
+      Value<int> noteCreatedAt,
+      Value<int?> newPosition,
+      Value<int> rowid,
+    });
+
+class $$SrsCardsCacheTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsCardsCacheTable> {
+  $$SrsCardsCacheTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get noteId => $composableBuilder(
+    column: $table.noteId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get templateId => $composableBuilder(
+    column: $table.templateId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get clozeOrd => $composableBuilder(
+    column: $table.clozeOrd,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get deckId => $composableBuilder(
+    column: $table.deckId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get suspended => $composableBuilder(
+    column: $table.suspended,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get buriedUntilDay => $composableBuilder(
+    column: $table.buriedUntilDay,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get flag => $composableBuilder(
+    column: $table.flag,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get hidden => $composableBuilder(
+    column: $table.hidden,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get queue => $composableBuilder(
+    column: $table.queue,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get dueDay => $composableBuilder(
+    column: $table.dueDay,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get dueAt => $composableBuilder(
+    column: $table.dueAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get scheduledDays => $composableBuilder(
+    column: $table.scheduledDays,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get reps => $composableBuilder(
+    column: $table.reps,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lapses => $composableBuilder(
+    column: $table.lapses,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get lastLogId => $composableBuilder(
+    column: $table.lastLogId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get scheduler => $composableBuilder(
+    column: $table.scheduler,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get noteCreatedAt => $composableBuilder(
+    column: $table.noteCreatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get newPosition => $composableBuilder(
+    column: $table.newPosition,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsCardsCacheTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsCardsCacheTable> {
+  $$SrsCardsCacheTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get noteId => $composableBuilder(
+    column: $table.noteId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get templateId => $composableBuilder(
+    column: $table.templateId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get clozeOrd => $composableBuilder(
+    column: $table.clozeOrd,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get deckId => $composableBuilder(
+    column: $table.deckId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get suspended => $composableBuilder(
+    column: $table.suspended,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get buriedUntilDay => $composableBuilder(
+    column: $table.buriedUntilDay,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get flag => $composableBuilder(
+    column: $table.flag,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<bool> get hidden => $composableBuilder(
+    column: $table.hidden,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get queue => $composableBuilder(
+    column: $table.queue,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get dueDay => $composableBuilder(
+    column: $table.dueDay,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get dueAt => $composableBuilder(
+    column: $table.dueAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get scheduledDays => $composableBuilder(
+    column: $table.scheduledDays,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get reps => $composableBuilder(
+    column: $table.reps,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lapses => $composableBuilder(
+    column: $table.lapses,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get stability => $composableBuilder(
+    column: $table.stability,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get lastLogId => $composableBuilder(
+    column: $table.lastLogId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get scheduler => $composableBuilder(
+    column: $table.scheduler,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get noteCreatedAt => $composableBuilder(
+    column: $table.noteCreatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get newPosition => $composableBuilder(
+    column: $table.newPosition,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsCardsCacheTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsCardsCacheTable> {
+  $$SrsCardsCacheTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get noteId =>
+      $composableBuilder(column: $table.noteId, builder: (column) => column);
+
+  GeneratedColumn<String> get templateId => $composableBuilder(
+    column: $table.templateId,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get clozeOrd =>
+      $composableBuilder(column: $table.clozeOrd, builder: (column) => column);
+
+  GeneratedColumn<String> get deckId =>
+      $composableBuilder(column: $table.deckId, builder: (column) => column);
+
+  GeneratedColumn<bool> get suspended =>
+      $composableBuilder(column: $table.suspended, builder: (column) => column);
+
+  GeneratedColumn<int> get buriedUntilDay => $composableBuilder(
+    column: $table.buriedUntilDay,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get flag =>
+      $composableBuilder(column: $table.flag, builder: (column) => column);
+
+  GeneratedColumn<bool> get hidden =>
+      $composableBuilder(column: $table.hidden, builder: (column) => column);
+
+  GeneratedColumn<String> get queue =>
+      $composableBuilder(column: $table.queue, builder: (column) => column);
+
+  GeneratedColumn<int> get dueDay =>
+      $composableBuilder(column: $table.dueDay, builder: (column) => column);
+
+  GeneratedColumn<int> get dueAt =>
+      $composableBuilder(column: $table.dueAt, builder: (column) => column);
+
+  GeneratedColumn<int> get scheduledDays => $composableBuilder(
+    column: $table.scheduledDays,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get reps =>
+      $composableBuilder(column: $table.reps, builder: (column) => column);
+
+  GeneratedColumn<int> get lapses =>
+      $composableBuilder(column: $table.lapses, builder: (column) => column);
+
+  GeneratedColumn<double> get stability =>
+      $composableBuilder(column: $table.stability, builder: (column) => column);
+
+  GeneratedColumn<double> get difficulty => $composableBuilder(
+    column: $table.difficulty,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get lastReviewedAt => $composableBuilder(
+    column: $table.lastReviewedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get lastLogId =>
+      $composableBuilder(column: $table.lastLogId, builder: (column) => column);
+
+  GeneratedColumn<String> get scheduler =>
+      $composableBuilder(column: $table.scheduler, builder: (column) => column);
+
+  GeneratedColumn<int> get noteCreatedAt => $composableBuilder(
+    column: $table.noteCreatedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get newPosition => $composableBuilder(
+    column: $table.newPosition,
+    builder: (column) => column,
+  );
+}
+
+class $$SrsCardsCacheTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsCardsCacheTable,
+          SrsCardCacheRow,
+          $$SrsCardsCacheTableFilterComposer,
+          $$SrsCardsCacheTableOrderingComposer,
+          $$SrsCardsCacheTableAnnotationComposer,
+          $$SrsCardsCacheTableCreateCompanionBuilder,
+          $$SrsCardsCacheTableUpdateCompanionBuilder,
+          (
+            SrsCardCacheRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $SrsCardsCacheTable,
+              SrsCardCacheRow
+            >,
+          ),
+          SrsCardCacheRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsCardsCacheTableTableManager(
+    _$FushiDatabase db,
+    $SrsCardsCacheTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsCardsCacheTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsCardsCacheTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsCardsCacheTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> id = const Value.absent(),
+                Value<String> profileUid = const Value.absent(),
+                Value<String> noteId = const Value.absent(),
+                Value<String> templateId = const Value.absent(),
+                Value<int> clozeOrd = const Value.absent(),
+                Value<String> deckId = const Value.absent(),
+                Value<bool> suspended = const Value.absent(),
+                Value<int?> buriedUntilDay = const Value.absent(),
+                Value<int> flag = const Value.absent(),
+                Value<bool> hidden = const Value.absent(),
+                Value<String> queue = const Value.absent(),
+                Value<int?> dueDay = const Value.absent(),
+                Value<int?> dueAt = const Value.absent(),
+                Value<int> scheduledDays = const Value.absent(),
+                Value<int> reps = const Value.absent(),
+                Value<int> lapses = const Value.absent(),
+                Value<double?> stability = const Value.absent(),
+                Value<double?> difficulty = const Value.absent(),
+                Value<int?> lastReviewedAt = const Value.absent(),
+                Value<String?> lastLogId = const Value.absent(),
+                Value<String> scheduler = const Value.absent(),
+                Value<int> noteCreatedAt = const Value.absent(),
+                Value<int?> newPosition = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsCardsCacheCompanion(
+                id: id,
+                profileUid: profileUid,
+                noteId: noteId,
+                templateId: templateId,
+                clozeOrd: clozeOrd,
+                deckId: deckId,
+                suspended: suspended,
+                buriedUntilDay: buriedUntilDay,
+                flag: flag,
+                hidden: hidden,
+                queue: queue,
+                dueDay: dueDay,
+                dueAt: dueAt,
+                scheduledDays: scheduledDays,
+                reps: reps,
+                lapses: lapses,
+                stability: stability,
+                difficulty: difficulty,
+                lastReviewedAt: lastReviewedAt,
+                lastLogId: lastLogId,
+                scheduler: scheduler,
+                noteCreatedAt: noteCreatedAt,
+                newPosition: newPosition,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String id,
+                required String profileUid,
+                required String noteId,
+                required String templateId,
+                Value<int> clozeOrd = const Value.absent(),
+                required String deckId,
+                Value<bool> suspended = const Value.absent(),
+                Value<int?> buriedUntilDay = const Value.absent(),
+                Value<int> flag = const Value.absent(),
+                Value<bool> hidden = const Value.absent(),
+                Value<String> queue = const Value.absent(),
+                Value<int?> dueDay = const Value.absent(),
+                Value<int?> dueAt = const Value.absent(),
+                Value<int> scheduledDays = const Value.absent(),
+                Value<int> reps = const Value.absent(),
+                Value<int> lapses = const Value.absent(),
+                Value<double?> stability = const Value.absent(),
+                Value<double?> difficulty = const Value.absent(),
+                Value<int?> lastReviewedAt = const Value.absent(),
+                Value<String?> lastLogId = const Value.absent(),
+                Value<String> scheduler = const Value.absent(),
+                Value<int> noteCreatedAt = const Value.absent(),
+                Value<int?> newPosition = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsCardsCacheCompanion.insert(
+                id: id,
+                profileUid: profileUid,
+                noteId: noteId,
+                templateId: templateId,
+                clozeOrd: clozeOrd,
+                deckId: deckId,
+                suspended: suspended,
+                buriedUntilDay: buriedUntilDay,
+                flag: flag,
+                hidden: hidden,
+                queue: queue,
+                dueDay: dueDay,
+                dueAt: dueAt,
+                scheduledDays: scheduledDays,
+                reps: reps,
+                lapses: lapses,
+                stability: stability,
+                difficulty: difficulty,
+                lastReviewedAt: lastReviewedAt,
+                lastLogId: lastLogId,
+                scheduler: scheduler,
+                noteCreatedAt: noteCreatedAt,
+                newPosition: newPosition,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsCardsCacheTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsCardsCacheTable,
+      SrsCardCacheRow,
+      $$SrsCardsCacheTableFilterComposer,
+      $$SrsCardsCacheTableOrderingComposer,
+      $$SrsCardsCacheTableAnnotationComposer,
+      $$SrsCardsCacheTableCreateCompanionBuilder,
+      $$SrsCardsCacheTableUpdateCompanionBuilder,
+      (
+        SrsCardCacheRow,
+        BaseReferences<_$FushiDatabase, $SrsCardsCacheTable, SrsCardCacheRow>,
+      ),
+      SrsCardCacheRow,
+      PrefetchHooks Function()
+    >;
+typedef $$VideoSubtitleGlossariesTableCreateCompanionBuilder =
+    VideoSubtitleGlossariesCompanion Function({
+      required String workKey,
+      required String glossaryJson,
+      Value<String> sourceFingerprint,
+      Value<int?> userEditedAt,
+      required int updatedAt,
+      Value<int> rowid,
+    });
+typedef $$VideoSubtitleGlossariesTableUpdateCompanionBuilder =
+    VideoSubtitleGlossariesCompanion Function({
+      Value<String> workKey,
+      Value<String> glossaryJson,
+      Value<String> sourceFingerprint,
+      Value<int?> userEditedAt,
+      Value<int> updatedAt,
+      Value<int> rowid,
+    });
+
+class $$VideoSubtitleGlossariesTableFilterComposer
+    extends Composer<_$FushiDatabase, $VideoSubtitleGlossariesTable> {
+  $$VideoSubtitleGlossariesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get workKey => $composableBuilder(
+    column: $table.workKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get glossaryJson => $composableBuilder(
+    column: $table.glossaryJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get sourceFingerprint => $composableBuilder(
+    column: $table.sourceFingerprint,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get userEditedAt => $composableBuilder(
+    column: $table.userEditedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$VideoSubtitleGlossariesTableOrderingComposer
+    extends Composer<_$FushiDatabase, $VideoSubtitleGlossariesTable> {
+  $$VideoSubtitleGlossariesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get workKey => $composableBuilder(
+    column: $table.workKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get glossaryJson => $composableBuilder(
+    column: $table.glossaryJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get sourceFingerprint => $composableBuilder(
+    column: $table.sourceFingerprint,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get userEditedAt => $composableBuilder(
+    column: $table.userEditedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$VideoSubtitleGlossariesTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $VideoSubtitleGlossariesTable> {
+  $$VideoSubtitleGlossariesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get workKey =>
+      $composableBuilder(column: $table.workKey, builder: (column) => column);
+
+  GeneratedColumn<String> get glossaryJson => $composableBuilder(
+    column: $table.glossaryJson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get sourceFingerprint => $composableBuilder(
+    column: $table.sourceFingerprint,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get userEditedAt => $composableBuilder(
+    column: $table.userEditedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+}
+
+class $$VideoSubtitleGlossariesTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $VideoSubtitleGlossariesTable,
+          VideoSubtitleGlossaryRow,
+          $$VideoSubtitleGlossariesTableFilterComposer,
+          $$VideoSubtitleGlossariesTableOrderingComposer,
+          $$VideoSubtitleGlossariesTableAnnotationComposer,
+          $$VideoSubtitleGlossariesTableCreateCompanionBuilder,
+          $$VideoSubtitleGlossariesTableUpdateCompanionBuilder,
+          (
+            VideoSubtitleGlossaryRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $VideoSubtitleGlossariesTable,
+              VideoSubtitleGlossaryRow
+            >,
+          ),
+          VideoSubtitleGlossaryRow,
+          PrefetchHooks Function()
+        > {
+  $$VideoSubtitleGlossariesTableTableManager(
+    _$FushiDatabase db,
+    $VideoSubtitleGlossariesTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$VideoSubtitleGlossariesTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$VideoSubtitleGlossariesTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$VideoSubtitleGlossariesTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<String> workKey = const Value.absent(),
+                Value<String> glossaryJson = const Value.absent(),
+                Value<String> sourceFingerprint = const Value.absent(),
+                Value<int?> userEditedAt = const Value.absent(),
+                Value<int> updatedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => VideoSubtitleGlossariesCompanion(
+                workKey: workKey,
+                glossaryJson: glossaryJson,
+                sourceFingerprint: sourceFingerprint,
+                userEditedAt: userEditedAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String workKey,
+                required String glossaryJson,
+                Value<String> sourceFingerprint = const Value.absent(),
+                Value<int?> userEditedAt = const Value.absent(),
+                required int updatedAt,
+                Value<int> rowid = const Value.absent(),
+              }) => VideoSubtitleGlossariesCompanion.insert(
+                workKey: workKey,
+                glossaryJson: glossaryJson,
+                sourceFingerprint: sourceFingerprint,
+                userEditedAt: userEditedAt,
+                updatedAt: updatedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$VideoSubtitleGlossariesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $VideoSubtitleGlossariesTable,
+      VideoSubtitleGlossaryRow,
+      $$VideoSubtitleGlossariesTableFilterComposer,
+      $$VideoSubtitleGlossariesTableOrderingComposer,
+      $$VideoSubtitleGlossariesTableAnnotationComposer,
+      $$VideoSubtitleGlossariesTableCreateCompanionBuilder,
+      $$VideoSubtitleGlossariesTableUpdateCompanionBuilder,
+      (
+        VideoSubtitleGlossaryRow,
+        BaseReferences<
+          _$FushiDatabase,
+          $VideoSubtitleGlossariesTable,
+          VideoSubtitleGlossaryRow
+        >,
+      ),
+      VideoSubtitleGlossaryRow,
+      PrefetchHooks Function()
+    >;
+typedef $$SrsSentBatchesTableCreateCompanionBuilder =
+    SrsSentBatchesCompanion Function({
+      required String profileUid,
+      required String writerId,
+      required int batchNo,
+      required Uint8List bytes,
+      Value<int> rowid,
+    });
+typedef $$SrsSentBatchesTableUpdateCompanionBuilder =
+    SrsSentBatchesCompanion Function({
+      Value<String> profileUid,
+      Value<String> writerId,
+      Value<int> batchNo,
+      Value<Uint8List> bytes,
+      Value<int> rowid,
+    });
+
+class $$SrsSentBatchesTableFilterComposer
+    extends Composer<_$FushiDatabase, $SrsSentBatchesTable> {
+  $$SrsSentBatchesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get writerId => $composableBuilder(
+    column: $table.writerId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get batchNo => $composableBuilder(
+    column: $table.batchNo,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<Uint8List> get bytes => $composableBuilder(
+    column: $table.bytes,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$SrsSentBatchesTableOrderingComposer
+    extends Composer<_$FushiDatabase, $SrsSentBatchesTable> {
+  $$SrsSentBatchesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get writerId => $composableBuilder(
+    column: $table.writerId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get batchNo => $composableBuilder(
+    column: $table.batchNo,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<Uint8List> get bytes => $composableBuilder(
+    column: $table.bytes,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$SrsSentBatchesTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $SrsSentBatchesTable> {
+  $$SrsSentBatchesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get profileUid => $composableBuilder(
+    column: $table.profileUid,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get writerId =>
+      $composableBuilder(column: $table.writerId, builder: (column) => column);
+
+  GeneratedColumn<int> get batchNo =>
+      $composableBuilder(column: $table.batchNo, builder: (column) => column);
+
+  GeneratedColumn<Uint8List> get bytes =>
+      $composableBuilder(column: $table.bytes, builder: (column) => column);
+}
+
+class $$SrsSentBatchesTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $SrsSentBatchesTable,
+          SrsSentBatchRow,
+          $$SrsSentBatchesTableFilterComposer,
+          $$SrsSentBatchesTableOrderingComposer,
+          $$SrsSentBatchesTableAnnotationComposer,
+          $$SrsSentBatchesTableCreateCompanionBuilder,
+          $$SrsSentBatchesTableUpdateCompanionBuilder,
+          (
+            SrsSentBatchRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $SrsSentBatchesTable,
+              SrsSentBatchRow
+            >,
+          ),
+          SrsSentBatchRow,
+          PrefetchHooks Function()
+        > {
+  $$SrsSentBatchesTableTableManager(
+    _$FushiDatabase db,
+    $SrsSentBatchesTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$SrsSentBatchesTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$SrsSentBatchesTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$SrsSentBatchesTableAnnotationComposer($db: db, $table: table),
+          updateCompanionCallback:
+              ({
+                Value<String> profileUid = const Value.absent(),
+                Value<String> writerId = const Value.absent(),
+                Value<int> batchNo = const Value.absent(),
+                Value<Uint8List> bytes = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SrsSentBatchesCompanion(
+                profileUid: profileUid,
+                writerId: writerId,
+                batchNo: batchNo,
+                bytes: bytes,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String profileUid,
+                required String writerId,
+                required int batchNo,
+                required Uint8List bytes,
+                Value<int> rowid = const Value.absent(),
+              }) => SrsSentBatchesCompanion.insert(
+                profileUid: profileUid,
+                writerId: writerId,
+                batchNo: batchNo,
+                bytes: bytes,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$SrsSentBatchesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $SrsSentBatchesTable,
+      SrsSentBatchRow,
+      $$SrsSentBatchesTableFilterComposer,
+      $$SrsSentBatchesTableOrderingComposer,
+      $$SrsSentBatchesTableAnnotationComposer,
+      $$SrsSentBatchesTableCreateCompanionBuilder,
+      $$SrsSentBatchesTableUpdateCompanionBuilder,
+      (
+        SrsSentBatchRow,
+        BaseReferences<_$FushiDatabase, $SrsSentBatchesTable, SrsSentBatchRow>,
+      ),
+      SrsSentBatchRow,
+      PrefetchHooks Function()
+    >;
+typedef $$MediaPrivacyFlagsTableCreateCompanionBuilder =
+    MediaPrivacyFlagsCompanion Function({
+      required String mediaKind,
+      required String entryKey,
+      Value<int?> privateAt,
+      Value<int?> clearedAt,
+      Value<int> rowid,
+    });
+typedef $$MediaPrivacyFlagsTableUpdateCompanionBuilder =
+    MediaPrivacyFlagsCompanion Function({
+      Value<String> mediaKind,
+      Value<String> entryKey,
+      Value<int?> privateAt,
+      Value<int?> clearedAt,
+      Value<int> rowid,
+    });
+
+class $$MediaPrivacyFlagsTableFilterComposer
+    extends Composer<_$FushiDatabase, $MediaPrivacyFlagsTable> {
+  $$MediaPrivacyFlagsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<String> get mediaKind => $composableBuilder(
+    column: $table.mediaKind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get entryKey => $composableBuilder(
+    column: $table.entryKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get privateAt => $composableBuilder(
+    column: $table.privateAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get clearedAt => $composableBuilder(
+    column: $table.clearedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+}
+
+class $$MediaPrivacyFlagsTableOrderingComposer
+    extends Composer<_$FushiDatabase, $MediaPrivacyFlagsTable> {
+  $$MediaPrivacyFlagsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<String> get mediaKind => $composableBuilder(
+    column: $table.mediaKind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get entryKey => $composableBuilder(
+    column: $table.entryKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get privateAt => $composableBuilder(
+    column: $table.privateAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get clearedAt => $composableBuilder(
+    column: $table.clearedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$MediaPrivacyFlagsTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $MediaPrivacyFlagsTable> {
+  $$MediaPrivacyFlagsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<String> get mediaKind =>
+      $composableBuilder(column: $table.mediaKind, builder: (column) => column);
+
+  GeneratedColumn<String> get entryKey =>
+      $composableBuilder(column: $table.entryKey, builder: (column) => column);
+
+  GeneratedColumn<int> get privateAt =>
+      $composableBuilder(column: $table.privateAt, builder: (column) => column);
+
+  GeneratedColumn<int> get clearedAt =>
+      $composableBuilder(column: $table.clearedAt, builder: (column) => column);
+}
+
+class $$MediaPrivacyFlagsTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $MediaPrivacyFlagsTable,
+          MediaPrivacyFlagRow,
+          $$MediaPrivacyFlagsTableFilterComposer,
+          $$MediaPrivacyFlagsTableOrderingComposer,
+          $$MediaPrivacyFlagsTableAnnotationComposer,
+          $$MediaPrivacyFlagsTableCreateCompanionBuilder,
+          $$MediaPrivacyFlagsTableUpdateCompanionBuilder,
+          (
+            MediaPrivacyFlagRow,
+            BaseReferences<
+              _$FushiDatabase,
+              $MediaPrivacyFlagsTable,
+              MediaPrivacyFlagRow
+            >,
+          ),
+          MediaPrivacyFlagRow,
+          PrefetchHooks Function()
+        > {
+  $$MediaPrivacyFlagsTableTableManager(
+    _$FushiDatabase db,
+    $MediaPrivacyFlagsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$MediaPrivacyFlagsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$MediaPrivacyFlagsTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$MediaPrivacyFlagsTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<String> mediaKind = const Value.absent(),
+                Value<String> entryKey = const Value.absent(),
+                Value<int?> privateAt = const Value.absent(),
+                Value<int?> clearedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => MediaPrivacyFlagsCompanion(
+                mediaKind: mediaKind,
+                entryKey: entryKey,
+                privateAt: privateAt,
+                clearedAt: clearedAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String mediaKind,
+                required String entryKey,
+                Value<int?> privateAt = const Value.absent(),
+                Value<int?> clearedAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => MediaPrivacyFlagsCompanion.insert(
+                mediaKind: mediaKind,
+                entryKey: entryKey,
+                privateAt: privateAt,
+                clearedAt: clearedAt,
+                rowid: rowid,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ),
+      );
+}
+
+typedef $$MediaPrivacyFlagsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $MediaPrivacyFlagsTable,
+      MediaPrivacyFlagRow,
+      $$MediaPrivacyFlagsTableFilterComposer,
+      $$MediaPrivacyFlagsTableOrderingComposer,
+      $$MediaPrivacyFlagsTableAnnotationComposer,
+      $$MediaPrivacyFlagsTableCreateCompanionBuilder,
+      $$MediaPrivacyFlagsTableUpdateCompanionBuilder,
+      (
+        MediaPrivacyFlagRow,
+        BaseReferences<
+          _$FushiDatabase,
+          $MediaPrivacyFlagsTable,
+          MediaPrivacyFlagRow
+        >,
+      ),
+      MediaPrivacyFlagRow,
+      PrefetchHooks Function()
+    >;
+typedef $$LibraryOrganizeRunsTableCreateCompanionBuilder =
+    LibraryOrganizeRunsCompanion Function({
+      Value<int> id,
+      required String domain,
+      required String trigger,
+      required int startedAt,
+      Value<int?> finishedAt,
+      required String status,
+      Value<String> providerName,
+      Value<String> model,
+      Value<int> requestCount,
+      Value<int> inputTokens,
+      Value<int> outputTokens,
+      Value<String?> error,
+    });
+typedef $$LibraryOrganizeRunsTableUpdateCompanionBuilder =
+    LibraryOrganizeRunsCompanion Function({
+      Value<int> id,
+      Value<String> domain,
+      Value<String> trigger,
+      Value<int> startedAt,
+      Value<int?> finishedAt,
+      Value<String> status,
+      Value<String> providerName,
+      Value<String> model,
+      Value<int> requestCount,
+      Value<int> inputTokens,
+      Value<int> outputTokens,
+      Value<String?> error,
+    });
+
+final class $$LibraryOrganizeRunsTableReferences
+    extends
+        BaseReferences<
+          _$FushiDatabase,
+          $LibraryOrganizeRunsTable,
+          LibraryOrganizeRunRow
+        > {
+  $$LibraryOrganizeRunsTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static MultiTypedResultKey<
+    $LibraryOrganizeChangesTable,
+    List<LibraryOrganizeChangeRow>
+  >
+  _libraryOrganizeChangesRefsTable(_$FushiDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.libraryOrganizeChanges,
+        aliasName:
+            'library_organize_runs__id__library_organize_changes__run_id',
+      );
+
+  $$LibraryOrganizeChangesTableProcessedTableManager
+  get libraryOrganizeChangesRefs {
+    final manager = $$LibraryOrganizeChangesTableTableManager(
+      $_db,
+      $_db.libraryOrganizeChanges,
+    ).filter((f) => f.runId.id.sqlEquals($_itemColumn<int>('id')!));
+
+    final cache = $_typedResult.readTableOrNull(
+      _libraryOrganizeChangesRefsTable($_db),
+    );
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: cache),
+    );
+  }
+}
+
+class $$LibraryOrganizeRunsTableFilterComposer
+    extends Composer<_$FushiDatabase, $LibraryOrganizeRunsTable> {
+  $$LibraryOrganizeRunsTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get domain => $composableBuilder(
+    column: $table.domain,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get trigger => $composableBuilder(
+    column: $table.trigger,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get finishedAt => $composableBuilder(
+    column: $table.finishedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get providerName => $composableBuilder(
+    column: $table.providerName,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get model => $composableBuilder(
+    column: $table.model,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get requestCount => $composableBuilder(
+    column: $table.requestCount,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get inputTokens => $composableBuilder(
+    column: $table.inputTokens,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get outputTokens => $composableBuilder(
+    column: $table.outputTokens,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get error => $composableBuilder(
+    column: $table.error,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  Expression<bool> libraryOrganizeChangesRefs(
+    Expression<bool> Function($$LibraryOrganizeChangesTableFilterComposer f) f,
+  ) {
+    final $$LibraryOrganizeChangesTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.libraryOrganizeChanges,
+          getReferencedColumn: (t) => t.runId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$LibraryOrganizeChangesTableFilterComposer(
+                $db: $db,
+                $table: $db.libraryOrganizeChanges,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
+    return f(composer);
+  }
+}
+
+class $$LibraryOrganizeRunsTableOrderingComposer
+    extends Composer<_$FushiDatabase, $LibraryOrganizeRunsTable> {
+  $$LibraryOrganizeRunsTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get domain => $composableBuilder(
+    column: $table.domain,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get trigger => $composableBuilder(
+    column: $table.trigger,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get startedAt => $composableBuilder(
+    column: $table.startedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get finishedAt => $composableBuilder(
+    column: $table.finishedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get status => $composableBuilder(
+    column: $table.status,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get providerName => $composableBuilder(
+    column: $table.providerName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get model => $composableBuilder(
+    column: $table.model,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get requestCount => $composableBuilder(
+    column: $table.requestCount,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get inputTokens => $composableBuilder(
+    column: $table.inputTokens,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get outputTokens => $composableBuilder(
+    column: $table.outputTokens,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get error => $composableBuilder(
+    column: $table.error,
+    builder: (column) => ColumnOrderings(column),
+  );
+}
+
+class $$LibraryOrganizeRunsTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $LibraryOrganizeRunsTable> {
+  $$LibraryOrganizeRunsTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get domain =>
+      $composableBuilder(column: $table.domain, builder: (column) => column);
+
+  GeneratedColumn<String> get trigger =>
+      $composableBuilder(column: $table.trigger, builder: (column) => column);
+
+  GeneratedColumn<int> get startedAt =>
+      $composableBuilder(column: $table.startedAt, builder: (column) => column);
+
+  GeneratedColumn<int> get finishedAt => $composableBuilder(
+    column: $table.finishedAt,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get status =>
+      $composableBuilder(column: $table.status, builder: (column) => column);
+
+  GeneratedColumn<String> get providerName => $composableBuilder(
+    column: $table.providerName,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get model =>
+      $composableBuilder(column: $table.model, builder: (column) => column);
+
+  GeneratedColumn<int> get requestCount => $composableBuilder(
+    column: $table.requestCount,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get inputTokens => $composableBuilder(
+    column: $table.inputTokens,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get outputTokens => $composableBuilder(
+    column: $table.outputTokens,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get error =>
+      $composableBuilder(column: $table.error, builder: (column) => column);
+
+  Expression<T> libraryOrganizeChangesRefs<T extends Object>(
+    Expression<T> Function($$LibraryOrganizeChangesTableAnnotationComposer a) f,
+  ) {
+    final $$LibraryOrganizeChangesTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.libraryOrganizeChanges,
+          getReferencedColumn: (t) => t.runId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$LibraryOrganizeChangesTableAnnotationComposer(
+                $db: $db,
+                $table: $db.libraryOrganizeChanges,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
+    return f(composer);
+  }
+}
+
+class $$LibraryOrganizeRunsTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $LibraryOrganizeRunsTable,
+          LibraryOrganizeRunRow,
+          $$LibraryOrganizeRunsTableFilterComposer,
+          $$LibraryOrganizeRunsTableOrderingComposer,
+          $$LibraryOrganizeRunsTableAnnotationComposer,
+          $$LibraryOrganizeRunsTableCreateCompanionBuilder,
+          $$LibraryOrganizeRunsTableUpdateCompanionBuilder,
+          (LibraryOrganizeRunRow, $$LibraryOrganizeRunsTableReferences),
+          LibraryOrganizeRunRow,
+          PrefetchHooks Function({bool libraryOrganizeChangesRefs})
+        > {
+  $$LibraryOrganizeRunsTableTableManager(
+    _$FushiDatabase db,
+    $LibraryOrganizeRunsTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$LibraryOrganizeRunsTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$LibraryOrganizeRunsTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$LibraryOrganizeRunsTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<String> domain = const Value.absent(),
+                Value<String> trigger = const Value.absent(),
+                Value<int> startedAt = const Value.absent(),
+                Value<int?> finishedAt = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<String> providerName = const Value.absent(),
+                Value<String> model = const Value.absent(),
+                Value<int> requestCount = const Value.absent(),
+                Value<int> inputTokens = const Value.absent(),
+                Value<int> outputTokens = const Value.absent(),
+                Value<String?> error = const Value.absent(),
+              }) => LibraryOrganizeRunsCompanion(
+                id: id,
+                domain: domain,
+                trigger: trigger,
+                startedAt: startedAt,
+                finishedAt: finishedAt,
+                status: status,
+                providerName: providerName,
+                model: model,
+                requestCount: requestCount,
+                inputTokens: inputTokens,
+                outputTokens: outputTokens,
+                error: error,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required String domain,
+                required String trigger,
+                required int startedAt,
+                Value<int?> finishedAt = const Value.absent(),
+                required String status,
+                Value<String> providerName = const Value.absent(),
+                Value<String> model = const Value.absent(),
+                Value<int> requestCount = const Value.absent(),
+                Value<int> inputTokens = const Value.absent(),
+                Value<int> outputTokens = const Value.absent(),
+                Value<String?> error = const Value.absent(),
+              }) => LibraryOrganizeRunsCompanion.insert(
+                id: id,
+                domain: domain,
+                trigger: trigger,
+                startedAt: startedAt,
+                finishedAt: finishedAt,
+                status: status,
+                providerName: providerName,
+                model: model,
+                requestCount: requestCount,
+                inputTokens: inputTokens,
+                outputTokens: outputTokens,
+                error: error,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$LibraryOrganizeRunsTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({libraryOrganizeChangesRefs = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [
+                if (libraryOrganizeChangesRefs) db.libraryOrganizeChanges,
+              ],
+              addJoins: null,
+              getPrefetchedDataCallback: (items) async {
+                return [
+                  if (libraryOrganizeChangesRefs)
+                    await $_getPrefetchedData<
+                      LibraryOrganizeRunRow,
+                      $LibraryOrganizeRunsTable,
+                      LibraryOrganizeChangeRow
+                    >(
+                      currentTable: table,
+                      referencedTable: $$LibraryOrganizeRunsTableReferences
+                          ._libraryOrganizeChangesRefsTable(db),
+                      managerFromTypedResult: (p0) =>
+                          $$LibraryOrganizeRunsTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).libraryOrganizeChangesRefs,
+                      referencedItemsForCurrentItem: (item, referencedItems) =>
+                          referencedItems.where((e) => e.runId == item.id),
+                      typedResults: items,
+                    ),
+                ];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$LibraryOrganizeRunsTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $LibraryOrganizeRunsTable,
+      LibraryOrganizeRunRow,
+      $$LibraryOrganizeRunsTableFilterComposer,
+      $$LibraryOrganizeRunsTableOrderingComposer,
+      $$LibraryOrganizeRunsTableAnnotationComposer,
+      $$LibraryOrganizeRunsTableCreateCompanionBuilder,
+      $$LibraryOrganizeRunsTableUpdateCompanionBuilder,
+      (LibraryOrganizeRunRow, $$LibraryOrganizeRunsTableReferences),
+      LibraryOrganizeRunRow,
+      PrefetchHooks Function({bool libraryOrganizeChangesRefs})
+    >;
+typedef $$LibraryOrganizeChangesTableCreateCompanionBuilder =
+    LibraryOrganizeChangesCompanion Function({
+      Value<int> id,
+      required int runId,
+      required String kind,
+      required String collectionName,
+      required String collectionType,
+      Value<String?> organizeKey,
+      required String source,
+      required String confidence,
+      required String payloadJson,
+      Value<int?> undoneAt,
+    });
+typedef $$LibraryOrganizeChangesTableUpdateCompanionBuilder =
+    LibraryOrganizeChangesCompanion Function({
+      Value<int> id,
+      Value<int> runId,
+      Value<String> kind,
+      Value<String> collectionName,
+      Value<String> collectionType,
+      Value<String?> organizeKey,
+      Value<String> source,
+      Value<String> confidence,
+      Value<String> payloadJson,
+      Value<int?> undoneAt,
+    });
+
+final class $$LibraryOrganizeChangesTableReferences
+    extends
+        BaseReferences<
+          _$FushiDatabase,
+          $LibraryOrganizeChangesTable,
+          LibraryOrganizeChangeRow
+        > {
+  $$LibraryOrganizeChangesTableReferences(
+    super.$_db,
+    super.$_table,
+    super.$_typedResult,
+  );
+
+  static $LibraryOrganizeRunsTable _runIdTable(_$FushiDatabase db) =>
+      db.libraryOrganizeRuns.createAlias(
+        'library_organize_changes__run_id__library_organize_runs__id',
+      );
+
+  $$LibraryOrganizeRunsTableProcessedTableManager get runId {
+    final $_column = $_itemColumn<int>('run_id')!;
+
+    final manager = $$LibraryOrganizeRunsTableTableManager(
+      $_db,
+      $_db.libraryOrganizeRuns,
+    ).filter((f) => f.id.sqlEquals($_column));
+    final item = $_typedResult.readTableOrNull(_runIdTable($_db));
+    if (item == null) return manager;
+    return ProcessedTableManager(
+      manager.$state.copyWith(prefetchedData: [item]),
+    );
+  }
+}
+
+class $$LibraryOrganizeChangesTableFilterComposer
+    extends Composer<_$FushiDatabase, $LibraryOrganizeChangesTable> {
+  $$LibraryOrganizeChangesTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get collectionName => $composableBuilder(
+    column: $table.collectionName,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get collectionType => $composableBuilder(
+    column: $table.collectionType,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get source => $composableBuilder(
+    column: $table.source,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get confidence => $composableBuilder(
+    column: $table.confidence,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get undoneAt => $composableBuilder(
+    column: $table.undoneAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  $$LibraryOrganizeRunsTableFilterComposer get runId {
+    final $$LibraryOrganizeRunsTableFilterComposer composer = $composerBuilder(
+      composer: this,
+      getCurrentColumn: (t) => t.runId,
+      referencedTable: $db.libraryOrganizeRuns,
+      getReferencedColumn: (t) => t.id,
+      builder:
+          (
+            joinBuilder, {
+            $addJoinBuilderToRootComposer,
+            $removeJoinBuilderFromRootComposer,
+          }) => $$LibraryOrganizeRunsTableFilterComposer(
+            $db: $db,
+            $table: $db.libraryOrganizeRuns,
+            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+            joinBuilder: joinBuilder,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
+          ),
+    );
+    return composer;
+  }
+}
+
+class $$LibraryOrganizeChangesTableOrderingComposer
+    extends Composer<_$FushiDatabase, $LibraryOrganizeChangesTable> {
+  $$LibraryOrganizeChangesTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+    column: $table.id,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get kind => $composableBuilder(
+    column: $table.kind,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get collectionName => $composableBuilder(
+    column: $table.collectionName,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get collectionType => $composableBuilder(
+    column: $table.collectionType,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get source => $composableBuilder(
+    column: $table.source,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get confidence => $composableBuilder(
+    column: $table.confidence,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<int> get undoneAt => $composableBuilder(
+    column: $table.undoneAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  $$LibraryOrganizeRunsTableOrderingComposer get runId {
+    final $$LibraryOrganizeRunsTableOrderingComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.runId,
+          referencedTable: $db.libraryOrganizeRuns,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$LibraryOrganizeRunsTableOrderingComposer(
+                $db: $db,
+                $table: $db.libraryOrganizeRuns,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
+    return composer;
+  }
+}
+
+class $$LibraryOrganizeChangesTableAnnotationComposer
+    extends Composer<_$FushiDatabase, $LibraryOrganizeChangesTable> {
+  $$LibraryOrganizeChangesTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get kind =>
+      $composableBuilder(column: $table.kind, builder: (column) => column);
+
+  GeneratedColumn<String> get collectionName => $composableBuilder(
+    column: $table.collectionName,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get collectionType => $composableBuilder(
+    column: $table.collectionType,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get organizeKey => $composableBuilder(
+    column: $table.organizeKey,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get source =>
+      $composableBuilder(column: $table.source, builder: (column) => column);
+
+  GeneratedColumn<String> get confidence => $composableBuilder(
+    column: $table.confidence,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<String> get payloadJson => $composableBuilder(
+    column: $table.payloadJson,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<int> get undoneAt =>
+      $composableBuilder(column: $table.undoneAt, builder: (column) => column);
+
+  $$LibraryOrganizeRunsTableAnnotationComposer get runId {
+    final $$LibraryOrganizeRunsTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.runId,
+          referencedTable: $db.libraryOrganizeRuns,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$LibraryOrganizeRunsTableAnnotationComposer(
+                $db: $db,
+                $table: $db.libraryOrganizeRuns,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
+    return composer;
+  }
+}
+
+class $$LibraryOrganizeChangesTableTableManager
+    extends
+        RootTableManager<
+          _$FushiDatabase,
+          $LibraryOrganizeChangesTable,
+          LibraryOrganizeChangeRow,
+          $$LibraryOrganizeChangesTableFilterComposer,
+          $$LibraryOrganizeChangesTableOrderingComposer,
+          $$LibraryOrganizeChangesTableAnnotationComposer,
+          $$LibraryOrganizeChangesTableCreateCompanionBuilder,
+          $$LibraryOrganizeChangesTableUpdateCompanionBuilder,
+          (LibraryOrganizeChangeRow, $$LibraryOrganizeChangesTableReferences),
+          LibraryOrganizeChangeRow,
+          PrefetchHooks Function({bool runId})
+        > {
+  $$LibraryOrganizeChangesTableTableManager(
+    _$FushiDatabase db,
+    $LibraryOrganizeChangesTable table,
+  ) : super(
+        TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$LibraryOrganizeChangesTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$LibraryOrganizeChangesTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$LibraryOrganizeChangesTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
+          updateCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                Value<int> runId = const Value.absent(),
+                Value<String> kind = const Value.absent(),
+                Value<String> collectionName = const Value.absent(),
+                Value<String> collectionType = const Value.absent(),
+                Value<String?> organizeKey = const Value.absent(),
+                Value<String> source = const Value.absent(),
+                Value<String> confidence = const Value.absent(),
+                Value<String> payloadJson = const Value.absent(),
+                Value<int?> undoneAt = const Value.absent(),
+              }) => LibraryOrganizeChangesCompanion(
+                id: id,
+                runId: runId,
+                kind: kind,
+                collectionName: collectionName,
+                collectionType: collectionType,
+                organizeKey: organizeKey,
+                source: source,
+                confidence: confidence,
+                payloadJson: payloadJson,
+                undoneAt: undoneAt,
+              ),
+          createCompanionCallback:
+              ({
+                Value<int> id = const Value.absent(),
+                required int runId,
+                required String kind,
+                required String collectionName,
+                required String collectionType,
+                Value<String?> organizeKey = const Value.absent(),
+                required String source,
+                required String confidence,
+                required String payloadJson,
+                Value<int?> undoneAt = const Value.absent(),
+              }) => LibraryOrganizeChangesCompanion.insert(
+                id: id,
+                runId: runId,
+                kind: kind,
+                collectionName: collectionName,
+                collectionType: collectionType,
+                organizeKey: organizeKey,
+                source: source,
+                confidence: confidence,
+                payloadJson: payloadJson,
+                undoneAt: undoneAt,
+              ),
+          withReferenceMapper: (p0) => p0
+              .map(
+                (e) => (
+                  e.readTable(table),
+                  $$LibraryOrganizeChangesTableReferences(db, table, e),
+                ),
+              )
+              .toList(),
+          prefetchHooksCallback: ({runId = false}) {
+            return PrefetchHooks(
+              db: db,
+              explicitlyWatchedTables: [],
+              addJoins:
+                  <
+                    T extends TableManagerState<
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic,
+                      dynamic
+                    >
+                  >(state) {
+                    if (runId) {
+                      state =
+                          state.withJoin(
+                                currentTable: table,
+                                currentColumn: table.runId,
+                                referencedTable:
+                                    $$LibraryOrganizeChangesTableReferences
+                                        ._runIdTable(db),
+                                referencedColumn:
+                                    $$LibraryOrganizeChangesTableReferences
+                                        ._runIdTable(db)
+                                        .id,
+                              )
+                              as T;
+                    }
+
+                    return state;
+                  },
+              getPrefetchedDataCallback: (items) async {
+                return [];
+              },
+            );
+          },
+        ),
+      );
+}
+
+typedef $$LibraryOrganizeChangesTableProcessedTableManager =
+    ProcessedTableManager<
+      _$FushiDatabase,
+      $LibraryOrganizeChangesTable,
+      LibraryOrganizeChangeRow,
+      $$LibraryOrganizeChangesTableFilterComposer,
+      $$LibraryOrganizeChangesTableOrderingComposer,
+      $$LibraryOrganizeChangesTableAnnotationComposer,
+      $$LibraryOrganizeChangesTableCreateCompanionBuilder,
+      $$LibraryOrganizeChangesTableUpdateCompanionBuilder,
+      (LibraryOrganizeChangeRow, $$LibraryOrganizeChangesTableReferences),
+      LibraryOrganizeChangeRow,
+      PrefetchHooks Function({bool runId})
+    >;
 
 class $FushiDatabaseManager {
   final _$FushiDatabase _db;
@@ -96955,4 +108303,36 @@ class $FushiDatabaseManager {
       );
   $$PendingMineQueueTableTableManager get pendingMineQueue =>
       $$PendingMineQueueTableTableManager(_db, _db.pendingMineQueue);
+  $$SrsEntitiesTableTableManager get srsEntities =>
+      $$SrsEntitiesTableTableManager(_db, _db.srsEntities);
+  $$SrsFieldEditsTableTableManager get srsFieldEdits =>
+      $$SrsFieldEditsTableTableManager(_db, _db.srsFieldEdits);
+  $$SrsReviewLogsTableTableManager get srsReviewLogs =>
+      $$SrsReviewLogsTableTableManager(_db, _db.srsReviewLogs);
+  $$SrsUnknownEventsTableTableManager get srsUnknownEvents =>
+      $$SrsUnknownEventsTableTableManager(_db, _db.srsUnknownEvents);
+  $$SrsEventLocalTableTableManager get srsEventLocal =>
+      $$SrsEventLocalTableTableManager(_db, _db.srsEventLocal);
+  $$SrsLocalStateTableTableManager get srsLocalState =>
+      $$SrsLocalStateTableTableManager(_db, _db.srsLocalState);
+  $$SrsNotesCacheTableTableManager get srsNotesCache =>
+      $$SrsNotesCacheTableTableManager(_db, _db.srsNotesCache);
+  $$SrsCardsCacheTableTableManager get srsCardsCache =>
+      $$SrsCardsCacheTableTableManager(_db, _db.srsCardsCache);
+  $$VideoSubtitleGlossariesTableTableManager get videoSubtitleGlossaries =>
+      $$VideoSubtitleGlossariesTableTableManager(
+        _db,
+        _db.videoSubtitleGlossaries,
+      );
+  $$SrsSentBatchesTableTableManager get srsSentBatches =>
+      $$SrsSentBatchesTableTableManager(_db, _db.srsSentBatches);
+  $$MediaPrivacyFlagsTableTableManager get mediaPrivacyFlags =>
+      $$MediaPrivacyFlagsTableTableManager(_db, _db.mediaPrivacyFlags);
+  $$LibraryOrganizeRunsTableTableManager get libraryOrganizeRuns =>
+      $$LibraryOrganizeRunsTableTableManager(_db, _db.libraryOrganizeRuns);
+  $$LibraryOrganizeChangesTableTableManager get libraryOrganizeChanges =>
+      $$LibraryOrganizeChangesTableTableManager(
+        _db,
+        _db.libraryOrganizeChanges,
+      );
 }

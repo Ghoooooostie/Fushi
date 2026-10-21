@@ -1,7 +1,7 @@
 import 'package:flutter/rendering.dart' show ScrollDirection;
 import 'package:material_ui/material_ui.dart';
+import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
 import 'package:fushi/src/focus/fushi_focus_scroll.dart';
-import 'package:fushi/src/utils/adaptive/adaptive_platform.dart';
 import 'package:fushi/src/utils/components/fushi_design_tokens.dart';
 import 'package:fushi/src/utils/components/settings_shared.dart'
     show SettingsRowIconProbe, settingsRowHasLeadingIcon;
@@ -35,8 +35,8 @@ class SettingsSearchEntry {
     String? resolvedTitle,
     String? resolvedSubtitle,
     this.optionLabels = const <String>[],
-  })  : _resolvedTitle = resolvedTitle,
-        _resolvedSubtitle = resolvedSubtitle;
+  }) : _resolvedTitle = resolvedTitle,
+       _resolvedSubtitle = resolvedSubtitle;
 
   /// 展平时就地求好的说明（带 [SettingsItem.subtitleBuilder] 的行，说明随运行期
   /// 状态变化；搜索要按用户此刻看到的那句匹配）。
@@ -143,8 +143,10 @@ List<TextRange> settingsSearchMatchRanges(String text, String query) {
     final TextRange last = merged.last;
     if (range.start <= last.end) {
       if (range.end > last.end) {
-        merged[merged.length - 1] =
-            TextRange(start: last.start, end: range.end);
+        merged[merged.length - 1] = TextRange(
+          start: last.start,
+          end: range.end,
+        );
       }
     } else {
       merged.add(range);
@@ -223,7 +225,7 @@ void _flattenPageInto(
             item: item,
             resolvedTitle: title,
             resolvedSubtitle: item.resolveSubtitle(context),
-            optionLabels: _optionLabelsOf(item),
+            optionLabels: _optionLabelsOf(item, context),
             subPagePath: subPagePath,
           ),
         );
@@ -257,12 +259,17 @@ void _flattenPageInto(
   }
 }
 
-List<String> _optionLabelsOf(SettingsItem item) {
+List<String> _optionLabelsOf(SettingsItem item, SettingsContext context) {
   if (item is SettingsSegmentedItem) {
     return <String>[
-      for (final SettingsSegmentOption<dynamic> option in item.options)
+      for (final SettingsSegmentOption<dynamic> option in item.optionsFor(
+        context,
+      ))
         option.label,
     ];
+  }
+  if (item is SettingsCustomItem) {
+    return item.searchKeywords?.call(context) ?? const <String>[];
   }
   return const <String>[];
 }
@@ -474,7 +481,7 @@ class _SettingsRevealTargetState extends State<SettingsRevealTarget> {
       // eink 下滚动动画归零（连续重绘=残影），直接跳到目标位置。
       FushiFocusScroll.ensureVisible(
         context,
-        duration: einkSafeDuration(context, const Duration(milliseconds: 250)),
+        duration: fushiMotionDuration(context, FushiMotion.medium),
       );
     });
   }
@@ -496,7 +503,8 @@ class _SettingsRevealTargetState extends State<SettingsRevealTarget> {
     // end（透明），不闪不残影；定位仍由上面的滚动完成。
     return TweenAnimationBuilder<double>(
       tween: Tween<double>(begin: 1, end: 0),
-      duration: einkSafeDuration(context, const Duration(milliseconds: 1400)),
+      // 高亮衰减：取 FushiMotion.long 的三倍（≈1.35s），同样随墨水屏 / 减弱动态效果归零。
+      duration: fushiMotionDuration(context, FushiMotion.long * 3),
       curve: Curves.easeOut,
       child: widget.child,
       builder: (BuildContext context, double value, Widget? child) {

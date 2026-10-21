@@ -715,11 +715,9 @@ void main() {
         isTrue,
       );
       expect(loopback.startCalls, 1);
-      expect(
-        engine.rememberedNativePolicies,
-        <GalNativeLoopbackPolicy>[GalNativeLoopbackPolicy.allow],
-        reason: '只有 full 会话可在 injector start 前记住 allow',
-      );
+      expect(engine.rememberedNativePolicies, <GalNativeLoopbackPolicy>[
+        GalNativeLoopbackPolicy.allow,
+      ], reason: '只有 full 会话可在 injector start 前记住 allow');
       expect(controller.state.audioBackend, GalHookAudioBackend.systemLoopback);
 
       controller.setAudioFallbackPolicy(GalAudioFallbackPolicy.cleanOnly);
@@ -917,11 +915,9 @@ void main() {
           isTrue,
         );
         expect(controller.state.audioFallbackPolicy, policy);
-        expect(
-          engine.rememberedNativePolicies,
-          <GalNativeLoopbackPolicy>[GalNativeLoopbackPolicy.deny],
-          reason: '$policy 必须在 injector start 前把 injected loopback 置 deny',
-        );
+        expect(engine.rememberedNativePolicies, <GalNativeLoopbackPolicy>[
+          GalNativeLoopbackPolicy.deny,
+        ], reason: '$policy 必须在 injector start 前把 injected loopback 置 deny');
         expect(controller.state.audioBackend, GalHookAudioBackend.gameResource);
         expect(
           loopback.startCalls,
@@ -1436,7 +1432,11 @@ void main() {
         (await first.launchGame(r'D:nemoi\SiglusEngine.exe')).launched,
         isTrue,
       );
-      expect(first.textProcessPipeline.steps, isEmpty, reason: '默认是空管线');
+      expect(
+        first.textProcessPipeline,
+        kGalDefaultTextProcessPipeline,
+        reason: '没存过管线的游戏用默认管线',
+      );
       await first.setTextProcessPipeline(pipeline);
       expect(
         store[r'd:nemoi\siglusengine.exe']?.textProcess.steps,
@@ -1463,7 +1463,7 @@ void main() {
 
       // 换游戏不得继承上一个游戏的管线（`_beginActivitySession` 复位记忆会话）。
       expect((await second.launchGame(r'D:\other\Game.exe')).launched, isTrue);
-      expect(second.textProcessPipeline.steps, isEmpty);
+      expect(second.textProcessPipeline, kGalDefaultTextProcessPipeline);
 
       await second.close();
       endpoints.dispose();
@@ -1778,8 +1778,11 @@ void main() {
       );
       expect(
         loopback.grabRecentCalls,
-        1,
-        reason: 'mining must reuse the line cache instead of recording later',
+        2,
+        reason:
+            'the line is still current (no next line yet), so mining closes '
+            'its window at "now" once (BUG-3575); a line already superseded '
+            'is never re-recorded (gal_audio_degrade_track_test)',
       );
       expect(
         engine.utteranceTimestamps,
@@ -2131,8 +2134,11 @@ void main() {
       );
       expect(
         engine.utteranceTimestamps,
-        <int>[654321],
-        reason: 'mining reuses the exact cached utterance for this line',
+        <int>[654321, 654321],
+        reason:
+            'mining does one closing grab for this exact line timestamp '
+            '(BUG-3575: tail that arrived after settle stopped); it never '
+            'grabs any other line',
       );
 
       await controller.close();
@@ -2793,6 +2799,75 @@ void main() {
     endpoints.dispose();
   });
 
+  // 反馈 LUgHjyc8By：快进流与 Backlog 回看的台词不进 study_segments。
+  test('LUgHjyc8By：hook 快进连发与回看重复台词不计入字数，正常节奏照计', () async {
+    final FushiDatabase db = await _openDbWithLibraryGame();
+    final TexthookerService service = TexthookerService.test();
+    final ChangeNotifier endpoints = ChangeNotifier();
+    final List<GalHookedLine> lines = <GalHookedLine>[
+      const GalHookedLine(
+        seq: 1,
+        timestampMs: 1000,
+        text: 'ゆっくり読む台詞', // 8 字，停留 4s
+        threadId: 1,
+        hookName: 'Unity',
+      ),
+      // Ctrl 跳过：hook 时间戳每 40ms 一行。
+      for (int i = 0; i < 10; i++)
+        GalHookedLine(
+          seq: 2 + i,
+          timestampMs: 5000 + i * 40,
+          text: '飛ばした台詞${'あいうえおかきくけこ'[i]}だよ',
+          threadId: 1,
+          hookName: 'Unity',
+        ),
+      const GalHookedLine(
+        seq: 20,
+        timestampMs: 5400, // 快进最后一行也只停了 40ms
+        text: '止めて読む', // 5 字，停留 4s
+        threadId: 1,
+        hookName: 'Unity',
+      ),
+      // Backlog 回看：旧台词再进来一次。
+      const GalHookedLine(
+        seq: 21,
+        timestampMs: 10000,
+        text: 'ゆっくり読む台詞',
+        threadId: 1,
+        hookName: 'Unity',
+      ),
+    ];
+    final _FakeEngineSource engine = _FakeEngineSource(
+      pairedBytes: Uint8List(0),
+      audioFormat: null,
+      textReady: true,
+      polledLines: lines,
+    );
+    final GalHookSessionController controller = _buildAttachedLibraryController(
+      service: service,
+      endpoints: endpoints,
+      engine: engine,
+      db: db,
+    );
+
+    await controller.startAttachedCapture(
+      const ExternalWindowInfo(hwnd: 8, pid: 909, title: 'サノバウィッチ'),
+    );
+    await controller.selectTextThread(1);
+    for (int i = 0; i < 80 && service.entries.length < lines.length; i++) {
+      await Future<void>.delayed(const Duration(milliseconds: 5));
+    }
+    expect(service.entries, hasLength(lines.length));
+
+    await controller.stopCapture();
+    final List<StudySegmentRow> rows = await db.getStudySegments();
+    expect(rows, hasLength(1));
+    expect(rows.single.chars, 8 + 5, reason: '快进的 10 行与回看的重复行一字不计');
+
+    await controller.close();
+    endpoints.dispose();
+  });
+
   test('BUG-1085：引擎无文本时外部通道是唯一计数源，照常计数', () async {
     final FushiDatabase db = await _openDbWithLibraryGame();
     final TexthookerService service = TexthookerService.test();
@@ -3062,6 +3137,80 @@ void _playTrackerLaunchWiring() {
     harness.endpoints.dispose();
   });
 
+  test('BUG-3616：串流远端在场时游戏留在主机后台也计时，结算落 galgame_sessions', () async {
+    final FushiDatabase db = await openDbWithGame();
+    final harness = buildHarness(db);
+    // 串流默认只把输入投递到游戏窗口，主机前台是别的进程（不在游戏目录下）。
+    harness.probe.foregroundPid = 9999;
+
+    expect(
+      (await harness.controller.launchGame(
+        gameExe,
+        gameId: 'galgame-row-42',
+        gameTitle: '统一后的显示名',
+      )).launched,
+      isTrue,
+    );
+    final GalgamePlayTracker tracker = harness.controller.playTracker!;
+    for (int i = 0; i < 10; i++) {
+      await Future<void>.delayed(const Duration(milliseconds: 5));
+    }
+    expect(
+      tracker.machine?.activeSeconds ?? 0,
+      0,
+      reason: '无远端在场时主机后台不计时（既有前台语义不变）',
+    );
+
+    // 接收端连上：串流宿主转告在场，计时器按前台同等计时。
+    harness.controller.setRemotePlayPresence(true);
+    expect(tracker.remotePresent, isTrue);
+    await accrueUntil(tracker, kMinSessionSeconds);
+
+    // 断开：不再计时。
+    harness.controller.setRemotePlayPresence(false);
+    expect(tracker.remotePresent, isFalse);
+    await Future<void>.delayed(const Duration(milliseconds: 5));
+    final int frozen = tracker.machine!.activeSeconds;
+    for (int i = 0; i < 10; i++) {
+      await Future<void>.delayed(const Duration(milliseconds: 5));
+    }
+    expect(tracker.machine!.activeSeconds, frozen);
+
+    await harness.controller.close();
+    final List<GalgameSessionRow> sessions = await db.getGalgameSessions(
+      'galgame-row-42',
+    );
+    expect(sessions, hasLength(1));
+    expect(
+      sessions.single.durationSeconds,
+      greaterThanOrEqualTo(kMinSessionSeconds),
+    );
+    harness.endpoints.dispose();
+  });
+
+  test('BUG-3616：在场标记先于计时器设置时，新启动的计时器起步即带上', () async {
+    final FushiDatabase db = await openDbWithGame();
+    final harness = buildHarness(db);
+    harness.probe.foregroundPid = 9999;
+
+    harness.controller.setRemotePlayPresence(true);
+    expect(
+      (await harness.controller.launchGame(
+        gameExe,
+        gameId: 'galgame-row-42',
+        gameTitle: '统一后的显示名',
+      )).launched,
+      isTrue,
+    );
+    final GalgamePlayTracker tracker = harness.controller.playTracker!;
+    expect(tracker.remotePresent, isTrue);
+    expect(tracker.machine?.remotePresent, isTrue);
+    await accrueUntil(tracker, 1);
+
+    await harness.controller.close();
+    harness.endpoints.dispose();
+  });
+
   test('P4 B1：裸 exe 启动（无 galgames.id）不建计时器', () async {
     final FushiDatabase db = FushiDatabase.forTesting(NativeDatabase.memory());
     addTearDown(db.close);
@@ -3164,7 +3313,7 @@ void _playTrackerWiringGuard() {
   });
 }
 
-/// BUG-1892：附着并捕获（游戏已在跑，Hibiki 只是挂上去）同样要产生游玩记录。
+/// BUG-1892：附着并捕获（游戏已在跑，Fushi 只是挂上去）同样要产生游玩记录。
 /// 身份链是 `window.pid → exe 全路径 → galgames 行`，与库页启动共用同一套解析。
 void _playTrackerAttachWiring() {
   final String gameDir = p.join(p.rootPrefix(p.current), 'Games', 'Attached');
@@ -3475,11 +3624,9 @@ void _bug950Guard() {
       '_pollThreadPreviews',
       '_consumeTextLane',
     ], reason: 'v12 的线程预览必须先于文本环轮询');
-    expect(
-      awaitedIn(consumeAt, consumeEnd),
-      <String>['engine.pollText'],
-      reason: 'BUG-1063 仍要求语音抓取走 _scheduleLineAudioAttach 的后台队列',
-    );
+    expect(awaitedIn(consumeAt, consumeEnd), <String>[
+      'engine.pollText',
+    ], reason: 'BUG-1063 仍要求语音抓取走 _scheduleLineAudioAttach 的后台队列');
 
     final int attachAt = body.indexOf('Future<void> _attachLineAudio(');
     expect(attachAt, greaterThan(0), reason: '_attachLineAudio 不存在，守卫需更新');
@@ -3840,11 +3987,9 @@ void _bug950Guard() {
 
       // 退避到期后自动重试，成功即把音源升级回引擎，不再停在整机混音。
       await waitForEvent(controller, 'engine.attach_recovered');
-      expect(
-        recovered.rememberedNativePolicies,
-        <GalNativeLoopbackPolicy>[GalNativeLoopbackPolicy.deny],
-        reason: 'retry 必须读取切换后的策略，不能复用首次 attach 的 allow',
-      );
+      expect(recovered.rememberedNativePolicies, <GalNativeLoopbackPolicy>[
+        GalNativeLoopbackPolicy.deny,
+      ], reason: 'retry 必须读取切换后的策略，不能复用首次 attach 的 allow');
       expect(controller.state.audioBackend, GalHookAudioBackend.enginePcm);
       expect(controller.state.phase, GalHookSessionPhase.waitingSignals);
       expect(controller.state.injectorFailure, GalHookInjectorFailure.none);

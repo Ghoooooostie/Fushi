@@ -7,6 +7,7 @@
 import 'dart:async';
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/foundation.dart' show ValueListenable;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:media_kit_video/media_kit_video.dart';
@@ -71,14 +72,14 @@ class MaterialDesktopVideoControlsThemeData {
   /// Whether to toggle play and pause on tap.
   final bool playAndPauseOnTap;
 
-  /// Hibiki patch (touch on desktop): when true, a tap from a touch / stylus
+  /// Fushi patch (touch on desktop): when true, a tap from a touch / stylus
   /// pointer toggles the controls (like the mobile controls' `onTap`) instead
   /// of play / pause — fingers never hover, so hover is not available to reveal
   /// the bar. Mouse clicks keep [playAndPauseOnTap]. Default false = upstream
   /// behaviour. See [MaterialDesktopTapRouter] and PATCHES.md.
   final bool touchTapTogglesControls;
 
-  /// Hibiki patch (touch on desktop): the mobile controls' swipe gestures for
+  /// Fushi patch (touch on desktop): the mobile controls' swipe gestures for
   /// touch / stylus pointers only ([TouchSwipeGestureLayer]); mouse drags never
   /// reach them. Horizontal drag scrubs (needs [horizontalSeekResolver]),
   /// right-half vertical drag sets the volume ([onVolumeChanged]), left-half
@@ -166,13 +167,13 @@ class MaterialDesktopVideoControlsThemeData {
   /// Height of the seek bar [Container].
   final double seekBarContainerHeight;
 
-  /// Hibiki patch (BUG-1224): how far the seek bar is pushed **down** so that it
+  /// Fushi patch (BUG-1224): how far the seek bar is pushed **down** so that it
   /// rides on the top edge of the bottom button bar (only applied when
   /// [bottomButtonBar] is non-empty). Upstream hard-coded this as
   /// `Transform.translate(offset: Offset(0, 16))`, which made the seek bar's
   /// [seekBarContainerHeight]-tall transparent hit area stick out
   /// `seekBarContainerHeight - 16` above the button bar with no way for the host
-  /// to know about it. Hibiki's subtitle overlay must lift the subtitle clear of
+  /// to know about it. Fushi's subtitle overlay must lift the subtitle clear of
   /// that hit area (otherwise a click meant for the seek bar is absorbed by the
   /// subtitle's glyph-priority hit test and turns into a dictionary lookup), so
   /// the value has to be readable from the theme instead of buried in the widget
@@ -198,12 +199,12 @@ class MaterialDesktopVideoControlsThemeData {
   /// [Color] of the seek bar thumb.
   final Color seekBarThumbColor;
 
-  /// Hibiki patch (glass design system): corner radius of the seek bar track
+  /// Fushi patch (glass design system): corner radius of the seek bar track
   /// (and its buffer / position fills). `0` (default) keeps the upstream
   /// square-ended track pixel-for-pixel.
   final double seekBarRadius;
 
-  /// Hibiki patch (glass design system): colour of the top / bottom gradient
+  /// Fushi patch (glass design system): colour of the top / bottom gradient
   /// scrims behind the button bars. Default = upstream `0x61000000`.
   final Color backdropColor;
 
@@ -229,12 +230,12 @@ class MaterialDesktopVideoControlsThemeData {
   /// Whether to shift the subtitles upwards when the controls are visible.
   final bool shiftSubtitlesOnControlsVisibilityChange;
 
-  // VISIBILITY (Hibiki patch)
+  // VISIBILITY (Fushi patch)
 
   /// Optional notifier the controls push their real `visible` state into on
   /// every change (hover / enter / exit / auto-hide timer / seek-bar drag).
   ///
-  /// Hibiki renders its own subtitle overlay and dodges the bottom controls
+  /// Fushi renders its own subtitle overlay and dodges the bottom controls
   /// bar; it used to keep a *separate* mirror of visibility with its own timer,
   /// which drifted out of phase with this State's private `visible` + `_timer`
   /// and made the subtitle dodge reverse direction under concurrent input
@@ -244,7 +245,7 @@ class MaterialDesktopVideoControlsThemeData {
   /// See third_party/media_kit_video/PATCHES.md.
   final ValueNotifier<bool>? visibilityNotifier;
 
-  /// Optional host-driven wake signal (Hibiki patch, BUG-2453): every
+  /// Optional host-driven wake signal (Fushi patch, BUG-2453): every
   /// notification behaves exactly like a pointer hover over the controls —
   /// [onHover] runs, i.e. the bar is shown (`mount`/`visible` = true) and the
   /// auto-hide timer is restarted with [controlsHoverDuration].
@@ -262,11 +263,25 @@ class MaterialDesktopVideoControlsThemeData {
   /// Null (upstream default) = no signal, behaviour identical to pub.dev.
   final Listenable? wakeSignal;
 
-  // SEEK START (Hibiki patch)
+  /// Optional host-driven "keep the controls up" hold (Fushi patch): while its
+  /// value is `true` neither the pointer leaving the controls' [MouseRegion]
+  /// nor the auto-hide timer hides the bar; when it drops back to `false` the
+  /// controls behave as after a hover (shown, auto-hide timer restarted).
+  ///
+  /// A popup route the host opens *from* a control-bar button (the "⋮"
+  /// overflow menu) puts a modal barrier over the whole page: the
+  /// `MouseTracker` re-hit-tests the still pointer, the controls'
+  /// [MouseRegion] fires `onExit` and the bar — including the button the
+  /// menu is anchored to — vanished the instant the menu opened.
+  /// Null (upstream default) = no hold, behaviour identical to pub.dev.
+  /// See third_party/media_kit_video/PATCHES.md.
+  final ValueListenable<bool>? holdVisible;
+
+  // SEEK START (Fushi patch)
 
   /// Optional callback fired the moment the user starts dragging / tapping the
   /// seek bar. The seek bar drives `player.seek` directly inside media_kit and
-  /// exposes no host-level seek hook, so Hibiki uses this to invalidate its
+  /// exposes no host-level seek hook, so Fushi uses this to invalidate its
   /// "active jump target" snapshot (TODO-565): without it, dragging the bar to
   /// an earlier cue during the brief in-flight grace window of a list tap would
   /// be mis-detected as the in-flight seek and snap the highlight back to the
@@ -274,43 +289,43 @@ class MaterialDesktopVideoControlsThemeData {
   /// pub.dev. See third_party/media_kit_video/PATCHES.md.
   final void Function()? onSeekStart;
 
-  /// Hibiki patch (BUG-796 follow-up): fires when the user **commits** a seek-bar
+  /// Fushi patch (BUG-796 follow-up): fires when the user **commits** a seek-bar
   /// seek (drag release / tap), with the target [Duration] the bar just seeked to.
   /// The seek bar drives `player.seek` directly inside media_kit, bypassing the
   /// host's `VideoPlayerController.seekMs` (which authoritatively re-syncs the
   /// subtitle to the destination and suppresses the lagging post-seek position).
-  /// Hibiki uses this to apply the *same* in-flight protection to progress-bar
+  /// Fushi uses this to apply the *same* in-flight protection to progress-bar
   /// seeks — otherwise seeking (esp. while paused) to a gap leaves the previous
   /// subtitle on screen because the 125ms tick keeps reading the stale old
   /// position. Null (upstream default) = no callback, behaviour identical to
   /// pub.dev. See third_party/media_kit_video/PATCHES.md.
   final void Function(Duration)? onSeekEnd;
 
-  /// Hibiki patch (BUG-2731 follow-up): fires right after a **committed** seek
+  /// Fushi patch (BUG-2731 follow-up): fires right after a **committed** seek
   /// has been handed to `player.seek`, with that call's [Future]. `player.seek`
   /// first waits on the player's internal lock (and video-controller
   /// initialisation) before the mpv command is actually issued; until then the
-  /// old content keeps playing normally. Hibiki waits on this future before it
+  /// old content keeps playing normally. Fushi waits on this future before it
   /// starts treating "playing, not buffering, advancing" as evidence that the
   /// seek has finished, so a slow dispatch can't clear the in-flight target
   /// early. Null (upstream default) = no callback, behaviour identical to
   /// pub.dev. See third_party/media_kit_video/PATCHES.md.
   final void Function(Future<void> seek)? onSeekDispatched;
 
-  // SEEK BAR HOVER POSITION (Hibiki patch)
+  // SEEK BAR HOVER POSITION (Fushi patch)
 
   /// Optional callback fired with the current hover position (fraction `[0,1]`
   /// of the seek-bar track width) as the pointer moves over the seek bar, and
   /// with `null` when the pointer leaves it. media_kit computes this fraction
   /// internally (`localPosition.dx / constraints.maxWidth`, the track inner
-  /// width after `seekBarMargin`) but never surfaces it; Hibiki uses it to drive
+  /// width after `seekBarMargin`) but never surfaces it; Fushi uses it to drive
   /// the progress-bar hover thumbnail preview (TODO-669) — the fraction comes
   /// straight from the seek bar's own coordinate space, so the host never has to
   /// re-derive the 16px margin. Null (upstream default) = no callback, behaviour
   /// identical to pub.dev. See third_party/media_kit_video/PATCHES.md.
   final void Function(double? fraction)? onHoverPosition;
 
-  /// Hibiki patch (M3 Expressive chrome): host-painted seek-bar track. Null
+  /// Fushi patch (M3 Expressive chrome): host-painted seek-bar track. Null
   /// (upstream default) = upstream track. Gestures stay in the fork. See
   /// PATCHES.md.
   final VideoSeekBarTrackBuilder? seekBarTrackBuilder;
@@ -364,7 +379,7 @@ class MaterialDesktopVideoControlsThemeData {
     this.seekBarHeight = 3.2,
     this.seekBarHoverHeight = 5.6,
     this.seekBarContainerHeight = 36.0,
-    // Hibiki patch (BUG-1224): was a hard-coded `Offset(0, 16)` in build().
+    // Fushi patch (BUG-1224): was a hard-coded `Offset(0, 16)` in build().
     this.seekBarBottomButtonBarOverlap = 16.0,
     this.seekBarColor = const Color(0x3DFFFFFF),
     this.seekBarHoverColor = const Color(0x3DFFFFFF),
@@ -382,6 +397,7 @@ class MaterialDesktopVideoControlsThemeData {
     this.shiftSubtitlesOnControlsVisibilityChange = true,
     this.visibilityNotifier,
     this.wakeSignal,
+    this.holdVisible,
     this.onSeekStart,
     this.onSeekEnd,
     this.onSeekDispatched,
@@ -445,6 +461,7 @@ class MaterialDesktopVideoControlsThemeData {
     bool? shiftSubtitlesOnControlsVisibilityChange,
     ValueNotifier<bool>? visibilityNotifier,
     Listenable? wakeSignal,
+    ValueListenable<bool>? holdVisible,
     void Function()? onSeekStart,
     void Function(Duration)? onSeekEnd,
     void Function(Future<void> seek)? onSeekDispatched,
@@ -527,6 +544,7 @@ class MaterialDesktopVideoControlsThemeData {
               this.shiftSubtitlesOnControlsVisibilityChange,
       visibilityNotifier: visibilityNotifier ?? this.visibilityNotifier,
       wakeSignal: wakeSignal ?? this.wakeSignal,
+      holdVisible: holdVisible ?? this.holdVisible,
       onSeekStart: onSeekStart ?? this.onSeekStart,
       onSeekEnd: onSeekEnd ?? this.onSeekEnd,
       onSeekDispatched: onSeekDispatched ?? this.onSeekDispatched,
@@ -588,10 +606,18 @@ class _MaterialDesktopVideoControlsState
 
   Timer? _timer;
 
-  /// Hibiki patch (BUG-2453): the host wake signal currently bound (see
+  /// Fushi patch (BUG-2453): the host wake signal currently bound (see
   /// [MaterialDesktopVideoControlsThemeData.wakeSignal]); rebound whenever the
   /// theme hands over a different Listenable.
   Listenable? _wakeSignal;
+
+  /// Fushi patch: the host hold currently bound (see
+  /// [MaterialDesktopVideoControlsThemeData.holdVisible]).
+  ValueListenable<bool>? _holdVisible;
+
+  /// Fushi patch: the host currently holds the controls up — pointer exit and
+  /// the auto-hide timer must not hide them.
+  bool get _held => _holdVisible?.value ?? false;
 
   late /* private */ var playlist = controller(context).player.state.playlist;
   late bool buffering = controller(context).player.state.buffering;
@@ -641,7 +667,7 @@ class _MaterialDesktopVideoControlsState
       );
 
       // Publish the initial visibility (visibleOnMount) so the host's mirror
-      // starts in phase with this State (Hibiki patch, TODO-364). Deferred to a
+      // starts in phase with this State (Fushi patch, TODO-364). Deferred to a
       // post-frame callback: didChangeDependencies runs during mount, and a
       // synchronous notifier write could re-enter a host listener's setState
       // mid-build.
@@ -657,7 +683,7 @@ class _MaterialDesktopVideoControlsState
         _timer = Timer(
           _theme(context).controlsHoverDuration,
           () {
-            if (mounted) {
+            if (mounted && !_held) {
               setState(() {
                 visible = false;
               });
@@ -669,7 +695,7 @@ class _MaterialDesktopVideoControlsState
       }
     }
 
-    // Hibiki patch (BUG-2453): (re)bind the host's wake signal. Runs on every
+    // Fushi patch (BUG-2453): (re)bind the host's wake signal. Runs on every
     // didChangeDependencies (not gated by subscriptions.isEmpty) because the
     // theme — and thus the signal's identity — can change across rebuilds;
     // detach the old one and attach the current one when it differs. Mirrors
@@ -680,9 +706,24 @@ class _MaterialDesktopVideoControlsState
       _wakeSignal = signal;
       _wakeSignal?.addListener(_onWakeSignal);
     }
+    // Fushi patch: (re)bind the host's hold, same lifecycle as the wake signal.
+    final ValueListenable<bool>? hold = _theme(context).holdVisible;
+    if (!identical(hold, _holdVisible)) {
+      _holdVisible?.removeListener(_onHoldChanged);
+      _holdVisible = hold;
+      _holdVisible?.addListener(_onHoldChanged);
+    }
   }
 
-  /// Hibiki patch (BUG-2453): host asked to wake the controls — same effect as
+  /// Fushi patch: the hold was released — resume as after a hover (shown, a
+  /// fresh auto-hide countdown), so the bar fades on its normal schedule
+  /// instead of staying pinned or vanishing the instant the menu closes.
+  void _onHoldChanged() {
+    if (_held) return;
+    _onWakeSignal();
+  }
+
+  /// Fushi patch (BUG-2453): host asked to wake the controls — same effect as
   /// a pointer hover ([onHover]: show + restart the auto-hide timer). The host
   /// may fire the signal from inside a build/layout pass (e.g. a panel-close
   /// callback), where [setState] is illegal; in that case the wake is deferred
@@ -704,9 +745,11 @@ class _MaterialDesktopVideoControlsState
     for (final subscription in subscriptions) {
       subscription.cancel();
     }
-    // Hibiki patch (BUG-2453): detach the host's wake-signal listener.
+    // Fushi patch (BUG-2453): detach the host's wake-signal listener.
     _wakeSignal?.removeListener(_onWakeSignal);
     _wakeSignal = null;
+    _holdVisible?.removeListener(_onHoldChanged);
+    _holdVisible = null;
     super.dispose();
   }
 
@@ -733,7 +776,7 @@ class _MaterialDesktopVideoControlsState
   }
 
   /// Push the current real [visible] into the host's single-source-of-truth
-  /// notifier (Hibiki patch, TODO-364). Called after every [visible] mutation so
+  /// notifier (Fushi patch, TODO-364). Called after every [visible] mutation so
   /// the host's subtitle dodge follows this State's authoritative visibility
   /// instead of a separate, drift-prone mirror. No-op when unmounted or when no
   /// notifier was injected (upstream default).
@@ -751,7 +794,7 @@ class _MaterialDesktopVideoControlsState
     shiftSubtitle();
     _timer?.cancel();
     _timer = Timer(_theme(context).controlsHoverDuration, () {
-      if (mounted) {
+      if (mounted && !_held) {
         setState(() {
           visible = false;
         });
@@ -770,7 +813,7 @@ class _MaterialDesktopVideoControlsState
     shiftSubtitle();
     _timer?.cancel();
     _timer = Timer(_theme(context).controlsHoverDuration, () {
-      if (mounted) {
+      if (mounted && !_held) {
         setState(() {
           visible = false;
         });
@@ -789,7 +832,7 @@ class _MaterialDesktopVideoControlsState
     _timer?.cancel();
   }
 
-  /// Hibiki patch (touch on desktop): see [TouchSwipeGestureLayer].
+  /// Fushi patch (touch on desktop): see [TouchSwipeGestureLayer].
   Widget _buildTouchSwipeLayer(BuildContext context) {
     final theme = _theme(context);
     return TouchSwipeGestureLayer(
@@ -914,12 +957,12 @@ class _MaterialDesktopVideoControlsState
                       }
                     : null,
                 child: MaterialDesktopTapRouter(
-                  // BUG-374 (Hibiki vendored patch): the router records in
+                  // BUG-374 (Fushi vendored patch): the router records in
                   // onTapDown whether this tap is eligible for play/pause
                   // (outside the bottom seek bar region) and only acts in
                   // onTap, which fires when this detector wins the gesture
                   // arena (no descendant button claimed the tap).
-                  // Hibiki patch (touch on desktop): a touch / stylus tap
+                  // Fushi patch (touch on desktop): a touch / stylus tap
                   // toggles the controls instead (fingers cannot hover-reveal
                   // them); mouse clicks keep play/pause. See
                   // [MaterialDesktopTapRouter].
@@ -928,18 +971,19 @@ class _MaterialDesktopVideoControlsState
                       _theme(context).touchTapTogglesControls,
                   controlsVisible: visible,
                   isInPlayPauseRegion: (Offset globalPosition) {
-                    final RenderBox box =
-                        context.findRenderObject() as RenderBox;
-                    final Offset localPosition =
-                        box.globalToLocal(globalPosition);
-                    const double tapPadding = 10.0;
-                    // Only play and pause when the bottom seek bar is visible
-                    // and when clicking outside of the bottom seek bar region.
+                    // Fushi patch: a click on the controls (any bar, the
+                    // seek bar's hit area, the gaps between buttons) is not a
+                    // click on the picture. Decided by a real hit test against
+                    // [VideoControlsChromeRegion] instead of a bottom strip
+                    // height re-derived from the theme, which drifted from the
+                    // real bar geometry. The seek bar takes pointers through a
+                    // [Listener] (outside the arena), so without this check
+                    // this router would still win a click on it.
                     return !mount ||
-                        localPosition.dy <
-                            box.size.height -
-                                subtitleVerticalShiftOffset -
-                                tapPadding;
+                        !VideoControlsChromeRegion.hitsRegion(
+                          globalPosition: globalPosition,
+                          viewId: View.of(context).viewId,
+                        );
                   },
                   onAction: (DesktopControlsTapAction action) {
                     // (if-chain, not a switch: this package's language
@@ -965,7 +1009,7 @@ class _MaterialDesktopVideoControlsState
                             toggleFullscreen(context);
                           }
                         },
-                  // TODO-1097 (Hibiki vendored patch): removed desktop
+                  // TODO-1097 (Fushi vendored patch): removed desktop
                   // onPanUpdate drag-to-adjust-volume handler. Holding the left
                   // mouse button and dragging vertically no longer changes the
                   // volume. Scroll-wheel volume (Listener.onPointerSignal above,
@@ -977,14 +1021,25 @@ class _MaterialDesktopVideoControlsState
                             : SystemMouseCursors.basic,
                     onHover: (_) => onHover(),
                     onEnter: (_) => onEnter(),
-                    onExit: (_) => onExit(),
+                    // Fushi patch: a popup opened from the bar (overflow
+                    // menu) covers the controls with its barrier; that exit
+                    // must not hide the bar the menu is anchored to.
+                    onExit: (_) {
+                      if (_held) return;
+                      onExit();
+                    },
                     child: Stack(
                       children: [
-                        // Hibiki patch (touch on desktop): mobile-style swipe
+                        // Fushi patch (touch on desktop): mobile-style swipe
                         // gestures for touch / stylus, below the bars so a
-                        // gesture that starts on a button / the seek bar goes
-                        // to that control. Same 16px edge + bottom-bar inset
-                        // as the mobile drag layer. See PATCHES.md.
+                        // gesture that starts on a button goes to that
+                        // control. Same 16px edge + bottom-bar inset as the
+                        // mobile drag layer: a fixed dead zone along the
+                        // bottom edge (OS edge swipes, subtitles) that holds
+                        // whether or not the bar is shown. A swipe that goes
+                        // down on the visible chrome is additionally dropped
+                        // by the layer's [VideoControlsChromeRegion] check.
+                        // See PATCHES.md.
                         if (_theme(context).touchSeekGesture ||
                             _theme(context).touchVolumeGesture ||
                             _theme(context).touchBrightnessGesture)
@@ -1011,7 +1066,7 @@ class _MaterialDesktopVideoControlsState
                             alignment: Alignment.bottomCenter,
                             children: [
                               // Top gradient.
-                              // Hibiki patch (touch on desktop): the scrims are
+                              // Fushi patch (touch on desktop): the scrims are
                               // pure decoration; IgnorePointer so they no longer
                               // swallow hits meant for the touch swipe layer
                               // underneath (a gradient BoxDecoration hit-tests
@@ -1020,7 +1075,7 @@ class _MaterialDesktopVideoControlsState
                               if (_theme(context).topButtonBar.isNotEmpty)
                                 IgnorePointer(
                                     child: Container(
-                                  // Hibiki patch (glass design system): scrim
+                                  // Fushi patch (glass design system): scrim
                                   // colour from the theme (default 0x61000000).
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
@@ -1069,18 +1124,23 @@ class _MaterialDesktopVideoControlsState
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
-                                      Container(
-                                        height: _theme(context).buttonBarHeight,
-                                        margin:
-                                            _theme(context).topButtonBarMargin,
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children:
-                                              _theme(context).topButtonBar,
+                                      // Fushi patch: chrome hit-test marker,
+                                      // see [VideoControlsChromeRegion].
+                                      VideoControlsChromeRegion(
+                                        child: Container(
+                                          height:
+                                              _theme(context).buttonBarHeight,
+                                          margin: _theme(context)
+                                              .topButtonBarMargin,
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children:
+                                                _theme(context).topButtonBar,
+                                          ),
                                         ),
                                       ),
                                       // Only display [primaryButtonBar] if [buffering] is false.
@@ -1091,21 +1151,23 @@ class _MaterialDesktopVideoControlsState
                                           duration: _theme(context)
                                               .controlsTransitionDuration,
                                           child: Center(
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.min,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: _theme(context)
-                                                  .primaryButtonBar,
+                                            child: VideoControlsChromeRegion(
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                children: _theme(context)
+                                                    .primaryButtonBar,
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ),
                                       if (_theme(context).displaySeekBar)
                                         Transform.translate(
-                                          // Hibiki patch (BUG-1224): the push-down
+                                          // Fushi patch (BUG-1224): the push-down
                                           // amount now comes from the theme
                                           // ([seekBarBottomButtonBarOverlap],
                                           // default = upstream 16.0) so the host
@@ -1120,8 +1182,9 @@ class _MaterialDesktopVideoControlsState
                                                       .seekBarBottomButtonBarOverlap,
                                                 )
                                               : Offset.zero,
-                                          child: MaterialDesktopSeekBar(
-                                            // Hibiki patch (TODO-669): forward
+                                          child: VideoControlsChromeRegion(
+                                              child: MaterialDesktopSeekBar(
+                                            // Fushi patch (TODO-669): forward
                                             // the host hover-position callback so
                                             // the seek bar can drive the
                                             // thumbnail preview. See PATCHES.md.
@@ -1134,7 +1197,7 @@ class _MaterialDesktopVideoControlsState
                                               _timer?.cancel();
                                             },
                                             onSeekEnd: (Duration target) {
-                                              // Hibiki patch (BUG-796 follow-up):
+                                              // Fushi patch (BUG-796 follow-up):
                                               // surface the committed seek target
                                               // to the host so it re-syncs the
                                               // subtitle + suppresses the lagging
@@ -1146,7 +1209,7 @@ class _MaterialDesktopVideoControlsState
                                                 _theme(context)
                                                     .controlsHoverDuration,
                                                 () {
-                                                  if (mounted) {
+                                                  if (mounted && !_held) {
                                                     setState(() {
                                                       visible = false;
                                                     });
@@ -1156,24 +1219,26 @@ class _MaterialDesktopVideoControlsState
                                                 },
                                               );
                                             },
-                                          ),
+                                          )),
                                         ),
                                       if (_theme(context)
                                           .bottomButtonBar
                                           .isNotEmpty)
-                                        Container(
-                                          height:
-                                              _theme(context).buttonBarHeight,
-                                          margin: _theme(context)
-                                              .bottomButtonBarMargin,
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children:
-                                                _theme(context).bottomButtonBar,
+                                        VideoControlsChromeRegion(
+                                          child: Container(
+                                            height:
+                                                _theme(context).buttonBarHeight,
+                                            margin: _theme(context)
+                                                .bottomButtonBarMargin,
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: _theme(context)
+                                                  .bottomButtonBar,
+                                            ),
                                           ),
                                         ),
                                     ],
@@ -1255,12 +1320,12 @@ class _MaterialDesktopVideoControlsState
 class MaterialDesktopSeekBar extends StatefulWidget {
   final VoidCallback? onSeekStart;
 
-  /// Hibiki patch (BUG-796 follow-up): retyped from `VoidCallback?` to carry the
+  /// Fushi patch (BUG-796 follow-up): retyped from `VoidCallback?` to carry the
   /// committed seek target [Duration] to the host (theme `onSeekEnd`). See
   /// third_party/media_kit_video/PATCHES.md.
   final void Function(Duration)? onSeekEnd;
 
-  /// Hibiki patch (TODO-669): hover position callback (fraction `[0,1]` of the
+  /// Fushi patch (TODO-669): hover position callback (fraction `[0,1]` of the
   /// track width, or null on exit). See third_party/media_kit_video/PATCHES.md.
   final void Function(double? fraction)? onHoverPosition;
 
@@ -1311,7 +1376,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
             });
           }),
           controller(context).player.stream.position.listen((event) {
-            // Hibiki patch (TODO-1243): drop redundant frame-rate rebuilds. The
+            // Fushi patch (TODO-1243): drop redundant frame-rate rebuilds. The
             // drag path already suppresses position (uses `slider`), and while
             // not dragging we quantize to kPositionUiThrottleStep so the seek bar
             // fill re-rasters at ~5fps instead of the libmpv frame rate (the
@@ -1347,9 +1412,9 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
   }
 
   void onPointerMove(PointerMoveEvent e, BoxConstraints constraints) {
-    // Hibiki patch (BUG-235): bail out if this State was already disposed.
+    // Fushi patch (BUG-235): bail out if this State was already disposed.
     // `controller(context)` below dereferences `State.context`; after dispose
-    // (Hibiki tears down the controls subtree on fullscreen enter/exit and on
+    // (Fushi tears down the controls subtree on fullscreen enter/exit and on
     // episode switch via VideoControlsFocusGate) that throws
     // "Null check operator used on a null value". Mirrors the existing
     // `if (mounted)` guard in `setState`. See third_party/media_kit_video/PATCHES.md.
@@ -1370,7 +1435,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
   }
 
   void onPointerUp() {
-    // Hibiki patch (BUG-235): guard against use-after-dispose. The pointer-up
+    // Fushi patch (BUG-235): guard against use-after-dispose. The pointer-up
     // event can arrive after the controls widget tree is unmounted (release the
     // seek bar drag right as the player exits fullscreen / switches episode),
     // and `controller(context)` below dereferences the now-null `State.context`,
@@ -1378,7 +1443,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
     // Bail out when unmounted, matching the State's existing `if (mounted)`
     // setState guard. See third_party/media_kit_video/PATCHES.md.
     if (!mounted) return;
-    // Hibiki patch (BUG-796 follow-up): carry the committed seek target so the
+    // Fushi patch (BUG-796 follow-up): carry the committed seek target so the
     // host can re-sync the subtitle to the destination + suppress the lagging
     // post-seek position (progress-bar seek bypasses seekMs). See PATCHES.md.
     widget.onSeekEnd?.call(duration * slider);
@@ -1387,7 +1452,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
       click = false;
       position = duration * slider;
     });
-    // Hibiki patch (BUG-2731 follow-up): hand the dispatch future to the host.
+    // Fushi patch (BUG-2731 follow-up): hand the dispatch future to the host.
     final Future<void> seek =
         controller(context).player.seek(duration * slider);
     _theme(context).onSeekDispatched?.call(seek);
@@ -1399,7 +1464,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
       hover = true;
       slider = percent.clamp(0.0, 1.0);
     });
-    // Hibiki patch (TODO-669): surface the hover fraction to the host so it can
+    // Fushi patch (TODO-669): surface the hover fraction to the host so it can
     // render the progress-bar thumbnail preview. See PATCHES.md.
     widget.onHoverPosition?.call(percent.clamp(0.0, 1.0));
   }
@@ -1410,7 +1475,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
       hover = true;
       slider = percent.clamp(0.0, 1.0);
     });
-    // Hibiki patch (TODO-669): surface the hover fraction on enter too.
+    // Fushi patch (TODO-669): surface the hover fraction on enter too.
     widget.onHoverPosition?.call(percent.clamp(0.0, 1.0));
   }
 
@@ -1419,7 +1484,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
       hover = false;
       slider = 0.0;
     });
-    // Hibiki patch (TODO-669): clear the host thumbnail preview on exit.
+    // Fushi patch (TODO-669): clear the host thumbnail preview on exit.
     widget.onHoverPosition?.call(null);
   }
 
@@ -1445,7 +1510,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
 
   @override
   Widget build(BuildContext context) {
-    // Hibiki patch (TODO-1243): isolate the seek bar into its own compositor
+    // Fushi patch (TODO-1243): isolate the seek bar into its own compositor
     // layer. Its fill advances every kPositionUiThrottleStep (~5fps), and the
     // seek bar shares a single picture layer with the two *full-video-area*
     // gradient scrims + button bars (no RepaintBoundary upstream), so without
@@ -1476,7 +1541,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
               color: const Color(0x00000000),
               width: constraints.maxWidth,
               height: _theme(context).seekBarContainerHeight,
-              // Hibiki patch (M3 Expressive chrome): host-painted track.
+              // Fushi patch (M3 Expressive chrome): host-painted track.
               child: _theme(context).seekBarTrackBuilder != null
                   ? _theme(context).seekBarTrackBuilder!(
                       context,
@@ -1502,7 +1567,7 @@ class MaterialDesktopSeekBarState extends State<MaterialDesktopSeekBar> {
                         : _theme(context).seekBarHeight,
                     alignment: Alignment.centerLeft,
                     duration: _theme(context).seekBarThumbTransitionDuration,
-                    // Hibiki patch (glass design system): rounded track. With
+                    // Fushi patch (glass design system): rounded track. With
                     // the default radius 0 this is the upstream square track
                     // (same colour, no clip).
                     decoration: BoxDecoration(
@@ -2019,7 +2084,7 @@ class MaterialDesktopPositionIndicatorState
       subscriptions.addAll(
         [
           controller(context).player.stream.position.listen((event) {
-            // Hibiki patch (TODO-1243): the clock text only shows whole seconds,
+            // Fushi patch (TODO-1243): the clock text only shows whole seconds,
             // so quantizing to kPositionUiThrottleStep (which divides 1000ms)
             // yields the identical string while collapsing ~60fps rebuilds to
             // ~5fps. Skip setState entirely when the quantized value is unchanged.
@@ -2049,7 +2114,7 @@ class MaterialDesktopPositionIndicatorState
 
   @override
   Widget build(BuildContext context) {
-    // Hibiki patch (TODO-1243): isolate the mm:ss clock so its second-boundary
+    // Fushi patch (TODO-1243): isolate the mm:ss clock so its second-boundary
     // repaint does not re-raster the shared full-screen controls picture (same
     // integrated-GPU root cause as the seek bar). See PATCHES.md.
     return RepaintBoundary(

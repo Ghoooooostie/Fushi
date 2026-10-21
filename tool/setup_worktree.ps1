@@ -32,6 +32,11 @@
   只搬运密钥，不跑 pub get / bootstrap。WorktreeCreate 钩子用此开关，避免在
   worktree 创建时同步阻塞数分钟；需要 flutter test 前再手动 tool/bootstrap.ps1。
 
+.PARAMETER SkipNativeCompute
+  透传给 tool/bootstrap.ps1：不备 Rust 原生库（fushi_compute / fushi_fsrs / fushi_web_core / fushi_rwkv，
+  app 与 flutter test 的硬依赖；兄弟 worktree 有同源码产物时直接拷，否则需要 cargo 编）。跳过后
+  flutter build / test 之前必须手动跑 tool/native_libs.ps1。
+
 .PARAMETER SkipCacheSeed
   不从兄弟 worktree 复制 flutter test 的增量编译缓存(见下方「预热 flutter test
   编译缓存」一节)。默认会在 bootstrap 之后做这一步。
@@ -42,7 +47,7 @@
   pwsh -File tool/setup_worktree.ps1 -SkipBootstrap # 只搬密钥(秒级)
 #>
 [CmdletBinding()]
-param([switch]$SkipBootstrap, [switch]$SkipCacheSeed)
+param([switch]$SkipBootstrap, [switch]$SkipCacheSeed, [switch]$SkipNativeCompute)
 
 $ErrorActionPreference = "Stop"
 
@@ -111,6 +116,14 @@ else {
     }
 }
 
+# --- 注册 i18n json 的按 key 三方合并驱动 -----------------------------------
+# .gitattributes 把 fushi/lib/i18n/*.i18n.json 标成 merge=fushi-i18n-json；驱动命令
+# 本身只能放 git config(不入库)。写的是仓库级 config，主 checkout 与所有 worktree
+# 共用，幂等。没注册时 git 退回按行合并，不会出错，只是相邻 key 照样冲突。
+& git -C $here config merge.fushi-i18n-json.name "Fushi i18n JSON key-level merge"
+& git -C $here config merge.fushi-i18n-json.driver "dart fushi/tool/i18n_merge_driver.dart %O %A %B"
+Write-Host "OK i18n json 合并驱动已注册(merge.fushi-i18n-json)" -ForegroundColor Green
+
 # --- bootstrap(pub get + 打补丁) ------------------------------------------
 if ($SkipBootstrap) {
     Write-Host "`n已跳过 bootstrap。跑 flutter test 前请先: pwsh -File tool/bootstrap.ps1" -ForegroundColor Cyan
@@ -123,7 +136,7 @@ if (-not (Test-Path $bootstrap)) { throw "找不到 $bootstrap" }
 $bootstrapError = $null
 Push-Location $here
 try {
-    & $bootstrap
+    & $bootstrap -SkipNativeCompute:$SkipNativeCompute
 }
 catch {
     # 先记下，预热照做再抛：bootstrap 若死在 apply-patches，那时 pub get 已经成功，

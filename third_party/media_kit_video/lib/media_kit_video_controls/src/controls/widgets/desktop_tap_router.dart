@@ -1,4 +1,4 @@
-// Hibiki patch (touch on desktop, e.g. Microsoft Surface): route a tap on the
+// Fushi patch (touch on desktop, e.g. Microsoft Surface): route a tap on the
 // desktop controls surface by the pointer kind that produced it. See
 // third_party/media_kit_video/PATCHES.md.
 //
@@ -16,7 +16,7 @@ import 'package:flutter/widgets.dart';
 
 /// What a single tap on the desktop controls surface should do.
 enum DesktopControlsTapAction {
-  /// Nothing (tap feature disabled, or a mouse tap on the bottom bar strip).
+  /// Nothing (tap feature disabled, or a mouse tap on the controls chrome).
   none,
 
   /// Toggle play / pause (mouse click, `playAndPauseOnTap`).
@@ -28,8 +28,8 @@ enum DesktopControlsTapAction {
   /// Hide the controls now (touch, bar visible).
   hideControls,
 
-  /// Keep the visible controls alive (touch on the bottom bar strip, i.e. in
-  /// the gaps between buttons / around the seek bar): restart auto-hide.
+  /// Keep the visible controls alive (touch on the controls chrome, i.e. in
+  /// the gaps between buttons / on the seek bar): restart auto-hide.
   keepControlsAlive,
 }
 
@@ -41,8 +41,9 @@ bool isTouchLikePointerKind(PointerDeviceKind? kind) =>
     kind == PointerDeviceKind.invertedStylus;
 
 /// Pure decision for one tap. [inPlayPauseRegion] is false when the tap landed
-/// on the bottom bar strip while the bar is mounted (the upstream
-/// "don't pause when clicking next to the seek bar" exclusion).
+/// on the controls chrome while the bars are mounted (the upstream
+/// "don't pause when clicking next to the seek bar" exclusion, now decided by
+/// a hit test against [VideoControlsChromeRegion]).
 DesktopControlsTapAction resolveDesktopControlsTap({
   required PointerDeviceKind? kind,
   required bool inPlayPauseRegion,
@@ -88,8 +89,8 @@ class MaterialDesktopTapRouter extends StatefulWidget {
   /// The controls' current (authoritative) visibility.
   final bool controlsVisible;
 
-  /// Whether a tap starting at this global position is outside the bottom bar
-  /// strip (see [resolveDesktopControlsTap]).
+  /// Whether a tap starting at this global position is on the picture rather
+  /// than the controls chrome (see [resolveDesktopControlsTap]).
   final bool Function(Offset globalPosition) isInPlayPauseRegion;
 
   /// Called with the resolved action (never with [DesktopControlsTapAction.none]).

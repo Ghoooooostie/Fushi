@@ -37,7 +37,8 @@ add_executable(${BINARY_NAME} WIN32
   "global_lookup_window.cpp"
   "global_mouse_trigger.cpp"
   "hang_watchdog.cpp"
-  "hdr_video_host_window.cpp"
+  "hdr_desktop_capture.cpp"
+  "hdr_display_info.cpp"
   "hook_toolbar_window.cpp"
   "ime_association_guard.cpp"
   "ime_language_switch.cpp"
@@ -541,6 +542,22 @@ add_custom_target(fushi_windows_screen_ocr_logic_gate
 )
 add_dependencies(${BINARY_NAME} fushi_windows_screen_ocr_logic_gate)
 
+# 截屏识字在 HDR 显示器上的 scRGB(FP16) → 8bit sRGB 色调映射（hdr_tone_map.h）：
+# SDR 内容必须逐级还原（否则整屏发白 / 发灰），HDR 高光平滑压缩不能断层；
+# 以及取帧路径判据（hdr_capture_policy.h：只有 Windows 10 的 HDR 显示器走 DXGI）。
+add_executable(fushi_windows_hdr_tone_map_test
+  "tests/hdr_tone_map_test.cpp"
+)
+apply_standard_settings(fushi_windows_hdr_tone_map_test)
+target_compile_definitions(fushi_windows_hdr_tone_map_test PRIVATE
+  "NOMINMAX")
+add_custom_target(fushi_windows_hdr_tone_map_gate
+  COMMAND "$<TARGET_FILE:fushi_windows_hdr_tone_map_test>"
+  DEPENDS fushi_windows_hdr_tone_map_test
+  VERBATIM
+)
+add_dependencies(${BINARY_NAME} fushi_windows_hdr_tone_map_gate)
+
 # Rolling window recording for galgame video cards: the fps keep decision, the
 # max_seconds / byte-cap eviction, the export range (to<=0 = now) and the box
 # downscale are pure STL and run on every Windows runner build, so a regression
@@ -600,7 +617,7 @@ add_executable(fushi_update_launcher WIN32
 )
 apply_standard_settings(fushi_update_launcher)
 target_compile_definitions(fushi_update_launcher PRIVATE "NOMINMAX")
-target_link_libraries(fushi_update_launcher PRIVATE shell32)
+target_link_libraries(fushi_update_launcher PRIVATE shell32 bcrypt)
 
 # BUG-2726: game-stream input regression (window-targeted input, SGRE native
 # gamepad channel, release-without-visibility). Unlike the gates above it is

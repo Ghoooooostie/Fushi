@@ -74,8 +74,9 @@ public class TtsChannelHandler {
     }
 
     public void register(@NonNull FlutterEngine engine) {
-        new MethodChannel(engine.getDartExecutor().getBinaryMessenger(), CHANNEL)
-            .setMethodCallHandler((call, result) -> {
+        MethodChannel channel =
+            new MethodChannel(engine.getDartExecutor().getBinaryMessenger(), CHANNEL);
+        channel.setMethodCallHandler((call, result) -> {
                 switch (call.method) {
                     case "ttsToFile":
                         handleTtsToFile(call, result);
@@ -108,6 +109,11 @@ public class TtsChannelHandler {
                         result.notImplemented();
                 }
             });
+        // 本 handler 挂在 Activity 上、每次 onCreate 新建且本地音频库列表为空，而引擎
+        // 被 audio_service 缓存、比 Activity 活得久：Dart 只在 initialise() 推过一次
+        // 库配置。挂上后主动通知 Dart 重推（TtsChannel.onNativeHandlerAttached，
+        // BUG-3439）；Dart 还没装监听时消息由 ChannelBuffers 暂存。
+        channel.invokeMethod("nativeHandlerAttached", null);
     }
 
     public void destroy() {
@@ -166,7 +172,7 @@ public class TtsChannelHandler {
             }
         });
         File outFile = new File(outputPath);
-        int r = tts.synthesizeToFile(text, null, outFile, "hibiki_tts_file");
+        int r = tts.synthesizeToFile(text, null, outFile, "fushi_tts_file");
         if (r != TextToSpeech.SUCCESS) {
             tts.setOnUtteranceProgressListener(null);
             if (resultSent.compareAndSet(false, true)) {
@@ -186,7 +192,7 @@ public class TtsChannelHandler {
             try {
                 mediaPlayer.reset();
             } catch (IllegalStateException e) {
-                android.util.Log.w("hibiki-audio", "stop reset failed", e);
+                android.util.Log.w("fushi-audio", "stop reset failed", e);
             }
         }
         result.success(true);
@@ -237,7 +243,7 @@ public class TtsChannelHandler {
                     p.start();
                     finishPendingPlay(true);
                 } catch (IllegalStateException e) {
-                    android.util.Log.w("hibiki-audio", tag + " start failed", e);
+                    android.util.Log.w("fushi-audio", tag + " start failed", e);
                     resetMediaPlayerQuietly();
                     finishPendingPlay(false);
                 }
@@ -250,7 +256,7 @@ public class TtsChannelHandler {
             mp.setOnErrorListener((p, what, extra) -> {
                 // 出错后 player 进入 Error 态，必须 reset() 才能再次复用。
                 if (generation == playGeneration) {
-                    android.util.Log.w("hibiki-audio",
+                    android.util.Log.w("fushi-audio",
                         tag + " error what=" + what + " extra=" + extra);
                     resetMediaPlayerQuietly();
                     // prepare 阶段出错（404 / 断网 / 不支持的编码）= 从未开播：答 false，
@@ -270,7 +276,7 @@ public class TtsChannelHandler {
                 finishPendingPlay(true);
             }
         } catch (Exception e) {
-            android.util.Log.w("hibiki-audio", tag + " failed", e);
+            android.util.Log.w("fushi-audio", tag + " failed", e);
             // 失败后把 player 拉回干净的 Idle 态，避免污染下次复用。
             resetMediaPlayerQuietly();
             finishPendingPlay(false);
@@ -299,7 +305,7 @@ public class TtsChannelHandler {
         try {
             mediaPlayer.reset();
         } catch (IllegalStateException e) {
-            android.util.Log.w("hibiki-audio", "reset failed", e);
+            android.util.Log.w("fushi-audio", "reset failed", e);
         }
     }
 
@@ -351,7 +357,7 @@ public class TtsChannelHandler {
                     try {
                         File dbFile = new File(dbPath);
                         if (!dbFile.exists()) {
-                            android.util.Log.w("hibiki-audio",
+                            android.util.Log.w("fushi-audio",
                                 "DB not found, skipping: " + dbPath);
                             continue;
                         }
@@ -367,7 +373,7 @@ public class TtsChannelHandler {
                                 SQLiteDatabase.OPEN_READONLY
                                     | SQLiteDatabase.NO_LOCALIZED_COLLATORS);
                         } catch (Exception readOnlyFailure) {
-                            android.util.Log.w("hibiki-audio",
+                            android.util.Log.w("fushi-audio",
                                 "read-only open failed, falling back to rw: " + dbPath,
                                 readOnlyFailure);
                             db = SQLiteDatabase.openDatabase(
@@ -379,7 +385,7 @@ public class TtsChannelHandler {
                         localAudioDbs.set(slot, db);
                         indexTargets.add(dbPath);
                     } catch (Exception e) {
-                        android.util.Log.e("hibiki-audio",
+                        android.util.Log.e("fushi-audio",
                             "Failed to open DB: " + dbPath, e);
                     }
                 }
@@ -429,7 +435,7 @@ public class TtsChannelHandler {
             // 连只读都开不了：退回改前的行为——照旧尝试建全部索引。这条兜底只在
             // 「我们读都读不了」时才走，而那正是旧实现同样会去开 readWrite 的场景，
             // 故不会比改前更差。
-            android.util.Log.w("hibiki-audio", "index probe failed: " + dbPath, e);
+            android.util.Log.w("fushi-audio", "index probe failed: " + dbPath, e);
             missing.clear();
             for (String[] spec : QUERY_INDEX_SPECS) missing.add(spec);
         } finally {
@@ -455,11 +461,11 @@ public class TtsChannelHandler {
                         + " ON " + spec[1] + "(" + columns + ")");
                 } catch (Exception e) {
                     // 目标表不存在等：建不了不致命，不牵连另一条。
-                    android.util.Log.w("hibiki-audio", "Index creation skipped", e);
+                    android.util.Log.w("fushi-audio", "Index creation skipped", e);
                 }
             }
         } catch (Exception e) {
-            android.util.Log.w("hibiki-audio", "Index creation skipped: " + dbPath, e);
+            android.util.Log.w("fushi-audio", "Index creation skipped: " + dbPath, e);
         } finally {
             if (writable != null) {
                 try { writable.close(); } catch (Exception ignored) { }
@@ -567,7 +573,7 @@ public class TtsChannelHandler {
                             return;
                         }
                     } catch (Exception e) {
-                        android.util.Log.w("hibiki-audio",
+                        android.util.Log.w("fushi-audio",
                             "queryLocalAudio failed on DB " + i, e);
                     } finally {
                         if (cursor != null) cursor.close();
@@ -626,7 +632,7 @@ public class TtsChannelHandler {
                     }
                 }
             } catch (Exception e) {
-                android.util.Log.w("hibiki-audio",
+                android.util.Log.w("fushi-audio",
                     "listLocalAudioSources failed: " + path, e);
             } finally {
                 if (db != null && db.isOpen()) db.close();
@@ -682,7 +688,7 @@ public class TtsChannelHandler {
                         new Handler(Looper.getMainLooper()).post(() -> result.success(null));
                     }
                 } catch (Exception e) {
-                    android.util.Log.w("hibiki-audio", "extractLocalAudio failed", e);
+                    android.util.Log.w("fushi-audio", "extractLocalAudio failed", e);
                     new Handler(Looper.getMainLooper()).post(() -> result.success(null));
                 }
             }
@@ -735,7 +741,7 @@ public class TtsChannelHandler {
                     retriever.release();
                 }
             } catch (Exception e) {
-                android.util.Log.w("hibiki-audio", "extractEmbeddedCover failed", e);
+                android.util.Log.w("fushi-audio", "extractEmbeddedCover failed", e);
                 new Handler(Looper.getMainLooper()).post(() -> result.success(null));
             }
         });

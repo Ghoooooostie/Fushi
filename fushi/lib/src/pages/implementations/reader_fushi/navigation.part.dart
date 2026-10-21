@@ -602,6 +602,15 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     if (!_navigationFromPageTurn) {
       _pageTurnQueue.clear();
     }
+    // 翻页动画（跨章）：只有翻页触发的跨章（不含目录 / 书签 / 搜索 / 恢复）在新章恢复完
+    // 位置后让正文整体淡入；效果为无 / 墨水屏 / 非翻页模式不淡入。见
+    // [_buildChapterTransitionOverlay]。
+    _chapterFadeInPending =
+        _navigationFromPageTurn &&
+        readerChapterFadeInEnabled(
+          viewMode: _settings?.viewMode,
+          effect: _effectivePageTurnAnimation,
+        );
     _navigationFromPageTurn = false;
     // TODO-718 重设计：删除 _continuousSettleGuardArmed 武装——非自愿 reflow 归零判据已改无状态
     // （直接看 fromUserScroll），不再需要「导航武装/用户滚动解武装」状态机。
@@ -652,7 +661,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
   /// TODO-1128：把一个导航目标章号解析成真正拥有虚拟页的章号。开启「图片合并」
   /// (`mergeImagePages`) 后，被吸收进后续文本章的单图片章（[EpubSpreadMap.isAbsorbedImageChapter]）
   /// 没有自己的页——它的 `<img>` 直接内联注入到宿主文本章正文顶部（见
-  /// `webview.part.dart _injectMergedChapterImages`）。若裸导航直接落到被吸收章，会
+  /// `webview.part.dart _mergedChapterImagesHtml`）。若裸导航直接落到被吸收章，会
   /// 加载它自己的独立单图页（第 1 份）+ 宿主正文顶部又注入同图（第 2 份）=**图片重复**。
   /// 本 helper 把这类目标重定向到其宿主文本章（该章虚拟页拥有那张内联图）；其余章号原样
   /// 返回（幂等——宿主本身绝不会被吸收）。spread map 未就绪或合并关闭时 no-op。
@@ -1114,6 +1123,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
       swipeFastDistThreshold: swipeThresholds.fastDist,
       swipeFastVelocity: swipeThresholds.fastVelocity,
       keyBridgeScript: keyBridgeScript,
+      gutterPx: _foldSpreadGutterPx,
     );
 
     // BUG-1280：置位必须在 loadData 之前——`onLoadStop` 可能在 await 返回前就
@@ -1392,9 +1402,16 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     // 晚到 reflow（cue 注入 / 大章 settle）由事件驱动重锚覆盖（见 _reanchorContinuousAfterRestore
     // 的再触发点）。这里不再做任何启发式判据，读到什么就如实落库。
 
-    _lastProgressSection = _currentChapter;
-    _lastProgressValue = progress;
-    _lastProgressCharOffset = charOffset;
+    // BUG-3431：播放跟读期间阅读位置只有一个所有者——当前句（`_syncPositionFromCurrentCue`）。
+    // 视口首字此时不是阅读位置：跟读把句子放在视口内侧，视口首边常残留上一句所在列 / 章首
+    // 半列，量出来的首字（章首附近恒为 0）与句位交替落库；进程恰在 0 时被回收，重开回章首。
+    // 当前句映射不出位置时视口照常是所有者（见 [_cueOwnsReadingPosition]）。
+    final bool cueOwnsPosition = _cueOwnsReadingPosition;
+    if (!cueOwnsPosition) {
+      _lastProgressSection = _currentChapter;
+      _lastProgressValue = progress;
+      _lastProgressCharOffset = charOffset;
+    }
     // TODO-2603：实时进度既是「落库位置」也是「新建 WebView 的恢复目标」，两者必须
     // 同源。放在 _lastProgress* 之后、落库之前，顺序即契约。
     _adoptLiveProgressAsRestoreAnchor(progress, charOffset);
@@ -1438,7 +1455,7 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     // JS stableProgressInvocation 返 null 拦在落库前；commit 清旗后的 settle 尾沿由 B-3 的
     // 250ms 窗在 _handleReaderScroll 拦掉）。B-4「无近期输入=伪」反而误伤惯性甩动到真章首
     // （momentum 期无新输入 → sinceUserInputMs 超窗 → 误判伪 → 丢位置），故移除。500ms 去抖落库。
-    _debouncedSavePosition(progress, charOffset);
+    if (!cueOwnsPosition) _debouncedSavePosition(progress, charOffset);
 
     if (mounted) {
       final int newTotal = _chapterCumulativeChars.isNotEmpty
@@ -1547,7 +1564,6 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     if (snapshot == null) {
       return;
     }
-
     // TODO-718：退出 / lifecycle flush 的这次**实时读**可能撞上自发 reflow 归零（cue 注入 /
     // settle 把 scrollY 瞬时归 0，stableProgress 返回**有效的 0**）。简单不变量（非启发式·无
     // userDriven·无时间窗·无重锚动作）：退出读不得用瞬时 ≈0 覆盖一个已知非章首的缓存位置。
@@ -1571,9 +1587,13 @@ extension _ReaderNavigation on _ReaderFushiPageState {
       return;
     }
 
-    _lastProgressSection = _currentChapter;
-    _lastProgressValue = snapshot.progress;
-    _lastProgressCharOffset = snapshot.charOffset;
+    // BUG-3431：播放跟读期间位置归当前句所有（见 _refreshProgress），退出 / 切后台的
+    // 实时读也不得拿视口首字覆盖它；恢复锚照常跟随，规则与 _refreshProgress 相同。
+    if (!_cueOwnsReadingPosition) {
+      _lastProgressSection = _currentChapter;
+      _lastProgressValue = snapshot.progress;
+      _lastProgressCharOffset = snapshot.charOffset;
+    }
     // TODO-2603：本方法是实时进度的第二个所有者（退出 / lifecycle flush 的实时读），
     // 恢复锚同样跟随，规则与 _refreshProgress 逐字相同。
     _adoptLiveProgressAsRestoreAnchor(snapshot.progress, snapshot.charOffset);
@@ -1679,52 +1699,75 @@ extension _ReaderNavigation on _ReaderFushiPageState {
   }
 
   void _syncPositionFromCurrentCue() {
+    final ({int section, double progress, int charOffset})? position =
+        _readingPositionFromCurrentCue();
+    if (position == null) return;
+    _lastProgressSection = position.section;
+    _lastProgressValue = position.progress;
+    _lastProgressCharOffset = position.charOffset;
+    _debouncedSaveReaderPosition(
+      position.section,
+      position.progress,
+      position.charOffset,
+    );
+  }
+
+  /// 当前句映射出的阅读位置；映射不出（无当前句 / 句子反查不到正文 / 章字数未就绪）
+  /// 时为 null。[_syncPositionFromCurrentCue] 落库与 [_cueOwnsReadingPosition] 判定
+  /// 共用这一份映射，两边口径不会漂开。
+  ({int section, double progress, int charOffset})?
+  _readingPositionFromCurrentCue() {
     final AudioCue? cue = _audiobookController?.currentCue;
-    if (cue == null) return;
+    if (cue == null) return null;
     final SubtitleRematchFragment? frag = SubtitleRematchCodec.tryDecode(
       cue.textFragmentId,
     );
     if (frag != null) {
       final int? studyOffset = _studyRangeForAudioFragment(frag)?.offset;
-      if (studyOffset == null) return;
-      _lastProgressSection = frag.sectionIndex;
-      if (frag.sectionIndex >= 0 &&
-          frag.sectionIndex < _chapterCharCounts.length &&
-          _chapterCharCounts[frag.sectionIndex] > 0) {
-        _lastProgressValue =
-            studyOffset / _chapterCharCounts[frag.sectionIndex];
-        _lastProgressValue = _lastProgressValue.clamp(0.0, 1.0);
-        // The validated XHTML mapping gives the same learning-unit anchor as
-        // the reader, including when exiting lyrics mode without a WebView.
-        _lastProgressCharOffset = studyOffset;
-        _debouncedSaveReaderPosition(
-          _lastProgressSection,
-          _lastProgressValue,
-          studyOffset,
-        );
+      if (studyOffset == null) return null;
+      if (frag.sectionIndex < 0 ||
+          frag.sectionIndex >= _chapterCharCounts.length ||
+          _chapterCharCounts[frag.sectionIndex] <= 0) {
+        return null;
       }
-      return;
+      // The validated XHTML mapping gives the same learning-unit anchor as
+      // the reader, including when exiting lyrics mode without a WebView.
+      return (
+        section: frag.sectionIndex,
+        progress: (studyOffset / _chapterCharCounts[frag.sectionIndex]).clamp(
+          0.0,
+          1.0,
+        ),
+        charOffset: studyOffset,
+      );
     }
     if (_srtCueChapterMap != null && _srtChapterRanges != null) {
       final int? chapter = _srtCueChapterMap![cue.sentenceIndex];
       if (chapter != null &&
           chapter >= 0 &&
           chapter < _srtChapterRanges!.length) {
-        _lastProgressSection = chapter;
         final (int first, int last) = _srtChapterRanges![chapter];
         final int span = last - first;
-        _lastProgressValue = span > 0
-            ? ((cue.sentenceIndex - first) / span).clamp(0.0, 1.0)
-            : 0.0;
-        _lastProgressCharOffset = -1;
-        _debouncedSaveReaderPosition(
-          _lastProgressSection,
-          _lastProgressValue,
-          -1,
+        return (
+          section: chapter,
+          progress: span > 0
+              ? ((cue.sentenceIndex - first) / span).clamp(0.0, 1.0)
+              : 0.0,
+          charOffset: -1,
         );
       }
     }
+    return null;
   }
+
+  /// BUG-3431：播放跟读期间阅读位置只有一个所有者——当前句。判据是「跟读在驱动视口」
+  /// （[AudiobookPlayerController.shouldRevealCurrentCue]）**且**当前句真能映射成阅读
+  /// 位置：音频停在没有句子的段落（片头、只对齐了部分章节的书、句子反查不到正文）时
+  /// 当前句写不出任何位置，视口仍是唯一真值；只看跟读门会让两边都不落库，用户此时
+  /// 手动读过的位置全部丢失。
+  bool get _cueOwnsReadingPosition =>
+      _audiobookController?.shouldRevealCurrentCue == true &&
+      _readingPositionFromCurrentCue() != null;
 
   // HBK-AUDIT-122: in lyrics mode the persisted position must be derived from
   // the current audio cue before flushing, otherwise a stale reader-scroll

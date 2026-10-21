@@ -19,6 +19,7 @@ import 'package:fushi/src/models/module_id.dart';
 import 'package:fushi/src/models/module_registry.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/media/collections/collection_continue.dart';
+import 'package:fushi/src/media/video/video_duration_pref.dart';
 import 'package:fushi/src/media/media_cover_source.dart';
 import 'package:fushi_engine/media/tracking/bangumi_api_client.dart';
 import 'package:fushi/src/media/tracking/media_tracking_labels.dart';
@@ -31,6 +32,11 @@ import 'package:fushi_engine/media/video/m3u8_playlist.dart';
 import 'package:fushi_engine/media/video/video_book_repository.dart';
 import 'package:fushi/src/pages/base_module_tab_page.dart';
 import 'package:fushi/src/pages/implementations/home_dashboard_widgets.dart';
+import 'package:fushi/src/pages/implementations/home_srs_panel.dart';
+import 'package:fushi/src/pages/implementations/srs/srs_review_page.dart';
+import 'package:fushi/src/models/home_dashboard_panel.dart';
+import 'package:fushi/src/srs/srs_providers.dart';
+import 'package:fushi_engine/srs/srs_db_store.dart' show SrsDeckSummary;
 import 'package:fushi/src/pages/implementations/home_floating_toolbar.dart';
 import 'package:fushi/src/utils/components/fushi_floating_toolbar.dart';
 import 'package:fushi/src/pages/implementations/updates_center_open.dart';
@@ -58,7 +64,9 @@ import 'package:fushi_engine/media/collections/shelf_sort.dart';
 import 'package:fushi/src/stats/stat_window.dart';
 import 'package:fushi/src/sync/interconnect_sync_backend.dart';
 import 'package:fushi_engine/sync/fushi_library_host_service.dart';
+import 'package:fushi_engine/sync/ttu_filename.dart';
 import 'package:fushi/src/sync/remote_cover_image.dart';
+import 'package:fushi/src/sync/remote_deletion_filter.dart';
 import 'package:fushi/src/sync/remote_library_cache.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
 import 'package:fushi/src/utils/cover_image.dart';
@@ -93,6 +101,25 @@ bool isDashboardContinueBook(MediaItem item, Set<String> completedBookKeys) {
         duration: item.duration,
       ) ==
       ShelfReadStatus.reading;
+}
+
+/// 书合集在首页「继续」区的续读目标下标（[sorted] 已按组内 sortIndex 排好）。
+///
+/// 用户实报：20 卷的合集读完第 1 卷，「继续」区里这套书直接消失、第 2 卷不出现
+/// ——旧实现逐本按 [isDashboardContinueBook] 过滤，卷 1 判 finished 出局、卷 2
+/// 没进度判 unread 也进不来。与视频合集 Next-Up 同一判据 [continueMemberIndex]
+/// （锚点 = 最近读过的那卷，它读完就推进下一卷）。
+///
+/// 整组一卷都没开始读（不劝人从头开始）或目标仍是读完的卷（整套读完）→ null，
+/// 合集不出卡。
+@visibleForTesting
+int? dashboardBookCollectionContinueIndex(
+  List<CollectionMemberProgress> sorted,
+) {
+  if (!sorted.any((CollectionMemberProgress m) => m.hasStarted)) return null;
+  final int idx = continueMemberIndex(sorted);
+  if (sorted[idx].completed) return null;
+  return idx;
 }
 
 /// 首页是否用双栏版式：横屏（宽 > 高，且至少 600 宽）或宽屏（≥ 840，平板竖屏
@@ -523,7 +550,7 @@ class _HomeDashboardSnapshot {
     required this.primaryCollectionByEntry,
     required this.collectionCoverById,
     required this.epubUidByBookKey,
-    required this.epubImportedAtByKey,
+    required this.epubLocalAddedAtByKey,
     required this.memberSortIndex,
     required this.videoWatchAtByUid,
     required this.videoDurationMsByPath,
@@ -540,7 +567,7 @@ class _HomeDashboardSnapshot {
   final Map<String, int> primaryCollectionByEntry;
   final Map<int, String> collectionCoverById;
   final Map<String, String> epubUidByBookKey;
-  final Map<String, int> epubImportedAtByKey;
+  final Map<String, int> epubLocalAddedAtByKey;
   final Map<String, int> memberSortIndex;
   final Map<String, int> videoWatchAtByUid;
   final Map<String, int> videoDurationMsByPath;
@@ -752,10 +779,11 @@ class _HomeDashboardPageState
   Map<String, int> _primaryCollectionByEntry = const <String, int>{};
   Map<String, String> _epubUidByBookKey = const <String, String>{};
 
-  /// epub bookKey → 导入时刻（epoch 毫秒，`EpubBooks.importedAt`）：宽屏「最近
-  /// 添加」封面行的书侧排序时间源（视频用 [VideoBookRow.importedAt]、游戏用
-  /// [GalgameEntry.addedAt]）。
-  Map<String, int> _epubImportedAtByKey = const <String, int>{};
+  /// epub bookKey → 本机开始拥有的时刻（epoch 毫秒，`EpubBooks.localAddedAt`，
+  /// v118）：宽屏「最近添加」封面行的书侧排序时间源（视频用
+  /// [VideoBookRow.localAddedAt]、游戏用 [GalgameEntry.addedAt]）。**不是**
+  /// `importedAt`——互联下载的书那一列是对端的入库时刻。
+  Map<String, int> _epubLocalAddedAtByKey = const <String, int>{};
 
   /// 本帧「继续」行实际显示的条目（[_buildStudyContinueCard] 写入）：宽屏「最近
   /// 添加」行据此去重，同一部作品不在两行各出一张。
@@ -1029,8 +1057,11 @@ class _HomeDashboardPageState
       for (final EpubBookMeta r in epubRows)
         if (r.uid.isNotEmpty) r.bookKey: r.uid,
     };
-    final Map<String, int> epubImportedAtByKey = <String, int>{
-      for (final EpubBookMeta r in epubRows) r.bookKey: r.importedAt,
+    // 「最近添加」= 本机最近开始拥有的（v118 localAddedAt），不是原始入库时刻：
+    // 刚从互联对端下载的旧书 importedAt 是对端多年前的入库时刻，按它排进不了这一行。
+    final Map<String, int> epubLocalAddedAtByKey = <String, int>{
+      for (final EpubBookMeta r in epubRows)
+        if (r.localAddedAt != null) r.bookKey: r.localAddedAt!,
     };
 
     // 每个视频的最近观看时刻（按 bookUid 取 lastActiveMs 最大值；legacy 无身份行
@@ -1071,7 +1102,7 @@ class _HomeDashboardPageState
       primaryCollectionByEntry: primaryByEntry,
       collectionCoverById: collectionCoverById,
       epubUidByBookKey: epubUidByBookKey,
-      epubImportedAtByKey: epubImportedAtByKey,
+      epubLocalAddedAtByKey: epubLocalAddedAtByKey,
       memberSortIndex: memberSortIndex,
       videoWatchAtByUid: watchAt,
       videoDurationMsByPath: durationByPath,
@@ -1097,13 +1128,13 @@ class _HomeDashboardPageState
     _primaryCollectionByEntry = s.primaryCollectionByEntry;
     _collectionCoverById = s.collectionCoverById;
     _epubUidByBookKey = s.epubUidByBookKey;
-    _epubImportedAtByKey = s.epubImportedAtByKey;
+    _epubLocalAddedAtByKey = s.epubLocalAddedAtByKey;
     _memberSortIndex = s.memberSortIndex;
     _videoWatchAtByUid = s.videoWatchAtByUid;
     _videoDurationMsByPath = s.videoDurationMsByPath;
   }
 
-  /// 「继续也走 hibiki 互联」：互联启用且已配对时，从 host 拉取书清单（内联
+  /// 「继续也走 fushi 互联」：互联启用且已配对时，从 host 拉取书清单（内联
   /// 阅读进度）/ 视频清单（内联播放断点），把本地没有的在读书、在看视频补进
   /// 「继续」（display-only 不落库）。任何失败静默保持纯本地视图（离线/老 host
   /// 不致崩）。2026-10 精简删掉活动时间轴后不再拉远端活动流。
@@ -1133,6 +1164,19 @@ class _HomeDashboardPageState
       // ① 过共享 TTL 缓存（书/视频清单与书架、视频页同槽，谁先拉到谁受益），
       // ② 请求并行而不是串行。
       final RemoteLibraryCache cache = ref.read(remoteLibraryCacheProvider);
+      // 与书架 / 视频库远端占位卡同一道过滤（BUG-3508）：本端「从所有设备删除」过的
+      // 书 / 视频在墓碑送达 host 前不能以远端「继续」卡复活。**先于取清单读**（见
+      // loadPendingRemoteDeletionKeys）。
+      final Set<String> deletedBookKeys = await loadPendingRemoteDeletionKeys(
+        appModel.database,
+        SyncTombstoneKind.book,
+        remoteLibrarySourceId: backend.remoteLibrarySourceId,
+      );
+      final Set<String> deletedVideoKeys = await loadPendingRemoteDeletionKeys(
+        appModel.database,
+        SyncTombstoneKind.video,
+        remoteLibrarySourceId: backend.remoteLibrarySourceId,
+      );
       final List<Object> results = await Future.wait<Object>(<Future<Object>>[
         // 首页只走互联（上面已 return 掉未启用的情况），来源身份仍从 backend 自己
         // 取而不是写字面量——书/视频两个域与书架、视频页同槽命中，靠的就是双方报出
@@ -1191,8 +1235,15 @@ class _HomeDashboardPageState
           remoteContinueCandidates(
         localBookKeys: localBookKeys,
         localVideoUids: localVideoUids,
-        remoteBooks: remoteBooks,
-        remoteVideos: remoteVideos,
+        remoteBooks: filterOutLocallyDeletedRemoteBooks(
+          remote: remoteBooks,
+          deletedKeys: deletedBookKeys,
+          keyOf: sanitizeTtuFilename,
+        ),
+        remoteVideos: filterOutLocallyDeletedRemoteVideos(
+          remote: remoteVideos,
+          deletedKeys: deletedVideoKeys,
+        ),
       );
       // 设备来源标注：配对时存下的 host 设备名（多地址时取第一个启用且有名的）。
       final List<FushiClientUrl> urls = await syncRepo.getFushiClientUrls();
@@ -1261,6 +1312,12 @@ class _HomeDashboardPageState
             appModel.moduleVisibility.isEnabled(ModuleId.services)
         ? _buildTrackingCard(tokens, appModel, DateTime.now())
         : null;
+    // 可选面板（[HomeDashboardPanel] 注册表，按注册顺序）：各自判定是否出现，
+    // 紧跟「今日」之后。
+    final List<Widget> optionalPanels = <Widget>[
+      for (final HomeDashboardPanel panel in HomeDashboardPanel.values)
+        if (_buildOptionalPanel(panel) case final Widget w) w,
+    ];
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
@@ -1314,6 +1371,7 @@ class _HomeDashboardPageState
           final Widget main = entering(continueCard);
           final List<Widget> side = <Widget>[
             entering(studyCard),
+            for (final Widget panel in optionalPanels) entering(panel),
             if (recentCard != null) entering(recentCard),
             if (trackingCard != null) entering(trackingCard),
           ];
@@ -1344,6 +1402,10 @@ class _HomeDashboardPageState
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               entering(studyCard),
+              for (final Widget panel in optionalPanels) ...<Widget>[
+                SizedBox(height: tokens.spacing.card),
+                entering(panel),
+              ],
               SizedBox(height: tokens.spacing.card),
               entering(continueCard),
               if (trackingCard != null) ...<Widget>[
@@ -1394,9 +1456,12 @@ class _HomeDashboardPageState
           child: FocusTraversalGroup(
             child: Stack(
               children: <Widget>[
-                NotificationListener<ScrollNotification>(
-                  onNotification: _toolbarScroll.handle,
-                  child: list,
+                NotificationListener<ScrollMetricsNotification>(
+                  onNotification: _toolbarScroll.handleMetrics,
+                  child: NotificationListener<ScrollNotification>(
+                    onNotification: _toolbarScroll.handle,
+                    child: list,
+                  ),
                 ),
                 Positioned(
                   top: 0,
@@ -1533,32 +1598,93 @@ class _HomeDashboardPageState
     Set<String> completedBookKeys,
   ) {
     final List<_ContinueEntry> entries = <_ContinueEntry>[];
+    // v82：位置表键 = uid，bookKey 经换算表转一跳；换算不上（standalone SRT /
+    // 书行已删）保持原键查询——与旧行为同样查不到、recent=0。
+    String bookKeyOf(MediaItem item) =>
+        ReaderFushiSource.parseBookKey(item.mediaIdentifier) ??
+        item.mediaIdentifier;
+    int bookRecentMs(MediaItem item) {
+      final String bookKey = bookKeyOf(item);
+      return lastReadByKey[epubUidByKey[bookKey] ?? bookKey] ?? 0;
+    }
+
+    _ContinueEntry bookEntry(
+      MediaItem item, {
+      required int recentMs,
+      required String? collectionName,
+      int? volume,
+    }) {
+      final int percent = item.duration > 0
+          ? ((item.position / item.duration) * 100).clamp(0, 100).round()
+          : 0;
+      return _ContinueEntry(
+        kind: _bookMediaKind(item),
+        // BUG-1018 (A1)：书名走与书架卡同一 override 通道（编辑对话框改名后
+        // 首页「继续」区同步显示新名），不直接读 DB 原名。
+        title: ReaderFushiSource.instance.getDisplayTitleFromMediaItem(item),
+        recentMs: recentMs,
+        progress: percent / 100,
+        // 合集里的第几卷优先（下一卷还没开读时 0% 没有信息量），进度条照画。
+        badgeLabel:
+            volume != null ? t.home_continue_volume(n: volume) : '$percent%',
+        collectionName: collectionName,
+        book: item,
+      );
+    }
+
+    // 书合集感知续读（与下方视频 Next-Up 同口径）：成员按主折叠合集归组，每个
+    // 合集在继续区最多一张卡，续读目标由 [dashboardBookCollectionContinueIndex]
+    // 定；散书保持「在读」逐本过滤的现行为。
+    final Map<int, List<MediaItem>> booksByCollection =
+        <int, List<MediaItem>>{};
     for (final MediaItem item in books) {
-      if (isDashboardContinueBook(item, completedBookKeys)) {
-        final String bookKey =
-            ReaderFushiSource.parseBookKey(item.mediaIdentifier) ??
-                item.mediaIdentifier;
-        // v82：位置表键 = uid，bookKey 经换算表转一跳；换算不上（standalone
-        // SRT / 书行已删）保持原键查询——与旧行为同样查不到、recent=0。
-        final int recent = lastReadByKey[epubUidByKey[bookKey] ?? bookKey] ?? 0;
-        final int percent =
-            ((item.position / item.duration) * 100).clamp(0, 100).round();
-        entries.add(_ContinueEntry(
-          kind: _bookMediaKind(item),
-          // BUG-1018 (A1)：书名走与书架卡同一 override 通道（编辑对话框改名后
-          // 首页「继续」区同步显示新名），不直接读 DB 原名。
-          title: ReaderFushiSource.instance.getDisplayTitleFromMediaItem(item),
-          recentMs: recent,
-          progress: percent / 100,
-          badgeLabel: '$percent%',
-          collectionName: statCollectionName(
-            _bookCollectionKey(item),
-            _primaryCollectionByEntry,
-            _collectionNamesById,
-          ),
-          book: item,
-        ));
+      final int? cid = _primaryCollectionByEntry[_bookCollectionKey(item)];
+      if (cid != null) {
+        (booksByCollection[cid] ??= <MediaItem>[]).add(item);
+        continue;
       }
+      if (isDashboardContinueBook(item, completedBookKeys)) {
+        entries.add(
+          bookEntry(item, recentMs: bookRecentMs(item), collectionName: null),
+        );
+      }
+    }
+    for (final MapEntry<int, List<MediaItem>> ce
+        in booksByCollection.entries) {
+      final List<MediaItem> sorted = List<MediaItem>.of(ce.value)
+        ..sort((MediaItem a, MediaItem b) {
+          final int ai = _memberSortIndex[_bookCollectionKey(a)] ?? 1 << 30;
+          final int bi = _memberSortIndex[_bookCollectionKey(b)] ?? 1 << 30;
+          if (ai != bi) return ai.compareTo(bi);
+          return a.mediaIdentifier.compareTo(b.mediaIdentifier);
+        });
+      final List<int> readAt = <int>[
+        for (final MediaItem m in sorted) bookRecentMs(m),
+      ];
+      final int? idx =
+          dashboardBookCollectionContinueIndex(<CollectionMemberProgress>[
+        for (int i = 0; i < sorted.length; i++)
+          CollectionMemberProgress(
+            positionMs: sorted[i].position,
+            completed: classifyShelfReadStatus(
+                  completed: completedBookKeys.contains(bookKeyOf(sorted[i])),
+                  position: sorted[i].position,
+                  duration: sorted[i].duration,
+                ) ==
+                ShelfReadStatus.finished,
+            lastPlayedAt: readAt[i],
+          ),
+      ]);
+      if (idx == null) continue;
+      // 单元活跃时刻 = 组内各卷最近阅读时刻最大值（含读完的卷——下一卷卡按
+      // 「刚读完上一卷」的时间参与混排）。
+      final int recent = readAt.fold<int>(0, (int a, int b) => a > b ? a : b);
+      entries.add(bookEntry(
+        sorted[idx],
+        recentMs: recent,
+        collectionName: _collectionNamesById[ce.key],
+        volume: sorted.length >= 2 ? idx + 1 : null,
+      ));
     }
     // 视频侧合集感知 Next-Up（用户实报：合集里看完一集，合集不该从「继续」消
     // 失，应推进为下一集）：成员按主折叠合集归组，每个合集在继续区**最多一张
@@ -1673,6 +1799,32 @@ class _HomeDashboardPageState
     _resumeEntry = visible.isEmpty ? null : visible.first;
     _continueVisible = visible;
     return visible;
+  }
+
+  /// [HomeDashboardPanel] 注册表里一个面板此刻的 widget；不该出现时为 null。
+  /// 在 build 里（LayoutBuilder 之外）调用：各面板的显隐判据经 ref.watch 订阅。
+  Widget? _buildOptionalPanel(HomeDashboardPanel panel) => switch (panel) {
+        HomeDashboardPanel.srsReview => ref.watch(homeSrsPanelVisibleProvider)
+            ? HomeSrsPanel(
+                key: const ValueKey<String>('home-srs-card'),
+                onOpenDecks: () => _goToTab(HomeTab.srs),
+                onStartReview: _startSrsReview,
+              )
+            : null,
+      };
+
+  /// 复习条「开始复习」：直接进该牌组的复习页；回来后递增刷新信号重读计数。
+  void _startSrsReview(SrsDeckSummary deck) {
+    srsRunLogged('HomeDashboard.srsReview', () async {
+      await Navigator.of(context).push<void>(
+        adaptivePageRoute<void>(
+          context: context,
+          builder: (BuildContext context) =>
+              SrsReviewPage(deckId: deck.deck.id, deckName: deck.fullName),
+        ),
+      );
+      if (mounted) bumpSrsRevision(ref);
+    });
   }
 
   /// 「今日」分区：学习头部行（[HomeStudyHeader]），首载未结束时挂同轮廓骨架。
@@ -1848,9 +2000,12 @@ class _HomeDashboardPageState
   /// 只在双栏版式挂（竖屏单栏不出，免得手机首页信息过多），形态是紧凑列表
   /// （[HomeRecentTile]：小封面 + 标题 + 「类型 · 相对时间」），最多
   /// [_kRecentLimit] 条。数据源是本页快照里已有的书 / 视频 / 游戏行（不新增查询）：
-  /// 书按 `EpubBooks.importedAt`、视频按 `VideoBooks.importedAt`（合集按成员
+  /// 书按 `EpubBooks.localAddedAt`、视频按 `VideoBooks.localAddedAt`（合集按成员
   /// 最大值收成一张，封面取合集海报）、游戏按 `addedAt` 倒序混排；已在「继续」
   /// 出现的作品去重；关掉的模块先出局。没有可显示的条目 → null（不出空卡）。
+  ///
+  /// 书 / 视频取本机开始拥有的时刻（v118），不取原始入库时刻 importedAt：刚从互联
+  /// 对端下载的旧条目 importedAt 是对端的入库时刻，按它排就进不了这一行。
   Widget? _buildRecentlyAddedCard(
     FushiDesignTokens tokens,
     AppModel appModel,
@@ -1879,7 +2034,7 @@ class _HomeDashboardPageState
       final String? bookKey =
           ReaderFushiSource.parseBookKey(item.mediaIdentifier);
       final int addedAt =
-          bookKey == null ? 0 : (_epubImportedAtByKey[bookKey] ?? 0);
+          bookKey == null ? 0 : (_epubLocalAddedAtByKey[bookKey] ?? 0);
       if (addedAt <= 0) continue;
       entries.add(_ContinueEntry(
         kind: _bookMediaKind(item),
@@ -1898,7 +2053,7 @@ class _HomeDashboardPageState
         (videosByCollection[cid] ??= <VideoBookRow>[]).add(v);
         continue;
       }
-      final int addedAt = v.importedAt ?? 0;
+      final int addedAt = v.localAddedAt ?? 0;
       if (addedAt <= 0 || shownVideos.contains(v.bookUid)) continue;
       entries.add(_ContinueEntry(
         kind: MediaKind.video,
@@ -1912,7 +2067,7 @@ class _HomeDashboardPageState
       if (shownVideoCollections.contains(ce.key)) continue;
       int addedAt = 0;
       for (final VideoBookRow m in ce.value) {
-        final int at = m.importedAt ?? 0;
+        final int at = m.localAddedAt ?? 0;
         if (at > addedAt) addedAt = at;
       }
       if (addedAt <= 0) continue;
@@ -2094,11 +2249,22 @@ class _HomeDashboardPageState
   /// [_epubUidByBookKey] 换算，换算不上按 bookKey 回退——与透传成员行同键），
   /// standalone SRT 书身份是 `hoshi://srtbook/<uid>`（BUG-1018 A3）→ 'srt|<uid>'；
   /// 识别不出回退 epub 键（查不中合集，安全降级）。
+  ///
+  /// v83 前写入、仍以 bookKey 为 entryKey 的旧成员行：
+  /// [FushiDatabase.getLocalPrimaryCollectionMembership] 两种键都收，这里 uid 键
+  /// 查不中归属时退到 bookKey 键，否则旧合集在「继续」区按散书逐本判、续读推进
+  /// 不到下一卷。
   String _bookCollectionKey(MediaItem item) {
     final String? bookKey =
         ReaderFushiSource.parseBookKey(item.mediaIdentifier);
     if (bookKey != null) {
-      return MediaKind.epub.compositeKey(_epubUidByBookKey[bookKey] ?? bookKey);
+      final String uidKey =
+          MediaKind.epub.compositeKey(_epubUidByBookKey[bookKey] ?? bookKey);
+      if (_primaryCollectionByEntry.containsKey(uidKey)) return uidKey;
+      final String legacyKey = MediaKind.epub.compositeKey(bookKey);
+      return _primaryCollectionByEntry.containsKey(legacyKey)
+          ? legacyKey
+          : uidKey;
     }
     final String? srtUid =
         ReaderFushiSource.parseSrtBookUid(item.mediaIdentifier);
@@ -2190,16 +2356,22 @@ class _HomeDashboardPageState
       (VideoBookRow m) => m.completedAt != null || m.lastPositionMs > 0,
     );
     if (!anyTrace) return null;
-    final int idx = continueMemberIndex(<CollectionMemberProgress>[
+    final PreferencesRepository prefs = ref.read(appProvider).prefsRepo;
+    final List<CollectionMemberProgress> progress = <CollectionMemberProgress>[
       for (final VideoBookRow m in sorted)
         CollectionMemberProgress(
           positionMs: m.lastPositionMs,
           completed: m.completedAt != null,
           lastPlayedAt: m.lastPlayedAt,
+          // BUG-3491：片长用来分辨「已打勾的集正在重看」。
+          durationMs: videoDurationMsFromPref(
+            prefs.getPref(videoDurationPrefKey(m.bookUid)),
+          ),
         ),
-    ]);
+    ];
+    final int idx = continueMemberIndex(progress);
     final VideoBookRow resume = sorted[idx];
-    if (resume.completedAt != null) return null;
+    if (progress[idx].isFinished) return null;
     return (row: resume, index: idx, count: sorted.length);
   }
 

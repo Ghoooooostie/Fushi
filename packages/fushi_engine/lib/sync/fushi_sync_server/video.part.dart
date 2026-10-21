@@ -306,21 +306,21 @@ extension _FushiSyncServerVideo on FushiSyncServer {
     // GET /api/library/videos/<id>/subtitle — 字幕（需 Basic 鉴权，中间件已处理）
     // PUT 同路径 — client→host 上传该视频的外挂字幕 sidecar（BUG-964，随
     // syncVideoFiles live push）。后缀（`.srt` / `.ja.srt` …）经
-    // X-Hibiki-Subtitle-Suffix header 上报，服务端白名单校验；老 host 无此分支
+    // [kSubtitleSuffixHeader] 上报，服务端白名单校验；老 host 无此分支
     // 对 PUT 回 405，client 据此优雅降级。
     final String? subtitleId = _extractVideoId(reqPath, 'subtitle');
     if (subtitleId != null) {
       if (method == 'PUT') {
         final String suffix =
-            _decodeHeaderValue(request, 'x-hibiki-subtitle-suffix') ?? '';
+            _decodeHeaderValue(request, kSubtitleSuffixHeader) ?? '';
         final Directory tmpDir =
-            Directory.systemTemp.createTempSync('hibiki_subtitle_in');
+            Directory.systemTemp.createTempSync('fushi_subtitle_in');
         final File tmp = File(p.join(tmpDir.path, 'upload.bin'));
         final IOSink sink = tmp.openWrite();
         try {
           await request.read().forEach(sink.add);
           await sink.close();
-          // X-Hibiki-Subtitle-Default: 1 = 用户在远端播放时导入 / 重定时的字幕，要设成
+          // [kSubtitleDefaultHeader]: 1 = 用户在远端播放时导入 / 重定时的字幕，要设成
           // 这一集的默认字幕（后缀由 host 按自己的学习语言定，旧的高优先级 sidecar
           // 改名让位，见 [VideoSubtitleDefaultHost]）。本 host 的库服务不支持该能力时
           // 回 409、**不落盘**：退回 importVideoSubtitle 会按 client 报的后缀覆盖同名
@@ -328,7 +328,7 @@ extension _FushiSyncServerVideo on FushiSyncServer {
           // `liveLibrary.videoSubtitleDefault` 再上传（老 host 不认这个 header，只能靠
           // client 那一侧的门），这里是新 host 的第二道门。
           final bool asDefault =
-              _decodeHeaderValue(request, 'x-hibiki-subtitle-default') == '1';
+              _decodeHeaderValue(request, kSubtitleDefaultHeader) == '1';
           if (asDefault) {
             if (svc is! VideoSubtitleDefaultHost) {
               return shelf.Response(
@@ -343,9 +343,14 @@ extension _FushiSyncServerVideo on FushiSyncServer {
               id: subtitleId,
               format: p.extension(suffix),
             );
+            // 新旧两个名字都回：改名前的 client 只读旧名，读不到会把这次成功的
+            // 上传误报成「host 不支持」（见 kLegacyInterconnectHeaderNames）。
             return shelf.Response(
               200,
-              headers: <String, String>{'x-hibiki-subtitle-suffix': placed},
+              headers: <String, String>{
+                kSubtitleSuffixHeader: placed,
+                kLegacyInterconnectHeaderNames[kSubtitleSuffixHeader]!: placed,
+              },
             );
           }
           await svc.importVideoSubtitle(tmp, id: subtitleId, suffix: suffix);
@@ -431,6 +436,23 @@ extension _FushiSyncServerVideo on FushiSyncServer {
           'Content-Length': '$length',
         },
       );
+    }
+
+    // GET /api/library/videos/<id>/danmakukey?episode=N — 弹弹play 匹配指纹
+    // （BUG-3614）。client 远端流播时本机没有文件、算不出指纹，由 host 用自己的
+    // 文件算好下发。不实现 [VideoDanmakuKeyHost] / 老 host → 404，client 当作没有
+    // 弹幕来源。
+    final String? danmakuKeyId = _extractVideoId(reqPath, 'danmakukey');
+    if (danmakuKeyId != null) {
+      if (method != 'GET') return shelf.Response(405);
+      if (svc is! VideoDanmakuKeyHost) {
+        return shelf.Response.notFound('Video danmaku key not supported');
+      }
+      final DandanplayFileKey? key = await (svc as VideoDanmakuKeyHost)
+          .videoDanmakuKey(danmakuKeyId,
+              episodeIndex: _episodeIndexFromRequest(request));
+      if (key == null) return shelf.Response.notFound('Video not found');
+      return jsonResponse(key.toJson());
     }
 
     // GET/PUT /api/library/videos/<id>/position — 跨设备播放断点（TODO-653）
@@ -574,11 +596,11 @@ extension _FushiSyncServerVideo on FushiSyncServer {
         return shelf.Response(400, body: 'Invalid video id');
       }
       final String title =
-          _decodeHeaderValue(request, 'x-hibiki-video-title') ?? id;
+          _decodeHeaderValue(request, kVideoTitleHeader) ?? id;
       final String? fileName =
-          _decodeHeaderValue(request, 'x-hibiki-video-filename');
+          _decodeHeaderValue(request, kVideoFilenameHeader);
       final Directory tmpDir =
-          Directory.systemTemp.createTempSync('hibiki_video_in');
+          Directory.systemTemp.createTempSync('fushi_video_in');
       final File tmp = File(p.join(tmpDir.path, 'upload.bin'));
       final IOSink sink = tmp.openWrite();
       try {

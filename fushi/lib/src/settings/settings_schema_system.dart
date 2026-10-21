@@ -7,6 +7,9 @@ import 'package:fushi/pages.dart';
 import 'package:fushi/src/feedback/feedback_reply_alerts.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/module_id.dart';
+import 'package:fushi/src/models/module_registry.dart';
+import 'package:fushi/src/models/store_compliance.dart';
+import 'package:fushi/src/media/manga/mihon/mihon_runtime_factory.dart';
 import 'package:fushi/src/pages/implementations/feedback/feedback_common.dart'
     show openFeedbackCenter;
 import 'package:fushi/src/pages/implementations/leaderboard/leaderboard_tab.dart'
@@ -19,12 +22,16 @@ import 'package:fushi/src/onboarding/recommended_pack_import.dart';
 import 'package:fushi/src/settings/settings_actions.dart';
 import 'package:fushi/src/settings/settings_context.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
+import 'package:fushi/src/settings/settings_schema_web_adblock.dart';
 import 'package:fushi/src/diagnostics/video_diag_export.dart';
 import 'package:fushi/src/diagnostics/video_diag_log.dart';
 import 'package:fushi/src/stats/study_diag_export.dart';
 import 'package:fushi/src/sync/sync_http.dart';
 import 'package:fushi/src/updates/app_update_check.dart';
+import 'package:fushi/src/updates/app_update_cli.dart'
+    show checkAppUpdateForCli;
 import 'package:fushi/src/updates/update_feed_service.dart';
+import 'package:fushi/src/updates/usage_heartbeat.dart';
 import 'package:fushi_engine/updates/update_feed_kind.dart';
 import 'package:fushi/src/utils/misc/build_version.dart';
 import 'package:fushi/src/utils/misc/crash_dump_locator.dart';
@@ -80,6 +87,49 @@ SettingsSection _homeShortcutsSection() {
       ),
     ],
   );
+}
+
+/// 启动页下拉的「默认」项 token（底栏第一个可见页）。其余项的 token 是
+/// [ModuleId.name]——只是设置行 / ctl 的取值，持久化走 [ModuleId.prefKey]
+/// （见 `PreferencesRepository.setStartupModule`）。
+const String _kStartupModuleDefault = 'default';
+
+/// 启动页可选项：默认 + 有底栏 tab 的模块，按用户排的底栏顺序。[visibility] 为
+/// null 时给静态全集（仅供恢复默认的标签格式化），否则只列此刻可见的模块——
+/// 被关掉 / 本平台不存在的模块选不了（反馈 #PwEC1evz1E）。
+List<SettingsSegmentOption<String>> _startupModuleOptions(
+  ModuleVisibility? visibility,
+) => <SettingsSegmentOption<String>>[
+  SettingsSegmentOption<String>(
+    value: _kStartupModuleDefault,
+    label: t.startup_module_default,
+  ),
+  for (final ModuleId module in visibility?.ordered ?? ModuleId.values)
+    if (homeTabOfModule(module) case final HomeTab tab
+        when visibility == null || visibility.isEnabled(module))
+      SettingsSegmentOption<String>(
+        value: module.name,
+        label: homeNavItemFor(tab).label,
+      ),
+];
+
+/// 当前生效的启动页 token：所选模块此刻不可见时显示默认，与启动时的实际落点
+/// （`homeInitialTab` 回退到第一个可见页）一致。
+String _startupModuleToken(AppModel appModel) {
+  final ModuleId? module = appModel.startupModule;
+  if (module == null ||
+      homeTabOfModule(module) == null ||
+      !appModel.moduleVisibility.isEnabled(module)) {
+    return _kStartupModuleDefault;
+  }
+  return module.name;
+}
+
+ModuleId? _startupModuleOfToken(String token) {
+  for (final ModuleId module in ModuleId.values) {
+    if (module.name == token) return module;
+  }
+  return null;
 }
 
 SettingsDestination buildSystemDestination() {
@@ -161,6 +211,12 @@ SettingsDestination buildSystemDestination() {
             id: 'system.check_update_now',
             title: t.settings_check_update_now,
             icon: Icons.system_update_outlined,
+            // 检查不弹对话框、只回结果；下载 / 安装是后面两步：
+            // `fushi_cli update download` / `update install --yes`（见 app_update_cli.dart）。
+            cli: SettingsCliAction(
+              run: (SettingsContext c, Map<String, String> _) =>
+                  checkAppUpdateForCli(c.appModel),
+            ),
             onTap: _checkUpdateNow,
           ),
           // TODO-1310：应用内查看更新日志。推 ChangelogPage，在线拉本仓库 GitHub
@@ -199,6 +255,20 @@ SettingsDestination buildSystemDestination() {
                 settingsContext.appModel.updateAutoInstall,
             onChanged: (SettingsContext settingsContext, bool value) async {
               await settingsContext.appModel.setUpdateAutoInstall(value);
+              settingsContext.refresh();
+            },
+          ),
+          // 安装统计心跳（updates/usage_heartbeat.dart）：iOS 不发，开关也不出现。
+          SettingsSwitchItem(
+            id: 'system.usage_stats_enabled',
+            title: t.usage_stats_enabled,
+            subtitle: t.usage_stats_enabled_hint,
+            icon: Icons.query_stats_outlined,
+            visible: (_) => platformSendsUsageHeartbeat(),
+            value: (SettingsContext settingsContext) =>
+                settingsContext.appModel.usageStatsEnabled,
+            onChanged: (SettingsContext settingsContext, bool value) async {
+              await settingsContext.appModel.setUsageStatsEnabled(value);
               settingsContext.refresh();
             },
           ),
@@ -246,25 +316,29 @@ SettingsDestination buildSystemDestination() {
               settingsContext.refresh();
             },
           ),
-          // 「启动时打开查词」从「外观 · 应用」分区归位到此处（启动落地页/导航行为，
-          // 与键盘/手柄焦点导航同属通用应用项）。item id 保持 'appearance.
-          // startup_default_dictionary_tab' 不变（历史命名，非持久化 key），仅换分区。
-          SettingsSwitchItem(
+          // 启动页（反馈 #PwEC1evz1E）：取代旧开关「启动时打开查词」，可选任一此刻
+          // 可见、有底栏 tab 的模块（选项随功能模块开关与排序实时变化）。所选模块
+          // 被关掉时这里显示「底栏第一个页面」，与启动时的实际落点（homeInitialTab）
+          // 一致；重新打开该模块后用户原先的选择照旧生效。
+          // item id 沿用旧开关的 'appearance.startup_default_dictionary_tab'（设置
+          // 搜索锚点，历史命名，非持久化 key）；持久化见 ModuleId.startupPrefKey。
+          SettingsSegmentedItem<String>(
             id: 'appearance.startup_default_dictionary_tab',
-            title: t.startup_default_dictionary_tab,
-            subtitle: t.startup_default_dictionary_tab_hint,
-            icon: Icons.manage_search_outlined,
-            // 反馈 #PwEC1evz1E：查词模块被关掉时这个开关没有落点（启动落地只认可见 tab，
-            // 见 homeInitialTab），留着只会开了不生效，所以随模块开关隐藏。
-            visible: (SettingsContext settingsContext) => settingsContext
-                .appModel
-                .moduleVisibility
-                .isEnabled(ModuleId.lookup),
-            value: (SettingsContext settingsContext) =>
-                settingsContext.appModel.startupDefaultDictionaryTab,
-            onChanged: (SettingsContext settingsContext, bool value) async {
-              await settingsContext.appModel.setStartupDefaultDictionaryTab(
-                value,
+            title: t.startup_module,
+            subtitle: t.startup_module_hint,
+            icon: FushiIcons.home,
+            dropdown: true,
+            defaultValue: _kStartupModuleDefault,
+            options: _startupModuleOptions(null),
+            optionsBuilder: (SettingsContext settingsContext) =>
+                _startupModuleOptions(
+                  settingsContext.appModel.moduleVisibility,
+                ),
+            selected: (SettingsContext settingsContext) =>
+                _startupModuleToken(settingsContext.appModel),
+            onChanged: (SettingsContext settingsContext, String token) async {
+              await settingsContext.appModel.setStartupModule(
+                _startupModuleOfToken(token),
               );
               settingsContext.refresh();
             },
@@ -320,6 +394,7 @@ SettingsDestination buildSystemDestination() {
             id: 'system.website',
             title: t.options_website,
             icon: Icons.language_outlined,
+            cli: const SettingsCliAction.tap(),
             onTap: (_) async {
               await openOfficialWebsite();
             },
@@ -328,6 +403,7 @@ SettingsDestination buildSystemDestination() {
             id: 'system.github',
             title: t.options_github,
             icon: Icons.public_outlined,
+            cli: const SettingsCliAction.tap(),
             onTap: (_) async {
               await launchUrl(
                 Uri.parse('https://github.com/hajisensai/fushi'),
@@ -339,6 +415,7 @@ SettingsDestination buildSystemDestination() {
             id: 'system.github_sponsors',
             title: t.options_github_sponsors,
             icon: FushiIcons.favorite,
+            cli: const SettingsCliAction.tap(),
             onTap: (_) async {
               await launchUrl(
                 Uri.parse(kGitHubSponsorsUrl),
@@ -513,6 +590,8 @@ SettingsDestination buildSystemDestination() {
           ),
         ],
       ),
+      // 应用内网页浏览（InAppWebView）的广告 / 跟踪拦截，紧跟网络分组。
+      buildWebAdblockSection(),
       // v101 统一更新提醒。四个域各一个开关 + 系统通知总开关。
       //
       // 四个域开关**不经 `AppModel.updateFeedService`**，直接读写 pref 键：
@@ -551,6 +630,12 @@ SettingsDestination buildSystemDestination() {
                   FushiIcons.browserExtension,
                 ),
                 (
+                  UpdateFeedKind.animeExtension,
+                  t.updates_notify_anime_extension,
+                  t.updates_notify_anime_extension_hint,
+                  FushiIcons.browserExtension,
+                ),
+                (
                   UpdateFeedKind.appRelease,
                   t.updates_notify_app_release,
                   t.updates_notify_app_release_hint,
@@ -576,6 +661,26 @@ SettingsDestination buildSystemDestination() {
                 settingsContext.refresh();
               },
             ),
+          // 扩展后台自动更新（默认关）：启动时把签名未变的漫画 / 视频扩展装成
+          // 仓库新版；碰过在线源的进程里推迟到下次启动。只在有 Mihon 宿主且
+          // 合规允许在线源的平台出现。
+          SettingsSwitchItem(
+            id: 'system.updates.extension_auto_update',
+            title: t.updates_extension_auto_update,
+            subtitle: t.updates_extension_auto_update_hint,
+            icon: FushiIcons.sync,
+            defaultValue: false,
+            visible: (_) =>
+                MihonRuntimeFactory.isSupported &&
+                (StoreRestrictedCapability.onlineMangaSource.isAvailable ||
+                    StoreRestrictedCapability.onlineVideoSource.isAvailable),
+            value: (SettingsContext settingsContext) =>
+                settingsContext.appModel.mihonExtensionAutoUpdate,
+            onChanged: (SettingsContext settingsContext, bool value) async {
+              await settingsContext.appModel.setMihonExtensionAutoUpdate(value);
+              settingsContext.refresh();
+            },
+          ),
           // 显示值 = 偏好开 && 系统已授权；打开 = 唯一会弹系统权限框的地方
           // （BUG-2498：启动期不再申请，申请只跟着用户这一下）。
           SettingsSwitchItem(
@@ -695,6 +800,11 @@ SettingsDestination buildSystemDestination() {
             title: t.settings_study_diag_export,
             subtitle: t.settings_study_diag_export_hint,
             icon: Icons.save_alt_outlined,
+            cli: SettingsCliAction(
+              params: _kDiagExportParams,
+              run: (SettingsContext c, Map<String, String> args) async =>
+                  _writeDiagExport(args, await _buildStudyDiagLog(c.appModel)),
+            ),
             onTap: _exportStudyDiagLog,
           ),
           // 用户 2026-09-22：「视频模块加入日志用于分析视频为什么卡顿、查词为什么
@@ -719,6 +829,11 @@ SettingsDestination buildSystemDestination() {
             icon: Icons.save_alt_outlined,
             // 开关关着也留着导出：复现完先关掉再导出是很自然的顺序，此时流水仍在
             // （[VideoDiagLog.setEnabled] 只停止记录、不清空）。
+            cli: SettingsCliAction(
+              params: _kDiagExportParams,
+              run: (SettingsContext c, Map<String, String> args) async =>
+                  _writeDiagExport(args, await _buildVideoDiagLog(c.appModel)),
+            ),
             onTap: _exportVideoDiagLog,
           ),
         ],
@@ -727,15 +842,39 @@ SettingsDestination buildSystemDestination() {
   );
 }
 
+/// 诊断导出在控制通道上的参数：CLI 给目标文件（代替保存对话框 / 系统分享）。
+const List<SettingsCliParam> _kDiagExportParams = <SettingsCliParam>[
+  SettingsCliParam('value', help: '导出到的文件（绝对路径）', path: true),
+  SettingsCliParam('overwrite', help: 'true = 目标已存在时覆盖', required: false),
+];
+
+/// 控制通道导出：写到给定路径；已存在且没要求覆盖时拒绝。
+Future<Object?> _writeDiagExport(Map<String, String> args, String log) async {
+  final File file = File(args['value']!);
+  if (file.existsSync() && args['overwrite'] != 'true') {
+    throw ArgumentError('${file.path} 已存在；覆盖请加 --arg overwrite=true');
+  }
+  await file.parent.create(recursive: true);
+  await file.writeAsString(log);
+  return <String, Object?>{'path': file.path, 'bytes': await file.length()};
+}
+
+Future<String> _buildStudyDiagLog(AppModel appModel) => buildStudyDiagExport(
+  appModel.database,
+  appVersion: resolveCurrentAppVersion(appModel.packageInfo.version),
+  readingIdleTimeoutMinutes: appModel.readingIdleTimeoutMinutes,
+  statDayResetHour: appModel.statDayResetHour,
+);
+
+Future<String> _buildVideoDiagLog(AppModel appModel) =>
+    buildVideoDiagExportFromDisk(
+      appVersion: resolveCurrentAppVersion(appModel.packageInfo.version),
+      lowMemoryMode: appModel.lowMemoryMode,
+    );
+
 /// 设置 › 诊断 › 导出统计诊断日志（正文见 [buildStudyDiagExport]）。
 Future<void> _exportStudyDiagLog(SettingsContext settingsContext) async {
-  final AppModel appModel = settingsContext.appModel;
-  final String log = await buildStudyDiagExport(
-    appModel.database,
-    appVersion: resolveCurrentAppVersion(appModel.packageInfo.version),
-    readingIdleTimeoutMinutes: appModel.readingIdleTimeoutMinutes,
-    statDayResetHour: appModel.statDayResetHour,
-  );
+  final String log = await _buildStudyDiagLog(settingsContext.appModel);
   if (!settingsContext.context.mounted) return;
   await saveLogToFile(
     context: settingsContext.context,
@@ -748,11 +887,7 @@ Future<void> _exportStudyDiagLog(SettingsContext settingsContext) async {
 /// 设置 › 诊断 › 导出视频诊断日志（正文见 [buildVideoDiagExportFromDisk]）。
 /// 三段：头信息（含小内存模式 / 热槽状态）+ 统一时间轴 + libmpv 原始日志尾部。
 Future<void> _exportVideoDiagLog(SettingsContext settingsContext) async {
-  final AppModel appModel = settingsContext.appModel;
-  final String log = await buildVideoDiagExportFromDisk(
-    appVersion: resolveCurrentAppVersion(appModel.packageInfo.version),
-    lowMemoryMode: appModel.lowMemoryMode,
-  );
+  final String log = await _buildVideoDiagLog(settingsContext.appModel);
   if (!settingsContext.context.mounted) return;
   await saveLogToFile(
     context: settingsContext.context,

@@ -128,7 +128,7 @@ extension _ReaderMining on _ReaderFushiPageState {
             Directory.systemTemp.createTempSync('fushi_mine_sentence_audio_');
         // 句子音频容器与视频制卡保持同一平台规则：iOS 用 `.m4a`，让 AnkiMobile
         // 把 localhost URL 当作可下载音频；桌面/Android 继续用 `.aac`（adts），避免
-        // 桌面 ffmpeg-min 缺 mp4/ipod/m4a muxer 时 exit -22（BUG-460 / BUG-644）。
+        // 旧桌面 ffmpeg-min 缺 mp4/ipod/m4a muxer 时 exit -22（BUG-460 / BUG-644；统一 FFmpeg 已含）。
         final String outputPath = p.join(
           sentenceAudioTempDir.path,
           'sentence.${immersionMiningAudioExtension()}',
@@ -243,7 +243,7 @@ extension _ReaderMining on _ReaderFushiPageState {
       collectionTag: collectionTag,
       // 「制卡所在字符数」标签（`chars_12345`）：这张卡是在全书第几个学习字处制的。
       // 与书名/合集名标签同构——真值源（章内锚 + 每章累计前缀）在本页 state 里，
-      // hibiki_anki 拿不到，故在这里算好字面量注入。开关关闭或锚点取不到时为 null。
+      // fushi_anki 拿不到，故在这里算好字面量注入。开关关闭或锚点取不到时为 null。
       charPositionTag: appModel.autoAddCharPositionToTags
           ? BaseAnkiRepository.formatCharPositionTag(snapshotCharPosition)
           : null,
@@ -443,7 +443,7 @@ extension _ReaderMining on _ReaderFushiPageState {
   ///   JS 抽句回空，或没选词）。
   /// - 句子非空、但当前 Anki note-type 的 fieldMappings **没有任何字段消费**
   ///   `{sentence}`/`{cue-sentence}`（句子）或 `{sentence-audio}`（句子音频）→ 字段
-  ///   渲染恒空，卡片上自然「没有句子」。判据复用 hibiki_anki 的纯函数
+  ///   渲染恒空，卡片上自然「没有句子」。判据复用 fushi_anki 的纯函数
   ///   [AnkiHandlebarOptions.anyFieldConsumesSentence] / [anyFieldConsumesToken]，
   ///   与 [AnkiHandlebarRenderer] 同一套 token 语义，不自己重造解析。
   ///

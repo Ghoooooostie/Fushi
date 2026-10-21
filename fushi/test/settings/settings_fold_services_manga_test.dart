@@ -64,6 +64,8 @@ void main() {
         'manga.default_zoom',
         'manga.zoom_sensitivity',
         'manga.page_animation',
+        'manga.page_animation_speed',
+        'manga.page_turn_follow_drag',
         'manga.spread_offset',
         'manga.wide_page_solo',
         'manga.panel_model',
@@ -115,7 +117,7 @@ void main() {
       final PreferencesRepository prefs = PreferencesRepository(db);
       await prefs.loadFromDb();
       final Directory tempDir = Directory.systemTemp.createTempSync(
-        'hibiki_settings_fold_',
+        'fushi_settings_fold_',
       );
       addTearDown(() {
         if (tempDir.existsSync()) tempDir.deleteSync(recursive: true);

@@ -9,14 +9,16 @@
 //
 // 附件没传上去（网络中断等）时字节落盘到 FeedbackPendingStore，详情页可「重试上传」；
 // 服务端 24 小时内允许补传空闲槽位（与 PR #2090 的待传重试是同一机制）。视频（槽位 v0，
-// ≤ 50 MB）先在本机转码成 720p H.264（feedback_video.dart），从待传区的文件流式上传。
+// ≤ 50 MB）先在本机转码成 720p / 1080p H.264（feedback_video.dart），从待传区的文件流式上传。
 //
 // 「我的反馈」= 本机回执 ∪ 账户列表：已登录排行榜账户时另拉 GET /v1/feedback/mine
 // （别的设备带账户提交的也在里面），按 id 去重、本机回执优先；账户列表里的条目没有 ticket
 // （[FeedbackTicket.viaAccount]），看详情 / 追加说明 / 标记完成都用账户签名。
 
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -27,8 +29,10 @@ import 'package:fushi/src/feedback/feedback_store.dart';
 import 'package:fushi/src/feedback/feedback_video.dart';
 import 'package:fushi/src/leaderboard/leaderboard_service.dart';
 import 'package:fushi/src/models/app_model.dart';
+import 'package:fushi/src/updates/usage_heartbeat.dart';
 import 'package:fushi/src/utils/misc/error_log_service.dart';
 import 'package:fushi_engine/feedback/feedback_models.dart';
+import 'package:fushi_engine/leaderboard/install_identity.dart';
 import 'package:fushi_engine/leaderboard/leaderboard_client.dart';
 import 'package:path/path.dart' as p;
 
@@ -45,6 +49,7 @@ class FeedbackDraft {
     this.screenshots = const <Uint8List>[],
     this.video,
     this.reopenOf,
+    this.submissionKey,
   });
 
   final FeedbackCategory category;
@@ -65,6 +70,21 @@ class FeedbackDraft {
 
   /// 「问题没解决，重新提交」：原反馈 id（必须是本机清单里的、带 ticket 的那条）。
   final String? reopenOf;
+
+  /// 提交幂等键（[newFeedbackSubmissionKey]）：**同一次提交**的重试必须带同一个键。
+  /// 请求其实到了服务端、回执却没收到（超时 / 断网）时，重试拿回的是同一条反馈的回执，
+  /// 而不是再建一条重复反馈。null = 不要幂等（每次都是新提交）。
+  final String? submissionKey;
+}
+
+/// 新的提交幂等键：24 字节安全随机数的 base64url（32 位，服务端要求 32–64 位）。
+/// 键只经 TLS 发给服务端、服务端只存哈希，回执 ticket 由它派生——等价于本机自己出
+/// ticket，所以必须用安全随机数。
+String newFeedbackSubmissionKey([Random? random]) {
+  final Random r = random ?? Random.secure();
+  return base64Url
+      .encode(List<int>.generate(24, (_) => r.nextInt(256)))
+      .replaceAll('=', '');
 }
 
 /// 提交进行到哪一步（提交页的进度文案）。[videoPrepare] 在发正文之前（转码失败 / 太大
@@ -100,19 +120,56 @@ class FeedbackRetryResult {
   final int dropped;
 }
 
+/// 一次视频准备的选项：压缩档位、取消、选 1080p 却退回 720p 时的通知。
+class FeedbackVideoPrepareOptions {
+  const FeedbackVideoPrepareOptions({
+    this.quality = FeedbackVideoQuality.p720,
+    this.cancel,
+    this.onDowngraded,
+  });
+
+  final FeedbackVideoQuality quality;
+
+  /// 完成即中止压缩（强杀 ffmpeg、删半成品），准备函数抛 [FeedbackVideoCancelledException]。
+  final Future<void>? cancel;
+
+  final void Function()? onDowngraded;
+}
+
 /// 视频准备函数（默认 [prepareFeedbackVideo]；测试注入假转码）。
 typedef FeedbackVideoPreparer =
     Future<PreparedFeedbackVideo> Function(
       File source,
       Directory workDir,
       void Function(double fraction) onProgress,
+      FeedbackVideoPrepareOptions options,
     );
 
 Future<PreparedFeedbackVideo> _defaultPrepareVideo(
   File source,
   Directory workDir,
   void Function(double fraction) onProgress,
-) => prepareFeedbackVideo(source, workDir: workDir, onProgress: onProgress);
+  FeedbackVideoPrepareOptions options,
+) => prepareFeedbackVideo(
+  source,
+  workDir: workDir,
+  onProgress: onProgress,
+  quality: options.quality,
+  cancel: options.cancel,
+  onDowngraded: options.onDowngraded,
+);
+
+/// 提交前已在本机压好的视频（[FeedbackService.stageVideo]）。工作目录归它：交给
+/// [FeedbackService.submit] 后由提交清理，没交出去（放弃 / 出错）时调用方 [discard]。
+class FeedbackStagedVideo {
+  FeedbackStagedVideo._(this.video, this._work);
+
+  final PreparedFeedbackVideo video;
+  final Directory _work;
+
+  /// 删掉压缩产物与工作目录（可重复调）。
+  Future<void> discard() => FeedbackService._deleteQuietly(_work);
+}
 
 class FeedbackSubmitResult {
   const FeedbackSubmitResult(this.ticket, {this.failedAttachments = 0});
@@ -128,6 +185,7 @@ class FeedbackService extends ChangeNotifier {
     required Future<Directory> Function() supportRoot,
     required LeaderboardClient Function() client,
     Future<Map<String, Object?>> Function()? meta,
+    Future<InstallAttestation?> Function()? installId,
     String Function()? logText,
     Uint8List Function(String log)? logEncoder,
     FeedbackVideoPreparer? prepareVideo,
@@ -135,6 +193,7 @@ class FeedbackService extends ChangeNotifier {
   }) : _supportRoot = supportRoot,
        _client = client,
        _meta = meta ?? collectFeedbackMeta,
+       _installId = installId ?? _noInstallId,
        _logText = logText ?? collectFeedbackLogText,
        _logEncoder = logEncoder ?? buildFeedbackLogGzip,
        _prepareVideo = prepareVideo ?? _defaultPrepareVideo;
@@ -142,6 +201,25 @@ class FeedbackService extends ChangeNotifier {
   final Future<Directory> Function() _supportRoot;
   final LeaderboardClient Function() _client;
   final Future<Map<String, Object?>> Function() _meta;
+
+  /// 安装统计的本机安装证明（[usageStatsInstallIdForFeedback]）；null = 不附带。只在勾选
+  /// 「附带设备信息」时取，开发者处理台据此关联该安装的版本轨迹与它的其它反馈；带了证明的
+  /// 服务端标「已验证」。
+  final Future<InstallAttestation?> Function() _installId;
+
+  static Future<InstallAttestation?> _noInstallId() async => null;
+
+  /// 取安装证明；机器标识读取 / 工作量证明出错时记错误日志并按不附带处理——安装关联只是
+  /// 辅助信息，不能让它挡住反馈本身的提交。
+  Future<InstallAttestation?> _installIdOrNull() async {
+    try {
+      return await _installId();
+    } on Object catch (e, st) {
+      ErrorLogService.instance.log('feedback.install_attestation', e, st);
+      return null;
+    }
+  }
+
   final String Function() _logText;
   final Uint8List Function(String log) _logEncoder;
   final FeedbackVideoPreparer _prepareVideo;
@@ -384,11 +462,20 @@ class FeedbackService extends ChangeNotifier {
   /// 带视频时先在本机转码（[FeedbackSubmitStage.videoPrepare]，[onVideoProgress] 回报
   /// 0..1；太大 / 不是视频直接抛，反馈不提交），正文与其它附件交完后最后传视频
   /// （[FeedbackSubmitStage.video]）；视频传失败留在待传区，详情页可重试。
+  ///
+  /// [stagedVideo] 非空 = 调用方已用 [stageVideo] 压好（提交页选完视频就在后台压）：直接用它、
+  /// 不再转码，[FeedbackDraft.video] 不再看。它的工作目录仍归调用方：正文没发出去时留着可以
+  /// 原样再提交，提交成功后由调用方 [FeedbackStagedVideo.discard]（视频已挪进待传区）。
   Future<FeedbackSubmitResult> submit(
     FeedbackDraft draft, {
     void Function(FeedbackSubmitStage stage)? onStage,
     void Function(double? fraction)? onVideoProgress,
+    FeedbackStagedVideo? stagedVideo,
   }) async {
+    if (stagedVideo != null) {
+      await load();
+      return _submit(draft, onStage, stagedVideo.video, onVideoProgress);
+    }
     await load();
     final File? source = draft.video;
     if (source == null) return _submit(draft, onStage, null, null);
@@ -400,10 +487,35 @@ class FeedbackService extends ChangeNotifier {
         source,
         work,
         (double f) => onVideoProgress?.call(f),
+        const FeedbackVideoPrepareOptions(),
       );
       return await _submit(draft, onStage, video, onVideoProgress);
     } finally {
       await _deleteQuietly(work);
+    }
+  }
+
+  /// 提交页选完视频就调：在本机把视频压好（[onProgress] 回报 0..1），用户同时写反馈；
+  /// [FeedbackVideoPrepareOptions.cancel] 完成即中止并清掉工作目录，抛
+  /// [FeedbackVideoCancelledException]。太大 / 不是视频照常抛（工作目录同样清掉）。
+  /// 返回值交给 [submit] 的 `stagedVideo`，不提交时调用方负责 [FeedbackStagedVideo.discard]。
+  Future<FeedbackStagedVideo> stageVideo(
+    File source, {
+    FeedbackVideoPrepareOptions options = const FeedbackVideoPrepareOptions(),
+    void Function(double fraction)? onProgress,
+  }) async {
+    final Directory work = await _videoWorkDir();
+    try {
+      final PreparedFeedbackVideo video = await _prepareVideo(
+        source,
+        work,
+        (double f) => onProgress?.call(f),
+        options,
+      );
+      return FeedbackStagedVideo._(video, work);
+    } on Object {
+      await _deleteQuietly(work);
+      rethrow;
     }
   }
 
@@ -418,6 +530,9 @@ class FeedbackService extends ChangeNotifier {
     final Map<String, Object?> meta = draft.includeDeviceInfo
         ? await _meta()
         : const <String, Object?>{};
+    final InstallAttestation? install = draft.includeDeviceInfo
+        ? await _installIdOrNull()
+        : null;
     // 重新提交：凭原反馈自己的 ticket 证明是本人的反馈（服务端还会核对原反馈已结案）。
     FeedbackTicket? parent;
     if (draft.reopenOf != null) {
@@ -439,7 +554,11 @@ class FeedbackService extends ChangeNotifier {
       },
       linkAccount: draft.linkAccount,
       reopenOf: parent == null ? null : (id: parent.id, ticket: parent.ticket),
+      install: install,
+      submissionKey: draft.submissionKey,
     );
+    // 从这里起反馈**已经交上去了**：之后任何一步（落盘、补传附件）出错都不能再让调用方
+    // 以为「提交失败」——用户会再点一次，生成一条重复反馈（BUG-3489 审查）。
     final FeedbackTicket ticket = FeedbackTicket(
       id: receipt.id,
       ticket: receipt.ticket,
@@ -452,8 +571,20 @@ class FeedbackService extends ChangeNotifier {
       body: draft.body.trim(),
       parentId: parent?.id,
     );
-    _tickets = <FeedbackTicket>[ticket, ..._tickets];
-    await _persist();
+    // 幂等重试拿回的是同一条（同 id）：替换而不是再插一条。
+    _tickets = <FeedbackTicket>[
+      ticket,
+      for (final FeedbackTicket t in _tickets)
+        if (t.id != receipt.id) t,
+    ];
+    try {
+      await _persist();
+    } on Object catch (e, st) {
+      // 回执落盘失败：回执仍在内存清单里（反馈中心看得到），下一次任何落盘都会把它一起写下；
+      // 绝不把它报成提交失败。
+      ErrorLogService.instance.log('feedback.persist_after_submit', e, st);
+      notifyListeners();
+    }
     if (onSubmitted case final Future<void> Function() hook) unawaited(hook());
     if (draft.contact.trim().isNotEmpty) {
       try {
@@ -793,6 +924,7 @@ class FeedbackService extends ChangeNotifier {
             id,
             FeedbackVideoTransfer(FeedbackVideoStage.preparing, f),
           ),
+          const FeedbackVideoPrepareOptions(),
         );
       } finally {
         _setTransfer(id, null);
@@ -916,6 +1048,7 @@ final ChangeNotifierProvider<FeedbackService> feedbackServiceProvider =
       final FeedbackService service = FeedbackService(
         supportRoot: () async => app.databaseDirectory,
         client: () => ref.read(leaderboardServiceProvider).feedbackClient(),
+        installId: () => usageStatsInstallIdForFeedback(app.prefsRepo),
         // 用时现取（不在建 provider 时读）：提醒编排反过来依赖本服务。
         onSubmitted: () async {
           final FeedbackReplyAlerts alerts = ref.read(

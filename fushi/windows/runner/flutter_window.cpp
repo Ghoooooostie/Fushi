@@ -417,7 +417,7 @@ std::wstring FushiShortcutInFolder(REFKNOWNFOLDERID folder_id,
 }
 
 // TODO-901: points the desktop + Start menu Fushi shortcuts at |icon_path|
-// (a freshly generated multi-size .ico). Installer (hibiki.iss) drops the .lnk
+// (a freshly generated multi-size .ico). Installer (fushi.iss) drops the .lnk
 // at {userdesktop}\Fushi (Desktop\Fushi.lnk) and {group}\Fushi, where
 // {group} = {autoprograms}\{DefaultGroupName=Fushi} -> Programs\Fushi\Fushi.lnk
 // (DisableProgramGroupPage only hides the wizard page; the Fushi subfolder
@@ -601,15 +601,7 @@ bool FlutterWindow::OnCreate() {
             }
           }
           const bool was_fullscreen = IsFullscreen();
-          if (!enter) {
-            // BUG-2964: give the frame its normal DWM rendering back while it
-            // still hangs off-screen, before the geometry restores it.
-            fushi::MainSurfaceState leaving = main_surface_state();
-            leaving.fullscreen = false;
-            ApplyMainSurfaceComposition(leaving);
-          }
           SetFullscreen(enter);
-          ApplyMainSurfaceComposition();
           // A fullscreen/maximized transition can preserve the client size,
           // so WM_SIZE alone does not guarantee a fresh Flutter presentation.
           // Request it AFTER geometry restoration and snapshot release, while
@@ -797,7 +789,7 @@ bool FlutterWindow::OnCreate() {
   RegisterForegroundSelectionChannel();
   RegisterWindowCaptureChannel();
   RegisterSystemOcrChannel();
-  RegisterHdrVideoHostChannel();
+  RegisterHdrOutputChannel();
   RegisterAudioLoopbackChannel();
   RegisterVoiceHookChannel();
   RegisterMagpieChannel();
@@ -1090,6 +1082,12 @@ FloatingLyricWindow::Style StyleFromArgs(const flutter::EncodableMap* args) {
   style.window_width = DoubleFromValue(args, "windowWidth", style.window_width);
   style.window_height =
       DoubleFromValue(args, "windowHeight", style.window_height);
+  style.current_line_color =
+      ArgbFromValue(args, "currentLineColor", style.current_line_color);
+  style.context_line_opacity = DoubleFromValue(
+      args, "contextLineOpacity", style.context_line_opacity);
+  // 竖排偏好：旧 payload 缺字段 = false（横排，逐像素不变）。
+  style.vertical_text = BoolFromValue(args, "verticalText", style.vertical_text);
   return style;
 }
 
@@ -2423,6 +2421,28 @@ flutter::EncodableValue FlutterWindow::StartScreenOcrCapture(
   const HMONITOR monitor =
       MonitorFromPoint(POINT{probe.x, probe.y}, MONITOR_DEFAULTTONEAREST);
 
+  // HDR 显示器：藏窗口**之前**建好 duplication——它只交付建好之后合成过的帧，
+  // 下面藏球 / 关旧层那次合成就是要取的那帧（hdr_desktop_capture.h）。
+  ScreenOcrOverlay::Capture capture;
+  fushi::HdrMonitorDuplication hdr;
+  {
+    std::string note;
+    switch (hdr.Open(monitor, &note)) {
+      case fushi::HdrMonitorDuplication::OpenResult::kOpened:
+        // 成功取帧后由 Capture 的参数摘要覆盖；失败时 CaptureMonitor 写回落原因。
+        break;
+      case fushi::HdrMonitorDuplication::OpenResult::kGdiByPolicy:
+        capture.diagnostic = "gdi path: " + note;
+        break;
+      case fushi::HdrMonitorDuplication::OpenResult::kFailed:
+        capture.diagnostic = "dxgi path failed, fell back to gdi: " + note;
+        break;
+      case fushi::HdrMonitorDuplication::OpenResult::kNotHdr:
+        if (!note.empty()) capture.diagnostic = "hdr probe skipped: " + note;
+        break;
+    }
+  }
+
   // 上一层还开着（重复点）：先关掉，不回调；它与球都不能入镜。
   screen_ocr_overlay_->Close();
   floating_ball_window_->HideForCapture();
@@ -2431,14 +2451,20 @@ flutter::EncodableValue FlutterWindow::StartScreenOcrCapture(
   DwmFlush();
   DwmFlush();
 
-  ScreenOcrOverlay::Capture capture;
-  if (!ScreenOcrOverlay::CaptureMonitor(monitor, &capture)) {
+  if (!ScreenOcrOverlay::CaptureMonitor(
+          monitor, hdr.is_open() ? &hdr : nullptr, &capture)) {
     floating_ball_window_->RestoreAfterCapture();
-    return failure("capture_failed");
+    flutter::EncodableValue reply = failure("capture_failed");
+    if (!capture.diagnostic.empty()) {
+      std::get<flutter::EncodableMap>(reply)[flutter::EncodableValue(
+          "diagnostic")] = flutter::EncodableValue(capture.diagnostic);
+    }
+    return reply;
   }
   const RECT screen = capture.screen;
   const int width = capture.width;
   const int height = capture.height;
+  std::string diagnostic = capture.diagnostic;
   // 先盖冻结层（画面立刻「定格」并显示「识别中」），再编 PNG。
   if (!screen_ocr_overlay_->Show(std::move(capture), style)) {
     floating_ball_window_->RestoreAfterCapture();
@@ -2458,11 +2484,17 @@ flutter::EncodableValue FlutterWindow::StartScreenOcrCapture(
       flutter::EncodableValue(static_cast<int32_t>(screen.right)),
       flutter::EncodableValue(static_cast<int32_t>(screen.bottom)),
   };
-  return flutter::EncodableValue(flutter::EncodableMap{
+  flutter::EncodableMap reply{
       {flutter::EncodableValue("png"), flutter::EncodableValue(std::move(png))},
       {flutter::EncodableValue("screen"),
        flutter::EncodableValue(std::move(screen_rect))},
-  });
+  };
+  // HDR 显示器的取帧路径 / 回落原因：Dart 记进诊断日志（不影响结果）。
+  if (!diagnostic.empty()) {
+    reply[flutter::EncodableValue("diagnostic")] =
+        flutter::EncodableValue(std::move(diagnostic));
+  }
+  return flutter::EncodableValue(std::move(reply));
 }
 
 void FlutterWindow::StopScreenOcr() {
@@ -4356,55 +4388,17 @@ void FlutterWindow::RegisterVoiceHookChannel() {
 // Magpie 缩放状态监听（仅 Windows）。Magpie 用 RegisterWindowMessage 注册的广播消息
 // "MagpieScalingChanged" 通知全系统顶层窗口缩放状态变化；本 runner 只读不回，收到后
 // 经 app.fushi.reader/magpie channel 把事件推给 Dart。
-void FlutterWindow::RegisterHdrVideoHostChannel() {
-  hdr_video_host_channel_ =
+void FlutterWindow::RegisterHdrOutputChannel() {
+  hdr_output_channel_ =
       std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
-          flutter_controller_->engine()->messenger(),
-          "app.fushi/hdr_video_host",
+          flutter_controller_->engine()->messenger(), "app.fushi/hdr_output",
           &flutter::StandardMethodCodec::GetInstance());
 
-  hdr_video_host_channel_->SetMethodCallHandler(
+  hdr_output_channel_->SetMethodCallHandler(
       [this](const flutter::MethodCall<flutter::EncodableValue>& call,
              std::unique_ptr<flutter::MethodResult<flutter::EncodableValue>>
                  result) {
         const std::string& method = call.method_name();
-        if (method == "create") {
-          if (!hdr_video_host_) {
-            hdr_video_host_ = std::make_unique<fushi::HdrVideoHostWindow>(
-                GetHandle(),
-                [this](bool enabled) { SetMainVideoPassthrough(enabled); });
-          }
-          const HWND host = hdr_video_host_->Create();
-          result->Success(flutter::EncodableValue(
-              static_cast<int64_t>(reinterpret_cast<intptr_t>(host))));
-          return;
-        }
-        if (method == "setRect") {
-          const auto* args =
-              std::get_if<flutter::EncodableMap>(call.arguments());
-          if (args == nullptr || !hdr_video_host_) {
-            result->Error("bad_state", "host not created");
-            return;
-          }
-          auto read = [args](const char* key) -> int {
-            const auto it = args->find(flutter::EncodableValue(key));
-            if (it == args->end()) {
-              return 0;
-            }
-            return static_cast<int>(it->second.TryGetLongValue().value_or(0));
-          };
-          hdr_video_host_->SetClientRect(read("x"), read("y"), read("width"),
-                                         read("height"));
-          result->Success();
-          return;
-        }
-        if (method == "destroy") {
-          if (hdr_video_host_) {
-            hdr_video_host_->Destroy();
-          }
-          result->Success();
-          return;
-        }
         if (method == "displayInfo") {
           const fushi::HdrDisplayInfo info =
               fushi::QueryHdrDisplayInfo(GetHandle());
@@ -4453,6 +4447,17 @@ void FlutterWindow::RegisterHdrVideoHostChannel() {
               enabled, static_cast<float>(sdr_white_nits))));
           return;
         }
+        if (method == "underlayCompositionSupported") {
+          result->Success(flutter::EncodableValue(
+              ResolveViewSetUnderlayComposition() != nullptr));
+          return;
+        }
+        if (method == "setUnderlayComposition") {
+          const bool* enabled = std::get_if<bool>(call.arguments());
+          result->Success(flutter::EncodableValue(
+              SetUnderlayComposition(enabled != nullptr && *enabled)));
+          return;
+        }
         result->NotImplemented();
       });
 }
@@ -4483,7 +4488,44 @@ bool FlutterWindow::SetCompositorHdrOutput(bool enabled,
   FlutterDesktopViewRef view =
       registrar != nullptr ? FlutterDesktopPluginRegistrarGetView(registrar)
                            : nullptr;
-  return view != nullptr && set_hdr_output(view, enabled, sdr_white_nits);
+  const bool on =
+      view != nullptr && set_hdr_output(view, enabled, sdr_white_nits);
+  compositor_hdr_output_on_ = enabled && on;
+  return on;
+}
+
+// Underlay composition (ci/patches/flutter-engine): Flutter presents through a
+// topmost DComp visual, so a windowed WebView2 child of the view (hardware
+// PlayReady) shows through transparent pixels under the Flutter UI.
+FlutterWindow::ViewSetUnderlayCompositionFn
+FlutterWindow::ResolveViewSetUnderlayComposition() {
+  static const ViewSetUnderlayCompositionFn fn = [] {
+    HMODULE engine = ::GetModuleHandleW(L"flutter_windows.dll");
+    return engine == nullptr
+               ? nullptr
+               : reinterpret_cast<ViewSetUnderlayCompositionFn>(::GetProcAddress(
+                     engine, "FlutterDesktopViewSetUnderlayComposition"));
+  }();
+  return fn;
+}
+
+bool FlutterWindow::SetUnderlayComposition(bool enabled) {
+  const ViewSetUnderlayCompositionFn set_underlay =
+      ResolveViewSetUnderlayComposition();
+  if (set_underlay == nullptr || !flutter_controller_) {
+    return false;
+  }
+  FlutterDesktopPluginRegistrarRef registrar =
+      flutter_controller_->engine()->GetRegistrarForPlugin(
+          "FushiUnderlayComposition");
+  FlutterDesktopViewRef view =
+      registrar != nullptr ? FlutterDesktopPluginRegistrarGetView(registrar)
+                           : nullptr;
+  if (view == nullptr) {
+    return false;
+  }
+  set_underlay(view, enabled);
+  return true;
 }
 
 void FlutterWindow::RegisterMagpieChannel() {
@@ -4725,28 +4767,13 @@ bool FlutterWindow::ApplySystemBackdrop(bool mica, bool dark) {
   return false;
 }
 
-void FlutterWindow::ApplyMainSurfaceComposition(
-    const fushi::MainSurfaceState& state) {
+void FlutterWindow::ApplyMainSurfaceComposition() {
   HWND hwnd = GetHandle();
   if (hwnd == nullptr) {
     return;
   }
-  const MARGINS margins = fushi::MainFrameMargins(state);
+  const MARGINS margins = fushi::MainFrameMargins(main_surface_state());
   DwmExtendFrameIntoClientArea(hwnd, &margins);
-  const DWMNCRENDERINGPOLICY policy =
-      fushi::MainSurfaceNcRenderingDisabled(state) ? DWMNCRP_DISABLED
-                                                   : DWMNCRP_USEWINDOWSTYLE;
-  DwmSetWindowAttribute(hwnd, DWMWA_NCRENDERING_POLICY, &policy,
-                        sizeof(policy));
-}
-
-void FlutterWindow::ApplyMainSurfaceComposition() {
-  ApplyMainSurfaceComposition(main_surface_state());
-}
-
-void FlutterWindow::SetMainVideoPassthrough(bool enabled) {
-  SetVideoPassthrough(enabled);
-  ApplyMainSurfaceComposition();
 }
 
 bool FlutterWindow::ApplyWindowIcon(const std::wstring& path) {
@@ -4868,36 +4895,17 @@ FlutterWindow::MessageHandler(HWND hwnd, UINT const message,
     }
     return 0;
   }
-  // HDR passthrough host: keep the libmpv popup glued behind the main window.
-  // Non-consuming — these messages fall through to their normal handlers.
-  if (hdr_video_host_ && hdr_video_host_->IsCreated()) {
-    switch (message) {
-      case WM_WINDOWPOSCHANGED:
-      case WM_ACTIVATE:
-      case WM_SIZE:
-      case WM_MOVE:
-      case WM_SHOWWINDOW:
-        hdr_video_host_->SyncPlacement();
-        break;
-      case WM_DESTROY:
-        hdr_video_host_->Destroy();
-        break;
-      default:
-        break;
-    }
-  }
   // HDR toggled / monitor changed: let Dart re-evaluate the output mode.
-  // Activation counts too while the host is up: the "SDR content brightness"
-  // slider (which Dart reads to level the subtitle layer against the HDR
-  // video) changes without any window message, and it lives in the Settings
-  // app — so the earliest point the new value can matter is the main window
-  // getting activated again.
-  const bool host_activated =
-      message == WM_ACTIVATE && LOWORD(wparam) != WA_INACTIVE &&
-      hdr_video_host_ && hdr_video_host_->IsCreated();
-  if ((message == WM_DISPLAYCHANGE || host_activated) &&
-      hdr_video_host_channel_) {
-    hdr_video_host_channel_->InvokeMethod(
+  // Activation counts too while the compositor HDR output is on: the "SDR
+  // content brightness" slider (the white the UI is given in scRGB) changes
+  // without any window message, and it lives in the Settings app — so the
+  // earliest point the new value can matter is the main window getting
+  // activated again.
+  const bool hdr_activated = message == WM_ACTIVATE &&
+                             LOWORD(wparam) != WA_INACTIVE &&
+                             compositor_hdr_output_on_;
+  if ((message == WM_DISPLAYCHANGE || hdr_activated) && hdr_output_channel_) {
+    hdr_output_channel_->InvokeMethod(
         "onDisplayChanged", std::make_unique<flutter::EncodableValue>());
   }
   // BUG-1239: inspect VK_PROCESSKEY before Flutter handles the message. The

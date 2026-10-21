@@ -15,7 +15,7 @@ void main() {
     late String token;
 
     setUp(() async {
-      tempDir = await Directory.systemTemp.createTemp('hibiki_server_test_');
+      tempDir = await Directory.systemTemp.createTemp('fushi_server_test_');
       final syncDataDir = Directory('${tempDir.path}/sync-data');
       await syncDataDir.create();
       final rootDir = Directory('${syncDataDir.path}/$kSyncRootFolderName');
@@ -49,6 +49,39 @@ void main() {
       expect(t.length, greaterThanOrEqualTo(40));
       final decoded = base64Url.decode(base64Url.normalize(t));
       expect(decoded.length, 32); // 256 bits
+    });
+
+    test('onClientWrite：鉴权通过的 PUT / DELETE 成功后回调相对路径；未鉴权或失败不回调', () async {
+      final List<String> writes = <String>[];
+      server.onClientWrite = writes.add;
+      await server.start();
+      final HttpClient client = HttpClient();
+      Future<int> send(String method, String path, {bool auth = true}) async {
+        final HttpClientRequest request = await client.openUrl(
+          method,
+          Uri.parse('http://localhost:${server.port}/$path'),
+        );
+        if (auth) {
+          request.headers.set('Authorization',
+              'Basic ${base64Encode(utf8.encode('hibiki:$token'))}');
+        }
+        if (method == 'PUT') request.add(utf8.encode('x'));
+        final HttpClientResponse response = await request.close();
+        await response.drain<void>();
+        return response.statusCode;
+      }
+
+      const String file = '$kSyncRootFolderName/TestBook/written.bin';
+      expect(await send('PUT', file, auth: false), 401);
+      expect(writes, isEmpty);
+      expect(await send('PUT', file), 201);
+      expect(await send('GET', file), 200);
+      expect(await send('DELETE', file), anyOf(200, 204));
+      expect(writes, <String>[file, file]);
+      // 鉴权通过、但写失败（删不存在的文件 → 404）：不回调。
+      expect(await send('DELETE', file), 404);
+      expect(writes, <String>[file, file]);
+      client.close();
     });
 
     test('starts and stops without error', () async {

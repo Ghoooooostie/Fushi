@@ -17,11 +17,11 @@ import 'package:fushi/src/utils/app_ui_scale.dart';
 ///
 /// 旧值的 `42` 是 media_kit 导出常量 [kDefaultMaterialVideoControlsThemeData] 那套含
 /// `bottomButtonBarMargin.bottom: 42` 的整体离底留白——它是控制条离屏幕底边的空白，
-/// 不是遮挡字幕的实体，叠进避让只会凭空多抬一个 margin。Hibiki 实际 new 的桌面主题
+/// 不是遮挡字幕的实体，叠进避让只会凭空多抬一个 margin。Fushi 实际 new 的桌面主题
 /// （`MaterialDesktopVideoControlsThemeData`）走构造器默认（`bottomButtonBarMargin`
-/// 只有左右、vertical=0），本就没有这 42px，故去掉它也更贴合 Hibiki 真实几何。
+/// 只有左右、vertical=0），本就没有这 42px，故去掉它也更贴合 Fushi 真实几何。
 ///
-/// Hibiki 用自绘 `VideoSubtitleOverlay`（非 media_kit 内置字幕视图）。TODO-129 起字幕
+/// Fushi 用自绘 `VideoSubtitleOverlay`（非 media_kit 内置字幕视图）。TODO-129 起字幕
 /// **动态**避让：控制条出现时把字幕在用户位置之上抬到 `max(用户位置, 本值)`、隐藏时
 /// 落回用户位置（由 [VideoSubtitleOverlay] 的 `controlsVisible` 驱动 `AnimatedPadding`，
 /// TODO-161 取下限而非加法），不再像 TODO-089 那样把本值恒加进默认
@@ -179,7 +179,7 @@ double videoSeekBarContainerBottom({
 ///
 /// 真相源是 fork `third_party/media_kit_video/.../controls/material.dart` 的
 /// `_theme(context).padding ?? (isFullscreen(context) ? MediaQuery.padding : EdgeInsets.zero)`。
-/// Hibiki 的移动 / 桌面 theme 都**没有**设 `padding` 字段，故恒走后半段。
+/// Fushi 的移动 / 桌面 theme 都**没有**设 `padding` 字段，故恒走后半段。
 ///
 /// **为什么不能图省事写 `SafeArea`**：`SafeArea` 恒吃 `MediaQuery.padding`，与上式只在
 /// 「真的处于 media_kit 全屏路由」时才等价。而移动端视频**永不进 media_kit 全屏路由**
@@ -279,6 +279,10 @@ SubtitleLayerVAnchor? resolveLayerForcedAnchor({
   return null;
 }
 
+/// 字幕**文字**的默认颜色：固定白（TODO-051）。旧数据 `textColor == null` 也解析成它
+/// （[VideoSubtitleStyle.resolveTextColor]，#2312），不跟随 App 主题。
+const Color kDefaultSubtitleTextColor = Color(0xFFFFFFFF);
+
 /// 字幕背景盒的**默认底色**（TODO-1059 方案A）：固定半透明黑，而非跟随
 /// `ColorScheme.surface`。
 ///
@@ -340,8 +344,10 @@ final ValueNotifier<VideoSubtitleStyle?> videoSubtitleStyleDraft =
 /// black outline/shadow so it stays readable on any video regardless of the
 /// active app theme (TODO-051). Weight and shadow thickness stay nullable so the
 /// default thickness can follow the global UI size, while explicit user choices
-/// remain fixed. [textColor]/[shadowColor] left null means "follow the theme"
-/// (legacy data persisted before TODO-051), resolved via [resolveTextColor] /
+/// remain fixed. [textColor] left null (legacy data persisted before TODO-051)
+/// resolves to the fixed white [kDefaultSubtitleTextColor] via [resolveTextColor]
+/// — subtitles sit on the video, not on the app surface, so they never follow
+/// the theme (#2312). [shadowColor] left null follows the theme shadow via
 /// [resolveShadowColor]. [backgroundColor] left null means "use the fixed
 /// [kDefaultSubtitleBackgroundColor] translucent black" (TODO-1059 方案A), NOT
 /// the theme surface — so a light theme no longer washes the subtitle box pale.
@@ -410,7 +416,7 @@ class VideoSubtitleStyle {
   /// field; the dynamic dodge takes the lower bound on top of it).
   static const VideoSubtitleStyle defaults = VideoSubtitleStyle(
     fontSize: 36,
-    textColor: Color(0xFFFFFFFF),
+    textColor: kDefaultSubtitleTextColor,
     fontWeight: null,
     // 黑 @ 0.9 alpha（抄 Niratan `.black.opacity(0.9)`）：柔和投影而非纯黑硬边。
     shadowColor: Color(0xE6000000),
@@ -507,7 +513,11 @@ class VideoSubtitleStyle {
     );
   }
 
-  Color resolveTextColor(Color themeColor) => textColor ?? themeColor;
+  /// 文字色：null（TODO-051 之前落盘的旧数据）解析为固定白 [kDefaultSubtitleTextColor]，
+  /// **不再跟随 App 主题**（#2312）。字幕画在视频画面上而不是 App 表面上，跟随主题意味着
+  /// 浅色主题下黑字压画面、主题随系统昼夜切换时字幕忽白忽黑；开着「尊重字幕自带样式」时
+  /// ASS 主色把它盖住，一关就暴露。持久化值原样保留（null 不被改写），只改解析。
+  Color resolveTextColor() => textColor ?? kDefaultSubtitleTextColor;
   Color resolveShadowColor(Color themeColor) => shadowColor ?? themeColor;
   Color resolveBackgroundColor(Color themeColor) =>
       backgroundColor ?? themeColor;

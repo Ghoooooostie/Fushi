@@ -9,7 +9,8 @@ extension _SyncOrchestratorBooks on SyncOrchestrator {
   /// toPush：本端有 && 远端无 → `repackageExtractedEpub` 重打包 →
   /// `putRemoteBook` 上传。远端独有书籍留给 compare/interconnect UI 手动下载。
   ///
-  /// 仅当 client syncContent 开时由 [run] 调用。进度走 [SyncPhase.books]，
+  /// 仅当 client syncContent / syncMangaContent 任一开时由 [run] 调用；EPUB 等受
+  /// syncContent、漫画受 syncMangaContent 门控。进度走 [SyncPhase.books]，
   /// 临时文件 finally 清理，逐项错误进 [report.errors] 不中断整体。
   ///
   /// **删除传播**：现有实现不传播书籍删除（SyncManager 云路径同语义）。
@@ -19,7 +20,17 @@ extension _SyncOrchestratorBooks on SyncOrchestrator {
     InterconnectSyncBackend backend,
   ) async {
     final List<RemoteBookInfo> remoteBooks = await backend.listRemoteBooks();
-    final List<EpubBookRow> localBooks = await _db.getAllEpubBooks();
+    // 书籍（EPUB 等）与漫画各看各的上传开关（所有者 2026-10-21：书籍和漫画分开）：
+    // 开关关着的那类书不进 diff，既不推也不计进度条总数。
+    final List<EpubBookRow> localBooks = <EpubBookRow>[
+      for (final EpubBookRow b in await _db.getAllEpubBooks())
+        if (isBookContentSyncEnabled(
+          b,
+          syncContent: syncContent,
+          syncMangaContent: syncMangaContent,
+        ))
+          b,
+    ];
 
     final Set<String> localKeys = <String>{
       for (final EpubBookRow b in localBooks) sanitizeTtuFilename(b.title),
@@ -152,12 +163,8 @@ extension _SyncOrchestratorBooks on SyncOrchestrator {
       try {
         final RemoteBookProgress remote = await sync.remoteProgress(book);
         final RemoteBookProgress local = await sync.localProgress(book);
-        final BookProgressBaseline? base = await sync.baseline(book);
-        final BookProgressSyncAction action = resolveBookProgressThreeWay(
-          local: local,
-          remote: remote,
-          base: base,
-        );
+        final BookProgressSyncAction action =
+            await sync.decide(book, local: local, remote: remote);
         switch (action) {
           case BookProgressSyncAction.synced:
             // BUG-686: a host-newer progress pull lands in reader_positions but
@@ -170,8 +177,10 @@ extension _SyncOrchestratorBooks on SyncOrchestrator {
           case BookProgressSyncAction.pushLocal:
             await sync.pushLocal(book, local: local, remote: remote);
           case BookProgressSyncAction.applyRemote:
-            await sync.applyRemote(book, remote);
-            report.localBookProgressPulled++;
+            // BUG-3537：判定后本地被改写则不落地（比较后写入），不计「已拉取」。
+            if (await sync.applyRemote(book, remote, local: local)) {
+              report.localBookProgressPulled++;
+            }
           case BookProgressSyncAction.conflict:
             report.conflicts.add(SyncConflict(
               assetKey: book.bookKey,
@@ -216,18 +225,15 @@ extension _SyncOrchestratorBooks on SyncOrchestrator {
       try {
         final PlaybackPosition local = await sync.localPosition(key);
         final PlaybackPosition host = await readHost(key);
-        final BookProgressSyncAction action = resolvePlaybackPositionThreeWay(
-          local: local,
-          remote: host,
-          basePositionMs: await sync.baseline(key),
-        );
+        final BookProgressSyncAction action =
+            await sync.decide(key, local: local, remote: host);
         switch (action) {
           case BookProgressSyncAction.synced:
             await sync.alignSynced(key, local: local, remote: host);
           case BookProgressSyncAction.pushLocal:
             await sync.pushLocal(key, local: local, remote: host);
           case BookProgressSyncAction.applyRemote:
-            await sync.applyRemote(key, host);
+            await sync.applyRemote(key, host, local: local);
           case BookProgressSyncAction.conflict:
             report.conflicts.add(SyncConflict(
               assetKey: key,

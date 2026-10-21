@@ -56,24 +56,27 @@ extension _FushiSyncServerWebDav on FushiSyncServer {
           final childHref = '$normPath$childName${isDir ? '/' : ''}';
           // BUG-908(b)：文件长度用异步 stat（await for 循环里安全 await，不打乱 XML
           // 组装顺序）；目录不必取长度。
-          final length = isDir ? 0 : (await (child as File).stat()).size;
+          // 修改时间与长度取自同一次 stat：客户端（SRS 同步）拿它当服务器时间。
+          final FileStat? st = isDir ? null : await (child as File).stat();
           entries.add(_DavEntry(
             href: childHref,
             isCollection: isDir,
             displayName: childName,
-            contentLength: length,
+            contentLength: st?.size ?? 0,
+            modified: st?.modified,
           ));
         }
       }
     } else {
       final file = File(fsPath);
       // BUG-908(b)：单文件长度也用异步 stat。
-      final int fileLength = (await file.stat()).size;
+      final FileStat st = await file.stat();
       entries.add(_DavEntry(
         href: davPath,
         isCollection: false,
         displayName: p.basename(fsPath),
-        contentLength: fileLength,
+        contentLength: st.size,
+        modified: st.modified,
       ));
     }
 
@@ -82,7 +85,7 @@ extension _FushiSyncServerWebDav on FushiSyncServer {
     for (final entry in entries) {
       xml
         ..write('<d:response>\n')
-        ..write('<d:href>${_xmlEscape(Uri.encodeFull(entry.href))}</d:href>\n')
+        ..write('<d:href>${_xmlEscape(_encodeDavHref(entry.href))}</d:href>\n')
         ..write('<d:propstat>\n')
         ..write('<d:prop>\n')
         ..write(
@@ -93,6 +96,12 @@ extension _FushiSyncServerWebDav on FushiSyncServer {
       if (!entry.isCollection) {
         xml.write(
             '<d:getcontentlength>${entry.contentLength}</d:getcontentlength>\n');
+      }
+      final DateTime? modified = entry.modified;
+      if (modified != null) {
+        // RFC 1123（HttpDate.format 总是输出 GMT）。
+        xml.write(
+            '<d:getlastmodified>${HttpDate.format(modified)}</d:getlastmodified>\n');
       }
       xml
         ..write('</d:prop>\n')
@@ -181,3 +190,8 @@ extension _FushiSyncServerWebDav on FushiSyncServer {
 
 String _xmlEscape(String s) =>
     s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+
+/// PROPFIND 的 href 逐段 percent-encode。`Uri.encodeFull` 不编码 `#` / `?`，名字里带它们的条目
+/// （复习同步写入者目录 `<deviceId>#<化身号>`）会被客户端当成 URL 片段 / 查询截掉（BUG-3576）。
+String _encodeDavHref(String href) =>
+    href.split('/').map(Uri.encodeComponent).join('/');

@@ -24,6 +24,7 @@ library;
 
 import 'dart:async';
 import 'dart:ui' as ui;
+import 'dart:math' as math;
 
 import 'package:material_ui/material_ui.dart';
 import 'package:fushi/src/focus/fushi_focus_controller.dart' show FushiFocusId;
@@ -36,11 +37,19 @@ import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/utils.dart';
 
-/// 宽度 ≥ 它时 [MediaDetailLayout] 切两栏。
+/// 宽度 ≥ 它时 [MediaDetailLayout] 无条件切两栏。
 const double kMediaDetailTwoPaneMinWidth = 1080;
 
-/// 两栏布局左栏（hero 信息）宽度。
-const double kMediaDetailSidePaneWidth = 400;
+/// 横屏（宽 > 高）且宽度 ≥ 它时也切两栏：手机横屏 / 平板横屏单列时整屏只剩 hero，
+/// 章节 / 分集全在首屏之下。
+const double kMediaDetailLandscapeTwoPaneMinWidth = 600;
+
+/// 两栏布局左栏（hero 信息）宽度上限；实际按窗口宽的 40% 取，夹在
+/// [kMediaDetailSidePaneMinWidth] 与它之间。
+const double kMediaDetailSidePaneWidth = 420;
+
+/// 两栏布局左栏宽度下限。
+const double kMediaDetailSidePaneMinWidth = 320;
 
 /// [MediaDetailHero] 宽度 ≥ 它时封面在左、信息在右。
 const double kMediaDetailHeroWideMinWidth = 640;
@@ -55,20 +64,31 @@ const double kMediaDetailHeroWideMinWidth = 640;
 /// [image] 变化（多张 fanart 轮换）时交叉淡入；[imageKey] 给轮换下标之类的
 /// 稳定身份（缺省用 [image] 本身）。墨水屏不画图与色晕。
 /// 详情页顶栏标题的淡入阈值（逻辑像素）：hero 大标题大致滚到顶栏胶囊下面的位置
-/// （[FushiPageScaffold.revealTitleAfterScroll]）。窄屏单列 hero 的标题在封面下方
-/// 约 300–360 处；此前恒显示，顶栏与 hero 同屏出现两个相同标题。
-const double kMediaDetailTitleRevealOffset = 320;
+/// （[FushiPageScaffold.revealTitleAfterScroll]）。窄屏紧凑 hero 的标题在小封面
+/// 旁、hero 顶端；此前恒显示，顶栏与 hero 同屏出现两个相同标题。
+const double kMediaDetailTitleRevealOffset = 120;
 
 class MediaDetailBackdrop extends StatelessWidget {
   const MediaDetailBackdrop({
     this.image,
     this.imageKey,
     this.blurSigma = 28,
+    this.artBand = false,
     super.key,
   });
 
   final ImageProvider? image;
   final Object? imageKey;
+
+  /// 露画面（[blurSigma] 为 0）时只把画面画在顶部一条与宽度等高的带里、带内渐隐
+  /// 到底色，而不是铺满整块。只给**窄式居中 hero**（手机单列：封面 + chip + 按钮
+  /// + 简介叠成一长条）传 true：横版 fanart 铺满竖长容器会被 cover 放大四五倍、
+  /// 再被起始侧底色冲成白雾（反馈「看不到背景插画」）。
+  ///
+  /// 判据由调用方按布局显式给出，不按容器宽高比猜：两栏整页背景在竖屏大屏 /
+  /// 桌面窄高窗里同样高 > 宽，宽式 hero 展开长简介后也会高 > 宽——按比例判会
+  /// 误切带，展开 / 收起简介时背景还会在两套画法之间跳变。
+  final bool artBand;
 
   /// 模糊强度。竖版封面垫底要重模糊（只留色彩）；横版 fanart 传 0 = 不模糊、
   /// 画面原样露出（BUG-3190：fanart 被 16 的模糊 + 72% 底色压成一片色雾，用户看
@@ -94,119 +114,199 @@ class MediaDetailBackdrop extends StatelessWidget {
     final ImageProvider? image = eink ? null : this.image;
     final Color base = cs.surface;
     final bool showArt = image != null && blurSigma <= 0;
-    return IgnorePointer(
-      child: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          ColoredBox(color: base),
-          if (image != null)
-            AnimatedSwitcher(
-              duration: motion.effectsSlow.duration,
-              // BUG-3355：默认 layoutBuilder 是 `Stack(alignment: center)`，子项拿到
-              // 的是**松**约束——Image 于是按自己的宽高比缩成「整高、居中」的一条
-              // 竖图（BoxFit.cover 在松约束下不生效），两栏详情页顶部就剩窗口中间
-              // 一块模糊竖条，用户看来是「莫名的毛玻璃」。背景必须铺满，交叉淡入
-              // 的新旧两层都撑满整块。
-              layoutBuilder: _expandedSwitcherLayout,
-              child: KeyedSubtree(
-                key: ValueKey<Object>(imageKey ?? image),
-                child: showArt
-                    ? Image(
-                        image: image,
-                        fit: BoxFit.cover,
-                        alignment: Alignment.topCenter,
-                        gaplessPlayback: true,
-                        errorBuilder: (_, _, _) => const SizedBox.shrink(),
-                      )
-                    // ClipRect：模糊会把封面边缘的颜色向外晕开，ImageFiltered 默认
-                    // 不裁剪，晕出的部分落在 hero 底边之外、压在下方内容上，看起来
-                    // 就是 hero 底部一条带阴影的硬边（渐隐 scrim 只盖得住框内）。
-                    : ClipRect(
-                        child: ImageFiltered(
-                          imageFilter: ui.ImageFilter.blur(
-                            sigmaX: blurSigma,
-                            sigmaY: blurSigma,
-                            tileMode: TileMode.decal,
-                          ),
-                          child: Image(
-                            image: image,
-                            fit: BoxFit.cover,
-                            gaplessPlayback: true,
-                            errorBuilder: (_, _, _) => const SizedBox.shrink(),
-                          ),
+    final Widget? art = image == null
+        ? null
+        : AnimatedSwitcher(
+            duration: motion.effectsSlow.duration,
+            // BUG-3355：默认 layoutBuilder 是 `Stack(alignment: center)`，子项拿到
+            // 的是**松**约束——Image 于是按自己的宽高比缩成「整高、居中」的一条
+            // 竖图（BoxFit.cover 在松约束下不生效），两栏详情页顶部就剩窗口中间
+            // 一块模糊竖条，用户看来是「莫名的毛玻璃」。背景必须铺满，交叉淡入
+            // 的新旧两层都撑满整块。
+            layoutBuilder: _expandedSwitcherLayout,
+            child: KeyedSubtree(
+              key: ValueKey<Object>(imageKey ?? image),
+              child: showArt
+                  ? Image(
+                      image: image,
+                      fit: BoxFit.cover,
+                      alignment: Alignment.topCenter,
+                      gaplessPlayback: true,
+                      errorBuilder: (_, _, _) => const SizedBox.shrink(),
+                    )
+                  // ClipRect：模糊会把封面边缘的颜色向外晕开，ImageFiltered 默认
+                  // 不裁剪，晕出的部分落在 hero 底边之外、压在下方内容上，看起来
+                  // 就是 hero 底部一条带阴影的硬边（渐隐 scrim 只盖得住框内）。
+                  : ClipRect(
+                      child: ImageFiltered(
+                        imageFilter: ui.ImageFilter.blur(
+                          sigmaX: blurSigma,
+                          sigmaY: blurSigma,
+                          tileMode: TileMode.decal,
+                        ),
+                        child: Image(
+                          image: image,
+                          fit: BoxFit.cover,
+                          gaplessPlayback: true,
+                          errorBuilder: (_, _, _) => const SizedBox.shrink(),
                         ),
                       ),
-              ),
-            ),
-          if (showArt) ...<Widget>[
-            // 露画面：起始侧一道底色把信息栏 / hero 文字托住，画面其余部分原样
-            // 露出；再自上而下落到底色，与下方内容无缝。
-            DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: AlignmentDirectional.centerStart,
-                  end: AlignmentDirectional.centerEnd,
-                  stops: const <double>[0, 0.28, 0.6],
-                  colors: <Color>[
-                    base.withValues(alpha: 0.82),
-                    base.withValues(alpha: 0.45),
-                    base.withValues(alpha: 0),
-                  ],
-                ),
-              ),
-            ),
-            DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  stops: const <double>[0, 0.45, 0.8, 1],
-                  colors: <Color>[
-                    base.withValues(alpha: 0.05),
-                    base.withValues(alpha: 0.35),
-                    base.withValues(alpha: 0.9),
-                    base,
-                  ],
-                ),
-              ),
-            ),
-          ] else if (!eink) ...<Widget>[
-            // 色晕：起始侧上角一团 primaryContainer（Apple 用强调色淡染），
-            // 让没有图 / 图很暗时 hero 也带主题色气质。
-            DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: RadialGradient(
-                  center: AlignmentDirectional.topStart,
-                  radius: 1.25,
-                  colors: <Color>[
-                    (apple ? cs.primary : cs.primaryContainer).withValues(
-                      alpha: apple ? 0.22 : 0.55,
                     ),
-                    (apple ? cs.primary : cs.primaryContainer).withValues(
-                      alpha: 0,
-                    ),
-                  ],
-                ),
-              ),
             ),
-            // 可读性 scrim：上半透出画面，底部完全落到页面底色，与下方内容无缝。
-            DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  stops: const <double>[0, 0.55, 1],
-                  colors: <Color>[
-                    base.withValues(alpha: image == null ? 0 : 0.30),
-                    base.withValues(alpha: image == null ? 0.2 : 0.72),
-                    base,
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ],
+          );
+    return IgnorePointer(
+      child: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+          // 窄式居中 hero（[artBand]）只把画面放进顶部一条与宽度等高的带里，带内
+          // 渐隐到底色；hero 矮于宽度时带高取 hero 高，渐隐仍落到底边。
+          final double width = constraints.maxWidth;
+          final double height = constraints.maxHeight;
+          if (artBand &&
+              art != null &&
+              showArt &&
+              width.isFinite &&
+              height.isFinite) {
+            return _buildArtBand(
+              art: art,
+              base: base,
+              bandHeight: math.min(width, height),
+            );
+          }
+          return _buildFull(
+            context,
+            art: art,
+            base: base,
+            showArt: showArt,
+            eink: eink,
+            apple: apple,
+          );
+        },
       ),
+    );
+  }
+
+  Widget _buildArtBand({
+    required Widget art,
+    required Color base,
+    required double bandHeight,
+  }) {
+    return Stack(
+      fit: StackFit.expand,
+      children: <Widget>[
+        ColoredBox(color: base),
+        Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          height: bandHeight,
+          child: Stack(
+            fit: StackFit.expand,
+            children: <Widget>[
+              art,
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    stops: const <double>[0, 0.5, 1],
+                    colors: <Color>[
+                      base.withValues(alpha: 0.08),
+                      base.withValues(alpha: 0.4),
+                      base,
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildFull(
+    BuildContext context, {
+    required Widget? art,
+    required Color base,
+    required bool showArt,
+    required bool eink,
+    required bool apple,
+  }) {
+    final ColorScheme cs = Theme.of(context).colorScheme;
+    final ImageProvider? image = art == null ? null : this.image;
+    return Stack(
+      fit: StackFit.expand,
+      children: <Widget>[
+        ColoredBox(color: base),
+        ?art,
+        if (showArt) ...<Widget>[
+          // 露画面：起始侧一道底色把信息栏 / hero 文字托住，画面其余部分原样
+          // 露出；再自上而下落到底色，与下方内容无缝。
+          DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: AlignmentDirectional.centerStart,
+                end: AlignmentDirectional.centerEnd,
+                stops: const <double>[0, 0.28, 0.6],
+                colors: <Color>[
+                  base.withValues(alpha: 0.82),
+                  base.withValues(alpha: 0.45),
+                  base.withValues(alpha: 0),
+                ],
+              ),
+            ),
+          ),
+          DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: const <double>[0, 0.45, 0.8, 1],
+                colors: <Color>[
+                  base.withValues(alpha: 0.05),
+                  base.withValues(alpha: 0.35),
+                  base.withValues(alpha: 0.9),
+                  base,
+                ],
+              ),
+            ),
+          ),
+        ] else if (!eink) ...<Widget>[
+          // 色晕：起始侧上角一团 primaryContainer（Apple 用强调色淡染），
+          // 让没有图 / 图很暗时 hero 也带主题色气质。
+          DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: RadialGradient(
+                center: AlignmentDirectional.topStart,
+                radius: 1.25,
+                colors: <Color>[
+                  (apple ? cs.primary : cs.primaryContainer).withValues(
+                    alpha: apple ? 0.22 : 0.55,
+                  ),
+                  (apple ? cs.primary : cs.primaryContainer).withValues(
+                    alpha: 0,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // 可读性 scrim：上半透出画面，底部完全落到页面底色，与下方内容无缝。
+          DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                stops: const <double>[0, 0.55, 1],
+                colors: <Color>[
+                  base.withValues(alpha: image == null ? 0 : 0.30),
+                  base.withValues(alpha: image == null ? 0.2 : 0.72),
+                  base,
+                ],
+              ),
+            ),
+          ),
+        ],
+      ],
     );
   }
 }
@@ -478,6 +578,11 @@ class MediaDetailHero extends StatelessWidget {
 
   final Key? titleKey;
 
+  /// [context] 是否在紧凑 hero（窄屏单列 / 两栏左栏）的操作区或页脚里：页脚据此
+  /// 调整简介 / 标签的排法。
+  static bool isCompact(BuildContext context) =>
+      _MediaDetailHeroAlignScope.compactOf(context);
+
   @override
   Widget build(BuildContext context) {
     final bool inSidePane = MediaDetailLayout.isSidePane(context);
@@ -497,7 +602,9 @@ class MediaDetailHero extends StatelessWidget {
             page,
             tokens.spacing.section,
           ),
-          child: wide ? _buildWide(context) : _buildNarrow(context),
+          child: wide
+              ? _buildWide(context)
+              : _buildCompact(context, sidePane: inSidePane),
         );
         if (inSidePane) return content;
         return Stack(
@@ -507,6 +614,7 @@ class MediaDetailHero extends StatelessWidget {
                 image: backdrop,
                 imageKey: backdropKey,
                 blurSigma: backdropBlur,
+                artBand: !wide,
               ),
             ),
             content,
@@ -538,35 +646,28 @@ class MediaDetailHero extends StatelessWidget {
     );
   }
 
-  Widget _buildNarrow(BuildContext context) {
-    final Widget? cover = this.cover;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        if (cover != null) ...<Widget>[
-          Center(
-            child: FushiStaggeredEntrance(
-              index: 0,
-              child: MediaDetailCoverFrame(
-                key: const ValueKey<String>('media-detail-cover'),
-                width: coverAspectRatio < 1 ? 168 : 280,
-                aspectRatio: coverAspectRatio,
-                child: cover,
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
-        ],
-        _buildInfo(context, centered: true, wide: false),
-      ],
+  /// 窄屏单列与两栏左栏：见 [MediaDetailCompactHero]。
+  Widget _buildCompact(BuildContext context, {required bool sidePane}) {
+    return MediaDetailCompactHero(
+      cover: cover,
+      coverAspectRatio: coverAspectRatio,
+      heading: _buildHeading(
+        context,
+        centered: false,
+        titleStyle: MediaDetailCompactHero.titleStyleOf(context),
+        chipGap: 10,
+      ),
+      actions: actions,
+      footer: footer,
     );
   }
 
-  Widget _buildInfo(
+  /// 来源小字 + 标题 + 原名 + chip 行。
+  Widget _buildHeading(
     BuildContext context, {
     required bool centered,
-    required bool wide,
+    required TextStyle titleStyle,
+    double chipGap = 14,
   }) {
     final ColorScheme cs = Theme.of(context).colorScheme;
     final FushiTypography type = context.fushiType;
@@ -576,59 +677,73 @@ class MediaDetailHero extends StatelessWidget {
     final CrossAxisAlignment cross = centered
         ? CrossAxisAlignment.center
         : CrossAxisAlignment.start;
-    final Widget titleText = Text(
-      title,
-      key: titleKey,
-      maxLines: 3,
-      overflow: TextOverflow.ellipsis,
-      textAlign: align,
-      style:
-          (wide ? type.displaySmallEmphasized : type.headlineMediumEmphasized)
-              .copyWith(color: cs.onSurface, height: 1.1),
+    return Column(
+      crossAxisAlignment: cross,
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        if (overline != null && overline.isNotEmpty) ...<Widget>[
+          Text(
+            overline,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            textAlign: align,
+            style: type.labelLargeEmphasized.copyWith(color: cs.primary),
+          ),
+          const SizedBox(height: 6),
+        ],
+        titleWidget ??
+            Text(
+              title,
+              key: titleKey,
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              textAlign: align,
+              style: titleStyle.copyWith(color: cs.onSurface, height: 1.15),
+            ),
+        if (originalTitle != null &&
+            originalTitle.isNotEmpty &&
+            originalTitle != title) ...<Widget>[
+          const SizedBox(height: 6),
+          Text(
+            originalTitle,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            textAlign: align,
+            style: type.titleMedium.copyWith(color: cs.onSurfaceVariant),
+          ),
+        ],
+        if (chips.isNotEmpty) ...<Widget>[
+          SizedBox(height: chipGap),
+          MediaDetailChipRow(
+            chips: chips,
+            alignment: centered ? WrapAlignment.center : WrapAlignment.start,
+          ),
+        ],
+      ],
     );
+  }
+
+  Widget _buildInfo(
+    BuildContext context, {
+    required bool centered,
+    required bool wide,
+  }) {
+    final FushiTypography type = context.fushiType;
+    final CrossAxisAlignment cross = centered
+        ? CrossAxisAlignment.center
+        : CrossAxisAlignment.start;
     return Column(
       crossAxisAlignment: cross,
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         FushiStaggeredEntrance(
           index: 1,
-          child: Column(
-            crossAxisAlignment: cross,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              if (overline != null && overline.isNotEmpty) ...<Widget>[
-                Text(
-                  overline,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: align,
-                  style: type.labelLargeEmphasized.copyWith(color: cs.primary),
-                ),
-                const SizedBox(height: 6),
-              ],
-              titleWidget ?? titleText,
-              if (originalTitle != null &&
-                  originalTitle.isNotEmpty &&
-                  originalTitle != title) ...<Widget>[
-                const SizedBox(height: 6),
-                Text(
-                  originalTitle,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: align,
-                  style: type.titleMedium.copyWith(color: cs.onSurfaceVariant),
-                ),
-              ],
-              if (chips.isNotEmpty) ...<Widget>[
-                const SizedBox(height: 14),
-                MediaDetailChipRow(
-                  chips: chips,
-                  alignment: centered
-                      ? WrapAlignment.center
-                      : WrapAlignment.start,
-                ),
-              ],
-            ],
+          child: _buildHeading(
+            context,
+            centered: centered,
+            titleStyle: wide
+                ? type.displaySmallEmphasized
+                : type.headlineMediumEmphasized,
           ),
         ),
         if (actions != null) ...<Widget>[
@@ -658,6 +773,91 @@ class MediaDetailHero extends StatelessWidget {
   }
 }
 
+/// 紧凑 hero 的排法（窄屏单列 / 两栏左栏共用，各域 hero 都走这一份）：小封面在
+/// 起始侧、[heading]（来源 / 标题 / chip）在旁边，[actions] 与 [footer] 占满整宽。
+/// 首屏要留给正文（章节 / 分集）和简介，大封面居中堆叠会把它们整个挤出首屏
+/// （2026-10 详情页重设计）。
+///
+/// 子树里 [MediaDetailActionBar] 自动改成「主按钮占满剩余宽度 + 次按钮收成图标」，
+/// [MediaDetailSynopsis] 默认折叠成两行（左栏五行）；页脚可用
+/// [MediaDetailHero.isCompact] 判断自己在不在紧凑 hero 里。
+class MediaDetailCompactHero extends StatelessWidget {
+  const MediaDetailCompactHero({
+    required this.heading,
+    super.key,
+    this.cover,
+    this.coverAspectRatio = 2 / 3,
+    this.coverKey = const ValueKey<String>('media-detail-cover'),
+    this.actions,
+    this.footer,
+  });
+
+  final Widget heading;
+
+  /// 封面内容（不含外框，由这里套 [MediaDetailCoverFrame]）；null = 不放封面。
+  final Widget? cover;
+  final double coverAspectRatio;
+  final Key coverKey;
+  final Widget? actions;
+  final Widget? footer;
+
+  /// 紧凑 hero 的标题字号：左栏 Headline S，窄屏 Title L（都取 Emphasized）。
+  static TextStyle titleStyleOf(BuildContext context) =>
+      MediaDetailLayout.isSidePane(context)
+      ? context.fushiType.headlineSmallEmphasized
+      : context.fushiType.titleLargeEmphasized;
+
+  @override
+  Widget build(BuildContext context) {
+    final bool sidePane = MediaDetailLayout.isSidePane(context);
+    final Widget? cover = this.cover;
+    final double coverWidth = coverAspectRatio < 1
+        ? (sidePane ? 112 : 96)
+        : (sidePane ? 176 : 148);
+    final Widget heading = FushiStaggeredEntrance(
+      index: 1,
+      child: this.heading,
+    );
+    return _MediaDetailHeroAlignScope(
+      centered: false,
+      compact: true,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          if (cover == null)
+            heading
+          else
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                FushiStaggeredEntrance(
+                  index: 0,
+                  child: MediaDetailCoverFrame(
+                    key: coverKey,
+                    width: coverWidth,
+                    aspectRatio: coverAspectRatio,
+                    child: cover,
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(child: heading),
+              ],
+            ),
+          if (actions != null) ...<Widget>[
+            const SizedBox(height: 16),
+            FushiStaggeredEntrance(index: 2, child: actions!),
+          ],
+          if (footer != null) ...<Widget>[
+            const SizedBox(height: 16),
+            FushiStaggeredEntrance(index: 3, child: footer!),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
 // ---------------------------------------------------------------------------
 // 主操作按钮组
 // ---------------------------------------------------------------------------
@@ -682,6 +882,14 @@ class MediaDetailActionBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 单列详情页的悬浮按钮按主按钮的实际位置决定显隐（[_MediaDetailFabHost]）。
+    final GlobalKey? anchor = _MediaDetailFabAnchorScope.of(context);
+    final Widget primary = anchor == null
+        ? this.primary
+        : KeyedSubtree(key: anchor, child: this.primary);
+    if (alignment == null && _MediaDetailHeroAlignScope.compactOf(context)) {
+      return _buildCompact(primary);
+    }
     final WrapAlignment resolved =
         alignment ??
         (_MediaDetailHeroAlignScope.centeredOf(context)
@@ -696,6 +904,58 @@ class MediaDetailActionBar extends StatelessWidget {
       children: <Widget>[primary, ...secondary, ?more],
     );
   }
+
+  /// 紧凑 hero：主按钮吃掉次按钮（紧凑下一律是图标按钮）之外的整行宽度，「⋯」
+  /// 拿剩下的空间自己按宽度决定平铺几个；放不下最小主按钮时主按钮独占一行。
+  Widget _buildCompact(Widget primary) {
+    const double gap = 8;
+    const double iconExtent = 56;
+    const double minPrimaryWidth = 200;
+    final Widget? more = this.more;
+    return LayoutBuilder(
+      key: const ValueKey<String>('media-detail-actions'),
+      builder: (BuildContext context, BoxConstraints constraints) {
+        final double reserved =
+            secondary.length * (iconExtent + gap) +
+            (more == null ? 0 : iconExtent + gap);
+        final List<Widget> trailing = <Widget>[
+          for (final Widget button in secondary) ...<Widget>[
+            const SizedBox(width: gap),
+            button,
+          ],
+          if (more != null) ...<Widget>[
+            const SizedBox(width: gap),
+            Flexible(
+              child: Align(
+                alignment: AlignmentDirectional.centerStart,
+                child: more,
+              ),
+            ),
+          ],
+        ];
+        final double primaryWidth = constraints.maxWidth - reserved;
+        if (primaryWidth >= minPrimaryWidth) {
+          return Row(
+            children: <Widget>[
+              SizedBox(width: primaryWidth, child: primary),
+              ...trailing,
+            ],
+          );
+        }
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            primary,
+            if (trailing.isNotEmpty) ...<Widget>[
+              const SizedBox(height: gap),
+              Row(children: trailing.skip(1).toList(growable: false)),
+            ],
+          ],
+        );
+      },
+    );
+  }
 }
 
 /// hero 信息区的对齐（窄式居中 / 宽式起始侧），让操作区跟着对齐。
@@ -703,9 +963,13 @@ class _MediaDetailHeroAlignScope extends InheritedWidget {
   const _MediaDetailHeroAlignScope({
     required this.centered,
     required super.child,
+    this.compact = false,
   });
 
   final bool centered;
+
+  /// 紧凑 hero（窄屏单列 / 两栏左栏）：主按钮占满一行剩余宽度，次按钮收成图标。
+  final bool compact;
 
   static bool centeredOf(BuildContext context) =>
       context
@@ -713,9 +977,15 @@ class _MediaDetailHeroAlignScope extends InheritedWidget {
           ?.centered ??
       false;
 
+  static bool compactOf(BuildContext context) =>
+      context
+          .dependOnInheritedWidgetOfExactType<_MediaDetailHeroAlignScope>()
+          ?.compact ??
+      false;
+
   @override
   bool updateShouldNotify(_MediaDetailHeroAlignScope oldWidget) =>
-      centered != oldWidget.centered;
+      centered != oldWidget.centered || compact != oldWidget.compact;
 }
 
 /// 主按钮（「继续观看」「开始阅读」「在线阅读」）：M3E filled M 档（56 高）+
@@ -806,7 +1076,7 @@ class MediaDetailSecondaryButton extends StatelessWidget {
             child: FushiCircularProgressIndicator(strokeWidth: 2.5),
           )
         : FushiIcon(FushiIcons.resolve(icon, filled: selected));
-    if (iconOnly) {
+    if (iconOnly || _MediaDetailHeroAlignScope.compactOf(context)) {
       return FushiIconButtonControl.filledTonal(
         key: buttonKey,
         tooltip: label,
@@ -875,6 +1145,16 @@ class MediaDetailMoreButton extends StatefulWidget {
   State<MediaDetailMoreButton> createState() => _MediaDetailMoreButtonState();
 }
 
+/// 详情页图标钮的实际尺寸（[FushiIconButtonSize.m]）：测宽与实际渲染取同一个值，
+/// 不再按顶栏的 48 估（实测 6 个动作 340px 预算全展开需要 376px，会溢出）。
+final double _kInlineButtonExtent = fushiExpressiveIconButtonExtent(
+  FushiIconButtonSize.m,
+  FushiIconButtonWidth.standard,
+).width;
+
+/// 平铺钮之间的间距（[MediaDetailMoreButton.build] 里的 SizedBox 宽度）。
+const double _kInlineButtonGap = 8;
+
 class _MediaDetailMoreButtonState extends State<MediaDetailMoreButton> {
   /// 平铺颗数决策（带展开回差），与 [FushiFloatingTopBar] 同一份实现。
   final FushiTopBarOverflowFit _fit = FushiTopBarOverflowFit();
@@ -896,6 +1176,10 @@ class _MediaDetailMoreButtonState extends State<MediaDetailMoreButton> {
         ],
       ],
       budget: maxWidth,
+      // n 颗 = n * 钮宽 + (n - 1) * 间距：槽宽含一个间距，首尾共少一个，
+      // 用负的两端内边距抵掉。
+      slotWidth: _kInlineButtonExtent + _kInlineButtonGap,
+      padding: -_kInlineButtonGap,
     );
   }
 
@@ -971,11 +1255,11 @@ class _MediaDetailMoreButtonState extends State<MediaDetailMoreButton> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             for (int i = 0; i < shown.length; i++) ...<Widget>[
-              if (i > 0) const SizedBox(width: 8),
+              if (i > 0) const SizedBox(width: _kInlineButtonGap),
               _inlineButton(shown[i]),
             ],
             if (hidden.isNotEmpty) ...<Widget>[
-              if (shown.isNotEmpty) const SizedBox(width: 8),
+              if (shown.isNotEmpty) const SizedBox(width: _kInlineButtonGap),
               _moreButton(hidden),
             ],
           ],
@@ -989,21 +1273,31 @@ class _MediaDetailMoreButtonState extends State<MediaDetailMoreButton> {
 // 简介
 // ---------------------------------------------------------------------------
 
-/// 可展开简介：收起时 [collapsedLines] 行，超出才出「展开 / 收起」；展开用
+/// 可展开简介：收起时 [collapsedLines] 行，超出至少两行才出「展开 / 收起」；展开用
 /// spring（[AnimatedSize]）。点正文本身也能切换（[selectable] 时只能点按钮，
 /// 正文要留给选词）。
 class MediaDetailSynopsis extends StatefulWidget {
   const MediaDetailSynopsis({
     required this.text,
     super.key,
-    this.collapsedLines = 4,
+    this.collapsedLines,
     this.selectable = false,
     this.textAlign = TextAlign.start,
     this.initiallyExpanded = false,
   });
 
   final String text;
-  final int collapsedLines;
+
+  /// 收起时的行数；null = 跟随所在 hero：窄屏紧凑 hero 2 行（首屏留给正文）、
+  /// 两栏左栏 5 行、其余 4 行。
+  final int? collapsedLines;
+
+  static int defaultCollapsedLines(BuildContext context) {
+    if (MediaDetailLayout.isSidePane(context)) return 5;
+    if (_MediaDetailHeroAlignScope.compactOf(context)) return 2;
+    return 4;
+  }
+
   final bool selectable;
   final TextAlign textAlign;
   final bool initiallyExpanded;
@@ -1023,23 +1317,25 @@ class _MediaDetailSynopsisState extends State<MediaDetailSynopsis> {
     if (text.isEmpty) return const SizedBox.shrink();
     final ColorScheme cs = Theme.of(context).colorScheme;
     final FushiMotionScheme motion = context.fushiMotion;
+    final int collapsedLines =
+        widget.collapsedLines ??
+        MediaDetailSynopsis.defaultCollapsedLines(context);
     final TextStyle style = context.fushiType.bodyLarge.copyWith(
       color: cs.onSurfaceVariant,
       height: 1.55,
     );
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
+        // 只多出一行时不折叠：收起后只少一行，按钮按了像没反应，还白占一行。
         final TextPainter painter = TextPainter(
           text: TextSpan(text: text, style: style),
-          maxLines: widget.collapsedLines,
+          maxLines: collapsedLines + 1,
           textDirection: Directionality.of(context),
           textScaler: MediaQuery.textScalerOf(context),
         )..layout(maxWidth: constraints.maxWidth);
         final bool overflows = painter.didExceedMaxLines;
         painter.dispose();
-        final int? maxLines = overflows && !_expanded
-            ? widget.collapsedLines
-            : null;
+        final int? maxLines = overflows && !_expanded ? collapsedLines : null;
         final Widget body = widget.selectable
             ? SelectableText(
                 text,
@@ -1122,39 +1418,52 @@ class MediaDetailSectionHeader extends StatelessWidget {
     final int? count = this.count;
     return Padding(
       padding: padding,
+      // 标题 + 计数胶囊收进一个 Expanded，[trailing] 才真正贴右缘。旧写法是
+      // `Flexible(标题) … Spacer() … trailing`：两个 flex 子项平分剩余宽度，松约束
+      // 的标题用不完自己那一半也不让出来，Spacer 只拿到另一半——trailing 落在行中
+      // 偏右的半空里（用户反馈「剧集」区多选的 ✕ 位置是歪的）。
       child: Row(
         children: <Widget>[
-          Flexible(
-            child: Text(
-              title,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: context.fushiType.titleLargeEmphasized,
+          Expanded(
+            child: Row(
+              children: <Widget>[
+                Flexible(
+                  child: Text(
+                    title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: context.fushiType.titleLargeEmphasized,
+                  ),
+                ),
+                if (count != null) ...<Widget>[
+                  const SizedBox(width: 10),
+                  DecoratedBox(
+                    decoration: BoxDecoration(
+                      color: apple
+                          ? appleColorsOf(context).tertiaryFill
+                          : cs.secondaryContainer,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(999),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 2,
+                      ),
+                      child: Text(
+                        '$count',
+                        style: context.fushiType.labelLargeEmphasized.tabular
+                            .copyWith(
+                              color: apple ? null : cs.onSecondaryContainer,
+                            ),
+                      ),
+                    ),
+                  ),
+                ],
+              ],
             ),
           ),
-          if (count != null) ...<Widget>[
-            const SizedBox(width: 10),
-            DecoratedBox(
-              decoration: BoxDecoration(
-                color: apple
-                    ? appleColorsOf(context).tertiaryFill
-                    : cs.secondaryContainer,
-                borderRadius: const BorderRadius.all(Radius.circular(999)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 2,
-                ),
-                child: Text(
-                  '$count',
-                  style: context.fushiType.labelLargeEmphasized.tabular
-                      .copyWith(color: apple ? null : cs.onSecondaryContainer),
-                ),
-              ),
-            ),
-          ],
-          const Spacer(),
           ?trailing,
         ],
       ),
@@ -1621,39 +1930,80 @@ class _CastAvatar extends StatelessWidget {
 class MediaDetailLayout extends StatelessWidget {
   const MediaDetailLayout({
     required this.header,
-    required this.slivers,
+    this.slivers = const <Widget>[],
+    this.body,
     super.key,
     this.backdrop,
     this.backdropKey,
     this.backdropBlur = 28,
     this.twoPaneMinWidth = kMediaDetailTwoPaneMinWidth,
-    this.sidePaneWidth = kMediaDetailSidePaneWidth,
+    this.sidePaneWidth,
     this.controller,
     this.bottomPadding = 24,
+    this.fab,
   });
 
   final Widget header;
   final List<Widget> slivers;
 
+  /// 非 sliver 的正文（自带滚动的页签区等），给了就不用 [slivers]：单列时
+  /// [header] 在顶、[body] 吃掉剩余高度；两栏时 [body] 占右栏。
+  final Widget? body;
+
   /// 两栏时整页背景（与 hero 的背景同一张）。
   final ImageProvider? backdrop;
   final Object? backdropKey;
   final double backdropBlur;
+
+  /// 无条件切两栏的宽度；[double.infinity] = 永远单列（连横屏判据一起关掉）。
   final double twoPaneMinWidth;
-  final double sidePaneWidth;
+
+  /// null = 按窗口宽自适应（见 [sidePaneWidthFor]）。
+  final double? sidePaneWidth;
 
   /// 正文（单列时整页 / 两栏时右栏）的滚动控制器。
   final ScrollController? controller;
   final double bottomPadding;
+
+  /// 右下角悬浮按钮（通常是 [MediaDetailResumeFab]），只在单列时出现；正文末尾
+  /// 多留出它的高度，最后一行不被挡住。
+  final Widget? fab;
 
   /// [context] 是否在两栏布局的左栏里。
   static bool isSidePane(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<_MediaDetailSidePaneScope>() !=
       null;
 
-  /// 当前是否两栏（供页面决定右栏的列数等）。
-  static bool isTwoPane(BuildContext context, double maxWidth) =>
-      maxWidth * FushiAppUiScale.of(context) >= kMediaDetailTwoPaneMinWidth;
+  /// 当前是否两栏（供页面决定右栏的列数等）。[maxHeight] 缺省取窗口高。
+  static bool isTwoPane(
+    BuildContext context,
+    double maxWidth, {
+    double? maxHeight,
+  }) => shouldUseTwoPane(
+    maxWidth * FushiAppUiScale.of(context),
+    (maxHeight ?? MediaQuery.sizeOf(context).height) *
+        FushiAppUiScale.of(context),
+  );
+
+  /// 两栏判据（已乘 UI 缩放的逻辑宽高）：够宽，或横屏且不太窄。
+  static bool shouldUseTwoPane(
+    double width,
+    double height, {
+    double twoPaneMinWidth = kMediaDetailTwoPaneMinWidth,
+  }) {
+    if (width >= twoPaneMinWidth) return true;
+    if (twoPaneMinWidth == double.infinity) return false;
+    return width >= kMediaDetailLandscapeTwoPaneMinWidth &&
+        height.isFinite &&
+        width > height;
+  }
+
+  /// 左栏宽度：窗口宽的 40%，夹在 [kMediaDetailSidePaneMinWidth] 与
+  /// [kMediaDetailSidePaneWidth] 之间。
+  static double sidePaneWidthFor(double width) => (width * 0.4).clamp(
+    kMediaDetailSidePaneMinWidth,
+    kMediaDetailSidePaneWidth,
+  );
 
   /// 顶栏（浮动胶囊，[Scaffold.extendBodyBehindAppBar]）+ 状态栏占掉的高度：
   /// 背景铺满到窗口顶端，hero 内容从这条线下开始排。由布局按
@@ -1676,34 +2026,73 @@ class MediaDetailLayout extends StatelessWidget {
       removeTop: true,
       child: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          final bool twoPane =
-              constraints.maxWidth * FushiAppUiScale.of(context) >=
-              twoPaneMinWidth;
+          final double scale = FushiAppUiScale.of(context);
+          final bool twoPane = shouldUseTwoPane(
+            constraints.maxWidth * scale,
+            constraints.maxHeight * scale,
+            twoPaneMinWidth: twoPaneMinWidth,
+          );
+          final double paneWidth =
+              sidePaneWidth ?? sidePaneWidthFor(constraints.maxWidth);
+          // 悬浮按钮只在单列出现：两栏时左栏 hero 的主按钮一直在视野里，再挂一个
+          // 重复（用户 2026-10-20）。
+          final Widget? fab = twoPane ? null : this.fab;
           final Widget bottom = SliverSafeArea(
             top: false,
-            sliver: SliverToBoxAdapter(child: SizedBox(height: bottomPadding)),
+            sliver: SliverToBoxAdapter(
+              child: SizedBox(
+                height:
+                    bottomPadding +
+                    (fab == null ? 0 : kMediaDetailFabClearance),
+              ),
+            ),
           );
+          Widget withFab(Widget child) => fab == null
+              ? child
+              : _MediaDetailFabHost(fab: fab, topInset: topInset, child: child);
           // 顶部可读性遮罩**不在这里画**：内容滚到浮动顶栏下面时的渐隐归顶栏
           // 自己（[FushiAppBar] / [FushiPageScaffold] 页头，共享的
           // [FushiTopFadeScrim]）。布局曾经再叠一层 55% 底色渐变，与顶栏那层
           // 叠加后在栏下沿形成一道浅色带 + 硬边。
-          if (!twoPane) {
-            return Stack(
-              children: <Widget>[
-                CustomScrollView(
-                  controller: controller,
-                  slivers: <Widget>[
-                    SliverToBoxAdapter(
+          final Widget? body = this.body;
+          if (!twoPane && body != null) {
+            // hero 最多占六成高度（展开长简介时在自己里面滚），页签区至少留四成。
+            return withFab(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  ConstrainedBox(
+                    constraints: BoxConstraints(
+                      maxHeight: constraints.maxHeight * 0.6,
+                    ),
+                    child: SingleChildScrollView(
+                      primary: false,
                       child: _MediaDetailTopInsetScope(
                         top: topInset,
                         child: header,
                       ),
                     ),
-                    ...slivers,
-                    bottom,
-                  ],
-                ),
-              ],
+                  ),
+                  Expanded(child: body),
+                ],
+              ),
+            );
+          }
+          if (!twoPane) {
+            return withFab(
+              CustomScrollView(
+                controller: controller,
+                slivers: <Widget>[
+                  SliverToBoxAdapter(
+                    child: _MediaDetailTopInsetScope(
+                      top: topInset,
+                      child: header,
+                    ),
+                  ),
+                  ...slivers,
+                  bottom,
+                ],
+              ),
             );
           }
           return Stack(
@@ -1719,7 +2108,7 @@ class MediaDetailLayout extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   SizedBox(
-                    width: sidePaneWidth,
+                    width: paneWidth,
                     child: _MediaDetailSidePaneScope(
                       child: SingleChildScrollView(
                         key: const ValueKey<String>('media-detail-side-pane'),
@@ -1737,23 +2126,232 @@ class MediaDetailLayout extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: CustomScrollView(
-                      key: const ValueKey<String>('media-detail-main-pane'),
-                      controller: controller,
-                      slivers: <Widget>[
-                        SliverToBoxAdapter(
-                          child: SizedBox(height: topInset + 8),
-                        ),
-                        ...slivers,
-                        bottom,
-                      ],
-                    ),
+                    child: body != null
+                        ? Padding(
+                            key: const ValueKey<String>(
+                              'media-detail-main-pane',
+                            ),
+                            padding: EdgeInsets.only(top: topInset + 8),
+                            child: body,
+                          )
+                        : CustomScrollView(
+                            key: const ValueKey<String>(
+                              'media-detail-main-pane',
+                            ),
+                            controller: controller,
+                            slivers: <Widget>[
+                              SliverToBoxAdapter(
+                                child: SizedBox(height: topInset + 8),
+                              ),
+                              ...slivers,
+                              bottom,
+                            ],
+                          ),
                   ),
                 ],
               ),
             ],
           );
         },
+      ),
+    );
+  }
+}
+
+/// 布局下发给 hero 按钮组的锚点：主按钮挂上它，[_MediaDetailFabHost] 据它的
+/// 实际位置判断「主按钮还看得见吗」。
+class _MediaDetailFabAnchorScope extends InheritedWidget {
+  const _MediaDetailFabAnchorScope({
+    required this.anchor,
+    required super.child,
+  });
+
+  final GlobalKey anchor;
+
+  static GlobalKey? of(BuildContext context) => context
+      .dependOnInheritedWidgetOfExactType<_MediaDetailFabAnchorScope>()
+      ?.anchor;
+
+  @override
+  bool updateShouldNotify(_MediaDetailFabAnchorScope oldWidget) =>
+      anchor != oldWidget.anchor;
+}
+
+/// 单列详情页的悬浮按钮宿主：与 hero 主按钮**互斥显示**（用户 2026-10-20）——
+/// 主按钮还在视口里时隐藏；主按钮下边缘滚进浮动顶栏底下（[topInset] 线以上）
+/// 后淡入 + 轻微上滑出现，滚回来再隐藏。判据是主按钮的实际位置，不是固定的
+/// 像素阈值：窗口高度、hero 高度（简介展开 / 收起）变了照样准。
+class _MediaDetailFabHost extends StatefulWidget {
+  const _MediaDetailFabHost({
+    required this.fab,
+    required this.topInset,
+    required this.child,
+  });
+
+  final Widget fab;
+
+  /// 浮动顶栏 + 状态栏占掉的高度（主按钮滚到这条线以上就算被遮住）。
+  final double topInset;
+  final Widget child;
+
+  @override
+  State<_MediaDetailFabHost> createState() => _MediaDetailFabHostState();
+}
+
+class _MediaDetailFabHostState extends State<_MediaDetailFabHost> {
+  final GlobalKey _anchor = GlobalKey(debugLabel: 'media-detail-primary');
+  bool _visible = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _scheduleEvaluate();
+  }
+
+  @override
+  void didUpdateWidget(_MediaDetailFabHost oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _scheduleEvaluate();
+  }
+
+  void _scheduleEvaluate() {
+    WidgetsBinding.instance.addPostFrameCallback((_) => _evaluate());
+  }
+
+  /// 主按钮下边缘是否已在顶栏线以上。找不到主按钮（页面没给主操作）时恒显示。
+  void _evaluate() {
+    if (!mounted) return;
+    final RenderObject? host = context.findRenderObject();
+    final RenderObject? anchor = _anchor.currentContext?.findRenderObject();
+    bool visible = true;
+    if (host is RenderBox &&
+        anchor is RenderBox &&
+        anchor.attached &&
+        anchor.hasSize) {
+      final double bottom = anchor
+          .localToGlobal(Offset(0, anchor.size.height), ancestor: host)
+          .dy;
+      visible = bottom <= widget.topInset;
+    }
+    if (visible != _visible) setState(() => _visible = visible);
+  }
+
+  bool _onScroll(ScrollNotification notification) {
+    if (notification.metrics.axis == Axis.vertical) _evaluate();
+    return false;
+  }
+
+  bool _onMetrics(ScrollMetricsNotification notification) {
+    if (notification.metrics.axis == Axis.vertical) _evaluate();
+    return false;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final Duration duration = fushiMotionDuration(context, FushiMotion.short);
+    return Stack(
+      children: <Widget>[
+        Positioned.fill(
+          child: NotificationListener<ScrollMetricsNotification>(
+            onNotification: _onMetrics,
+            child: NotificationListener<ScrollNotification>(
+              onNotification: _onScroll,
+              child: _MediaDetailFabAnchorScope(
+                anchor: _anchor,
+                child: widget.child,
+              ),
+            ),
+          ),
+        ),
+        PositionedDirectional(
+          end: 16,
+          bottom: 16 + MediaQuery.paddingOf(context).bottom,
+          child: ExcludeFocus(
+            excluding: !_visible,
+            child: IgnorePointer(
+              ignoring: !_visible,
+              child: AnimatedSlide(
+                offset: _visible ? Offset.zero : const Offset(0, 0.25),
+                duration: duration,
+                curve: context.fushiMotion.spatialDefault.curve,
+                child: AnimatedOpacity(
+                  opacity: _visible ? 1 : 0,
+                  duration: duration,
+                  curve: context.fushiMotion.effectsDefault.curve,
+                  child: widget.fab,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/// [MediaDetailLayout.fab] 占掉的正文底部留白（56 高的悬浮按钮 + 上下间距）。
+const double kMediaDetailFabClearance = 80;
+
+/// 详情页右下角的「继续 / 开始」悬浮按钮（M3E primaryContainer 圆角方 FAB，
+/// Apple 强调色胶囊）：图标 + 文案的扩展 FAB。由
+/// [MediaDetailLayout.fab] 挂载，两栏时不出现。
+///
+/// 文案：有进度时「继续阅读 · 第 12 话」「继续观看 · 第 3 集」，一次都没打开过时
+/// 「开始阅读」「开始观看」（[itemLabel] 照样跟在后面，告诉用户从哪一话开始）。
+class MediaDetailResumeFab extends StatelessWidget {
+  const MediaDetailResumeFab({
+    required this.watching,
+    required this.started,
+    required this.onPressed,
+    super.key,
+    this.itemLabel,
+    this.buttonKey,
+  });
+
+  /// true = 视频（观看），false = 书 / 漫画 / 小说（阅读）。
+  final bool watching;
+
+  /// 已经有阅读 / 观看进度（「继续」）还是从没打开过（「开始」）。
+  final bool started;
+
+  /// 目标那一话 / 一集的名字；null / 空 = 只显示动作。
+  final String? itemLabel;
+  final VoidCallback? onPressed;
+  final Key? buttonKey;
+
+  /// 按钮文案（tooltip 与扩展态共用）。
+  static String labelFor({
+    required bool watching,
+    required bool started,
+    String? itemLabel,
+  }) {
+    final String verb = switch ((watching, started)) {
+      (true, true) => t.video_continue_watching,
+      (true, false) => t.media_detail_start_watching,
+      (false, true) => t.book_continue_reading,
+      (false, false) => t.media_detail_start_reading,
+    };
+    final String? item = itemLabel?.trim();
+    return item == null || item.isEmpty ? verb : '$verb · $item';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final String label = labelFor(
+      watching: watching,
+      started: started,
+      itemLabel: itemLabel,
+    );
+    // 扩展 FAB（图标 + 文案）：一眼看出会从哪一话 / 集继续；过长的章名省略。
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 280),
+      child: FushiFab(
+        key: buttonKey,
+        heroTag: null,
+        icon: const FushiIcon(FushiIcons.play),
+        tooltip: label,
+        onPressed: onPressed,
+        label: Text(label, maxLines: 1, overflow: TextOverflow.ellipsis),
       ),
     );
   }
@@ -1807,23 +2405,30 @@ class MediaDetailSkeleton extends StatelessWidget {
         builder: (BuildContext context, BoxConstraints constraints) {
           final double width = constraints.maxWidth;
           if (MediaDetailLayout.isTwoPane(context, width)) {
+            // 两栏各自是不可滚的 SingleChildScrollView（与单列骨架的
+            // NeverScrollable ListView 同理）：横屏矮窗口（如 800×600）放不下
+            // 六张集卡时裁掉多出的部分，而不是 RenderFlex 溢出。
             return Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
-                  width: kMediaDetailSidePaneWidth,
-                  child: Padding(
+                  width: MediaDetailLayout.sidePaneWidthFor(width),
+                  child: SingleChildScrollView(
+                    primary: false,
+                    physics: const NeverScrollableScrollPhysics(),
                     padding: EdgeInsets.fromLTRB(
                       page,
                       top + tokens.spacing.section,
                       page,
                       page,
                     ),
-                    child: _narrowHero(),
+                    child: _compactHero(sidePane: true),
                   ),
                 ),
                 Expanded(
-                  child: Padding(
+                  child: SingleChildScrollView(
+                    primary: false,
+                    physics: const NeverScrollableScrollPhysics(),
                     padding: EdgeInsets.fromLTRB(
                       page,
                       top + 8 + 12,
@@ -1848,8 +2453,8 @@ class MediaDetailSkeleton extends StatelessWidget {
               page,
             ),
             children: <Widget>[
-              if (wideHero) _wideHero() else _narrowHero(),
-              const SizedBox(height: 28),
+              if (wideHero) _wideHero() else _compactHero(sidePane: false),
+              const SizedBox(height: 24),
               for (int i = 0; i < rows; i++) ...<Widget>[
                 FushiSkeleton(
                   height: 64,
@@ -1864,33 +2469,45 @@ class MediaDetailSkeleton extends StatelessWidget {
     );
   }
 
-  /// 窄式 hero：与 [MediaDetailHero] 的窄式 / 两栏左栏同形（居中堆叠）。
-  Widget _narrowHero() => Column(
-    crossAxisAlignment: CrossAxisAlignment.center,
+  /// 紧凑 hero：与 [MediaDetailHero] 的窄屏单列 / 两栏左栏同形（小封面在起始
+  /// 侧、信息在旁，操作区与简介占满整宽）。
+  Widget _compactHero({required bool sidePane}) => Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
     children: <Widget>[
-      FushiSkeleton(
-        width: 150,
-        height: 225,
-        borderRadius: FushiM3eShape.cardRadius,
+      Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          FushiSkeleton(
+            width: sidePane ? 112 : 96,
+            height: sidePane ? 168 : 144,
+            borderRadius: FushiM3eShape.cardRadius,
+          ),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                const FushiSkeleton(width: 96, height: 14),
+                const SizedBox(height: 10),
+                FushiSkeleton.line(widthFactor: 0.85, height: 24),
+                const SizedBox(height: 8),
+                FushiSkeleton.line(widthFactor: 0.55, height: 16),
+                const SizedBox(height: 12),
+                FushiSkeleton.line(widthFactor: 0.7, height: 26),
+              ],
+            ),
+          ),
+        ],
       ),
-      const SizedBox(height: 20),
-      const FushiSkeleton(width: 96, height: 14),
-      const SizedBox(height: 10),
-      const FushiSkeleton(width: 220, height: 30),
       const SizedBox(height: 16),
-      const FushiSkeleton(width: 260, height: 28),
-      const SizedBox(height: 18),
       const FushiSkeleton(
-        width: 200,
-        height: 48,
-        borderRadius: BorderRadius.all(Radius.circular(24)),
+        height: 56,
+        borderRadius: BorderRadius.all(Radius.circular(28)),
       ),
-      const SizedBox(height: 24),
+      const SizedBox(height: 16),
       FushiSkeleton.line(height: 14),
       const SizedBox(height: 8),
-      FushiSkeleton.line(widthFactor: 0.9, height: 14),
-      const SizedBox(height: 8),
-      FushiSkeleton.line(widthFactor: 0.7, height: 14),
+      FushiSkeleton.line(widthFactor: 0.8, height: 14),
     ],
   );
 

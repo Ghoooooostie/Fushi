@@ -17,6 +17,18 @@ mixin _LocalLibraryHostBooks on _LocalLibraryHostBase, _LocalLibraryHostShared {
   /// [RemoteBookInfo.hasContent] 为 true 当且仅当该书存在可导出的 EPUB 根目录。
   @override
   Future<List<RemoteBookInfo>> listBooks() async {
+    // BUG-3441：分卷按系列归组以前只在书架页打开时跑——host 没开过书架（或是无头
+    // 服务端）时清单里 3、4 卷的 collection 恒为 null，client 收不到归属、只能摆散卡，
+    // 合集详情页也不会有这两卷。出清单前先归一次（幂等、已归组时近零开销）。用同步
+    // 状态窄锁（与合集清单落库同表同锁）而非 _runExclusive：后者在 app 里罩着整个
+    // 自动同步轮，清单请求会被卡到对端超时。归组失败不挡清单，照旧按已有归属出。
+    try {
+      await _runSyncStateExclusive(() async {
+        await BookSeriesGrouper(_db).groupAll();
+      });
+    } catch (e, stack) {
+      engineLog.log('LocalLibraryHostService.listBooks.groupSeries', e, stack);
+    }
     final List<EpubBookRow> rows = await _db.getAllEpubBooks();
     // 该书是否已配「可经 live-sync 导出」的有声书。判据必须与 [listAudiobooks] /
     // [exportAudiobook] 完全同源——仅 Audiobooks 行还不够，导出格式需 srtBookUid，
@@ -92,9 +104,12 @@ mixin _LocalLibraryHostBooks on _LocalLibraryHostBase, _LocalLibraryHostShared {
         // hasMangaContent 恒 false，但它按章下载的页图就在 <extractDir>/chapters/
         // 下——标 hasMangaChapters，对端以多章在线作品收下、逐章从这里拉。清单级
         // 只做一次目录列举（廉价判据），逐章完整性在按章端点上把关。
+        // 本机运行时能按需取页的在线条目（[OnlineMangaHostReader]）章章可读，
+        // 一章没下也要出现在对端——iPhone 没有在线源宿主，互联是它读这些漫画的
+        // 唯一途径。
         hasMangaChapters: format == BookFormat.manga &&
-            r.extractDir.isNotEmpty &&
-            hasAnyChapterDirSync(r.extractDir),
+            ((r.extractDir.isNotEmpty && hasAnyChapterDirSync(r.extractDir)) ||
+                _servesOnlineMangaChapters(_onlineMangaReader, r)),
         mangaReadingMode: r.mangaReadingMode,
         mangaReaderOverrides: _readerOverrideMap(readerOverridesByUid[r.uid]),
         mangaReaderOverrideUpdatedAt:
@@ -220,7 +235,7 @@ mixin _LocalLibraryHostBooks on _LocalLibraryHostBase, _LocalLibraryHostShared {
     // 不变，内容即真相）。
     if (format == BookFormat.manga) {
       final Directory tmpDir =
-          Directory.systemTemp.createTempSync('hibiki_book_export');
+          Directory.systemTemp.createTempSync('fushi_book_export');
       final File out = File(p.join(tmpDir.path, '${row.bookKey}.epub'));
       final bool ok = await repackageMangaBook(row.extractDir, out.path);
       if (!ok) {
@@ -236,7 +251,7 @@ mixin _LocalLibraryHostBooks on _LocalLibraryHostBase, _LocalLibraryHostShared {
     }
 
     final Directory tmpDir =
-        Directory.systemTemp.createTempSync('hibiki_book_export');
+        Directory.systemTemp.createTempSync('fushi_book_export');
     // 文件名用 title 但扩展名用 .epub，保证重导入时 fileName 是合法 epub 名。
     final String safeBasename = '${row.bookKey}.epub';
     final File out = File(p.join(tmpDir.path, safeBasename));
@@ -400,22 +415,32 @@ mixin _LocalLibraryHostBooks on _LocalLibraryHostBase, _LocalLibraryHostShared {
     // `_syncBooksContentLive` importBook 推成 host 书，故正常同步不被此闸门误挡。）
     final EpubBookRow? hostBook = await _db.getEpubBook(bookKey);
     if (hostBook == null || hostBook.uid.isEmpty) return;
-    final RemoteBookProgress current = await getBookProgress(bookKey);
     final RemoteBookProgress incoming = RemoteBookProgress(
       sectionIndex: progress.sectionIndex < 0 ? 0 : progress.sectionIndex,
       normCharOffset: progress.normCharOffset < 0 ? 0 : progress.normCharOffset,
       charOffset: progress.charOffset,
       updatedAtMs: progress.updatedAtMs,
     );
-    final RemoteBookProgress winner =
-        resolveBookProgressSync(local: current, remote: incoming);
-    if (winner.sectionIndex == current.sectionIndex &&
-        winner.normCharOffset == current.normCharOffset &&
-        winner.charOffset == current.charOffset &&
-        winner.updatedAtMs == current.updatedAtMs) {
-      return; // host 已存更新或相等，no-op。
-    }
-    await _runExclusive(() async {
+    // 窄锁而非 _runExclusive：后者在 app 里罩着整个自动同步轮（含云备份，动辄
+    // 几分钟），对端这条单行 PUT 排在后面拿不到响应头，15s 判超时——而 host 等锁
+    // 放开后照样落库，对端便漏记「已对齐」，下一轮误报进度冲突。读-比较-写整段在
+    // 锁内，两个对端并发上报不会互相用旧值盖掉对方。
+    //
+    // 锁只串住对端之间；本机出站同步（云导入 / 互联 client 落地）与本机阅读器不拿
+    // 这把锁，前者改用 `upsertReaderPositionIfUnchanged` 在事务里比较后写入
+    // （BUG-3537）。这里的读-比较-写也放进同一个 DB 事务，两边才互不插队：否则
+    // 出站落地正好写在本端「读 current」与「写 winner」之间时，会被这里按旧的
+    // current 算出的 winner 盖掉。
+    await _runSyncStateExclusive(() => _db.transaction(() async {
+      final RemoteBookProgress current = await getBookProgress(bookKey);
+      final RemoteBookProgress winner =
+          resolveBookProgressSync(local: current, remote: incoming);
+      if (winner.sectionIndex == current.sectionIndex &&
+          winner.normCharOffset == current.normCharOffset &&
+          winner.charOffset == current.charOffset &&
+          winner.updatedAtMs == current.updatedAtMs) {
+        return; // host 已存更新或相等，no-op。
+      }
       await _db.upsertReaderPosition(ReaderPositionsCompanion(
         bookUid: Value(hostBook.uid),
         sectionIndex: Value(winner.sectionIndex),
@@ -423,7 +448,7 @@ mixin _LocalLibraryHostBooks on _LocalLibraryHostBase, _LocalLibraryHostShared {
         charOffset: Value(winner.charOffset),
         updatedAt: Value(winner.updatedAtMs),
       ));
-    });
+    }));
   }
 
   /// 按 [id]（downloadId：bookKey 或 title）单查书封面磁盘路径（对称

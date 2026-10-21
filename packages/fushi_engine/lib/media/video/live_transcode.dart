@@ -6,8 +6,9 @@
 //
 // ## 为什么是「自己拼 playlist + MPEG-TS 分段」
 //
-// 随包的精简 ffmpeg（`tool/ffmpeg-min`）没有编入 `hls` muxer，但 playlist 不过是一段
-// 文本，分段一段一个短命 ffmpeg 出 `mpegts` 就够——于是 playlist 由 Dart 生成。
+// 当时随包的精简 ffmpeg-min 没有编入 `hls` muxer（统一 FFmpeg 已含 `hls`），但 playlist
+// 不过是一段文本，分段一段一个短命 ffmpeg 出 `mpegts` 就够——于是 playlist 由 Dart 生成
+// （该设计沿用，也不依赖外部 ffmpeg 带 hls muxer）。
 //
 // 这条路换来的是**播放器侧零特殊处理**：libmpv 原生吃 HLS，进度条、总时长、seek 全
 // 部照常工作。相对的另一条路（一条不可 Range 的渐进流）要在播放器里拦截 seek、伪造
@@ -192,7 +193,7 @@ List<String> buildTranscodeSegmentArgs({
     // PTS 域，而 HLS 的分段索引是 DTS 域的——两域必须重合，段边界才自洽。代价是
     // 少了 B 帧的压缩收益，但弱网上「seek 能用」比那几个百分点重要得多，何况
     // `-g 600` 本来就是一段一个关键帧。守卫见
-    // `fushi/test/media/video/live_transcode_test.dart` 与 `tool/ffmpeg-min/smoke-test.sh`。
+    // `fushi/test/media/video/live_transcode_test.dart` 与 `tool/ffmpeg-unified/smoke-test.sh`。
     '-bf', '0',
     // **音频必须从段起点开始**：同一条 DTS 门槛的另一半。hls demuxer 的
     // `first_timestamp` 取的是第 0 段**最先吐出**的包，而 mpegts 里音频 PES 小、
@@ -415,7 +416,7 @@ const Duration kTranscodeSegmentTimeout = Duration(seconds: 90);
 
 /// 跑一次分段转码进程，返回 (退出码, stdout 字节, stderr 摘要)。超时 SIGKILL 并抛
 /// [TranscodeFailure]（与既有 [runFfmpegProcess] 的处置同口径）。
-Future<({int code, List<int> bytes, String stderr})> _spawnSegment(
+Future<({int code, Uint8List bytes, String stderr})> _spawnSegment(
   String executable,
   List<String> args,
 ) async {
@@ -425,9 +426,17 @@ Future<({int code, List<int> bytes, String stderr})> _spawnSegment(
   );
   // stdout / stderr 必须同时 drain：任一管道写满 64 KB 都会把 ffmpeg 堵死，表现为
   // 「转码莫名其妙停住」。与既有 runFfmpegProcess 的防死锁处理同因。
-  final Future<List<int>> stdoutFuture = process.stdout
-      .expand<int>((List<int> c) => c)
-      .toList();
+  // 按块攒进 BytesBuilder：`expand<int>().toList()` 会把每段几 MB 的输出逐字节装箱成
+  // List<int>，最后还要再整段拷一次。
+  final Future<Uint8List> stdoutFuture = process.stdout
+      .fold<BytesBuilder>(BytesBuilder(copy: false), (
+        BytesBuilder b,
+        List<int> chunk,
+      ) {
+        b.add(chunk);
+        return b;
+      })
+      .then((BytesBuilder b) => b.takeBytes());
   final StringBuffer stderrBuffer = StringBuffer();
   final Future<void> stderrFuture = process.stderr.forEach((List<int> chunk) {
     if (stderrBuffer.length < 4096) {
@@ -435,7 +444,7 @@ Future<({int code, List<int> bytes, String stderr})> _spawnSegment(
     }
   });
   try {
-    final List<int> collected = await stdoutFuture.timeout(
+    final Uint8List collected = await stdoutFuture.timeout(
       kTranscodeSegmentTimeout,
     );
     await stderrFuture.timeout(kTranscodeSegmentTimeout);
@@ -490,7 +499,7 @@ Future<Uint8List> _spawnResolvedSegment(
   AacsMediaSession session,
 ) async {
   final String executable = resolveFfmpegExecutable();
-  ({int code, List<int> bytes, String stderr}) r;
+  ({int code, Uint8List bytes, String stderr}) r;
   try {
     r = await _spawnSegment(executable, args);
   } on ProcessException {
@@ -514,7 +523,7 @@ Future<Uint8List> _spawnResolvedSegment(
     fushiDebugPrint('transcode segment exited ${r.code}: $stderr');
     throw TranscodeFailure(r.code, stderr);
   }
-  return Uint8List.fromList(r.bytes);
+  return r.bytes;
 }
 
 /// 转码进程以非 0 退出。带上 ffmpeg 的 stderr，好让 host 日志里能看出是源文件的问题

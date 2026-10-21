@@ -983,6 +983,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
           _buildLyricsTextColorRow(context),
           _buildLyricsHighlightColorRow(context),
           _lyricsSweepRow(),
+          _lyricsSkippedTextRow(),
         ],
       ),
       AdaptiveSettingsSection(
@@ -1592,7 +1593,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
                   ),
                 ),
               ),
-              TextButton(
+              FushiTextButton(
                 onPressed: _doSearch,
                 child: Text(t.retry),
               ),
@@ -2253,6 +2254,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         _buildLyricsTextColorRow(context),
         _buildLyricsHighlightColorRow(context),
         _lyricsSweepRow(),
+        _lyricsSkippedTextRow(),
         ..._lyricsMarginRows(),
       ],
     );
@@ -2492,6 +2494,24 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
     );
   }
 
+  /// 歌词模式「显示未朗读的原文」（`lyrics_show_skipped_text`，默认开）：两句之间
+  /// 没被任何字幕认领的原文以灰色小字显示。live 维度：写偏好 →
+  /// `_updateLyricsStyleLive` 换 body class，不重建歌词页。
+  Widget _lyricsSkippedTextRow() {
+    return AdaptiveSettingsSwitchRow(
+      key: const ValueKey<String>('reader_lyrics_skipped_text'),
+      title: t.lyrics_skipped_text_show,
+      subtitle: t.lyrics_skipped_text_show_hint,
+      value: _src.lyricsShowSkippedText,
+      onChanged: (bool enabled) async {
+        await _src.setLyricsShowSkippedText(enabled);
+        if (!mounted) return;
+        setState(() {});
+        widget.onStyleChanged?.call();
+      },
+    );
+  }
+
   /// 有声书「当前句高亮」样式组：正文底色开关、正文字色、歌词逐字渐变。三项
   /// 正交，能组合出「底色 + 原字色」（默认）、「只变字色、无底色」、「底色 +
   /// 字色」，歌词模式另可关掉渐变只留纯色。底色的颜色本身仍在主题编辑器里调。
@@ -2699,7 +2719,7 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
         if (widget.onToggleLyricsMode != null)
           Expanded(
             child: Semantics(
-              identifier: 'hibiki.reader.quick_settings.lyrics_toggle',
+              identifier: 'fushi.reader.quick_settings.lyrics_toggle',
               child: _actionBtn(
                 context,
                 key: const ValueKey<String>('fushi_lyrics_mode_toggle'),
@@ -2963,7 +2983,7 @@ class _InBookFavoriteUndoRow extends StatelessWidget {
             ),
           ),
           SizedBox(width: tokens.spacing.gap),
-          TextButton(
+          FushiTextButton(
             onPressed: onUndo,
             child: Text(t.undo),
           ),

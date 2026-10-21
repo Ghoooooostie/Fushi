@@ -3,6 +3,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/media/video/video_player_controller.dart';
 import 'package:fushi/src/media/video/video_subtitle_jump_panel.dart';
+import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi_audio/fushi_audio.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -22,6 +23,7 @@ Widget _host(
   VideoPlayerController c, {
   required bool show,
   EdgeInsets safeAreaInsets = EdgeInsets.zero,
+  double panelWidth = _panelWidth,
 }) {
   return MaterialApp(
     home: Scaffold(
@@ -30,7 +32,7 @@ Widget _host(
           const Expanded(child: SizedBox()),
           if (show)
             SizedBox(
-              width: _panelWidth + safeAreaInsets.right,
+              width: panelWidth + safeAreaInsets.right,
               child: VideoSubtitleJumpPanel(
                 layout: VideoSubtitleListLayout.m3e,
                 controller: c,
@@ -42,7 +44,7 @@ Widget _host(
                 colorScheme: const ColorScheme.dark(),
                 title: 'Subtitle list',
                 emptyHint: 'empty',
-                width: _panelWidth,
+                width: panelWidth,
                 safeAreaInsets: safeAreaInsets,
               ),
             ),
@@ -178,6 +180,61 @@ void main() {
       find.byKey(const ValueKey<String>('video-subtitle-jump-panel-surface')),
     );
     expect(surface, panel);
+  });
+
+  testWidgets('页头只两行：无标题 / 图标，关闭键与工具按钮同一行（2026-10-14）', (tester) async {
+    final VideoPlayerController c = VideoPlayerController();
+    addTearDown(c.dispose);
+    c.setCues(<AudioCue>[for (int i = 0; i < 5; i++) _cue(i)]);
+    await tester.pumpWidget(_host(c, show: true));
+    await tester.pump();
+    expect(find.text('Subtitle list'), findsNothing, reason: '不再画标题');
+    expect(find.byIcon(FushiIcons.subtitles), findsNothing, reason: '不再画徽标');
+    final Rect close = tester.getRect(find.byIcon(FushiIcons.close));
+    final Rect search = tester.getRect(find.byIcon(FushiIcons.search));
+    expect(close.center.dy, closeTo(search.center.dy, 0.5));
+    // 第二行是「全部 / 收藏」分段，紧接着就是列表：首行字幕离面板顶不超过
+    // 两行控件（48 命中区 + 40）加上下内边距与行距。
+    final Rect panel = tester.getRect(find.byType(VideoSubtitleJumpPanel));
+    final Rect firstRow = tester.getRect(
+      find.text('line 0 of the subtitle track', findRichText: true),
+    );
+    expect(firstRow.top - panel.top, lessThan(132));
+  });
+
+  testWidgets('页头工具按钮：宽面板全部平铺且命中区 >=48；窄面板放不下才收进「⋯」（不缩小按钮）', (tester) async {
+    final VideoPlayerController c = VideoPlayerController();
+    addTearDown(c.dispose);
+    c.setCues(<AudioCue>[for (int i = 0; i < 5; i++) _cue(i)]);
+    const Key moreKey = ValueKey<String>('video-subtitle-list-header-more');
+    Size hitSizeOf(IconData icon) => tester.getSize(
+      find
+          .ancestor(of: find.byIcon(icon), matching: find.byType(IconButton))
+          .first,
+    );
+
+    await tester.pumpWidget(_host(c, show: true));
+    await tester.pump();
+    expect(find.byKey(moreKey), findsNothing, reason: '420 宽放得下，不该收起');
+    expect(find.byIcon(FushiIcons.remove), findsOneWidget, reason: '字号步进器平铺');
+    expect(hitSizeOf(FushiIcons.search).shortestSide, greaterThanOrEqualTo(48));
+
+    await tester.pumpWidget(_host(c, show: false));
+    await tester.pumpWidget(_host(c, show: true, panelWidth: 280));
+    await tester.pump();
+    expect(find.byKey(moreKey), findsOneWidget, reason: '280 宽放不下，字号步进器收进「⋯」');
+    expect(find.byIcon(FushiIcons.remove), findsNothing);
+    expect(
+      hitSizeOf(FushiIcons.search).shortestSide,
+      greaterThanOrEqualTo(48),
+      reason: '收起的是低优先级动作，剩下的按钮命中区不缩水',
+    );
+    // 「⋯」紧贴在关闭键左边、不压它。
+    expect(tester.takeException(), isNull, reason: '280 宽两行页头都不得右溢（含「全部 / 收藏」分段）');
+    final Rect more = tester.getRect(find.byKey(moreKey));
+    final Rect close = tester.getRect(find.byIcon(FushiIcons.close));
+    expect(more.right, lessThanOrEqualTo(close.left));
+    expect(more.width, greaterThanOrEqualTo(48));
   });
 
   testWidgets('右侧 / 顶部安全区：底色铺进安全区，只有内容让位', (tester) async {

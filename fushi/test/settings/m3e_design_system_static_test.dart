@@ -866,6 +866,18 @@ class AnotherPopupPart {
           'Material branch is a floating capsule sharing the floating '
           'toolbar pill decoration (surfaceContainer, full radius); only the '
           'e-ink strip (surfaceContainerHighest) and the cover radius remain.',
+      // 悬浮字幕 M3E 改造：app 级 / reader 级两个样式构造点收敛到同一个纯函数
+      // buildFloatingLyricStyle，它从 AppModel / reader 搬出的正是同一类 payload。
+      'lib/src/media/audiobook/floating_lyric_style.dart':
+          'buildFloatingLyricStyle assembles the FloatingLyricStyle data object '
+          'sent over FloatingLyricChannel to the native Android / Win32 overlay '
+          'window (renders no Flutter widgets): fontSize: is the user-chosen '
+          'caption size (content), and surfaceContainerHigh is the M3E '
+          'container role translated to an ARGB int for the native bar '
+          'background — the same payload AppModel / the reader used to build '
+          'inline (same reviewed exception class as app_model / '
+          'audiobook_session). The overlay exists only on Android / Windows, '
+          'so there is no Apple branch to handle.',
       'lib/src/models/app_model.dart':
           'AppModel builds the FloatingLyricStyle data object (overlay font '
           'size is user content passed to the platform overlay), not an '
@@ -1157,6 +1169,14 @@ class AnotherPopupPart {
           'pill exactly — same reviewed exception class as '
           'reader_fushi/chrome.part.dart. The 3px progress track / 2px edge '
           'line round their own height (chart content, not page chrome).',
+      'lib/src/reader/highlight_stroke_preview.dart':
+          'Highlight-style live preview paints sample BOOK TEXT (with ruby) '
+          'glyph by glyph under the stroke shapes — reader content, not page '
+          'chrome; same reviewed exception class as reader_settings_preview.',
+      'lib/src/pages/implementations/highlight_style_page.dart':
+          'Only passes the sample book-text glyph size to '
+          'HighlightStrokePreviewPainter (fontSize: is the painter\'s content '
+          'size, not a TextStyle); page chrome uses FushiM3eShape tokens.',
       'lib/src/reader/reader_settings_preview.dart':
           'Reading-settings live preview renders sample BOOK TEXT at the '
           "reader's own (scaled) font size — reader content, not page chrome; "
@@ -1307,6 +1327,10 @@ class AnotherPopupPart {
         'fontSize:',
       },
       'lib/src/media/audiobook/audiobook_session.dart': <String>{'fontSize:'},
+      'lib/src/media/audiobook/floating_lyric_style.dart': <String>{
+        'surfaceContainerHigh',
+        'fontSize:',
+      },
       'lib/src/media/audiobook/now_listening_mini_bar.dart': <String>{
         'BorderRadius.circular(',
       },
@@ -1433,6 +1457,10 @@ class AnotherPopupPart {
       },
       'lib/src/reader/reader_navigation_widgets.dart': <String>{
         'BorderRadius.circular(',
+      },
+      'lib/src/reader/highlight_stroke_preview.dart': <String>{'fontSize:'},
+      'lib/src/pages/implementations/highlight_style_page.dart': <String>{
+        'fontSize:',
       },
       'lib/src/reader/reader_settings_preview.dart': <String>{'fontSize:'},
       'lib/src/pages/implementations/reader_fushi/lyrics.part.dart': <String>{

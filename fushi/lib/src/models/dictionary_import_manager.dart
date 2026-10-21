@@ -9,6 +9,7 @@ import 'package:path/path.dart' as path;
 
 import 'package:fushi/utils.dart';
 import 'package:fushi_engine/models/dictionary_directory.dart';
+import 'package:fushi_engine/utils/archive/native_zip.dart';
 import 'package:fushi/src/models/dictionary_repository.dart';
 
 /// native 词典转换的唯一入口形态。默认接 [importDictionaryViaFushidicts]；
@@ -431,32 +432,32 @@ class DictionaryImportManager {
         }
 
         final detectedType = _parseType(result.detectedType);
-        await _dictRepo.persistDictionary(
-          Dictionary(
-            order: order,
-            name: name,
-            formatKey: 'yomichan',
-            type: detectedType,
-            // TODO-609 来源 metadata + TODO-622 混合词典也进 kanji 桶(add_term+add_kanji)。
-            metadata: <String, String>{
-              ...readSourceMetadataFromIndex(finalDir),
-              if (result.kanjiCount > 0) 'hasKanji': 'true',
-              // 导入时 native 已经数过 term/kanji 记录，等于类型探测刚做完：直接落
-              // 标记，启动期的自愈循环就不会再对这本做一次全表扫描。
-              kDictTypeProbeKey: kDictTypeProbeVersion,
-            },
-            hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
-            collapsedLanguages:
-                preservedSettings?.collapsedLanguages ?? const [],
-            expandedLanguages: preservedSettings?.expandedLanguages ?? const [],
-            // 用户手动指定的内容语言属于用户设置，重导必须继承——metadata 会被包内
-            // index.json 整体重建，塞那里等于每次更新都被抹掉。
-            languageOverride: preservedSettings?.languageOverride,
-            // 同理：用户给词典起的显示名重导后必须还在，否则「在线更新一次就变回
-            // 包里那个丑名字」。
-            displayName: preservedSettings?.displayName,
-          ),
-        );
+        await _dictRepo.persistDictionary(Dictionary(
+          order: order,
+          name: name,
+          formatKey: 'yomichan',
+          type: detectedType,
+          // TODO-609 来源 metadata + TODO-622 混合词典也进 kanji 桶(add_term+add_kanji)。
+          metadata: <String, String>{
+            ...readSourceMetadataFromIndex(finalDir),
+            if (result.kanjiCount > 0) 'hasKanji': 'true',
+            // 混合词典汉字部分的开关 / 位置是用户设置，重导与在线更新都继承。
+            if (result.kanjiCount > 0)
+              ...kanjiPartSettingsOf(preservedSettings),
+            // 导入时 native 已经数过 term/kanji 记录，等于类型探测刚做完：直接落
+            // 标记，启动期的自愈循环就不会再对这本做一次全表扫描。
+            kDictTypeProbeKey: kDictTypeProbeVersion,
+          },
+          hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
+          collapsedLanguages: preservedSettings?.collapsedLanguages ?? const [],
+          expandedLanguages: preservedSettings?.expandedLanguages ?? const [],
+          // 用户手动指定的内容语言属于用户设置，重导必须继承——metadata 会被包内
+          // index.json 整体重建，塞那里等于每次更新都被抹掉。
+          languageOverride: preservedSettings?.languageOverride,
+          // 同理：用户给词典起的显示名重导后必须还在，否则「在线更新一次就变回
+          // 包里那个丑名字」。
+          displayName: preservedSettings?.displayName,
+        ));
 
         progressNotifier.value = t.import_complete;
         onImportSuccess();
@@ -728,7 +729,11 @@ class DictionaryImportManager {
     try {
       progressNotifier.value = t.import_extract;
       await Future<void>.delayed(Duration.zero);
-      await extractFileToDisk(archive.path, work.path);
+      // 后台 isolate + 原生 zlib 逐条目流式落盘：archive 的 extractFileToDisk 在
+      // 主 isolate 上把每个条目整个解压进内存再写（几百 MB 的 MDD 直接卡 UI / OOM）。
+      final String zipPath = archive.path;
+      final String workPath = work.path;
+      await Isolate.run(() => extractZipFileToDirectory(zipPath, workPath));
 
       final List<File> dictionaries = work
           .listSync(recursive: true)
@@ -989,28 +994,27 @@ class DictionaryImportManager {
         readSourceMetadataFromIndex(finalDir),
         sourceOverride,
       );
-      await _dictRepo.persistDictionary(
-        Dictionary(
-          order: order,
-          name: name,
-          formatKey: 'yomichan',
-          type: detectedType,
-          // TODO-622: 混合词典也进 kanji 桶(叠加 609 的来源 metadata)。
-          metadata: <String, String>{
-            ...metadata,
-            if (result.kanjiCount > 0) 'hasKanji': 'true',
-            // 同目录导入路径：native 刚数完记录，探测标记直接落库（见另一处注释）。
-            kDictTypeProbeKey: kDictTypeProbeVersion,
-          },
-          hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
-          collapsedLanguages: preservedSettings?.collapsedLanguages ?? const [],
-          expandedLanguages: preservedSettings?.expandedLanguages ?? const [],
-          // 同上：用户手动指定的内容语言随 preservedSettings 继承，不被重导冲掉。
-          languageOverride: preservedSettings?.languageOverride,
-          // 同上：用户起的显示名也继承，在线更新不把名字打回原形。
-          displayName: preservedSettings?.displayName,
-        ),
-      );
+      await _dictRepo.persistDictionary(Dictionary(
+        order: order,
+        name: name,
+        formatKey: 'yomichan',
+        type: detectedType,
+        // TODO-622: 混合词典也进 kanji 桶(叠加 609 的来源 metadata)。
+        metadata: <String, String>{
+          ...metadata,
+          if (result.kanjiCount > 0) 'hasKanji': 'true',
+          if (result.kanjiCount > 0) ...kanjiPartSettingsOf(preservedSettings),
+          // 同目录导入路径：native 刚数完记录，探测标记直接落库（见另一处注释）。
+          kDictTypeProbeKey: kDictTypeProbeVersion,
+        },
+        hiddenLanguages: preservedSettings?.hiddenLanguages ?? const [],
+        collapsedLanguages: preservedSettings?.collapsedLanguages ?? const [],
+        expandedLanguages: preservedSettings?.expandedLanguages ?? const [],
+        // 同上：用户手动指定的内容语言随 preservedSettings 继承，不被重导冲掉。
+        languageOverride: preservedSettings?.languageOverride,
+        // 同上：用户起的显示名也继承，在线更新不把名字打回原形。
+        displayName: preservedSettings?.displayName,
+      ));
 
       progressNotifier.value = t.import_complete;
       onImportSuccess();

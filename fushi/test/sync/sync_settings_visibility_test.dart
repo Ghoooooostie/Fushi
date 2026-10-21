@@ -58,7 +58,7 @@ void main() {
 
     test('group 1 (sync method) holds selector + scoped account/config', () {
       // BUG-1088：互联回到「同步方式」选择器；选中时显示一行指引（连接配置在
-      // 「Hibiki 互联」分类）。C1：WebDAV/FTP/SFTP 三套凭据表单挪进子页「服务器
+      // 「Fushi 互联」分类）。C1：WebDAV/FTP/SFTP 三套凭据表单挪进子页「服务器
       // 设置」，主页只留一行入口（凭据式后端才显示）。
       expect(idsOf(dest.sections[0]), <String>[
         'sync.mode',
@@ -108,6 +108,7 @@ void main() {
       expect(idsOf(dest.sections[1]), <String>[
         'sync.statistics',
         'sync.content',
+        'sync.manga_content',
         'sync.audiobook_files',
         'sync.video_files',
         // 多端库联合视图（spec §2.1）：「显示远端条目」占位卡混排开关（纯显示偏好）。
@@ -163,6 +164,7 @@ void main() {
         );
         for (final String id in <String>[
           'sync.content',
+          'sync.manga_content',
           'sync.audiobook_files',
           'sync.video_files',
           'sync.dictionary_transfer',
@@ -189,6 +191,7 @@ void main() {
       ).readAsStringSync();
       for (final String id in <String>[
         'sync.content',
+        'sync.manga_content',
         'sync.audiobook_files',
         'sync.video_files',
         // 词典/本地音频两个传输动作行同理：它们只在云备份通道上跑（互联对端的
@@ -232,7 +235,7 @@ void main() {
     });
 
     test('manual-sync actions are gated on server mode (BUG-084)', () {
-      // A pure Hibiki host has no outbound sync, so "sync now" / "compare" must
+      // A pure Fushi host has no outbound sync, so "sync now" / "compare" must
       // be hidden in server mode and an explanatory note shown instead — every
       // one of the three carries a visibility predicate (none is unconditional).
       final SettingsSection actions = dest.sections[2];
@@ -481,7 +484,7 @@ void main() {
           devicesPage.sections.expand(
             (SettingsSection s) => s.items.map((SettingsItem i) => i.id),
           ),
-          <String>['sync.hibiki_server_config', 'sync.lan_devices'],
+          <String>['sync.fushi_server_config', 'sync.lan_devices'],
         );
         // BUG-988：互联专属上传分项开关，与云备份/连接开关解耦，默认全关；仅互联启用时
         // 可见（host 无 outbound 时进一步隐藏）。
@@ -490,6 +493,7 @@ void main() {
         // 并排成两个「词典」，已删除。
         expect(idsOf(dest.sections[2]), <String>[
           'interconnect.upload_content',
+          'interconnect.upload_manga_content',
           'interconnect.dictionary_transfer',
           'interconnect.local_audio_transfer',
           'interconnect.fonts_transfer',
@@ -516,6 +520,8 @@ void main() {
           'interconnect.mine_to_server',
           'interconnect.backup_backend',
           'interconnect.service_config_sync',
+          // 跟随已配对设备自动登录 Fushi 账户（client 侧开关，默认开）。
+          'interconnect.leaderboard_follow_login',
           'interconnect.profile_upload',
           'interconnect.profile_download',
           // 主机版本 / 更新主机（反馈 Pp8XPyve0N）：也是「交给已配对设备」的一次性动作。
@@ -545,6 +551,8 @@ void main() {
             // 必须是主机主人的显式意愿，所以同样是主机服务子页的能力开关。
             'interconnect.game_stream_remote_launch',
             'interconnect.profile_transfer_host',
+            // 允许「我的设备」跟随本机 Fushi 账户自动登录（总闸，默认开）。
+            'interconnect.leaderboard_link_host',
             // 允许已配对设备远程更新本机（反馈 Pp8XPyve0N）：会在本机下载安装
             // 可执行文件，同样是主人的显式意愿。
             'interconnect.remote_update_host',

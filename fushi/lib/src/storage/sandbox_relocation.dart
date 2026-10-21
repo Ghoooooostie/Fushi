@@ -93,11 +93,11 @@ class SandboxRelocation {
       }
 
       // 一根套在另一根里面时**绝不重基**：这形状只可能来自 DataRootMigrator
-      // （用户把数据收进 `<旧根>/Hibiki/data`，或迁到默认位置 `<Documents>/
-      // Hibiki/data`）。那条路径已经把全库路径改写好了，而台账不在
+      // （用户把数据收进 `<旧根>/Fushi/data`，或迁到默认位置 `<Documents>/
+      // Fushi/data`）。那条路径已经把全库路径改写好了，而台账不在
       // `kPathRebasePrefs` 里、仍停在旧根 —— 再按台账重基一次，就会把已经改写
       // 过的 `<新根>/fushi_books/a` 又前缀一遍变成
-      // `<新根>/Hibiki/data/fushi_books/a`。这正是 data_root_migrator 里记着的
+      // `<新根>/Fushi/data/fushi_books/a`。这正是 data_root_migrator 里记着的
       // BUG-1174 ③「新根落在旧根内部时会把已改写过的 path 再改一遍」，别让它
       // 从这条新路径原样复活。判据与 `_validateTarget` 的嵌套判据一致。
       if (oldRoot == null ||
@@ -107,19 +107,27 @@ class SandboxRelocation {
         return SandboxRelocationOutcome.unchanged(source);
       }
 
+      final DocumentsPathRebaser docs = DocumentsPathRebaser(
+        oldRoot: oldRoot,
+        newRoot: documentsRoot,
+        // 只重基**数据根自己那几个顶层项**。容器整体被搬走时，库内路径的首段
+        // 本来就全在这份白名单里（`deriveOldRootFromPath` 反推旧根时用的正是
+        // 同一份判据，两侧必须一致）；传 null 等于在所有平台上放弃迁移引擎
+        // 刻意保留的「不碰非 Fushi 内容」保护 —— 用户自选的外部媒体库只要
+        // 恰好落在旧根之下，就会被一起改写。
+        scopeTopLevelNames: AppPaths.fushiOwnedDocumentsEntries,
+      );
       await DataRootMigrator.rebaseOpenDatabasePaths(
         db: db,
-        docs: DocumentsPathRebaser(
-          oldRoot: oldRoot,
-          newRoot: documentsRoot,
-          // 只重基**数据根自己那几个顶层项**。容器整体被搬走时，库内路径的首段
-          // 本来就全在这份白名单里（`deriveOldRootFromPath` 反推旧根时用的正是
-          // 同一份判据，两侧必须一致）；传 null 等于在所有平台上放弃迁移引擎
-          // 刻意保留的「不碰非 Hibiki 内容」保护 —— 用户自选的外部媒体库只要
-          // 恰好落在旧根之下，就会被一起改写。
-          scopeTopLevelNames: AppPaths.fushiOwnedDocumentsEntries,
-        ),
+        docs: docs,
         newSupportRoot: supportRoot,
+      );
+      // 内置引擎 fast-resume 里的绝对 save_path 同一判据重基（BUG-3541）。这里在
+      // AppModel.initialise 早段、下载服务与引擎都还没起，没有并发落盘。失败落到
+      // 下面的 catch：台账不写，下次启动重试（两步都按作用域判据幂等）。
+      await DataRootMigrator.rebaseEmbeddedTorrentFastResume(
+        documentsRoot: documentsRoot,
+        docs: docs,
       );
       await _writeLedger(db, documentsRoot, supportRoot);
       return SandboxRelocationOutcome.rebased(

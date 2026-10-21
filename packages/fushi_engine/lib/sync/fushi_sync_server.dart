@@ -29,7 +29,11 @@ import 'package:fushi_engine/media/video/metadata/video_metadata_provider.dart'
 import 'package:fushi_engine/media/video/metadata/video_metadata_wire.dart';
 import 'package:fushi_engine/sync/video_metadata_manifest.dart';
 import 'package:fushi_engine/sync/fushi_library_host_service.dart';
+import 'package:fushi_engine/media/video/dandanplay_file_key.dart'
+    show DandanplayFileKey;
 import 'package:fushi_engine/sync/graphic_subtitle_track_export.dart';
+import 'package:fushi_engine/leaderboard/leaderboard_device_link.dart';
+import 'package:fushi_engine/sync/interconnect_leaderboard_link.dart';
 import 'package:fushi_engine/sync/interconnect_profile_transfer.dart';
 import 'package:fushi_engine/sync/interconnect_service_config.dart';
 import 'package:fushi_engine/sync/interconnect_transcode_prefs.dart';
@@ -48,6 +52,7 @@ import 'package:fushi_engine/sync/host_update/host_update_protocol.dart';
 import 'package:fushi_engine/sync/fushi_remote_api_handlers.dart';
 import 'package:fushi_engine/sync/pairing/fushi_pair_link.dart';
 import 'package:fushi_engine/sync/pairing/fushi_pairing_protocol.dart';
+import 'package:fushi_engine/sync/pairing/interconnect_device_key.dart';
 import 'package:fushi_engine/sync/fushi_remote_lookup_service.dart';
 import 'package:fushi_engine/sync/game_stream/game_stream_protocol.dart';
 import 'package:fushi_engine/sync/game_stream/game_stream_service.dart';
@@ -70,6 +75,7 @@ part 'fushi_sync_server/video_metadata.part.dart';
 part 'fushi_sync_server/sync_state.part.dart';
 part 'fushi_sync_server/webdav.part.dart';
 part 'fushi_sync_server/game_stream.part.dart';
+part 'fushi_sync_server/leaderboard_link.part.dart';
 part 'fushi_sync_server/host_update.part.dart';
 
 /// Embedded WebDAV-style server used for device-to-device LAN sync.
@@ -104,6 +110,8 @@ class FushiPairRequest {
     required this.remoteAddress,
     this.pinVerified,
     this.pinRequired = false,
+    this.clientDeviceId,
+    this.ownerDeviceGrant,
   });
 
   /// Self-reported name from the client (may be null/empty if not sent).
@@ -123,6 +131,17 @@ class FushiPairRequest {
   /// 决定是否显示 PIN：LAN 免 PIN 会话（pinRequired=false）不显示 PIN，避免 host 屏上
   /// 出现一个 client 从未被要求输入的「幽灵 PIN」。旧 /api/pair（v1，无 PIN）默认 false。
   final bool pinRequired;
+
+  /// v2 配对里 client 上报的设备 id（= 配对成功后 [FushiPairedPeerRegistration.peerId]）。
+  /// 自报值、可被冒报，**只作展示 / 诊断**：「这是我的设备」不按它记账，而是挂在
+  /// [ownerDeviceGrant]（本会话）上。旧 /api/pair（v1）与没上报 id 的旧 client 为 null。
+  final String? clientDeviceId;
+
+  /// 本会话的「这是我的设备」选项。非 null = client 上报了互联设备公钥、本会话可以授予
+  /// 该资格：host 审批 UI 选「允许 · 这是我的设备」时置 `granted = true`，confirm 时只有
+  /// 设备钥匙验签通过才真正落成「我的设备」。null = 不提供该选项（旧 client 没有设备钥匙 /
+  /// v1 配对），UI 只给普通「允许」。
+  final FushiPairOwnerDeviceGrant? ownerDeviceGrant;
 }
 
 /// TODO-961 M1b: confirm 成功后要落库的一条 per-peer 授权凭据。server 生成 token、
@@ -134,6 +153,8 @@ class FushiPairedPeerRegistration {
     required this.token,
     required this.deviceName,
     required this.remoteAddress,
+    this.ownerDevice = false,
+    this.deviceKeyFingerprint,
   });
 
   /// 对端稳定身份（client 配对时上报的 deviceId）。表 UNIQUE 键，upsert 幂等基准。
@@ -147,6 +168,14 @@ class FushiPairedPeerRegistration {
 
   /// 配对时对端来源 IP（诊断/展示，可空）。
   final String? remoteAddress;
+
+  /// 本次配对是否授予「我的设备」资格：本会话审批选了「这是我的设备」**且** client 在
+  /// confirm 里用设备私钥签过本会话、验签通过。扫码票据配对 / 旧 client 恒 false。
+  final bool ownerDevice;
+
+  /// 本次配对里验签通过的设备公钥指纹（`interconnectDeviceKeyFingerprint`）；client 没
+  /// 证明设备钥匙时为 null。host 据此判断这台 peer 之后能不能被手动标成「我的设备」。
+  final String? deviceKeyFingerprint;
 }
 
 /// Thrown by [FushiSyncServer.start] when the requested port is already bound
@@ -219,14 +248,24 @@ String? _extractVideoId(String reqPath, String suffix) {
 
 /// 从请求 header 读一个 URL-encoded 值并解码（HTTP header 只收 ASCII，非 ASCII 值
 /// 由 client 端 [Uri.encodeComponent] 编码）。缺失/空返回 null；解码失败退回原文。
+/// 先读新名，读不到再读改名前的旧名（[interconnectHeaderNameCandidates]）。
 String? _decodeHeaderValue(shelf.Request request, String name) {
-  final String? raw = request.headers[name];
-  if (raw == null || raw.isEmpty) return null;
+  final String? raw = _interconnectHeaderValue(request, name);
+  if (raw == null) return null;
   try {
     return Uri.decodeComponent(raw);
   } catch (_) {
     return raw;
   }
+}
+
+/// 读互联自定义 header 的原文：新名优先，缺失/空时回退改名前的旧名。
+String? _interconnectHeaderValue(shelf.Request request, String name) {
+  for (final String candidate in interconnectHeaderNameCandidates(name)) {
+    final String? raw = request.headers[candidate];
+    if (raw != null && raw.isNotEmpty) return raw;
+  }
+  return null;
 }
 
 File? _coverFile(String? path) {
@@ -235,7 +274,7 @@ File? _coverFile(String? path) {
   return file.existsSync() ? file : null;
 }
 
-/// MIME 推断收敛到 hibiki_core 单一映射表 [mimeTypeForFilePath]（命名统一轮 G8）。
+/// MIME 推断收敛到 fushi_core 单一映射表 [mimeTypeForFilePath]（命名统一轮 G8）。
 /// 旧本地 switch 副本缺 `.webp` → webp 封面按 application/octet-stream 下发，
 /// 对端 WebView 拒绝内联渲染（BUG-1122）；查共享表后随表修复。保留薄 shim 供
 /// 本文件既有调用方。
@@ -342,6 +381,10 @@ class FushiSyncServer {
   /// 结果来自本机时，对端弹窗也必须用本机的词典样式渲染——对端未必装了同名词典，
   /// 装了也可能是另一个版本。null = 端点 404（老调用方 / 单测不接线）。
   final Map<String, String> Function()? _dictionaryStylesProvider;
+
+  /// `/api/lookup/dictionary` 的 `stylesRevision` 门控用的样式快照（BUG-3425），按
+  /// [_dictionaryStylesProvider] 返回的 map **身份**复用：词典集合不变就不重算指纹。
+  RemotePopupDictionaryCss? _peerPopupDictionaryCss;
   final FushiRemoteGameStreamService? _gameStreamService;
   final VideoRemoteService? _videoRemoteService;
 
@@ -418,10 +461,21 @@ class FushiSyncServer {
   /// ——既有 pair_v2 行为零变化（Never break userspace）。
   Future<void> Function(FushiPairedPeerRegistration registration)? onPeerPaired;
 
+  /// 已鉴权的对端经 WebDAV 成功写入（PUT）或删除（DELETE）了同步目录里的一个文件后回调，
+  /// 参数是相对 [syncDataDir] 的路径（`/` 分隔，如 `fushi-data/fushi-srs/<profile>/<writer>/cursor`）。
+  /// host 自己也参与同一套资产协议时（复习同步：app 作为 host 直接读写这块目录）据此去抖触发
+  /// 一轮本机同步。host 经本机文件系统写，不走这里，所以不会自己触发自己。
+  void Function(String relativePath)? onClientWrite;
+
   /// TODO-961 M1b: 供给当前全部未吊销的 per-peer token（auth 校验入站请求时，除共享
   /// [_token] 外接受任一 peer token）。注入而非直连 DB。首次 auth 时惰性加载并缓存；
   /// [invalidatePeerTokenCache] 在配对/吊销后清缓存促其下次重载。null 时只认共享 token。
   Future<Set<String>> Function()? pairedPeerTokensProvider;
+
+  /// 「跟随已配对设备自动登录 Fushi 账户」的 host 能力（app 装配，见
+  /// `interconnect_leaderboard_link.dart`）。null（旧调用方 / 无头服务端 / 单测）→
+  /// 端点 404、`/api/capabilities` 不声明，行为同升级前。
+  InterconnectLeaderboardLinkHost? leaderboardLinkHost;
 
   /// 本 host 的稳定设备 id（与 LAN 广播 TXT `id=` 同值）。非 null 时
   /// `/api/capabilities` 公布 `hostId` + `addresses`，client 据此把同一台 host 的
@@ -535,7 +589,7 @@ class FushiSyncServer {
     // collection) instead of a 404. The client's reachability probe PROPFINDs
     // the root and gates every other op — including the MKCOL that would
     // otherwise lazily create this dir — so without this a reachable,
-    // correctly-authenticating host is reported as "No reachable Hibiki server
+    // correctly-authenticating host is reported as "No reachable Fushi server
     // address", a chicken-and-egg deadlock that never bootstraps (BUG-035).
     // Deliberately outside the bind try/catch below: a read-only/permission
     // failure here should fail-fast and bubble to the caller's error handling
@@ -731,11 +785,11 @@ class FushiSyncServer {
             type.contains('application/json') || type.contains('xml');
         if (!compressible) return response;
         if (response.headers['content-encoding'] != null) return response;
-        final List<int> body = <int>[
-          for (final List<int> chunk in await response.read().toList())
-            ...chunk,
-        ];
-        final List<int> gzipped = gzip.encode(body);
+        // 按块攒进 BytesBuilder：展开成 List<int> 会把每字节装箱成 8 字节槽，几百 KB
+        // 的清单要多拷一份、多占 8 倍内存（同 game_stream.part.dart 的上传体）。
+        final BytesBuilder body = BytesBuilder(copy: false);
+        await response.read().forEach(body.add);
+        final List<int> gzipped = gzip.encode(body.takeBytes());
         return response.change(
           headers: <String, String>{
             'Content-Encoding': 'gzip',
@@ -827,10 +881,17 @@ class FushiSyncServer {
     if (reqPath == '/api/capabilities') {
       if (method != 'GET') return shelf.Response(405);
       final shelf.Response response = await _handleCapabilities();
-      if (_videoRemoteService == null) return response;
+      if (_videoRemoteService == null && !_leaderboardLinkAvailable) {
+        return response;
+      }
       final Map<String, dynamic> capabilities =
           jsonDecode(await response.readAsString()) as Map<String, dynamic>;
-      capabilities['videoRemoteControlV1'] = true;
+      if (_videoRemoteService != null) {
+        capabilities['videoRemoteControlV1'] = true;
+      }
+      if (_leaderboardLinkAvailable) {
+        capabilities[kInterconnectLeaderboardLinkCapability] = true;
+      }
       return jsonResponse(capabilities);
     }
     if (reqPath == '/api/host/addresses') {
@@ -927,6 +988,9 @@ class FushiSyncServer {
     if (reqPath == kInterconnectProfilePath) {
       return _handleInterconnectProfile(request, method);
     }
+    if (reqPath == kInterconnectLeaderboardLinkPath) {
+      return _handleInterconnectLeaderboardLink(request, method);
+    }
     if (reqPath == '/api/tombstones') {
       return _handleTombstones(request, method);
     }
@@ -953,11 +1017,13 @@ class FushiSyncServer {
       // BUG-908(d)：改动文件系统的写操作按目标路径串行化，避免并发 PUT/DELETE/MKCOL
       // 同一路径互相踩（截断/半写/删了又建的竞态）。读操作（PROPFIND/GET/HEAD）不入闸。
       case 'PUT':
-        return _serializeDavWrite(fsPath, () => _handlePut(request, fsPath));
+        return _reportClientWrite(reqPath,
+            await _serializeDavWrite(fsPath, () => _handlePut(request, fsPath)));
       case 'MKCOL':
         return _serializeDavWrite(fsPath, () => _handleMkcol(fsPath));
       case 'DELETE':
-        return _serializeDavWrite(fsPath, () => _handleDelete(fsPath));
+        return _reportClientWrite(reqPath,
+            await _serializeDavWrite(fsPath, () => _handleDelete(fsPath)));
       case 'HEAD':
         return _handleHead(fsPath);
       case 'OPTIONS':
@@ -971,6 +1037,19 @@ class FushiSyncServer {
       default:
         return shelf.Response(405);
     }
+  }
+
+  /// 写成功（2xx）才回调 [onClientWrite]；回调异常不影响响应。
+  shelf.Response _reportClientWrite(String reqPath, shelf.Response response) {
+    final void Function(String relativePath)? cb = onClientWrite;
+    if (cb != null && response.statusCode >= 200 && response.statusCode < 300) {
+      try {
+        cb(reqPath.startsWith('/') ? reqPath.substring(1) : reqPath);
+      } catch (e, stack) {
+        engineLog.log('FushiSyncServer.onClientWrite', e, stack);
+      }
+    }
+    return response;
   }
 
   Future<shelf.Response> _handleVideoRemote(
@@ -1257,7 +1336,7 @@ class ExportPackageCache {
   int _seq = 0;
 
   Directory get _dir =>
-      _root ??= Directory.systemTemp.createTempSync('hibiki_export_cache');
+      _root ??= Directory.systemTemp.createTempSync('fushi_export_cache');
 
   /// 取 (kind,id) 的缓存导出文件；TTL 内直接命中，否则经 [export] 重新打包。
   /// [export] 返回的临时文件（连同其父临时目录）所有权移交本缓存。
@@ -1358,12 +1437,16 @@ class _DavEntry {
     required this.isCollection,
     required this.displayName,
     required this.contentLength,
+    this.modified,
   });
 
   final String href;
   final bool isCollection;
   final String displayName;
   final int contentLength;
+
+  /// 文件在 host 上的修改时间（host 的时钟 = 互联的服务器时间）；目录不填。
+  final DateTime? modified;
 }
 
 /// 视频流短时 token（P4-2）。

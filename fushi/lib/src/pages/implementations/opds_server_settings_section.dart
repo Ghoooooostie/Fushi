@@ -20,13 +20,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
-import 'package:fushi_engine/media/discovery/discovery_models.dart';
+import 'package:fushi/src/media/discovery/discovery_server_probes.dart';
 import 'package:fushi/src/media/discovery/opds_server_config.dart';
-import 'package:fushi/src/media/discovery/sources/opds_discovery_source.dart';
-import 'package:fushi_engine/media/external_provider.dart';
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/pages/implementations/source_toggle_section.dart';
-// createAppHttpIoClient 经 fushi/utils.dart 转出，无需再单独 import app_http.dart。
 import 'package:fushi/utils.dart';
 
 /// 输入停止多久后落盘（与 Torznab 段同值）。
@@ -57,6 +54,11 @@ class _OpdsServerSettingsSectionState
 
   /// 每条服务器的自检结果（key = draft.id）。
   final Map<String, _ProbeState> _probes = <String, _ProbeState>{};
+
+  /// 地址输入框的「外部改写」代次（key = draft.id）。连接测试把探测打通的
+  /// 目录地址写回草稿时自增，让 `initialValue` 形态的输入框按新值重建；
+  /// 用户自己打字不经这里，光标不会被打断。
+  final Map<String, int> _urlRevision = <String, int>{};
 
   @override
   void dispose() {
@@ -160,21 +162,31 @@ class _OpdsServerSettingsSectionState
             onChanged: (String value) =>
                 _update(index, draft.copyWith(name: value)),
           ),
-          SettingsFormField(
-            key: ValueKey<String>('opds-server-$index-url'),
-            label: t.discovery_opds_url,
-            initialValue: draft.url,
-            helperText: t.discovery_opds_url_hint,
-            keyboardType: TextInputType.url,
-            errorText: draft.urlError,
-            onChanged: (String value) =>
-                _update(index, draft.copyWith(url: value)),
+          // 外层 key 随 [_urlRevision] 变：连接测试写回地址时整块重挂，
+          // `initialValue` 输入框才会显示新值；内层 key 保持稳定供测试 / 自动化定位。
+          KeyedSubtree(
+            key: ValueKey<String>(
+              'opds-server-$index-url-rev-${_urlRevision[draft.id] ?? 0}',
+            ),
+            child: SettingsFormField(
+              key: ValueKey<String>('opds-server-$index-url'),
+              label: t.discovery_opds_url,
+              initialValue: draft.url,
+              helperText: t.discovery_opds_url_hint,
+              keyboardType: TextInputType.url,
+              errorText: draft.urlError,
+              onChanged: (String value) =>
+                  _update(index, draft.copyWith(url: value)),
+            ),
           ),
           SettingsFormField(
             key: ValueKey<String>('opds-server-$index-username'),
             label: t.discovery_opds_username,
             initialValue: draft.username,
-            helperText: t.discovery_opds_username_hint,
+            // Komga 的账号是登录邮箱（实测 `admin` 401、邮箱 200，BUG-3521）。
+            helperText:
+                '${t.discovery_opds_username_hint}\n'
+                '${t.discovery_opds_username_komga_hint}',
             onChanged: (String value) =>
                 _update(index, draft.copyWith(username: value)),
           ),
@@ -185,6 +197,15 @@ class _OpdsServerSettingsSectionState
             obscureText: true,
             onChanged: (String value) =>
                 _update(index, draft.copyWith(password: value)),
+          ),
+          SettingsFormField(
+            key: ValueKey<String>('opds-server-$index-api-key'),
+            label: t.discovery_opds_api_key,
+            initialValue: draft.apiKey,
+            helperText: t.discovery_opds_api_key_hint,
+            obscureText: true,
+            onChanged: (String value) =>
+                _update(index, draft.copyWith(apiKey: value)),
           ),
           FushiSwitchListTile.adaptive(
             key: ValueKey<String>('opds-server-$index-allow-http'),
@@ -268,41 +289,40 @@ class _OpdsServerSettingsSectionState
     final OpdsServerConfig? config = draft.toConfig();
     if (config == null) return;
     setState(() => _probes[draft.id] = const _ProbeState.running());
-    // 必须走统一出站装配点：裸 `http.Client()` 既绕过应用代理与连接超时
-    // （用户在代理环境下会遇到「浏览正常、点测试连接却失败」这种自相矛盾的
-    // 结果），也会被 `test/tools/outbound_http_discipline_guard_test.dart`
-    // 的登记制守卫判红——那条守卫扫 lib/ 全树，定向测试挑不到它。
-    final OpdsDiscoverySource source = OpdsDiscoverySource(
-      config: config,
-      client: createAppHttpIoClient(),
-    );
+    // 请求与结论文案在 [probeOpdsServer]（控制通道共用同一份）。
     _ProbeState result;
+    Uri? resolvedUrl;
     try {
-      final ProviderBatchResult<DiscoveryResultPage> page = await source.browse(
-        const DiscoveryRequest(kind: DiscoveryMediaKind.novel),
-      );
-      final int count =
-          page.items.isEmpty ? 0 : page.items.single.entries.length;
-      result = _ProbeState.done(
-        ok: true,
-        message: t.discovery_opds_test_ok(count: count),
-      );
-    } on ExternalProviderFailure catch (failure) {
-      // failure.message 已经是脱敏文案（不含地址/凭据），直接透出。
-      result = _ProbeState.done(
-        ok: false,
-        message: t.discovery_opds_test_failed(reason: failure.message),
-      );
-    } catch (_) {
+      final DiscoveryProbeOutcome outcome = await probeOpdsServer(config);
+      result = _ProbeState.done(ok: outcome.ok, message: outcome.message);
+      resolvedUrl = outcome.resolvedUrl;
+    } catch (error, stack) {
+      ErrorLogService.instance.log('OpdsServerSettings.probe', error, stack);
       result = _ProbeState.done(
         ok: false,
         message: t.discovery_opds_test_failed(reason: ''),
       );
-    } finally {
-      source.close();
     }
     if (!mounted) return;
-    setState(() => _probes[draft.id] = result);
+    // 探测打通了另一条目录地址（用户填的是服务端根 / 网页地址，BUG-3526）：
+    // 写回草稿并立即落盘。只在草稿地址仍是测试时那一条时写——测试期间用户
+    // 又改了地址，就以用户的新输入为准。
+    final int index = _drafts.indexWhere((_OpdsDraft d) => d.id == draft.id);
+    final bool writeBack =
+        resolvedUrl != null &&
+        index >= 0 &&
+        _drafts[index].url.trim() == draft.url.trim();
+    setState(() {
+      if (writeBack) {
+        _drafts[index] = _drafts[index].copyWith(url: resolvedUrl.toString());
+        _urlRevision[draft.id] = (_urlRevision[draft.id] ?? 0) + 1;
+      }
+      _probes[draft.id] = result;
+    });
+    if (writeBack) {
+      _saveDebounce?.cancel();
+      await _saveValidDrafts();
+    }
   }
 }
 
@@ -315,35 +335,39 @@ class _OpdsDraft {
     required this.url,
     required this.username,
     required this.password,
+    required this.apiKey,
     required this.enabled,
     required this.allowInsecureHttp,
   });
 
   factory _OpdsDraft.empty(String id) => _OpdsDraft(
-        id: id,
-        name: '',
-        url: '',
-        username: '',
-        password: '',
-        enabled: true,
-        allowInsecureHttp: false,
-      );
+    id: id,
+    name: '',
+    url: '',
+    username: '',
+    password: '',
+    apiKey: '',
+    enabled: true,
+    allowInsecureHttp: false,
+  );
 
   factory _OpdsDraft.fromConfig(OpdsServerConfig config) => _OpdsDraft(
-        id: config.id,
-        name: config.name,
-        url: config.catalogUrl.toString(),
-        username: config.username,
-        password: config.password,
-        enabled: config.enabled,
-        allowInsecureHttp: config.allowInsecureHttp,
-      );
+    id: config.id,
+    name: config.name,
+    url: config.catalogUrl.toString(),
+    username: config.username,
+    password: config.password,
+    apiKey: config.apiKey,
+    enabled: config.enabled,
+    allowInsecureHttp: config.allowInsecureHttp,
+  );
 
   final String id;
   final String name;
   final String url;
   final String username;
   final String password;
+  final String apiKey;
   final bool enabled;
   final bool allowInsecureHttp;
 
@@ -352,18 +376,19 @@ class _OpdsDraft {
     String? url,
     String? username,
     String? password,
+    String? apiKey,
     bool? enabled,
     bool? allowInsecureHttp,
-  }) =>
-      _OpdsDraft(
-        id: id,
-        name: name ?? this.name,
-        url: url ?? this.url,
-        username: username ?? this.username,
-        password: password ?? this.password,
-        enabled: enabled ?? this.enabled,
-        allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
-      );
+  }) => _OpdsDraft(
+    id: id,
+    name: name ?? this.name,
+    url: url ?? this.url,
+    username: username ?? this.username,
+    password: password ?? this.password,
+    apiKey: apiKey ?? this.apiKey,
+    enabled: enabled ?? this.enabled,
+    allowInsecureHttp: allowInsecureHttp ?? this.allowInsecureHttp,
+  );
 
   /// 有效即返回配置，否则 null。
   ///
@@ -380,6 +405,7 @@ class _OpdsDraft {
         catalogUrl: parsed,
         username: username.trim(),
         password: password,
+        apiKey: apiKey.trim(),
         enabled: enabled,
         allowInsecureHttp: allowInsecureHttp,
       );
@@ -393,7 +419,8 @@ class _OpdsDraft {
     if (url.trim().isEmpty) return null;
     if (toConfig() != null) return null;
     final Uri? parsed = Uri.tryParse(url.trim());
-    final bool plainHttpBlocked = parsed != null &&
+    final bool plainHttpBlocked =
+        parsed != null &&
         parsed.scheme == 'http' &&
         !allowInsecureHttp &&
         parsed.host.isNotEmpty;
@@ -407,13 +434,10 @@ class _OpdsDraft {
 
 /// 自检状态：进行中 / 有结论。
 class _ProbeState {
-  const _ProbeState.running()
-      : running = true,
-        ok = false,
-        message = '';
+  const _ProbeState.running() : running = true, ok = false, message = '';
 
   const _ProbeState.done({required this.ok, required this.message})
-      : running = false;
+    : running = false;
 
   final bool running;
   final bool ok;

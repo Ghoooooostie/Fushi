@@ -176,14 +176,18 @@ class SettingsSchemaItem extends StatefulWidget
       SettingsStatusItem status => <Object?>[
         status.resolveTitle(ctx),
         status.resolveSubtitle(ctx),
+        status.resolveAction(ctx) != null,
       ],
       SettingsActionItem action => <Object?>[action.resolveSubtitle(ctx)],
       SettingsSwitchItem toggle => <Object?>[
         toggle.value(ctx),
         toggle.resolveSubtitle(ctx),
+        toggle.isEnabled(ctx),
       ],
       SettingsSegmentedItem<dynamic> segmented => <Object?>[
         (segmented as SettingsSegmentedItem<Object>).selected(ctx),
+        segmented.resolveSubtitle(ctx),
+        segmented.isEnabled(ctx),
       ],
       SettingsSliderItem slider => <Object?>[
         slider.value(ctx),
@@ -268,7 +272,8 @@ class SettingsSchemaItem extends StatefulWidget
   }
 
   Widget _status(BuildContext context, SettingsStatusItem status) {
-    final SettingsItemAction? onAction = status.onAction;
+    // actionVisible 判否时按纯状态行渲染（无按钮、不进焦点）。
+    final SettingsItemAction? onAction = status.resolveAction(settingsContext);
     // 行级 onTap 让本行注册成 FushiFocusTarget，方向导航 / 手柄 A 才到得了
     // （BUG-016）。`AdaptiveSettingsRow` 里 `if (onTap == null) return content;`
     // ——没有 onTap 的行根本不包 _SettingsRowFocusTarget、不进 FushiFocusController
@@ -330,38 +335,52 @@ class SettingsSchemaItem extends StatefulWidget
       icon: toggle.icon,
       showIcon: showIcons,
       value: value,
-      onChanged: (bool next) async {
-        // 偏好写入在首个 await 之前就把新值放进内存缓存（`setPref`），先刷一次让
-        // 滑块立刻开始动画，不必等 DB 事务落盘 + 全局通知才动（等待期正是手感上的
-        // 「卡一下」，BUG-3353）。处理器若先 await 别的再写，这次刷新读到的仍是
-        // 旧值，无副作用。
-        final FutureOr<void> pending = toggle.onChanged(settingsContext, next);
-        settingsContext.refresh();
-        await pending;
-        settingsContext.refresh();
-      },
+      // enabled=false：该偏好在当前设置组合下不生效，置灰（原因在副标题里）。
+      onChanged: !toggle.isEnabled(settingsContext)
+          ? null
+          : (bool next) async {
+              // 偏好写入在首个 await 之前就把新值放进内存缓存（`setPref`），先刷一次让
+              // 滑块立刻开始动画，不必等 DB 事务落盘 + 全局通知才动（等待期正是手感上的
+              // 「卡一下」，BUG-3353）。处理器若先 await 别的再写，这次刷新读到的仍是
+              // 旧值，无副作用。
+              final FutureOr<void> pending = toggle.onChanged(
+                settingsContext,
+                next,
+              );
+              settingsContext.refresh();
+              await pending;
+              settingsContext.refresh();
+            },
     );
   }
 
   Widget _segmented<T extends Object>(SettingsSegmentedItem<T> segmented) {
+    // enabled=false：该偏好在当前设置组合下不生效——分段整条置灰、点了不写（原因走
+    // resolveSubtitle 的副标题）。
+    final bool enabled = segmented.isEnabled(settingsContext);
+    final String? subtitle = segmented.resolveSubtitle(settingsContext);
+    final List<SettingsSegmentOption<T>> options = segmented.optionsFor(
+      settingsContext,
+    );
     // dropdown 渲染分支（TODO-209）：同一数据模型换下拉单选控件——标签长/选项多的
     // 行在窄 pane 里分段条只能横向滚动裁断，下拉行内只显示当前选中标签、永不被裁。
     if (segmented.dropdown) {
       return AdaptiveSettingsPickerRow<T>(
         title: segmented.title,
-        subtitle: segmented.subtitle,
+        subtitle: subtitle,
         icon: segmented.icon,
         showIcon: showIcons,
         controlBelow: segmented.controlBelow,
         selected: segmented.selected(settingsContext),
         options: <AdaptiveSettingsPickerOption<T>>[
-          for (final SettingsSegmentOption<T> option in segmented.options)
+          for (final SettingsSegmentOption<T> option in options)
             AdaptiveSettingsPickerOption<T>(
               value: option.value,
               label: option.label,
             ),
         ],
         onChanged: (T value) async {
+          if (!enabled) return;
           await segmented.dispatchChange(settingsContext, value);
           settingsContext.refresh();
         },
@@ -369,13 +388,19 @@ class SettingsSchemaItem extends StatefulWidget
     }
     return AdaptiveSettingsSegmentedRow<T>(
       title: segmented.title,
-      subtitle: segmented.subtitle,
+      subtitle: subtitle,
       icon: segmented.icon,
       showIcon: showIcons,
-      segments: segmented.options.map(_segment).toList(growable: false),
+      segments: options
+          .map(
+            (SettingsSegmentOption<T> option) =>
+                _segment<T>(option, enabled: enabled),
+          )
+          .toList(growable: false),
       selected: segmented.selected(settingsContext),
       controlBelow: segmented.controlBelow,
       onChanged: (T value) async {
+        if (!enabled) return;
         // 类型安全派发：SettingsSegmentedItem.dispatchChange 在实例真实 T 上下文里
         // 把 value 转回 T 再调 onChanged，避免渲染层静态读 onChanged 因泛型逆变
         // 抛 _TypeError（不再 `as dynamic`）。
@@ -429,6 +454,7 @@ class SettingsSchemaItem extends StatefulWidget
       initialValue: text.value(settingsContext),
       obscureText: text.secret,
       revealToggle: text.secret,
+      copyable: text.copyable,
       keyboardType:
           text.keyboardType ??
           (text.secret ? TextInputType.visiblePassword : TextInputType.text),
@@ -485,9 +511,13 @@ class SettingsSchemaItem extends StatefulWidget
     );
   }
 
-  ButtonSegment<T> _segment<T extends Object>(SettingsSegmentOption<T> option) {
+  ButtonSegment<T> _segment<T extends Object>(
+    SettingsSegmentOption<T> option, {
+    bool enabled = true,
+  }) {
     return ButtonSegment<T>(
       value: option.value,
+      enabled: enabled,
       label: Text(option.label),
       icon: option.icon != null ? FushiIcon(option.icon, size: 16) : null,
       tooltip: option.tooltip ?? option.label,

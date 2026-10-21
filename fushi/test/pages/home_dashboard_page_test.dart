@@ -58,7 +58,7 @@ void main() {
   late Directory pathProviderDir;
   setUpAll(() {
     pathProviderDir =
-        Directory.systemTemp.createTempSync('hibiki_dashboard_pp');
+        Directory.systemTemp.createTempSync('fushi_dashboard_pp');
     binding.defaultBinaryMessenger.setMockMethodCallHandler(
       const MethodChannel('plugins.flutter.io/path_provider'),
       (MethodCall call) async => pathProviderDir.path,
@@ -89,7 +89,7 @@ void main() {
     db = FushiDatabase.forTesting(NativeDatabase.memory());
     prefs = PreferencesRepository(db);
     await prefs.loadFromDb();
-    storeDir = Directory.systemTemp.createTempSync('hibiki_dashboard');
+    storeDir = Directory.systemTemp.createTempSync('fushi_dashboard');
     platformServices = testPlatformServices();
     ankiRepository = FakeAnkiRepository();
     appModel = AppModel(platformServices)
@@ -471,6 +471,7 @@ void main() {
         chapterCount: 1,
         chaptersJson: '[]',
         importedAt: now - b.$2,
+        localAddedAt: Value<int?>(now - b.$2),
       ));
     }
     await db.upsertVideoBook(VideoBooksCompanion(
@@ -478,6 +479,7 @@ void main() {
       title: const Value('刚导入的视频'),
       videoPath: const Value('/abs/fresh.mp4'),
       importedAt: Value(now - 1500),
+      localAddedAt: Value<int?>(now - 1500),
     ));
     await tester.pumpWidget(buildAppWithBooks(
       <MediaItem>[
@@ -531,6 +533,7 @@ void main() {
         chaptersJson: '[]',
         // 新书6 最新。
         importedAt: now - (10 - i) * 1000,
+        localAddedAt: Value<int?>(now - (10 - i) * 1000),
       ));
       books.add(readingBook('新书$i', '新书$i', position: 0));
     }
@@ -544,6 +547,58 @@ void main() {
           .map((HomeRecentTile r) => r.title),
       <String>['新书6', '新书5', '新书4', '新书3'],
     );
+  });
+
+  testWidgets('双栏「最近添加」按本机拥有时刻排：刚从对端下载的旧书 / 旧视频排最前，'
+      '不按它们在对端多年前的入库时刻沉底', (WidgetTester tester) async {
+    useSize(tester, const Size(1280, 900));
+    final int now = DateTime.now().millisecondsSinceEpoch;
+    const int yearsAgo = 1000;
+    final List<MediaItem> books = <MediaItem>[];
+    // 本机最近导入的四本（入库时刻 = 拥有时刻）。
+    for (int i = 1; i <= 4; i++) {
+      await db.insertEpubBook(EpubBooksCompanion.insert(
+        bookKey: '本地$i',
+        title: '本地$i',
+        epubPath: '/abs/local$i.epub',
+        extractDir: '/abs/local$i',
+        chapterCount: 1,
+        chaptersJson: '[]',
+        importedAt: now - (10 - i) * 1000,
+        localAddedAt: Value<int?>(now - (10 - i) * 1000),
+      ));
+      books.add(readingBook('本地$i', '本地$i', position: 0));
+    }
+    // 刚从互联对端下载：importedAt 沿用对端多年前的入库时刻（BUG-3452 /
+    // BUG-2463），本机拥有时刻是刚才——与生产落地路径一样经写入单点补齐。
+    await db.insertEpubBook(EpubBooksCompanion.insert(
+      bookKey: '对端旧书',
+      title: '对端旧书',
+      epubPath: '/abs/peer.epub',
+      extractDir: '/abs/peer',
+      chapterCount: 1,
+      chaptersJson: '[]',
+      importedAt: yearsAgo,
+    ));
+    books.add(readingBook('对端旧书', '对端旧书', position: 0));
+    await db.upsertVideoBook(const VideoBooksCompanion(
+      bookUid: Value('peer-video'),
+      title: Value('对端旧视频'),
+      videoPath: Value('/abs/peer.mp4'),
+      importedAt: Value(yearsAgo),
+    ));
+    await tester.pumpWidget(buildAppWithBooks(books, const <String, int>{}));
+    await pumpDashboard(tester);
+
+    expect(tester.takeException(), isNull);
+    final List<String> titles = tester
+        .widgetList<HomeRecentTile>(recentTiles())
+        .map((HomeRecentTile r) => r.title)
+        .toList();
+    expect(titles, hasLength(4));
+    expect(titles.take(2).toSet(), <String>{'对端旧书', '对端旧视频'},
+        reason: '按 importedAt 排它们会沉到最后、被 4 条上限截掉');
+    expect(titles.skip(2), <String>['本地4', '本地3']);
   });
 
   testWidgets('「最近添加」只在双栏：竖屏单栏不出；单栏主角卡封面 150、横滑行封面 132',
@@ -1459,6 +1514,109 @@ void main() {
         .tap(find.byKey(const ValueKey<String>('home-continue-hero-title')));
     await tester.pump();
     expect(opened, <(String, int?)>[('e2', cid)]);
+  });
+
+  /// 书合集：卷 1..n 按给定顺序加进同一合集（sortIndex 即加入顺序）。成员行
+  /// 必须真有对应 `epub_books` 行——首页合集归属查询只认库里还在的书。成员键
+  /// 默认 `epub_books.uid`（v83 起的生产形态）；[legacyBookKey] 模拟 v83 前写入
+  /// 的 bookKey 键旧行。
+  Future<int> seedBookCollection(
+    String name,
+    List<String> keys, {
+    bool legacyBookKey = false,
+  }) async {
+    final int now = DateTime.now().millisecondsSinceEpoch;
+    final int cid = await db.createMediaCollection(name);
+    for (final String k in keys) {
+      final String uid = await db.insertEpubBook(EpubBooksCompanion.insert(
+        bookKey: k,
+        title: k,
+        epubPath: '/abs/$k.epub',
+        extractDir: '/abs/$k',
+        chapterCount: 1,
+        chaptersJson: '[]',
+        importedAt: now - 60000,
+      ));
+      await db.addToCollection(cid, MediaKind.epub, legacyBookKey ? k : uid);
+    }
+    return cid;
+  }
+
+  MediaItem bookAt(String key, {required int position}) =>
+      readingBook(key, key, position: position);
+
+  testWidgets('书合集续读：读完第 1 卷后「继续」推进到第 2 卷（不再整套消失）',
+      (WidgetTester tester) async {
+    useSize(tester, const Size(1280, 900));
+    await seedBookCollection('某轻小说', <String>['卷1', '卷2', '卷3']);
+    final int now = DateTime.now().millisecondsSinceEpoch;
+    await tester.pumpWidget(buildAppWithBooks(
+      <MediaItem>[
+        // 卷 1 读到末尾（position == duration → finished），卷 2/3 没开读。
+        bookAt('卷1', position: 100),
+        bookAt('卷2', position: 0),
+        bookAt('卷3', position: 0),
+      ],
+      <String, int>{'卷1': now},
+    ));
+    await pumpDashboard(tester);
+
+    expect(tester.takeException(), isNull);
+    final HomeContinueHero h = onlyHero(tester);
+    expect(h.title, '某轻小说');
+    expect(h.progressLabel, t.home_continue_volume(n: 2));
+    expect(rowCards(), findsNothing);
+  });
+
+  testWidgets('书合集续读：整套读完 → 不出卡；同合集两卷在读只出一张最近读的',
+      (WidgetTester tester) async {
+    useSize(tester, const Size(1280, 900));
+    await seedBookCollection('读完的系列', <String>['完1', '完2']);
+    await seedBookCollection('在读的系列', <String>['读1', '读2', '读3']);
+    final int now = DateTime.now().millisecondsSinceEpoch;
+    await tester.pumpWidget(buildAppWithBooks(
+      <MediaItem>[
+        bookAt('完1', position: 100),
+        bookAt('完2', position: 100),
+        // 读3 是刚才读的那卷（时刻最新），读1 是更早留下的半截。
+        bookAt('读1', position: 30),
+        bookAt('读2', position: 0),
+        bookAt('读3', position: 60),
+      ],
+      <String, int>{
+        '完1': now - 9000,
+        '完2': now - 8000,
+        '读1': now - 5000,
+        '读3': now,
+      },
+    ));
+    await pumpDashboard(tester);
+
+    expect(tester.takeException(), isNull);
+    final HomeContinueHero h = onlyHero(tester);
+    expect(h.title, '在读的系列');
+    expect(h.progressLabel, t.home_continue_volume(n: 3));
+    expect(rowCards(), findsNothing);
+  });
+
+  testWidgets('书合集续读：v83 前 bookKey 键的旧成员行同样推进到下一卷',
+      (WidgetTester tester) async {
+    useSize(tester, const Size(1280, 900));
+    await seedBookCollection('旧合集', <String>['旧1', '旧2'],
+        legacyBookKey: true);
+    await tester.pumpWidget(buildAppWithBooks(
+      <MediaItem>[
+        bookAt('旧1', position: 100),
+        bookAt('旧2', position: 0),
+      ],
+      <String, int>{'旧1': DateTime.now().millisecondsSinceEpoch},
+    ));
+    await pumpDashboard(tester);
+
+    expect(tester.takeException(), isNull);
+    final HomeContinueHero h = onlyHero(tester);
+    expect(h.title, '旧合集');
+    expect(h.progressLabel, t.home_continue_volume(n: 2));
   });
 
   testWidgets('继续区合集 Next-Up：整个合集全部看完 → 不出卡（自然滚出继续区）',

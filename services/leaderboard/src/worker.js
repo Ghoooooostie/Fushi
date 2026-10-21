@@ -9,12 +9,16 @@
 //   POST   /v1/register                 {pubkey, nickname, email, code} 注册（验证码；幂等）
 //   POST   /v1/login                    {pubkey, email, code}   新设备登录（绑定本机钥匙）
 //   GET    /v1/me                        [签名]                  自己的账户
+//   GET    /v1/me/devices                [签名]                  本账户已登录的设备
+//   POST   /v1/me/devices                [签名] {pubkey, time, proof} 代已互联配对的新设备绑定钥匙（account.js addDevice）
+//   DELETE /v1/me/devices/:keyId         [签名]                  解绑另一台设备
 //   PATCH  /v1/me                        [签名] {nickname?, visibility?}
 //   DELETE /v1/me                        [签名]                  删除账户与全部数据
 //   PUT    /v1/me/avatar                 [签名] 图片字节
 //   DELETE /v1/me/avatar                 [签名]
 //   POST   /v1/shelf                     [签名] {reset?, put, remove, daily} 增量上报书架（shelf.js）
-//   PUT    /v1/works/:id/cover           [签名] 图片字节          缺封面的作品补缩略图
+//   PUT    /v1/works/:id/cover[?h=dHash] [签名] 图片字节          提交封面缩略图（投票，cover_votes.js）
+//   POST   /v1/works/:id/cover/vote      [签名] {hash[, check|confirm|mismatch]} | {url}  不带字节的封面投票 / 确认
 //   GET    /v1/rank?metric&window&scope&limit&offset   [可选签名]
 //   GET    /v1/works/popular?window&kind&limit&offset
 //   GET    /v1/works/:id?limit&offset                   [可选签名]
@@ -44,8 +48,17 @@ import { LIMITS, hit, purgeRateLimits } from './ratelimit.js';
 import { MAX_SHELF_BODY, applyShelfDelta, normalizeUpload } from './shelf.js';
 import { deleteMedia, purgeBudgets, spend } from './budget.js';
 import { refreshSnapshots } from './snapshots.js';
-import { AVATAR_MAX_BYTES, COVER_MAX_BYTES, clearAvatar, serveImage, setAvatar, setWorkCover } from './media.js';
-import { deleteAccount, listDevices, login, register, removeDevice, selfView, updateProfile } from './account.js';
+import { settlePendingCovers } from './cover_votes.js';
+import {
+  AVATAR_MAX_BYTES,
+  COVER_MAX_BYTES,
+  clearAvatar,
+  serveImage,
+  setAvatar,
+  setWorkCover,
+  voteWorkCover,
+} from './media.js';
+import { addDevice, deleteAccount, listDevices, login, register, removeDevice, selfView, updateProfile } from './account.js';
 import { purgeEmailCodes, requestCode } from './email.js';
 import { leaderboard, popularWorks, userCard, userShelf, workPage } from './views.js';
 import { handleAdmin } from './admin.js';
@@ -53,11 +66,19 @@ import { listBlocks, listFriends, matchSocialWrite } from './social.js';
 import { isPagePath, renderPage } from './pages.js';
 import { isFeedbackPath, purgeFeedbackAttachments, purgeFeedbackVideos, routeFeedback } from './feedback.js';
 import { isDevConsolePath, purgeDevSessions, routeDevConsole } from './devconsole.js';
+import { purgeInstallStats, recordPing } from './installs.js';
+import { refreshProjectStats } from './project_stats.js';
 
 const HOUR = 3600 * 1000;
 const JSON_BODY_MAX = 16 * 1024;
+/** 心跳体很小（installId + 版本 + 平台 + 通道）。 */
+const PING_BODY_MAX = 1024;
 /** 小写操作（资料 / 好友 / 屏蔽 / 举报）按估算行数扣全局写入预算（含索引与防重放、限流记录）。 */
 const SMALL_WRITE_ROWS = 8;
+/** 一次封面投票的估算写入行数（投票行 + 两个候选计数 + 物化 + 索引 + 防重放 / 限流记录）。 */
+const COVER_VOTE_WRITE_ROWS = 16;
+/** 封面候选查询（{hash, check}）只写防重放与限流记录。 */
+const COVER_CHECK_WRITE_ROWS = 4;
 const ID = '([A-Za-z0-9_-]{1,32})';
 
 function configMissing(env) {
@@ -160,6 +181,15 @@ async function route(request, env, now, ctx) {
     return handleAdmin(env, request, path, body, now);
   }
 
+  // ---- 安装统计心跳（installs.js）：无账户；可带安装证明（签名 + PoW，验过记已验证）；
+  //      按 IP 过 AUTH_LIMITER，全局再由 'ping' 日预算兜底 ----
+  if (method === 'POST' && path === '/v1/ping') {
+    await bindingLimit(env.AUTH_LIMITER, request);
+    const bytes = await readBodyBytes(request, PING_BODY_MAX);
+    await recordPing(env, request, bytes, parseJsonBytes(bytes), now);
+    return new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } });
+  }
+
   // ---- 反馈、开发者处理与 CI 回填：凭据各不相同（ticket / 签名 / Bearer），一律不进边缘缓存 ----
   if (isFeedbackPath(path)) {
     const submit = method === 'POST' && path === '/v1/feedback';
@@ -231,6 +261,14 @@ async function route(request, env, now, ctx) {
     await removeDevice(env, account, m[1]);
     return new Response(null, { status: 204 });
   }
+  if (method === 'POST' && path === '/v1/me/devices') {
+    const bytes = await readBodyBytes(request, JSON_BODY_MAX);
+    const account = await authenticate(request, env, bytes, now, { mutating: true });
+    await hit(env, `link:${account.id}`, HOUR, LIMITS.deviceLinkPerHour, now);
+    await spend(env, 'write_rows', SMALL_WRITE_ROWS, now);
+    const res = await addDevice(env, account, parseJsonBytes(bytes), now);
+    return json(res.account, res.created ? 201 : 200);
+  }
   if (method === 'POST' && path === '/v1/shelf') {
     const bytes = await readBodyBytes(request, MAX_SHELF_BODY);
     const account = await authenticate(request, env, bytes, now, { mutating: true });
@@ -254,7 +292,19 @@ async function route(request, env, now, ctx) {
     const bytes = await readBodyBytes(request, COVER_MAX_BYTES);
     const account = await authenticate(request, env, bytes, now, { mutating: true });
     await hit(env, `media:${account.id}`, HOUR, LIMITS.mediaUploadPerHour, now);
-    return json({ cover: `/img/${await setWorkCover(env, account, m[1], bytes, now)}` });
+    await spend(env, 'write_rows', COVER_VOTE_WRITE_ROWS, now);
+    // h 在查询串里：查询串计入签名（auth.js signingString），中途改不了。
+    return json(await setWorkCover(env, account, m[1], bytes, now, url.searchParams.get('h')));
+  }
+  if (method === 'POST' && (m = new RegExp(`^/v1/works/${ID}/cover/vote$`).exec(path))) {
+    const bytes = await readBodyBytes(request, JSON_BODY_MAX);
+    const account = await authenticate(request, env, bytes, now, { mutating: true });
+    await hit(env, `cover:${account.id}`, HOUR, LIMITS.coverVotePerHour, now);
+    const body = parseJsonBytes(bytes);
+    // check 只读不写票（确认票流程的第一步，每部作品一次），只计防重放 / 限流那几行。
+    const checkOnly = body !== null && typeof body === 'object' && body.check === true;
+    await spend(env, 'write_rows', checkOnly ? COVER_CHECK_WRITE_ROWS : COVER_VOTE_WRITE_ROWS, now);
+    return json(await voteWorkCover(env, account, m[1], body, now));
   }
   const social = matchSocialWrite(method, path);
   if (social) {
@@ -296,6 +346,11 @@ export default {
     await purgeDevSessions(env, now);
     await purgeFeedbackAttachments(env, now);
     await purgeFeedbackVideos(env, now);
+    await purgeInstallStats(env, now);
+    // 冷却期到期、没有新票的封面挑战者（cover_votes.js 文件头「替换门槛」）。
+    await deleteMedia(env, (await settlePendingCovers(env.DB, now)).released);
+    // 放最后：要等外部 API（GitHub / Cloudflare），按自己的间隔节流，失败只记状态不抛。
+    await refreshProjectStats(env, now);
   },
 };
 

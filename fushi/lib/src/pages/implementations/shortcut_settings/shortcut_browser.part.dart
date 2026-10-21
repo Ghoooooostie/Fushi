@@ -191,6 +191,7 @@ class ShortcutBindingsBrowser extends StatefulWidget {
     super.key,
     this.gamepadBrand = GamepadBrand.xbox,
     this.initialDevice = ShortcutInputDevice.keyboard,
+    this.initialDomain,
     this.onDeviceChanged,
     this.onOpenEditor,
     this.onResetScope,
@@ -216,6 +217,10 @@ class ShortcutBindingsBrowser extends StatefulWidget {
 
   final GamepadBrand gamepadBrand;
   final ShortcutInputDevice initialDevice;
+
+  /// 初始的作用域筛选（null = 全部）；不在 [scopes] 里时按「全部」处理。
+  final ShortcutScope? initialDomain;
+
   final ValueChanged<ShortcutInputDevice>? onDeviceChanged;
 
   /// 「完整编辑」：打开多通道编辑对话框（能录 Esc / Tab 这类行内录制让给取消 /
@@ -263,7 +268,9 @@ class _ShortcutBindingsBrowserState extends State<ShortcutBindingsBrowser> {
   String _query = '';
   Object? _keyFilter;
   bool _keySearchArmed = false;
-  ShortcutScope? _domain;
+  late ShortcutScope? _domain = widget.scopes.contains(widget.initialDomain)
+      ? widget.initialDomain
+      : null;
   late ShortcutInputDevice _device = widget.initialDevice;
 
   ShortcutAction? _recording;
@@ -523,16 +530,41 @@ class _ShortcutBindingsBrowserState extends State<ShortcutBindingsBrowser> {
       _cancelRecording();
       return KeyEventResult.handled;
     }
-    if (_device == ShortcutInputDevice.gamepad) {
-      // Android 原生手柄按键以 gameButton* KeyEvent 冒泡到这里。
-      final GamepadButton? pad = GamepadButton.fromKeyEvent(event);
-      if (pad != null) _captured(GamepadBinding(pad));
+    // Android 原生手柄按键以 gameButton* / 手柄来源的方向键 KeyEvent 冒泡到这里。
+    // BUG-3619：无论当前停在哪个设备分段，手柄来的按键一律按手柄绑定录——此前键盘
+    // 分段把 LB 录成键盘键 `Game Button Left 1`（十字键录成 arrowUp），冲突检测只扫
+    // 键盘通道（看不到别的动作上的手柄 LB）、手柄键位图也不显示它，运行时却照样被
+    // LB 触发：设置页两头都对不上。
+    final GamepadButton? pad = GamepadButton.fromKeyEvent(event);
+    if (pad != null) {
+      _capturedGamepadButton(pad);
       return KeyEventResult.handled;
     }
     if (_device != ShortcutInputDevice.keyboard) return KeyEventResult.handled;
     if (ModifierKey.fromKeyboardKey(key) != null) return KeyEventResult.handled;
     _captured(InputBinding(key: key, modifiers: modifiers));
     return KeyEventResult.handled;
+  }
+
+  /// 录制中收到一次手柄按键（Android 的 KeyEvent 路径与桌面轮询的
+  /// [GamepadButtonIntent] 路径共用）。
+  ///
+  /// 当前不在手柄分段时（BUG-3619）：动作有手柄通道就切到手柄分段、以**追加**方式
+  /// 录成手柄绑定并照常走手柄冲突检测——追加而不是替换，是因为这一行此前展示的是
+  /// 别的设备，用户看不到它已有的手柄绑定，不能替他静默冲掉；动作没有手柄通道就
+  /// 不录（保持录制态），绝不再把手柄按键当键盘键存下。
+  void _capturedGamepadButton(GamepadButton button) {
+    final ShortcutAction? action = _recording;
+    if (action == null) return;
+    if (_device != ShortcutInputDevice.gamepad) {
+      if (!action.channels.contains(ShortcutChannel.gamepad)) return;
+      setState(() {
+        _device = ShortcutInputDevice.gamepad;
+        _recordReplace = false;
+      });
+      widget.onDeviceChanged?.call(_device);
+    }
+    _captured(GamepadBinding(button));
   }
 
   void _onRecordPointerDown(PointerDownEvent event) {
@@ -1160,11 +1192,7 @@ class _ShortcutBindingsBrowserState extends State<ShortcutBindingsBrowser> {
       prompt: prompt,
       warning: _warningAction == _recording ? _recordWarning : null,
       onKeyEvent: _onRecordKey,
-      onGamepadButton: (GamepadButton button) {
-        if (_device == ShortcutInputDevice.gamepad) {
-          _captured(GamepadBinding(button));
-        }
-      },
+      onGamepadButton: _capturedGamepadButton,
       onPointerDown: _onRecordPointerDown,
       onPointerSignal: _onRecordPointerSignal,
       onCancel: _cancelRecording,

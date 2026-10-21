@@ -3,6 +3,7 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/gestures.dart';
+import 'package:flutter/scheduler.dart' show Ticker;
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter/widgets.dart';
 import '_static_channel.dart';
@@ -406,7 +407,8 @@ class CustomPlatformView extends StatefulWidget {
   _CustomPlatformViewState createState() => _CustomPlatformViewState();
 }
 
-class _CustomPlatformViewState extends State<CustomPlatformView> {
+class _CustomPlatformViewState extends State<CustomPlatformView>
+    with SingleTickerProviderStateMixin {
   final GlobalKey _key = GlobalKey();
 
   /// BUG-1419：WebView2 侧的鼠标键状态（`VirtualKeyState`，in_app_webview.h）是
@@ -426,6 +428,40 @@ class _CustomPlatformViewState extends State<CustomPlatformView> {
 
   PointerDeviceKind _pointerKind = PointerDeviceKind.unknown;
   final TrackpadGestureRouter _trackpad = TrackpadGestureRouter();
+
+  /// 触控板两指滚动的速度采样（喂 PanZoom 的累计平移），松手时据此起惯性。
+  VelocityTracker _trackpadVelocity =
+      VelocityTracker.withKind(PointerDeviceKind.trackpad);
+
+  /// 正在进行的触控板惯性；每帧由 [_trackpadFlingTicker] 推进。
+  TrackpadFling? _trackpadFling;
+  late final Ticker _trackpadFlingTicker = createTicker(_onTrackpadFlingTick);
+
+  void _onTrackpadFlingTick(Duration elapsed) {
+    final Offset? delta = _trackpadFling?.step(elapsed);
+    if (delta == null) {
+      _stopTrackpadFling();
+      return;
+    }
+    if (delta != Offset.zero) {
+      _controller._setScrollDelta(delta.dx, delta.dy);
+    }
+  }
+
+  /// 新手势 / 按下 / 鼠标滚轮 / 系统惯性取消 / 销毁时立刻停下，与浏览器里
+  /// 「手指再次放上触控板惯性即停」一致。
+  void _stopTrackpadFling() {
+    _trackpadFling = null;
+    if (_trackpadFlingTicker.isActive) _trackpadFlingTicker.stop();
+  }
+
+  void _startTrackpadFling(Offset velocity) {
+    _stopTrackpadFling();
+    final TrackpadFling? fling = TrackpadFling.fromVelocity(velocity);
+    if (fling == null) return;
+    _trackpadFling = fling;
+    _trackpadFlingTicker.start();
+  }
 
   MouseCursor _cursor = SystemMouseCursors.basic;
 
@@ -458,6 +494,7 @@ class _CustomPlatformViewState extends State<CustomPlatformView> {
       _reportSurfaceSize();
       _reportWidgetPosition();
     });
+    _trackWidgetPosition();
 
     _cursorSubscription = _controller._cursor.listen((cursor) {
       setState(() {
@@ -525,6 +562,7 @@ class _CustomPlatformViewState extends State<CustomPlatformView> {
                       _syncMouseInput(ev.localPosition, ev.buttons);
                     },
                     onPointerDown: (ev) {
+                      _stopTrackpadFling();
                       _reportSurfaceSize();
                       _reportWidgetPosition();
 
@@ -603,13 +641,29 @@ class _CustomPlatformViewState extends State<CustomPlatformView> {
                       }
                     },
                     onPointerSignal: (signal) {
-                      if (signal is PointerScrollEvent) {
+                      if (signal is PointerScrollInertiaCancelEvent) {
+                        _stopTrackpadFling();
+                      } else if (signal is PointerScrollEvent) {
+                        _stopTrackpadFling();
                         _controller._setScrollDelta(
                             -signal.scrollDelta.dx, -signal.scrollDelta.dy);
                       }
                     },
-                    onPointerPanZoomStart: (_) => _trackpad.start(),
+                    onPointerPanZoomStart: (ev) {
+                      _stopTrackpadFling();
+                      _trackpad.start();
+                      _trackpadVelocity =
+                          VelocityTracker.withKind(PointerDeviceKind.trackpad)
+                            ..addPosition(ev.timeStamp, Offset.zero);
+                    },
+                    onPointerPanZoomEnd: (_) {
+                      // 捏合不续惯性（浏览器里缩放松手即停）。
+                      if (_trackpad.isPinching) return;
+                      _startTrackpadFling(
+                          _trackpadVelocity.getVelocity().pixelsPerSecond);
+                    },
                     onPointerPanZoomUpdate: (ev) {
+                      _trackpadVelocity.addPosition(ev.timeStamp, ev.pan);
                       final TrackpadGestureOutput out = _trackpad.update(
                           panDelta: ev.panDelta, scale: ev.scale);
                       switch (out.kind) {
@@ -645,6 +699,40 @@ class _CustomPlatformViewState extends State<CustomPlatformView> {
         box.size, widget.scaleFactor ?? View.of(context).devicePixelRatio));
   }
 
+  /// 只换位置不换尺寸的变化（路由转场滑入 / 缩放、Stack 里 top 变了但高度凑巧
+  /// 不变、外层滚动）没有 SizeChangedLayoutNotification。窗口宿主档的 WebView2 是
+  /// 真子窗口，位置停在首帧报的那个点上就和 Flutter 画面错开——首帧恰在转场动画
+  /// 中途，整页就一直偏下一截。每帧画完比一次全局位置，变了才下发；
+  /// addPostFrameCallback 本身不请求帧，静止时零开销。
+  Offset? _lastReportedPosition;
+  double? _lastReportedScale;
+
+  void _trackWidgetPosition() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      _reportWidgetPositionIfChanged();
+      _trackWidgetPosition();
+    });
+  }
+
+  void _reportWidgetPositionIfChanged() {
+    if (!_controller.value.isInitialized) return;
+    final BuildContext? context = _key.currentContext;
+    final RenderBox? box = context?.findRenderObject() as RenderBox?;
+    if (context == null || box == null || !box.attached || !box.hasSize) {
+      return;
+    }
+    final Offset position = box.localToGlobal(Offset.zero);
+    final double scale =
+        widget.scaleFactor ?? View.of(context).devicePixelRatio;
+    if (position == _lastReportedPosition && scale == _lastReportedScale) {
+      return;
+    }
+    _lastReportedPosition = position;
+    _lastReportedScale = scale;
+    unawaited(_controller._setPosition(position, scale));
+  }
+
   void _reportWidgetPosition() async {
     await _controller.ready;
     if (!mounted) return;
@@ -652,12 +740,16 @@ class _CustomPlatformViewState extends State<CustomPlatformView> {
     final RenderBox? box = context?.findRenderObject() as RenderBox?;
     if (context == null || box == null || !box.attached) return;
     final Offset position = box.localToGlobal(Offset.zero);
-    unawaited(_controller._setPosition(
-        position, widget.scaleFactor ?? View.of(context).devicePixelRatio));
+    final double scale =
+        widget.scaleFactor ?? View.of(context).devicePixelRatio;
+    _lastReportedPosition = position;
+    _lastReportedScale = scale;
+    unawaited(_controller._setPosition(position, scale));
   }
 
   @override
   void dispose() {
+    _trackpadFlingTicker.dispose();
     super.dispose();
     _cursorSubscription?.cancel();
     _controller.dispose();

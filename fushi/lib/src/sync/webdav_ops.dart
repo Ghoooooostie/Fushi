@@ -128,6 +128,7 @@ class DavEntry {
     required this.displayName,
     required this.isCollection,
     this.etag,
+    this.modifiedAt,
   });
 
   final String href;
@@ -136,6 +137,38 @@ class DavEntry {
 
   /// `DAV:getetag`（RFC 4918 §15.6：资源内容一变就必须变）；服务端不报时为 null。
   final String? etag;
+
+  /// `getlastmodified`（RFC 1123 HTTP 日期）换成的 UTC 毫秒；服务器没给或解析不了为 null。
+  final int? modifiedAt;
+}
+
+/// 把 WebDAV `getlastmodified` 的值（RFC 1123，如 `Wed, 14 Oct 2026 08:15:30 GMT`；
+/// [HttpDate.parse] 也接受 RFC 850 / asctime 两种旧格式）换成 UTC 毫秒。解析不了返回 null，
+/// 不拿本机墙钟兜底（SRS 同步要的是服务器时间，拿不到就该如实为空）。
+int? parseDavLastModified(String? raw) {
+  if (raw == null) return null;
+  final String v = raw.trim();
+  if (v.isEmpty) return null;
+  try {
+    DateTime t = HttpDate.parse(v).toUtc();
+    // RFC 850 只有两位年份，HttpDate.parse 原样当成公元 00xx 年。按 RFC 7231 §7.1.1.1 的
+    // 习惯折回最近的世纪（<70 → 20xx，否则 19xx）。
+    if (t.year < 100) {
+      t = DateTime.utc(
+        t.year + (t.year < 70 ? 2000 : 1900),
+        t.month,
+        t.day,
+        t.hour,
+        t.minute,
+        t.second,
+      );
+    }
+    return t.millisecondsSinceEpoch;
+  } on HttpException {
+    return null;
+  } on FormatException {
+    return null;
+  }
 }
 
 class WebDavOps {
@@ -375,13 +408,18 @@ class WebDavOps {
       r'<(?:[a-zA-Z0-9]+:)?getetag>(.*?)</(?:[a-zA-Z0-9]+:)?getetag>',
       dotAll: true,
     );
+    // 允许带属性（IIS / SabreDAV 会写 `<d:getlastmodified ns0:dt="dateTime.rfc1123">`）。
+    final lastModifiedPattern = RegExp(
+      r'<(?:[a-zA-Z0-9]+:)?getlastmodified(?:\s[^>]*)?>(.*?)</(?:[a-zA-Z0-9]+:)?getlastmodified>',
+      dotAll: true,
+    );
 
     for (final match in responsePattern.allMatches(xml)) {
       final block = match.group(1)!;
       final hrefMatch = hrefPattern.firstMatch(block);
       if (hrefMatch == null) continue;
 
-      final href = Uri.decodeFull(hrefMatch.group(1)!.trim());
+      final href = decodedDavHref(hrefMatch.group(1)!.trim());
       final isCollection = collectionPattern.hasMatch(block);
       final displayMatch = displayNamePattern.firstMatch(block);
 
@@ -405,11 +443,24 @@ class WebDavOps {
           displayName: displayName,
           isCollection: isCollection,
           etag: etag == null || etag.isEmpty ? null : etag,
+          modifiedAt: parseDavLastModified(
+            lastModifiedPattern.firstMatch(block)?.group(1),
+          ),
         ),
       );
     }
     return entries;
   }
+
+  /// PROPFIND 返回的 href 解码成 [DavEntry.href]（之后原样当 URL 交给 [buildRequest]）。
+  ///
+  /// 解码让中文 / 空格等字符以可读形式出现（既有 id 形态，按 id 比较的调用方依赖它），但
+  /// `%`、`#`、`?` 解码出来就成了 URL 分隔符：`Uri.parse` 会把 `#1/` 当片段、把 `?` 后当查询，
+  /// 请求打到截断后的路径（BUG-3576：复习同步写入者目录名 `<deviceId>#<化身号>`，第二轮起
+  /// PROPFIND 404）。这三个字符解码后重新转义，其余保持原样。
+  static String decodedDavHref(String rawHref) => Uri.decodeFull(
+    rawHref,
+  ).replaceAll('%', '%25').replaceAll('#', '%23').replaceAll('?', '%3F');
 
   String resolveHref(String href, String basePath) {
     final baseUri = Uri.parse(basePath);
@@ -534,6 +585,7 @@ class WebDavOps {
       '<d:resourcetype/>'
       '<d:displayname/>'
       '<d:getetag/>'
+      '<d:getlastmodified/>'
       '</d:prop>'
       '</d:propfind>';
 

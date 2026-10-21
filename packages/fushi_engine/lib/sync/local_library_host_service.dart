@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:typed_data';
 import 'package:drift/drift.dart'
     show Value;
 import 'package:fushi_engine/models/dictionary_directory.dart';
@@ -22,6 +23,10 @@ import 'package:fushi_engine/media/video/m3u8_playlist.dart'
     show PlaylistEntry;
 import 'package:fushi_engine/media/video/strm_file.dart'
     show isNetworkOnlyVideoPath, lacksLocalMediaFile;
+import 'package:fushi_engine/media/video/dandanplay_file_key.dart'
+    show DandanplayFileKey, dandanplayFileKeyOf;
+import 'package:fushi_engine/media/video/video_subtitle_source.dart'
+    show isImportedExternalSubtitlePath;
 import 'package:fushi_engine/media/video/metadata/video_library_scrape_sweep.dart'
     show VideoPendingScrapeWork, planScrapeWorksForCollection;
 import 'package:fushi_engine/media/video/metadata/video_metadata_database_store.dart';
@@ -48,6 +53,7 @@ import 'package:fushi_engine/media/video/video_storage.dart';
 import 'package:fushi_engine/media/video/series_playback_prefs.dart'
     show effectiveSeriesAudioTrackId, effectiveSeriesDelayMs, effectiveSeriesSecondaryDelayMs;
 import 'package:fushi_engine/sync/online_novel_book.dart';
+import 'package:fushi_engine/sync/online_manga_host_reader.dart';
 import 'package:fushi_engine/sync/manga_sync_package.dart'
     show hasExportableMangaContent, kMangaPackageMarker, repackageMangaBook;
 import 'package:fushi_engine/stats/stat_facts.dart';
@@ -70,6 +76,7 @@ import 'package:fushi_engine/utils/misc/desktop_audio_clipper.dart'
 import 'package:fushi_core/fushi_core.dart';
 import 'package:path/path.dart' as p;
 import 'package:fushi_engine/foundation/engine_log.dart';
+import 'package:fushi_engine/media/collections/book_series_grouper.dart';
 import 'package:fushi_engine/dictionary/dictionary_engine_hooks.dart';
 import 'package:fushi_engine/sync/override_title_db.dart';
 import 'package:fushi_engine/media/manga/manga_chapter_storage.dart'
@@ -125,6 +132,7 @@ abstract class _LocalLibraryHostBase
         DeletionTombstoneHost,
         VideoDeletionHost,
         VideoPlaybackSyncHost,
+        VideoDanmakuKeyHost,
         AudiobookDelayHost,
         AudiobookSubtitleHost,
         VideoSubtitleDefaultHost,
@@ -163,9 +171,10 @@ abstract class _LocalLibraryHostBase
       {required String videoPath,
       required String bookUid})? get _extractVideoCover;
   Future<VideoSourceScrapeTaskController?> Function()? get _scrapeController;
+  OnlineMangaHostReader? get _onlineMangaReader;
 }
 
-/// 用真实 Hibiki 库（Drift DB + [SyncAssetPackageService]）实现 host 库服务。
+/// 用真实 Fushi 库（Drift DB + [SyncAssetPackageService]）实现 host 库服务。
 ///
 /// 库变动经注入的 [runExclusive] 串行（生产传 `runExclusiveWithSync`），
 /// 并经 [refreshDictionaryCache] 刷新内存词典缓存。
@@ -226,6 +235,7 @@ class LocalLibraryHostService extends _LocalLibraryHostBase
       required String bookUid,
     })? extractVideoCover,
     Future<VideoSourceScrapeTaskController?> Function()? scrapeController,
+    OnlineMangaHostReader? onlineMangaReader,
   })  : _db = db,
         _dictionaryResourceRoot = dictionaryResourceRoot,
         _packages = packages,
@@ -248,7 +258,8 @@ class LocalLibraryHostService extends _LocalLibraryHostBase
         _uploadedVideoRoot = uploadedVideoRoot,
         _videoCoversDirectory = videoCoversDirectory,
         _extractVideoCover = extractVideoCover,
-        _scrapeController = scrapeController;
+        _scrapeController = scrapeController,
+        _onlineMangaReader = onlineMangaReader;
 
   @override
   final FushiDatabase _db;
@@ -261,7 +272,8 @@ class LocalLibraryHostService extends _LocalLibraryHostBase
   @override
   final Future<void> Function(Future<void> Function() body) _runExclusive;
 
-  /// 同步状态域（聚合快照折叠 / 合集清单合并）专用的**窄**互斥（BUG-2717）。
+  /// 同步状态域（聚合快照折叠 / 合集清单合并 / 对端进度与播放位置的读-比较-写）
+  /// 专用的**窄**互斥（BUG-2717）。
   ///
   /// 这两个对端写只是本机 DB 的读-改-写，唯一需要互斥的对象是「同一批表上的其它
   /// 本地 apply 步骤」——包括本机自己作为 client 出站同步时的聚合 / 合集落库。它们
@@ -367,6 +379,10 @@ class LocalLibraryHostService extends _LocalLibraryHostBase
   /// candidates 回空、scrape 回 notPlanned。
   @override
   final Future<VideoSourceScrapeTaskController?> Function()? _scrapeController;
+
+  /// 在线漫画按需取页（app 装配；null = 只供 host 已下载的章，无头服务端即此）。
+  @override
+  final OnlineMangaHostReader? _onlineMangaReader;
 }
 
 /// 跨域共享的查询 helper（书 / 视频 / 有声书都用）：主合集归属一趟映射、可导出有声书键集。

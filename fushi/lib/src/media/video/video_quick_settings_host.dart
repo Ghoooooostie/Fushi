@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart' show ValueListenable;
 import 'package:flutter/widgets.dart';
 
+import 'package:fushi/src/media/video/audio_energy_probe.dart'
+    show kSubtitleAutoAlignProbeLimitMs;
 import 'package:fushi/src/media/video/video_asbplayer_config.dart';
 import 'package:fushi/src/media/video/video_control_customization.dart';
 import 'package:fushi/src/media/video/video_custom_action_bindings.dart';
@@ -39,6 +41,7 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
     this.subtitleWaveformCues = const <AudioCue>[],
     this.videoDurationMs = 0,
     this.loadSubtitleWaveform,
+    this.subtitleProbeLimitMs = kSubtitleAutoAlignProbeLimitMs,
     this.onPlaySubtitleCue,
     this.subtitleIsPlaying,
     this.onToggleSubtitlePlayPause,
@@ -57,6 +60,7 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
     this.onEnterSubtitleDragAdjust,
     this.onEnterSubtitleDelayBar,
     this.onSubtitleObscureRevealChanged,
+    this.onSecondarySubtitleObscureRevealChanged,
     this.onRespectAssStyleChanged,
     required this.onAsbConfigChanged,
     required this.onMpvConfigChanged,
@@ -68,6 +72,7 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
     required this.onLockWindowAspectRatioChanged,
     required this.onVideoFitModeChanged,
     this.onHdrOutputModeChanged,
+    this.onYoutubeQualityChanged,
     required this.onImmersiveModeChanged,
     required this.controlLayout,
     this.onControlLayoutChanged,
@@ -130,6 +135,9 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
   final List<AudioCue> subtitleWaveformCues;
   final int videoDurationMs;
   final Future<List<double>> Function()? loadSubtitleWaveform;
+
+  /// 波形 / 自动对轴探测上界（毫秒），流音源比整集音源短，见 [subtitleAlignProbeLimitMs]。
+  final int subtitleProbeLimitMs;
   final Future<void> Function(int startMs)? onPlaySubtitleCue;
   final bool Function()? subtitleIsPlaying;
   final Future<void> Function()? onToggleSubtitlePlayPause;
@@ -167,6 +175,10 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
   /// 遮蔽态「悬停 / 点击临时显形」总闸的页面通道：写偏好 + 立刻重建 overlay。null =
   /// 无播放器场景（全局设置页），由 schema 直接写 [AppModel]。
   final Future<void> Function(bool value)? onSubtitleObscureRevealChanged;
+
+  /// 副字幕「临时显形」开关的页面通道，语义同 [onSubtitleObscureRevealChanged]。
+  final Future<void> Function(bool value)?
+      onSecondarySubtitleObscureRevealChanged;
   final Future<void> Function(bool value)? onRespectAssStyleChanged;
 
   // ── 手势/播放行为 JSON pref（页面持久化 + 即时生效）──────────────────────
@@ -202,6 +214,10 @@ class VideoQuickSettingsHost extends VideoSettingsHost {
   /// Windows HDR 直通 / 10-bit 输出模式（`video_hdr_output.dart`）：页面落盘 +
   /// 让播放器控制器当场重判是否切宿主窗。null = 无播放器场景走 AppModel 落盘。
   final Future<void> Function(VideoHdrOutputMode mode)? onHdrOutputModeChanged;
+
+  /// 「YouTube 画质」目标高度（0 = 自动）：页面落盘 + 网页档当场下发给站点播放器。
+  /// null = 无播放器场景走 AppModel 落盘（下次打开生效）。
+  final Future<void> Function(int height)? onYoutubeQualityChanged;
 
   // ── 控制条 9 槽位布局 ─────────────────────────────────────────────────────
   final VideoControlLayout Function() controlLayout;

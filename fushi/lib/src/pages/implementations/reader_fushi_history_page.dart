@@ -20,6 +20,7 @@ import 'package:fushi_engine/media/collections/book_series_grouper.dart';
 import 'package:fushi_engine/sync/remote_collection_adoption_service.dart';
 import 'package:fushi_engine/sync/collection_book_identity_index.dart';
 import 'package:fushi_engine/sync/epub_repackage.dart';
+import 'package:fushi/src/media/privacy/media_privacy_dialog.dart';
 import 'package:fushi/src/media/audiobook/audiobook_import_dialog.dart';
 import 'package:fushi/src/media/audiobook/srt_book_reimport_dialog.dart';
 import 'package:fushi/src/media/audiobook/tts/studio/tts_studio_page.dart';
@@ -68,7 +69,7 @@ import 'package:fushi/src/utils/components/fushi_floating_chrome.dart'
         FushiSpringReveal;
 import 'package:fushi_core/fushi_core.dart';
 // BUG-813：构造 ReaderPositionsCompanion 回填下载书的阅读进度需要 drift 的 Value（
-// hibiki_core 未再导出它）。
+// fushi_core 未再导出它）。
 import 'package:drift/drift.dart' show Value;
 import 'package:fushi/src/models/app_model.dart';
 import 'package:fushi/src/models/module_id.dart';
@@ -82,9 +83,14 @@ import 'package:fushi/src/pages/implementations/library_progress_reset_dialog.da
 import 'package:fushi/src/media/collections/add_to_collection_dialog.dart';
 import 'package:fushi/src/media/collections/batch_combine.dart';
 import 'package:fushi_engine/media/collections/collection_asset_reclaim.dart';
+import 'package:fushi/src/media/collections/library_organize_runner.dart';
+import 'package:fushi_engine/media/collections/collection_merge.dart';
 import 'package:fushi/src/media/collections/collection_context_dialog.dart';
 import 'package:fushi/src/media/media_cover_service.dart';
 import 'package:fushi/src/media/metadata/book_cover_scrape_dialog.dart';
+import 'package:fushi/src/media/collections/collection_ai_order.dart'
+    show scheduleAutomaticCollectionAiOrder;
+import 'package:fushi/src/models/module_registry.dart' show isAiModuleEnabled;
 import 'package:fushi/src/media/collections/collection_grouping.dart';
 import 'package:fushi/src/media/collections/collection_one_key_sort.dart'
     show sortNewCollectionMembersNaturally;
@@ -121,6 +127,7 @@ import 'package:fushi/src/sync/remote_download_progress_badge.dart';
 import 'package:fushi/src/sync/remote_download_temp_file.dart';
 import 'package:fushi/src/sync/remote_cover_image.dart';
 import 'package:fushi/src/sync/remote_book_client.dart';
+import 'package:fushi/src/sync/remote_deletion_filter.dart';
 import 'package:fushi/src/sync/remote_library_cache.dart';
 import 'package:fushi/src/sync/sync_backend.dart';
 import 'package:fushi_engine/sync/sync_asset_package_service.dart';
@@ -229,7 +236,7 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
   /// 本页自己的滚动控制器。书架与漫画库是同一个页面类、取同一个
   /// `ReaderFushiSource.instance.mediaType`，两个 tab 保活并存；共用
   /// `mediaType.scrollController` 会让一个控制器附着两个位置，`thumbVisibility`
-  /// 常显的 [RawScrollbar] 每次依赖变化都断言（BUG-1181 遗留）。
+  /// 常显的滚动条（现为 [FushiScrollbar]）每次依赖变化都断言（BUG-1181 遗留）。
   final ScrollController _shelfScrollController = ScrollController();
 
   @override
@@ -444,6 +451,11 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
   /// 的普通书」。下载有声书期间把本地 bookKey 记进这里，本地 EPUB 卡 / SRT 卡据此继续
   /// 显示加载覆盖层，直到有声书下完（成功或失败都在 finally 清除）。
   final Set<String> _downloadingAudiobookKeys = <String>{};
+
+  /// 已在本机落地、但远端清单还没按新本地状态重新去重的对端书（键 =
+  /// [RemoteBookInfo.downloadId]，BUG-3452）。渲染时跳过它们的占位卡；由
+  /// [_onRemoteBookLanded] 写入，那一轮远端清单回来后摘除。
+  final Set<String> _landedRemoteDownloadIds = <String>{};
 
   /// 本地卡在「有声书还在下」时叠的居中加载覆盖层（BUG-990）；[bookKey] 不在下载集合
   /// 时返回 null（不叠）。
@@ -776,8 +788,7 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
                         // 管理标签，搜索点开整行换成搜索栏；标签 chip 只在有
                         // 标签时在下面占一行。Cupertino 旧版面保留常驻搜索行。
                         if (!isCupertinoPlatform(context)) ...<Widget>[
-                          _buildPageHeader(),
-                          _buildSortMenuAnchor(allTags.valueOrNull ?? const []),
+                          _buildPageHeader(allTags.valueOrNull ?? const []),
                           _buildTagBar(allTags.valueOrNull ?? const []),
                         ] else
                           _buildSearchBar(allTags.valueOrNull ?? const []),
@@ -970,32 +981,44 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
           ),
       ],
       onTagsChanged: () => ref.invalidate(bookTagMapProvider),
+      // AI 整理库（spec 2026-10-20 §10.1）：过 AI 模块门；没指派提供商时入口照常
+      // 可见，点了引导去设置指派（BUG-2694 同口径）。
+      onAiOrganize: isAiModuleEnabled(_moduleVisibility)
+          ? () => unawaited(_aiOrganizeShelf())
+          : null,
     );
   }
 
-  /// 「排序与筛选」菜单的零尺寸常驻锚点（贴在页头下沿右侧）：页头里的排序
-  /// 按钮可能被收进「⋯」，菜单挂在这里才总能打开。
+  /// 「AI 整理」整个书架 / 漫画库。
+  Future<void> _aiOrganizeShelf({Set<String>? onlyEntryKeys}) =>
+      runLibraryOrganizeInteractive(
+        context: context,
+        appModel: appModel,
+        domain:
+            _mangaOnly ? CollectionShelfDomain.manga : CollectionShelfDomain.books,
+        onlyEntryKeys: onlyEntryKeys,
+        onChanged: () {
+          if (!mounted) return;
+          _shelfMapsFuture = _loadShelfMaps();
+          _rebuild(() {});
+        },
+      );
+
+  /// 「排序与筛选」菜单的零尺寸锚点（[FushiPageHeader.menuAnchor]，叠在页头
+  /// 动作组右下角）：页头里的排序按钮可能被收进「⋯」，菜单挂在这里才总能打开。
   Widget _buildSortMenuAnchor(List<BookTagRow> allTags) {
-    return Align(
-      alignment: AlignmentDirectional.topEnd,
-      child: Padding(
-        padding: EdgeInsetsDirectional.only(
-          end: FushiDesignTokens.of(context).spacing.page,
-        ),
-        child: FushiTagFilterBar(
-          tags: allTags,
-          part: FushiTagFilterBarPart.sortMenuAnchor,
-          sortMenuController: _sortMenu,
-          onToggleFilter: _toggleFilter,
-          onReorder: _reorderTags,
-          sortMode: _sortMode,
-          sortModeLabel: _sortModeLabel,
-          onSortModeChanged: _setSortMode,
-          filterOptionsTitle: t.shelf_filter_read_status,
-          filterActive: _readStatusFilter != null,
-          filterOptions: _readStatusFilterOptions(),
-        ),
-      ),
+    return FushiTagFilterBar(
+      tags: allTags,
+      part: FushiTagFilterBarPart.sortMenuAnchor,
+      sortMenuController: _sortMenu,
+      onToggleFilter: _toggleFilter,
+      onReorder: _reorderTags,
+      sortMode: _sortMode,
+      sortModeLabel: _sortModeLabel,
+      onSortModeChanged: _setSortMode,
+      filterOptionsTitle: t.shelf_filter_read_status,
+      filterActive: _readStatusFilter != null,
+      filterOptions: _readStatusFilterOptions(),
     );
   }
 
@@ -1016,7 +1039,8 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
           ),
       ];
 
-  Widget _buildPageHeader() {
+  Widget _buildPageHeader(List<BookTagRow> allTags) {
+    final Widget sortMenuAnchor = _buildSortMenuAnchor(allTags);
     final List<Widget> actions = <Widget>[
       // 原工具行行尾的「批量选择 / 排序与筛选 / 管理标签」并进页头（单行页头，
       // 2026-10-14），放不下时按优先级逐颗收进 ⋯：多选 > 排序 > 管理标签。
@@ -1084,12 +1108,14 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
         title: navigation,
         actions: actions,
         search: _headerSearch,
+        menuAnchor: sortMenuAnchor,
       );
     }
     return FushiPageHeader(
       title: _mangaOnly ? t.manga_library : t.books,
       actions: actions,
       search: _headerSearch,
+      menuAnchor: sortMenuAnchor,
     );
   }
 
@@ -1127,7 +1153,21 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
     // 书架 / 漫画库：本地分卷按系列自动收进合集（「志乃と恋」1–4 卷叠成一张卡）。
     // 每次导入 / 合集变化都会重载到这里，所以这一处覆盖全部导入入口；归组幂等，
     // 已在合集里的卷与用户删过 / 移出过的不动。
-    await BookSeriesGrouper(appModel.database).groupAll();
+    final BookSeriesGroupSummary grouped =
+        await BookSeriesGrouper(appModel.database).groupAll();
+    // 归组器按卷号排完后，卷号判不出的卷（汉字卷号 / 上下卷 / 外传）交 AI 定位：
+    // 只在指派了提供商、用户没手动排过时才发请求，后台跑、不阻塞书架加载。
+    scheduleAutomaticCollectionAiOrder(
+      db: appModel.database,
+      collectionIds: <int>[
+        ...grouped.createdCollectionIds,
+        ...grouped.updatedCollectionIds,
+      ],
+    );
+    // 规则归不了组的新书：开了「导入后自动 AI 整理」时去抖后交 AI（门在 runner）。
+    scheduleAutomaticLibraryOrganize(
+      _mangaOnly ? CollectionShelfDomain.manga : CollectionShelfDomain.books,
+    );
     final List<MediaCollectionRow> collections =
         await appModel.database.getAllMediaCollections();
     final Map<String, int> primaryMap =
@@ -1766,7 +1806,9 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
     final List<RemoteBookInfo> remoteBooks = <RemoteBookInfo>[
       if (showRemote)
         for (final RemoteBookInfo b in remoteState.books)
-          if (_matchesShelfSearch(<String>[b.title])) b,
+          if (!_landedRemoteDownloadIds.contains(b.downloadId) &&
+              _matchesShelfSearch(<String>[b.title]))
+            b,
     ];
     // 纯 SRT（standalone）远端有声书占位（互联后端 listRemoteAudiobooks 的 standalone
     // 项，本地无同 uid SrtBook）——与远端 EPUB 书同门控混排进主网格。
@@ -1966,9 +2008,7 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
     // 2026-10 动效重做：书架首屏的散书卡错峰淡入（见 FushiStaggeredEntrance）；
     // 窗口关闭后滚动带出的卡瞬间出现，不拖影。
     return FushiEntranceScope(
-      child: RawScrollbar(
-        thumbVisibility: true,
-        thickness: 3,
+      child: FushiScrollbar(
         controller: _shelfScrollController,
         child: LayoutBuilder(
           // 下拉刷新：保活后切回书架不再隐式重拉远端，给用户显式强制刷新入口。
@@ -2344,6 +2384,9 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
           memberInfoOf: _collectionMemberInfo,
           memberInfoRefresh: _memberInfoRevision,
           onSetMembersCompleted: _setCollectionMembersCompleted,
+          collectionAiSettings: isAiModuleEnabled(appModel.moduleVisibility)
+              ? appModel.prefsRepo
+              : null,
         ),
       ),
     );
@@ -3136,6 +3179,18 @@ class _ReaderFushiHistoryPageState<T extends HistoryReaderPage>
         icon: Icons.sell_outlined,
         onPressed: () => _openMediaTagPicker(
           MediaRef(kind: MediaKind.epub, entryKey: bookKey),
+        ),
+      ),
+      // 私密：不上传排行榜、不推 Bangumi（本地书 / 漫画没有外部分级可依）。
+      DialogListAction(
+        label: t.media_privacy_action,
+        icon: FushiIcons.lock,
+        onPressed: () => showMediaPrivacyDialog(
+          context,
+          db: appModel.database,
+          kind: TagHostKind.epub,
+          entryKey: bookKey,
+          title: item.title,
         ),
       ),
       DialogListAction(

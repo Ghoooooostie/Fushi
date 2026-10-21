@@ -1,11 +1,15 @@
+import 'dart:convert';
 import 'dart:io' show Platform;
 
 import 'package:material_ui/material_ui.dart';
 import 'package:fushi/src/media/sources/reader_fushi_source.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/pages/implementations/custom_fonts_page.dart';
+import 'package:fushi/src/pages/implementations/highlight_style_page.dart';
 import 'package:fushi/src/pages/implementations/home_page.dart';
+import 'package:fushi/src/reader/page_turn_animation.dart';
 import 'package:fushi/src/reader/reader_control_layout.dart';
+import 'package:fushi/src/reader/reader_content_styles.dart';
 import 'package:fushi/src/reader/reader_control_layout_editor.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi/src/settings/settings_actions.dart';
@@ -14,6 +18,7 @@ import 'package:fushi/src/settings/settings_destination.dart';
 import 'package:fushi/src/settings/settings_schema_listening.dart';
 import 'package:fushi/src/stats/reader_study_clock_start_mode.dart';
 import 'package:fushi/utils.dart';
+import 'package:fushi/src/utils/adaptive/fushi_fold_posture.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
@@ -69,6 +74,32 @@ SettingsDestination buildReadingDestination() {
   // _paginatedLayoutCss）。故非翻页模式下把该项隐藏，避免用户改了没反应、误判「功能坏了」。
   bool isPaginated(SettingsContext c) =>
       c.readerSource.readerViewMode == 'paginated';
+  // 「中缝折痕」只在翻页且本次排版实际恰好两栏时有效果（与 CSS 生成同一判据
+  // ReaderContentStyles.pageCreaseApplies）。「自动」列数在折叠屏书本姿态下会被解析
+  // 成两栏，所以要把当前窗口的折叠状态算进去（读 MediaQuery，姿态变化时宿主重建）。
+  bool pageCreaseApplies(SettingsContext c) {
+    final ReaderFushiSource source = c.readerSource;
+    final bool bookPosture = FushiFoldState.of(c.context).isBook;
+    final int effectiveColumns =
+        ReaderContentStyles.foldPageColumnsOverrideFor(
+              bookPosture: bookPosture,
+              viewMode: source.readerViewMode,
+              writingMode: source.readerWritingMode,
+              pageColumns: source.readerPageColumns,
+            ) ??
+            source.readerPageColumns;
+    return ReaderContentStyles.pageCreaseApplies(
+      viewMode: source.readerViewMode,
+      effectivePageColumns: effectiveColumns,
+      verticalSpread: ReaderContentStyles.foldVerticalSpreadFor(
+        bookPosture: bookPosture,
+        viewMode: source.readerViewMode,
+        writingMode: source.readerWritingMode,
+        pageColumns: source.readerPageColumns,
+      ),
+    );
+  }
+
   bool isContinuous(SettingsContext c) =>
       c.readerSource.readerViewMode == 'continuous';
   bool isVisualNovel(SettingsContext c) =>
@@ -220,7 +251,7 @@ SettingsDestination buildReadingDestination() {
             icon: FushiIcons.textHorizontal,
             controlBelow: true,
             visible: isVertical,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 14),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 15),
             options: <SettingsSegmentOption<String>>[
               SettingsSegmentOption<String>(
                 value: 'mixed',
@@ -245,7 +276,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_furigana_mode,
             icon: FushiIcons.language,
             controlBelow: true,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 13),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 14),
             // 四态：Off / Toggle / Hidden（对齐 Hoshi Reader iOS）+ Dimmed
             // （2026-09-12 用户追加的「显示但淡」）。
             options: <SettingsSegmentOption<String>>[
@@ -298,7 +329,7 @@ SettingsDestination buildReadingDestination() {
             visible: isVisualNovel,
             reader: const ReaderPlacement(
               group: ReaderGroup.layout,
-              order: 22,
+              order: 23,
             ),
             value: (SettingsContext c) =>
                 c.readerSource.readerVisualNovelRevealSpeed.toDouble(),
@@ -317,7 +348,7 @@ SettingsDestination buildReadingDestination() {
             visible: isVisualNovel,
             reader: const ReaderPlacement(
               group: ReaderGroup.layout,
-              order: 23,
+              order: 24,
             ),
             options: <SettingsSegmentOption<String>>[
               SettingsSegmentOption<String>(
@@ -348,7 +379,7 @@ SettingsDestination buildReadingDestination() {
             step: 1,
             reader: const ReaderPlacement(
               group: ReaderGroup.layout,
-              order: 24,
+              order: 25,
             ),
             value: (SettingsContext c) =>
                 c.readerSource.readerVisualNovelSentencesPerScreen.toDouble(),
@@ -366,7 +397,7 @@ SettingsDestination buildReadingDestination() {
             visible: isVisualNovelSentenceMode,
             reader: const ReaderPlacement(
               group: ReaderGroup.layout,
-              order: 25,
+              order: 26,
             ),
             value: (SettingsContext c) =>
                 c.readerSource.readerVisualNovelPreserveDialogue,
@@ -562,11 +593,34 @@ SettingsDestination buildReadingDestination() {
             icon: FushiIcons.font,
             // order 接在 layout 组末尾（组内 order 须连续无洞、无撞号，见
             // reader_settings_reorg_guard_test）；侧板里的位置由 IA 表决定。
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 26),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 27),
             onTap: (SettingsContext c) async {
               await pushSettingsPage(
                 c,
                 (_) => const CustomFontsPage(target: FontTarget.body),
+              );
+              notifyReaderSettingsChanged(c);
+            },
+          ),
+          // 高亮样式：收藏 / 查词 / 有声书当前句 / 搜索四类高亮各自的笔触样式 + 粗细 / 浓度 / 抖动 /
+          // 盖住振假名 / 落笔动画，子页带实时预览。子页写偏好经
+          // ReaderFushiSource.setHighlightStrokeConfig 触发正文样式热替换。
+          SettingsNavigationItem(
+            id: 'reading_display.highlight_style',
+            title: t.reader_highlight_title,
+            subtitleBuilder: (SettingsContext c) =>
+                highlightStyleSummary(c.readerSource),
+            icon: kHighlightStyleIcon,
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 28),
+            onTap: (SettingsContext c) async {
+              await pushSettingsPage(
+                c,
+                (_) => HighlightStylePage(
+                  source: c.readerSource,
+                  initiallyVertical: c.readerSource.readerWritingMode
+                      .startsWith('vertical'),
+                  lineHeight: c.readerSource.readerLineHeight,
+                ),
               );
               notifyReaderSettingsChanged(c);
             },
@@ -650,7 +704,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 3,
             step: 0.1,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 19),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 20),
             value: (SettingsContext c) => c.readerSource.readerParagraphSpacing,
             format: (double v) => '${v.toStringAsFixed(1)}em',
             onChanged: (SettingsContext c, double v) {
@@ -680,6 +734,21 @@ SettingsDestination buildReadingDestination() {
               notifyReaderLayoutChanged(c);
             },
           ),
+          // 中缝折痕：一屏两栏（每页列数 = 2，或折叠屏书本姿态下的自动 2 栏）时在两页
+          // 之间画书脊阴影。纯 CSS，热下发不重排。只在真能生效时露出（pageCreaseApplies）。
+          SettingsSwitchItem(
+            id: 'reading_display.page_crease',
+            title: t.reader_page_crease,
+            subtitle: t.reader_page_crease_subtitle,
+            icon: FushiIcons.books,
+            visible: pageCreaseApplies,
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 9),
+            value: (SettingsContext c) => c.readerSource.readerPageCrease,
+            onChanged: (SettingsContext c, bool v) async {
+              await c.readerSource.setReaderPageCrease(v);
+              notifyReaderSettingsChanged(c);
+            },
+          ),
           // TODO-362（PR#3 响应式页边距）：四个边距都是百分比（左右 = vw / 上下 = vh），
           // 默认左右各 2%、上下 0%。范围 0~50%，禁止负值（负值与百分比语义冲突，且
           // CSS padding 不接受负值）。格式带 `%` 提示用户这是百分比。
@@ -690,7 +759,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 50,
             step: 1,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 9),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 10),
             value: (SettingsContext c) => c.readerSource.readerMarginTop,
             format: (double v) => '${v.round()}%',
             onChanged: (SettingsContext c, double v) {
@@ -705,7 +774,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 50,
             step: 1,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 10),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 11),
             value: (SettingsContext c) => c.readerSource.readerMarginBottom,
             format: (double v) => '${v.round()}%',
             onChanged: (SettingsContext c, double v) {
@@ -720,7 +789,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 50,
             step: 1,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 11),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 12),
             value: (SettingsContext c) => c.readerSource.readerMarginLeft,
             format: (double v) => '${v.round()}%',
             onChanged: (SettingsContext c, double v) {
@@ -735,7 +804,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 50,
             step: 1,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 12),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 13),
             value: (SettingsContext c) => c.readerSource.readerMarginRight,
             format: (double v) => '${v.round()}%',
             onChanged: (SettingsContext c, double v) {
@@ -841,6 +910,100 @@ SettingsDestination buildReadingDestination() {
                 value,
               );
               notifyReaderSettingsChanged(settingsContext);
+            },
+          ),
+          // 翻页动画（View Transitions 快照翻页，见 reader_page_turn_script.dart）。只在
+          // 翻页模式生效：滚动 / VN 模式下置灰并说明原因（不隐藏——让用户知道有这项、
+          // 切回翻页模式就能用）。改值走 notifyReaderSettingsChanged → updateLive 热下发。
+          SettingsSegmentedItem<PageTurnAnimation>(
+            id: 'reading_controls.page_turn_animation',
+            title: t.page_turn_animation,
+            icon: FushiIcons.animation,
+            enabled: isPaginated,
+            subtitleBuilder: (SettingsContext c) =>
+                isPaginated(c) ? null : t.page_turn_animation_paginated_only,
+            defaultValue: ReaderSettings.defaultPageTurnAnimation,
+            reader: const ReaderPlacement(
+              group: ReaderGroup.behavior,
+              order: 22,
+            ),
+            options: <SettingsSegmentOption<PageTurnAnimation>>[
+              SettingsSegmentOption<PageTurnAnimation>(
+                value: PageTurnAnimation.none,
+                label: t.page_turn_animation_none,
+              ),
+              SettingsSegmentOption<PageTurnAnimation>(
+                value: PageTurnAnimation.slide,
+                label: t.page_turn_animation_slide,
+              ),
+              SettingsSegmentOption<PageTurnAnimation>(
+                value: PageTurnAnimation.cover,
+                label: t.page_turn_animation_cover,
+              ),
+              SettingsSegmentOption<PageTurnAnimation>(
+                value: PageTurnAnimation.fade,
+                label: t.page_turn_animation_fade,
+              ),
+            ],
+            selected: (SettingsContext c) => c.readerSource.pageTurnAnimation,
+            onChanged: (SettingsContext c, PageTurnAnimation value) async {
+              await c.readerSource.setPageTurnAnimation(value);
+              notifyReaderSettingsChanged(c);
+            },
+          ),
+          SettingsSegmentedItem<PageTurnAnimationSpeed>(
+            id: 'reading_controls.page_turn_animation_speed',
+            title: t.page_turn_animation_speed,
+            icon: FushiIcons.speed,
+            enabled: isPaginated,
+            subtitleBuilder: (SettingsContext c) =>
+                isPaginated(c) ? null : t.page_turn_animation_paginated_only,
+            defaultValue: ReaderSettings.defaultPageTurnAnimationSpeed,
+            reader: const ReaderPlacement(
+              group: ReaderGroup.behavior,
+              order: 23,
+            ),
+            options: <SettingsSegmentOption<PageTurnAnimationSpeed>>[
+              SettingsSegmentOption<PageTurnAnimationSpeed>(
+                value: PageTurnAnimationSpeed.fast,
+                label: t.page_turn_animation_speed_fast,
+              ),
+              SettingsSegmentOption<PageTurnAnimationSpeed>(
+                value: PageTurnAnimationSpeed.normal,
+                label: t.page_turn_animation_speed_normal,
+              ),
+              SettingsSegmentOption<PageTurnAnimationSpeed>(
+                value: PageTurnAnimationSpeed.slow,
+                label: t.page_turn_animation_speed_slow,
+              ),
+            ],
+            selected: (SettingsContext c) =>
+                c.readerSource.pageTurnAnimationSpeed,
+            onChanged: (SettingsContext c, PageTurnAnimationSpeed value) async {
+              await c.readerSource.setPageTurnAnimationSpeed(value);
+              notifyReaderSettingsChanged(c);
+            },
+          ),
+          // 跟手只对有位移的效果（平移 / 覆盖）有意义；淡入淡出 / 无也置灰。
+          SettingsSwitchItem(
+            id: 'reading_controls.page_turn_follow_drag',
+            title: t.page_turn_follow_drag,
+            icon: FushiIcons.swipe,
+            enabled: (SettingsContext c) =>
+                isPaginated(c) &&
+                c.readerSource.pageTurnAnimation.isDirectional,
+            subtitleBuilder: (SettingsContext c) => isPaginated(c)
+                ? t.page_turn_follow_drag_description
+                : t.page_turn_animation_paginated_only,
+            defaultValue: ReaderSettings.defaultPageTurnFollowDrag,
+            reader: const ReaderPlacement(
+              group: ReaderGroup.behavior,
+              order: 24,
+            ),
+            value: (SettingsContext c) => c.readerSource.pageTurnFollowDrag,
+            onChanged: (SettingsContext c, bool value) async {
+              await c.readerSource.setPageTurnFollowDrag(value);
+              notifyReaderSettingsChanged(c);
             },
           ),
         ],
@@ -1094,6 +1257,7 @@ SettingsDestination buildReadingDestination() {
               group: ReaderGroup.behavior,
               order: 14,
             ),
+            cliValue: readerControlLayoutCli,
             builder: buildReaderControlLayoutEditor,
           ),
           SettingsActionItem(
@@ -1106,6 +1270,14 @@ SettingsDestination buildReadingDestination() {
             ),
             // 2026-10 体验优化：重置会丢掉用户自定义的控件排列，先确认
             // （destructive），完成后给一条提示，否则点了看不出有没有生效。
+            // CLI：确认改由 --yes 给出。
+            cli: SettingsCliAction(
+              confirm: true,
+              run: (SettingsContext c, Map<String, String> args) async {
+                await resetReaderControlLayouts(c);
+                return null;
+              },
+            ),
             onTap: (SettingsContext c) async {
               final bool confirmed = await showSettingsConfirmationDialog(
                 c,
@@ -1114,13 +1286,7 @@ SettingsDestination buildReadingDestination() {
                 destructive: true,
               );
               if (!confirmed) return;
-              await c.appModel.setReaderControlLayout(
-                ReaderControlLayout.defaults,
-              );
-              await c.appModel.setReaderCompactControlLayout(
-                ReaderControlLayout.compactDefaults,
-              );
-              notifyReaderChromeReanchored(c);
+              await resetReaderControlLayouts(c);
               FushiToast.show(msg: t.reader_control_layout_reset_done);
             },
           ),
@@ -1199,7 +1365,7 @@ SettingsDestination buildReadingDestination() {
             id: 'reading_display.text_justify',
             title: t.reader_text_justify,
             icon: FushiIcons.alignJustify,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 15),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 16),
             value: (SettingsContext c) =>
                 c.readerSource.readerEnableTextJustification,
             onChanged: (SettingsContext c, bool value) {
@@ -1212,7 +1378,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_vert_kerning,
             icon: FushiIcons.spaceBar,
             visible: isVertical,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 16),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 17),
             value: (SettingsContext c) =>
                 c.readerSource.readerEnableVerticalFontKerning,
             onChanged: (SettingsContext c, bool value) {
@@ -1225,7 +1391,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_font_vpal,
             icon: FushiIcons.formatShapes,
             visible: isVertical,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 17),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 18),
             value: (SettingsContext c) => c.readerSource.readerEnableFontVPAL,
             onChanged: (SettingsContext c, bool value) {
               c.readerSource.setReaderEnableFontVPAL(value);
@@ -1236,7 +1402,7 @@ SettingsDestination buildReadingDestination() {
             id: 'reading_display.prioritize_reader_styles',
             title: t.reader_reader_styles,
             icon: FushiIcons.ankiCard,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 18),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 19),
             value: (SettingsContext c) =>
                 c.readerSource.readerPrioritizeReaderStyles,
             onChanged: (SettingsContext c, bool value) async {
@@ -1250,7 +1416,7 @@ SettingsDestination buildReadingDestination() {
             id: 'reading_display.blur_images',
             title: t.reader_blur_images,
             icon: FushiIcons.blur,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 20),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 21),
             value: (SettingsContext c) => c.readerSource.readerBlurImages,
             onChanged: (SettingsContext c, bool value) async {
               await c.readerSource.setReaderBlurImages(value);
@@ -1267,7 +1433,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_merge_image_pages,
             subtitle: t.reader_merge_image_pages_subtitle,
             icon: FushiIcons.collection,
-            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 21),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 22),
             value: (SettingsContext c) => c.readerSource.readerMergeImagePages,
             onChanged: (SettingsContext c, bool value) async {
               await c.readerSource.setReaderMergeImagePages(value);
@@ -1286,6 +1452,56 @@ SettingsDestination buildReadingDestination() {
 
 /// 阅读器按钮布局编辑器（设置页 / 书内设置抽屉共用）：读 appModel 当前布局，改动
 /// 立刻写穿偏好；桌面按鼠标手感、其余按触屏。
+/// 阅读器顶栏 / 底栏布局恢复出厂（宽窗 + 窄窗两份），并重锚 chrome。设置页
+/// 重置按钮与控制通道共用。
+Future<void> resetReaderControlLayouts(SettingsContext c) async {
+  await c.appModel.setReaderControlLayout(ReaderControlLayout.defaults);
+  await c.appModel.setReaderCompactControlLayout(
+    ReaderControlLayout.compactDefaults,
+  );
+  notifyReaderChromeReanchored(c);
+}
+
+/// 阅读器控件布局在控制通道上的读写：`{"wide": <布局 JSON>, "compact": <布局
+/// JSON>}`（任一段可省略，省略的不改）。布局解码器对坏输入静默回落出厂布局，
+/// 所以写入前先校验结构。写入与编辑器同一组 setter + 重锚。
+final SettingsCliValue readerControlLayoutCli = SettingsCliValue(
+  help:
+      '{"wide": <布局 JSON，含 slots>, "compact": <布局 JSON>}'
+      '（config get 的输出可改后原样写回）',
+  read: (SettingsContext c) => jsonEncode(<String, Object?>{
+    'wide': jsonDecode(c.appModel.readerControlLayoutFor(compact: false).encode()),
+    'compact': jsonDecode(
+      c.appModel.readerControlLayoutFor(compact: true).encode(),
+    ),
+  }),
+  write: (SettingsContext c, String raw) async {
+    final Object? decoded;
+    try {
+      decoded = jsonDecode(raw);
+    } on FormatException catch (e) {
+      throw FormatException('不是 JSON：${e.message}');
+    }
+    if (decoded is! Map<String, dynamic> ||
+        !(decoded.containsKey('wide') || decoded.containsKey('compact'))) {
+      throw const FormatException('写成 {"wide": …, "compact": …}');
+    }
+    ReaderControlLayout? parse(Object? layout, String name) {
+      if (layout == null) return null;
+      if (layout is! Map<String, dynamic> || layout['slots'] is! Map) {
+        throw FormatException('$name 布局必须含 slots 对象');
+      }
+      return ReaderControlLayout.decode(jsonEncode(layout));
+    }
+
+    final ReaderControlLayout? wide = parse(decoded['wide'], 'wide');
+    final ReaderControlLayout? compact = parse(decoded['compact'], 'compact');
+    if (wide != null) await c.appModel.setReaderControlLayout(wide);
+    if (compact != null) await c.appModel.setReaderCompactControlLayout(compact);
+    notifyReaderChromeReanchored(c);
+  },
+);
+
 Widget buildReaderControlLayoutEditor(SettingsContext context) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.stretch,

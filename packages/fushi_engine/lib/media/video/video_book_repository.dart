@@ -1,6 +1,7 @@
 import 'dart:io';
 
-import 'package:drift/drift.dart' show QueryRow, Value;
+import 'package:drift/drift.dart'
+    show BooleanExpressionOperators, QueryRow, Value;
 import 'package:path/path.dart' as p;
 
 import 'package:fushi_audio/fushi_audio_core.dart';
@@ -196,8 +197,8 @@ class VideoBookRepository {
       );
 
   /// 统一合集 Phase 2：把一个多集播放列表拆成 N 条独立 VideoBooks 行 + 一个 playlist
-  /// [MediaCollections]（成员按序）。是「导入时拆集」的单一真相源，与 v38 迁移
-  /// `splitPlaylistVideoBooksV38` 落库形状对齐（每集自带 positionMs 进 lastPositionMs；
+  /// [MediaCollections]（成员按序）。是「导入时拆集」的单一真相源，落库形状沿用已
+  /// 删除的 v38 拆集迁移（每集自带 positionMs 进 lastPositionMs；
   /// 每集 uid = coreUniqueVideoBookUid(coreSingleVideoBookUid(path))；playlistJson 不写、
   /// currentEpisode 恒 0；completed_at 不设）。整批包一个事务：全成或全回滚。
   ///
@@ -277,7 +278,7 @@ class VideoBookRepository {
         collectionType: 'playlist',
       );
       for (final String uid in epUids) {
-        await _db.addToCollection(collectionId, MediaKind.video, uid);
+        await _db.addToCollection(collectionId, MediaKind.video, uid, userIntent: false);
       }
     });
     return (
@@ -320,7 +321,7 @@ class VideoBookRepository {
   /// 合集成员永不更新）。
   ///
   /// 对齐以**清单为准**、按集的**稳定基身份** [coreSingleVideoBookUid]（取文件名去
-  /// 扩展名、与目录/绝对路径无关，见 hibiki_core `video_book_uid`）匹配，**不是**按
+  /// 扩展名、与目录/绝对路径无关，见 fushi_core `video_book_uid`）匹配，**不是**按
   /// 完整 `videoPath`：同一集换目录（相对路径改绝对 / 移动文件夹）基身份不变 → 判为
   /// 「未变」不增删、不误制孤儿行（对齐首导 uid 派生规则与重扫 relocation 幂等契约）。
   /// - 清单有、成员没有的基身份 → 建独立 VideoBook 行（uid 同 [importSplitPlaylist] 去重）
@@ -381,6 +382,7 @@ class VideoBookRepository {
             collectionId,
             MediaKind.video,
             existing.bookUid,
+            userIntent: false,
           );
           memberBases.add(base);
           added++;
@@ -401,14 +403,14 @@ class VideoBookRepository {
           ),
           sourceId: sourceId,
         );
-        await _db.addToCollection(collectionId, MediaKind.video, uid);
+        await _db.addToCollection(collectionId, MediaKind.video, uid, userIntent: false);
         memberBases.add(base);
         added++;
       }
       // 后删：成员有、清单已删的基身份（只解绑，保留 VideoBook 本体）。
       for (final MapEntry<String, String> m in memberBaseByUid.entries) {
         if (manifestBases.contains(m.value)) continue;
-        await _db.removeFromCollection(collectionId, MediaKind.video, m.key);
+        await _db.removeFromCollection(collectionId, MediaKind.video, m.key, userIntent: false);
         removed++;
       }
     });
@@ -446,8 +448,14 @@ class VideoBookRepository {
   Future<List<VideoBookRow>> listAll() => _db.allVideoBooks();
 
   /// 监听视频库行集合（uid）变化，供库页在任意导入路径（页内 / 拖拽 / 外部
-  /// 「用 Hibiki 打开」/ 远端下载）落库后自动刷新（BUG-793）。
+  /// 「用 Fushi 打开」/ 远端下载）落库后自动刷新（BUG-793）。
   Stream<List<String>> watchVideoBookUids() => _db.watchVideoBookUids();
+
+  /// 监听视频库观看进度（断点 / 时刻 / 看完标记 / 集指针 / 逐集进度）变化，供库页
+  /// 在任何入口播放、同步回灌写下进度后自动重读（BUG-3610，见
+  /// [FushiDatabase.watchVideoWatchProgressChanged]）。
+  Stream<void> watchVideoWatchProgressChanged() =>
+      _db.watchVideoWatchProgressChanged();
 
   /// 视频库书架展示用列表：在 [listAll] 基础上自愈被数据根迁移遗弃的封面绝对路径
   /// （[_repairMovedCoverPaths]）。**只给展示层用**——删除 GC（[collectReferencedAssetPaths]）
@@ -590,35 +598,100 @@ class VideoBookRepository {
     );
   }
 
-  /// TODO-1961-d：把库里落在 [fromPath] 下的路径整体重映射到 [toPath]，
-  /// 返回实际改动的行数。
+  /// TODO-1961-d：引擎侧改名 / 移动成功之后，把 [relocation] 落进库与下载任务表，
+  /// 返回实际改动的**库行**数（UI 提示「迁移了几个条目」）。
   ///
   /// 引擎侧改名 / 移动（TODO-1961-c）之后必须**立刻**调这个 —— 两件事成对完成，
   /// 缺一即断：只改引擎 = 做种保住了但库里全是死路径；只改库 = 库对了但引擎按
   /// 旧路径读盘，做种当场断。
   ///
-  /// 三列（videoPath / subtitleSource / secondarySubtitleSource）各自判断，
-  /// 哨兵值（`embedded:<n>` / `off:`）与流媒体 URL 一律不动，规则见
-  /// [remapVideoBookPaths]。整批在一个事务里写，中途失败不会留下改了一半的库。
-  Future<int> migrateMediaPaths({
-    required String fromPath,
-    required String toPath,
-  }) async {
-    if (fromPath.trim().isEmpty || toPath.trim().isEmpty) return 0;
-    final List<VideoBookRow> rows = await _db.allVideoBooks();
+  /// 判据是「文件是否真的被引擎搬走」（[DownloadRelocation.movedFiles] 逐文件
+  /// 全等），不是目录前缀：引擎只搬种子自己的文件，旁边的字幕 sidecar 原地不动，
+  /// 按前缀改会把字幕列指到一个没有文件的位置（BUG-3538）。三列各自判断，哨兵值
+  /// （`embedded:<n>` / `off:`）与流媒体 URL 一律不动，规则见 [remapVideoBookPaths]。
+  ///
+  /// 同一事务里还改下载任务表（BUG-3540）——任务与库行之间没有 id 级外键，
+  /// 纽带全靠路径：
+  /// - `video_download_job_files.final_absolute_path`：被搬走的文件跟着改（下载后
+  ///   补抓字幕、库侧删除反查任务都按它与 `videoPath` 相等）；
+  /// - 该种子任务行的 `observed_save_path`（后端坐标）：移动后换成新保存位置；
+  /// - 改名文件的 `current_relative_path`：换成新的种子内相对路径。
+  /// 后两者不跟，任务删除 / 打开位置会把新相对路径拼回旧目录，指向不存在的文件。
+  Future<int> applyDownloadRelocation(DownloadRelocation relocation) async {
+    final MovedMediaFiles moved = relocation.movedFiles;
     final Map<String, VideoPathRemap> pending = <String, VideoPathRemap>{};
-    for (final VideoBookRow row in rows) {
-      final VideoPathRemap remap = remapVideoBookPaths(
-        videoPath: row.videoPath,
-        subtitleSource: row.subtitleSource,
-        secondarySubtitleSource: row.secondarySubtitleSource,
-        fromPath: fromPath,
-        toPath: toPath,
-      );
-      if (!remap.isEmpty) pending[row.bookUid] = remap;
+    if (!moved.isEmpty) {
+      for (final VideoBookRow row in await _db.allVideoBooks()) {
+        final VideoPathRemap remap = remapVideoBookPaths(
+          videoPath: row.videoPath,
+          subtitleSource: row.subtitleSource,
+          secondarySubtitleSource: row.secondarySubtitleSource,
+          moved: moved,
+        );
+        if (!remap.isEmpty) pending[row.bookUid] = remap;
+      }
     }
-    if (pending.isEmpty) return 0;
+    final Map<int, String> pendingJobFiles = <int, String>{};
+    if (!moved.isEmpty) {
+      for (final VideoDownloadJobFileRow file
+          in await _db.select(_db.videoDownloadJobFiles).get()) {
+        final String? remapped = moved.newPathFor(file.finalAbsolutePath);
+        if (remapped != null) pendingJobFiles[file.id] = remapped;
+      }
+    }
+    final String hash = relocation.infoHash.trim().toLowerCase();
+    final List<String> torrentJobIds = <String>[
+      if (hash.isNotEmpty)
+        for (final VideoDownloadJobRow job in await _db.getVideoDownloadJobs())
+          if (job.backendTaskId?.trim().toLowerCase() == hash ||
+              job.torrentHash?.trim().toLowerCase() == hash)
+            job.jobId,
+    ];
+    final String? newSavePath = relocation.newBackendSavePath?.trim();
+    final int? renamedIndex = relocation.renamedFileIndex;
+    final String? renamedPath = relocation.renamedRelativePath?.trim();
+    final int nowMs = DateTime.now().millisecondsSinceEpoch;
     await _db.transaction(() async {
+      for (final MapEntry<int, String> entry in pendingJobFiles.entries) {
+        await (_db.update(
+          _db.videoDownloadJobFiles,
+        )..where((tbl) => tbl.id.equals(entry.key)))
+            .write(
+          VideoDownloadJobFilesCompanion(
+            finalAbsolutePath: Value<String?>(entry.value),
+            updatedAt: Value<int>(nowMs),
+          ),
+        );
+      }
+      for (final String jobId in torrentJobIds) {
+        if (newSavePath != null && newSavePath.isNotEmpty) {
+          await (_db.update(
+            _db.videoDownloadJobs,
+          )..where((tbl) => tbl.jobId.equals(jobId)))
+              .write(
+            VideoDownloadJobsCompanion(
+              observedSavePath: Value<String?>(newSavePath),
+              updatedAt: Value<int>(nowMs),
+            ),
+          );
+        }
+        if (renamedIndex != null &&
+            renamedPath != null &&
+            renamedPath.isNotEmpty) {
+          await (_db.update(_db.videoDownloadJobFiles)
+                ..where(
+                  (tbl) =>
+                      tbl.jobId.equals(jobId) &
+                      tbl.backendFileIndex.equals(renamedIndex),
+                ))
+              .write(
+            VideoDownloadJobFilesCompanion(
+              currentRelativePath: Value<String>(renamedPath),
+              updatedAt: Value<int>(nowMs),
+            ),
+          );
+        }
+      }
       for (final MapEntry<String, VideoPathRemap> entry in pending.entries) {
         final VideoPathRemap remap = entry.value;
         await (_db.update(
@@ -1105,7 +1178,7 @@ class VideoBookRepository {
   /// Reclaims app-owned video assets for a row that has already been deleted.
   ///
   /// Only the deleted row's own cover/subtitle paths are considered, and each
-  /// candidate must still live under Hibiki's app-owned video asset directory
+  /// candidate must still live under Fushi's app-owned video asset directory
   /// and be unreferenced by all remaining videos. The embedded subtitle cache is
   /// derived from [deletedVideoPath] and is skipped while another video still
   /// points at the same original path.

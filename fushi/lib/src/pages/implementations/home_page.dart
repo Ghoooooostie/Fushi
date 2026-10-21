@@ -44,6 +44,7 @@ import 'package:fushi/src/anki/anki_media_dedup_runner.dart';
 import 'package:fushi/src/anki/anki_view_model.dart'
     show ankiRepositoryProvider;
 import 'package:fushi/src/anki/lapis_template_service.dart';
+import 'package:fushi/src/leaderboard/leaderboard_paired_login.dart';
 import 'package:fushi/src/leaderboard/leaderboard_service.dart';
 import 'package:fushi/src/sync/sync_auto_trigger.dart';
 import 'package:fushi_engine/media/external_provider.dart';
@@ -51,12 +52,14 @@ import 'package:fushi_engine/media/source_library/source_library_row.dart';
 import 'package:fushi/src/media/source_library/source_library_scanner.dart';
 import 'package:fushi/src/media/import/real_path_directory_picker.dart';
 import 'package:fushi/src/media/collections/collection_continue.dart';
+import 'package:fushi/src/media/video/video_duration_pref.dart';
 import 'package:fushi/src/sync/interconnect_assistant_client.dart';
 import 'package:fushi/src/sync/interconnect_download_client.dart';
 import 'package:fushi/src/sync/interconnect_subscription_client.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
 import 'package:fushi_engine/sync/assistant/video_acquisition_assistant_host.dart';
 import 'package:fushi/src/media/downloads/download_execution_target.dart';
+import 'package:fushi/src/media/downloads/download_task_entry.dart';
 import 'package:fushi_engine/sync/assistant/host_assistant.dart';
 import 'package:fushi_engine/media/torrent/magnet_utils.dart'
     show magnetUriFromInfoHash;
@@ -64,6 +67,7 @@ import 'package:fushi_engine/media/torrent/video_resource_provider.dart';
 import 'package:fushi_engine/media/video/discovery/video_discovery_provider.dart';
 import 'package:fushi_engine/media/video/discovery/video_discovery_service.dart';
 import 'package:fushi/src/media/video/acquisition/app_video_acquisition_assembly.dart';
+import 'package:fushi/src/media/video/airing_calendar_loader.dart';
 import 'package:fushi/src/media/video/acquisition/remote_video_acquisition_session.dart';
 import 'package:fushi_engine/media/video/acquisition/video_acquisition_service.dart';
 import 'package:fushi_engine/media/video/download/video_discovery_submit.dart';
@@ -146,35 +150,25 @@ import 'package:fushi_core/fushi_core.dart'
 
 export 'package:fushi/src/models/home_tab.dart';
 
-/// 纯函数：给定视频开关与游戏库开关，返回可见顶层 tab 的**视觉顺序**——视频固定插在书架
-/// 与词典之间（用户要求「在书架和词典管理中间」），games（galgame 库）仅在开启时出现，
-/// 位置固定紧跟 video 之后（用户要求「底栏里把游戏移动到视频后面」，与书/漫画/视频/游戏
-/// 四类媒体入口连成一段）。提取成顶层函数便于单测条件插入与顺序，不必实例化整个
-/// [HomePage]。底栏/侧栏的位置索引由此列表导出。
+/// 纯函数：给定模块可见性快照，返回可见顶层 tab 的**视觉顺序**。底栏/侧栏的位置
+/// 索引由此列表导出，提取成顶层函数便于单测，不必实例化整个 [HomePage]。
+///
+/// 顺序是**用户自己排的**（设置 → 外观 → 功能模块 拖拽排序，存在
+/// [ModuleVisibility.order]）；没排过时按 [ModuleId] 枚举顺序，即首页 → 书架 →
+/// 漫画 → 视频 → 游戏 → 浏览 → 查词 → 浏览器扩展（与排序功能上线前写死的顺序
+/// 一致，升级上来不变）。被关掉或平台上不存在的模块跳过但保留位置意愿；设置恒在
+/// 且恒在最后，是全部模块关光后的安全回退面（故 [ModuleId] 里没有它，也不参与排序）。
 ///
 /// 形参是**一个** [ModuleVisibility] 而不是一串 bool：此前这里收七个具名 bool，
 /// 调用方（`_activeTabs()` 与 main.dart 的 macOS 根侧栏）各手抄一份实参表，两份
 /// 已经漂移——macOS 那份漏传 `gamesEnabled`，靠缺省 false 恰好蒙对，注释还把漏写
 /// 说成「macOS 恒 false」。收成一个快照后平台判据只在 [ModuleId.availableOn] 判
-/// 一次，两个调用点各减七行，也不可能再漏配。
+/// 一次，顺序也随快照一起走，所有调用点不可能再漏配。
 List<HomeTab> homeActiveTabs(ModuleVisibility visibility) => <HomeTab>[
-  // 首页 2026-10-09 起可关（[ModuleId.home]，用户反馈「首页没用但偏偏不给关」）。
-  if (visibility.isEnabled(ModuleId.home)) HomeTab.home,
-  // 七个库页/工具 tab 都可按「功能模块」偏好隐藏（设置 → 外观 → 功能模块）；
-  // 设置恒在，是全部隐藏后的安全回退面（故 [ModuleId] 里没有它）。
-  if (visibility.isEnabled(ModuleId.books)) HomeTab.books,
-  if (visibility.isEnabled(ModuleId.manga)) HomeTab.manga,
-  if (visibility.isEnabled(ModuleId.video)) HomeTab.video,
-  if (visibility.isEnabled(ModuleId.games)) HomeTab.games,
-  // 下载 tab（统一下载中心）：除番剧 torrent 外还承载通用磁力（书）与漫画
-  // 「在线目录」卷下载队列，所以不随视频开关联动，只听自己的模块开关；位置在
-  // 视频/游戏之后。
-  if (visibility.isEnabled(ModuleId.browse)) HomeTab.browse,
-  if (visibility.isEnabled(ModuleId.lookup)) HomeTab.dictionaries,
-  // 浏览器扩展管理（安装引导 + 连接检测 + 版本）独立成页，仅桌面出现（手机浏览器
-  // 不支持加载未解压扩展，故按平台而非实验开关门控——平台判据在
-  // [ModuleId.availableOn]），位置紧邻设置之前。
-  if (visibility.isEnabled(ModuleId.browserExtension)) HomeTab.browserExtension,
+  for (final ModuleId module in visibility.ordered)
+    if (homeTabOfModule(module) case final HomeTab tab
+        when visibility.isEnabled(module))
+      tab,
   HomeTab.settings,
 ];
 
@@ -184,19 +178,22 @@ List<HomeTab> homeActiveTabs(ModuleVisibility visibility) => <HomeTab>[
 HomeTab homeLandingTab(List<HomeTab> tabs) =>
     tabs.isEmpty ? HomeTab.settings : tabs.first;
 
-/// 启动落地 tab。「启动默认打开查词」只在查词 tab 真的可见时成立——查词模块被
-/// 关掉时返回它会让 `_currentTab` 从第一帧起就指向一个不在 [homeActiveTabs] 里的
-/// tab（渲染由 `_visibleTab` 兜到首页，但选中身份一直是脏的，底栏高亮与
-/// `_previousTab` 都跟着错），所以门控要在取值处，而不是靠下游兜底。
+/// 启动落地 tab：用户选的启动页（设置 → 系统 → 启动页，[startupModule]）在
+/// [tabs]（[homeActiveTabs] 的结果）里可见时就落它，否则落默认 [homeLandingTab]。
+///
+/// 所选模块被关掉 / 平台上不存在 / 是没有 tab 的横切模块时都回退默认——返回一个
+/// 不在 [tabs] 里的 tab 会让 `_currentTab` 从第一帧起就指向隐藏 tab（渲染由
+/// `_visibleTab` 兜到首页，但选中身份一直是脏的，底栏高亮与 `_previousTab` 都跟着
+/// 错），所以门控要在取值处，而不是靠下游兜底。
 HomeTab homeInitialTab({
-  required bool startupDefaultDictionaryTab,
-  required HomeTab fallback,
-  bool dictionariesEnabled = true,
+  required ModuleId? startupModule,
+  required List<HomeTab> tabs,
 }) {
-  if (startupDefaultDictionaryTab && dictionariesEnabled) {
-    return HomeTab.dictionaries;
-  }
-  return fallback;
+  final HomeTab? chosen = startupModule == null
+      ? null
+      : homeTabOfModule(startupModule);
+  if (chosen != null && tabs.contains(chosen)) return chosen;
+  return homeLandingTab(tabs);
 }
 
 int homeVisualIndexForTab({
@@ -274,17 +271,23 @@ AdaptiveNavItem homeNavItemFor(HomeTab tab) {
         selectedIcon: FushiIcons.filled(FushiIcons.lookup),
         label: t.nav_lookup,
       );
+    case HomeTab.srs:
+      return AdaptiveNavItem(
+        icon: FushiIcons.repeat,
+        selectedIcon: FushiIcons.filled(FushiIcons.repeat),
+        label: t.nav_srs,
+      );
     case HomeTab.games:
       return AdaptiveNavItem(
         icon: FushiIcons.games,
         selectedIcon: FushiIcons.filled(FushiIcons.games),
         label: t.nav_game,
       );
-    case HomeTab.browserExtension:
+    case HomeTab.web:
       return AdaptiveNavItem(
-        icon: FushiIcons.browserExtension,
-        selectedIcon: FushiIcons.filled(FushiIcons.browserExtension),
-        label: t.nav_browser_extension,
+        icon: FushiIcons.globe,
+        selectedIcon: FushiIcons.filled(FushiIcons.globe),
+        label: t.nav_web,
       );
     case HomeTab.settings:
       return AdaptiveNavItem(
@@ -478,11 +481,8 @@ class _HomePageState extends BasePageState<HomePage>
       appModelNoUpdate.moduleVisibility,
     );
     _currentTab = homeInitialTab(
-      startupDefaultDictionaryTab: appModelNoUpdate.startupDefaultDictionaryTab,
-      dictionariesEnabled: appModelNoUpdate.moduleVisibility.isEnabled(
-        ModuleId.lookup,
-      ),
-      fallback: homeLandingTab(initialTabs),
+      startupModule: appModelNoUpdate.startupModule,
+      tabs: initialTabs,
     );
     _previousTab = homeLandingTab(initialTabs);
     // Seed the shared shell notifier (drives the macOS root sidebar) and listen
@@ -649,7 +649,7 @@ class _HomePageState extends BasePageState<HomePage>
         _maybeSyncLeaderboard();
       });
 
-      // Lapis 模板启动自动迁移：Hibiki 基线/客制化变了且 Anki 端仍是 Hibiki
+      // Lapis 模板启动自动迁移：Fushi 基线/客制化变了且 Anki 端仍是 Fushi
       // 已知产物时，自动备份后推送新 styling（手改内容绝不自动覆盖，Anki 未
       // 运行静默跳过）。服务内部有每进程一次的闸门，HomePage 重建不会重跑。
       if (mounted) {
@@ -689,6 +689,33 @@ class _HomePageState extends BasePageState<HomePage>
         ErrorLogService.instance.log('HomePage.leaderboardSync', e, s);
       }),
     );
+    _maybeFollowPairedLogin();
+  }
+
+  /// 本机没有 Fushi 账户时跟随已配对设备自动登录（条件、退避、失败静默都在
+  /// [LeaderboardPairedLogin] 里；未满足条件时只读本地配置，不发请求）。成功给一次轻提示。
+  void _maybeFollowPairedLogin() {
+    unawaited(() async {
+      final LeaderboardPairedLoginSuccess? done = await ref
+          .read(leaderboardPairedLoginProvider)
+          .maybeRun();
+      if (done == null || !mounted) return;
+      final String? peer = done.peerName;
+      ScaffoldMessenger.of(context).showSnackBar(
+        FushiSnackBar(
+          content: Text(
+            peer == null || peer.isEmpty
+                ? t.leaderboard_paired_login_done_generic(
+                    name: done.self.account.tag,
+                  )
+                : t.leaderboard_paired_login_done(
+                    device: peer,
+                    name: done.self.account.tag,
+                  ),
+          ),
+        ),
+      );
+    }());
   }
 
   /// 启动期自动处理一轮 Anki 媒体去重的 UI 侧收尾：报结果，或提示 + 等确认。
@@ -735,8 +762,11 @@ class _HomePageState extends BasePageState<HomePage>
   /// 报告。与设置页手动路径同一套弹窗（见 anki_media_dedup_dialogs.dart）。
   Future<void> _reviewAutoDedupPlan(AnkiMediaDedupReport plan) async {
     if (!mounted) return;
-    final bool confirmed =
-        await showAnkiMediaDedupPlanDialog(context, plan, offerDelete: true);
+    final bool confirmed = await showAnkiMediaDedupPlanDialog(
+      context,
+      plan,
+      offerDelete: true,
+    );
     if (!confirmed || !mounted) return;
     final AnkiMediaDedupReport? result = await runAnkiMediaDedupWithProgress(
       context,
@@ -1699,15 +1729,16 @@ class _HomePageState extends BasePageState<HomePage>
   /// （书架 / 漫画 / 视频 / 游戏）与浏览、查词。桌面自绘控制条已不再显示
   /// 页面标题，这里是这些页面唯一的页面名。首页（仪表盘）、浏览器扩展与设置
   /// 自带标题或不需要，返回 null。
-  String? _shellTitleFor(HomeTab tab) => switch (tab) {
-    HomeTab.books ||
-    HomeTab.manga ||
-    HomeTab.video ||
-    HomeTab.games ||
-    HomeTab.browse ||
-    HomeTab.dictionaries => homeNavItemFor(tab).label,
-    HomeTab.home || HomeTab.browserExtension || HomeTab.settings => null,
-  };
+  String? _shellTitleFor(HomeTab tab) => homeShellTitleFor(
+    tab,
+    apple: isGlassDesign(context),
+    compact:
+        windowSizeClassReal(
+          MediaQuery.sizeOf(context).width,
+          FushiAppUiScale.of(context),
+        ) ==
+        WindowSizeClass.compact,
+  );
 
   /// 单个 [HomeTab] 的导航项（图标 + 标签）。底栏/侧栏/macOS 根侧栏共用同一顶层
   /// [homeNavItemFor]，保证三处标签/选中图标一致。
@@ -1834,8 +1865,9 @@ class _HomePageState extends BasePageState<HomePage>
         // in visual order (whole rail, then whole content) instead of zig-zagging
         // between the rail and the content pane row-by-row.
         //
-        // rail 展开 / 收起过渡中内容区宽度保持恒定、只平移（见
-        // NavRailContentSync，BUG-3351），免得整棵内容树与保活 tab 每帧重排。
+        // rail 展开 / 收起过渡中被藏起的保活 tab 宽度保持恒定（见
+        // NavRailContentSync 与 buildBody），免得它们每帧重排；可见内容照常
+        // 随 rail 重排，否则右侧贴边内容整段过渡被裁、结束时弹回（BUG-3447）。
         child: NavRailContentSync(
           child: Row(
             children: [
@@ -1868,11 +1900,9 @@ class _HomePageState extends BasePageState<HomePage>
                 ),
               ),
               Expanded(
-                child: NavRailSyncedContent(
-                  child: _GlassContentSurface(
-                    child: _withAppleScrollChrome(
-                      FocusTraversalGroup(child: _bodyWithMiniBar()),
-                    ),
+                child: _GlassContentSurface(
+                  child: _withAppleScrollChrome(
+                    FocusTraversalGroup(child: _bodyWithMiniBar()),
                   ),
                 ),
               ),
@@ -2028,6 +2058,7 @@ class _HomePageState extends BasePageState<HomePage>
             glassContentUnder: _appleChrome.contentUnderBottom,
             glassSearchIndex: glassSearchIndex,
             showLabels: appModel.navBarLabelsVisible,
+            barStyle: appModel.navBarStyle,
             materialFab: _shellPageFab(),
             // 反转底栏方向：查词钮 / FAB 跟着翻到左侧，整条底栏镜像。
             searchLeading: reversed,
@@ -2043,8 +2074,7 @@ class _HomePageState extends BasePageState<HomePage>
               final bool towardEnd = index > visualIndex;
               _selectTabFromNav(tab);
               _moduleSwipe.playEnter(
-                fromScreenRight:
-                    Directionality.of(context) == TextDirection.ltr
+                fromScreenRight: Directionality.of(context) == TextDirection.ltr
                     ? towardEnd
                     : !towardEnd,
               );
@@ -2176,6 +2206,13 @@ class _HomePageState extends BasePageState<HomePage>
       onOpenDownloads: browseReachable
           ? () => _popToBrowseTab(BrowseTab.downloads)
           : null,
+      // 详情页的「任务」：落到下载任务并只看这部作品（同一可达性门）。
+      onOpenWorkDownloads: browseReachable
+          ? (VideoMediaReference reference) => _popToBrowseTab(
+              BrowseTab.downloads,
+              downloadsWorkFocus: videoDiscoveryDownloadTaskFocus(reference),
+            )
+          : null,
       onOpenSubscriptions: browseReachable
           ? _openVideoDiscoverySubscriptionsPanel
           : null,
@@ -2187,8 +2224,16 @@ class _HomePageState extends BasePageState<HomePage>
       onAiAcquire: _canAiAcquire && _aiAcquireModulesEnabled
           ? _openAiVideoAcquisition
           : null,
+      // 发现页「今日放送」小模块：与完整放送日历页同一条取数路径。
+      loadAiringCalendar: _loadAiringCalendarWeek,
     );
   }
+
+  /// 放送日历取数端口（[VideoDiscoveryActions.loadAiringCalendar]）：读的是
+  /// 调用时的 appModel，与日历页 `loadAiringCalendarWeek(_appModel, ...)` 同源。
+  Future<AiringCalendarSnapshot> _loadAiringCalendarWeek(
+    AiringCalendarRequest request,
+  ) => loadAiringCalendarWeek(appModelNoUpdate, request);
 
   /// 取消本作品当前在飞的下载任务。
   ///
@@ -2256,11 +2301,16 @@ class _HomePageState extends BasePageState<HomePage>
   bool _popToBrowseTab(
     BrowseTab tab, {
     BrowseDownloadsSection downloadsSection = BrowseDownloadsSection.tasks,
+    DownloadTaskWorkFocus? downloadsWorkFocus,
   }) {
     if (!_browseReachable) return false;
     Navigator.of(context).popUntil((Route<Object?> route) => route.isFirst);
     if (!mounted) return false;
-    _openBrowseTab(tab, downloadsSection: downloadsSection);
+    _openBrowseTab(
+      tab,
+      downloadsSection: downloadsSection,
+      downloadsWorkFocus: downloadsWorkFocus,
+    );
     return true;
   }
 
@@ -2907,6 +2957,7 @@ class _HomePageState extends BasePageState<HomePage>
   void _openBrowseTab(
     BrowseTab tab, {
     BrowseDownloadsSection downloadsSection = BrowseDownloadsSection.tasks,
+    DownloadTaskWorkFocus? downloadsWorkFocus,
   }) {
     // 浏览页是保活 tab：跳转是一条送给已挂载页面的请求（它原地切页签），不再换
     // key 整页重建——那会丢掉来源 / 发现 / 下载各页签的搜索词、结果与滚动。
@@ -2914,6 +2965,7 @@ class _HomePageState extends BasePageState<HomePage>
       _browseRequest = BrowseNavigationRequest(
         tab,
         downloadsSection: downloadsSection,
+        downloadsWorkFocus: downloadsWorkFocus,
       );
     });
     _selectTab(HomeTab.browse);
@@ -3167,6 +3219,12 @@ class _HomePageState extends BasePageState<HomePage>
               positionMs: book.lastPositionMs,
               completed: book.completedAt != null,
               lastPlayedAt: book.lastPlayedAt,
+              // BUG-3491：片长用来分辨「已打勾的集正在重看」。
+              durationMs: videoDurationMsFromPref(
+                appModelNoUpdate.prefsRepo.getPref(
+                  videoDurationPrefKey(book.bookUid),
+                ),
+              ),
             ),
           )
           .toList(growable: false),
@@ -3398,7 +3456,12 @@ class _HomePageState extends BasePageState<HomePage>
                   // 消费聚焦请求，不经过这一层。
                   child: SectionVisibilityScope(
                     visible: visible == tab,
-                    child: _keepAliveTabContent(tab, visible: visible == tab),
+                    // 藏起的保活 tab 在 rail 展开 / 收起过渡中钉宽、不逐帧重排；
+                    // 可见那一页照常重排（BUG-3447）。
+                    child: NavRailSyncedContent(
+                      hidden: visible != tab,
+                      child: _keepAliveTabContent(tab, visible: visible == tab),
+                    ),
                   ),
                 ),
               ),
@@ -3523,7 +3586,8 @@ class _HomePageState extends BasePageState<HomePage>
         appModelNoUpdate.gamesModuleForm == GamesModuleForm.streamClient
             ? GameStreamLibraryPage(services: _gameStreamLibraryServices)
             : const HomeGamePage(),
-      HomeTab.browserExtension => const BrowserExtensionPage(),
+      HomeTab.web => WebHubPage(videoRepo: _videoRepository),
+      HomeTab.srs => const SrsDeckListPage(),
       HomeTab.settings =>
         // 设置 tab 走侧栏/底栏切回，不显示页头返回箭头；但仍需 PopScope 拦截系统
         // 返回键（否则冒泡到顶层 PopScope = 退出 app，见 BUG-236）。
@@ -3858,6 +3922,34 @@ class _StandaloneDictionaryRoute extends StatelessWidget {
       ),
     );
   }
+}
+
+/// 首页外壳大标题条给 [tab] 画的页面名；null = 不画（标题行高度为 0）。
+///
+/// MD3 窄窗（[compact]）：模块名已在底部导航上，外壳不再在内容上方占一整行重复
+/// 标题。叠放浮动工具区的库页本来就不按行摆这条标题（窄窗也不叠，见
+/// `_floatingTitleOverlay`），剩下按行摆的只有查词——2026-10-18 只删了查词页自己
+/// 的页头，外壳这行还在（用户 2026-10-19 截图「顶部标题怎么还有」，BUG-3569）。
+/// Apple（[apple]）保留 iOS 根页大标题（搜索中照常折叠）。
+@visibleForTesting
+String? homeShellTitleFor(
+  HomeTab tab, {
+  required bool apple,
+  required bool compact,
+}) {
+  if (compact && !apple && !_HomePageState._tabHasFloatingChrome(tab)) {
+    return null;
+  }
+  return switch (tab) {
+    HomeTab.books ||
+    HomeTab.manga ||
+    HomeTab.video ||
+    HomeTab.games ||
+    HomeTab.browse ||
+    HomeTab.dictionaries => homeNavItemFor(tab).label,
+    // 复习页自己画页头（标题 + 牌组动作），同「网页」页（子页自己画页头）。
+    HomeTab.home || HomeTab.web || HomeTab.srs || HomeTab.settings => null,
+  };
 }
 
 /// 视频源后台补刮任务入口是否由外壳的栏 / 页头承载（承载时首页 body 不再画

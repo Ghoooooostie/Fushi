@@ -2,7 +2,8 @@ import 'dart:math' as math;
 import 'dart:ui' show lerpDouble;
 
 import 'package:fushi/src/utils/components/fushi_animated_size.dart';
-import 'package:cupertino_ui/cupertino_ui.dart' show CupertinoSearchTextField;
+import 'package:cupertino_ui/cupertino_ui.dart'
+    show CupertinoActivityIndicator, CupertinoSearchTextField;
 import 'package:material_ui/material_ui.dart';
 import 'package:fushi/src/utils/components/glass/fushi_glass_feedback.dart';
 import 'package:fushi/src/utils/fushi_icons.dart';
@@ -233,6 +234,7 @@ SettingsIconTone settingsIconToneFor(SettingsDestinationId id) => switch (id) {
   SettingsDestinationId.cardCreation => SettingsIconTone.green,
   SettingsDestinationId.downloads => SettingsIconTone.teal,
   SettingsDestinationId.services => SettingsIconTone.blue,
+  SettingsDestinationId.localServices => SettingsIconTone.teal,
   SettingsDestinationId.ai => SettingsIconTone.purple,
   SettingsDestinationId.models => SettingsIconTone.purple,
   SettingsDestinationId.profiles => SettingsIconTone.pink,
@@ -1020,9 +1022,11 @@ class SettingsLoadingState extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           if (apple)
+            // 固定 Apple（Cupertino）指示器：.adaptive() 按平台选，Windows / Android
+            // 上 Apple 设计系统仍会出 Material 圆圈。
             const SizedBox.square(
               dimension: 28,
-              child: CircularProgressIndicator.adaptive(),
+              child: CupertinoActivityIndicator(radius: 12),
             )
           else
             FushiExpressiveLoadingIndicator(
@@ -2041,7 +2045,16 @@ class _SettingsKitScaffoldState extends State<SettingsKitScaffold> {
                 // （「结果中的词头数量上限 99」压在状态栏与胶囊之间）。遮罩
                 // 实色盖满整段让位（状态栏 + 页头 + 跳转条），再往下柔和渐隐；
                 // 与库页外壳顶部遮罩同一口径（BUG-3132 的修法）。
-                child: FushiTopFadeScrim(solidHeight: inset(), topOpacity: 1),
+                //
+                // shoulderOpacity 必须同为 1：FushiTopFadeScrim 的「肩段」缺省从
+                // topOpacity 缓降到 0.82 倍，跳转条正好落在肩段下半，背后的正文
+                // 以 ~15% 透出（截图巡检：胶囊之间透出「覆写范围」）。让位区要的
+                // 是真实色，渐隐只发生在让位区以下。
+                child: FushiTopFadeScrim(
+                  solidHeight: inset(),
+                  topOpacity: 1,
+                  shoulderOpacity: 1,
+                ),
               ),
             ),
           ),

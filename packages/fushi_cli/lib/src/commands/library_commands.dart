@@ -1,15 +1,20 @@
 import 'package:args/args.dart';
 
 import '../ctl_commands.dart';
+import 'reader_commands.dart';
+import 'shelf_commands.dart';
 
 /// library 域命令（app 侧路由见 `fushi/lib/src/platform/desktop/ctl/ctl_library_routes.dart`）。
 ///
 /// 条目键形如 `book:<bookKey>` / `srt:<uid>` / `video:<bookUid>` / `game:<id>`，
 /// 由 `library ls` 给出；拼进路径时整体 URI 编码（id 里可能有 `/`）。
+///
+/// 同一个域的其余命令组（合集 / 标签 / 书签 / 收藏句见 `shelf_commands.dart`，
+/// 阅读器 / 有声书 / 漫画 OCR 见 `reader_commands.dart`）也经这张表注册。
 const List<CtlCommandGroup> libraryCommandGroups = <CtlCommandGroup>[
   CtlCommandGroup(
     name: 'library',
-    summary: '书架 / 媒体库：列出、详情、删除、导入、打开、最近打开、来源扫描',
+    summary: '书架 / 媒体库：列出、详情、删除、导入、打开、改名、封面、读完、重置、来源',
     commands: <CtlCommandSpec>[
       CtlCommandSpec(
         name: 'ls',
@@ -70,8 +75,81 @@ const List<CtlCommandGroup> libraryCommandGroups = <CtlCommandGroup>[
         build: _buildScan,
         render: _renderScan,
       ),
+      CtlCommandSpec(
+        name: 'organize',
+        summary: 'AI 整理库：把该在一起的条目归进合集（直接改库，可用 organize-undo 撤销）',
+        configure: _configureOrganize,
+        build: _buildOrganize,
+        render: _renderOrganize,
+      ),
+      CtlCommandSpec(
+        name: 'organize-history',
+        summary: '列出最近的 AI 整理记录与每处改动',
+        configure: _configureOrganizeHistory,
+        build: _buildOrganizeHistory,
+        render: _renderOrganizeHistory,
+      ),
+      CtlCommandSpec(
+        name: 'organize-undo',
+        summary: '撤销一次 AI 整理里还没撤销的全部改动',
+        usage: '<记录 id>',
+        build: _buildOrganizeUndo,
+        render: _renderOrganizeUndo,
+      ),
+      CtlCommandSpec(
+        name: 'source-add',
+        summary: '把本机目录登记成来源库并扫描',
+        usage: '<目录>',
+        configure: _configureSourceAdd,
+        build: _buildSourceAdd,
+        render: _renderSourceAdded,
+      ),
+      CtlCommandSpec(
+        name: 'source-rename',
+        summary: '来源库改名',
+        usage: '<id> <name...>',
+        build: _buildSourceRename,
+      ),
+      CtlCommandSpec(
+        name: 'source-rm',
+        summary: '移除来源库（条目保留；需 --yes）',
+        usage: '<id>',
+        configure: _configureSourceRm,
+        build: _buildSourceRm,
+      ),
+      CtlCommandSpec(
+        name: 'rename',
+        summary: '条目改名（书 / 有声书是显示名覆盖，--reset 恢复原名）',
+        usage: '<key> [<title...>]',
+        configure: _configureReset,
+        build: _buildRename,
+        render: _renderRenamed,
+      ),
+      CtlCommandSpec(
+        name: 'cover',
+        summary: '换封面（本地图片或 URL；书 / 有声书可 --reset 恢复默认）',
+        usage: '<key> [<图片路径|URL>]',
+        configure: _configureReset,
+        build: _buildCover,
+      ),
+      CtlCommandSpec(
+        name: 'complete',
+        summary: '标记读完 / 看完（--undo 取消读完）',
+        usage: '<key>',
+        configure: _configureComplete,
+        build: _buildComplete,
+      ),
+      CtlCommandSpec(
+        name: 'reset',
+        summary: '重置阅读 / 观看进度（需 --yes）',
+        usage: '<key>',
+        configure: _configureResetProgress,
+        build: _buildResetProgress,
+      ),
     ],
   ),
+  ...shelfCommandGroups,
+  ...readerCommandGroups,
 ];
 
 const String _root = '/api/admin/library';
@@ -245,6 +323,7 @@ const Map<String, String> _importStatusLabels = <String, String>{
   'skipped': '已在库，跳过',
   'source_added': '已登记来源',
   'source_exists': '已是来源',
+  'queued': '已排队',
   'unsupported': '不支持',
   'failed': '失败',
 };
@@ -268,17 +347,35 @@ String _renderImport(Object? data) {
 
 // ── open ───────────────────────────────────────────────────────────────
 
-void _configureOpen(ArgParser parser) => parser.addOption(
-  'at',
-  help: '起始位置：EPUB 书是 1 起计的章号，视频是时间点（秒 / m:ss / h:mm:ss）',
-);
+void _configureOpen(ArgParser parser) => parser
+  ..addOption('at', help: '起始位置：EPUB 书是 1 起计的章号，视频是时间点（秒 / m:ss / h:mm:ss）')
+  ..addOption('chapter', help: 'EPUB：第几章；在线漫画：第几话（1 起计）')
+  ..addOption('progress', help: 'EPUB：配合 --chapter 的章内百分比 0–100')
+  ..addOption('page', help: 'PDF / 漫画：第几页（1 起计）');
 
 CtlRequestSpec _buildOpen(CtlCommandContext context) {
   final String key = context.positional(0, 'key');
   final String? at = context.option('at');
+  final int? chapter = context.intOption('chapter');
+  final int? page = context.intOption('page');
+  final String? progressRaw = context.option('progress');
+  double? progress;
+  if (progressRaw != null) {
+    progress = double.tryParse(progressRaw);
+    if (progress == null) throw const CtlUsageError('--progress 必须是数字');
+  }
+  if (chapter != null && chapter < 1) {
+    throw const CtlUsageError('--chapter 从 1 开始数');
+  }
+  if (page != null && page < 1) throw const CtlUsageError('--page 从 1 开始数');
   return CtlRequestSpec.post(
     '${libraryItemPath(key)}/open',
-    body: <String, Object?>{if (at != null) 'at': at},
+    body: <String, Object?>{
+      if (at != null) 'at': at,
+      if (chapter != null) 'chapter': chapter,
+      if (page != null) 'page': page,
+      if (progress != null) 'progress': progress,
+    },
   );
 }
 
@@ -335,6 +432,99 @@ void _configureScan(ArgParser parser) {
   parser.addOption('source', help: '只扫这个来源（id 见 library sources）');
 }
 
+// ── AI 整理库（app 侧路由见 ctl_library_organize_routes.dart）────────────────
+
+const String _organizeRoot = '/api/admin/library/organize';
+
+/// `--domain` 的值域（与 `CollectionShelfDomain` 同名）。
+const List<String> kLibraryOrganizeDomains = <String>[
+  'books',
+  'manga',
+  'video',
+  'games',
+];
+
+void _configureOrganize(ArgParser parser) {
+  parser
+    ..addOption(
+      'domain',
+      help: '哪个库：books（书架）| manga（漫画库）| video（媒体库）| games（游戏库）',
+      allowed: kLibraryOrganizeDomains,
+    )
+    ..addFlag(
+      'yes',
+      negatable: false,
+      help: '同意把标题、作者或品牌、年份和视频文件夹名发给 AI 提供商（可能计费）；'
+          '界面里同意过就不必加',
+    );
+}
+
+CtlRequestSpec _buildOrganize(CtlCommandContext context) {
+  final String? domain = context.option('domain');
+  if (domain == null) throw const CtlUsageError('缺少 --domain');
+  return CtlRequestSpec.post(
+    _organizeRoot,
+    body: <String, Object?>{
+      'domain': domain,
+      if (context.flag('yes')) 'yes': true,
+    },
+  );
+}
+
+String _renderOrganize(Object? data) {
+  if (data is! Map) return '$data';
+  final String error = data['error'] == null ? '' : '（${data['error']}）';
+  return '整理记录 #${data['runId']} · ${data['status']}$error · '
+      '${data['changes']} 处改动 · ${data['requests']} 次请求';
+}
+
+void _configureOrganizeHistory(ArgParser parser) {
+  parser.addOption('limit', help: '最多列几次（默认 20）');
+}
+
+CtlRequestSpec _buildOrganizeHistory(CtlCommandContext context) {
+  final int? limit = context.intOption('limit');
+  return CtlRequestSpec.get(
+    '/api/admin/library/organize/runs',
+    query: <String, String>{if (limit != null) 'limit': '$limit'},
+  );
+}
+
+String _renderOrganizeHistory(Object? data) {
+  final Object? runs = data is Map ? data['runs'] : null;
+  if (runs is! List || runs.isEmpty) return '还没有整理过';
+  final StringBuffer out = StringBuffer();
+  for (final Object? raw in runs) {
+    if (raw is! Map) continue;
+    final DateTime at =
+        DateTime.fromMillisecondsSinceEpoch((raw['startedAt'] as num?)?.toInt() ?? 0);
+    out.writeln(
+      '#${raw['id']} ${at.toIso8601String().substring(0, 16)} '
+      '${raw['domain']} · ${raw['trigger']} · ${raw['status']}'
+      '${raw['error'] == null ? '' : '（${raw['error']}）'}',
+    );
+    for (final Object? c in (raw['changes'] as List?) ?? const <Object?>[]) {
+      if (c is! Map) continue;
+      out.writeln(
+        '    ${c['kind']} 「${c['collection']}」 ${c['source']}/${c['confidence']}'
+        '${c['undone'] == true ? ' · 已撤销' : ''}',
+      );
+    }
+  }
+  return out.toString().trimRight();
+}
+
+CtlRequestSpec _buildOrganizeUndo(CtlCommandContext context) {
+  final String raw = context.positional(0, '记录 id');
+  if (!RegExp(r'^[1-9]\d*$').hasMatch(raw)) {
+    throw CtlUsageError('记录 id 必须是正整数：$raw');
+  }
+  return CtlRequestSpec.post('/api/admin/library/organize/runs/$raw/undo');
+}
+
+String _renderOrganizeUndo(Object? data) =>
+    data is Map ? '已撤销 ${data['undone']} 处' : '$data';
+
 CtlRequestSpec _buildScan(CtlCommandContext context) {
   final String? kind = context.option('kind');
   final int? source = context.intOption('source');
@@ -357,4 +547,141 @@ String _renderScan(Object? data) {
     lines.add(row['error'] == null ? head : '$head（出错：${row['error']}）');
   }
   return lines.isEmpty ? '（没有可扫描的来源）' : lines.join('\n');
+}
+
+// ── source-add / source-rename / source-rm ─────────────────────────────
+
+void _configureSourceAdd(ArgParser parser) => parser.addOption(
+  'kind',
+  help: '来源种类（必需）：${kLibrarySourceKinds.join('/')}',
+  allowed: kLibrarySourceKinds,
+);
+
+CtlRequestSpec _buildSourceAdd(CtlCommandContext context) {
+  final String path = context.positional(0, '目录');
+  final String? kind = context.option('kind');
+  if (kind == null)
+    throw const CtlUsageError('需要 --kind（book / video / manga）');
+  return CtlRequestSpec.post(
+    '$_root/sources',
+    body: <String, Object?>{'path': ctlAbsolutePath(path), 'kind': kind},
+  );
+}
+
+String _renderSourceAdded(Object? data) {
+  if (data is! Map) return renderCtlJson(data);
+  return data['added'] == true
+      ? '已登记来源 #${data['id']} 并扫描：${data['path']}'
+      : '已是来源库：${data['path']}（重扫用 library scan）';
+}
+
+int _sourceId(CtlCommandContext context) {
+  final String raw = context.positional(0, 'id');
+  final int? id = int.tryParse(raw);
+  if (id == null || id <= 0) throw CtlUsageError('<id> 必须是正整数，收到「$raw」');
+  return id;
+}
+
+CtlRequestSpec _buildSourceRename(CtlCommandContext context) =>
+    CtlRequestSpec.put(
+      '$_root/sources/${_sourceId(context)}',
+      body: <String, Object?>{'label': context.joinedRest(1, 'name')},
+    );
+
+void _configureSourceRm(ArgParser parser) => parser
+  ..addFlag('yes', abbr: 'y', negatable: false, help: '确认移除（必需）')
+  ..addOption('migrate-to', help: '视频来源：把指向它的下载订阅 / 未整理任务迁到这个视频来源（缺省停用订阅）');
+
+CtlRequestSpec _buildSourceRm(CtlCommandContext context) {
+  final int id = _sourceId(context);
+  if (!context.flag('yes')) throw const CtlUsageError('移除来源请加 --yes');
+  final int? migrateTo = context.intOption('migrate-to');
+  return CtlRequestSpec(
+    'DELETE',
+    '$_root/sources/$id',
+    body: <String, Object?>{
+      'confirm': true,
+      if (migrateTo != null) 'migrateTo': migrateTo,
+    },
+  );
+}
+
+// ── rename / cover / complete / reset ──────────────────────────────────
+
+void _configureReset(ArgParser parser) =>
+    parser.addFlag('reset', negatable: false, help: '恢复默认（原名 / 默认封面）');
+
+CtlRequestSpec _buildRename(CtlCommandContext context) {
+  final String key = context.positional(0, 'key');
+  if (context.flag('reset')) {
+    if (context.optionalPositional(1) != null) {
+      throw const CtlUsageError('--reset 不带新名字');
+    }
+    return CtlRequestSpec.put(
+      '${libraryItemPath(key)}/title',
+      body: const <String, Object?>{'reset': true},
+    );
+  }
+  return CtlRequestSpec.put(
+    '${libraryItemPath(key)}/title',
+    body: <String, Object?>{'title': context.joinedRest(1, 'title')},
+  );
+}
+
+String _renderRenamed(Object? data) {
+  if (data is! Map) return renderCtlJson(data);
+  return '${data['key']} → ${data['title']}';
+}
+
+CtlRequestSpec _buildCover(CtlCommandContext context) {
+  final String key = context.positional(0, 'key');
+  final String path = '${libraryItemPath(key)}/cover';
+  if (context.flag('reset')) {
+    if (context.optionalPositional(1) != null) {
+      throw const CtlUsageError('--reset 不带图片参数');
+    }
+    return CtlRequestSpec.put(
+      path,
+      body: const <String, Object?>{'reset': true},
+    );
+  }
+  final String source = context.positional(1, '图片路径|URL');
+  final Uri? uri = Uri.tryParse(source);
+  final bool remote =
+      uri != null && (uri.scheme == 'http' || uri.scheme == 'https');
+  return CtlRequestSpec.put(
+    path,
+    body: <String, Object?>{
+      if (remote) 'url': source else 'path': ctlAbsolutePath(source),
+    },
+  );
+}
+
+void _configureComplete(ArgParser parser) =>
+    parser.addFlag('undo', negatable: false, help: '取消读完标记');
+
+CtlRequestSpec _buildComplete(CtlCommandContext context) => CtlRequestSpec.put(
+  '${libraryItemPath(context.positional(0, 'key'))}/completed',
+  body: <String, Object?>{'completed': !context.flag('undo')},
+);
+
+void _configureResetProgress(ArgParser parser) => parser
+  ..addFlag('yes', abbr: 'y', negatable: false, help: '确认重置（必需）')
+  ..addOption(
+    'stats',
+    help: '学习记录：keep 不动 / last 撤销最近一次会话 / all 全部清除',
+    allowed: <String>['keep', 'last', 'all'],
+    defaultsTo: 'keep',
+  );
+
+CtlRequestSpec _buildResetProgress(CtlCommandContext context) {
+  final String key = context.positional(0, 'key');
+  if (!context.flag('yes')) throw const CtlUsageError('重置进度请加 --yes');
+  return CtlRequestSpec.post(
+    '${libraryItemPath(key)}/reset',
+    body: <String, Object?>{
+      'confirm': true,
+      'stats': context.option('stats') ?? 'keep',
+    },
+  );
 }

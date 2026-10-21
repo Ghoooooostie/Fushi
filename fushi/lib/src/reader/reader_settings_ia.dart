@@ -119,6 +119,7 @@ final List<ReaderSettingsSectionSpec> kReaderSettingsSections =
           'reading_display.font_size',
           'reading_display.font_weight',
           'reading_display.furigana_mode',
+          'reading_display.highlight_style',
         ],
       ),
       // ── 排版 ──
@@ -131,6 +132,7 @@ final List<ReaderSettingsSectionSpec> kReaderSettingsSections =
           'reading_display.writing_mode',
           'reading_display.line_height',
           'reading_display.page_columns',
+          'reading_display.page_crease',
         ],
       ),
       ReaderSettingsSectionSpec(
@@ -186,6 +188,9 @@ final List<ReaderSettingsSectionSpec> kReaderSettingsSections =
           'reading_controls.highlight_on_tap',
           'reading_controls.wheel_page_turn_interval',
           'reading_controls.swipe_page_turn_sensitivity',
+          'reading_controls.page_turn_animation',
+          'reading_controls.page_turn_animation_speed',
+          'reading_controls.page_turn_follow_drag',
           'reading_controls.keep_screen_awake',
         ],
       ),

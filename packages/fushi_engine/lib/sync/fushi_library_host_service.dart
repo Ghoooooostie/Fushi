@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:fushi_engine/media/video/bluray/bluray_remote_title.dart';
+import 'package:fushi_engine/media/video/dandanplay_file_key.dart'
+    show DandanplayFileKey;
 import 'package:fushi_engine/sync/aggregate_snapshot.dart';
 import 'package:fushi_engine/sync/collection_manifest.dart';
 import 'package:fushi_engine/sync/tag_sync.dart';
@@ -26,18 +28,70 @@ import 'package:path/path.dart' as p;
 //
 // `PUT /api/library/books/<title>` 的 body 是**裸 .epub 字节流**（无 multipart、
 // 无 sidecar、无 query），所以随行元数据只能走自定义 header——沿用视频推送
-// `X-Hibiki-Video-Title` 的既有先例。两侧共用这两个常量，避免字面量各写一份漂开。
+// [kVideoTitleHeader] 的既有先例。两侧共用这两个常量，避免字面量各写一份漂开。
 //
 // ⚠️ header 值只收 ASCII：写侧必须 `Uri.encodeComponent`，读侧 `Uri.decodeComponent`
 // （日文书名直接塞进 header 会抛）。additive：没改过名就不发，旧 host 对未知 header
 // 静默忽略，旧 client 不发 → 新 host 读到 null，两个方向都零破坏。
 
 /// 本机用户给这本书改的显示名（`Uri.encodeComponent` 编码）。
-const String kBookDisplayTitleHeader = 'X-Hibiki-Book-Display-Title';
+const String kBookDisplayTitleHeader = 'X-Fushi-Book-Display-Title';
 
 /// [kBookDisplayTitleHeader] 的 LWW 毫秒戳（十进制 ASCII）。缺失 = 0 =「时刻未知」，
 /// 收下的一方按 LWW 平局处理（保留本机），见 `FushiDatabase.setPrefIfNewer`。
-const String kBookDisplayTitleAtHeader = 'X-Hibiki-Book-Display-Title-At';
+const String kBookDisplayTitleAtHeader = 'X-Fushi-Book-Display-Title-At';
+
+// ── 视频 / 字幕 push 的元数据 header ─────────────────────────────────────────
+
+/// `PUT /api/library/videos/<id>` 的视频标题（`Uri.encodeComponent` 编码）。
+const String kVideoTitleHeader = 'X-Fushi-Video-Title';
+
+/// `PUT /api/library/videos/<id>` 的原始文件名（`Uri.encodeComponent` 编码）。
+const String kVideoFilenameHeader = 'X-Fushi-Video-Filename';
+
+/// `PUT /api/library/videos/<id>/subtitle` 的字幕后缀（`.srt` / `.ja.srt` …）。
+/// 同名也用作「设为默认字幕」上传的**响应头**：host 回报实际落盘后缀（BUG-2728）。
+const String kSubtitleSuffixHeader = 'X-Fushi-Subtitle-Suffix';
+
+/// `PUT /api/library/videos/<id>/subtitle` 带 `1` = 设为这一集的默认字幕（BUG-2728）。
+const String kSubtitleDefaultHeader = 'X-Fushi-Subtitle-Default';
+
+// ── 改名前的旧 header 名（Hibiki → Fushi，2026-10）─────────────────────────────
+//
+// 互联两端可能跑不同版本：改名前的 client / host 只认 `X-Hibiki-*`。旧名照样**发**
+// 也照样**读**：
+// * **发送**新旧两个名字都发（[setInterconnectHeader]）：改名前的 host 只读旧名，
+//   只发新名会让字幕后缀读成空串、上传直接 400，视频标题 / 书名也静默丢失。
+//   host 的「设为默认字幕」响应头同理新旧都回（见 video.part）。
+// * **接收**先读新名、读不到再读旧名（[interconnectHeaderNameCandidates]）。
+//
+// 清理条件：确认不再有改名前（2026-10 之前）的 app / fushi_server 在用后，删掉
+// 本表、[setInterconnectHeader] 的旧名双发、[interconnectHeaderNameCandidates] 的
+// 旧名回退与那条双发响应头。
+
+/// 新 header 名 → 改名前的旧名。
+const Map<String, String> kLegacyInterconnectHeaderNames = <String, String>{
+  kBookDisplayTitleHeader: 'X-Hibiki-Book-Display-Title',
+  kBookDisplayTitleAtHeader: 'X-Hibiki-Book-Display-Title-At',
+  kVideoTitleHeader: 'X-Hibiki-Video-Title',
+  kVideoFilenameHeader: 'X-Hibiki-Video-Filename',
+  kSubtitleSuffixHeader: 'X-Hibiki-Subtitle-Suffix',
+  kSubtitleDefaultHeader: 'X-Hibiki-Subtitle-Default',
+};
+
+/// 发送一个互联自定义 header：新名与改名前的旧名（若有）各写一份同值。
+/// 所有请求头发送点都必须走这里，不得直接 `headers.set(kXxxHeader, …)`。
+void setInterconnectHeader(HttpHeaders headers, String name, String value) {
+  headers.set(name, value);
+  final String? legacy = kLegacyInterconnectHeaderNames[name];
+  if (legacy != null) headers.set(legacy, value);
+}
+
+/// 接收 [name] 时按顺序尝试的 header 名：新名在前，改名前的旧名（若有）在后。
+List<String> interconnectHeaderNameCandidates(String name) {
+  final String? legacy = kLegacyInterconnectHeaderNames[name];
+  return legacy == null ? <String>[name] : <String>[name, legacy];
+}
 
 // ── 键集 union diff（本地音频 / 有声书 / 词典共享）──────────────────────────
 
@@ -229,7 +283,7 @@ abstract interface class AudiobookSubtitleHost {
 /// host 端「client 导入的字幕设为该视频默认字幕」的**可选**能力（远端视频导入 /
 /// 重定时字幕自动上传）。与 [AudiobookDelayHost] 同范式：不并进主接口，免得十余个
 /// 测试 fake 全量补桩；server 用 `is` 探测，实现了才在 `/api/capabilities` 声明
-/// `liveLibrary.videoSubtitleDefault`；不实现时带 `X-Hibiki-Subtitle-Default` 的 PUT
+/// `liveLibrary.videoSubtitleDefault`；不实现时带 [kSubtitleDefaultHeader] 的 PUT
 /// 回 409、不落盘——**不能**退回 [FushiLibraryHostService.importVideoSubtitle]，那条
 /// 按 client 报的后缀覆盖同名旧字幕且不留备份（BUG-2728）。
 ///
@@ -1297,14 +1351,98 @@ BookProgressSyncAction resolveBookProgressThreeWay({
 /// 纯函数。远端书的去重键 = `sanitizeTtuFilename(title)`（与 `EpubBooks.bookKey`
 /// 派生一致，由调用方算好后传入 [keyOf]）。本端已有同 key 的书就不再在「配对设备」
 /// 区重复展示（TODO-033 #6：远端与本地重复同一本书）。
+///
+/// host 显式下发的 bookKey（[RemoteBookInfo.bookKey]）也算命中（BUG-3452）：
+/// 从对端下载、本机落地键与对端键不同的书（对端书名带 `(2)` 后缀、EPUB 无
+/// dc:title…）只在别名表里记着对端键——调用方把别名并进 [localBookKeys]，但只按
+/// 书名派生键比对的话，host bookKey 与书名不同源时永远对不上，下载完那张「未下载」
+/// 占位卡就一直留在书架上。没带 bookKey（旧 host / 云盘）时不拿原始书名当键比：
+/// 书名与 bookKey 不是同一个值域（BUG-2274）。
 List<RemoteBookInfo> dedupeRemoteBooks({
   required List<RemoteBookInfo> remote,
   required Set<String> localBookKeys,
   required String Function(String title) keyOf,
 }) {
+  bool hostKeyIsLocal(RemoteBookInfo book) {
+    final String? hostKey = book.bookKey;
+    return hostKey != null &&
+        hostKey.isNotEmpty &&
+        localBookKeys.contains(hostKey);
+  }
+
   return <RemoteBookInfo>[
     for (final RemoteBookInfo book in remote)
-      if (!localBookKeys.contains(keyOf(book.title))) book,
+      if (!localBookKeys.contains(keyOf(book.title)) && !hostKeyIsLocal(book))
+        book,
+  ];
+}
+
+/// 本端删除墓碑里，对某个远端来源**仍然有效**的键（纯函数）。
+///
+/// 判据只比**同一台设备的时钟**，不拿对端时间戳和本端时间戳比（两台设备的墙钟可以
+/// 差任意多，「host importedAt 晚于本端 deletedAt 就当新书」在 host 时钟超前时会让
+/// 刚删的书立刻复活，落后时会把真正重新导入的书永久藏掉）：
+///
+/// - [sourceAppliesDeletions] = false（云盘书库 / 媒体服务器）：这些来源从不执行
+///   Fushi 的删除墓碑（云通道只写 `__tombstones__` 标记，书文件夹原样留着），清单里
+///   那份只可能是被删的那本的残留——墓碑在就一直藏，本机重新导入时墓碑随之清除。
+/// - [sourceAppliesDeletions] = true（互联 host）：墓碑推给 host 后 host 会真删并写
+///   它自己的墓碑，host 之后重新导入同一本时会清掉它的墓碑。所以只藏**还没送达**的
+///   墓碑：`deletedAt > deliveredThroughMs`，[deliveredThroughMs] = 本端互联推送基线
+///   （`SyncRepository.getDeletionTombstonesPushBaselineMs`，本端时钟、整批推送成功
+///   才推进）。送达之后 host 清单里还有这个键，就是 host 删后又重新导入的新书。
+///
+///   送达瞬间之前取的清单可能还带着它：调用方必须**先**读推送基线、**再**取清单，
+///   并且 host 删除成功时要作废远端清单缓存（`InterconnectSyncBackend
+///   .remoteLibraryMutationRevision` → `remoteLibraryCacheProvider`），这样「基线已
+///   推进」时拿到的清单一定是删除之后取的。
+Set<String> pendingRemoteDeletionKeys({
+  required Map<String, int> deletedAtByKey,
+  required bool sourceAppliesDeletions,
+  required int deliveredThroughMs,
+}) {
+  if (!sourceAppliesDeletions) return deletedAtByKey.keys.toSet();
+  return <String>{
+    for (final MapEntry<String, int> e in deletedAtByKey.entries)
+      if (e.value > deliveredThroughMs) e.key,
+  };
+}
+
+/// 从远端书清单 [remote] 里剔除本端已「从所有设备删除」且对该来源仍有效的书。
+///
+/// 纯函数。[deletedKeys] 由 [pendingRemoteDeletionKeys] 给出。墓碑键是本机 bookKey
+/// 或别名表里的对端键（`syncDeletionBookKeyOf`），所以 host bookKey 与标题派生键都要
+/// 比（同 [dedupeRemoteBooks] 的两路）。
+List<RemoteBookInfo> filterOutLocallyDeletedRemoteBooks({
+  required List<RemoteBookInfo> remote,
+  required Set<String> deletedKeys,
+  required String Function(String title) keyOf,
+}) {
+  if (deletedKeys.isEmpty) return remote;
+  bool deletedLocally(RemoteBookInfo book) {
+    final String? hostKey = book.bookKey;
+    if (hostKey != null && hostKey.isNotEmpty && deletedKeys.contains(hostKey)) {
+      return true;
+    }
+    return deletedKeys.contains(keyOf(book.title));
+  }
+
+  return <RemoteBookInfo>[
+    for (final RemoteBookInfo book in remote)
+      if (!deletedLocally(book)) book,
+  ];
+}
+
+/// [filterOutLocallyDeletedRemoteBooks] 的视频版：视频墓碑键 = bookUid，远端视频的
+/// 稳定身份 [RemoteVideoInfo.id] 就是落地后的 bookUid（与 [dedupeRemoteVideos] 同键）。
+List<RemoteVideoInfo> filterOutLocallyDeletedRemoteVideos({
+  required List<RemoteVideoInfo> remote,
+  required Set<String> deletedKeys,
+}) {
+  if (deletedKeys.isEmpty) return remote;
+  return <RemoteVideoInfo>[
+    for (final RemoteVideoInfo video in remote)
+      if (!deletedKeys.contains(video.id)) video,
   ];
 }
 
@@ -1999,10 +2137,24 @@ class RemoteVideoInfo {
     this.tagTombstones = const <String, int>{},
     this.collection,
     this.importedAt,
+    this.fileName,
   });
 
   final String id;
   final String title;
+
+  /// host 视频文件的**文件名**（只取 basename，绝不带目录——目录结构仍留在 host）。
+  ///
+  /// host 刮削会把 `VideoBooks.title` 改写成分集标题（`video_metadata_database_store`
+  /// 的 `updateVideoBookTitle`），之后 [title] 不再是文件名：client 按标题解析季号 /
+  /// 集号（合集详情页分季、本地与远端同集归并）就全部落空，几十集挤成一列
+  /// （BUG-3613）。host 本机这些判据读的是文件路径，故把同一份输入的文件名下发，
+  /// 两端用同一判据。null = 旧 host / 网络流 / 非互联来源，调用方回落 [title]。
+  final String? fileName;
+
+  /// 季号 / 集号解析的输入：有文件名用文件名，否则回落标题（媒体服务器标题是
+  /// `剧名 S01E02 集名`，旧 host 标题默认即文件名）。
+  String get parseName => _isNonEmpty(fileName) ? fileName! : title;
   final int? sizeBytes;
   final bool hasSubtitle;
   final String? subtitleFileName;
@@ -2150,6 +2302,7 @@ class RemoteVideoInfo {
         if (tagsAddedAt.isNotEmpty) 'tagsAddedAt': tagsAddedAt,
         if (tagTombstones.isNotEmpty) 'tagTombstones': tagTombstones,
         if (collection != null) 'collection': collection!.toJson(),
+        if (_isNonEmpty(fileName)) 'fileName': fileName,
       };
 
   RemoteVideoInfo copyWith({
@@ -2205,6 +2358,7 @@ class RemoteVideoInfo {
         tagTombstones: tagTombstones,
         collection: collection ?? this.collection,
         importedAt: importedAt,
+        fileName: fileName,
       );
 
   static RemoteVideoInfo fromJson(Map<String, Object?> json) {
@@ -2249,6 +2403,7 @@ class RemoteVideoInfo {
       // video.collection 恒 null → 首页收不到合集分组（全成散卡）、播放器也无从重建合集连播。
       // 对齐 RemoteBookInfo.fromJson。旧 host 无该字段 → fromJson 返 null（向后兼容）。
       collection: RemoteCollectionMembership.fromJson(json['collection']),
+      fileName: _jsonString(json['fileName']),
     );
   }
 }
@@ -2741,8 +2896,13 @@ abstract interface class TagSyncHost {
 /// 能力位 `liveLibrary.videoMetadata=false`，client 静默跳过。
 abstract interface class VideoMetadataHost {
   /// 7c：host 全部作品的刮削元数据（`VideoMetadataWorks` + 从属表反向装载）。
-  /// [since] 非 null 时只回 `updatedAt > since` 的作品。纯读。
-  Future<List<VideoMetadataWorkEntry>> listVideoMetadata({int? since});
+  /// [since] 非 null 时只回 `updatedAt > since` 的作品。[bookUid] 非 null 时只回
+  /// 该视频自己拥有的作品（独立电影 / 单集；client 远端资料页按需取，BUG-3613）。
+  /// 纯读。
+  Future<List<VideoMetadataWorkEntry>> listVideoMetadata({
+    int? since,
+    String? bookUid,
+  });
 
   /// 7a：在 host 上按 [query] 搜候选（host 自己的 provider 配置 / 主源选择 / 资料
   /// 语言）。[key] 用来定作品形态（电影 / 剧集）与来源设置；host 无刮削链或作品
@@ -2789,6 +2949,19 @@ abstract interface class VideoMetadataOrderingHost {
     required VideoMetadataWorkKey key,
     required String? groupId,
   });
+}
+
+/// host 端「弹幕匹配指纹」的**可选**能力（BUG-3614）。
+///
+/// 弹幕（弹弹play）按文件名 + 前 16 MiB md5 + 字节数匹配，client 远端流播时本机
+/// 没有文件、算不出指纹，弹幕整条短路。host 用自己的文件算好下发，client 再自己
+/// 去问弹弹play——与「下载到本机再播」走同一条匹配。与 [VideoPlaybackSyncHost]
+/// 同范式：server 用 `is` 探测，不实现 → `/api/library/videos/<id>/danmakukey` 404，
+/// client 当作没有弹幕来源（与改动前相同）。
+abstract interface class VideoDanmakuKeyHost {
+  /// 视频 [id] 第 [episodeIndex] 集文件的弹弹play 指纹；视频未知 / 没有本地媒体
+  /// 文件（网络流、`.strm`）→ null。
+  Future<DandanplayFileKey?> videoDanmakuKey(String id, {int episodeIndex = 0});
 }
 
 /// host 端「视频播放偏好跨设备同步」的**可选**能力（BUG-1620 调轴起步，播放偏好

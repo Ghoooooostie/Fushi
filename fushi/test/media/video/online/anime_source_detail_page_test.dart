@@ -34,7 +34,7 @@ void main() {
   late MihonManager manager;
 
   setUp(() async {
-    root = await Directory.systemTemp.createTemp('hibiki-anime-detail-');
+    root = await Directory.systemTemp.createTemp('fushi-anime-detail-');
     database = FushiDatabase.forTesting(NativeDatabase.memory());
     runtime = _AnimeRuntime();
     await database.upsertMangaExtension(
@@ -334,11 +334,11 @@ void main() {
         )
         .data!;
 
-    testWidgets('without any watch position it reads Play and plays the '
-        'first episode', (WidgetTester tester) async {
+    testWidgets('without any watch position it reads Start watching · '
+        'episode 1 and plays the first episode', (WidgetTester tester) async {
       final List<(RemoteVideoInfo, int)> opened = await pumpDetail(tester);
       expect(find.text('Fixture Show (details)'), findsWidgets);
-      expect(playLabel(tester), t.play);
+      expect(playLabel(tester), '${t.media_detail_start_watching} · Episode 1');
       await tester.tap(playButton());
       await tester.pump();
       expect(opened.single.$2, 0);

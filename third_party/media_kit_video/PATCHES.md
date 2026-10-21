@@ -784,8 +784,11 @@ them.
 The desktop State mounts the layer (only when one of the three `touch*Gesture`
 fields is on — all default `false` = upstream) as the bottom child of its
 controls `Stack`, inset like the mobile drag layer (16px edges, bottom
-`16 + subtitleVerticalShiftOffset`): a drag that starts on a bar button or the
-seek bar hits that control first and never reaches the layer. The two scrim
+`16 + subtitleVerticalShiftOffset`, a fixed dead zone that holds whether or not
+the bar is shown). A drag that starts on a bar button hits that control first;
+a drag that goes down anywhere on the visible chrome (bar gaps, seek bar) is
+additionally dropped by the layer itself (`onXxxDragDown` →
+`VideoControlsChromeRegion.hitsRegion`, see the marker section below). The two scrim
 gradients are wrapped in `IgnorePointer` — a gradient `BoxDecoration`
 hit-tests `true` and would otherwise swallow every hit above the layer; they
 are pure decoration, and the ancestors (tap router, `MouseRegion`) still see
@@ -820,3 +823,113 @@ from the tree on release instead of fading it, so it never showed the reset valu
 
 Source-guard test: `fushi/test/third_party/media_kit_video_seekbar_guard_test.dart`
 (group `BUG-3354: swipe seek indicator keeps the committed delta while fading`).
+
+## BUG-3449: fullscreen PopScope exits native fullscreen only on a real pop
+
+`lib/media_kit_video_controls/src/controls/widgets/fullscreen_inherited_widget.dart`,
+`_FullscreenInheritedWidgetPopScopeState.build`.
+
+Upstream's `PopScope.onPopInvokedWithResult` ignored `didPop` and always called
+`onExitFullscreen`. Fushi's fullscreen route now carries a sibling
+`VideoFullscreenBackScope` (`canPop: false`) so a back request that arrives as
+`Navigator.maybePop` closes the top in-route panel (episode rail, subtitle list,
+side panel, dictionary popup...) before leaving fullscreen. The framework still
+notifies every `PopScope` of a vetoed pop with `didPop == false`; without the
+guard the window would leave native fullscreen while the fullscreen route stays
+on the stack. The patch adds `if (!didPop) return;`.
+
+Tests: `fushi/test/media/video/video_fullscreen_back_scope_test.dart` (source
+guard on this file plus the route-level behaviour), and
+`fushi/integration_test/video_fullscreen_episode_list_open_test.dart` (real app).
+
+## Host-held controls while a bar popup is open (`holdVisible`)
+
+`lib/media_kit_video_controls/src/controls/material_desktop.dart` and
+`lib/media_kit_video_controls/src/controls/material.dart`: theme data
+(`MaterialDesktopVideoControlsThemeData` / `MaterialVideoControlsThemeData`)
+and the control States.
+
+Fushi opens its "⋮" overflow menu from a button on the controls bar. The menu
+is a popup route whose modal barrier covers the whole page. On desktop the
+`MouseTracker` re-hit-tests the still pointer at the end of the frame, the
+controls' `MouseRegion` is no longer in the hit path and fires `onExit`, and
+`onExit()` sets `visible = false` — the bar, including the button the menu is
+anchored to, vanished the instant the menu opened (user report, Windows). On
+mobile the auto-hide timer kept running under the open menu with the same
+result a few seconds later.
+
+The patch adds an optional `final ValueListenable<bool>? holdVisible;` (field +
+constructor + `copyWith`). The States bind it in `didChangeDependencies` (re-bound
+when the theme hands over a different listenable) and unbind in `dispose`.
+While its value is `true`:
+
+- desktop: the `MouseRegion.onExit` callback returns early (the explicit
+  "hide controls" tap action still calls `onExit()` directly);
+- both: every auto-hide `Timer` callback checks `!_held` before hiding.
+
+When the value drops back to `false` the controls resume as after a hover
+(desktop: `_onWakeSignal()` → `onHover()`; mobile: `_restartHideTimer()`), i.e.
+the bar fades on its normal schedule. Null (upstream default) = no hold,
+behaviour identical to pub.dev.
+
+Fushi injects `_controlsHeldByMenu` into both themes and drives it from
+`VideoControlBar.onMenuOpenChanged`.
+
+Source-guard test: `fushi/test/pages/video_controls_menu_hold_guard_test.dart`.
+
+## BUG-3498: clicking the seek bar's upper band toggled play / pause
+
+`lib/media_kit_video_controls/src/controls/material_desktop.dart`
+(`isInPlayPauseRegion` passed to `MaterialDesktopTapRouter`) and
+`lib/media_kit_video_controls/src/controls/widgets/desktop_tap_router.dart`
+(`desktopControlsBottomStripHeight`).
+
+The seek bar takes pointers through a `Listener`, which never joins the gesture
+arena, so the controls' tap router still wins a click on it and only the
+bottom-strip y threshold keeps it from toggling play / pause. Upstream excluded
+`bottomBarOffset + 10`, but the seek bar's hit area is `seekBarContainerHeight`
+(36) tall and only pushed `seekBarBottomButtonBarOverlap` (16) into the button
+bar, so its top 20px stuck out above the bar: a click in the upper 10px seeked
+*and* paused. The strip now covers the seek bar's whole hit area (the larger of
+that and the old `+ 10` padding).
+
+Superseded (BUG-3517): `desktopControlsBottomStripHeight` is gone;
+`isInPlayPauseRegion` now asks `VideoControlsChromeRegion.hitsRegion`, which
+covers the seek bar's real hit area by construction (see the marker section
+below). Tests: `fushi/test/pages/video_desktop_touch_tap_router_test.dart`
+(hit-test group: real router click on the seek bar's upper edge / bar gap, and
+a source check that `isInPlayPauseRegion` uses the hit test).
+
+## Controls chrome hit-test marker (`VideoControlsChromeRegion`)
+
+`lib/media_kit_video_controls/src/controls/widgets/video_controls_chrome_region.dart`
+(new, exported from `media_kit_video_controls.dart`), wired in
+`material_desktop.dart` and `material.dart`.
+
+The host (Fushi video page) has to tell whether a tap landed on the controls or
+on the picture: two taps on the picture within 400 ms are a double-tap
+(fullscreen / seek / play-pause), two taps on a button are not. It used to
+guess with a fixed `buttonBarHeight` strip at the top and bottom edges, but the
+real bottom chrome (seek bar + button bar + margins + host padding) is taller,
+so rapidly clicking the upper half of a bottom-bar button (±10 s) toggled
+fullscreen.
+
+The patch wraps the top bar, the primary (center) bar, the seek bar and the
+bottom bar in a `MetaData` marker with `HitTestBehavior.translucent`. The marker
+joins the hit path whenever the pointer is inside the bar's bounds (including
+gaps between buttons and margins) but returns its child's result, so hit
+testing of everything underneath (tap router, touch swipe layer) is unchanged.
+`VideoControlsChromeRegion.hitsRegion(globalPosition:, viewId:)` runs a real
+hit test and reports whether the path contains a marker. Every "is this pointer
+on the controls or on the picture" decision uses it, always at pointer-down:
+
+- host page (Fushi): double-tap fullscreen / seek / play-pause, wheel volume,
+  long-press speed-up (plus semantics-onTap nodes for its own overlays);
+- desktop: `isInPlayPauseRegion` of `MaterialDesktopTapRouter` (replaces
+  `desktopControlsBottomStripHeight`); the touch swipe layer drops drags that
+  go down on the chrome;
+- mobile: a tap that goes down on the chrome only re-arms the auto-hide timer
+  (no hide, no double-tap seek); the drag layer drops seek / volume /
+  brightness drags that go down on the chrome. Both drag layers keep their
+  bottom dead zone (`16 + subtitleVerticalShiftOffset`) unchanged: it applies
+  while the bar is hidden too and is not a chrome test.

@@ -107,6 +107,41 @@ AudioPlaybackRange? miningSentenceAudioRange({
   return _shiftRange(paddedRange, delayMs);
 }
 
+/// Sentence-audio range of a cue that IS the whole sentence (an audiobook
+/// lyrics-mode line): the cue's own start/end in its own
+/// [AudioCue.audioFileIndex], run through the same repair / padding / A/V-delay
+/// chokepoints as [miningSentenceAudioRange].
+///
+/// Unlike [miningSentenceAudioRange] this never consults a section index, a
+/// normalized char span or the cue text, so it cannot be steered onto another
+/// chapter or onto an earlier cue with the same text (BUG-3434: lyrics-mode
+/// context sentences resolved through the lookup sentence's chapter and merged
+/// into a "chapter start -> lookup sentence" clip). [cues] only bounds the
+/// padding against same-file neighbours.
+AudioPlaybackRange miningCueAudioRange({
+  required List<AudioCue> cues,
+  required AudioCue cue,
+  int delayMs = 0,
+  int headPadMs = kMiningHeadPadMs,
+  int tailPadMs = kMiningTailPadMs,
+}) {
+  final AudioPlaybackRange positiveRange = _ensurePositiveDuration(
+    AudioPlaybackRange(
+      audioFileIndex: cue.audioFileIndex,
+      startMs: cue.startMs,
+      endMs: cue.endMs,
+    ),
+    cues,
+  );
+  final AudioPlaybackRange paddedRange = padSentenceRange(
+    positiveRange,
+    cues: cues,
+    headPadMs: headPadMs,
+    tailPadMs: tailPadMs,
+  );
+  return _shiftRange(paddedRange, delayMs);
+}
+
 /// Widens [range] by up to [headPadMs] before its start and [tailPadMs] after its
 /// end, clamped against the nearest neighbouring cue in the SAME audio file so the
 /// padding never runs into an adjacent sentence.
@@ -384,7 +419,7 @@ AudioPlaybackRange? _expandAroundCue({
 
 /// 归一化拼接索引：各 cue 归一化文本、其在拼接串中的起点，与拼接串本身。
 /// [_anchoredAdjacentMatch] 与 [_collectSpanCuesByText] 原各持一份逐字相同的
-/// 构建循环，收敛为文件内单一构建点。hibiki_audio 侧
+/// 构建循环，收敛为文件内单一构建点。fushi_audio 侧
 /// `CollectionAudioMatcher._normalizedAdjacentMatch` 的第三份刻意保持包内独立
 /// （不跨包新增共享面；归一化本体 AudioTextNormalizer / BUG-060 白名单不动）。
 ({List<int> cueStarts, List<String> normTexts, String concat})

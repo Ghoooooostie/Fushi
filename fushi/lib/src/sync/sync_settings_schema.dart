@@ -76,6 +76,8 @@ import 'package:fushi_engine/sync/tls/fushi_tofu_probe.dart';
 import 'package:fushi/src/sync/sync_activity.dart';
 import 'package:fushi/src/sync/sync_backend.dart';
 import 'package:fushi/src/sync/sync_auto_trigger.dart';
+import 'package:fushi/src/sync/sync_compare_cli.dart'
+    show listSyncCompareForCli;
 import 'package:fushi/src/sync/sync_compare_dialog.dart';
 import 'package:fushi/src/sync/sync_error_messages.dart';
 import 'package:fushi/src/sync/sync_progress.dart';
@@ -125,7 +127,7 @@ SettingsDestination buildSyncBackupDestination() {
       // ── Group 1: Sync method — the backend + its own auth/config ──────
       // Each control is scoped to the backend it actually applies to:
       // OAuth account row for cloud backends; credential box for WebDAV/FTP/
-      // SFTP; URL list + LAN discovery for the Hibiki P2P backend.
+      // SFTP; URL list + LAN discovery for the Fushi P2P backend.
       SettingsSection(
         id: 'sync.method.section',
         presentation: SettingsSectionPresentation.alwaysExpanded,
@@ -158,7 +160,7 @@ SettingsDestination buildSyncBackupDestination() {
             child: _buildSyncServerSettingsPage,
           ),
           // 互联被选为同步方式时的指引行（BUG-1088）：连接配置（URL/token/配对/
-          // LAN 发现/host 开关）在独立的「Hibiki 互联」分类里，这里只指路不复制。
+          // LAN 发现/host 开关）在独立的「Fushi 互联」分类里，这里只指路不复制。
           SettingsStatusItem(
             id: 'sync.interconnect_config_note',
             title: t.sync_backend_fushi_server,
@@ -211,6 +213,23 @@ SettingsDestination buildSyncBackupDestination() {
               ).setSyncContentEnabled(value);
             },
           ),
+          // 漫画与书籍分开（所有者 2026-10-21）：漫画卷体积大，独立 opt-in；未设置过时
+          // 继承「上传书籍文件」（见 SyncRepository.isSyncMangaContentEnabled）。
+          SettingsSwitchItem(
+            id: 'sync.manga_content',
+            title: t.sync_manga_content,
+            subtitle: t.sync_manga_content_warning,
+            icon: FushiIcons.manga,
+            visible: (SettingsContext ctx) =>
+                _syncSettings(ctx).backendType != SyncBackendType.fushiServer,
+            value: (SettingsContext ctx) => _syncSettings(ctx).syncMangaContent,
+            onChanged: (SettingsContext ctx, bool value) async {
+              _syncSettings(ctx).syncMangaContent = value;
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setSyncMangaContentEnabled(value);
+            },
+          ),
           SettingsSwitchItem(
             id: 'sync.audiobook_files',
             title: t.sync_audiobook_files,
@@ -247,7 +266,7 @@ SettingsDestination buildSyncBackupDestination() {
               ).setSyncVideoFilesEnabled(value);
             },
           ),
-          // 远端占位卡开关抽成共享 builder：同步内容分类与 Hibiki 互联分类共享同一份
+          // 远端占位卡开关抽成共享 builder：同步内容分类与 Fushi 互联分类共享同一份
           // 定义（占位卡渲染的是互联对端的远端条目，逻辑上属互联，故互联分类也提供）。
           buildShowRemoteEntriesItem(),
           // 书架上「仅从本机移除」的远端书找回列表（反馈 nvlhtczbro）：紧挨着
@@ -305,6 +324,12 @@ SettingsDestination buildSyncBackupDestination() {
             title: t.sync_compare,
             icon: FushiIcons.swap,
             visible: (SettingsContext ctx) => !_cloudOutboundUnavailable(ctx),
+            // 列出差异与默认选择；逐条选择后提交走 sync.compare_apply
+            // （`fushi_cli sync compare` / `sync compare-apply`，sync_compare_cli.dart）。
+            cli: SettingsCliAction(
+              run: (SettingsContext ctx, Map<String, String> _) =>
+                  listSyncCompareForCli(ctx.appModel),
+            ),
             onTap: (SettingsContext ctx) => showSyncCompareDialog(
               ctx.context,
               ctx.appModel.database,
@@ -412,6 +437,29 @@ SettingsDestination buildSyncBackupDestination() {
             title: t.hoshi_import_entry,
             subtitle: t.hoshi_import_entry_subtitle,
             icon: FushiIcons.importFile,
+            // CLI 直接给备份文件（代替系统文件选择器）：扫描 → 预览 →（非 dry_run）
+            // 起后台导入任务（task get / task cancel），与导入页同一个
+            // ExternalReaderImportService。
+            cli: SettingsCliAction(
+              params: const <SettingsCliParam>[
+                SettingsCliParam(
+                  'value',
+                  help: '.hoshi / .zip 备份文件绝对路径',
+                  path: true,
+                ),
+                SettingsCliParam(
+                  'dry_run',
+                  help: 'true = 只扫描并预览，不导入',
+                  required: false,
+                ),
+              ],
+              run: (SettingsContext ctx, Map<String, String> args) =>
+                  runExternalReaderImportFromCli(
+                    ctx,
+                    args['value']!,
+                    dryRun: args['dry_run'] == 'true',
+                  ),
+            ),
             onTap: (SettingsContext ctx) => pushSettingsPage(
               ctx,
               (_) => ExternalReaderImportPage(appModel: ctx.appModel),
@@ -530,7 +578,7 @@ SettingsSection buildDataStorageLocationSection() {
   );
 }
 
-/// Hibiki 互联独立一级分类：设备直连（client 连接配置 + LAN 发现）与本机作为
+/// Fushi 互联独立一级分类：设备直连（client 连接配置 + LAN 发现）与本机作为
 /// 服务器（host 模式）。与 [buildSyncBackupDestination] 同库定义，共享
 /// `_syncSettings` 私有状态与全部互联 widget；配置区可见性仍以「互联被选为
 /// 同步方式」门控（与拆分前在同步分类内的行为一致，零行为变化），未启用时
@@ -596,6 +644,10 @@ SettingsDestination buildInterconnectDestination() {
             id: 'interconnect.game_stream',
             title: t.game_stream_join,
             icon: FushiIcons.cast,
+            cli: const SettingsCliAction.unsupported(
+              '加入游戏串流是实时画面接收界面（串流本身只能在 app 里看）；'
+              '游戏库操作用 fushi_cli game 命令',
+            ),
             onTap: (SettingsContext ctx) => pushSettingsPage(
               ctx,
               (BuildContext context) => GameStreamJoinPage(
@@ -637,6 +689,20 @@ SettingsDestination buildInterconnectDestination() {
               await SyncRepository(
                 ctx.appModel.database,
               ).setInterconnectSyncContentEnabled(value);
+            },
+          ),
+          SettingsSwitchItem(
+            id: 'interconnect.upload_manga_content',
+            title: t.interconnect_upload_manga_content,
+            subtitle: t.interconnect_upload_manga_content_hint,
+            icon: FushiIcons.manga,
+            value: (SettingsContext ctx) =>
+                _syncSettings(ctx).interconnectSyncMangaContent,
+            onChanged: (SettingsContext ctx, bool value) async {
+              _syncSettings(ctx).interconnectSyncMangaContent = value;
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectSyncMangaContentEnabled(value);
             },
           ),
           // BUG-2494：互联通道自己一行显式的上传/下载动作，跑在
@@ -802,6 +868,24 @@ SettingsDestination buildInterconnectDestination() {
               ).setInterconnectServiceConfigSyncEnabled(value);
             },
           ),
+          // 跟随已配对设备自动登录 Fushi 账户（所有者 2026-10-16 拍板：默认开、无按钮无
+          // 确认）。仅对把本机标记为「我的设备」的已配对 host 生效（host 侧另有一道门）；
+          // 只在本机这个 Profile 从没登录过账户时生效，主动退出过就不再自动登回去。本机
+          // 只交出自己新生成的公钥，私钥不经互联。
+          SettingsSwitchItem(
+            id: 'interconnect.leaderboard_follow_login',
+            title: t.interconnect_leaderboard_follow_login_toggle,
+            subtitle: t.interconnect_leaderboard_follow_login_toggle_desc,
+            icon: FushiIcons.profiles,
+            value: (SettingsContext ctx) =>
+                _syncSettings(ctx).leaderboardFollowPairedLogin,
+            onChanged: (SettingsContext ctx, bool value) async {
+              _syncSettings(ctx).leaderboardFollowPairedLogin = value;
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setLeaderboardFollowPairedLoginEnabled(value);
+            },
+          ),
           // 「配置文件」（Profile）双向搬运：用户诉求是把一台设备调好的配置搬到另一
           // 台，而不是每台重配一遍。做成**一次性动作**而不是自动跟随开关——整份配置
           // 会在对端落一份新 Profile，什么时候搬该由用户在点的那一刻决定（与云通道
@@ -910,7 +994,7 @@ SettingsDestination _buildInterconnectDevicesPage() {
         presentation: SettingsSectionPresentation.alwaysExpanded,
         items: <SettingsItem>[
           SettingsCustomItem(
-            id: 'sync.hibiki_server_config',
+            id: 'sync.fushi_server_config',
             icon: FushiIcons.devices,
             builder: (SettingsContext ctx) =>
                 _FushiServerConfigWidget(settingsContext: ctx),
@@ -997,6 +1081,25 @@ SettingsDestination _buildInterconnectHostPage() {
               ).setInterconnectProfileTransferEnabled(value);
             },
           ),
+          // 允许已配对设备跟随本机 Fushi 账户自动登录（总闸，默认开，所有者 2026-10-16
+          // 拍板）。仅对标记为「我的设备」的已配对设备生效（配对审批选「允许 · 这是我的
+          // 设备」或在已配对设备列表里手动标记；升级前配对的设备默认「仅互联」，不追溯
+          // 授权）。对端只交来它自己的公钥，由本机账户代绑；本机私钥 / 恢复码从不外传。
+          // 端点另有 HTTPS + 已配对 peer token 两道门；本开关关掉 = 403 disabled。
+          SettingsSwitchItem(
+            id: 'interconnect.leaderboard_link_host',
+            title: t.interconnect_leaderboard_link_host_toggle,
+            subtitle: t.interconnect_leaderboard_link_host_toggle_desc,
+            icon: FushiIcons.profiles,
+            value: (SettingsContext ctx) =>
+                _syncSettings(ctx).interconnectLeaderboardLinkHost,
+            onChanged: (SettingsContext ctx, bool value) async {
+              _syncSettings(ctx).interconnectLeaderboardLinkHost = value;
+              await SyncRepository(
+                ctx.appModel.database,
+              ).setInterconnectLeaderboardLinkHostEnabled(value);
+            },
+          ),
           // 远程更新本机许可（反馈 Pp8XPyve0N）。默认关：让别的设备在本机下载安装
           // 可执行文件必须是主人的显式意愿。端点另有已配对 peer token + 局域网信任区
           // + 一次性 nonce 几道门。只在本机能应用内自更新的平台出现（平台门 =
@@ -1023,7 +1126,7 @@ SettingsDestination _buildInterconnectHostPage() {
   );
 }
 
-/// 远端占位卡开关。同步内容分类与 Hibiki 互联分类共享同一份定义（单一真相源）：
+/// 远端占位卡开关。同步内容分类与 Fushi 互联分类共享同一份定义（单一真相源）：
 /// 多端库联合视图（spec 2026-07-12 §2.1/§2.4），书架/视频页主网格是否把「远端有、
 /// 本地无」的条目渲染成占位卡（云角标 + 远端封面，点击下载/流播）。纯显示偏好
 /// （PreferencesRepository），默认开；关闭时占位卡全部不渲染。离线/未配对/后端不可达
@@ -1095,7 +1198,7 @@ void resetSyncSettingsStateForTest() {
   _activeSyncOwner = null;
 }
 
-/// Whether this device is actively HOSTING a Hibiki interconnect server — the
+/// Whether this device is actively HOSTING a Fushi interconnect server — the
 /// only role with no outbound "sync now" / "compare" (BUG-084). Requires BOTH
 /// the persisted host flag AND interconnect being enabled: a stale serverEnabled
 /// left over from a past interconnect session must NOT gate manual sync when
@@ -1152,10 +1255,12 @@ class _SyncSettingsState {
   bool autoSync = false;
   bool syncStats = true;
   bool syncContent = false;
+  bool syncMangaContent = false;
   bool syncAudioBookFiles = false;
   bool syncVideoFiles = false;
   // BUG-988：互联通道专属的「上传内容到对端」开关，独立于上面的云备份 sync* 开关。
   bool interconnectSyncContent = false;
+  bool interconnectSyncMangaContent = false;
   bool interconnectSyncAudioBookFiles = false;
   bool interconnectSyncVideoFiles = false;
   // 互联专属的「共享统计 / 共享收藏夹」（双向合并，非上传）。默认 true = 拆开关前
@@ -1168,11 +1273,17 @@ class _SyncSettingsState {
 
   /// host 侧：是否允许已配对设备读写本机「配置文件」（Profile）。默认 false。
   bool interconnectProfileTransfer = false;
+
+  /// host 侧：是否允许已配对设备跟随本机账户自动登录。默认 true。
+  bool interconnectLeaderboardLinkHost = true;
+
+  /// client 侧：本机无账户时是否跟随已配对设备自动登录。默认 true。
+  bool leaderboardFollowPairedLogin = true;
   bool interconnectRemoteUpdate = false;
   bool _loaded = false;
   bool _loading = false;
 
-  /// Bumped whenever the persisted Hibiki *client* config (URLs / token) is
+  /// Bumped whenever the persisted Fushi *client* config (URLs / token) is
   /// mutated from outside the client-config widget (e.g. LAN pairing). The
   /// client-config widget listens and reloads — this is the single source of
   /// truth replacing the previous "loaded once in initState" stale state.
@@ -1200,7 +1311,7 @@ class _SyncSettingsState {
     _settingsContext.refresh();
   }
 
-  /// Mutual-exclusion role state for the Hibiki interconnect: a device may be a
+  /// Mutual-exclusion role state for the Fushi interconnect: a device may be a
   /// host (server on, others connect to it) OR a client (connected outward to a
   /// peer), never both. The two flags below are the shared truth the server and
   /// client widgets read to gate each other; [roleRevision] notifies on change.
@@ -1265,9 +1376,12 @@ class _SyncSettingsState {
       autoSync = await _repo.isAutoSyncEnabled();
       syncStats = await _repo.isSyncStatsEnabled();
       syncContent = await _repo.isSyncContentEnabled();
+      syncMangaContent = await _repo.isSyncMangaContentEnabled();
       syncAudioBookFiles = await _repo.isSyncAudioBookFilesEnabled();
       syncVideoFiles = await _repo.isSyncVideoFilesEnabled();
       interconnectSyncContent = await _repo.isInterconnectSyncContentEnabled();
+      interconnectSyncMangaContent = await _repo
+          .isInterconnectSyncMangaContentEnabled();
       interconnectSyncAudioBookFiles = await _repo
           .isInterconnectSyncAudioBookFilesEnabled();
       interconnectSyncVideoFiles = await _repo
@@ -1279,6 +1393,10 @@ class _SyncSettingsState {
           .isInterconnectServiceConfigSyncEnabled();
       interconnectProfileTransfer = await _repo
           .isInterconnectProfileTransferEnabled();
+      interconnectLeaderboardLinkHost = await _repo
+          .isInterconnectLeaderboardLinkHostEnabled();
+      leaderboardFollowPairedLogin = await _repo
+          .isLeaderboardFollowPairedLoginEnabled();
       interconnectRemoteUpdate = await _repo
           .isInterconnectRemoteUpdateEnabled();
       serverEnabled = await _repo.isServerEnabled();

@@ -199,7 +199,7 @@ void main() {
     final int handler = src.indexOf('void _handleVideoPointerUp(');
     expect(handler, greaterThanOrEqualTo(0));
     final String body = src.substring(
-        handler, src.indexOf('bool _isVideoChromePointer(', handler));
+        handler, src.indexOf('void _handleVideoWheelSignal(', handler));
     expect(body, contains('_focusOwnership.reclaim(FocusReclaimCause.gesture)'),
         reason: '点视频画面必须收回键盘（与原生播放器一致）');
     // 「查词浮层期间除外」现在由 _canOwnVideoFocus 的统一门控保证，不再由调用点手写。
@@ -243,11 +243,20 @@ void main() {
         .map((Match m) => m.start)
         .toList();
     expect(resolves, isNotEmpty);
+    // 唯一允许的例外：桌面 CLI 的无头同意（`consent != null`）不弹框，直接写同意
+    // 状态，因此不夺焦、无需守卫；app 内（`consent == null`）仍必须套守卫。
+    final RegExp guarded = RegExp(
+      r'\.wrapDecideAiDefault\(\s*(?:_focusOwnership\.guardOverlay\s*\)'
+      r'|consent\s*==\s*null\s*\?\s*_focusOwnership\.guardOverlay\s*:'
+      r'\s*\(Future<void> Function\(\) _\)\s*=>\s*'
+      r'consent\.decideAiDefault\(\)\s*,?\s*\))',
+    );
     for (final int at in resolves) {
       expect(
-        masked.substring(at, at + 200),
-        contains('.wrapDecideAiDefault(_focusOwnership.guardOverlay)'),
-        reason: '视频页装配的引擎必须把 decideAiDefault 套进焦点守卫',
+        guarded.hasMatch(masked.substring(at, at + 400)),
+        isTrue,
+        reason: '视频页装配的引擎必须把 decideAiDefault 套进焦点守卫'
+            '（仅 CLI 无头同意分支可换成不弹框的 consent.decideAiDefault）',
       );
     }
   });

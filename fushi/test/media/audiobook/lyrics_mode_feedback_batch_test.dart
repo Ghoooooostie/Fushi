@@ -11,6 +11,7 @@ import 'package:fushi/src/models/content_font_chain.dart';
 import 'package:fushi/src/pages/implementations/dictionary_popup_layer.dart';
 import 'package:fushi/src/pages/implementations/reader_fushi_page.dart';
 import 'package:fushi/src/profile/profile_keys.dart';
+import 'package:fushi/src/reader/reader_vertical_punctuation_font.dart';
 import 'package:fushi_audio/fushi_audio.dart';
 import 'package:fushi_engine/media/media_pref_keys.dart';
 
@@ -30,7 +31,6 @@ const LyricsHtmlTheme _theme = LyricsHtmlTheme(
   alignStart: true,
   contextBlurPx: 0,
   rowRadius: 16,
-  hoverFill: Color(0x14000000),
 );
 
 AudioCue _cue(int i, String text) => AudioCue()
@@ -43,6 +43,9 @@ AudioCue _cue(int i, String text) => AudioCue()
   ..startMs = i * 1000
   ..endMs = i * 1000 + 900
   ..audioFileIndex = 0;
+
+/// 竖排时链首的标点子集（BUG-3606）；BUG-3281 的链断言比的是它后面的部分。
+const String _vp = '"${ReaderVerticalPunctuationFont.family}", ';
 
 String _html({
   bool vertical = true,
@@ -192,7 +195,7 @@ void main() {
         style: CjkFontStyle.sansSerif,
       );
       expect(chain, isNotEmpty);
-      expect(html, contains('body { font-family: $chain; }'));
+      expect(html, contains('body { font-family: $_vp$chain; }'));
       final String bodyFont = RegExp(
         r'body \{ font-family: ([^;]*); \}',
       ).firstMatch(html)!.group(1)!;
@@ -202,7 +205,7 @@ void main() {
 
     test('用户正文字体仍排在链首', () {
       final String html = _html(fontFamilyCss: '"MyFont"');
-      expect(html, contains('body { font-family: "MyFont", '));
+      expect(html, contains('body { font-family: $_vp"MyFont", '));
     });
 
     test('无主题（旧观感）用衬线链', () {
@@ -212,7 +215,7 @@ void main() {
         platform: TargetPlatform.android,
         style: CjkFontStyle.serif,
       );
-      expect(html, contains('body { font-family: $chain; }'));
+      expect(html, contains('body { font-family: $_vp$chain; }'));
     });
 
     test('非 CJK / 未知内容语言不套日文 CJK 链（没有全局学习语言）', () {
@@ -226,7 +229,7 @@ void main() {
       };
       String bodyFont(String html) => RegExp(
         r'body \{ font-family: ([^;]*); \}',
-      ).firstMatch(html)!.group(1)!;
+      ).firstMatch(html)!.group(1)!.replaceFirst(_vp, '');
       String head(String chain) =>
           chain.split(',').first.trim().replaceAll('"', '');
 
@@ -291,36 +294,45 @@ void main() {
       );
     });
 
-    test('竖排滚轮投影成横滚后平滑逼近，不再一格一跳', () {
+    test('滚轮横竖排都接管成无极缓动，不再一格一跳', () {
+      for (final bool vertical in <bool>[true, false]) {
+        final String html = _html(vertical: vertical);
+        final int at = html.indexOf(
+          "window.addEventListener('wheel', function(e)",
+        );
+        expect(at, isNonNegative, reason: 'vertical=$vertical');
+        final String handler = html.substring(
+          at,
+          html.indexOf('}, {passive: false});', at),
+        );
+        expect(handler, contains('e.preventDefault();'));
+        expect(handler, contains('_lyWheelTarget += px;'));
+        expect(handler, contains('requestAnimationFrame(_lyWheelFrame)'));
+        // 一步落位只留给「减弱动态效果」与触控板这类小增量（本就连续）。
+        final int direct = handler.indexOf(
+          '_lySetAxisPos(s, _lyAxisPos(s) + px)',
+        );
+        expect(direct, isNonNegative);
+        expect(
+          handler.substring(0, direct),
+          contains('if (window.__lyricsReduceMotion ||'),
+        );
+        // 不再只给竖排注册（横排原生滚轮同样逐格停顿）。
+        expect(
+          html,
+          isNot(contains('if (__lyricsVertical) {\n  window.addEventListener')),
+        );
+      }
       final String html = _html();
-      final int at = html.indexOf(
-        "window.addEventListener('wheel', function(e)",
-      );
-      expect(at, isNonNegative);
-      final String handler = html.substring(
-        at,
-        html.indexOf('}, {passive: false});', at),
-      );
-      expect(handler, contains('_lyWheelTarget -= px;'));
-      expect(handler, contains('requestAnimationFrame(_lyWheelFrame)'));
-      // 一步落位只留给「减弱动态效果」。
-      final int direct = handler.indexOf('s.scrollLeft -= px;');
-      expect(direct, isNonNegative);
       expect(
-        handler.substring(0, direct),
-        contains('if (window.__lyricsReduceMotion) {'),
+        html,
+        contains('function __lyricsWheelStep(cur, target, dtMs, tauMs)'),
       );
-      expect(html, contains('function __lyricsWheelStep(cur, target)'));
       // 程序化回中接管时停掉在途滚轮动画。
       final int center = html.indexOf('function scrollToCenter(');
       expect(
         html.substring(center, html.indexOf('_animId++;', center)),
         contains('_lyWheelStop();'),
-      );
-      // 横排不注册投影（横排走原生滚轮）。
-      expect(
-        _html(vertical: false),
-        contains('if (__lyricsVertical) {\n  window.addEventListener'),
       );
     });
   });

@@ -285,8 +285,35 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView>
     unawaited(_reloadEpisodes());
   }
 
-  void _playEpisode(MediaServerItem episode) {
-    widget.session.playItem(context, episode, siblings: _episodes);
+  Future<void> _playEpisode(MediaServerItem episode) async {
+    await widget.session.playItem(context, episode, siblings: _episodes);
+    // 播放页退回来：服务器上的断点 / 已看标记变了，原地重拉（BUG-3491）。
+    if (mounted) await _refreshEpisodesInPlace();
+  }
+
+  /// 原地重拉当前季**已加载的那些集**（不清空、不出加载态、不动滚动位置）：
+  /// 看完一集返回后集卡的「看到 / 已看 / 进度条」与续播高亮跟上服务器。失败就
+  /// 保持旧列表（下次进页或换季会重拉）。
+  Future<void> _refreshEpisodesInPlace() async {
+    if (!_isSeries || _episodesLoading || _episodes.isEmpty) return;
+    final int generation = _generation;
+    try {
+      final MediaServerPage page = await _browser.listEpisodes(
+        seriesId: widget.item.id,
+        seasonId: _seasonId,
+        limit: _episodes.length > kMediaServerEpisodePageSize
+            ? _episodes.length
+            : kMediaServerEpisodePageSize,
+      );
+      if (!mounted || generation != _generation) return;
+      setState(() {
+        _episodes = List<MediaServerItem>.unmodifiable(page.items);
+        _nextStartIndex = page.nextStartIndex;
+        _hasMore = page.hasMore;
+      });
+    } catch (e) {
+      debugPrint('[media-server] refresh episodes failed: $e');
+    }
   }
 
   /// 续播那一集在当前季**已加载集**里的下标：优先有断点的未看完集，其次第一个
@@ -304,12 +331,17 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView>
   /// 「播放」：电影直接播；剧播续播那集（都看完就第一集）。
   void _playPrimary() {
     if (!_isSeries) {
-      widget.session.playItem(context, _detail);
+      unawaited(
+        widget.session.playItem(context, _detail).then((_) {
+          // 电影：退回来重取详情，断点 / 已看跟上服务器（BUG-3491）。
+          if (mounted) unawaited(_loadDetail());
+        }),
+      );
       return;
     }
     if (_episodes.isEmpty) return;
     final int index = _continueIndex;
-    _playEpisode(index >= 0 ? _episodes[index] : _episodes.first);
+    unawaited(_playEpisode(index >= 0 ? _episodes[index] : _episodes.first));
   }
 
   /// 元信息 chip（与本地 `_heroChips` 同口径）：年份 / 全 N 话（剧）/ ★ 评分 /
@@ -339,6 +371,13 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView>
   }
 
   /// hero 续播行文案（剧且当前季有未看集才出）。
+  /// 主操作会播的那一集的名字（电影 / 还没取到集为 null）。
+  String? _resumeEpisodeName() {
+    if (!_isSeries || _episodes.isEmpty) return null;
+    final int index = _continueIndex;
+    return (index >= 0 ? _episodes[index] : _episodes.first).name;
+  }
+
   String? _continueLabel() {
     if (!_isSeries) return null;
     final int index = _continueIndex;
@@ -401,6 +440,18 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView>
             ),
             backdropBlur: collectionHeroBackdropBlur(backdrop: backdrop),
             bottomPadding: tokens.spacing.section,
+            // 「继续 / 开始观看」悬浮按钮：与 hero 主按钮同一动作（剧 = 续播那一集）。
+            fab: canPlay
+                ? MediaDetailResumeFab(
+                    buttonKey: const ValueKey<String>(
+                      'media-server-detail-resume-fab',
+                    ),
+                    watching: true,
+                    started: _resumesMidway,
+                    itemLabel: _resumeEpisodeName(),
+                    onPressed: _playPrimary,
+                  )
+                : null,
             header: CollectionDetailHero(
               backdrop: backdrop,
               cover: cover,
@@ -414,7 +465,10 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView>
               tagNames: genres.take(6).toList(),
               summary: _detail.overview,
               continueLabel: _continueLabel(),
-              playLabel: _resumesMidway ? t.video_continue_watching : null,
+              playLabel: MediaDetailResumeFab.labelFor(
+                watching: true,
+                started: _resumesMidway,
+              ),
               playButtonKey: const ValueKey<String>('media-server-detail-play'),
               onPlay: canPlay ? _playPrimary : null,
               secondaryAction: _buildDownloadAction(),
@@ -651,9 +705,13 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView>
       subtitle: wide && summary != null && summary.isNotEmpty ? summary : null,
       meta: <String>[
         if (episode.positionMs > 0 && !episode.played)
-          t.video_watched_up_to(
-            time: formatMediaServerDuration(episode.positionMs),
-          )
+          // 时间进度旁接观看百分比（BUG-3491；知道片长才有）。
+          progress == null
+              ? t.video_watched_up_to(
+                  time: formatMediaServerDuration(episode.positionMs),
+                )
+              : '${t.video_watched_up_to(time: formatMediaServerDuration(episode.positionMs))}'
+                    ' · ${(progress.clamp(0.0, 1.0) * 100).floor()}%'
         else if (duration.isNotEmpty)
           duration,
       ],

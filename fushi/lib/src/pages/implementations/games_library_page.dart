@@ -1,3 +1,5 @@
+import 'package:fushi/src/media/collections/library_organize_runner.dart';
+import 'package:fushi/src/media/privacy/media_privacy_dialog.dart';
 import 'package:fushi/src/media/downloads/download_source_method.dart';
 import 'package:fushi/src/media/tags/tag_picker_sheet.dart';
 import 'dart:async';
@@ -17,6 +19,7 @@ import 'package:fushi/src/shortcuts/gamepad_service.dart'
 import 'package:fushi/src/shortcuts/input_binding.dart' show GamepadButton;
 import 'package:fushi_engine/media/discovery/discovery_download_queue.dart';
 import 'package:fushi_engine/media/discovery/discovery_models.dart';
+import 'package:fushi_engine/media/metadata/dlsite/dlsite_client.dart';
 import 'package:fushi/src/media/collections/add_to_collection_dialog.dart';
 import 'package:fushi/src/media/collections/collection_context_dialog.dart';
 import 'package:fushi/src/media/collections/collection_grouping.dart';
@@ -39,10 +42,12 @@ import 'package:fushi/src/mining/galgame_japanese_locale_prompt.dart';
 import 'package:fushi/src/mining/galgame_library.dart';
 import 'package:fushi/src/models/content_font_chain.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
+import 'package:fushi/src/models/module_registry.dart' show isAiModuleEnabled;
 import 'package:fushi/src/mining/galgame_library_query.dart';
 import 'package:fushi/src/mining/galgame_repository.dart';
 import 'package:fushi/src/mining/galgame_scrape_dialog.dart';
 import 'package:fushi/src/mining/galgame_scrape_controller.dart';
+import 'package:fushi/src/mining/metadata/adapters/dlsite_adapter.dart';
 import 'package:fushi/src/mining/metadata/galgame_metadata_draft.dart';
 import 'package:fushi/src/mining/magpie_upscaling.dart';
 import 'package:fushi/src/mining/magpie_upscaling_prompt.dart';
@@ -194,6 +199,8 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
     await _repo.load();
     await _loadCollectionMaps();
     _refresh();
+    // 新加的游戏：开了「导入后自动 AI 整理」时去抖后交 AI（门在 runner）。
+    scheduleAutomaticLibraryOrganize(CollectionShelfDomain.games);
   }
 
   /// 预取合集分组三件套（照书架 `_loadShelfMaps` 的口径：一次 getAllCollectionItems
@@ -487,10 +494,15 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
           final GalgameEntry game = games[index];
           ScrapeBatchItemResult result;
           try {
-            final List<SourceCandidate> candidates =
-                (await controller.search(game.displayName)).candidates;
-            final SourceCandidate? candidate =
-                uniqueExactScrapeTitleMatch<SourceCandidate>(
+            // 名字 / 安装路径里认得出 DLsite 编号就按编号直取：编号是作品身份，
+            // 直取的唯一结果就是这一款，不需要再过标题精确匹配。
+            final DlsiteWorkId? dlsiteId = dlsiteWorkIdOfGalgame(game);
+            final List<SourceCandidate> candidates = (await controller
+                    .search(dlsiteId?.value ?? game.displayName))
+                .candidates;
+            final SourceCandidate? candidate = dlsiteId != null
+                ? (candidates.length == 1 ? candidates.single : null)
+                : uniqueExactScrapeTitleMatch<SourceCandidate>(
               query: game.displayName,
               candidates: candidates,
               titles: (SourceCandidate candidate) => <String>[
@@ -536,8 +548,11 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
 
   /// BUG-3361：合集成员数与合集详情页（[buildGameCollectionMemberCard]）同一判据。
   bool _isGameCollectionMemberVisible(String mediaType, String entryKey) =>
-      MediaKind.tryParse(mediaType) == MediaKind.game &&
-      _games.any((GalgameEntry g) => g.id == entryKey);
+      isGameCollectionMemberVisible(
+        games: _games,
+        mediaType: mediaType,
+        entryKey: entryKey,
+      );
 
   /// 单卡「加入合集」：与书/视频同走 [showAddToCollectionDialog]（同一条
   /// createMediaCollection / addToCollection DAO 路径）；成功后重取分组映射刷新。
@@ -617,6 +632,9 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
           onChanged: () {
             unawaited(_reload());
           },
+          collectionAiSettings: isAiModuleEnabled(_appModel.moduleVisibility)
+              ? _appModel.prefsRepo
+              : null,
         ),
       ),
     );
@@ -775,7 +793,6 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
           children: <Widget>[
             if (_singleRowHeader) ...<Widget>[
               _buildPageHeader(context),
-              if (_games.isNotEmpty) _buildSortMenuAnchor(),
             ] else if (_games.isNotEmpty)
               _buildToolbar(context, allTags),
             if (_games.isNotEmpty) _buildTagFilterBar(allTags),
@@ -839,6 +856,7 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
     return FushiPageHeader.customTitle(
       title: const SizedBox.shrink(),
       search: hasGames ? _headerSearch : null,
+      menuAnchor: hasGames ? _buildSortMenuAnchor() : null,
       actions: <Widget>[
         if (hasGames) ...<Widget>[
           FushiIconButton(
@@ -889,43 +907,36 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
     );
   }
 
-  /// 「排序」菜单的零尺寸常驻锚点（贴在页头下沿右侧）：页头里的排序按钮可能
-  /// 被收进「⋯」，菜单挂在这里才总能打开。再点当前维度 = 翻转方向。
+  /// 「排序」菜单的零尺寸锚点（[FushiPageHeader.menuAnchor]，叠在页头动作组
+  /// 右下角）：页头里的排序按钮可能被收进「⋯」，菜单挂在这里才总能打开。
+  /// 再点当前维度 = 翻转方向。
   Widget _buildSortMenuAnchor() {
-    return Align(
-      alignment: AlignmentDirectional.topEnd,
-      child: Padding(
-        padding: EdgeInsetsDirectional.only(
-          end: FushiDesignTokens.of(context).spacing.page,
-        ),
-        child: FushiMenuAnchor(
-          controller: _sortMenu,
-          menuChildren: <Widget>[
-            for (final GalgameSortField field in GalgameSortField.values)
-              MenuItemButton(
-                key: ValueKey<String>('games_sort_${field.name}'),
-                autofocus: field == _view.sortField,
-                onPressed: () => _selectSortField(field),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Text(galgameSortFieldLabel(field)),
-                    if (field == _view.sortField) ...<Widget>[
-                      const SizedBox(width: 12),
-                      FushiIcon(
-                        _view.ascending
-                            ? FushiIcons.arrowUp
-                            : FushiIcons.arrowDown,
-                        size: 16,
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-          ],
-          child: const SizedBox.shrink(),
-        ),
-      ),
+    return FushiMenuAnchor(
+      controller: _sortMenu,
+      menuChildren: <Widget>[
+        for (final GalgameSortField field in GalgameSortField.values)
+          MenuItemButton(
+            key: ValueKey<String>('games_sort_${field.name}'),
+            autofocus: field == _view.sortField,
+            onPressed: () => _selectSortField(field),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text(galgameSortFieldLabel(field)),
+                if (field == _view.sortField) ...<Widget>[
+                  const SizedBox(width: 12),
+                  FushiIcon(
+                    _view.ascending
+                        ? FushiIcons.arrowUp
+                        : FushiIcons.arrowDown,
+                    size: 16,
+                  ),
+                ],
+              ],
+            ),
+          ),
+      ],
+      child: const SizedBox.shrink(),
     );
   }
 
@@ -945,6 +956,17 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
           onToggleFilter: _toggleTagFilter,
           onReorder: _reorderTags,
           onTagsChanged: () => ref.invalidate(gameTagMapProvider),
+          // AI 整理库（spec 2026-10-20 §10.1）：过 AI 模块门。
+          onAiOrganize: isAiModuleEnabled(_appModel.moduleVisibility)
+              ? () => unawaited(runLibraryOrganizeInteractive(
+                    context: context,
+                    appModel: _appModel,
+                    domain: CollectionShelfDomain.games,
+                    onChanged: () {
+                      if (mounted) unawaited(_reload());
+                    },
+                  ))
+              : null,
         );
     return LibraryToolbar(
       compactKey: const ValueKey<String>('games_toolbar_compact'),
@@ -1797,6 +1819,15 @@ class _GamesLibraryPageState extends ConsumerState<GamesLibraryPage> {
       onScrape: () => unawaited(_scrapeGame(game)),
       onAddToCollection: () => unawaited(_addGameToCollection(game)),
       onEditTags: () => unawaited(_openTagPicker(game)),
+      onEditPrivacy: () => unawaited(
+        showMediaPrivacyDialog(
+          context,
+          db: _appModel.database,
+          kind: TagHostKind.game,
+          entryKey: game.id,
+          title: game.displayName,
+        ),
+      ),
       onEditUpscaling: () => unawaited(_editUpscalingMode(game)),
       onEditJapaneseLocale: () => unawaited(_editJapaneseLocaleMode(game)),
       onEditLanguage: () => unawaited(_editGameLanguage(game)),
@@ -1954,6 +1985,17 @@ String pendingGameDownloadLabel(DiscoveryDownloadTask task) {
       return t.game_library_download_queued;
   }
 }
+
+/// 游戏合集成员行在合集详情页（[buildGameCollectionMemberCard]）里画不画得出来：
+/// 只认 game 行且 [games] 里还在的条目（已从库移除的孤儿引用、混合合集里的书 /
+/// 视频都不算）。游戏库页与游戏详情页的「加入合集」共用它计数（BUG-3361）。
+bool isGameCollectionMemberVisible({
+  required List<GalgameEntry> games,
+  required String mediaType,
+  required String entryKey,
+}) =>
+    MediaKind.tryParse(mediaType) == MediaKind.game &&
+    games.any((GalgameEntry g) => g.id == entryKey);
 
 /// 合集详情页的 game 成员卡（纯查找 + 纯 widget，顶层函数供 widget 测试直接驱动）。
 ///
@@ -2121,6 +2163,7 @@ class _GameCard extends StatelessWidget {
     required this.onScrape,
     required this.onAddToCollection,
     required this.onEditTags,
+    required this.onEditPrivacy,
     required this.onEditUpscaling,
     required this.onEditJapaneseLocale,
     required this.onEditLanguage,
@@ -2151,6 +2194,9 @@ class _GameCard extends StatelessWidget {
   final VoidCallback onScrape;
   final VoidCallback onAddToCollection;
   final VoidCallback onEditTags;
+
+  /// 打开这个游戏的「私密」开关（不上传排行榜、不推 Bangumi）。
+  final VoidCallback onEditPrivacy;
 
   /// 改这个游戏的窗口超分档位（Windows-only，见 [_menuItems]）。
   final VoidCallback onEditUpscaling;
@@ -2300,6 +2346,12 @@ class _GameCard extends StatelessWidget {
           danger: false,
         ),
         (
+          action: 'privacy',
+          label: t.media_privacy_action,
+          icon: FushiIcons.lock,
+          danger: false,
+        ),
+        (
           action: 'language',
           label: t.book_language_action,
           icon: FushiIcons.language,
@@ -2368,6 +2420,8 @@ class _GameCard extends StatelessWidget {
         onAddToCollection();
       case 'tags':
         onEditTags();
+      case 'privacy':
+        onEditPrivacy();
       case 'upscaling':
         onEditUpscaling();
       case 'japanese_locale':

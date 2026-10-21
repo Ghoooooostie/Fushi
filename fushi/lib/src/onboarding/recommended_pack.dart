@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:crypto/crypto.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:fushi/src/utils/misc/download_plan.dart';
 import 'package:fushi/src/utils/misc/error_log_service.dart';
+import 'package:fushi_compute/fushi_compute.dart';
 import 'package:fushi_engine/utils/misc/resumable_downloader.dart';
 import 'package:fushi/src/utils/misc/segmented_downloader.dart';
 import 'package:fushi_engine/utils/net/app_http.dart';
@@ -198,8 +198,23 @@ class RecommendedPackManifest {
       base.endsWith('/') ? '$base$name' : '$base/$name';
 }
 
+/// 清单里「deflate 压缩版推荐包」子清单的键。
+///
+/// 同一份 `manifest.json` 同时描述两个包：顶层字段是 STORE 打包的旧包，这个键下
+/// 是字段完全同构的 deflate 包（音频库 / 词典按条目 deflate，体积小约 1.8 GB）。
+///
+/// **为什么不能让所有版本都下 deflate 包**：旧版导入走 archive 3.6.1 的纯 Dart
+/// `Inflate.stream`，写文件时每个回溯引用都要 flush + seek + 读，实测 1.13 MB/s，
+/// 8 GB 要解两个多小时。新版改用原生 zlib（`restore.part.dart` 的
+/// `_inflateRawDeflateToFile`）后才吃得下。旧版解析器只认顶层字段、忽略未知键，
+/// 所以加这个键对旧版是零影响——它们继续拿顶层的 STORE 包。
+const String kRecommendedPackDeflateManifestKey = 'deflate_pack';
+
 /// 解析清单 json（纯函数，便于单测）。结构不合法 / url 缺失或非 https 时返回
 /// null（调用方回退内置直链）——清单是优化路径，绝不因它坏掉挡住下载。
+///
+/// 带合法的 [kRecommendedPackDeflateManifestKey] 子清单时返回它（本版本能快速
+/// 导入 deflate 包）；子清单缺失或不合法时退回顶层的 STORE 包，而不是整体失败。
 RecommendedPackManifest? parseRecommendedPackManifest(String jsonText) {
   final Object? decoded;
   try {
@@ -208,6 +223,16 @@ RecommendedPackManifest? parseRecommendedPackManifest(String jsonText) {
     return null;
   }
   if (decoded is! Map<String, dynamic>) return null;
+  final RecommendedPackManifest? storePack = _parseManifestObject(decoded);
+  final Object? deflate = decoded[kRecommendedPackDeflateManifestKey];
+  if (deflate is Map<String, dynamic>) {
+    final RecommendedPackManifest? deflatePack = _parseManifestObject(deflate);
+    if (deflatePack != null) return deflatePack;
+  }
+  return storePack;
+}
+
+RecommendedPackManifest? _parseManifestObject(Map<String, dynamic> decoded) {
   final Object? url = decoded['url'];
   if (url is! String || !url.startsWith('https://')) return null;
   final String? sha256Hex = _parseSha256(decoded['sha256']);
@@ -809,8 +834,8 @@ class RecommendedPackDownloader {
       );
     }
     if (sha256Hex != null) {
-      final Digest digest = await sha256.bind(_partFile.openRead()).first;
-      if (digest.toString() != sha256Hex) {
+      final String digest = await ffcSha256File(_partFile.path);
+      if (digest != sha256Hex) {
         // 坏包不留：删掉半截，下次从头下（续传一个已知坏的文件没有意义）。
         _partFile.deleteSync();
         _writeSingleStreamValidator(null);

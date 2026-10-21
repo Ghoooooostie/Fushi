@@ -62,8 +62,24 @@ enum ModuleId {
   /// 弹窗、设置 → 查词 分类（词典导入管理、音频来源）一律保留。
   lookup('module_dictionaries_enabled'),
 
-  /// 浏览器扩展管理页与本机扩展服务。**仅桌面**。
-  browserExtension('module_browser_extension_enabled'),
+  /// 复习（Fushi 内置 SRS，FSRS-7 排程）：牌组、复习、笔记编辑与浏览。
+  ///
+  /// **出厂默认开**（[defaultEnabled]，所有者 2026-10-16「默认就是 fushi srs」，取代
+  /// 10-14 的默认关）。升级上来的老用户由 `PreferencesRepository
+  /// .settleSrsMiningTargetInstallDefault` 一次性显式写成关（老用户不提醒：自己去设置
+  /// 打开才看得到）。新手引导不提供它的方格，由「复习方式」一步写入（选 Fushi 复习 =
+  /// 开，见 `onboarding_steps.dart` 的 `OnboardingReviewMethod`）。
+  srs('module_srs_enabled'),
+
+  /// 浏览器：app 内浏览网站（通用浏览、网页视频站点、网页漫画）+ 浏览器扩展管理页
+  /// 与本机扩展服务。**五端都有**；子页各自再按平台门控（见 `WebHubSection`，
+  /// 浏览器扩展只在桌面，见 [browserExtensionSupportedOn]）。
+  ///
+  /// 2026-10-19 由「浏览器扩展」模块升级而来（用户：app 内浏览取代扩展成为主路径，
+  /// 扩展降为次级子页；「改名成浏览器，这样就能重置一下这个开关」）：持久化键
+  /// **刻意换新** `module_web_enabled`，旧键 `module_browser_extension_enabled`
+  /// 不再读取——老用户关过扩展模块的，升级后这个新模块按出厂默认开。
+  web('module_web_enabled'),
 
   /// 听书：有声书播放/导入、语音转录（ASR）、悬浮歌词。
   listening('module_listening_enabled'),
@@ -119,19 +135,46 @@ enum ModuleId {
   }) => switch (this) {
     // 每个平台都有 games 模块，只是形态不同（见 [GamesModuleForm.on]）。
     ModuleId.games => true,
-    // 手机浏览器不支持加载未解压扩展，故按平台而非实验开关门控。
-    ModuleId.browserExtension => isDesktop,
     // 「浏览」装的是发现页、三域在线扩展源与通用 torrent / 磁力下载器，都不能进
     // App Store。判据不在这里写死，委托给合规边界的唯一真相源；各页签内的每个域
     // 仍各自再问对应的 [StoreRestrictedCapability]，两处若各判各的就会分头漂移。
     ModuleId.browse => StoreRestrictedCapability.downloads.availableOn(
       isIOS: isIOS,
     ),
+    // 通用 app 内浏览器不属于 App Store 受限能力（受限的在线漫画源动作由子页自己问
+    // [StoreRestrictedCapability.onlineMangaSource]）；浏览器扩展子页另按
+    // [browserExtensionSupportedOn] 只在桌面出现。
+    ModuleId.web => true,
     ModuleId.home ||
     ModuleId.books ||
     ModuleId.manga ||
     ModuleId.video ||
     ModuleId.lookup ||
+    // 复习不是 App Store 受限能力（纯本地数据 + 用户自己的同步后端），五端都有。
+    ModuleId.srs ||
+    ModuleId.listening ||
+    ModuleId.cardCreation ||
+    ModuleId.services ||
+    ModuleId.ai ||
+    ModuleId.sync => true,
+  };
+
+  /// 偏好里还没有这个键时的取值（出厂默认）。
+  ///
+  /// 全部默认开（[srs] 自 2026-10-16 起也默认开：新装默认就用 Fushi 复习；老用户的
+  /// 「默认关」由一次性迁移显式写入，见 [srs] 的说明）。读取端
+  /// （`PreferencesRepository.moduleEnabled`、偏好未就绪时的 `AppModel.moduleEnabled`）
+  /// 与设置开关的 `defaultValue` 一律取这里，不各写一份。
+  bool get defaultEnabled => switch (this) {
+    ModuleId.srs ||
+    ModuleId.home ||
+    ModuleId.books ||
+    ModuleId.manga ||
+    ModuleId.video ||
+    ModuleId.games ||
+    ModuleId.browse ||
+    ModuleId.lookup ||
+    ModuleId.web ||
     ModuleId.listening ||
     ModuleId.cardCreation ||
     ModuleId.services ||
@@ -151,6 +194,58 @@ enum ModuleId {
   /// 全部模块的持久化键集合。备份/Profile 的排除名单按它构造，避免再手抄一份。
   static Set<String> get allPrefKeys =>
       ModuleId.values.map((ModuleId id) => id.prefKey).toSet();
+
+  /// 用户排过的模块顺序（设置 → 外观 → 功能模块 里拖拽排序；底栏 / 侧栏 tab
+  /// 按它排）。值是逗号分隔的 [prefKey]——用冻结的持久化键而不是 `.name`，枚举
+  /// 改名（如 downloads → browse）不会把用户排好的顺序打乱。
+  static const String orderPrefKey = 'module_nav_order';
+
+  /// 启动页：打开 app 时落在哪个模块的 tab（设置 → 系统 → 启动页）。值是该模块的
+  /// [prefKey]（与 [orderPrefKey] 同理用冻结键而非 `.name`），空串 = 默认（底栏
+  /// 第一个可见页）。所选模块被关掉或平台上不存在时回退到默认，见 `homeInitialTab`。
+  ///
+  /// 取代旧开关 `startup_default_dictionary_tab`（「启动时打开查词」）：本键从未写过
+  /// 时沿用旧开关（开着 = 查词），见 `PreferencesRepository.startupModule`。
+  static const String startupPrefKey = 'startup_module';
+
+  /// 「功能模块」全部设备本地键：开关 + 顺序 + 启动页。与开关同理，顺序与启动页描述
+  /// 的是**这台设备**的入口布局，不随 Profile 走、不进备份（见 `profile_keys.dart`
+  /// 与 `backup_service.dart` 的排除名单）。
+  static Set<String> get devicePrefKeys => <String>{
+    ...allPrefKeys,
+    orderPrefKey,
+    startupPrefKey,
+  };
+
+  /// 解析 [orderPrefKey] 的存储值。未知键（对端新模块 / 已删模块）与重复项直接
+  /// 跳过，**绝不抛异常**；结果只是用户意愿，补全见 [orderModules]。
+  static List<ModuleId> parseOrder(String? stored) {
+    if (stored == null || stored.isEmpty) return const <ModuleId>[];
+    final List<ModuleId> out = <ModuleId>[];
+    for (final String key in stored.split(',')) {
+      final ModuleId? id = tryParsePrefKey(key.trim());
+      if (id != null && !out.contains(id)) out.add(id);
+    }
+    return out;
+  }
+
+  /// [parseOrder] 的逆。
+  static String encodeOrder(Iterable<ModuleId> order) =>
+      order.map((ModuleId id) => id.prefKey).join(',');
+}
+
+/// 把用户排过的顺序补全成**覆盖全部 [ModuleId] 的完整序列**：[preferred] 去重后
+/// 打头，没排过的模块（新加的模块、旧版从没排过）按枚举顺序接在后面。空列表 =
+/// 纯枚举顺序，即排序功能上线前的底栏顺序。
+List<ModuleId> orderModules(Iterable<ModuleId> preferred) {
+  final List<ModuleId> out = <ModuleId>[];
+  for (final ModuleId id in preferred) {
+    if (!out.contains(id)) out.add(id);
+  }
+  for (final ModuleId id in ModuleId.values) {
+    if (!out.contains(id)) out.add(id);
+  }
+  return out;
 }
 
 /// [ModuleId.games] 在当前平台上的形态。
@@ -177,10 +272,18 @@ enum GamesModuleForm {
 /// 全 app 的门控一律读它，不再各自组合 pref + 平台。
 @immutable
 class ModuleVisibility {
-  const ModuleVisibility(this.enabled);
+  const ModuleVisibility(this.enabled, {this.order = const <ModuleId>[]});
 
   /// 当前可见的模块集合。
   final Set<ModuleId> enabled;
+
+  /// 用户排过的模块顺序（只是意愿：可含平台上不存在或被关掉的模块，也可不全）。
+  /// 消费端读补全后的 [ordered]，不直接读本字段。
+  final List<ModuleId> order;
+
+  /// 全部模块的展示顺序（[order] 打头，余下按枚举顺序），底栏 / 侧栏 tab 顺序由
+  /// 它导出（`homeActiveTabs`）。
+  List<ModuleId> get ordered => orderModules(order);
 
   /// 全部模块都可见（平台可用的那些）。仅供测试与默认值使用。
   factory ModuleVisibility.all({
@@ -208,6 +311,7 @@ class ModuleVisibility {
     required bool isDesktop,
     required bool isIOS,
     required bool isAndroid,
+    List<ModuleId> order = const <ModuleId>[],
   }) {
     final Set<ModuleId> enabled = <ModuleId>{};
     for (final ModuleId id in ModuleId.values) {
@@ -222,7 +326,7 @@ class ModuleVisibility {
       if (!prefOf(id)) continue;
       enabled.add(id);
     }
-    return ModuleVisibility(enabled);
+    return ModuleVisibility(enabled, order: order);
   }
 
   bool isEnabled(ModuleId id) => enabled.contains(id);
@@ -233,12 +337,22 @@ class ModuleVisibility {
 
   @override
   bool operator ==(Object other) =>
-      other is ModuleVisibility && setEquals(other.enabled, enabled);
+      other is ModuleVisibility &&
+      setEquals(other.enabled, enabled) &&
+      listEquals(other.ordered, ordered);
 
   @override
-  int get hashCode => Object.hashAllUnordered(enabled);
+  int get hashCode =>
+      Object.hash(Object.hashAllUnordered(enabled), Object.hashAll(ordered));
 
   @override
   String toString() =>
       'ModuleVisibility(${enabled.map((ModuleId e) => e.name).join(', ')})';
 }
+
+/// 浏览器扩展（「浏览器」模块的次级子页、扩展安装引导、扩展副本刷新）在本平台是否
+/// 存在：手机浏览器不支持加载未解压扩展，故只在桌面。
+///
+/// 2026-10-19 前这条判据就是整个模块的 `availableOn`；模块改为五端都有后，扩展
+/// 相关的消费端一律问这里，不各自写 `isDesktop`。
+bool browserExtensionSupportedOn({required bool isDesktop}) => isDesktop;

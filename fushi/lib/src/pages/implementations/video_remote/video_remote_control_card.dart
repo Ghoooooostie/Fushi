@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:fushi/i18n/strings.g.dart';
@@ -9,7 +10,11 @@ import 'package:fushi/src/utils/components/fushi_motion_tokens.dart';
 import 'package:fushi/src/utils/components/fushi_press_scale.dart';
 import 'package:fushi/src/utils/components/fushi_typography.dart';
 import 'package:fushi/src/utils/components/glass/fushi_expressive.dart';
+import 'package:fushi/src/utils/adaptive/adaptive_platform.dart'
+    show isEinkTheme, isGlassDesign;
 import 'package:fushi/src/utils/components/glass/fushi_glass_buttons.dart';
+import 'package:fushi/src/utils/components/glass/fushi_glass_toggles.dart'
+    show FushiAppleSlider;
 import 'package:fushi/src/utils/components/glass/fushi_glass_feedback.dart'
     show FushiTooltip;
 import 'package:fushi/src/utils/components/glass/fushi_icon.dart';
@@ -119,18 +124,16 @@ class VideoRemoteControlCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               if (clock != null)
-                FushiWavySeekBar(
+                VideoRemoteSeekBar(
                   key: const ValueKey<String>('video-remote-seek-bar'),
                   clock: clock,
                   isPlaying: nowPlaying.isPlaying,
                   onSeek: onSeek,
                   strokeWidth: 4,
                   barHeight: 28,
-                  animateWave: false,
-                  debugLabel: 'video-remote-seek',
                 ),
               const SizedBox(height: 6),
-              Center(child: _primaryGroup(rows.primary, playSize: 64)),
+              Center(child: _primaryGroup(context, rows.primary, playSize: 64)),
               if (rows.secondary.isNotEmpty) ...<Widget>[
                 const SizedBox(height: 6),
                 _SecondaryIconRow(
@@ -178,7 +181,10 @@ class VideoRemoteControlCard extends StatelessWidget {
     );
   }
 
+  /// 主控制组：播放键是最强调的填充形变键，其余（上一句 / 下一句与用户拖进
+  /// 这一行的任意按钮）统一 M size tonal 容器，同尺寸同形状成一组。
   Widget _primaryGroup(
+    BuildContext context,
     List<VideoRemoteControlItem> items, {
     required double playSize,
   }) {
@@ -201,6 +207,10 @@ class VideoRemoteControlCard extends StatelessWidget {
               size: FushiIconButtonSize.m,
               tooltip: _tooltip(item),
               isSelected: _toggleState(item),
+              style: videoRemotePrimaryToggleStyle(
+                context,
+                isToggle: _toggleState(item) != null,
+              ),
               onPressed: _handler(item),
               icon: FushiIcon(
                 videoRemoteControlIcon(
@@ -226,6 +236,10 @@ class VideoRemoteControlCard extends StatelessWidget {
     );
     if (item == VideoRemoteControlItem.speed) {
       return '$label ${formatVideoRemoteSpeed(nowPlaying.speed)}';
+    }
+    final int? volume = nowPlaying.volume;
+    if (item == VideoRemoteControlItem.volume && volume != null) {
+      return '$label $volume';
     }
     return label;
   }
@@ -295,21 +309,23 @@ class VideoRemoteControlCard extends StatelessWidget {
               ],
               if (clock != null) ...<Widget>[
                 const SizedBox(height: 16),
-                FushiWavySeekBar(
+                VideoRemoteSeekBar(
                   key: const ValueKey<String>('video-remote-seek-bar'),
                   clock: clock,
                   isPlaying: nowPlaying.isPlaying,
                   onSeek: onSeek,
                   strokeWidth: 6,
                   barHeight: 40,
-                  animateWave: false,
-                  debugLabel: 'video-remote-seek',
                 ),
               ],
               const SizedBox(height: 12),
               FittedBox(
                 fit: BoxFit.scaleDown,
-                child: _primaryGroup(layout.primaryItems, playSize: 80),
+                child: _primaryGroup(
+                  context,
+                  layout.primaryItems,
+                  playSize: 80,
+                ),
               ),
               if (layout.secondaryItems.isNotEmpty) ...<Widget>[
                 const SizedBox(height: 16),
@@ -345,6 +361,51 @@ class VideoRemoteControlCard extends StatelessWidget {
       },
     );
   }
+}
+
+/// 主控制组里开关类按钮（收藏 / 字幕显隐）的 MD3 着色。
+///
+/// M3E tonal 图标按钮的 toggle 未选态退成 surfaceContainer——正好是遥控卡
+/// 自身的底色（[fushiFloatingToolbarPalette] 的 container），于是开关键放进
+/// 主控制行、关着时只剩一个裸图标，和旁边上一句 / 下一句的 tonal 容器不成组
+/// （BUG-3495）。这里让它无论开关都铺与前后句同一个 secondaryContainer：开 /
+/// 关由图标（实心 / 空心）与 M3E 选中形状（圆 → 方圆角）区分，选中语义仍走
+/// `isSelected`。
+///
+/// 非开关按钮、Apple 设计系统（tonal = 中性 bordered 灰底圆钮，未选与前后句
+/// 本就同色）、墨水屏（不套 Expressive 配色）返回 null，沿用组件默认。
+@visibleForTesting
+ButtonStyle? videoRemotePrimaryToggleStyle(
+  BuildContext context, {
+  required bool isToggle,
+}) {
+  if (!isToggle || isGlassDesign(context) || isEinkTheme(context)) return null;
+  final ColorScheme cs = Theme.of(context).colorScheme;
+  Color foreground(Set<WidgetState> states) =>
+      states.contains(WidgetState.disabled)
+      ? cs.onSurface.withValues(alpha: 0.38)
+      : cs.onSecondaryContainer;
+  return ButtonStyle(
+    backgroundColor: WidgetStateProperty.resolveWith<Color?>(
+      (Set<WidgetState> states) => states.contains(WidgetState.disabled)
+          ? cs.onSurface.withValues(alpha: 0.12)
+          : cs.secondaryContainer,
+    ),
+    foregroundColor: WidgetStateProperty.resolveWith<Color?>(foreground),
+    overlayColor: WidgetStateProperty.resolveWith<Color?>((
+      Set<WidgetState> states,
+    ) {
+      final Color fg = foreground(states);
+      if (states.contains(WidgetState.pressed) ||
+          states.contains(WidgetState.focused)) {
+        return fg.withValues(alpha: 0.1);
+      }
+      if (states.contains(WidgetState.hovered)) {
+        return fg.withValues(alpha: 0.08);
+      }
+      return null;
+    }),
+  );
 }
 
 /// 竖屏次组：一排纯图标按钮（每颗 48 命中区，不画分隔线），放不下的按钮收进
@@ -681,6 +742,137 @@ class _HostChip extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// 遥控卡的进度条：Apple 设计系统用 [FushiAppleSlider]（iOS 滑块，4px 细轨 +
+/// 白圆钮），其余（MD3）用 M3E 的 [FushiWavySeekBar]（静态波形，不逐帧重建）。
+///
+/// 两者共用同一个 [FushiPlaybackClock]；Apple 分支每 250ms 轮询一次位置（与
+/// 静态波形同节奏），拖动中显示本地值，松手才 [onSeek]。
+class VideoRemoteSeekBar extends StatefulWidget {
+  const VideoRemoteSeekBar({
+    super.key,
+    required this.clock,
+    required this.isPlaying,
+    required this.onSeek,
+    required this.strokeWidth,
+    required this.barHeight,
+  });
+
+  final FushiPlaybackClock clock;
+  final bool isPlaying;
+  final ValueChanged<Duration>? onSeek;
+  final double strokeWidth;
+  final double barHeight;
+
+  @override
+  State<VideoRemoteSeekBar> createState() => _VideoRemoteSeekBarState();
+}
+
+class _VideoRemoteSeekBarState extends State<VideoRemoteSeekBar> {
+  Timer? _poll;
+
+  /// 拖动中的比例（null = 跟随播放器）。
+  double? _drag;
+
+  /// 松手后播放器回报位置追上来之前先显示的目标比例。
+  double? _pending;
+  DateTime _pendingAt = DateTime.fromMillisecondsSinceEpoch(0);
+
+  @override
+  void initState() {
+    super.initState();
+    _poll = Timer.periodic(const Duration(milliseconds: 250), (Timer _) {
+      if (mounted && _drag == null) setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    _poll?.cancel();
+    super.dispose();
+  }
+
+  double _fraction() {
+    final double? drag = _drag;
+    if (drag != null) return drag;
+    final int total = widget.clock.duration.inMilliseconds;
+    final double live = total > 0
+        ? (widget.clock.position.inMilliseconds / total).clamp(0.0, 1.0)
+        : 0.0;
+    final double? pending = _pending;
+    if (pending != null) {
+      final bool arrived = (live - pending).abs() < 0.01;
+      final bool expired =
+          DateTime.now().difference(_pendingAt) >
+          const Duration(milliseconds: 1200);
+      if (arrived || expired) {
+        _pending = null;
+      } else {
+        return pending;
+      }
+    }
+    return live;
+  }
+
+  void _commit(double fraction) {
+    final ValueChanged<Duration>? onSeek = widget.onSeek;
+    final int total = widget.clock.duration.inMilliseconds;
+    setState(() {
+      _drag = null;
+      _pending = fraction;
+      _pendingAt = DateTime.now();
+    });
+    if (onSeek != null && total > 0) {
+      onSeek(Duration(milliseconds: (total * fraction).round()));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!isGlassDesign(context)) {
+      return FushiWavySeekBar(
+        clock: widget.clock,
+        isPlaying: widget.isPlaying,
+        onSeek: widget.onSeek,
+        strokeWidth: widget.strokeWidth,
+        barHeight: widget.barHeight,
+        animateWave: false,
+        debugLabel: 'video-remote-seek',
+      );
+    }
+    final Duration duration = widget.clock.duration;
+    final double fraction = _fraction();
+    final Duration shown = Duration(
+      milliseconds: (duration.inMilliseconds * fraction).round(),
+    );
+    final TextStyle? timeStyle = Theme.of(context).textTheme.labelSmall
+        ?.copyWith(
+          fontFeatures: const <FontFeature>[FontFeature.tabularFigures()],
+        );
+    final bool seekable = widget.onSeek != null && duration > Duration.zero;
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        FushiAppleSlider(
+          value: fraction,
+          onChanged: seekable ? (double v) => setState(() => _drag = v) : null,
+          onChangeEnd: seekable ? _commit : null,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(formatFushiPlaybackTime(shown), style: timeStyle),
+            Text(
+              '-${formatFushiPlaybackTime(duration - shown)}',
+              style: timeStyle,
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

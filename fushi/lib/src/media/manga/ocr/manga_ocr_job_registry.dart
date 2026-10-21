@@ -96,6 +96,7 @@ class MangaOcrRunningJob {
       MangaOcrBackgroundEvent.progress(
         pagesDone: last?.pagesDone ?? 0,
         pagesTotal: last?.pagesTotal ?? 0,
+        uploading: last?.uploading ?? false,
         pageIndex: update.pageIndex,
         page: update.page,
       ),
@@ -179,7 +180,7 @@ int resolveMangaOcrJobConcurrency({
 /// 手动档至少给到 4（放开前的上限；已存 4 的用户不能被悄悄降档）。
 const int kMangaOcrMinSelectableTasks = 4;
 
-/// 手动档的硬顶：每个任务一个 isolate + 一整套 ORT 会话（Baberu 模型约 284 MB），
+/// 手动档的硬顶：每个任务一个 isolate + 一整套 ORT 会话（逐列 CTC 一套约 42 MB），
 /// 再多就是内存问题而不是 CPU 问题。偏好存储也按它截断。
 const int kMangaOcrMaxSelectableTasks = 16;
 
@@ -495,12 +496,13 @@ class MangaOcrJobRegistry {
     // 整卷落盘与在线几何回填共用同一把 per-path 写锁：两者都是整份读-改-写，
     // 交叠会互相覆盖。
     final String target = running.mangaJsonPath;
-    await runExclusiveOnMangaJson<void>(
+    // 落盘的是并进 PDF 文字层之后的那份：阅读页拿 result 刷新显示，必须和磁盘一致。
+    final MokuroPayload written = await runExclusiveOnMangaJson<MokuroPayload>(
       target,
       () => writeMangaJsonAtomically(target, payload),
     );
-    running._result = payload;
-    follower?.onPersisted(target, payload);
+    running._result = written;
+    follower?.onPersisted(target, written);
     return event;
   }
 }

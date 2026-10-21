@@ -7,6 +7,8 @@ import 'package:fushi/src/media/media_source.dart' show dbSourcePrefKey;
 import 'package:fushi/src/pages/implementations/font_preview/font_file_metadata.dart'
     show FontFaceWeight, readFontFaceWeightSync;
 import 'package:fushi/src/reader/font_catalog.dart';
+import 'package:fushi/src/reader/highlight_stroke_style.dart';
+import 'package:fushi/src/reader/page_turn_animation.dart';
 import 'package:fushi/src/reader/reader_chrome_floating.dart';
 import 'package:fushi/src/reader/reader_engine_config.dart'
     show kDefaultTranslationColor, kDefaultTranslationOpacity;
@@ -19,7 +21,8 @@ import 'package:fushi_engine/translation/translation_models.dart'
 
 /// The independent font targets a user can configure (TODO-049 / TODO-864):
 /// 软件系统字体 ([appUi]) / 小说正文字体 ([body]) / 词典字体 ([dictionary]) /
-/// 视频字幕字体 ([videoSubtitle]) / 游戏查词窗口字体 ([gameLookup]). Each maps to its own persisted
+/// 视频字幕字体 ([videoSubtitle]) / 游戏查词窗口字体 ([gameLookup]) /
+/// 有声书悬浮字幕字体 ([floatingLyric]). Each maps to its own persisted
 /// `[{name,path,enabled}]` list; see [ReaderSettings.fontKeyForTarget].
 enum FontTarget {
   /// App-wide UI (ThemeData) font — menus, buttons, settings, etc.
@@ -32,7 +35,7 @@ enum FontTarget {
   dictionary,
 
   /// Video subtitle font (Flutter `VideoSubtitleOverlay` `TextStyle.fontFamily`,
-  /// not libmpv — Hibiki renders text subtitles in the Flutter layer). New in
+  /// not libmpv — Fushi renders text subtitles in the Flutter layer). New in
   /// TODO-864.
   videoSubtitle,
 
@@ -50,19 +53,34 @@ enum FontTarget {
   /// .resolveForNativeOverlay`）；缺字回退靠 native 追加的系统字体集，
   /// **不是**用户列表里的第二条。语义与 [appUi] 的整链回退不同。
   gameLookup,
+
+  /// Windows 有声书**悬浮字幕**（native 分层窗 `FloatingLyricWindow`，与
+  /// [gameLookup] 同一个原生窗类，DirectWrite 自绘）的字体。
+  ///
+  /// 语义、平台可用性（只 Windows）与导入格式限制都与 [gameLookup] 相同：
+  /// native 只吃**第一条可用**的 family/file，且只认 `.ttf/.otf/.ttc`；
+  /// 缺字回退靠 native 追加的系统字体集。
+  floatingLyric,
+
+  /// 复习（SRS）「Fushi 卡片」卡面的字体：卡面是 WebView 渲染，整条字体链按
+  /// 字形回落，语义与 [body]（阅读器正文）相同——不是 native 单字体表面。
+  /// 五平台通用。
+  srsCard
 }
 
 /// 这个用途在当前平台**是否真有消费端**。
 ///
-/// [FontTarget.gameLookup] 只有 Windows 有 native 消费端（分层窗 DirectWrite），
+/// [FontTarget.gameLookup] / [FontTarget.floatingLyric] 只有 Windows 有 native
+/// 消费端（分层窗 DirectWrite），
 /// 其余平台勾上等于写一个永远没人读的偏好键——UI 必须据此隐藏，否则用户会以为
 /// 自己已经设好了。其余用途五平台通用。
 bool isFontTargetAvailableOnPlatform(FontTarget target) => switch (target) {
-      FontTarget.gameLookup => Platform.isWindows,
+      FontTarget.gameLookup || FontTarget.floatingLyric => Platform.isWindows,
       FontTarget.appUi ||
       FontTarget.body ||
       FontTarget.dictionary ||
-      FontTarget.videoSubtitle =>
+      FontTarget.videoSubtitle ||
+      FontTarget.srsCard =>
         true,
     };
 
@@ -308,6 +326,18 @@ class ReaderSettings {
   bool get lyricsSweep => _get<bool>('lyrics_sweep', true);
   Future<void> setLyricsSweep(bool v) => _set<bool>('lyrics_sweep', v);
 
+  /// 歌词模式在两句之间灰显没被任何字幕认领的原文（朗读者跳读 / 转录没对上）。
+  /// 默认 `true`；纯显示，不影响高亮、计时、统计。
+  bool get lyricsShowSkippedText =>
+      _get<bool>('lyrics_show_skipped_text', true);
+  Future<void> setLyricsShowSkippedText(bool v) =>
+      _set<bool>('lyrics_show_skipped_text', v);
+
+  /// 歌词模式宽屏双栏左右互换（默认 `false` = 封面与播放卡在左、歌词在右）。
+  bool get lyricsPanelMirrored => _get<bool>('lyrics_panel_mirrored', false);
+  Future<void> setLyricsPanelMirrored(bool v) =>
+      _set<bool>('lyrics_panel_mirrored', v);
+
   /// 有声书正文当前句是否铺底色。默认 `true` = 历史行为；关掉后只靠
   /// [audioHighlightTextColor]（未设时用高亮色本身）给字上色、不加底色。
   bool get audioHighlightBackground =>
@@ -319,6 +349,59 @@ class ReaderSettings {
   int get audioHighlightTextColor => _get<int>('audio_highlight_text_color', 0);
   Future<void> setAudioHighlightTextColor(int v) =>
       _set<int>('audio_highlight_text_color', v);
+
+  /// 一类高亮的笔触配置：`<前缀>_style` / `_thickness` / `_opacity` / `_cover_ruby` /
+  /// `_roughness` / `_animate` 六个键，前缀见 [HighlightKind.prefPrefix]（收藏
+  /// `favorite_highlight`、查词 `lookup_highlight`、有声书 `audio_highlight`、搜索
+  /// `search_highlight`）。没写过的键取 [HighlightKind.defaults]。
+  HighlightStrokeConfig highlightStrokeConfig(HighlightKind kind) {
+    final String p = kind.prefPrefix;
+    final HighlightStrokeConfig d = kind.defaults;
+    return HighlightStrokeConfig(
+      style: HighlightStrokeStyle.fromWire(
+        _get<String>('${p}_style', d.style.wireName),
+      ),
+      thickness: _get<double>('${p}_thickness', d.thickness),
+      opacity: _get<double>('${p}_opacity', d.opacity),
+      coverRuby: _get<bool>('${p}_cover_ruby', d.coverRuby),
+      roughness: _get<double>('${p}_roughness', d.roughness),
+      animate: _get<bool>('${p}_animate', d.animate),
+    );
+  }
+
+  /// 写一类高亮的笔触配置（只写变了的键）。
+  Future<void> setHighlightStrokeConfig(
+    HighlightKind kind,
+    HighlightStrokeConfig next,
+  ) async {
+    final String p = kind.prefPrefix;
+    final HighlightStrokeConfig prev = highlightStrokeConfig(kind);
+    if (next.style != prev.style) {
+      await _set<String>('${p}_style', next.style.wireName);
+    }
+    if (next.thickness != prev.thickness) {
+      await _set<double>('${p}_thickness', next.thickness);
+    }
+    if (next.opacity != prev.opacity) {
+      await _set<double>('${p}_opacity', next.opacity);
+    }
+    if (next.coverRuby != prev.coverRuby) {
+      await _set<bool>('${p}_cover_ruby', next.coverRuby);
+    }
+    if (next.roughness != prev.roughness) {
+      await _set<double>('${p}_roughness', next.roughness);
+    }
+    if (next.animate != prev.animate) {
+      await _set<bool>('${p}_animate', next.animate);
+    }
+  }
+
+  /// 四类高亮的笔触配置（正文 CSS 生成器读它）。
+  Map<HighlightKind, HighlightStrokeConfig> get highlightStrokeConfigs =>
+      <HighlightKind, HighlightStrokeConfig>{
+        for (final HighlightKind kind in HighlightKind.values)
+          kind: highlightStrokeConfig(kind),
+      };
 
   double get lineHeight => _get<double>('line_height', 1.65);
   Future<void> setLineHeight(double v) => _set<double>('line_height', v);
@@ -463,6 +546,11 @@ class ReaderSettings {
 
   int get pageColumns => _get<int>('page_columns', 0);
   Future<void> setPageColumns(int v) => _set<int>('page_columns', v);
+
+  /// 「中缝折痕」显示风格：翻页模式一屏两栏时在两页之间画书脊阴影（见
+  /// [ReaderContentStyles.pageCreaseCss]）。默认关：不改变既有书面观感。
+  bool get pageCrease => _get<bool>('page_crease', false);
+  Future<void> setPageCrease(bool v) => _set<bool>('page_crease', v);
 
   /// `off`, `on`, or `auto`.
   ///
@@ -666,6 +754,45 @@ class ReaderSettings {
   Future<void> setWheelPageTurnInterval(int v) =>
       _set<int>('wheel_page_turn_interval', v);
 
+  // ── 翻页动画（只在翻页 / paginated 模式生效）────────────────────────
+  // 值域与降级规则唯一出处 page_turn_animation.dart（与漫画阅读器共用）；小说默认淡入淡出。
+
+  static const String pageTurnAnimationKey = 'page_turn_animation';
+  static const String pageTurnAnimationSpeedKey = 'page_turn_animation_speed';
+  static const String pageTurnFollowDragKey = 'page_turn_follow_drag';
+
+  /// 小说阅读器翻页效果的出厂默认（用户拍板：淡入淡出）。
+  static const PageTurnAnimation defaultPageTurnAnimation =
+      PageTurnAnimation.fade;
+  static const PageTurnAnimationSpeed defaultPageTurnAnimationSpeed =
+      PageTurnAnimationSpeed.normal;
+  static const bool defaultPageTurnFollowDrag = true;
+
+  /// 用户选的翻页效果（未经墨水屏 / 减弱动态效果降级，降级见
+  /// [effectivePageTurnAnimation]）。存字符串 key，未知值回落默认。
+  PageTurnAnimation get pageTurnAnimation => PageTurnAnimation.fromKey(
+    _cache[pageTurnAnimationKey]?.toString(),
+    fallback: defaultPageTurnAnimation,
+  );
+  Future<void> setPageTurnAnimation(PageTurnAnimation v) =>
+      _set<String>(pageTurnAnimationKey, v.key);
+
+  PageTurnAnimationSpeed get pageTurnAnimationSpeed {
+    final dynamic stored = _cache[pageTurnAnimationSpeedKey];
+    return stored == null
+        ? defaultPageTurnAnimationSpeed
+        : PageTurnAnimationSpeed.fromKey(stored.toString());
+  }
+
+  Future<void> setPageTurnAnimationSpeed(PageTurnAnimationSpeed v) =>
+      _set<String>(pageTurnAnimationSpeedKey, v.key);
+
+  /// 拖动跟手（只对平移 / 覆盖两种有位移的效果有意义）。
+  bool get pageTurnFollowDrag =>
+      _get<bool>(pageTurnFollowDragKey, defaultPageTurnFollowDrag);
+  Future<void> setPageTurnFollowDrag(bool v) =>
+      _set<bool>(pageTurnFollowDragKey, v);
+
   bool get highlightOnTap => _get<bool>('highlight_on_tap', true);
   Future<void> toggleHighlightOnTap() =>
       _set<bool>('highlight_on_tap', !highlightOnTap);
@@ -777,6 +904,14 @@ class ReaderSettings {
   /// Persistence key for the Windows galgame Hook text / lookup overlay font.
   static const String fontKeyGameLookup = 'game_lookup_fonts';
 
+  /// Persistence key for the Windows audiobook floating-subtitle overlay font.
+  /// Backs [FontTarget.floatingLyric].
+  static const String fontKeyFloatingLyric = 'floating_lyric_fonts';
+
+  /// Persistence key for the SRS "Fushi Card" card-face font chain.
+  /// Backs [FontTarget.srsCard].
+  static const String fontKeySrsCard = 'srs_card_fonts';
+
   /// Persistence key for the shared font catalog.
   static const String fontCatalogKey = 'font_catalog';
 
@@ -789,6 +924,8 @@ class ReaderSettings {
     fontKeyDictionary,
     fontKeyVideoSubtitle,
     fontKeyGameLookup,
+    fontKeyFloatingLyric,
+    fontKeySrsCard
   ];
 
   bool get _hasAnyFontPrefs =>
@@ -824,6 +961,10 @@ class ReaderSettings {
         fontKeyVideoSubtitle: _legacyFontListForKey(fontKeyVideoSubtitle),
       if (_cache.containsKey(fontKeyGameLookup))
         fontKeyGameLookup: _legacyFontListForKey(fontKeyGameLookup),
+      if (_cache.containsKey(fontKeyFloatingLyric))
+        fontKeyFloatingLyric: _legacyFontListForKey(fontKeyFloatingLyric),
+      if (_cache.containsKey(fontKeySrsCard))
+        fontKeySrsCard: _legacyFontListForKey(fontKeySrsCard)
     };
   }
 
@@ -991,6 +1132,15 @@ class ReaderSettings {
   List<Map<String, dynamic>> get gameLookupFonts =>
       _fontListForTargetKey(fontKeyGameLookup);
 
+  /// Windows audiobook floating-subtitle overlay font list. Empty when unset so
+  /// the native renderer keeps its default family.
+  List<Map<String, dynamic>> get floatingLyricFonts =>
+      _fontListForTargetKey(fontKeyFloatingLyric);
+
+  /// SRS "Fushi Card" card-face font chain (WebView, glyph-fallback order).
+  List<Map<String, dynamic>> get srsCardFonts =>
+      _fontListForTargetKey(fontKeySrsCard);
+
   /// Resolves the persisted font list for a [FontTarget].
   List<Map<String, dynamic>> fontsForTarget(FontTarget target) =>
       switch (target) {
@@ -999,6 +1149,8 @@ class ReaderSettings {
         FontTarget.dictionary => dictionaryFonts,
         FontTarget.videoSubtitle => videoSubtitleFonts,
         FontTarget.gameLookup => gameLookupFonts,
+        FontTarget.floatingLyric => floatingLyricFonts,
+        FontTarget.srsCard => srsCardFonts
       };
 
   /// CSS font-family string and @font-face declarations for the BODY fonts.
@@ -1044,6 +1196,8 @@ class ReaderSettings {
         FontTarget.dictionary => fontKeyDictionary,
         FontTarget.videoSubtitle => fontKeyVideoSubtitle,
         FontTarget.gameLookup => fontKeyGameLookup,
+        FontTarget.floatingLyric => fontKeyFloatingLyric,
+        FontTarget.srsCard => fontKeySrsCard
       };
 
   /// Persists the whole list for [target]. The body convenience overload
@@ -1264,12 +1418,15 @@ class ReaderCustomFontCss {
   // WKWebView 与 Linux 的 WPE WebKit 只能注册自定义 scheme、拦不到 https，
   // 与 `webViewUsesCustomSchemeTransport` 同一判据（这里用 defaultTargetPlatform
   // 以便测试覆写平台）。
-  static String fontUrl(String path) => '${switch (defaultTargetPlatform) {
-        TargetPlatform.macOS ||
-        TargetPlatform.iOS ||
-        TargetPlatform.linux =>
-          kReaderResourceScheme,
+  static String fontUrl(String path) =>
+      resourceUrl('/fonts/${Uri.encodeComponent(path)}');
+
+  /// 阅读器资源 URL：[urlPath] 以 `/` 开头，走与 [fontUrl] 相同的 scheme / host，
+  /// 由阅读器的请求拦截器下发。
+  static String resourceUrl(String urlPath) =>
+      '${switch (defaultTargetPlatform) {
+        TargetPlatform.macOS || TargetPlatform.iOS || TargetPlatform.linux => kReaderResourceScheme,
         _ => 'https',
       }}'
-      '://$kReaderResourceHost/fonts/${Uri.encodeComponent(path)}';
+      '://$kReaderResourceHost$urlPath';
 }

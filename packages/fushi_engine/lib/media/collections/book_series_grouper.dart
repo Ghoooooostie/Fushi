@@ -57,8 +57,32 @@ class BookSeriesGrouper {
       if (v.members.any((m) => inCollection.contains(m.id))) continue;
       loose.putIfAbsent(v.groupKey, () => <_Volume>[]).add(v);
     }
+    if (loose.isEmpty) {
+      return (
+        createdCollectionIds: const <int>[],
+        updatedCollectionIds: const <int>[],
+      );
+    }
+    // 同名 playlist 一趟预取（与 getMediaCollectionByNaturalKey 同判据：名字精确相等、
+    // 取 id 最小者）。互联 host 每次出清单都会调本方法，逐系列查一次会让大库（满架
+    // 单卷书）每刷一次清单打上千次查询。
+    final Map<String, MediaCollectionRow> playlistByName =
+        <String, MediaCollectionRow>{};
+    for (final MediaCollectionRow c
+        in (await _database.getAllMediaCollections())
+          ..sort((a, b) => a.id.compareTo(b.id))) {
+      if (c.collectionType == 'playlist') {
+        playlistByName.putIfAbsent(c.name, () => c);
+      }
+    }
     for (final List<_Volume> group in loose.values) {
-      final int? id = await _groupSeries(group, items, byMember, created);
+      final int? id = await _groupSeries(
+        group,
+        items,
+        byMember,
+        created,
+        playlistByName,
+      );
       if (id != null && !created.contains(id)) updated.add(id);
     }
     return (
@@ -71,7 +95,7 @@ class BookSeriesGrouper {
     final List<_Volume> out = <_Volume>[];
     final Map<String, _Volume> byBookKey = <String, _Volume>{};
     for (final EpubBookRow book in await _database.getAllEpubBooks()) {
-      if (_isOnlineManga(book.sourceMetadata)) continue;
+      if (isOnlineMangaSourceMetadata(book.sourceMetadata)) continue;
       final BookSeriesKey? key = parseBookSeriesKey(book.title);
       if (key == null) continue;
       final _Volume v = _Volume(
@@ -123,6 +147,7 @@ class BookSeriesGrouper {
     List<MediaCollectionItemRow> items,
     Map<String, _Volume> byMember,
     List<int> created,
+    Map<String, MediaCollectionRow> playlistByName,
   ) async {
     final String groupKey = volumes.first.groupKey;
     MediaCollectionRow? collection = await _collectionHoldingSeries(
@@ -131,10 +156,7 @@ class BookSeriesGrouper {
       byMember,
     );
     final String name = volumes.first.key.seriesTitle;
-    collection ??= await _database.getMediaCollectionByNaturalKey(
-      name,
-      'playlist',
-    );
+    collection ??= playlistByName[name];
     if (collection == null) {
       if (volumes.length < 2) return null;
       if (await _database.hasCollectionDeletionTombstone(name, 'playlist')) {
@@ -143,16 +165,31 @@ class BookSeriesGrouper {
       final int id = await _database.createMediaCollection(
         name,
         collectionType: 'playlist',
+        // v124（AI 整理库 spec §6）：规则建的合集归整理器管，分组键与 AI 整理同一
+        // 口径（系列名折叠），日文书 AI 给出的原名与它一致时天然认成一个。
+        origin: CollectionOrigin.rule,
+        organizeKey: titleOrganizeKey(
+          volumes.first.shelf == 'manga'
+              ? CollectionShelfDomain.manga.name
+              : CollectionShelfDomain.books.name,
+          name,
+        ),
       );
       created.add(id);
       collection = (await _database.getMediaCollectionById(id))!;
+      playlistByName[name] = collection;
     }
     final Set<String> removed = await _removedMembers(collection);
     bool added = false;
     for (final _Volume v in volumes) {
       for (final _Member m in v.members) {
         if (removed.contains('${m.kind.dbValue}|${m.tombstoneKey}')) continue;
-        await _database.addToCollection(collection.id, m.kind, m.uid);
+        await _database.addToCollection(
+          collection.id,
+          m.kind,
+          m.uid,
+          userIntent: false,
+        );
         added = true;
       }
     }
@@ -257,7 +294,9 @@ class _Volume {
   String get groupKey => '$shelf|${key.key}';
 }
 
-bool _isOnlineManga(String? sourceMetadata) {
+/// 在线漫画（Mihon / mokuro 在线源的书架条目）：不归组、不交 AI 整理——它们的
+/// 「卷」是在线章节容器，不是本地书。
+bool isOnlineMangaSourceMetadata(String? sourceMetadata) {
   if (sourceMetadata == null) return false;
   try {
     final Object? value = jsonDecode(sourceMetadata);
