@@ -38,6 +38,7 @@
     是 `ensure` 返回时就定下来的；现在用真实时长收口（估短了后半句没声、估长了多裁空白）。
   - 这是根因修复而非补丁：错的不是「某个坐标算错一位」，而是**用了一套与朗读分句不同
     源的坐标去定位**；修的是定位依据（改走正文文本），不是给坐标加偏移量。
+  - 提交：`739a926cf9`（分支 `feature/reader-translation-on-develop`）
 - **[x] ② 已加自动化测试** —
   - `fushi/test/media/audiobook/tts/tts_read_along_sentence_audio_test.dart`：
     `sentenceRangeByText` 在「坐标故意指向念别的句子的单元」时仍按文本落到正确单元
