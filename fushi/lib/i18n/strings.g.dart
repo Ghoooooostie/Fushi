@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152609 (8977 per locale)
+/// Strings: 152660 (8980 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9065,6 +9065,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_reset_confirm =>
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   String get srs_card_suspend => 'Suspend';
+  String get srs_card_video_pause => 'Pause clip';
+  String get srs_card_video_play => 'Play clip';
+  String get srs_card_video_replay => 'Replay clip from the start';
   String get srs_change_type_apply => 'Change';
   String get srs_change_type_cloze_hint =>
       'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
@@ -28105,6 +28108,12 @@ class _StringsAr extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -50210,6 +50219,12 @@ class _StringsDe extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -72439,6 +72454,12 @@ class _StringsEs extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -94757,6 +94778,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_suspend => 'Suspend';
   @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
+  @override
   String get srs_change_type_apply => 'Change';
   @override
   String get srs_change_type_cloze_hint =>
@@ -116837,6 +116864,12 @@ class _StringsId extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -138961,6 +138994,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_suspend => 'Suspend';
   @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
+  @override
   String get srs_change_type_apply => 'Change';
   @override
   String get srs_change_type_cloze_hint =>
@@ -160378,6 +160417,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_suspend => 'Suspend';
   @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
+  @override
   String get srs_change_type_apply => 'Change';
   @override
   String get srs_change_type_cloze_hint =>
@@ -181520,6 +181565,12 @@ class _StringsKo extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -203371,6 +203422,12 @@ class _StringsNl extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -225525,6 +225582,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_suspend => 'Suspend';
   @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
+  @override
   String get srs_change_type_apply => 'Change';
   @override
   String get srs_change_type_cloze_hint =>
@@ -247657,6 +247720,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_suspend => 'Suspend';
   @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
+  @override
   String get srs_change_type_apply => 'Change';
   @override
   String get srs_change_type_cloze_hint =>
@@ -269539,6 +269608,12 @@ class _StringsTh extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -291488,6 +291563,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_suspend => 'Suspend';
   @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
+  @override
   String get srs_change_type_apply => 'Change';
   @override
   String get srs_change_type_cloze_hint =>
@@ -313432,6 +313513,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_suspend => 'Suspend';
   @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
+  @override
   String get srs_change_type_apply => 'Change';
   @override
   String get srs_change_type_cloze_hint =>
@@ -334083,6 +334170,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_suspend => '暂停';
   @override
+  String get srs_card_video_pause => '暂停片段';
+  @override
+  String get srs_card_video_play => '播放片段';
+  @override
+  String get srs_card_video_replay => '从头重播片段';
+  @override
   String get srs_change_type_apply => '更改';
   @override
   String get srs_change_type_cloze_hint =>
@@ -354398,6 +354491,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_suspend => 'Suspend';
   @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
+  @override
   String get srs_change_type_apply => 'Change';
   @override
   String get srs_change_type_cloze_hint =>
@@ -373662,6 +373761,12 @@ extension on _StringsEn {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -392324,6 +392429,12 @@ extension on _StringsAr {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -411042,6 +411153,12 @@ extension on _StringsDe {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -429764,6 +429881,12 @@ extension on _StringsEs {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -448497,6 +448620,12 @@ extension on _StringsFr {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -467190,6 +467319,12 @@ extension on _StringsId {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -485892,6 +486027,12 @@ extension on _StringsIt {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -504528,6 +504669,12 @@ extension on _StringsJa {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -523113,6 +523260,12 @@ extension on _StringsKo {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -541788,6 +541941,12 @@ extension on _StringsNl {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -560494,6 +560653,12 @@ extension on _StringsPtBr {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -579204,6 +579369,12 @@ extension on _StringsRu {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -597874,6 +598045,12 @@ extension on _StringsTh {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -616562,6 +616739,12 @@ extension on _StringsTr {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -635245,6 +635428,12 @@ extension on _StringsVi {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -653778,6 +653967,12 @@ extension on _StringsZhCn {
         return '清除这张卡的进度、当作新卡重新学？之后可以马上撤销。';
       case 'srs_card_suspend':
         return '暂停';
+      case 'srs_card_video_pause':
+        return '暂停片段';
+      case 'srs_card_video_play':
+        return '播放片段';
+      case 'srs_card_video_replay':
+        return '从头重播片段';
       case 'srs_change_type_apply':
         return '更改';
       case 'srs_change_type_cloze_hint':
@@ -672265,6 +672460,12 @@ extension on _StringsZhHk {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
