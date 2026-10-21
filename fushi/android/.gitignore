@@ -1,6 +1,8 @@
 gradle-wrapper.jar
 /.gradle
 /captures/
+# AGP 的 CMake/NDK 构建缓存，每次 assemble 都会重建
+/app/.cxx/
 /gradlew
 /gradlew.bat
 /local.properties

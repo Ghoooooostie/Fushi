@@ -1103,12 +1103,13 @@ class AudiobookPlayerController extends ChangeNotifier {
             await _setWindowSource(start: 0);
           } else {
             _allSources = const <AudioSource>[];
-          await _player
-              .setAudioSource(
-                ConcatenatingAudioSource(children: audioSources),
-                preload: false,
-              )
-              .timeout(const Duration(seconds: 60));
+            await _player
+                .setAudioSource(
+                  ConcatenatingAudioSource(children: audioSources),
+                  preload: false,
+                )
+                .timeout(const Duration(seconds: 60));
+          }
         } catch (e, stack) {
           debugPrint('AudiobookController.setSource(stream): $e\n$stack');
           // 载入失败也要放行等待者，否则 await _loadReady.future 永久挂起。
