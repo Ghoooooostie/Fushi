@@ -67,8 +67,7 @@ void main() {
       );
     });
 
-    test('exports complete sentence audio range instead of padding one cue',
-        () {
+    test('exports complete sentence audio range instead of padding one cue', () {
       final String source = readReaderPageSource();
 
       expect(
@@ -132,7 +131,8 @@ void main() {
       expect(
         source,
         contains(
-            'if (audioFiles != null && !(overrides?.omitAudio ?? false)) {'),
+          'if (audioFiles != null && !(overrides?.omitAudio ?? false)) {',
+        ),
         reason:
             'Sentence-audio mining should attempt a clip whenever audio files '
             'exist (unless the user opted out for this card) and let '
@@ -147,13 +147,59 @@ void main() {
       );
     });
 
+    test('makes the TTS sentence audio really exist before cutting it', () {
+      final String source = readReaderPageSource();
+
+      // 朗读会话的 audioFiles[i] 是「合成后才会存在」的缓存路径，制卡必须先让它就绪。
+      expect(
+        source,
+        contains('Future<String?> _resolveSentenceAudioInputPath('),
+        reason:
+            '制卡取句子音频输入必须过一个「先确保存在」的解析步骤（BUG: '
+            'sentence audio export failed: input audio file does not exist）。',
+      );
+      expect(
+        source,
+        contains('return readAlong.ensureSentenceAudio(index)'),
+        reason: 'TTS 朗读会话里必须按需合成那一句，再拿真实路径去裁。',
+      );
+      // 只钉制卡这一块（有声书片段导出 audioFiles 用法在 audiobook.part.dart，
+      // 与本条无关，不能让它的 `inputPath: inputFile.path` 干扰这里的负向断言）。
+      final int cutIndex = source.indexOf(
+        'final File inputFile = audioFiles[clip.audioFileIndex]',
+      );
+      final int branchIndex = source.indexOf(
+        '} else if (cue == null) {',
+        cutIndex,
+      );
+      expect(cutIndex, greaterThanOrEqualTo(0));
+      expect(branchIndex, greaterThan(cutIndex));
+      final String cutBlock = source.substring(cutIndex, branchIndex);
+      expect(
+        cutBlock,
+        contains('inputPath: readyInputPath'),
+        reason: 'ffmpeg 的输入必须是就绪后的真实路径，不能是拼出来的「将来路径」。',
+      );
+      expect(
+        cutBlock,
+        isNot(contains('inputPath: inputFile.path')),
+        reason: '直接把 audioFiles[i] 喂 ffmpeg 会在未合成句上早退并把整张卡判死。',
+      );
+      expect(
+        source,
+        contains('ReaderFushi.mineEntry.sentenceAudioUnavailable'),
+        reason: '拿不到句子音频时要留下可查的日志，而不是静默丢音频。',
+      );
+    });
+
     test('aborts mining when requested sentence-audio export fails', () {
       final String source = readReaderPageSource();
 
       expect(
         source,
         contains('bool requestedSentenceAudioClip = false'),
-        reason: 'The reader must remember that a real sentence-audio clip was '
+        reason:
+            'The reader must remember that a real sentence-audio clip was '
             'requested; otherwise ffmpeg failures become silent no-audio cards.',
       );
       expect(
@@ -166,7 +212,8 @@ void main() {
       expect(
         source,
         contains(
-            'if (requestedSentenceAudioClip && sentenceAudioPath == null)'),
+          'if (requestedSentenceAudioClip && sentenceAudioPath == null)',
+        ),
         reason:
             'A requested but failed sentence-audio export must stop card mining '
             'with a visible error instead of continuing as a success.',
@@ -179,13 +226,15 @@ void main() {
       expect(
         source,
         contains('String? sentenceAudioFailure'),
-        reason: 'The reader must preserve the ffmpeg failure summary for the '
+        reason:
+            'The reader must preserve the ffmpeg failure summary for the '
             'visible no-audio-card guard.',
       );
       expect(
         source,
         contains('onFailure: (String summary)'),
-        reason: 'TtsChannel/extractor diagnostics should flow back to the '
+        reason:
+            'TtsChannel/extractor diagnostics should flow back to the '
             'reader mining path.',
       );
       expect(
@@ -211,15 +260,15 @@ void main() {
     // but WITHOUT sentence audio. That used to be a debugPrint-only silent drop -
     // the exact symptom users reported for local audiobooks. The card must now
     // tell the user no sentence audio was attached instead of silently dropping.
-    test('surfaces a toast when no sentence-audio range resolves (TODO-811)',
-        () {
+    test('surfaces a toast when no sentence-audio range resolves (TODO-811)', () {
       final String source = readReaderPageSource();
 
       expect(
         compactCode(source),
         contains(
           compactCode(
-              'FushiToast.show(msg: t.card_mined_without_sentence_audio,'),
+            'FushiToast.show(msg: t.card_mined_without_sentence_audio,',
+          ),
         ),
         reason:
             'A card created with audio files present but no resolvable sentence '
@@ -227,11 +276,18 @@ void main() {
             'not silently produce an audio-less card.',
       );
       final int branchIndex = source.indexOf('} else if (cue == null) {');
-      final int toastIndex =
-          source.indexOf('t.card_mined_without_sentence_audio');
+      // 从该分支之后开始找：句子音频「不可用」的降级提示（BUG-3652）在这条分支之前，
+      // 从全串首个匹配算会把那次提示当成这里的证据。
+      final int toastIndex = source.indexOf(
+        't.card_mined_without_sentence_audio',
+        branchIndex,
+      );
       expect(branchIndex, greaterThanOrEqualTo(0));
-      expect(toastIndex, greaterThan(branchIndex),
-          reason: 'The toast must live inside the no-range gap branch.');
+      expect(
+        toastIndex,
+        greaterThan(branchIndex),
+        reason: 'The toast must live inside the no-range gap branch.',
+      );
     });
   });
 }

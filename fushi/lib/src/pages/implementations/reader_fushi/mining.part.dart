@@ -12,6 +12,26 @@ part of '../reader_fushi_page.dart';
 /// contract); they delegate into `_onMineFromPopupInner` / `_onUpdateFromPopupInner`
 /// here via the shared `_miningQueue`.
 extension _ReaderMining on _ReaderFushiPageState {
+  /// 制卡要裁的那一句音频的真实输入路径（拿不到返回 null）。
+  ///
+  /// - **录音有声书**：[fallbackPath] 指向磁盘上真实存在的音频文件，原样返回
+  ///   （真缺失时保留原有失败语义——抽段会在 ffmpeg 早退里报
+  ///   `input audio file does not exist`，那是有声书文件本身的问题）。
+  /// - **TTS 朗读会话**：[fallbackPath] 只是「该句合成后才会存在」的缓存路径
+  ///   （[TtsReadAlong] 交给会话的 `audioFiles` 按缓存键拼出全书每句的路径，朗读
+  ///   只预取当前位置之后若干句）。必须先经 [TtsReadAlong.ensureSentenceAudio]
+  ///   按需合成；合成不出来返回 null，调用方降级为「无句子音频出卡」。
+  Future<String?> _resolveSentenceAudioInputPath({
+    required int index,
+    required String fallbackPath,
+  }) async {
+    final TtsReadAlong? readAlong = TtsReadAlong.forController(
+      _audiobookController,
+    );
+    if (readAlong == null) return fallbackPath;
+    return readAlong.ensureSentenceAudio(index);
+  }
+
   /// TODO-270 D：reader 制卡/覆盖共用的「构造制卡上下文」。返回构造好的
   /// [AnkiMiningContext] 与一个 `cleanup` 闭包（清理句子音频临时目录，调用方在 mine/
   /// update 完成后必须调用）。当句子音频导出失败（已弹 toast）时返回 `context: null`，
@@ -23,7 +43,7 @@ extension _ReaderMining on _ReaderFushiPageState {
   /// 不要卡图；视频图片方式、漫画裁切对书没有意义，忽略。卡组覆盖由后端从同一份
   /// fields 里读，不经这里。
   Future<({AnkiMiningContext? context, void Function() cleanup})>
-      _prepareMiningContext({MiningRequestOverrides? overrides}) async {
+  _prepareMiningContext({MiningRequestOverrides? overrides}) async {
     final String currentSentence =
         appModel.currentMediaSource?.currentSentence.text ?? '';
     // TODO-270 F/G「查词窗口多句合一制卡」(乙方案)：把已累积的草稿句 + 当前句合成一段
@@ -71,13 +91,17 @@ extension _ReaderMining on _ReaderFushiPageState {
     );
     final String? sourceUid = _bookUid;
     final int sourceOffset = sourceRange?.offset ?? _lastProgressCharOffset;
-    final CardSourceLink? sourceLink = sourceUid == null || sourceOffset < 0
+    // 不是 final：句子音频真的拿不到时（TTS 未合成且合成不出来）下面会把它退化成
+    // 只记文本位置——卡上没有音频，链接就不该再记一段音频区间（BUG-2196 ②：回放
+    // 跳转与卡上音频必须对得上）。
+    CardSourceLink? sourceLink = sourceUid == null || sourceOffset < 0
         ? null
         : CardSourceLink(
             kind: CardSourceKind.book,
             uid: sourceUid,
             bookKey: widget.bookKey,
-            sourceId: _sourceReviewSession?.link.sourceId ??
+            sourceId:
+                _sourceReviewSession?.link.sourceId ??
                 CardSourceLink.newSourceId(),
             chapterIndex: _favoriteSectionIndex,
             charOffset: sourceOffset,
@@ -96,8 +120,11 @@ extension _ReaderMining on _ReaderFushiPageState {
         try {
           sentenceAudioTempDir.deleteSync(recursive: true);
         } catch (e, stack) {
-          ErrorLogService.instance
-              .log('ReaderFushi.mineEntry.cleanupAudio', e, stack);
+          ErrorLogService.instance.log(
+            'ReaderFushi.mineEntry.cleanupAudio',
+            e,
+            stack,
+          );
         }
       }
     }
@@ -124,44 +151,83 @@ extension _ReaderMining on _ReaderFushiPageState {
           clip.audioFileIndex >= 0 &&
           clip.audioFileIndex < audioFiles.length) {
         final File inputFile = audioFiles[clip.audioFileIndex];
-        sentenceAudioTempDir =
-            Directory.systemTemp.createTempSync('fushi_mine_sentence_audio_');
-        // 句子音频容器与视频制卡保持同一平台规则：iOS 用 `.m4a`，让 AnkiMobile
-        // 把 localhost URL 当作可下载音频；桌面/Android 继续用 `.aac`（adts），避免
-        // 旧桌面 ffmpeg-min 缺 mp4/ipod/m4a muxer 时 exit -22（BUG-460 / BUG-644；统一 FFmpeg 已含）。
-        final String outputPath = p.join(
-          sentenceAudioTempDir.path,
-          'sentence.${immersionMiningAudioExtension()}',
+        // 制卡要裁的那一句音频：TTS 朗读会话里 `audioFiles[i]` 是「该句合成后才会
+        // 存在」的缓存路径（TtsReadAlong._filesFor → tts_cache/<key>.audio），朗读
+        // 只预取当前位置之后若干句，没读到的句子磁盘上还没有文件——直接喂 ffmpeg 会
+        // 早退成 `input audio file does not exist`，并把整张卡一起判死。抽段前先让
+        // 这一句真正就绪（按需合成）；合成不出来就走下面的「无句子音频」降级，卡照出。
+        final String? readyInputPath = await _resolveSentenceAudioInputPath(
+          index: clip.audioFileIndex,
+          fallbackPath: inputFile.path,
         );
-        requestedSentenceAudioClip = true;
-        // TODO-1650 音频质量档：默认档 0（单声道 64k=现状），更高档立体声 128k/192k。
-        // TODO-970：句子音频已全平台统一走 ffmpeg（extractAudioSegment 不再有 Android
-        // 原生 Transformer + AacAdtsCueAudioRewriter 特例），两端都吃这个档。
-        final MiningMediaCompression mediaCompression =
-            MiningMediaCompression.resolve(
-          imageTier: appModel.miningImageQuality,
-          audioTier: appModel.miningAudioQuality,
-        );
-        // 倍速制卡：开关开着且有声书正以非 1× 播放时，句子音频按同一倍率变速不变调
-        // （`-af atempo`），卡片听感与阅读时一致。开关关 / 1× 时 tempo 为 null，走
-        // 与现状逐字节相同的参数表（[buildFfmpegAtempoFilter] 对 1.0 返回 null）。
-        // 读的是控制器当前实时倍速而非落库偏好：用户刚拨的倍速就是这次制卡的倍速。
-        final double? sentenceAudioTempo =
-            appModel.miningAudioFollowPlaybackSpeed
-                ? _audiobookController?.speed
-                : null;
-        sentenceAudioPath = await TtsChannel.instance.extractAudioSegment(
-          inputPath: inputFile.path,
-          startMs: clip.startMs,
-          endMs: clip.endMs,
-          outputPath: outputPath,
-          audioChannels: mediaCompression.audioChannels,
-          audioBitrate: mediaCompression.audioBitrate,
-          tempo: sentenceAudioTempo,
-          onFailure: (String summary) {
-            sentenceAudioFailure = summary;
-          },
-        );
+        if (readyInputPath == null) {
+          ErrorLogService.instance.log(
+            'ReaderFushi.mineEntry.sentenceAudioUnavailable',
+            'sentence audio not available (audioFileIndex=${clip.audioFileIndex}, '
+                'startMs=${clip.startMs}, endMs=${clip.endMs}, '
+                'ttsSession=${TtsReadAlong.forController(_audiobookController) != null})',
+            StackTrace.current,
+          );
+          FushiToast.show(
+            msg: t.card_mined_without_sentence_audio,
+            severity: ToastSeverity.warning,
+          );
+          // 卡上没有这一段音频：链接退化成只记文本位置，别留下「有音频区间却没有
+          // 音频」的不一致（回放跳转会照它去要一段不存在的音频）。
+          final CardSourceLink? linked = sourceLink;
+          if (linked != null) {
+            sourceLink = CardSourceLink(
+              kind: linked.kind,
+              uid: linked.uid,
+              bookKey: linked.bookKey,
+              sourceId: linked.sourceId,
+              chapterIndex: linked.chapterIndex,
+              charOffset: linked.charOffset,
+              charLength: linked.charLength,
+            );
+          }
+        }
+        if (readyInputPath != null) {
+          sentenceAudioTempDir = Directory.systemTemp.createTempSync(
+            'fushi_mine_sentence_audio_',
+          );
+          // 句子音频容器与视频制卡保持同一平台规则：iOS 用 `.m4a`，让 AnkiMobile
+          // 把 localhost URL 当作可下载音频；桌面/Android 继续用 `.aac`（adts），避免
+          // 旧桌面 ffmpeg-min 缺 mp4/ipod/m4a muxer 时 exit -22（BUG-460 / BUG-644；统一 FFmpeg 已含）。
+          final String outputPath = p.join(
+            sentenceAudioTempDir.path,
+            'sentence.${immersionMiningAudioExtension()}',
+          );
+          requestedSentenceAudioClip = true;
+          // TODO-1650 音频质量档：默认档 0（单声道 64k=现状），更高档立体声 128k/192k。
+          // TODO-970：句子音频已全平台统一走 ffmpeg（extractAudioSegment 不再有 Android
+          // 原生 Transformer + AacAdtsCueAudioRewriter 特例），两端都吃这个档。
+          final MiningMediaCompression mediaCompression =
+              MiningMediaCompression.resolve(
+                imageTier: appModel.miningImageQuality,
+                audioTier: appModel.miningAudioQuality,
+              );
+          // 倍速制卡：开关开着且有声书正以非 1× 播放时，句子音频按同一倍率变速不变调
+          // （`-af atempo`），卡片听感与阅读时一致。开关关 / 1× 时 tempo 为 null，走
+          // 与现状逐字节相同的参数表（[buildFfmpegAtempoFilter] 对 1.0 返回 null）。
+          // 读的是控制器当前实时倍速而非落库偏好：用户刚拨的倍速就是这次制卡的倍速。
+          final double? sentenceAudioTempo =
+              appModel.miningAudioFollowPlaybackSpeed
+              ? _audiobookController?.speed
+              : null;
+          sentenceAudioPath = await TtsChannel.instance.extractAudioSegment(
+            inputPath: readyInputPath,
+            startMs: clip.startMs,
+            endMs: clip.endMs,
+            outputPath: outputPath,
+            audioChannels: mediaCompression.audioChannels,
+            audioBitrate: mediaCompression.audioBitrate,
+            tempo: sentenceAudioTempo,
+            onFailure: (String summary) {
+              sentenceAudioFailure = summary;
+            },
+          );
+        }
       } else if (cue == null) {
         // TODO-811 visibility: audio files exist but neither a lookup cue /
         // sentence span nor a mergeable draft range resolved to a cue range (or
@@ -177,8 +243,9 @@ extension _ReaderMining on _ReaderFushiPageState {
           'draftSentences=${_miningDraft.length}).',
         );
         FushiToast.show(
-            msg: t.card_mined_without_sentence_audio,
-            severity: ToastSeverity.warning);
+          msg: t.card_mined_without_sentence_audio,
+          severity: ToastSeverity.warning,
+        );
       }
     }
 
@@ -268,11 +335,12 @@ extension _ReaderMining on _ReaderFushiPageState {
   /// **绝不退化成 0**：那会把一整批卡片假标成「书首第 0 字」，比没有标签更坏——用户按
   /// 标签排序时看不出这些数字是编的。
   int? _miningCharPosition() {
-    final ({int offset, int length})? sentenceRange = _cachedSentenceRange ??
+    final ({int offset, int length})? sentenceRange =
+        _cachedSentenceRange ??
         (_cachedSelectionRange != null
             ? (
                 offset: _cachedSelectionRange!.offset,
-                length: _cachedSelectionRange!.length
+                length: _cachedSelectionRange!.length,
               )
             : null);
     final int absolute = absoluteCharOffsetOf(
@@ -295,15 +363,15 @@ extension _ReaderMining on _ReaderFushiPageState {
   /// 不属任何合集 / 合集已删（孤儿）→ `null`，[buildNoteTags] 不追加。
   Future<String?> _resolveCollectionName() async {
     final FushiDatabase db = appModel.database;
-    final Map<String, int> primaryByEntry =
-        await db.getPrimaryCollectionIdByEntry();
+    final Map<String, int> primaryByEntry = await db
+        .getPrimaryCollectionIdByEntry();
     if (primaryByEntry.isEmpty) return null;
     final String epubEntryKey =
         await db.resolveEpubBookUid(widget.bookKey) ?? widget.bookKey;
     final String? srtUid = _srtBookUid;
     final int? collectionId = srtUid != null
         ? (primaryByEntry[MediaKind.srt.compositeKey(srtUid)] ??
-            primaryByEntry[MediaKind.epub.compositeKey(epubEntryKey)])
+              primaryByEntry[MediaKind.epub.compositeKey(epubEntryKey)])
         : primaryByEntry[MediaKind.epub.compositeKey(epubEntryKey)];
     if (collectionId == null) return null;
     return (await db.getMediaCollectionById(collectionId))?.name;
@@ -318,8 +386,9 @@ extension _ReaderMining on _ReaderFushiPageState {
     int startDeltaMs = 0,
     int endDeltaMs = 0,
   }) {
-    final AudioPlaybackRange? composed =
-        _miningDraft.composeAudioRange(_currentSentenceAudioRange());
+    final AudioPlaybackRange? composed = _miningDraft.composeAudioRange(
+      _currentSentenceAudioRange(),
+    );
     if (composed == null) return null;
     return applyMiningAudioEdgeAdjust(
       composed,
@@ -329,12 +398,14 @@ extension _ReaderMining on _ReaderFushiPageState {
   }
 
   Future<MinePopupResult> _onMineFromPopupInner(
-      Map<String, String> fields) async {
+    Map<String, String> fields,
+  ) async {
     final BaseAnkiRepository repo = ref.read(ankiRepositoryProvider);
     // 「高级制卡」覆盖项随本次请求的 fields 一起冻结在入队闭包里（不挂页面状态：
     // 制卡串行队列是异步启动的，挂在页面上会被前面排队的普通「+」读走）。
-    final MiningRequestOverrides? overrides =
-        MiningRequestOverrides.readFrom(fields);
+    final MiningRequestOverrides? overrides = MiningRequestOverrides.readFrom(
+      fields,
+    );
     final prepared = await _prepareMiningContext(overrides: overrides);
     final AnkiMiningContext? miningContext = prepared.context;
     if (miningContext == null) {
@@ -380,7 +451,9 @@ extension _ReaderMining on _ReaderFushiPageState {
       unawaited(_recordMinedSentence(fields, miningContext, outcome.noteId));
     }
     FushiToast.show(
-        msg: described.message, severity: mineToastSeverity(described.status));
+      msg: described.message,
+      severity: mineToastSeverity(described.status),
+    );
     if (described.success) {
       // TODO-270 F/G：合并卡已落地 → 清空多句草稿（popup.js 同事件把角标清零，
       // 两端在同一事件归零、不漂移）。下一次查词从空草稿重新累积。
@@ -426,7 +499,9 @@ extension _ReaderMining on _ReaderFushiPageState {
     // 卡片不计入统计（不是新制一张），成功仍保留「最新可改」第三态、带回同一 noteId。
     final described = describeMineOutcome(outcome, overwrite: true);
     FushiToast.show(
-        msg: described.message, severity: mineToastSeverity(described.status));
+      msg: described.message,
+      severity: mineToastSeverity(described.status),
+    );
     if (described.success) {
       return MinePopupResult.mined(outcome);
     }
@@ -453,11 +528,14 @@ extension _ReaderMining on _ReaderFushiPageState {
     AnkiMiningContext context,
   ) async {
     if (context.sentence.trim().isEmpty) {
-      debugPrint('[mine-diag] empty sentence: no sentence captured for this '
-          'selection (JS sentence extraction returned empty or no selection).');
+      debugPrint(
+        '[mine-diag] empty sentence: no sentence captured for this '
+        'selection (JS sentence extraction returned empty or no selection).',
+      );
       FushiToast.show(
-          msg: t.card_mined_no_sentence_captured,
-          severity: ToastSeverity.warning);
+        msg: t.card_mined_no_sentence_captured,
+        severity: ToastSeverity.warning,
+      );
       return;
     }
 
@@ -468,29 +546,37 @@ extension _ReaderMining on _ReaderFushiPageState {
     try {
       fieldMappings = (await repo.loadSettings()).fieldMappings;
     } catch (e, st) {
-      debugPrint('[mine-diag] loadSettings failed, skip mapping check: '
-          '$e | $st');
+      debugPrint(
+        '[mine-diag] loadSettings failed, skip mapping check: '
+        '$e | $st',
+      );
       return;
     }
     if (fieldMappings.isEmpty) return;
 
     if (!AnkiHandlebarOptions.anyFieldConsumesSentence(fieldMappings)) {
-      debugPrint('[mine-diag] sentence non-empty but no field maps {sentence}/'
-          '{cue-sentence}; card will have an empty sentence field.');
+      debugPrint(
+        '[mine-diag] sentence non-empty but no field maps {sentence}/'
+        '{cue-sentence}; card will have an empty sentence field.',
+      );
       FushiToast.show(
-          msg: t.card_mined_unmapped_sentence_field,
-          severity: ToastSeverity.warning);
+        msg: t.card_mined_unmapped_sentence_field,
+        severity: ToastSeverity.warning,
+      );
       return;
     }
 
     final bool hasSentenceAudio = (context.sentenceAudioPath ?? '').isNotEmpty;
     if (hasSentenceAudio &&
         !AnkiHandlebarOptions.anyFieldConsumesSentenceAudio(fieldMappings)) {
-      debugPrint('[mine-diag] sentence audio attached but no field maps '
-          '{sentence-audio}; the audio will not land on the card.');
+      debugPrint(
+        '[mine-diag] sentence audio attached but no field maps '
+        '{sentence-audio}; the audio will not land on the card.',
+      );
       FushiToast.show(
-          msg: t.card_mined_unmapped_sentence_audio_field,
-          severity: ToastSeverity.warning);
+        msg: t.card_mined_unmapped_sentence_audio_field,
+        severity: ToastSeverity.warning,
+      );
     }
   }
 
@@ -524,11 +610,12 @@ extension _ReaderMining on _ReaderFushiPageState {
     try {
       final int section =
           context.sourceLink?.chapterIndex ?? _favoriteSectionIndex;
-      final sentenceRange = _cachedSentenceRange ??
+      final sentenceRange =
+          _cachedSentenceRange ??
           (_cachedSelectionRange != null
               ? (
                   offset: _cachedSelectionRange!.offset,
-                  length: _cachedSelectionRange!.length
+                  length: _cachedSelectionRange!.length,
                 )
               : null);
       await appModel.database.addMinedSentence(
@@ -578,8 +665,10 @@ extension _ReaderMining on _ReaderFushiPageState {
     if (allCues == null) {
       allCues = await _loadHighlightCues();
       if (allCues == null) {
-        debugPrint('[sentence-audio-hl] prepareCues path=NONE '
-            '(srtUid=null, audiobookKey=null) -> return null');
+        debugPrint(
+          '[sentence-audio-hl] prepareCues path=NONE '
+          '(srtUid=null, audiobookKey=null) -> return null',
+        );
         return null;
       }
       _cachedAllCues = allCues;
@@ -592,10 +681,12 @@ extension _ReaderMining on _ReaderFushiPageState {
     if (!_cachedSentenceAudio) {
       // 真正非 sasayaki 的书：纯 [data-cue-id] 字幕（合成书走 __fushiHighlight 选择器）
       // 或 matcher 全失败（无锚点）。逐句高亮不走 sasayaki range，保持早退。
-      debugPrint('[sentence-audio-hl] prepareCues path=$pathTag '
-          'srtUid=$_srtBookUid audiobookKey=$_audiobookBookKey '
-          'allCues=${allCues.length} cachedSentenceAudio=false '
-          '-> SKIPPED (no sentenceAudioHighlight cues)');
+      debugPrint(
+        '[sentence-audio-hl] prepareCues path=$pathTag '
+        'srtUid=$_srtBookUid audiobookKey=$_audiobookBookKey '
+        'allCues=${allCues.length} cachedSentenceAudio=false '
+        '-> SKIPPED (no sentenceAudioHighlight cues)',
+      );
       return null;
     }
 
@@ -606,9 +697,11 @@ extension _ReaderMining on _ReaderFushiPageState {
         AudiobookBridge.buildSentenceAudioPayload(allCues, _currentChapter);
     // BUG-366/TODO-630 诊断：sasayaki 书最终送进 WebView 的 payload 条数。
     // payloadLen=0 表示当前章无命中 cue（applySasayakiCues 不会被调用）。
-    debugPrint('[sentence-audio-hl] prepareCues path=$pathTag-SENTENCE-AUDIO '
-        'srtUid=$_srtBookUid chapter=$_currentChapter '
-        'allCues=${allCues.length} payloadLen=${payload.length}');
+    debugPrint(
+      '[sentence-audio-hl] prepareCues path=$pathTag-SENTENCE-AUDIO '
+      'srtUid=$_srtBookUid chapter=$_currentChapter '
+      'allCues=${allCues.length} payloadLen=${payload.length}',
+    );
     if (payload.isEmpty) return null;
     return jsonEncode(payload);
   }
@@ -623,8 +716,9 @@ extension _ReaderMining on _ReaderFushiPageState {
       return SrtBookRepository(appModel.database).cuesFor(_srtBookUid!);
     }
     if (_audiobookBookKey != null) {
-      return AudiobookRepository(appModel.database)
-          .cuesForBook(_audiobookBookKey!);
+      return AudiobookRepository(
+        appModel.database,
+      ).cuesForBook(_audiobookBookKey!);
     }
     return null;
   }
@@ -632,8 +726,10 @@ extension _ReaderMining on _ReaderFushiPageState {
   Future<void> _injectAudiobookBridge() async {
     if (_controller == null || _audiobookController == null) return;
 
-    await AudiobookBridge.inject(_controller!,
-        primaryColor: _themeSentenceAudioHighlightColor());
+    await AudiobookBridge.inject(
+      _controller!,
+      primaryColor: _themeSentenceAudioHighlightColor(),
+    );
 
     final List<AudioCue>? allCues = _cachedAllCues;
     if (allCues == null) return;
@@ -642,8 +738,9 @@ extension _ReaderMining on _ReaderFushiPageState {
       _audiobookController!.setChapterCues(allCues);
       _audiobookController!.setAllBookCues(allCues);
       if (_srtCueChapterMap == null) {
-        final (Map<int, int> m, List<(int, int)> r) =
-            _buildSrtChapterMap(allCues);
+        final (Map<int, int> m, List<(int, int)> r) = _buildSrtChapterMap(
+          allCues,
+        );
         _srtCueChapterMap = m;
         _srtChapterRanges = r;
       }
