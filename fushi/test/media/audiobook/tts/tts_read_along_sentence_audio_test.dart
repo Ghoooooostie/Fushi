@@ -4,6 +4,7 @@ import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/media/audiobook/tts/tts_book_plan.dart';
+import 'package:fushi_audio/fushi_audio.dart';
 import 'package:fushi/src/media/audiobook/tts/tts_read_along.dart';
 import 'package:fushi_engine/foundation/pref_store.dart';
 import 'package:fushi_engine/tts/tts_audio_cache.dart';
@@ -208,9 +209,16 @@ void main() {
       reason: '前提：未读到的句子缓存文件确实不存在（复现报障现象）。',
     );
 
-    final String? path = await readAlong.ensureSentenceAudio(9);
+    final TtsSentenceAudio? audio = await readAlong.ensureSentenceAudio(9);
 
-    expect(path, futurePath);
+    expect(audio?.path, futurePath);
+    expect(
+      audio?.durationMs,
+      greaterThan(0),
+      reason:
+          '必须同时给出真实时长：cue 上的时长在未合成时是按字数估的，'
+          '裁剪区间照它走会裁短 / 多裁。',
+    );
     expect(
       File(futurePath).existsSync(),
       isTrue,
@@ -234,12 +242,12 @@ void main() {
       await _until(() => readAlong.debugScheduler.failure != null);
 
       final Stopwatch watch = Stopwatch()..start();
-      final String? path = await readAlong.ensureSentenceAudio(
+      final TtsSentenceAudio? audio = await readAlong.ensureSentenceAudio(
         5,
         timeout: const Duration(seconds: 10),
       );
 
-      expect(path, isNull);
+      expect(audio, isNull);
       expect(
         watch.elapsed,
         lessThan(const Duration(seconds: 5)),
@@ -254,12 +262,82 @@ void main() {
       final _FakeDescriptor descriptor = _FakeDescriptor()..hang = true;
       final TtsReadAlong readAlong = newSession(descriptor: descriptor);
 
-      final String? path = await readAlong.ensureSentenceAudio(
+      final TtsSentenceAudio? audio = await readAlong.ensureSentenceAudio(
         3,
         timeout: const Duration(milliseconds: 300),
       );
 
-      expect(path, isNull, reason: '挂在途的合成不能把制卡一起挂住。');
+      expect(audio, isNull, reason: '挂在途的合成不能把制卡一起挂住。');
+    },
+  );
+
+  test('sentenceRangeByText picks the unit whose text IS the card sentence, '
+      'even when the coordinates point at a different one', () async {
+    // 真机形态复刻（`無職転生` 第 25 章）：卡片句的 span 与某个单元的 match 区间
+    // **完全重合**，可那个单元念的是另一句——两套归一化不同源导致的整章漂移。
+    const String cardSentence = 'こんな土地に閉じ込められれば、魔族だって戦争を起こすだろう。';
+    const String otherSentence = 'ルイジェルドは走りだしてから、五分もしないうちに帰ってくる。';
+    final _FakeDescriptor descriptor = _FakeDescriptor();
+    final TtsReadAlong readAlong = TtsReadAlong.debugCreate(
+      plan: TtsBookPlan(<TtsPlanSentence>[
+        _sentence(otherSentence, matchStart: 1269, matchEnd: 1297),
+        _sentence(cardSentence, matchStart: 5000, matchEnd: 5028),
+      ]),
+      preset: _preset(),
+      descriptor: descriptor,
+      cache: cache,
+      host: const TtsHost(),
+      store: TtsPresetStore(_MemoryPrefs()),
+    );
+    live.add(readAlong);
+
+    // 坐标落在单元 0（念别的句子的那个）。
+    final AudioPlaybackRange? range = readAlong.sentenceRangeByText(
+      sentence: cardSentence,
+      sectionIndex: 0,
+      normCharOffset: 1269,
+    );
+
+    expect(range?.audioFileIndex, 1, reason: '必须按正文文本落到真正念这一句的单元。');
+    expect(
+      readAlong.unitCoversSentence(index: 0, sentence: cardSentence),
+      isFalse,
+      reason: '坐标定位的结果必须能被文本校验挡下来（否则又给一张错音频的卡）。',
+    );
+    expect(
+      readAlong.unitCoversSentence(index: 1, sentence: cardSentence),
+      isTrue,
+    );
+  });
+
+  test(
+    'sentenceRangeByText returns null when no unit speaks the sentence',
+    () async {
+      final TtsReadAlong readAlong = newSession(descriptor: _FakeDescriptor());
+      expect(
+        readAlong.sentenceRangeByText(
+          sentence: '这本书里根本没有的一句话',
+          sectionIndex: 0,
+          normCharOffset: 0,
+        ),
+        isNull,
+        reason: '定位不到就该让制卡降级，不能用坐标硬凑一个单元。',
+      );
     },
   );
 }
+
+TtsPlanSentence _sentence(
+  String text, {
+  required int matchStart,
+  required int matchEnd,
+}) => TtsPlanSentence(
+  section: 0,
+  href: 'c.xhtml',
+  text: text,
+  spokenText: text,
+  matchStart: matchStart,
+  matchEnd: matchEnd,
+  studyStart: matchStart,
+  studyEnd: matchEnd,
+);

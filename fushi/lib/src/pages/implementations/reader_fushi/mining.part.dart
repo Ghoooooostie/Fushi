@@ -12,24 +12,93 @@ part of '../reader_fushi_page.dart';
 /// contract); they delegate into `_onMineFromPopupInner` / `_onUpdateFromPopupInner`
 /// here via the shared `_miningQueue`.
 extension _ReaderMining on _ReaderFushiPageState {
-  /// 制卡要裁的那一句音频的真实输入路径（拿不到返回 null）。
+  /// 制卡要裁的那一句音频的真实输入（路径 + TTS 的真实时长；拿不到返回 null）。
   ///
   /// - **录音有声书**：[fallbackPath] 指向磁盘上真实存在的音频文件，原样返回
   ///   （真缺失时保留原有失败语义——抽段会在 ffmpeg 早退里报
-  ///   `input audio file does not exist`，那是有声书文件本身的问题）。
+  ///   `input audio file does not exist`，那是有声书文件本身的问题；时长留 null，
+  ///   裁剪照 cue 的对齐时长走）。
   /// - **TTS 朗读会话**：[fallbackPath] 只是「该句合成后才会存在」的缓存路径
   ///   （[TtsReadAlong] 交给会话的 `audioFiles` 按缓存键拼出全书每句的路径，朗读
   ///   只预取当前位置之后若干句）。必须先经 [TtsReadAlong.ensureSentenceAudio]
   ///   按需合成；合成不出来返回 null，调用方降级为「无句子音频出卡」。
-  Future<String?> _resolveSentenceAudioInputPath({
+  Future<({String path, int? durationMs})?> _resolveSentenceAudioInput({
     required int index,
     required String fallbackPath,
   }) async {
     final TtsReadAlong? readAlong = TtsReadAlong.forController(
       _audiobookController,
     );
-    if (readAlong == null) return fallbackPath;
-    return readAlong.ensureSentenceAudio(index);
+    if (readAlong == null) return (path: fallbackPath, durationMs: null);
+    final TtsSentenceAudio? audio = await readAlong.ensureSentenceAudio(index);
+    if (audio == null) return null;
+    return (path: audio.path, durationMs: audio.durationMs);
+  }
+
+  /// TTS 朗读会话的句子音频区间：坐标定位不可信时改按**正文文本**定位。
+  ///
+  /// 阅读器 WebView 的 matchable 坐标与朗读分句用的归一化（[AudioTextNormalizer]
+  /// 对 `chapterPlainTextWithRuby` 的结果）不同源——ruby / 图注 / 空白处理不同会让
+  /// 坐标随章内位置漂移，按坐标匹配会稳定地落到**另一句**上（真机实测，见
+  /// BUG-3653 的日志：坐标区间完全重合、文本毫不相干）。
+  ///
+  /// 返回 `untrusted = true` 表示：文本定位也没命中，而坐标落在一个念别的句子的
+  /// 单元上——此时宁可不带音频，也不能把「另一句」的音频塞进卡片。
+  ({AudioPlaybackRange? range, bool untrusted}) _ttsSentenceAudioRange(
+    AudioPlaybackRange? composed,
+    String sentence,
+  ) {
+    final TtsReadAlong? readAlong = TtsReadAlong.forController(
+      _audiobookController,
+    );
+    if (readAlong == null) return (range: composed, untrusted: false);
+    final AudioPlaybackRange? byText = readAlong.sentenceRangeByText(
+      sentence: sentence,
+      sectionIndex: _lookupSectionIndex,
+      normCharOffset: _miningSpanRange()?.offset,
+    );
+    if (byText != null) return (range: byText, untrusted: false);
+    if (composed == null) return (range: null, untrusted: false);
+    final bool covers = readAlong.unitCoversSentence(
+      index: composed.audioFileIndex,
+      sentence: sentence,
+    );
+    return (range: covers ? composed : null, untrusted: !covers);
+  }
+
+  /// TEMP-取证：把卡片句子与将要裁剪的朗读单元并排打进 logcat（锚 `[mine-audio]`）。
+  /// 取证完连同调用点一起删。
+  void _debugSentenceAudioTrace({
+    required AudioPlaybackRange clip,
+    required String cardSentence,
+  }) {
+    final TtsReadAlong? readAlong = TtsReadAlong.forController(
+      _audiobookController,
+    );
+    String unit = 'unit=<no-tts-session>';
+    if (readAlong != null) {
+      final int i = clip.audioFileIndex;
+      if (i >= 0 && i < readAlong.plan.length) {
+        final TtsPlanSentence s = readAlong.plan.sentences[i];
+        unit =
+            'unit[$i]="${_debugTextPreview(s.text)}" '
+            'match=[${s.matchStart},${s.matchEnd}) '
+            'section=${s.section} spokenLen=${s.spokenText.length}';
+      } else {
+        unit = 'unit=<idx-out-of-range:$i/${readAlong.plan.length}>';
+      }
+    }
+    final ({int offset, int length})? span = _miningSpanRange();
+    debugPrint(
+      '[mine-audio] idx=${clip.audioFileIndex} ms=[${clip.startMs},${clip.endMs}) '
+      'section=${_lookupSectionIndex} span=[${span?.offset},${span?.length}] '
+      'card="${_debugTextPreview(cardSentence)}" $unit',
+    );
+  }
+
+  static String _debugTextPreview(String value) {
+    final String flat = value.replaceAll('\n', ' ').trim();
+    return flat.length > 40 ? '${flat.substring(0, 40)}…' : flat;
   }
 
   /// TODO-270 D：reader 制卡/覆盖共用的「构造制卡上下文」。返回构造好的
@@ -85,10 +154,16 @@ extension _ReaderMining on _ReaderFushiPageState {
     // 写进卡片的句子音频区间：草稿上下文合并 + 本次起止偏移。CardSourceLink 记的区间
     // 与下面裁音频用的区间必须是**同一个值**（回放跳转与卡上音频对得上），对话框试听
     // 也经同一个 [_miningSentenceAudioClip]（BUG-2196 ②：听到什么就压出什么）。
-    final AudioPlaybackRange? sourceAudioRange = _miningSentenceAudioClip(
+    final AudioPlaybackRange? composedAudioRange = _miningSentenceAudioClip(
       startDeltaMs: overrides?.audioStartDeltaMs ?? 0,
       endDeltaMs: overrides?.audioEndDeltaMs ?? 0,
     );
+    // TTS 朗读会话：两套归一化不同源，坐标定位会落错句 → 按正文文本重定位；
+    // 文本也定位不到就判不可信（宁可不带音频，也不给「另一句」的音频）。
+    final ({AudioPlaybackRange? range, bool untrusted}) ttsAudioRange =
+        _ttsSentenceAudioRange(composedAudioRange, sentence);
+    final AudioPlaybackRange? sourceAudioRange = ttsAudioRange.range;
+    final bool sentenceAudioUntrusted = ttsAudioRange.untrusted;
     final String? sourceUid = _bookUid;
     final int sourceOffset = sourceRange?.offset ?? _lastProgressCharOffset;
     // 不是 final：句子音频真的拿不到时（TTS 未合成且合成不出来）下面会把它退化成
@@ -145,9 +220,43 @@ extension _ReaderMining on _ReaderFushiPageState {
     //
     // 「高级制卡」选了不要音频：整块跳过（连「没有句子音频」的提示也不弹——是用户
     // 自己不要的）。
+    // 卡上没有这一段音频时统一走这里：链接退化成只记文本位置，别留下「有音频区间
+    // 却没有音频」的不一致（回放跳转会照它去要一段不存在的音频，BUG-2196 ②）。
+    void dropSentenceAudioLink() {
+      final CardSourceLink? linked = sourceLink;
+      if (linked != null) {
+        sourceLink = CardSourceLink(
+          kind: linked.kind,
+          uid: linked.uid,
+          bookKey: linked.bookKey,
+          sourceId: linked.sourceId,
+          chapterIndex: linked.chapterIndex,
+          charOffset: linked.charOffset,
+          charLength: linked.charLength,
+        );
+      }
+    }
+
     if (audioFiles != null && !(overrides?.omitAudio ?? false)) {
       final AudioPlaybackRange? clip = sourceAudioRange;
-      if (clip != null &&
+      if (sentenceAudioUntrusted) {
+        // 坐标定位落在一个念别的句子的朗读单元上、正文文本也定位不到：**不给音频**，
+        // 好过给一段「另一句」的音频（真机实测的稳定错配，见 BUG-3653）。
+        ErrorLogService.instance.log(
+          'ReaderFushi.mineEntry.sentenceAudioMismatch',
+          'tts sentence audio rejected: no unit covers the card sentence '
+              '(audioFileIndex=${composedAudioRange?.audioFileIndex}, '
+              'startMs=${composedAudioRange?.startMs}, '
+              'endMs=${composedAudioRange?.endMs}, '
+              'sentence="${sentence.trim()}")',
+          StackTrace.current,
+        );
+        FushiToast.show(
+          msg: t.card_mined_without_sentence_audio,
+          severity: ToastSeverity.warning,
+        );
+        dropSentenceAudioLink();
+      } else if (clip != null &&
           clip.audioFileIndex >= 0 &&
           clip.audioFileIndex < audioFiles.length) {
         final File inputFile = audioFiles[clip.audioFileIndex];
@@ -156,11 +265,15 @@ extension _ReaderMining on _ReaderFushiPageState {
         // 只预取当前位置之后若干句，没读到的句子磁盘上还没有文件——直接喂 ffmpeg 会
         // 早退成 `input audio file does not exist`，并把整张卡一起判死。抽段前先让
         // 这一句真正就绪（按需合成）；合成不出来就走下面的「无句子音频」降级，卡照出。
-        final String? readyInputPath = await _resolveSentenceAudioInputPath(
-          index: clip.audioFileIndex,
-          fallbackPath: inputFile.path,
-        );
-        if (readyInputPath == null) {
+        final ({String path, int? durationMs})? ready =
+            await _resolveSentenceAudioInput(
+              index: clip.audioFileIndex,
+              fallbackPath: inputFile.path,
+            );
+        // TEMP-取证（用户报「制卡的原句和音频不一致，音频是另一句」）：把「卡片句子」
+        // 与「这次真要裁的那个朗读单元」并排打出来，一眼看出定位对不对。取证完删。
+        _debugSentenceAudioTrace(clip: clip, cardSentence: sentence);
+        if (ready == null) {
           ErrorLogService.instance.log(
             'ReaderFushi.mineEntry.sentenceAudioUnavailable',
             'sentence audio not available (audioFileIndex=${clip.audioFileIndex}, '
@@ -172,22 +285,9 @@ extension _ReaderMining on _ReaderFushiPageState {
             msg: t.card_mined_without_sentence_audio,
             severity: ToastSeverity.warning,
           );
-          // 卡上没有这一段音频：链接退化成只记文本位置，别留下「有音频区间却没有
-          // 音频」的不一致（回放跳转会照它去要一段不存在的音频）。
-          final CardSourceLink? linked = sourceLink;
-          if (linked != null) {
-            sourceLink = CardSourceLink(
-              kind: linked.kind,
-              uid: linked.uid,
-              bookKey: linked.bookKey,
-              sourceId: linked.sourceId,
-              chapterIndex: linked.chapterIndex,
-              charOffset: linked.charOffset,
-              charLength: linked.charLength,
-            );
-          }
+          dropSentenceAudioLink();
         }
-        if (readyInputPath != null) {
+        if (ready != null) {
           sentenceAudioTempDir = Directory.systemTemp.createTempSync(
             'fushi_mine_sentence_audio_',
           );
@@ -215,10 +315,20 @@ extension _ReaderMining on _ReaderFushiPageState {
               appModel.miningAudioFollowPlaybackSpeed
               ? _audiobookController?.speed
               : null;
+          // TTS：一个朗读单元就是一个文件，整句音频＝这个文件本身。cue 上的 endMs
+          // 在合成前是按字数估的（estimateDurationMs），真实时长要等事件异步写回，
+          // 所以用 ensure 拿到的真实时长收口——估短了后半句没声、估长了多裁空白。
+          int cutEndMs = clip.endMs;
+          final int? realDurationMs = ready.durationMs;
+          if (realDurationMs != null) {
+            cutEndMs = clip.startMs > 0
+                ? (clip.endMs > realDurationMs ? realDurationMs : clip.endMs)
+                : realDurationMs;
+          }
           sentenceAudioPath = await TtsChannel.instance.extractAudioSegment(
-            inputPath: readyInputPath,
+            inputPath: ready.path,
             startMs: clip.startMs,
-            endMs: clip.endMs,
+            endMs: cutEndMs,
             outputPath: outputPath,
             audioChannels: mediaCompression.audioChannels,
             audioBitrate: mediaCompression.audioBitrate,

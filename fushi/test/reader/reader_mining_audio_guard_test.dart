@@ -153,14 +153,16 @@ void main() {
       // 朗读会话的 audioFiles[i] 是「合成后才会存在」的缓存路径，制卡必须先让它就绪。
       expect(
         source,
-        contains('Future<String?> _resolveSentenceAudioInputPath('),
+        contains(
+          'Future<({String path, int? durationMs})?> _resolveSentenceAudioInput(',
+        ),
         reason:
             '制卡取句子音频输入必须过一个「先确保存在」的解析步骤（BUG: '
             'sentence audio export failed: input audio file does not exist）。',
       );
       expect(
         source,
-        contains('return readAlong.ensureSentenceAudio(index)'),
+        contains('await readAlong.ensureSentenceAudio(index)'),
         reason: 'TTS 朗读会话里必须按需合成那一句，再拿真实路径去裁。',
       );
       // 只钉制卡这一块（有声书片段导出 audioFiles 用法在 audiobook.part.dart，
@@ -177,7 +179,7 @@ void main() {
       final String cutBlock = source.substring(cutIndex, branchIndex);
       expect(
         cutBlock,
-        contains('inputPath: readyInputPath'),
+        contains('inputPath: ready.path'),
         reason: 'ffmpeg 的输入必须是就绪后的真实路径，不能是拼出来的「将来路径」。',
       );
       expect(
@@ -189,6 +191,34 @@ void main() {
         source,
         contains('ReaderFushi.mineEntry.sentenceAudioUnavailable'),
         reason: '拿不到句子音频时要留下可查的日志，而不是静默丢音频。',
+      );
+    });
+
+    test('locates the TTS sentence audio by body text, not by drifting '
+        'coordinates', () {
+      final String source = readReaderPageSource();
+
+      // 真机实测：阅读器坐标与朗读分句归一化不同源，坐标区间完全重合却是另一句
+      // （card「こんな土地に…」→ 单元「ルイジェルドは…」）。定位必须落到正文文本上。
+      expect(
+        source,
+        contains('readAlong.sentenceRangeByText('),
+        reason: 'TTS 会话里必须按正文文本定位句子音频，坐标只用来给重复句消歧。',
+      );
+      expect(
+        source,
+        contains('readAlong.unitCoversSentence('),
+        reason: '文本也定位不到时必须校验坐标结果，不能拿一个念别的句子的单元凑数。',
+      );
+      expect(
+        source,
+        contains('sentenceAudioUntrusted'),
+        reason: '确认不可信后必须走「不带音频出卡」的降级，而不是照裁。',
+      );
+      expect(
+        source,
+        contains('ReaderFushi.mineEntry.sentenceAudioMismatch'),
+        reason: '被拒绝的错配要落日志，可查为什么这张卡没有句子音频。',
       );
     });
 

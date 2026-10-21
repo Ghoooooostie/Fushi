@@ -33,10 +33,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 3258 条。点号进各自文件。
+> 共 3259 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-3653](bugs/BUG-3653-tts-mining-audio-wrong-sentence.md) | 🚧 | 🚧 | TTS 朗读制卡：句子音频按坐标定位落到另一句（两套归一化不同源） |
 | [BUG-3652](bugs/BUG-3652-tts-mining-sentence-audio-not-synthesized.md) | ✅ | ✅ | TTS 朗读制卡句子音频：未合成句被当成已存在文件喂 ffmpeg，整张卡判死 |
 | [BUG-3651](bugs/BUG-3651-paged-restore-page-first-after-stop-previous-page.md) | ✅ | ✅ | 页首字紧跟上一页末行的「。」时，存→取退回前一页（学习单位逆映射停在分隔符上） |
 | [BUG-3650](bugs/BUG-3650-paged-restore-page-first-caret-previous-page.md) | ✅ | ✅ | 翻页模式页首字在禁则换行处时重开退一页（分页 scrollToCharOffset 用塌缩光标锚） |
@@ -236,8 +237,8 @@
 | [BUG-3386](bugs/BUG-3386-android-mihon-image-url-unresolved.md) | ✅ | 🚧 | Android在线漫画不解析逐页图片地址 |
 | [BUG-3385](bugs/BUG-3385-manga-online-failed-page-never-retried.md) | ✅ | ✅ | 在线直读取页失败后该页永久白屏 |
 | [BUG-3371](bugs/BUG-3371-sync-compare-manga-zero-progress.md) | ✅ | ✅ | sync-compare-manga-zero-progress |
-| [BUG-3370](bugs/BUG-3370-reader-translation-span-wrap-stops.md) | ✅ | ✅ | 阅读器对照翻译：句子被 SPAN 包裹后收集停止（滚动/高亮后不翻译） |
 | [BUG-3370](bugs/BUG-3370-video-home-next-up-skips-open-only-episode.md) | ✅ | ✅ | video-home-next-up-skips-open-only-episode |
+| [BUG-3370](bugs/BUG-3370-reader-translation-span-wrap-stops.md) | ✅ | ✅ | 阅读器对照翻译：句子被 SPAN 包裹后收集停止（滚动/高亮后不翻译） |
 | [BUG-3369](bugs/BUG-3369-reader-translation-stops-halfway.md) | ✅ | ✅ | 阅读器段落对照翻译中途停止：限流/网络失败后段落永久冷却且无 UI 反馈 |
 | [BUG-3369](bugs/BUG-3369-reader-highlight-one-em-lanes.md) | ✅ | ✅ | 阅读器高亮条太粗：所有字体都要一个字高 |
 | [BUG-3368](bugs/BUG-3368-lyrics-ruby-selection-highlight.md) | ✅ | ✅ | 歌词模式查词高亮漏掉带注音的字 |
