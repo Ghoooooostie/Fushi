@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152031 (8943 per locale)
+/// Strings: 152065 (8945 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3971,6 +3971,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Keep the ball on screen after switching to other apps. Needs the display-over-other-apps permission';
   String get floating_ball_system_hint_desktop =>
       'Keeps floating above other programs after you switch away from Fushi';
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   String get floating_dict_close => 'Close';
   String get floating_dict_title => 'Dictionary';
   String get floating_lyric_appearance_section =>
@@ -19313,6 +19316,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'تبقى عائمة فوق البرامج الأخرى بعد التبديل بعيدًا عن Fushi';
+  @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'إغلاق';
   @override
@@ -41127,6 +41135,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Bleibt über anderen Programmen schweben, nachdem du von Fushi weggewechselt bist';
+  @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Schließen';
   @override
@@ -63242,6 +63255,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Sigue flotando sobre otros programas cuando sales de Fushi';
+  @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Cerrar';
   @override
@@ -85428,6 +85446,11 @@ class _StringsFr extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Reste flottant au-dessus des autres programmes quand vous quittez Fushi';
   @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  @override
   String get floating_dict_close => 'Fermer';
   @override
   String get floating_dict_title => 'Dictionnaire';
@@ -107561,6 +107584,11 @@ class _StringsId extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Tetap mengambang di atas program lain setelah Anda beralih dari Fushi';
   @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  @override
   String get floating_dict_close => 'Tutup';
   @override
   String get floating_dict_title => 'Kamus';
@@ -129500,6 +129528,11 @@ class _StringsIt extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Resta sopra gli altri programmi dopo che esci da Fushi';
   @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  @override
   String get floating_dict_close => 'Chiudi';
   @override
   String get floating_dict_title => 'Dizionario';
@@ -151281,6 +151314,11 @@ class _StringsJa extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Fushi から切り替えた後も、他のプログラムの上に浮かんだままになります';
   @override
+  String get floating_ball_tap_clipboard => 'タップでクリップボードを検索';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'アプリ外でフローティングボールをタップするとコピーしたテキストをすぐに調べます。長押しでボタンを表示します';
+  @override
   String get floating_dict_close => '閉じる';
   @override
   String get floating_dict_title => '辞書';
@@ -172307,6 +172345,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Fushi에서 다른 곳으로 전환한 뒤에도 다른 프로그램 위에 떠 있습니다';
+  @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => '닫기';
   @override
@@ -193647,6 +193690,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Blijft boven andere programma\'s zweven nadat je van Fushi bent weggeschakeld';
+  @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Sluiten';
   @override
@@ -215673,6 +215721,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Continua flutuando sobre outros programas depois que você sai do Fushi';
+  @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Fechar';
   @override
@@ -237718,6 +237771,11 @@ class _StringsRu extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Остаётся поверх других программ после переключения из Fushi';
   @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  @override
   String get floating_dict_close => 'Закрыть';
   @override
   String get floating_dict_title => 'Словарь';
@@ -259657,6 +259715,11 @@ class _StringsTh extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'ลอยเหนือโปรแกรมอื่นต่อไปหลังคุณสลับออกจาก Fushi';
   @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  @override
   String get floating_dict_close => 'ปิด';
   @override
   String get floating_dict_title => 'พจนานุกรม';
@@ -281414,6 +281477,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Fushi\'den ayrıldıktan sonra diğer programların üzerinde yüzer kalır';
+  @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Kapat';
   @override
@@ -303299,6 +303367,11 @@ class _StringsVi extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Giữ nổi trên các chương trình khác sau khi bạn chuyển khỏi Fushi';
   @override
+  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  @override
+  String get floating_ball_tap_clipboard_hint =>
+      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  @override
   String get floating_dict_close => 'Đóng';
   @override
   String get floating_dict_title => 'Từ điển';
@@ -324584,6 +324657,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop => '切到其他程序后悬浮球仍浮在最上层';
   @override
+  String get floating_ball_tap_clipboard => '点球查剪贴板';
+  @override
+  String get floating_ball_tap_clipboard_hint => '应用外点按悬浮球直接查询复制的文字，长按悬浮球展开按钮';
+  @override
   String get floating_dict_close => '关闭';
   @override
   String get floating_dict_title => '词典';
@@ -344677,6 +344754,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop => '切到其他程式後懸浮球仍浮在最上層';
   @override
+  String get floating_ball_tap_clipboard => '點球查剪貼簿';
+  @override
+  String get floating_ball_tap_clipboard_hint => '應用外點按懸浮球直接查詢複製的文字，長按懸浮球展開按鈕';
+  @override
   String get floating_dict_close => '關閉';
   @override
   String get floating_dict_title => '辭典';
@@ -364481,6 +364562,10 @@ extension on _StringsEn {
         return 'Keep the ball on screen after switching to other apps. Needs the display-over-other-apps permission';
       case 'floating_ball_system_hint_desktop':
         return 'Keeps floating above other programs after you switch away from Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Close';
       case 'floating_dict_title':
@@ -383071,6 +383156,10 @@ extension on _StringsAr {
         return 'أبقِ الكرة على الشاشة بعد التبديل إلى تطبيقات أخرى. تحتاج إلى إذن العرض فوق التطبيقات الأخرى';
       case 'floating_ball_system_hint_desktop':
         return 'تبقى عائمة فوق البرامج الأخرى بعد التبديل بعيدًا عن Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'إغلاق';
       case 'floating_dict_title':
@@ -401687,6 +401776,10 @@ extension on _StringsDe {
         return 'Die Kugel nach dem Wechsel zu anderen Apps auf dem Bildschirm behalten. Benötigt die Berechtigung zum Anzeigen über anderen Apps';
       case 'floating_ball_system_hint_desktop':
         return 'Bleibt über anderen Programmen schweben, nachdem du von Fushi weggewechselt bist';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Schließen';
       case 'floating_dict_title':
@@ -420337,6 +420430,10 @@ extension on _StringsEs {
         return 'Mantiene la bola en pantalla al cambiar a otras apps. Requiere el permiso de mostrar sobre otras apps';
       case 'floating_ball_system_hint_desktop':
         return 'Sigue flotando sobre otros programas cuando sales de Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Cerrar';
       case 'floating_dict_title':
@@ -438992,6 +439089,10 @@ extension on _StringsFr {
         return 'Garde la bulle à l\'écran après être passé à d\'autres applications. Nécessite l\'autorisation d\'affichage par-dessus d\'autres applications';
       case 'floating_ball_system_hint_desktop':
         return 'Reste flottant au-dessus des autres programmes quand vous quittez Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Fermer';
       case 'floating_dict_title':
@@ -457628,6 +457729,10 @@ extension on _StringsId {
         return 'Pertahankan bola di layar setelah beralih ke aplikasi lain. Memerlukan izin tampil di atas aplikasi lain';
       case 'floating_ball_system_hint_desktop':
         return 'Tetap mengambang di atas program lain setelah Anda beralih dari Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Tutup';
       case 'floating_dict_title':
@@ -476242,6 +476347,10 @@ extension on _StringsIt {
         return 'Mantiene il pulsante sullo schermo dopo il passaggio ad altre app. Richiede il permesso di visualizzazione sopra altre app';
       case 'floating_ball_system_hint_desktop':
         return 'Resta sopra gli altri programmi dopo che esci da Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Chiudi';
       case 'floating_dict_title':
@@ -494837,6 +494946,10 @@ extension on _StringsJa {
         return '他のアプリに切り替えた後も、ボールを画面に残します。他のアプリの上に重ねて表示する権限が必要です';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi から切り替えた後も、他のプログラムの上に浮かんだままになります';
+      case 'floating_ball_tap_clipboard':
+        return 'タップでクリップボードを検索';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'アプリ外でフローティングボールをタップするとコピーしたテキストをすぐに調べます。長押しでボタンを表示します';
       case 'floating_dict_close':
         return '閉じる';
       case 'floating_dict_title':
@@ -513346,6 +513459,10 @@ extension on _StringsKo {
         return '다른 앱으로 전환한 뒤에도 볼을 화면에 유지합니다. 다른 앱 위에 표시 권한이 필요합니다';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi에서 다른 곳으로 전환한 뒤에도 다른 프로그램 위에 떠 있습니다';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return '닫기';
       case 'floating_dict_title':
@@ -531906,6 +532023,10 @@ extension on _StringsNl {
         return 'Houd de knop op het scherm nadat je naar andere apps bent overgeschakeld. Vereist de toestemming om over andere apps te tekenen';
       case 'floating_ball_system_hint_desktop':
         return 'Blijft boven andere programma\'s zweven nadat je van Fushi bent weggeschakeld';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Sluiten';
       case 'floating_dict_title':
@@ -550540,6 +550661,10 @@ extension on _StringsPtBr {
         return 'Mantém a bola na tela depois de mudar para outros apps. Requer a permissão de exibir sobre outros apps';
       case 'floating_ball_system_hint_desktop':
         return 'Continua flutuando sobre outros programas depois que você sai do Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Fechar';
       case 'floating_dict_title':
@@ -569174,6 +569299,10 @@ extension on _StringsRu {
         return 'Оставлять кнопку на экране после переключения на другие приложения. Нужно разрешение на отображение поверх других приложений';
       case 'floating_ball_system_hint_desktop':
         return 'Остаётся поверх других программ после переключения из Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Закрыть';
       case 'floating_dict_title':
@@ -587782,6 +587911,10 @@ extension on _StringsTh {
         return 'คงปุ่มไว้บนหน้าจอหลังสลับไปแอปอื่น ต้องใช้สิทธิ์แสดงเหนือแอปอื่น';
       case 'floating_ball_system_hint_desktop':
         return 'ลอยเหนือโปรแกรมอื่นต่อไปหลังคุณสลับออกจาก Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'ปิด';
       case 'floating_dict_title':
@@ -606387,6 +606520,10 @@ extension on _StringsTr {
         return 'Başka uygulamalara geçtikten sonra topu ekranda tut. Diğer uygulamaların üzerinde görüntüleme izni gerekir';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi\'den ayrıldıktan sonra diğer programların üzerinde yüzer kalır';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Kapat';
       case 'floating_dict_title':
@@ -624999,6 +625136,10 @@ extension on _StringsVi {
         return 'Giữ bóng trên màn hình sau khi chuyển sang ứng dụng khác. Cần quyền hiển thị trên các ứng dụng khác';
       case 'floating_ball_system_hint_desktop':
         return 'Giữ nổi trên các chương trình khác sau khi bạn chuyển khỏi Fushi';
+      case 'floating_ball_tap_clipboard':
+        return 'Tap ball to look up copied text';
+      case 'floating_ball_tap_clipboard_hint':
+        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Đóng';
       case 'floating_dict_title':
@@ -643507,6 +643648,10 @@ extension on _StringsZhCn {
         return '切到其他应用后悬浮球仍留在屏幕上，需要「显示在其他应用上层」权限';
       case 'floating_ball_system_hint_desktop':
         return '切到其他程序后悬浮球仍浮在最上层';
+      case 'floating_ball_tap_clipboard':
+        return '点球查剪贴板';
+      case 'floating_ball_tap_clipboard_hint':
+        return '应用外点按悬浮球直接查询复制的文字，长按悬浮球展开按钮';
       case 'floating_dict_close':
         return '关闭';
       case 'floating_dict_title':
@@ -661901,6 +662046,10 @@ extension on _StringsZhHk {
         return '切到其他應用後懸浮球仍留在螢幕上，需要「顯示在其他應用上層」權限';
       case 'floating_ball_system_hint_desktop':
         return '切到其他程式後懸浮球仍浮在最上層';
+      case 'floating_ball_tap_clipboard':
+        return '點球查剪貼簿';
+      case 'floating_ball_tap_clipboard_hint':
+        return '應用外點按懸浮球直接查詢複製的文字，長按懸浮球展開按鈕';
       case 'floating_dict_close':
         return '關閉';
       case 'floating_dict_title':
