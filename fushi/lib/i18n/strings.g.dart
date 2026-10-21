@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 146013 (8589 per locale)
+/// Strings: 146166 (8598 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7464,6 +7464,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_pack_tutorial_ready => 'Your resources are ready';
   String get onboarding_pack_tutorial_skip => 'Not now';
   String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  String get onboarding_permission_granted => 'Granted';
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  String get onboarding_permission_notifications_label => 'Notifications';
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  String get onboarding_permission_storage_label => 'All files access';
   String get onboarding_reopen => 'Getting started guide';
   String get onboarding_review_anki_desc =>
       'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
@@ -7541,6 +7551,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Import the downloaded pack';
   String get onboarding_step_pack_pick_action => 'Choose a pack file';
   String get onboarding_step_pack_title => 'Recommended pack';
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  String get onboarding_step_permissions_title => 'System permissions';
   String get onboarding_title => 'Getting started';
   String get onboarding_welcome_body =>
       'Pick your interface language and theme. The next few steps set up the rest.';
@@ -24669,6 +24682,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'بدء درس البحث';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'دليل البدء';
   @override
   String get onboarding_review_anki_desc =>
@@ -24797,6 +24827,11 @@ class _StringsAr extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'اختيار ملف حزمة';
   @override
   String get onboarding_step_pack_title => 'الحزمة الموصى بها';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'دليل البدء';
   @override
@@ -45721,6 +45756,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Nachschlage-Tutorial starten';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Erste-Schritte-Anleitung';
   @override
   String get onboarding_review_anki_desc =>
@@ -45853,6 +45905,11 @@ class _StringsDe extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Paketdatei wählen';
   @override
   String get onboarding_step_pack_title => 'Empfohlenes Paket';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Erste Schritte';
   @override
@@ -66935,6 +66992,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Iniciar tutorial de consulta';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Guía de primeros pasos';
   @override
   String get onboarding_review_anki_desc =>
@@ -67065,6 +67139,11 @@ class _StringsEs extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Elegir un archivo de pack';
   @override
   String get onboarding_step_pack_title => 'Pack recomendado';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Primeros pasos';
   @override
@@ -88233,6 +88312,23 @@ class _StringsFr extends _StringsEn {
   String get onboarding_pack_tutorial_start =>
       'Lancer le tutoriel de recherche';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Guide de démarrage';
   @override
   String get onboarding_review_anki_desc =>
@@ -88365,6 +88461,11 @@ class _StringsFr extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Choisir un fichier de pack';
   @override
   String get onboarding_step_pack_title => 'Pack recommandé';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Premiers pas';
   @override
@@ -109344,6 +109445,23 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Mulai tutorial pencarian';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Panduan memulai';
   @override
   String get onboarding_review_anki_desc =>
@@ -109473,6 +109591,11 @@ class _StringsId extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Pilih berkas paket';
   @override
   String get onboarding_step_pack_title => 'Paket rekomendasi';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Memulai';
   @override
@@ -130431,6 +130554,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Avvia il tutorial di ricerca';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Guida per iniziare';
   @override
   String get onboarding_review_anki_desc =>
@@ -130561,6 +130701,11 @@ class _StringsIt extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Scegli un file pacchetto';
   @override
   String get onboarding_step_pack_title => 'Pacchetto consigliato';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Per iniziare';
   @override
@@ -150951,6 +151096,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => '検索チュートリアルを開始';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'はじめにガイド';
   @override
   String get onboarding_review_anki_desc =>
@@ -151076,6 +151238,11 @@ class _StringsJa extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'パックファイルを選ぶ';
   @override
   String get onboarding_step_pack_title => 'おすすめパック';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'はじめに';
   @override
@@ -171087,6 +171254,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => '검색 튜토리얼 시작';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => '시작 가이드';
   @override
   String get onboarding_review_anki_desc =>
@@ -171209,6 +171393,11 @@ class _StringsKo extends _StringsEn {
   String get onboarding_step_pack_pick_action => '팩 파일 선택';
   @override
   String get onboarding_step_pack_title => '추천 팩';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => '시작하기';
   @override
@@ -191825,6 +192014,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Opzoektutorial starten';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Aan-de-slaggids';
   @override
   String get onboarding_review_anki_desc =>
@@ -191954,6 +192160,11 @@ class _StringsNl extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Kies een pakketbestand';
   @override
   String get onboarding_step_pack_title => 'Aanbevolen pakket';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Aan de slag';
   @override
@@ -212965,6 +213176,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Iniciar tutorial de consulta';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Guia de primeiros passos';
   @override
   String get onboarding_review_anki_desc =>
@@ -213097,6 +213325,11 @@ class _StringsPtBr extends _StringsEn {
       'Escolher um arquivo de pacote';
   @override
   String get onboarding_step_pack_title => 'Pacote recomendado';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Primeiros passos';
   @override
@@ -234086,6 +234319,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Начать обучение поиску';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Руководство по началу работы';
   @override
   String get onboarding_review_anki_desc =>
@@ -234218,6 +234468,11 @@ class _StringsRu extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Выбрать файл набора';
   @override
   String get onboarding_step_pack_title => 'Рекомендуемый набор';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Начало работы';
   @override
@@ -254997,6 +255252,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'เริ่มบทเรียนการค้นหา';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'คู่มือเริ่มต้นใช้งาน';
   @override
   String get onboarding_review_anki_desc =>
@@ -255126,6 +255398,11 @@ class _StringsTh extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'เลือกไฟล์แพ็ก';
   @override
   String get onboarding_step_pack_title => 'แพ็กแนะนำ';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'เริ่มต้นใช้งาน';
   @override
@@ -275921,6 +276198,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Arama eğitimini başlat';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Başlangıç rehberi';
   @override
   String get onboarding_review_anki_desc =>
@@ -276050,6 +276344,11 @@ class _StringsTr extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Paket dosyası seç';
   @override
   String get onboarding_step_pack_title => 'Önerilen paket';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Başlangıç';
   @override
@@ -296863,6 +297162,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => 'Bắt đầu hướng dẫn tra từ';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => 'Hướng dẫn bắt đầu';
   @override
   String get onboarding_review_anki_desc =>
@@ -296991,6 +297307,11 @@ class _StringsVi extends _StringsEn {
   String get onboarding_step_pack_pick_action => 'Chọn tệp gói';
   @override
   String get onboarding_step_pack_title => 'Gói khuyến nghị';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => 'Bắt đầu';
   @override
@@ -316708,6 +317029,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => '开始查词教程';
   @override
+  String get onboarding_permission_granted => '已开启';
+  @override
+  String get onboarding_permission_notifications_desc => '下载进度、新章节新剧集与更新提醒。';
+  @override
+  String get onboarding_permission_notifications_label => '通知';
+  @override
+  String get onboarding_permission_overlay_desc => '应用外的悬浮球、悬浮词典和悬浮歌词。';
+  @override
+  String get onboarding_permission_overlay_label => '悬浮窗';
+  @override
+  String get onboarding_permission_storage_desc => '按真实路径扫描本地的视频、漫画和书籍文件夹。';
+  @override
+  String get onboarding_permission_storage_label => '所有文件访问';
+  @override
   String get onboarding_reopen => '新手引导';
   @override
   String get onboarding_review_anki_desc =>
@@ -316820,6 +317155,11 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_step_pack_pick_action => '选择本地包文件';
   @override
   String get onboarding_step_pack_title => '推荐包';
+  @override
+  String get onboarding_step_permissions_body =>
+      '安卓默认关着其中几项。按需开启即可，之后也能在系统设置里随时更改。';
+  @override
+  String get onboarding_step_permissions_title => '系统权限';
   @override
   String get onboarding_title => '新手引导';
   @override
@@ -336034,6 +336374,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_tutorial_start => '開始查詞教程';
   @override
+  String get onboarding_permission_granted => 'Granted';
+  @override
+  String get onboarding_permission_notifications_desc =>
+      'Download progress, new chapters and episodes, and update reminders.';
+  @override
+  String get onboarding_permission_notifications_label => 'Notifications';
+  @override
+  String get onboarding_permission_overlay_desc =>
+      'The floating ball, floating dictionary and floating lyrics outside the app.';
+  @override
+  String get onboarding_permission_overlay_label => 'Display over other apps';
+  @override
+  String get onboarding_permission_storage_desc =>
+      'Scan local video, manga and book folders by their real paths.';
+  @override
+  String get onboarding_permission_storage_label => 'All files access';
+  @override
   String get onboarding_reopen => '新手引導';
   @override
   String get onboarding_review_anki_desc =>
@@ -336151,6 +336508,11 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_step_pack_pick_action => '選擇包檔案';
   @override
   String get onboarding_step_pack_title => '推薦包';
+  @override
+  String get onboarding_step_permissions_body =>
+      'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+  @override
+  String get onboarding_step_permissions_title => 'System permissions';
   @override
   String get onboarding_title => '新手引導';
   @override
@@ -354492,6 +354854,20 @@ extension on _StringsEn {
         return 'Not now';
       case 'onboarding_pack_tutorial_start':
         return 'Start lookup tutorial';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Getting started guide';
       case 'onboarding_review_anki_desc':
@@ -354598,6 +354974,10 @@ extension on _StringsEn {
         return 'Choose a pack file';
       case 'onboarding_step_pack_title':
         return 'Recommended pack';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Getting started';
       case 'onboarding_welcome_body':
@@ -372329,6 +372709,20 @@ extension on _StringsAr {
         return 'ليس الآن';
       case 'onboarding_pack_tutorial_start':
         return 'بدء درس البحث';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'دليل البدء';
       case 'onboarding_review_anki_desc':
@@ -372435,6 +372829,10 @@ extension on _StringsAr {
         return 'اختيار ملف حزمة';
       case 'onboarding_step_pack_title':
         return 'الحزمة الموصى بها';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'دليل البدء';
       case 'onboarding_welcome_body':
@@ -390220,6 +390618,20 @@ extension on _StringsDe {
         return 'Nicht jetzt';
       case 'onboarding_pack_tutorial_start':
         return 'Nachschlage-Tutorial starten';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Erste-Schritte-Anleitung';
       case 'onboarding_review_anki_desc':
@@ -390326,6 +390738,10 @@ extension on _StringsDe {
         return 'Paketdatei wählen';
       case 'onboarding_step_pack_title':
         return 'Empfohlenes Paket';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Erste Schritte';
       case 'onboarding_welcome_body':
@@ -408115,6 +408531,20 @@ extension on _StringsEs {
         return 'Ahora no';
       case 'onboarding_pack_tutorial_start':
         return 'Iniciar tutorial de consulta';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Guía de primeros pasos';
       case 'onboarding_review_anki_desc':
@@ -408221,6 +408651,10 @@ extension on _StringsEs {
         return 'Elegir un archivo de pack';
       case 'onboarding_step_pack_title':
         return 'Pack recomendado';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Primeros pasos';
       case 'onboarding_welcome_body':
@@ -426024,6 +426458,20 @@ extension on _StringsFr {
         return 'Pas maintenant';
       case 'onboarding_pack_tutorial_start':
         return 'Lancer le tutoriel de recherche';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Guide de démarrage';
       case 'onboarding_review_anki_desc':
@@ -426130,6 +426578,10 @@ extension on _StringsFr {
         return 'Choisir un fichier de pack';
       case 'onboarding_step_pack_title':
         return 'Pack recommandé';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Premiers pas';
       case 'onboarding_welcome_body':
@@ -443895,6 +444347,20 @@ extension on _StringsId {
         return 'Nanti saja';
       case 'onboarding_pack_tutorial_start':
         return 'Mulai tutorial pencarian';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Panduan memulai';
       case 'onboarding_review_anki_desc':
@@ -444001,6 +444467,10 @@ extension on _StringsId {
         return 'Pilih berkas paket';
       case 'onboarding_step_pack_title':
         return 'Paket rekomendasi';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Memulai';
       case 'onboarding_welcome_body':
@@ -461770,6 +462240,20 @@ extension on _StringsIt {
         return 'Non ora';
       case 'onboarding_pack_tutorial_start':
         return 'Avvia il tutorial di ricerca';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Guida per iniziare';
       case 'onboarding_review_anki_desc':
@@ -461876,6 +462360,10 @@ extension on _StringsIt {
         return 'Scegli un file pacchetto';
       case 'onboarding_step_pack_title':
         return 'Pacchetto consigliato';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Per iniziare';
       case 'onboarding_welcome_body':
@@ -479585,6 +480073,20 @@ extension on _StringsJa {
         return '今はしない';
       case 'onboarding_pack_tutorial_start':
         return '検索チュートリアルを開始';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'はじめにガイド';
       case 'onboarding_review_anki_desc':
@@ -479691,6 +480193,10 @@ extension on _StringsJa {
         return 'パックファイルを選ぶ';
       case 'onboarding_step_pack_title':
         return 'おすすめパック';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'はじめに';
       case 'onboarding_welcome_body':
@@ -497344,6 +497850,20 @@ extension on _StringsKo {
         return '나중에';
       case 'onboarding_pack_tutorial_start':
         return '검색 튜토리얼 시작';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return '시작 가이드';
       case 'onboarding_review_anki_desc':
@@ -497450,6 +497970,10 @@ extension on _StringsKo {
         return '팩 파일 선택';
       case 'onboarding_step_pack_title':
         return '추천 팩';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return '시작하기';
       case 'onboarding_welcome_body':
@@ -515191,6 +515715,20 @@ extension on _StringsNl {
         return 'Nu niet';
       case 'onboarding_pack_tutorial_start':
         return 'Opzoektutorial starten';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Aan-de-slaggids';
       case 'onboarding_review_anki_desc':
@@ -515297,6 +515835,10 @@ extension on _StringsNl {
         return 'Kies een pakketbestand';
       case 'onboarding_step_pack_title':
         return 'Aanbevolen pakket';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Aan de slag';
       case 'onboarding_welcome_body':
@@ -533072,6 +533614,20 @@ extension on _StringsPtBr {
         return 'Agora não';
       case 'onboarding_pack_tutorial_start':
         return 'Iniciar tutorial de consulta';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Guia de primeiros passos';
       case 'onboarding_review_anki_desc':
@@ -533178,6 +533734,10 @@ extension on _StringsPtBr {
         return 'Escolher um arquivo de pacote';
       case 'onboarding_step_pack_title':
         return 'Pacote recomendado';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Primeiros passos';
       case 'onboarding_welcome_body':
@@ -550957,6 +551517,20 @@ extension on _StringsRu {
         return 'Не сейчас';
       case 'onboarding_pack_tutorial_start':
         return 'Начать обучение поиску';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Руководство по началу работы';
       case 'onboarding_review_anki_desc':
@@ -551063,6 +551637,10 @@ extension on _StringsRu {
         return 'Выбрать файл набора';
       case 'onboarding_step_pack_title':
         return 'Рекомендуемый набор';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Начало работы';
       case 'onboarding_welcome_body':
@@ -568804,6 +569382,20 @@ extension on _StringsTh {
         return 'ไม่ใช่ตอนนี้';
       case 'onboarding_pack_tutorial_start':
         return 'เริ่มบทเรียนการค้นหา';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'คู่มือเริ่มต้นใช้งาน';
       case 'onboarding_review_anki_desc':
@@ -568910,6 +569502,10 @@ extension on _StringsTh {
         return 'เลือกไฟล์แพ็ก';
       case 'onboarding_step_pack_title':
         return 'แพ็กแนะนำ';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'เริ่มต้นใช้งาน';
       case 'onboarding_welcome_body':
@@ -586667,6 +587263,20 @@ extension on _StringsTr {
         return 'Şimdi değil';
       case 'onboarding_pack_tutorial_start':
         return 'Arama eğitimini başlat';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Başlangıç rehberi';
       case 'onboarding_review_anki_desc':
@@ -586773,6 +587383,10 @@ extension on _StringsTr {
         return 'Paket dosyası seç';
       case 'onboarding_step_pack_title':
         return 'Önerilen paket';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Başlangıç';
       case 'onboarding_welcome_body':
@@ -604523,6 +605137,20 @@ extension on _StringsVi {
         return 'Để sau';
       case 'onboarding_pack_tutorial_start':
         return 'Bắt đầu hướng dẫn tra từ';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return 'Hướng dẫn bắt đầu';
       case 'onboarding_review_anki_desc':
@@ -604629,6 +605257,10 @@ extension on _StringsVi {
         return 'Chọn tệp gói';
       case 'onboarding_step_pack_title':
         return 'Gói khuyến nghị';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return 'Bắt đầu';
       case 'onboarding_welcome_body':
@@ -622248,6 +622880,20 @@ extension on _StringsZhCn {
         return '暂时跳过';
       case 'onboarding_pack_tutorial_start':
         return '开始查词教程';
+      case 'onboarding_permission_granted':
+        return '已开启';
+      case 'onboarding_permission_notifications_desc':
+        return '下载进度、新章节新剧集与更新提醒。';
+      case 'onboarding_permission_notifications_label':
+        return '通知';
+      case 'onboarding_permission_overlay_desc':
+        return '应用外的悬浮球、悬浮词典和悬浮歌词。';
+      case 'onboarding_permission_overlay_label':
+        return '悬浮窗';
+      case 'onboarding_permission_storage_desc':
+        return '按真实路径扫描本地的视频、漫画和书籍文件夹。';
+      case 'onboarding_permission_storage_label':
+        return '所有文件访问';
       case 'onboarding_reopen':
         return '新手引导';
       case 'onboarding_review_anki_desc':
@@ -622354,6 +623000,10 @@ extension on _StringsZhCn {
         return '选择本地包文件';
       case 'onboarding_step_pack_title':
         return '推荐包';
+      case 'onboarding_step_permissions_body':
+        return '安卓默认关着其中几项。按需开启即可，之后也能在系统设置里随时更改。';
+      case 'onboarding_step_permissions_title':
+        return '系统权限';
       case 'onboarding_title':
         return '新手引导';
       case 'onboarding_welcome_body':
@@ -639911,6 +640561,20 @@ extension on _StringsZhHk {
         return '暫時跳過';
       case 'onboarding_pack_tutorial_start':
         return '開始查詞教程';
+      case 'onboarding_permission_granted':
+        return 'Granted';
+      case 'onboarding_permission_notifications_desc':
+        return 'Download progress, new chapters and episodes, and update reminders.';
+      case 'onboarding_permission_notifications_label':
+        return 'Notifications';
+      case 'onboarding_permission_overlay_desc':
+        return 'The floating ball, floating dictionary and floating lyrics outside the app.';
+      case 'onboarding_permission_overlay_label':
+        return 'Display over other apps';
+      case 'onboarding_permission_storage_desc':
+        return 'Scan local video, manga and book folders by their real paths.';
+      case 'onboarding_permission_storage_label':
+        return 'All files access';
       case 'onboarding_reopen':
         return '新手引導';
       case 'onboarding_review_anki_desc':
@@ -640017,6 +640681,10 @@ extension on _StringsZhHk {
         return '選擇包檔案';
       case 'onboarding_step_pack_title':
         return '推薦包';
+      case 'onboarding_step_permissions_body':
+        return 'Android keeps some of these off by default. Turn on only what you need; you can change them later in system settings.';
+      case 'onboarding_step_permissions_title':
+        return 'System permissions';
       case 'onboarding_title':
         return '新手引導';
       case 'onboarding_welcome_body':
