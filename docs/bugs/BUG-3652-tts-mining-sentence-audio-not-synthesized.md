@@ -31,7 +31,7 @@
     抽段输入改用 `readyInputPath`（原 `inputFile.path`）。
   - 这是根因修复而非补丁：错的不是「缺一个文件」，而是**把「合成后才会存在的路径」
     当成了已存在的文件**——制卡这条链路少了一步「让音频真的就绪」。
-  - 提交：`ec1c0a9064`（分支 `feature/reader-translation-on-develop`）
+  - 提交：`2b8d1b74cd`（文档补哈希见后一提交）（分支 `feature/reader-translation-on-develop`）
   - 修复只动 develop 线（`.worktrees/reader-translation`，分支
     `feature/reader-translation-on-develop`）；三个相关文件在修复前与
     `upstream/develop`（930a8be206）逐字节相同，**是上游 bug，不是合并引入**。
