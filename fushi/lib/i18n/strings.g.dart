@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152014 (8942 per locale)
+/// Strings: 151997 (8941 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9688,8 +9688,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   String get srs_settings_rwkv_model_hint =>
       'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
@@ -29089,9 +29087,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -51092,9 +51087,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -73219,9 +73211,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -95435,9 +95424,6 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
-  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -117413,9 +117399,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -139435,9 +139418,6 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
-  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -160750,9 +160730,6 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
-  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -181790,9 +181767,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -203539,9 +203513,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -225591,9 +225562,6 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
-  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -247621,9 +247589,6 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
-  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -269401,9 +269366,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -291248,9 +291210,6 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
-  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -313090,9 +313049,6 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
-  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -333545,9 +333501,6 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV 用神经网络根据整个复习历史估计每张卡此刻的回忆率；复习卡在估计回忆率降到目标保留率时出现，不看到期日。稳定性、难度与存下的到期日仍由 FSRS-7 维护。';
   @override
-  String get srs_settings_rwkv_license_small =>
-      '小模型从作者的 GitHub 发布页下载；作者尚未声明它的许可。';
-  @override
   String get srs_settings_rwkv_model => 'RWKV 模型（本机）';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -353861,9 +353814,6 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
-  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -372880,8 +372830,6 @@ extension on _StringsEn {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -391464,8 +391412,6 @@ extension on _StringsAr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -410104,8 +410050,6 @@ extension on _StringsDe {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -428748,8 +428692,6 @@ extension on _StringsEs {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -447403,8 +447345,6 @@ extension on _StringsFr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -466018,8 +465958,6 @@ extension on _StringsId {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -484642,8 +484580,6 @@ extension on _StringsIt {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -503200,8 +503136,6 @@ extension on _StringsJa {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -521707,8 +521641,6 @@ extension on _StringsKo {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -540304,8 +540236,6 @@ extension on _StringsNl {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -558932,8 +558862,6 @@ extension on _StringsPtBr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -577564,8 +577492,6 @@ extension on _StringsRu {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -596156,8 +596082,6 @@ extension on _StringsTh {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -614766,8 +614690,6 @@ extension on _StringsTr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -633371,8 +633293,6 @@ extension on _StringsVi {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -651805,8 +651725,6 @@ extension on _StringsZhCn {
             'RWKV 不可用：${error}。在此之前复习按 FSRS-7 存下的到期日排队。';
       case 'srs_settings_rwkv_hint':
         return 'RWKV 用神经网络根据整个复习历史估计每张卡此刻的回忆率；复习卡在估计回忆率降到目标保留率时出现，不看到期日。稳定性、难度与存下的到期日仍由 FSRS-7 维护。';
-      case 'srs_settings_rwkv_license_small':
-        return '小模型从作者的 GitHub 发布页下载；作者尚未声明它的许可。';
       case 'srs_settings_rwkv_model':
         return 'RWKV 模型（本机）';
       case 'srs_settings_rwkv_model_hint':
@@ -670235,8 +670153,6 @@ extension on _StringsZhHk {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
