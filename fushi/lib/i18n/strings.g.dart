@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152541 (8973 per locale)
+/// Strings: 152592 (8976 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1086,7 +1086,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
   String get anki_reposition_auto_hint =>
-      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      'Reposition new cards by frequency about 30 seconds after the last card is mined.';
   String get anki_reposition_auto_title => 'Auto-reposition after mining';
   String get anki_reposition_cancelled =>
       'Reorder cancelled; nothing was written.';
@@ -8858,6 +8858,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
@@ -9326,6 +9330,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   String srs_import_report_lapis_migrated({required Object n}) =>
@@ -9660,9 +9666,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This card was already reviewed on another device, so this step can\'t be undone';
   String get srs_settings_advanced => 'Advanced';
   String get srs_settings_algorithm => 'Scheduling algorithm';
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   String get srs_settings_audio => 'Audio';
@@ -14519,7 +14525,7 @@ class _StringsAr extends _StringsEn {
       'فشلت إعادة الترتيب التلقائي لـ ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'إعادة ترتيب البطاقات الجديدة حسب التكرار بعد نحو 30 ثانية من استخراج آخر بطاقة. مع AnkiConnect فقط.';
+      'إعادة ترتيب البطاقات الجديدة حسب التكرار بعد نحو 30 ثانية من استخراج آخر بطاقة.';
   @override
   String get anki_reposition_auto_title =>
       'إعادة الترتيب التلقائي بعد الاستخراج';
@@ -27721,6 +27727,12 @@ class _StringsAr extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -28535,6 +28547,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -29098,10 +29113,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -36338,7 +36353,7 @@ class _StringsDe extends _StringsEn {
       'Automatische Neupositionierung für ${deck} fehlgeschlagen';
   @override
   String get anki_reposition_auto_hint =>
-      'Neue Karten etwa 30 Sekunden nach der zuletzt erstellten Karte nach Frequenz neu positionieren. Nur AnkiConnect.';
+      'Neue Karten etwa 30 Sekunden nach der zuletzt erstellten Karte nach Frequenz neu positionieren.';
   @override
   String get anki_reposition_auto_title =>
       'Nach dem Mining automatisch neu positionieren';
@@ -49813,6 +49828,12 @@ class _StringsDe extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -50627,6 +50648,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -51190,10 +51214,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -58529,7 +58553,7 @@ class _StringsEs extends _StringsEn {
       'Error al reposicionar automáticamente ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Reposiciona las tarjetas nuevas por frecuencia unos 30 segundos después de crear la última tarjeta. Solo con AnkiConnect.';
+      'Reposiciona las tarjetas nuevas por frecuencia unos 30 segundos después de crear la última tarjeta.';
   @override
   String get anki_reposition_auto_title =>
       'Reposicionar automáticamente tras crear tarjetas';
@@ -72029,6 +72053,12 @@ class _StringsEs extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -72843,6 +72873,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -73406,10 +73439,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -80773,7 +80806,7 @@ class _StringsFr extends _StringsEn {
       'Échec du repositionnement automatique pour ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Repositionne les nouvelles cartes par fréquence environ 30 secondes après la création de la dernière carte. AnkiConnect uniquement.';
+      'Repositionne les nouvelles cartes par fréquence environ 30 secondes après la création de la dernière carte.';
   @override
   String get anki_reposition_auto_title =>
       'Repositionnement automatique après la création';
@@ -94333,6 +94366,12 @@ class _StringsFr extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -95147,6 +95186,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -95710,10 +95752,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -103081,7 +103123,7 @@ class _StringsId extends _StringsEn {
       'Reposisi otomatis gagal untuk ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Posisikan ulang kartu baru berdasarkan frekuensi sekitar 30 detik setelah kartu terakhir dibuat. Hanya AnkiConnect.';
+      'Posisikan ulang kartu baru berdasarkan frekuensi sekitar 30 detik setelah kartu terakhir dibuat.';
   @override
   String get anki_reposition_auto_title =>
       'Posisikan ulang otomatis setelah mining';
@@ -116401,6 +116443,12 @@ class _StringsId extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -117215,6 +117263,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -117778,10 +117829,10 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -125068,7 +125119,7 @@ class _StringsIt extends _StringsEn {
       'Riposizionamento automatico non riuscito per ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Riposiziona le carte nuove per frequenza circa 30 secondi dopo l\'ultima carta creata. Solo AnkiConnect.';
+      'Riposiziona le carte nuove per frequenza circa 30 secondi dopo l\'ultima carta creata.';
   @override
   String get anki_reposition_auto_title =>
       'Riposiziona automaticamente dopo il mining';
@@ -138511,6 +138562,12 @@ class _StringsIt extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -139325,6 +139382,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -139888,10 +139948,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -147140,7 +147200,7 @@ class _StringsJa extends _StringsEn {
       '「${deck}」の自動並べ替えに失敗しました';
   @override
   String get anki_reposition_auto_hint =>
-      '最後のカードを作成してから約 30 秒後に、頻度順で新規カードを並べ替えます。AnkiConnect のみ。';
+      '最後のカードを作成してから約 30 秒後に、頻度順で新規カードを並べ替えます。';
   @override
   String get anki_reposition_auto_title => 'カード作成後に自動で並べ替え';
   @override
@@ -159915,6 +159975,12 @@ class _StringsJa extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -160729,6 +160795,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -161292,10 +161361,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -168240,7 +168309,7 @@ class _StringsKo extends _StringsEn {
       '${deck}의 자동 순서 변경에 실패했습니다';
   @override
   String get anki_reposition_auto_hint =>
-      '마지막 카드를 마이닝하고 약 30초 후에 새 카드를 빈도순으로 재배치합니다. AnkiConnect에서만 지원됩니다.';
+      '마지막 카드를 마이닝하고 약 30초 후에 새 카드를 빈도순으로 재배치합니다.';
   @override
   String get anki_reposition_auto_title => '마이닝 후 자동 순서 변경';
   @override
@@ -181045,6 +181114,12 @@ class _StringsKo extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -181859,6 +181934,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -182422,10 +182500,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -189481,7 +189559,7 @@ class _StringsNl extends _StringsEn {
       'Automatisch herpositioneren mislukt voor ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Herpositioneer nieuwe kaarten op frequentie ongeveer 30 seconden nadat de laatste kaart is gemaakt. Alleen AnkiConnect.';
+      'Herpositioneer nieuwe kaarten op frequentie ongeveer 30 seconden nadat de laatste kaart is gemaakt.';
   @override
   String get anki_reposition_auto_title =>
       'Automatisch herpositioneren na het maken van kaarten';
@@ -202883,6 +202961,12 @@ class _StringsNl extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -203697,6 +203781,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -204260,10 +204347,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -211584,7 +211671,7 @@ class _StringsPtBr extends _StringsEn {
       'Falha no reposicionamento automático de ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Reposiciona os cartões novos por frequência cerca de 30 segundos após o último cartão ser minerado. Somente AnkiConnect.';
+      'Reposiciona os cartões novos por frequência cerca de 30 segundos após o último cartão ser minerado.';
   @override
   String get anki_reposition_auto_title =>
       'Reposicionar automaticamente após minerar';
@@ -225023,6 +225110,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -225837,6 +225930,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -226400,10 +226496,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -233731,7 +233827,7 @@ class _StringsRu extends _StringsEn {
       'Не удалось автоматически переупорядочить колоду ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Переупорядочивать новые карточки по частоте примерно через 30 секунд после создания последней карточки. Только AnkiConnect.';
+      'Переупорядочивать новые карточки по частоте примерно через 30 секунд после создания последней карточки.';
   @override
   String get anki_reposition_auto_title =>
       'Автоматически переупорядочивать после создания карточек';
@@ -247142,6 +247238,12 @@ class _StringsRu extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -247956,6 +248058,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -248519,10 +248624,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -255813,7 +255918,7 @@ class _StringsTh extends _StringsEn {
       'จัดตำแหน่งอัตโนมัติสำหรับ ${deck} ไม่สำเร็จ';
   @override
   String get anki_reposition_auto_hint =>
-      'จัดตำแหน่งการ์ดใหม่ตามความถี่ประมาณ 30 วินาทีหลังสร้างการ์ดใบสุดท้าย เฉพาะ AnkiConnect';
+      'จัดตำแหน่งการ์ดใหม่ตามความถี่ประมาณ 30 วินาทีหลังสร้างการ์ดใบสุดท้าย';
   @override
   String get anki_reposition_auto_title =>
       'จัดตำแหน่งใหม่อัตโนมัติหลังสร้างการ์ด';
@@ -269012,6 +269117,12 @@ class _StringsTh extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -269826,6 +269937,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -270389,10 +270503,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -277615,7 +277729,7 @@ class _StringsTr extends _StringsEn {
       '${deck} için otomatik yeniden konumlandırma başarısız oldu';
   @override
   String get anki_reposition_auto_hint =>
-      'Son kart oluşturulduktan yaklaşık 30 saniye sonra yeni kartları sıklığa göre yeniden konumlandırır. Yalnızca AnkiConnect.';
+      'Son kart oluşturulduktan yaklaşık 30 saniye sonra yeni kartları sıklığa göre yeniden konumlandırır.';
   @override
   String get anki_reposition_auto_title =>
       'Kart oluşturduktan sonra otomatik yeniden konumlandır';
@@ -290947,6 +291061,12 @@ class _StringsTr extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -291761,6 +291881,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -292324,10 +292447,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -299596,7 +299719,7 @@ class _StringsVi extends _StringsEn {
       'Tự động sắp xếp lại thất bại cho ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Sắp xếp lại các thẻ mới theo tần suất khoảng 30 giây sau khi tạo thẻ cuối cùng. Chỉ với AnkiConnect.';
+      'Sắp xếp lại các thẻ mới theo tần suất khoảng 30 giây sau khi tạo thẻ cuối cùng.';
   @override
   String get anki_reposition_auto_title =>
       'Tự động sắp xếp lại sau khi tạo thẻ';
@@ -312878,6 +313001,12 @@ class _StringsVi extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -313692,6 +313821,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -314255,10 +314387,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -321382,8 +321514,7 @@ class _StringsZhCn extends _StringsEn {
   String anki_reposition_auto_failed({required Object deck}) =>
       '「${deck}」自动重排失败';
   @override
-  String get anki_reposition_auto_hint =>
-      '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
+  String get anki_reposition_auto_hint => '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。';
   @override
   String get anki_reposition_auto_title => '制卡后自动重排';
   @override
@@ -333532,6 +333663,12 @@ class _StringsZhCn extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       '之前导入过、后来在 Fushi 里删掉的笔记会恢复，卡片回到原来的牌组。';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      '牌组名里的 Lapis 改成 Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      '把牌组名里的「Lapis」换成「Fushi Card」（如 Lapis::Mining 改成 Fushi Card::Mining）。处理本机全部牌组；改名后与同级牌组重名的保持原名。只在迁移旧 Lapis 笔记时生效。';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => '排程算法';
   @override
   String get srs_anki_migrate_setup_section_notices => '开始前请知悉';
@@ -334287,6 +334424,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => '继续用 FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      '已改名为 Fushi Card：${n} 个牌组';
+  @override
   String get srs_import_report_lapis_failed =>
       '旧 Lapis 迁到 Fushi 卡片失败。导入本身已完成，可以到「笔记类型」页重试。';
   @override
@@ -334810,10 +334950,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_algorithm => '排程算法';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7（推荐）';
-  @override
   String get srs_settings_algorithm_hint =>
       '新算法从下一次复习起生效，已排好的到期日不变；要立即生效请用「立即重排整组」。';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV（推荐）';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       '此牌组的算法来自更新版本，本机暂用 ${alg}';
@@ -341415,8 +341555,7 @@ class _StringsZhHk extends _StringsEn {
   String anki_reposition_auto_failed({required Object deck}) =>
       '「${deck}」自動重排失敗';
   @override
-  String get anki_reposition_auto_hint =>
-      '最後一張卡制好約 30 秒後，自動按詞頻重排該牌組的新卡。僅 AnkiConnect 可用。';
+  String get anki_reposition_auto_hint => '最後一張卡制好約 30 秒後，自動按詞頻重排該牌組的新卡。';
   @override
   String get anki_reposition_auto_title => '制卡後自動重排';
   @override
@@ -353822,6 +353961,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -354636,6 +354781,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
+  @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   @override
@@ -355199,10 +355347,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -361777,7 +361925,7 @@ extension on _StringsEn {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined.';
       case 'anki_reposition_auto_title':
         return 'Auto-reposition after mining';
       case 'anki_reposition_cancelled':
@@ -373099,6 +373247,10 @@ extension on _StringsEn {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -373820,6 +373972,8 @@ extension on _StringsEn {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -374316,10 +374470,10 @@ extension on _StringsEn {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -380435,7 +380589,7 @@ extension on _StringsAr {
         return ({required Object deck}) =>
             'فشلت إعادة الترتيب التلقائي لـ ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'إعادة ترتيب البطاقات الجديدة حسب التكرار بعد نحو 30 ثانية من استخراج آخر بطاقة. مع AnkiConnect فقط.';
+        return 'إعادة ترتيب البطاقات الجديدة حسب التكرار بعد نحو 30 ثانية من استخراج آخر بطاقة.';
       case 'anki_reposition_auto_title':
         return 'إعادة الترتيب التلقائي بعد الاستخراج';
       case 'anki_reposition_cancelled':
@@ -391753,6 +391907,10 @@ extension on _StringsAr {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -392474,6 +392632,8 @@ extension on _StringsAr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -392970,10 +393130,10 @@ extension on _StringsAr {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -399096,7 +399256,7 @@ extension on _StringsDe {
         return ({required Object deck}) =>
             'Automatische Neupositionierung für ${deck} fehlgeschlagen';
       case 'anki_reposition_auto_hint':
-        return 'Neue Karten etwa 30 Sekunden nach der zuletzt erstellten Karte nach Frequenz neu positionieren. Nur AnkiConnect.';
+        return 'Neue Karten etwa 30 Sekunden nach der zuletzt erstellten Karte nach Frequenz neu positionieren.';
       case 'anki_reposition_auto_title':
         return 'Nach dem Mining automatisch neu positionieren';
       case 'anki_reposition_cancelled':
@@ -410463,6 +410623,10 @@ extension on _StringsDe {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -411184,6 +411348,8 @@ extension on _StringsDe {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -411680,10 +411846,10 @@ extension on _StringsDe {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -417819,7 +417985,7 @@ extension on _StringsEs {
         return ({required Object deck}) =>
             'Error al reposicionar automáticamente ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Reposiciona las tarjetas nuevas por frecuencia unos 30 segundos después de crear la última tarjeta. Solo con AnkiConnect.';
+        return 'Reposiciona las tarjetas nuevas por frecuencia unos 30 segundos después de crear la última tarjeta.';
       case 'anki_reposition_auto_title':
         return 'Reposicionar automáticamente tras crear tarjetas';
       case 'anki_reposition_cancelled':
@@ -429177,6 +429343,10 @@ extension on _StringsEs {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -429898,6 +430068,8 @@ extension on _StringsEs {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -430394,10 +430566,10 @@ extension on _StringsEs {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -436532,7 +436704,7 @@ extension on _StringsFr {
         return ({required Object deck}) =>
             'Échec du repositionnement automatique pour ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Repositionne les nouvelles cartes par fréquence environ 30 secondes après la création de la dernière carte. AnkiConnect uniquement.';
+        return 'Repositionne les nouvelles cartes par fréquence environ 30 secondes après la création de la dernière carte.';
       case 'anki_reposition_auto_title':
         return 'Repositionnement automatique après la création';
       case 'anki_reposition_cancelled':
@@ -447902,6 +448074,10 @@ extension on _StringsFr {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -448623,6 +448799,8 @@ extension on _StringsFr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -449119,10 +449297,10 @@ extension on _StringsFr {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -455256,7 +455434,7 @@ extension on _StringsId {
         return ({required Object deck}) =>
             'Reposisi otomatis gagal untuk ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Posisikan ulang kartu baru berdasarkan frekuensi sekitar 30 detik setelah kartu terakhir dibuat. Hanya AnkiConnect.';
+        return 'Posisikan ulang kartu baru berdasarkan frekuensi sekitar 30 detik setelah kartu terakhir dibuat.';
       case 'anki_reposition_auto_title':
         return 'Posisikan ulang otomatis setelah mining';
       case 'anki_reposition_cancelled':
@@ -466587,6 +466765,10 @@ extension on _StringsId {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -467308,6 +467490,8 @@ extension on _StringsId {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -467804,10 +467988,10 @@ extension on _StringsId {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -473930,7 +474114,7 @@ extension on _StringsIt {
         return ({required Object deck}) =>
             'Riposizionamento automatico non riuscito per ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Riposiziona le carte nuove per frequenza circa 30 secondi dopo l\'ultima carta creata. Solo AnkiConnect.';
+        return 'Riposiziona le carte nuove per frequenza circa 30 secondi dopo l\'ultima carta creata.';
       case 'anki_reposition_auto_title':
         return 'Riposiziona automaticamente dopo il mining';
       case 'anki_reposition_cancelled':
@@ -485281,6 +485465,10 @@ extension on _StringsIt {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -486002,6 +486190,8 @@ extension on _StringsIt {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -486498,10 +486688,10 @@ extension on _StringsIt {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -492626,7 +492816,7 @@ extension on _StringsJa {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '「${deck}」の自動並べ替えに失敗しました';
       case 'anki_reposition_auto_hint':
-        return '最後のカードを作成してから約 30 秒後に、頻度順で新規カードを並べ替えます。AnkiConnect のみ。';
+        return '最後のカードを作成してから約 30 秒後に、頻度順で新規カードを並べ替えます。';
       case 'anki_reposition_auto_title':
         return 'カード作成後に自動で並べ替え';
       case 'anki_reposition_cancelled':
@@ -503909,6 +504099,10 @@ extension on _StringsJa {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -504630,6 +504824,8 @@ extension on _StringsJa {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -505126,10 +505322,10 @@ extension on _StringsJa {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -511198,7 +511394,7 @@ extension on _StringsKo {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '${deck}의 자동 순서 변경에 실패했습니다';
       case 'anki_reposition_auto_hint':
-        return '마지막 카드를 마이닝하고 약 30초 후에 새 카드를 빈도순으로 재배치합니다. AnkiConnect에서만 지원됩니다.';
+        return '마지막 카드를 마이닝하고 약 30초 후에 새 카드를 빈도순으로 재배치합니다.';
       case 'anki_reposition_auto_title':
         return '마이닝 후 자동 순서 변경';
       case 'anki_reposition_cancelled':
@@ -522486,6 +522682,10 @@ extension on _StringsKo {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -523207,6 +523407,8 @@ extension on _StringsKo {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -523703,10 +523905,10 @@ extension on _StringsKo {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -529801,7 +530003,7 @@ extension on _StringsNl {
         return ({required Object deck}) =>
             'Automatisch herpositioneren mislukt voor ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Herpositioneer nieuwe kaarten op frequentie ongeveer 30 seconden nadat de laatste kaart is gemaakt. Alleen AnkiConnect.';
+        return 'Herpositioneer nieuwe kaarten op frequentie ongeveer 30 seconden nadat de laatste kaart is gemaakt.';
       case 'anki_reposition_auto_title':
         return 'Automatisch herpositioneren na het maken van kaarten';
       case 'anki_reposition_cancelled':
@@ -541153,6 +541355,10 @@ extension on _StringsNl {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -541874,6 +542080,8 @@ extension on _StringsNl {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -542370,10 +542578,10 @@ extension on _StringsNl {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -548503,7 +548711,7 @@ extension on _StringsPtBr {
         return ({required Object deck}) =>
             'Falha no reposicionamento automático de ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Reposiciona os cartões novos por frequência cerca de 30 segundos após o último cartão ser minerado. Somente AnkiConnect.';
+        return 'Reposiciona os cartões novos por frequência cerca de 30 segundos após o último cartão ser minerado.';
       case 'anki_reposition_auto_title':
         return 'Reposicionar automaticamente após minerar';
       case 'anki_reposition_cancelled':
@@ -559851,6 +560059,10 @@ extension on _StringsPtBr {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -560572,6 +560784,8 @@ extension on _StringsPtBr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -561068,10 +561282,10 @@ extension on _StringsPtBr {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -567198,7 +567412,7 @@ extension on _StringsRu {
         return ({required Object deck}) =>
             'Не удалось автоматически переупорядочить колоду ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Переупорядочивать новые карточки по частоте примерно через 30 секунд после создания последней карточки. Только AnkiConnect.';
+        return 'Переупорядочивать новые карточки по частоте примерно через 30 секунд после создания последней карточки.';
       case 'anki_reposition_auto_title':
         return 'Автоматически переупорядочивать после создания карточек';
       case 'anki_reposition_cancelled':
@@ -578553,6 +578767,10 @@ extension on _StringsRu {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -579274,6 +579492,8 @@ extension on _StringsRu {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -579770,10 +579990,10 @@ extension on _StringsRu {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -585892,7 +586112,7 @@ extension on _StringsTh {
         return ({required Object deck}) =>
             'จัดตำแหน่งอัตโนมัติสำหรับ ${deck} ไม่สำเร็จ';
       case 'anki_reposition_auto_hint':
-        return 'จัดตำแหน่งการ์ดใหม่ตามความถี่ประมาณ 30 วินาทีหลังสร้างการ์ดใบสุดท้าย เฉพาะ AnkiConnect';
+        return 'จัดตำแหน่งการ์ดใหม่ตามความถี่ประมาณ 30 วินาทีหลังสร้างการ์ดใบสุดท้าย';
       case 'anki_reposition_auto_title':
         return 'จัดตำแหน่งใหม่อัตโนมัติหลังสร้างการ์ด';
       case 'anki_reposition_cancelled':
@@ -597215,6 +597435,10 @@ extension on _StringsTh {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -597936,6 +598160,8 @@ extension on _StringsTh {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -598432,10 +598658,10 @@ extension on _StringsTh {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -604553,7 +604779,7 @@ extension on _StringsTr {
         return ({required Object deck}) =>
             '${deck} için otomatik yeniden konumlandırma başarısız oldu';
       case 'anki_reposition_auto_hint':
-        return 'Son kart oluşturulduktan yaklaşık 30 saniye sonra yeni kartları sıklığa göre yeniden konumlandırır. Yalnızca AnkiConnect.';
+        return 'Son kart oluşturulduktan yaklaşık 30 saniye sonra yeni kartları sıklığa göre yeniden konumlandırır.';
       case 'anki_reposition_auto_title':
         return 'Kart oluşturduktan sonra otomatik yeniden konumlandır';
       case 'anki_reposition_cancelled':
@@ -615895,6 +616121,10 @@ extension on _StringsTr {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -616616,6 +616846,8 @@ extension on _StringsTr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -617112,10 +617344,10 @@ extension on _StringsTr {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -623238,7 +623470,7 @@ extension on _StringsVi {
         return ({required Object deck}) =>
             'Tự động sắp xếp lại thất bại cho ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Sắp xếp lại các thẻ mới theo tần suất khoảng 30 giây sau khi tạo thẻ cuối cùng. Chỉ với AnkiConnect.';
+        return 'Sắp xếp lại các thẻ mới theo tần suất khoảng 30 giây sau khi tạo thẻ cuối cùng.';
       case 'anki_reposition_auto_title':
         return 'Tự động sắp xếp lại sau khi tạo thẻ';
       case 'anki_reposition_cancelled':
@@ -634570,6 +634802,10 @@ extension on _StringsVi {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -635291,6 +635527,8 @@ extension on _StringsVi {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -635787,10 +636025,10 @@ extension on _StringsVi {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -641881,7 +642119,7 @@ extension on _StringsZhCn {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '「${deck}」自动重排失败';
       case 'anki_reposition_auto_hint':
-        return '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
+        return '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。';
       case 'anki_reposition_auto_title':
         return '制卡后自动重排';
       case 'anki_reposition_cancelled':
@@ -653100,6 +653338,10 @@ extension on _StringsZhCn {
         return '迁移是合并：Fushi 里已有的卡片会保留，Anki 里的数据不会被改动；重复迁移不会产生重复。';
       case 'srs_anki_migrate_setup_notice_restore':
         return '之前导入过、后来在 Fushi 里删掉的笔记会恢复，卡片回到原来的牌组。';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return '牌组名里的 Lapis 改成 Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return '把牌组名里的「Lapis」换成「Fushi Card」（如 Lapis::Mining 改成 Fushi Card::Mining）。处理本机全部牌组；改名后与同级牌组重名的保持原名。只在迁移旧 Lapis 笔记时生效。';
       case 'srs_anki_migrate_setup_section_algorithm':
         return '排程算法';
       case 'srs_anki_migrate_setup_section_notices':
@@ -653807,6 +654049,8 @@ extension on _StringsZhCn {
         return ({required Object preset}) => '预设「${preset}」的参数无效，未导入';
       case 'srs_import_report_keep_fsrs':
         return '继续用 FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => '已改名为 Fushi Card：${n} 个牌组';
       case 'srs_import_report_lapis_failed':
         return '旧 Lapis 迁到 Fushi 卡片失败。导入本身已完成，可以到「笔记类型」页重试。';
       case 'srs_import_report_lapis_migrated':
@@ -654292,10 +654536,10 @@ extension on _StringsZhCn {
         return '高级';
       case 'srs_settings_algorithm':
         return '排程算法';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7（推荐）';
       case 'srs_settings_algorithm_hint':
         return '新算法从下一次复习起生效，已排好的到期日不变；要立即生效请用「立即重排整组」。';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV（推荐）';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) => '此牌组的算法来自更新版本，本机暂用 ${alg}';
       case 'srs_settings_audio':
@@ -660319,7 +660563,7 @@ extension on _StringsZhHk {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '「${deck}」自動重排失敗';
       case 'anki_reposition_auto_hint':
-        return '最後一張卡制好約 30 秒後，自動按詞頻重排該牌組的新卡。僅 AnkiConnect 可用。';
+        return '最後一張卡制好約 30 秒後，自動按詞頻重排該牌組的新卡。';
       case 'anki_reposition_auto_title':
         return '制卡後自動重排';
       case 'anki_reposition_cancelled':
@@ -671574,6 +671818,10 @@ extension on _StringsZhHk {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -672294,6 +672542,8 @@ extension on _StringsZhHk {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -672790,10 +673040,10 @@ extension on _StringsZhHk {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
