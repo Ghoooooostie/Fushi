@@ -28,6 +28,7 @@ import 'package:fushi/src/media/audiobook/audiobook_session.dart';
 import 'package:fushi/src/media/audiobook/tts/tts_book_plan.dart';
 import 'package:fushi/src/media/audiobook/tts/tts_sentence_audio_source.dart';
 import 'package:fushi/src/media/audiobook/tts/tts_services.dart';
+import 'package:fushi/src/utils/misc/error_log_service.dart';
 
 /// 朗读从哪里开始。
 sealed class TtsStartPoint {
@@ -399,6 +400,58 @@ class TtsReadAlong extends ChangeNotifier {
   @visibleForTesting
   TtsSynthesisScheduler get debugScheduler => _scheduler;
 
+  /// 制卡（句子音频）要第 [index] 句的音频：**先让它真的存在**，再返回真实路径。
+  ///
+  /// 本会话交给有声书播放器的 `audioFiles[i]` 只是按缓存键拼出来的「将来路径」
+  /// （[_filesFor] → [TtsSynthesisScheduler.audioPathOf]）：朗读只预取当前位置之后
+  /// 若干句（按 [kBufferPlaybackSeconds] 秒的播放量折算），全书绝大多数句子在读到
+  /// 之前磁盘上根本没那个文件。制卡直接把它当 ffmpeg 输入会以
+  /// `input audio file does not exist` 早退，并连带整张卡中止（制卡把句子音频缺失
+  /// 当成致命错误）——用户看到的是「导出卡片失败」而不是「这句还没合成」。
+  ///
+  /// 这里走调度器按需合成（已就绪 / 命中缓存则立即返回），合成完返回真实路径；
+  /// 会话已释放、调度已因失败停下、越界、超时一律返回 null（调用方据此降级为无
+  /// 句子音频出卡，既不当成功也不把整张卡判死）。
+  Future<String?> ensureSentenceAudio(
+    int index, {
+    Duration timeout = kSentenceAudioEnsureTimeout,
+  }) async {
+    if (_released || index < 0 || index >= plan.length) return null;
+    final TtsCachedAudio? ready = _scheduler.readyAudio(index);
+    if (ready != null) return ready.path;
+    // 调度已因失败停下：此后不会再发起新合成，等下去只会空等到超时。
+    final TtsFailure? failure = _scheduler.failure;
+    if (failure != null) {
+      ErrorLogService.instance.log(
+        'TtsReadAlong.ensureSentenceAudio',
+        'tts synthesis already stopped '
+            '(index=$index, failure=$failure)',
+        StackTrace.current,
+      );
+      return null;
+    }
+    try {
+      final TtsCachedAudio audio = await _scheduler
+          .ensure(index)
+          .timeout(timeout);
+      return audio.path;
+    } on TimeoutException catch (_) {
+      ErrorLogService.instance.log(
+        'TtsReadAlong.ensureSentenceAudio',
+        'timeout waiting for sentence $index (${timeout.inSeconds}s)',
+        StackTrace.current,
+      );
+      return null;
+    } on TtsFailure catch (e) {
+      ErrorLogService.instance.log(
+        'TtsReadAlong.ensureSentenceAudio',
+        'sentence $index not synthesized ($e)',
+        StackTrace.current,
+      );
+      return null;
+    }
+  }
+
   /// 现有分句里最长的一句（朗读用文本）。新引擎的单次长度上限比它小时本会话
   /// 换不了声音（那一句会被引擎拒掉），只能按新上限重新分句。
   late final int _longestSpokenLength = plan.sentences.fold<int>(
@@ -559,6 +612,9 @@ class TtsReadAlong extends ChangeNotifier {
   /// 稍有波动（自建 GPU 服务单句延迟忽高忽低）就断。目标是当前句之后至少
   /// [kBufferPlaybackSeconds] 秒（按当前倍速换算）的音频都在合成或已合成。
   static const int kBufferPlaybackSeconds = 60;
+
+  /// 制卡等一句按需合成的上限（超出即降级为无句子音频，不让制卡卡死）。
+  static const Duration kSentenceAudioEnsureTimeout = Duration(seconds: 20);
   static const int _kMinLookahead = 3;
   static const int _kMaxLookahead = 60;
 

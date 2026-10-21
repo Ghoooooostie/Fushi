@@ -102,6 +102,21 @@ extension _ReaderMining on _ReaderFushiPageState {
       }
     }
 
+    // BUG-3652：TTS 会话下制卡要裁的那一句可能还没合成（磁盘上无文件）。抽段前先让
+    // 调度器按需合成这一句；拿不到就原样返回（后续 trackInputFor / ffmpeg 走既有降级，
+    // 卡照出，不把「还没合成」判成致命错误）。
+    Future<void> ensureTtsSentenceSynthesized(int index) async {
+      final TtsReadAlong? tts =
+          TtsReadAlong.forController(_audiobookController);
+      if (tts == null) return;
+      try {
+        await tts.ensureSentenceAudio(index);
+      } catch (e, stack) {
+        ErrorLogService.instance
+            .log('ReaderFushi.mineEntry.ensureSentenceAudio', e, stack);
+      }
+    }
+
     final AudioCue? cue = _lookupCue;
     final List<File>? audioFiles = _audiobookController?.audioFiles;
     // BUG-172 / TODO-104a: do not gate on `cue != null`. Audiobook cue alignment
@@ -124,6 +139,12 @@ extension _ReaderMining on _ReaderFushiPageState {
           clip.audioFileIndex >= 0 &&
           clip.audioFileIndex < audioFiles.length) {
         requestedSentenceAudioClip = true;
+        // BUG-3652：TTS 朗读会话里 `audioFiles[i]` 是「该句合成后才会存在」的缓存路径
+        // （TtsReadAlong._filesFor → tts_cache/<key>.audio），朗读只预取当前位置之后
+        // 若干句，没读到的句子磁盘上还没有文件——直接喂 ffmpeg 会早退成
+        // `input audio file does not exist`，再把整张卡一起判死。抽段前先让这一句真正
+        // 就绪（按需合成）；合成不出来走下面的既有降级，卡照出。
+        await ensureTtsSentenceSynthesized(clip.audioFileIndex);
         // 本机书 = 文件路径；流式书 = 服务器文件地址 + 现取的鉴权头（占位文件不存在，
         // 绝不能直接读 `audioFiles[i].path`）。流式书现取鉴权头可能失败（离线 / 令牌
         // 刷新被拒）：句子音频是可选的，失败走下面「句子音频导出失败」的同一条提示，
