@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152592 (8976 per locale)
+/// Strings: 152575 (8975 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2391,17 +2391,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reviewing card clip · Watch progress is preserved';
   String get card_source_review_video_watching =>
       'Watching normally · Watch progress is being saved';
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  String get card_target_anki_title => 'Send to Anki';
-  String get card_target_current => 'Current';
   String get card_target_srs_enable => 'Turn on Fushi review';
   String get card_target_srs_enable_confirm =>
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  String get card_target_srs_title => 'Send to Fushi review';
   String get change_source => 'Change source';
   String get changelog_empty =>
       'No changelog found. Check your network or proxy settings.';
@@ -9646,17 +9641,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_review_done_detail({required Object n}) =>
       'Reviewed ${n} cards in this session';
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   String get srs_review_layout_replay_button_hint =>
       'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
   String get srs_review_layout_replay_end => 'Right';
   String get srs_review_layout_replay_off => 'Off';
   String get srs_review_layout_replay_start => 'Left';
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   String get srs_review_pending_decision => 'Needs your decision';
   String get srs_review_replay_audio => 'Replay audio';
   String get srs_review_rwkv_unavailable =>
@@ -16664,14 +16664,7 @@ class _StringsAr extends _StringsEn {
   String get card_source_review_video_watching =>
       'مشاهدة عادية · يتم حفظ تقدّم المشاهدة';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -16680,8 +16673,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'تغيير المصدر';
   @override
@@ -29078,6 +29069,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -29089,13 +29083,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -38523,14 +38522,7 @@ class _StringsDe extends _StringsEn {
   String get card_source_review_video_watching =>
       'Normale Wiedergabe · Fortschritt wird gespeichert';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -38539,8 +38531,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Quelle ändern';
   @override
@@ -51179,6 +51169,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -51190,13 +51183,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -60728,14 +60726,7 @@ class _StringsEs extends _StringsEn {
   String get card_source_review_video_watching =>
       'Viendo con normalidad · Se está guardando el progreso de visionado';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -60744,8 +60735,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Cambiar fuente';
   @override
@@ -73404,6 +73393,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -73415,13 +73407,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -82996,14 +82993,7 @@ class _StringsFr extends _StringsEn {
   String get card_source_review_video_watching =>
       'Lecture normale · La progression de visionnage est enregistrée';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -83012,8 +83002,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Changer de source';
   @override
@@ -95717,6 +95705,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -95728,13 +95719,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -105273,14 +105269,7 @@ class _StringsId extends _StringsEn {
   String get card_source_review_video_watching =>
       'Menonton normal · Progres menonton sedang disimpan';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -105289,8 +105278,6 @@ class _StringsId extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Ubah Sumber';
   @override
@@ -117794,6 +117781,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -117805,13 +117795,18 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -127286,14 +127281,7 @@ class _StringsIt extends _StringsEn {
   String get card_source_review_video_watching =>
       'Visione normale — L\'avanzamento di visione viene salvato';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -127302,8 +127290,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Cambia sorgente';
   @override
@@ -139913,6 +139899,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -139924,13 +139913,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -149291,14 +149285,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get card_source_review_video_watching => '通常どおり視聴中 · 視聴の進捗を記録しています';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -149307,8 +149294,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'ソースを変更';
   @override
@@ -161326,6 +161311,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => '「Hard」と「Easy」ボタンを隠す';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -161337,13 +161325,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -170400,14 +170393,7 @@ class _StringsKo extends _StringsEn {
   String get card_source_review_video_watching =>
       '일반 시청 중 · 시청 진행 상황이 저장되고 있습니다';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -170416,8 +170402,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => '소스 변경';
   @override
@@ -182465,6 +182449,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -182476,13 +182463,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -191725,14 +191717,7 @@ class _StringsNl extends _StringsEn {
   String get card_source_review_video_watching =>
       'Normaal kijken · Kijkvoortgang wordt opgeslagen';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -191741,8 +191726,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Bron wijzigen';
   @override
@@ -204312,6 +204295,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -204323,13 +204309,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -213838,14 +213829,7 @@ class _StringsPtBr extends _StringsEn {
   String get card_source_review_video_watching =>
       'Assistindo normalmente — o progresso de exibição está sendo salvo';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -213854,8 +213838,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Alterar Fonte';
   @override
@@ -226461,6 +226443,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -226472,13 +226457,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -235992,14 +235982,7 @@ class _StringsRu extends _StringsEn {
   String get card_source_review_video_watching =>
       'Обычный просмотр · прогресс просмотра сохраняется';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -236008,8 +235991,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Сменить источник';
   @override
@@ -248589,6 +248570,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -248600,13 +248584,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -258054,14 +258043,7 @@ class _StringsTh extends _StringsEn {
   String get card_source_review_video_watching =>
       'กำลังดูตามปกติ · กำลังบันทึกความคืบหน้าการดู';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -258070,8 +258052,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'เปลี่ยนแหล่งข้อมูล';
   @override
@@ -270468,6 +270448,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -270479,13 +270462,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -279880,14 +279868,7 @@ class _StringsTr extends _StringsEn {
   String get card_source_review_video_watching =>
       'Normal izleniyor · İzleme ilerlemesi kaydediliyor';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -279896,8 +279877,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Kaynağı değiştir';
   @override
@@ -292412,6 +292391,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -292423,13 +292405,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -301866,14 +301853,7 @@ class _StringsVi extends _StringsEn {
   String get card_source_review_video_watching =>
       'Đang xem bình thường · Tiến độ xem đang được lưu';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -301882,8 +301862,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Đổi nguồn';
   @override
@@ -314352,6 +314330,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -314363,13 +314344,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -323451,13 +323437,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get card_source_review_video_watching => '正在正常观看 · 会记录观看进度';
   @override
-  String get card_target_anki_current_note => '当前发往 Anki，相关设置在下方「Anki」分组。';
-  @override
   String get card_target_anki_hint => 'AnkiDroid / AnkiConnect / AnkiWeb';
-  @override
-  String get card_target_anki_title => '发往 Anki';
-  @override
-  String get card_target_current => '当前';
   @override
   String get card_target_srs_enable => '开启 Fushi 复习';
   @override
@@ -323465,8 +323445,6 @@ class _StringsZhCn extends _StringsEn {
       '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
   @override
   String get card_target_srs_hint => '内置间隔复习，无需安装 Anki';
-  @override
-  String get card_target_srs_title => '发往 Fushi 复习';
   @override
   String get change_source => '切换来源';
   @override
@@ -334919,6 +334897,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => '隐藏「困难」和「简单」按钮';
   @override
+  String get srs_review_hide_hard_easy_hint => '键盘 2 / 4 仍可评「困难」「简单」';
+  @override
   String get srs_review_layout_replay_button => '底部重播键';
   @override
   String get srs_review_layout_replay_button_hint => '手机刷卡时拇指够得到；顶栏的重播照旧保留';
@@ -334929,11 +334909,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => '左侧';
   @override
+  String get srs_review_layout_show_counts => '显示剩余卡片数量';
+  @override
+  String get srs_review_layout_show_counts_hint => '在牌组名下方显示新卡 · 学习 · 复习的剩余数量';
+  @override
   String get srs_review_layout_show_intervals => '评分按钮显示下次间隔';
   @override
   String get srs_review_layout_show_intervals_hint => '评价下方的小字，误按或排程异常一眼可见';
   @override
-  String get srs_review_layout_title => '复习布局';
+  String get srs_review_layout_title => '复习选项';
   @override
   String get srs_review_pending_decision => '待你决定';
   @override
@@ -343597,14 +343581,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get card_source_review_video_watching => '正在正常觀看 · 會記錄觀看進度';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -343613,8 +343590,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => '切換來源';
   @override
@@ -355312,6 +355287,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -355323,13 +355301,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -363691,22 +363674,14 @@ extension on _StringsEn {
         return 'Reviewing card clip · Watch progress is preserved';
       case 'card_source_review_video_watching':
         return 'Watching normally · Watch progress is being saved';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Change source';
       case 'changelog_empty':
@@ -374440,6 +374415,8 @@ extension on _StringsEn {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -374450,12 +374427,16 @@ extension on _StringsEn {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -382356,22 +382337,14 @@ extension on _StringsAr {
         return 'مراجعة مقطع البطاقة · يُحفظ تقدّم المشاهدة';
       case 'card_source_review_video_watching':
         return 'مشاهدة عادية · يتم حفظ تقدّم المشاهدة';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'تغيير المصدر';
       case 'changelog_empty':
@@ -393100,6 +393073,8 @@ extension on _StringsAr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -393110,12 +393085,16 @@ extension on _StringsAr {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -401035,22 +401014,14 @@ extension on _StringsDe {
         return 'Kartenclip wird geprüft · Fortschritt bleibt erhalten';
       case 'card_source_review_video_watching':
         return 'Normale Wiedergabe · Fortschritt wird gespeichert';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Quelle ändern';
       case 'changelog_empty':
@@ -411816,6 +411787,8 @@ extension on _StringsDe {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -411826,12 +411799,16 @@ extension on _StringsDe {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -419764,22 +419741,14 @@ extension on _StringsEs {
         return 'Revisando el clip de la tarjeta · Se conserva el progreso de visionado';
       case 'card_source_review_video_watching':
         return 'Viendo con normalidad · Se está guardando el progreso de visionado';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Cambiar fuente';
       case 'changelog_empty':
@@ -430536,6 +430505,8 @@ extension on _StringsEs {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -430546,12 +430517,16 @@ extension on _StringsEs {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -438485,22 +438460,14 @@ extension on _StringsFr {
         return 'Révision de l\'extrait de la carte · La progression de visionnage est préservée';
       case 'card_source_review_video_watching':
         return 'Lecture normale · La progression de visionnage est enregistrée';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Changer de source';
       case 'changelog_empty':
@@ -449267,6 +449234,8 @@ extension on _StringsFr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -449277,12 +449246,16 @@ extension on _StringsFr {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -457205,22 +457178,14 @@ extension on _StringsId {
         return 'Meninjau klip kartu · Progres menonton dipertahankan';
       case 'card_source_review_video_watching':
         return 'Menonton normal · Progres menonton sedang disimpan';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Ubah Sumber';
       case 'changelog_empty':
@@ -467958,6 +467923,8 @@ extension on _StringsId {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -467968,12 +467935,16 @@ extension on _StringsId {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -475889,22 +475860,14 @@ extension on _StringsIt {
         return 'Revisione della clip della carta — L\'avanzamento di visione viene mantenuto';
       case 'card_source_review_video_watching':
         return 'Visione normale — L\'avanzamento di visione viene salvato';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Cambia sorgente';
       case 'changelog_empty':
@@ -486658,6 +486621,8 @@ extension on _StringsIt {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -486668,12 +486633,16 @@ extension on _StringsIt {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -494573,22 +494542,14 @@ extension on _StringsJa {
         return 'カードのクリップを確認中 · 視聴の進捗は保持されます';
       case 'card_source_review_video_watching':
         return '通常どおり視聴中 · 視聴の進捗を記録しています';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'ソースを変更';
       case 'changelog_empty':
@@ -505292,6 +505253,8 @@ extension on _StringsJa {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return '「Hard」と「Easy」ボタンを隠す';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -505302,12 +505265,16 @@ extension on _StringsJa {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -513152,22 +513119,14 @@ extension on _StringsKo {
         return '카드 클립 검토 중 · 시청 진행 상황은 유지됩니다';
       case 'card_source_review_video_watching':
         return '일반 시청 중 · 시청 진행 상황이 저장되고 있습니다';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return '소스 변경';
       case 'changelog_empty':
@@ -523875,6 +523834,8 @@ extension on _StringsKo {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -523885,12 +523846,16 @@ extension on _StringsKo {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -531775,22 +531740,14 @@ extension on _StringsNl {
         return 'Kaartfragment bekijken · Kijkvoortgang blijft behouden';
       case 'card_source_review_video_watching':
         return 'Normaal kijken · Kijkvoortgang wordt opgeslagen';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Bron wijzigen';
       case 'changelog_empty':
@@ -542548,6 +542505,8 @@ extension on _StringsNl {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -542558,12 +542517,16 @@ extension on _StringsNl {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -550486,22 +550449,14 @@ extension on _StringsPtBr {
         return 'Revisando o clipe do cartão — o progresso de exibição é preservado';
       case 'card_source_review_video_watching':
         return 'Assistindo normalmente — o progresso de exibição está sendo salvo';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Alterar Fonte';
       case 'changelog_empty':
@@ -561252,6 +561207,8 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -561262,12 +561219,16 @@ extension on _StringsPtBr {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -569191,22 +569152,14 @@ extension on _StringsRu {
         return 'Просмотр клипа карточки · прогресс просмотра сохраняется';
       case 'card_source_review_video_watching':
         return 'Обычный просмотр · прогресс просмотра сохраняется';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Сменить источник';
       case 'changelog_empty':
@@ -579960,6 +579913,8 @@ extension on _StringsRu {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -579970,12 +579925,16 @@ extension on _StringsRu {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -587879,22 +587838,14 @@ extension on _StringsTh {
         return 'กำลังตรวจสอบคลิปของการ์ด · เก็บความคืบหน้าการดูไว้';
       case 'card_source_review_video_watching':
         return 'กำลังดูตามปกติ · กำลังบันทึกความคืบหน้าการดู';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'เปลี่ยนแหล่งข้อมูล';
       case 'changelog_empty':
@@ -598628,6 +598579,8 @@ extension on _StringsTh {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -598638,12 +598591,16 @@ extension on _StringsTh {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -606556,22 +606513,14 @@ extension on _StringsTr {
         return 'Kart klibi inceleniyor · İzleme ilerlemesi korunur';
       case 'card_source_review_video_watching':
         return 'Normal izleniyor · İzleme ilerlemesi kaydediliyor';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Kaynağı değiştir';
       case 'changelog_empty':
@@ -617314,6 +617263,8 @@ extension on _StringsTr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -617324,12 +617275,16 @@ extension on _StringsTr {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -625240,22 +625195,14 @@ extension on _StringsVi {
         return 'Đang xem lại clip thẻ · Tiến độ xem được giữ nguyên';
       case 'card_source_review_video_watching':
         return 'Đang xem bình thường · Tiến độ xem đang được lưu';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Đổi nguồn';
       case 'changelog_empty':
@@ -635995,6 +635942,8 @@ extension on _StringsVi {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -636005,12 +635954,16 @@ extension on _StringsVi {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -643862,22 +643815,14 @@ extension on _StringsZhCn {
         return '正在回看卡片片段 · 不影响观看进度';
       case 'card_source_review_video_watching':
         return '正在正常观看 · 会记录观看进度';
-      case 'card_target_anki_current_note':
-        return '当前发往 Anki，相关设置在下方「Anki」分组。';
       case 'card_target_anki_hint':
         return 'AnkiDroid / AnkiConnect / AnkiWeb';
-      case 'card_target_anki_title':
-        return '发往 Anki';
-      case 'card_target_current':
-        return '当前';
       case 'card_target_srs_enable':
         return '开启 Fushi 复习';
       case 'card_target_srs_enable_confirm':
         return '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
       case 'card_target_srs_hint':
         return '内置间隔复习，无需安装 Anki';
-      case 'card_target_srs_title':
-        return '发往 Fushi 复习';
       case 'change_source':
         return '切换来源';
       case 'changelog_empty':
@@ -654506,6 +654451,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '本次复习了 ${n} 张';
       case 'srs_review_hide_hard_easy':
         return '隐藏「困难」和「简单」按钮';
+      case 'srs_review_hide_hard_easy_hint':
+        return '键盘 2 / 4 仍可评「困难」「简单」';
       case 'srs_review_layout_replay_button':
         return '底部重播键';
       case 'srs_review_layout_replay_button_hint':
@@ -654516,12 +654463,16 @@ extension on _StringsZhCn {
         return '不放';
       case 'srs_review_layout_replay_start':
         return '左侧';
+      case 'srs_review_layout_show_counts':
+        return '显示剩余卡片数量';
+      case 'srs_review_layout_show_counts_hint':
+        return '在牌组名下方显示新卡 · 学习 · 复习的剩余数量';
       case 'srs_review_layout_show_intervals':
         return '评分按钮显示下次间隔';
       case 'srs_review_layout_show_intervals_hint':
         return '评价下方的小字，误按或排程异常一眼可见';
       case 'srs_review_layout_title':
-        return '复习布局';
+        return '复习选项';
       case 'srs_review_pending_decision':
         return '待你决定';
       case 'srs_review_replay_audio':
@@ -662313,22 +662264,14 @@ extension on _StringsZhHk {
         return '正在回看卡片片段 · 不影響觀看進度';
       case 'card_source_review_video_watching':
         return '正在正常觀看 · 會記錄觀看進度';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return '切換來源';
       case 'changelog_empty':
@@ -673010,6 +672953,8 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -673020,12 +672965,16 @@ extension on _StringsZhHk {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
