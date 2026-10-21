@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152541 (8973 per locale)
+/// Strings: 152456 (8968 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -842,8 +842,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_duplicate_scope_deck_root => 'Root deck (all subdecks)';
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   String get anki_error_ankimobile_no_decks =>
@@ -3940,8 +3938,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A draggable ball on every Fushi page. Tap it to expand the buttons picked below for the current page';
   String get floating_ball_lookup_hint => 'Enter a word';
   String get floating_ball_notification => 'Floating ball is active';
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   String get floating_ball_ocr_close => 'Close';
   String get floating_ball_ocr_empty => 'No text recognized';
   String get floating_ball_ocr_failed => 'Screen OCR failed';
@@ -3973,9 +3969,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Keep the ball on screen after switching to other apps. Needs the display-over-other-apps permission';
   String get floating_ball_system_hint_desktop =>
       'Keeps floating above other programs after you switch away from Fushi';
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   String get floating_dict_close => 'Close';
   String get floating_dict_title => 'Dictionary';
   String get floating_lyric_appearance_section =>
@@ -9671,9 +9664,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_auto_optimize => 'Optimize automatically';
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
   String srs_settings_inherited_from({required Object name}) =>
@@ -9732,11 +9735,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  String get srs_settings_rwkv_model_large => 'Large';
-  String get srs_settings_rwkv_model_small => 'Small';
   String srs_settings_rwkv_preparing({
     required Object done,
     required Object total,
@@ -12242,10 +12240,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_grouping_series => 'By work';
   String get video_source_grouping_series_hint =>
       'Recognize works and episodes from filenames, then match metadata.';
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   String get video_source_scrape_action => 'Scrape this source';
   String get video_source_scrape_ai_identify => 'Identify with AI';
   String video_source_scrape_ai_suggested({required Object percent}) =>
@@ -14102,9 +14096,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'أي الرزم يتم البحث فيها عند التحقق من وجود بطاقة مسبقاً. لـ AnkiConnect فقط؛ AnkiDroid يبحث دائماً في المجموعة بأكملها.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid غير مثبّت (أو أن واجهته البرمجية معطّلة)، لذا لا يمكن منح الوصول إلى البطاقات. ثبّت AnkiDroid وفعّل واجهته البرمجية، أو بدّل إلى AnkiConnect.';
@@ -19314,9 +19305,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_notification => 'الكرة العائمة نشطة';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'لم يتم التعرف على أي نص';
@@ -19369,11 +19357,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'تبقى عائمة فوق البرامج الأخرى بعد التبديل بعيدًا عن Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'إغلاق';
   @override
@@ -29113,10 +29096,25 @@ class _StringsAr extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -29211,15 +29209,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -33542,12 +33531,6 @@ class _StringsAr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'جلب بيانات هذا المصدر';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -35908,9 +35891,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Welche Decks durchsucht werden, um zu prüfen, ob eine Karte bereits existiert. Nur AnkiConnect; AnkiDroid durchsucht immer die gesamte Sammlung.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid ist nicht installiert (oder seine API ist deaktiviert), daher kann der Kartenzugriff nicht gewährt werden. Installiere AnkiDroid und aktiviere die API oder wechsle zu AnkiConnect.';
@@ -41210,9 +41190,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_notification => 'Schwebende Kugel ist aktiv';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Kein Text erkannt';
@@ -41266,11 +41243,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Bleibt über anderen Programmen schweben, nachdem du von Fushi weggewechselt bist';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Schließen';
   @override
@@ -51202,10 +51174,25 @@ class _StringsDe extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -51300,15 +51287,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -55701,12 +55679,6 @@ class _StringsDe extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Diese Quelle abrufen';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -58092,9 +58064,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Qué mazos se buscan al verificar si una tarjeta ya existe. Solo AnkiConnect; AnkiDroid siempre busca en toda la colección.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid no está instalado (o su API está desactivada), por lo que no se puede conceder el acceso a las tarjetas. Instala AnkiDroid y activa su API, o cambia a AnkiConnect.';
@@ -63409,9 +63378,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_notification => 'La bola flotante está activa';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'No se reconoció ningún texto';
@@ -63464,11 +63430,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Sigue flotando sobre otros programas cuando sales de Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Cerrar';
   @override
@@ -73415,10 +73376,25 @@ class _StringsEs extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -73513,15 +73489,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -77934,12 +77901,6 @@ class _StringsEs extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Obtener metadatos de esta fuente';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -80334,9 +80295,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quels paquets sont recherchés pour vérifier si une carte existe déjà. AnkiConnect uniquement ; AnkiDroid recherche toujours dans toute la collection.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid n\'est pas installé (ou son API est désactivée) : l\'accès aux cartes ne peut donc pas être accordé. Installez AnkiDroid et activez son API, ou passez à AnkiConnect.';
@@ -85675,9 +85633,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get floating_ball_notification => 'La bulle flottante est active';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Aucun texte reconnu';
@@ -85732,11 +85687,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Reste flottant au-dessus des autres programmes quand vous quittez Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Fermer';
   @override
@@ -95716,10 +95666,25 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -95814,15 +95779,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -100244,12 +100200,6 @@ class _StringsFr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Récupérer cette source';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -102648,9 +102598,6 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Dek mana yang dicari saat memeriksa apakah kartu sudah ada. Hanya AnkiConnect; AnkiDroid selalu mencari seluruh koleksi.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid tidak terpasang (atau API-nya dinonaktifkan), sehingga akses kartu tidak dapat diberikan. Pasang AnkiDroid dan aktifkan API-nya, atau beralih ke AnkiConnect.';
@@ -107893,9 +107840,6 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_ball_notification => 'Bola mengambang aktif';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Tidak ada teks dikenali';
@@ -107948,11 +107892,6 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Tetap mengambang di atas program lain setelah Anda beralih dari Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Tutup';
   @override
@@ -117781,10 +117720,25 @@ class _StringsId extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -117879,15 +117833,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -122247,12 +122192,6 @@ class _StringsId extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Scrape sumber ini';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -124629,9 +124568,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quali mazzi vengono cercati per verificare se una carta esiste già. Solo AnkiConnect; AnkiDroid cerca sempre nell\'intera collezione.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid non è installato (o la sua API è disattivata), quindi non è possibile concedere l\'accesso alle carte. Installa AnkiDroid e attiva la sua API, oppure passa ad AnkiConnect.';
@@ -129915,9 +129851,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get floating_ball_notification => 'Il pulsante flottante è attivo';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Nessun testo riconosciuto';
@@ -129970,11 +129903,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Resta sopra gli altri programmi dopo che esci da Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Chiudi';
   @override
@@ -139888,10 +139816,25 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -139986,15 +139929,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -144376,12 +144310,6 @@ class _StringsIt extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Scrape questa fonte';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -146716,9 +146644,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'カードが既に存在するかチェックする際に検索するデッキの範囲。AnkiConnect のみ。AnkiDroid は常にコレクション全体を検索します。';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid がインストールされていない（または API が無効）ため、カードへのアクセスを許可できません。AnkiDroid をインストールして API を有効にするか、AnkiConnect に切り替えてください。';
@@ -151781,8 +151706,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_ball_notification => 'フローティングボールが有効です';
   @override
-  String get floating_ball_notification_tap_hint => 'タップしてコピーしたテキストを調べる';
-  @override
   String get floating_ball_ocr_close => '閉じる';
   @override
   String get floating_ball_ocr_empty => 'テキストを認識できませんでした';
@@ -151834,11 +151757,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Fushi から切り替えた後も、他のプログラムの上に浮かんだままになります';
-  @override
-  String get floating_ball_tap_clipboard => 'タップでクリップボードを検索';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'アプリ外でフローティングボールをタップするとコピーしたテキストをすぐに調べます。長押しでボタンを表示します';
   @override
   String get floating_dict_close => '閉じる';
   @override
@@ -161288,10 +161206,25 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -161386,15 +161319,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -165555,12 +165479,6 @@ class _StringsJa extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'このソースをスクレイプ';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -167815,9 +167733,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '카드가 이미 존재하는지 확인할 때 검색할 덱. AnkiConnect 전용; AnkiDroid는 항상 전체 컬렉션을 검색합니다.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid가 설치되어 있지 않거나 API가 비활성화되어 있어 카드 접근 권한을 부여할 수 없습니다. AnkiDroid를 설치하고 API를 활성화하거나 AnkiConnect로 전환하세요.';
@@ -172890,9 +172805,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_notification => '플로팅 볼이 활성화되어 있습니다';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => '인식된 텍스트가 없습니다';
@@ -172944,11 +172856,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Fushi에서 다른 곳으로 전환한 뒤에도 다른 프로그램 위에 떠 있습니다';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => '닫기';
   @override
@@ -182415,10 +182322,25 @@ class _StringsKo extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -182513,15 +182435,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -186703,12 +186616,6 @@ class _StringsKo extends _StringsEn {
   String get video_source_grouping_series_hint =>
       '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => '이 소스 스크래핑';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -189037,9 +188944,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Welke dekken worden doorzocht bij het controleren of een kaart al bestaat. Alleen AnkiConnect; AnkiDroid doorzoekt altijd de gehele collectie.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid is niet geïnstalleerd (of de API is uitgeschakeld), dus er kan geen toegang tot kaarten worden verleend. Installeer AnkiDroid en schakel de API in, of schakel over naar AnkiConnect.';
@@ -194312,9 +194216,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_notification => 'Zwevende knop is actief';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Geen tekst herkend';
@@ -194367,11 +194268,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Blijft boven andere programma\'s zweven nadat je van Fushi bent weggeschakeld';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Sluiten';
   @override
@@ -204250,10 +204146,25 @@ class _StringsNl extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -204348,15 +204259,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -208736,12 +208638,6 @@ class _StringsNl extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Deze bron scrapen';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -211126,9 +211022,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quais baralhos são verificados ao checar se um cartão já existe. Apenas AnkiConnect; o AnkiDroid sempre busca na coleção inteira.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'O AnkiDroid não está instalado (ou sua API está desativada), então o acesso aos cartões não pôde ser concedido. Instale o AnkiDroid e ative a API dele, ou mude para o AnkiConnect.';
@@ -216421,9 +216314,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_notification => 'A bola flutuante está ativa';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Nenhum texto reconhecido';
@@ -216476,11 +216366,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Continua flutuando sobre outros programas depois que você sai do Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Fechar';
   @override
@@ -226387,10 +226272,25 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -226485,15 +226385,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -230886,12 +230777,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Buscar metadados desta fonte';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -233277,9 +233162,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'В каких колодах искать при проверке, существует ли карточка. Только для AnkiConnect; AnkiDroid всегда ищет по всей коллекции.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid не установлен (или его API отключён), поэтому доступ к карточкам не может быть предоставлен. Установите AnkiDroid и включите его API либо переключитесь на AnkiConnect.';
@@ -238548,9 +238430,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get floating_ball_notification => 'Плавающая кнопка активна';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Текст не распознан';
@@ -238603,11 +238482,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Остаётся поверх других программ после переключения из Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Закрыть';
   @override
@@ -248503,10 +248377,25 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -248601,15 +248490,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -252986,12 +252866,6 @@ class _StringsRu extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action =>
       'Получить метаданные для этого источника';
   @override
@@ -255366,9 +255240,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'กำหนดว่าจะค้นหาสำรับใดเมื่อตรวจสอบว่าบัตรมีอยู่แล้วหรือไม่ เฉพาะ AnkiConnect เท่านั้น; AnkiDroid จะค้นหาทั้งคอลเลกชันเสมอ';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'ไม่ได้ติดตั้ง AnkiDroid (หรือ API ถูกปิดอยู่) จึงให้สิทธิ์เข้าถึงการ์ดไม่ได้ ติดตั้ง AnkiDroid และเปิดใช้ API หรือเปลี่ยนไปใช้ AnkiConnect';
@@ -260570,9 +260441,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_ball_notification => 'ปุ่มลอยกำลังทำงาน';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'ไม่พบข้อความ';
@@ -260625,11 +260493,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'ลอยเหนือโปรแกรมอื่นต่อไปหลังคุณสลับออกจาก Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'ปิด';
   @override
@@ -270370,10 +270233,25 @@ class _StringsTh extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -270468,15 +270346,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -274789,12 +274658,6 @@ class _StringsTh extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'ดึงข้อมูลแหล่งนี้';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -277159,9 +277022,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Bir kartın zaten var olup olmadığı kontrol edilirken hangi destelerin arandığını belirler. Yalnızca AnkiConnect; AnkiDroid her zaman tüm koleksiyonu arar.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid yüklü değil (ya da API\'si devre dışı), bu yüzden kart erişimi verilemiyor. AnkiDroid\'i yükleyip API\'sini etkinleştirin veya AnkiConnect\'e geçin.';
@@ -282411,9 +282271,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_notification => 'Yüzen top etkin';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Metin tanınmadı';
@@ -282466,11 +282323,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Fushi\'den ayrıldıktan sonra diğer programların üzerinde yüzer kalır';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Kapat';
   @override
@@ -292302,10 +292154,25 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -292400,15 +292267,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -296764,12 +296622,6 @@ class _StringsTr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Bu kaynağı tara';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -299138,9 +298990,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Những bộ thẻ nào được tìm kiếm khi kiểm tra thẻ đã tồn tại. Chỉ AnkiConnect; AnkiDroid luôn tìm trong toàn bộ bộ sưu tập.';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid chưa được cài đặt (hoặc API của nó đã bị tắt) nên không thể cấp quyền truy cập thẻ. Hãy cài AnkiDroid và bật API, hoặc chuyển sang AnkiConnect.';
@@ -304378,9 +304227,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_ball_notification => 'Bóng nổi đang hoạt động';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Không nhận dạng được văn bản';
@@ -304433,11 +304279,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop =>
       'Giữ nổi trên các chương trình khác sau khi bạn chuyển khỏi Fushi';
-  @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Đóng';
   @override
@@ -314230,10 +314071,25 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -314328,15 +314184,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -318680,12 +318527,6 @@ class _StringsVi extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => 'Quét nguồn này';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -320951,9 +320792,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '查询「这个词是否已经有卡」时搜索哪些卡组。仅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始终整库查重。';
-  @override
-  String get anki_error_all_fields_empty =>
-      '这张卡的所有字段都是空的，通常是所选笔记类型还没有配置字段映射。请在 Anki 设置里给它的字段配置映射。';
   @override
   String get anki_error_ankidroid_unavailable =>
       '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
@@ -325752,8 +325590,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_notification => '悬浮球运行中';
   @override
-  String get floating_ball_notification_tap_hint => '点按即可查剪贴板里的文字';
-  @override
   String get floating_ball_ocr_close => '关闭';
   @override
   String get floating_ball_ocr_empty => '没有识别到文字';
@@ -325801,10 +325637,6 @@ class _StringsZhCn extends _StringsEn {
   String get floating_ball_system_hint => '切到其他应用后悬浮球仍留在屏幕上，需要「显示在其他应用上层」权限';
   @override
   String get floating_ball_system_hint_desktop => '切到其他程序后悬浮球仍浮在最上层';
-  @override
-  String get floating_ball_tap_clipboard => '点球查剪贴板';
-  @override
-  String get floating_ball_tap_clipboard_hint => '应用外点按悬浮球直接查询复制的文字，长按悬浮球展开按钮';
   @override
   String get floating_dict_close => '关闭';
   @override
@@ -334780,10 +334612,25 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_auto_optimize_hint => '定期按你自己的复习记录调整排程参数';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'RWKV 牌组优化的是底下 FSRS-7 的参数：答题按钮上显示的间隔、存下的到期日（RWKV 没准备好时按它排队）和导出到 Anki 的到期日都用它。app 空闲时会自动跑，不用手动点「立即优化」。';
+  @override
   String get srs_settings_autoplay_audio => '自动播放音频';
   @override
   String get srs_settings_autoplay_audio_hint =>
       '显示问题面或答案面时自动播放卡上的音频；答案面不重播从正面带过来的音频。';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      '让子牌组都继承这里（${n} 个）';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      '把本组下 ${n} 个「单独设置」的子牌组改成「继承上级」？之后它们的目标记忆率、排程算法、参数与自动优化都跟随本组；各自的步长与每日上限不变。';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '已让 ${n} 个子牌组继承本组设置';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      '下面有子牌组用的是「单独设置」（从 Anki 导入时常见），这里改的记忆率、算法与参数不会作用到它们。';
   @override
   String get srs_settings_conflict_replaced => '已被另一台设备的修改替换';
   @override
@@ -334865,15 +334712,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       '今天在这个牌组复习过的卡不到这个数时，即使回忆率高于目标保留率，也按回忆率从低到高补足。0 = 不启用。';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV 模型（本机）';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      '小模型（推荐）：每张卡约占 2.9 KB 内存，在真实复习记录上实测也略准一些。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
-  @override
-  String get srs_settings_rwkv_model_large => '大模型';
-  @override
-  String get srs_settings_rwkv_model_small => '小模型';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -338819,11 +338657,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_grouping_series_hint => '按文件名识别作品与分集，再匹配作品资料。';
   @override
-  String get video_source_restore_grouping_action => '恢复自动分组';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      '你解散过的系列会按文件名重新归组，和首次扫描的分组方式一样。你自己建的合集不受影响。';
-  @override
   String get video_source_scrape_action => '刮削此来源';
   @override
   String get video_source_scrape_ai_identify => 'AI 识别';
@@ -340979,9 +340812,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '查詢「這個詞是否已經有卡」時搜索哪些卡組。僅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始終整庫查重。';
-  @override
-  String get anki_error_all_fields_empty =>
-      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       '未安裝 AnkiDroid（或其 API 被停用），無法授予卡片訪問權限。請安裝 AnkiDroid 並啟用其 API，或改用 AnkiConnect。';
@@ -345924,8 +345754,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_notification => '懸浮球運行中';
   @override
-  String get floating_ball_notification_tap_hint => '點按即可查詢剪貼簿中的文字';
-  @override
   String get floating_ball_ocr_close => '關閉';
   @override
   String get floating_ball_ocr_empty => '沒有識別到文字';
@@ -345973,10 +345801,6 @@ class _StringsZhHk extends _StringsEn {
   String get floating_ball_system_hint => '切到其他應用後懸浮球仍留在螢幕上，需要「顯示在其他應用上層」權限';
   @override
   String get floating_ball_system_hint_desktop => '切到其他程式後懸浮球仍浮在最上層';
-  @override
-  String get floating_ball_tap_clipboard => '點球查剪貼簿';
-  @override
-  String get floating_ball_tap_clipboard_hint => '應用外點按懸浮球直接查詢複製的文字，長按懸浮球展開按鈕';
   @override
   String get floating_dict_close => '關閉';
   @override
@@ -355166,10 +354990,25 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -355264,15 +355103,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -359311,12 +359141,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_grouping_series_hint => '從檔案名稱識別作品及集數，再配對中繼資料。';
   @override
-  String get video_source_restore_grouping_action =>
-      'Restore automatic grouping';
-  @override
-  String get video_source_restore_grouping_confirm =>
-      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
-  @override
   String get video_source_scrape_action => '刮削此來源';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -361377,8 +361201,6 @@ extension on _StringsEn {
         return 'Root deck (all subdecks)';
       case 'anki_duplicate_scope_hint':
         return 'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -365813,8 +365635,6 @@ extension on _StringsEn {
         return 'Enter a word';
       case 'floating_ball_notification':
         return 'Floating ball is active';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -365859,10 +365679,6 @@ extension on _StringsEn {
         return 'Keep the ball on screen after switching to other apps. Needs the display-over-other-apps permission';
       case 'floating_ball_system_hint_desktop':
         return 'Keeps floating above other programs after you switch away from Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Close';
       case 'floating_dict_title':
@@ -374277,10 +374093,21 @@ extension on _StringsEn {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -374356,14 +374183,6 @@ extension on _StringsEn {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -378081,10 +377900,6 @@ extension on _StringsEn {
         return 'By work';
       case 'video_source_grouping_series_hint':
         return 'Recognize works and episodes from filenames, then match metadata.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape this source';
       case 'video_source_scrape_ai_identify':
@@ -380033,8 +379848,6 @@ extension on _StringsAr {
         return 'الرزمة الجذرية (جميع الفرعية)';
       case 'anki_duplicate_scope_hint':
         return 'أي الرزم يتم البحث فيها عند التحقق من وجود بطاقة مسبقاً. لـ AnkiConnect فقط؛ AnkiDroid يبحث دائماً في المجموعة بأكملها.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid غير مثبّت (أو أن واجهته البرمجية معطّلة)، لذا لا يمكن منح الوصول إلى البطاقات. ثبّت AnkiDroid وفعّل واجهته البرمجية، أو بدّل إلى AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -384470,8 +384283,6 @@ extension on _StringsAr {
         return 'أدخل كلمة';
       case 'floating_ball_notification':
         return 'الكرة العائمة نشطة';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -384516,10 +384327,6 @@ extension on _StringsAr {
         return 'أبقِ الكرة على الشاشة بعد التبديل إلى تطبيقات أخرى. تحتاج إلى إذن العرض فوق التطبيقات الأخرى';
       case 'floating_ball_system_hint_desktop':
         return 'تبقى عائمة فوق البرامج الأخرى بعد التبديل بعيدًا عن Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'إغلاق';
       case 'floating_dict_title':
@@ -392930,10 +392737,21 @@ extension on _StringsAr {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -393009,14 +392827,6 @@ extension on _StringsAr {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -396731,10 +396541,6 @@ extension on _StringsAr {
         return 'حسب العمل';
       case 'video_source_grouping_series_hint':
         return 'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'جلب بيانات هذا المصدر';
       case 'video_source_scrape_ai_identify':
@@ -398688,8 +398494,6 @@ extension on _StringsDe {
         return 'Stammdeck (alle Unterdecks)';
       case 'anki_duplicate_scope_hint':
         return 'Welche Decks durchsucht werden, um zu prüfen, ob eine Karte bereits existiert. Nur AnkiConnect; AnkiDroid durchsucht immer die gesamte Sammlung.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid ist nicht installiert (oder seine API ist deaktiviert), daher kann der Kartenzugriff nicht gewährt werden. Installiere AnkiDroid und aktiviere die API oder wechsle zu AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -403153,8 +402957,6 @@ extension on _StringsDe {
         return 'Wort eingeben';
       case 'floating_ball_notification':
         return 'Schwebende Kugel ist aktiv';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -403199,10 +403001,6 @@ extension on _StringsDe {
         return 'Die Kugel nach dem Wechsel zu anderen Apps auf dem Bildschirm behalten. Benötigt die Berechtigung zum Anzeigen über anderen Apps';
       case 'floating_ball_system_hint_desktop':
         return 'Bleibt über anderen Programmen schweben, nachdem du von Fushi weggewechselt bist';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Schließen';
       case 'floating_dict_title':
@@ -411639,10 +411437,21 @@ extension on _StringsDe {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -411718,14 +411527,6 @@ extension on _StringsDe {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -415456,10 +415257,6 @@ extension on _StringsDe {
         return 'Nach Werk';
       case 'video_source_grouping_series_hint':
         return 'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Diese Quelle abrufen';
       case 'video_source_scrape_ai_identify':
@@ -417413,8 +417210,6 @@ extension on _StringsEs {
         return 'Mazo raíz (todos los submazos)';
       case 'anki_duplicate_scope_hint':
         return 'Qué mazos se buscan al verificar si una tarjeta ya existe. Solo AnkiConnect; AnkiDroid siempre busca en toda la colección.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid no está instalado (o su API está desactivada), por lo que no se puede conceder el acceso a las tarjetas. Instala AnkiDroid y activa su API, o cambia a AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -421870,8 +421665,6 @@ extension on _StringsEs {
         return 'Introduce una palabra';
       case 'floating_ball_notification':
         return 'La bola flotante está activa';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -421916,10 +421709,6 @@ extension on _StringsEs {
         return 'Mantiene la bola en pantalla al cambiar a otras apps. Requiere el permiso de mostrar sobre otras apps';
       case 'floating_ball_system_hint_desktop':
         return 'Sigue flotando sobre otros programas cuando sales de Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Cerrar';
       case 'floating_dict_title':
@@ -430352,10 +430141,21 @@ extension on _StringsEs {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -430431,14 +430231,6 @@ extension on _StringsEs {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -434166,10 +433958,6 @@ extension on _StringsEs {
         return 'Por obra';
       case 'video_source_grouping_series_hint':
         return 'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Obtener metadatos de esta fuente';
       case 'video_source_scrape_ai_identify':
@@ -436125,8 +435913,6 @@ extension on _StringsFr {
         return 'Paquet racine (tous les sous-paquets)';
       case 'anki_duplicate_scope_hint':
         return 'Quels paquets sont recherchés pour vérifier si une carte existe déjà. AnkiConnect uniquement ; AnkiDroid recherche toujours dans toute la collection.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid n\'est pas installé (ou son API est désactivée) : l\'accès aux cartes ne peut donc pas être accordé. Installez AnkiDroid et activez son API, ou passez à AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -440592,8 +440378,6 @@ extension on _StringsFr {
         return 'Saisissez un mot';
       case 'floating_ball_notification':
         return 'La bulle flottante est active';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -440638,10 +440422,6 @@ extension on _StringsFr {
         return 'Garde la bulle à l\'écran après être passé à d\'autres applications. Nécessite l\'autorisation d\'affichage par-dessus d\'autres applications';
       case 'floating_ball_system_hint_desktop':
         return 'Reste flottant au-dessus des autres programmes quand vous quittez Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Fermer';
       case 'floating_dict_title':
@@ -449076,10 +448856,21 @@ extension on _StringsFr {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -449155,14 +448946,6 @@ extension on _StringsFr {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -452893,10 +452676,6 @@ extension on _StringsFr {
         return 'Par œuvre';
       case 'video_source_grouping_series_hint':
         return 'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Récupérer cette source';
       case 'video_source_scrape_ai_identify':
@@ -454849,8 +454628,6 @@ extension on _StringsId {
         return 'Dek utama (semua sub-dek)';
       case 'anki_duplicate_scope_hint':
         return 'Dek mana yang dicari saat memeriksa apakah kartu sudah ada. Hanya AnkiConnect; AnkiDroid selalu mencari seluruh koleksi.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid tidak terpasang (atau API-nya dinonaktifkan), sehingga akses kartu tidak dapat diberikan. Pasang AnkiDroid dan aktifkan API-nya, atau beralih ke AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -459295,8 +459072,6 @@ extension on _StringsId {
         return 'Masukkan kata';
       case 'floating_ball_notification':
         return 'Bola mengambang aktif';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -459341,10 +459116,6 @@ extension on _StringsId {
         return 'Pertahankan bola di layar setelah beralih ke aplikasi lain. Memerlukan izin tampil di atas aplikasi lain';
       case 'floating_ball_system_hint_desktop':
         return 'Tetap mengambang di atas program lain setelah Anda beralih dari Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Tutup';
       case 'floating_dict_title':
@@ -467760,10 +467531,21 @@ extension on _StringsId {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -467839,14 +467621,6 @@ extension on _StringsId {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -471565,10 +471339,6 @@ extension on _StringsId {
         return 'Berdasarkan karya';
       case 'video_source_grouping_series_hint':
         return 'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape sumber ini';
       case 'video_source_scrape_ai_identify':
@@ -473521,8 +473291,6 @@ extension on _StringsIt {
         return 'Mazzo radice (tutti i sottogruppi)';
       case 'anki_duplicate_scope_hint':
         return 'Quali mazzi vengono cercati per verificare se una carta esiste già. Solo AnkiConnect; AnkiDroid cerca sempre nell\'intera collezione.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid non è installato (o la sua API è disattivata), quindi non è possibile concedere l\'accesso alle carte. Installa AnkiDroid e attiva la sua API, oppure passa ad AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -477976,8 +477744,6 @@ extension on _StringsIt {
         return 'Inserisci una parola';
       case 'floating_ball_notification':
         return 'Il pulsante flottante è attivo';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -478022,10 +477788,6 @@ extension on _StringsIt {
         return 'Mantiene il pulsante sullo schermo dopo il passaggio ad altre app. Richiede il permesso di visualizzazione sopra altre app';
       case 'floating_ball_system_hint_desktop':
         return 'Resta sopra gli altri programmi dopo che esci da Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Chiudi';
       case 'floating_dict_title':
@@ -486453,10 +486215,21 @@ extension on _StringsIt {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -486532,14 +486305,6 @@ extension on _StringsIt {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -490270,10 +490035,6 @@ extension on _StringsIt {
         return 'Per opera';
       case 'video_source_grouping_series_hint':
         return 'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape questa fonte';
       case 'video_source_scrape_ai_identify':
@@ -492219,8 +491980,6 @@ extension on _StringsJa {
         return 'ルートデッキ（すべてのサブデッキ）';
       case 'anki_duplicate_scope_hint':
         return 'カードが既に存在するかチェックする際に検索するデッキの範囲。AnkiConnect のみ。AnkiDroid は常にコレクション全体を検索します。';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid がインストールされていない（または API が無効）ため、カードへのアクセスを許可できません。AnkiDroid をインストールして API を有効にするか、AnkiConnect に切り替えてください。';
       case 'anki_error_ankimobile_no_decks':
@@ -496638,8 +496397,6 @@ extension on _StringsJa {
         return '単語を入力';
       case 'floating_ball_notification':
         return 'フローティングボールが有効です';
-      case 'floating_ball_notification_tap_hint':
-        return 'タップしてコピーしたテキストを調べる';
       case 'floating_ball_ocr_close':
         return '閉じる';
       case 'floating_ball_ocr_empty':
@@ -496684,10 +496441,6 @@ extension on _StringsJa {
         return '他のアプリに切り替えた後も、ボールを画面に残します。他のアプリの上に重ねて表示する権限が必要です';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi から切り替えた後も、他のプログラムの上に浮かんだままになります';
-      case 'floating_ball_tap_clipboard':
-        return 'タップでクリップボードを検索';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'アプリ外でフローティングボールをタップするとコピーしたテキストをすぐに調べます。長押しでボタンを表示します';
       case 'floating_dict_close':
         return '閉じる';
       case 'floating_dict_title':
@@ -505080,10 +504833,21 @@ extension on _StringsJa {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -505159,14 +504923,6 @@ extension on _StringsJa {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -508857,10 +508613,6 @@ extension on _StringsJa {
         return '作品別';
       case 'video_source_grouping_series_hint':
         return 'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'このソースをスクレイプ';
       case 'video_source_scrape_ai_identify':
@@ -510790,8 +510542,6 @@ extension on _StringsKo {
         return '최상위 덱 (모든 하위 덱)';
       case 'anki_duplicate_scope_hint':
         return '카드가 이미 존재하는지 확인할 때 검색할 덱. AnkiConnect 전용; AnkiDroid는 항상 전체 컬렉션을 검색합니다.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid가 설치되어 있지 않거나 API가 비활성화되어 있어 카드 접근 권한을 부여할 수 없습니다. AnkiDroid를 설치하고 API를 활성화하거나 AnkiConnect로 전환하세요.';
       case 'anki_error_ankimobile_no_decks':
@@ -515214,8 +514964,6 @@ extension on _StringsKo {
         return '단어를 입력하세요';
       case 'floating_ball_notification':
         return '플로팅 볼이 활성화되어 있습니다';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -515260,10 +515008,6 @@ extension on _StringsKo {
         return '다른 앱으로 전환한 뒤에도 볼을 화면에 유지합니다. 다른 앱 위에 표시 권한이 필요합니다';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi에서 다른 곳으로 전환한 뒤에도 다른 프로그램 위에 떠 있습니다';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return '닫기';
       case 'floating_dict_title':
@@ -523656,10 +523400,21 @@ extension on _StringsKo {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -523735,14 +523490,6 @@ extension on _StringsKo {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -527439,10 +527186,6 @@ extension on _StringsKo {
         return '작품별';
       case 'video_source_grouping_series_hint':
         return '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return '이 소스 스크래핑';
       case 'video_source_scrape_ai_identify':
@@ -529389,8 +529132,6 @@ extension on _StringsNl {
         return 'Hoofddeck (alle subdekken)';
       case 'anki_duplicate_scope_hint':
         return 'Welke dekken worden doorzocht bij het controleren of een kaart al bestaat. Alleen AnkiConnect; AnkiDroid doorzoekt altijd de gehele collectie.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid is niet geïnstalleerd (of de API is uitgeschakeld), dus er kan geen toegang tot kaarten worden verleend. Installeer AnkiDroid en schakel de API in, of schakel over naar AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -533841,8 +533582,6 @@ extension on _StringsNl {
         return 'Voer een woord in';
       case 'floating_ball_notification':
         return 'Zwevende knop is actief';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -533887,10 +533626,6 @@ extension on _StringsNl {
         return 'Houd de knop op het scherm nadat je naar andere apps bent overgeschakeld. Vereist de toestemming om over andere apps te tekenen';
       case 'floating_ball_system_hint_desktop':
         return 'Blijft boven andere programma\'s zweven nadat je van Fushi bent weggeschakeld';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Sluiten';
       case 'floating_dict_title':
@@ -542322,10 +542057,21 @@ extension on _StringsNl {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -542401,14 +542147,6 @@ extension on _StringsNl {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -546132,10 +545870,6 @@ extension on _StringsNl {
         return 'Op werk';
       case 'video_source_grouping_series_hint':
         return 'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Deze bron scrapen';
       case 'video_source_scrape_ai_identify':
@@ -548090,8 +547824,6 @@ extension on _StringsPtBr {
         return 'Baralho raiz (todos os sub-baralhos)';
       case 'anki_duplicate_scope_hint':
         return 'Quais baralhos são verificados ao checar se um cartão já existe. Apenas AnkiConnect; o AnkiDroid sempre busca na coleção inteira.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'O AnkiDroid não está instalado (ou sua API está desativada), então o acesso aos cartões não pôde ser concedido. Instale o AnkiDroid e ative a API dele, ou mude para o AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -552542,8 +552274,6 @@ extension on _StringsPtBr {
         return 'Digite uma palavra';
       case 'floating_ball_notification':
         return 'A bola flutuante está ativa';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -552588,10 +552318,6 @@ extension on _StringsPtBr {
         return 'Mantém a bola na tela depois de mudar para outros apps. Requer a permissão de exibir sobre outros apps';
       case 'floating_ball_system_hint_desktop':
         return 'Continua flutuando sobre outros programas depois que você sai do Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Fechar';
       case 'floating_dict_title':
@@ -561019,10 +560745,21 @@ extension on _StringsPtBr {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -561098,14 +560835,6 @@ extension on _StringsPtBr {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -564827,10 +564556,6 @@ extension on _StringsPtBr {
         return 'Por obra';
       case 'video_source_grouping_series_hint':
         return 'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Buscar metadados desta fonte';
       case 'video_source_scrape_ai_identify':
@@ -566783,8 +566508,6 @@ extension on _StringsRu {
         return 'Корневая колода (все подколоды)';
       case 'anki_duplicate_scope_hint':
         return 'В каких колодах искать при проверке, существует ли карточка. Только для AnkiConnect; AnkiDroid всегда ищет по всей коллекции.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid не установлен (или его API отключён), поэтому доступ к карточкам не может быть предоставлен. Установите AnkiDroid и включите его API либо переключитесь на AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -571243,8 +570966,6 @@ extension on _StringsRu {
         return 'Введите слово';
       case 'floating_ball_notification':
         return 'Плавающая кнопка активна';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -571289,10 +571010,6 @@ extension on _StringsRu {
         return 'Оставлять кнопку на экране после переключения на другие приложения. Нужно разрешение на отображение поверх других приложений';
       case 'floating_ball_system_hint_desktop':
         return 'Остаётся поверх других программ после переключения из Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Закрыть';
       case 'floating_dict_title':
@@ -579720,10 +579437,21 @@ extension on _StringsRu {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -579799,14 +579527,6 @@ extension on _StringsRu {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -583527,10 +583247,6 @@ extension on _StringsRu {
         return 'По произведениям';
       case 'video_source_grouping_series_hint':
         return 'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Получить метаданные для этого источника';
       case 'video_source_scrape_ai_identify':
@@ -585479,8 +585195,6 @@ extension on _StringsTh {
         return 'สำรับหลัก (ทุกสำรับย่อย)';
       case 'anki_duplicate_scope_hint':
         return 'กำหนดว่าจะค้นหาสำรับใดเมื่อตรวจสอบว่าบัตรมีอยู่แล้วหรือไม่ เฉพาะ AnkiConnect เท่านั้น; AnkiDroid จะค้นหาทั้งคอลเลกชันเสมอ';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'ไม่ได้ติดตั้ง AnkiDroid (หรือ API ถูกปิดอยู่) จึงให้สิทธิ์เข้าถึงการ์ดไม่ได้ ติดตั้ง AnkiDroid และเปิดใช้ API หรือเปลี่ยนไปใช้ AnkiConnect';
       case 'anki_error_ankimobile_no_decks':
@@ -589918,8 +589632,6 @@ extension on _StringsTh {
         return 'ป้อนคำ';
       case 'floating_ball_notification':
         return 'ปุ่มลอยกำลังทำงาน';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -589964,10 +589676,6 @@ extension on _StringsTh {
         return 'คงปุ่มไว้บนหน้าจอหลังสลับไปแอปอื่น ต้องใช้สิทธิ์แสดงเหนือแอปอื่น';
       case 'floating_ball_system_hint_desktop':
         return 'ลอยเหนือโปรแกรมอื่นต่อไปหลังคุณสลับออกจาก Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'ปิด';
       case 'floating_dict_title':
@@ -598381,10 +598089,21 @@ extension on _StringsTh {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -598460,14 +598179,6 @@ extension on _StringsTh {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -602183,10 +601894,6 @@ extension on _StringsTh {
         return 'ตามผลงาน';
       case 'video_source_grouping_series_hint':
         return 'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'ดึงข้อมูลแหล่งนี้';
       case 'video_source_scrape_ai_identify':
@@ -604138,8 +603845,6 @@ extension on _StringsTr {
         return 'Kök deste (tüm alt desteler)';
       case 'anki_duplicate_scope_hint':
         return 'Bir kartın zaten var olup olmadığı kontrol edilirken hangi destelerin arandığını belirler. Yalnızca AnkiConnect; AnkiDroid her zaman tüm koleksiyonu arar.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid yüklü değil (ya da API\'si devre dışı), bu yüzden kart erişimi verilemiyor. AnkiDroid\'i yükleyip API\'sini etkinleştirin veya AnkiConnect\'e geçin.';
       case 'anki_error_ankimobile_no_decks':
@@ -608590,8 +608295,6 @@ extension on _StringsTr {
         return 'Bir kelime girin';
       case 'floating_ball_notification':
         return 'Yüzen top etkin';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -608636,10 +608339,6 @@ extension on _StringsTr {
         return 'Başka uygulamalara geçtikten sonra topu ekranda tut. Diğer uygulamaların üzerinde görüntüleme izni gerekir';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi\'den ayrıldıktan sonra diğer programların üzerinde yüzer kalır';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Kapat';
       case 'floating_dict_title':
@@ -617060,10 +616759,21 @@ extension on _StringsTr {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -617139,14 +616849,6 @@ extension on _StringsTr {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -620868,10 +620570,6 @@ extension on _StringsTr {
         return 'Esere göre';
       case 'video_source_grouping_series_hint':
         return 'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Bu kaynağı tara';
       case 'video_source_scrape_ai_identify':
@@ -622823,8 +622521,6 @@ extension on _StringsVi {
         return 'Bộ thẻ gốc (tất cả bộ con)';
       case 'anki_duplicate_scope_hint':
         return 'Những bộ thẻ nào được tìm kiếm khi kiểm tra thẻ đã tồn tại. Chỉ AnkiConnect; AnkiDroid luôn tìm trong toàn bộ bộ sưu tập.';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid chưa được cài đặt (hoặc API của nó đã bị tắt) nên không thể cấp quyền truy cập thẻ. Hãy cài AnkiDroid và bật API, hoặc chuyển sang AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -627269,8 +626965,6 @@ extension on _StringsVi {
         return 'Nhập một từ';
       case 'floating_ball_notification':
         return 'Bóng nổi đang hoạt động';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -627315,10 +627009,6 @@ extension on _StringsVi {
         return 'Giữ bóng trên màn hình sau khi chuyển sang ứng dụng khác. Cần quyền hiển thị trên các ứng dụng khác';
       case 'floating_ball_system_hint_desktop':
         return 'Giữ nổi trên các chương trình khác sau khi bạn chuyển khỏi Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Đóng';
       case 'floating_dict_title':
@@ -635734,10 +635424,21 @@ extension on _StringsVi {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -635813,14 +635514,6 @@ extension on _StringsVi {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -639539,10 +639232,6 @@ extension on _StringsVi {
         return 'Theo tác phẩm';
       case 'video_source_grouping_series_hint':
         return 'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Quét nguồn này';
       case 'video_source_scrape_ai_identify':
@@ -641466,8 +641155,6 @@ extension on _StringsZhCn {
         return '根卡组（含全部子卡组）';
       case 'anki_duplicate_scope_hint':
         return '查询「这个词是否已经有卡」时搜索哪些卡组。仅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始终整库查重。';
-      case 'anki_error_all_fields_empty':
-        return '这张卡的所有字段都是空的，通常是所选笔记类型还没有配置字段映射。请在 Anki 设置里给它的字段配置映射。';
       case 'anki_error_ankidroid_unavailable':
         return '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
       case 'anki_error_ankimobile_no_decks':
@@ -645844,8 +645531,6 @@ extension on _StringsZhCn {
         return '输入要查的词';
       case 'floating_ball_notification':
         return '悬浮球运行中';
-      case 'floating_ball_notification_tap_hint':
-        return '点按即可查剪贴板里的文字';
       case 'floating_ball_ocr_close':
         return '关闭';
       case 'floating_ball_ocr_empty':
@@ -645890,10 +645575,6 @@ extension on _StringsZhCn {
         return '切到其他应用后悬浮球仍留在屏幕上，需要「显示在其他应用上层」权限';
       case 'floating_ball_system_hint_desktop':
         return '切到其他程序后悬浮球仍浮在最上层';
-      case 'floating_ball_tap_clipboard':
-        return '点球查剪贴板';
-      case 'floating_ball_tap_clipboard_hint':
-        return '应用外点按悬浮球直接查询复制的文字，长按悬浮球展开按钮';
       case 'floating_dict_close':
         return '关闭';
       case 'floating_dict_title':
@@ -654237,10 +653918,21 @@ extension on _StringsZhCn {
         return '自动优化';
       case 'srs_settings_auto_optimize_hint':
         return '定期按你自己的复习记录调整排程参数';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'RWKV 牌组优化的是底下 FSRS-7 的参数：答题按钮上显示的间隔、存下的到期日（RWKV 没准备好时按它排队）和导出到 Anki 的到期日都用它。app 空闲时会自动跑，不用手动点「立即优化」。';
       case 'srs_settings_autoplay_audio':
         return '自动播放音频';
       case 'srs_settings_autoplay_audio_hint':
         return '显示问题面或答案面时自动播放卡上的音频；答案面不重播从正面带过来的音频。';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => '让子牌组都继承这里（${n} 个）';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            '把本组下 ${n} 个「单独设置」的子牌组改成「继承上级」？之后它们的目标记忆率、排程算法、参数与自动优化都跟随本组；各自的步长与每日上限不变。';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '已让 ${n} 个子牌组继承本组设置';
+      case 'srs_settings_children_inherit_hint':
+        return '下面有子牌组用的是「单独设置」（从 Anki 导入时常见），这里改的记忆率、算法与参数不会作用到它们。';
       case 'srs_settings_conflict_replaced':
         return '已被另一台设备的修改替换';
       case 'srs_settings_inherited_from':
@@ -654315,14 +654007,6 @@ extension on _StringsZhCn {
         return '每天最少复习数';
       case 'srs_settings_rwkv_min_reviews_hint':
         return '今天在这个牌组复习过的卡不到这个数时，即使回忆率高于目标保留率，也按回忆率从低到高补足。0 = 不启用。';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV 模型（本机）';
-      case 'srs_settings_rwkv_model_hint':
-        return '小模型（推荐）：每张卡约占 2.9 KB 内存，在真实复习记录上实测也略准一些。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
-      case 'srs_settings_rwkv_model_large':
-        return '大模型';
-      case 'srs_settings_rwkv_model_small':
-        return '小模型';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             '正在回放复习历史… ${done}/${total}';
@@ -658001,10 +657685,6 @@ extension on _StringsZhCn {
         return '按作品';
       case 'video_source_grouping_series_hint':
         return '按文件名识别作品与分集，再匹配作品资料。';
-      case 'video_source_restore_grouping_action':
-        return '恢复自动分组';
-      case 'video_source_restore_grouping_confirm':
-        return '你解散过的系列会按文件名重新归组，和首次扫描的分组方式一样。你自己建的合集不受影响。';
       case 'video_source_scrape_action':
         return '刮削此来源';
       case 'video_source_scrape_ai_identify':
@@ -659903,8 +659583,6 @@ extension on _StringsZhHk {
         return '根卡組（含全部子卡組）';
       case 'anki_duplicate_scope_hint':
         return '查詢「這個詞是否已經有卡」時搜索哪些卡組。僅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始終整庫查重。';
-      case 'anki_error_all_fields_empty':
-        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return '未安裝 AnkiDroid（或其 API 被停用），無法授予卡片訪問權限。請安裝 AnkiDroid 並啟用其 API，或改用 AnkiConnect。';
       case 'anki_error_ankimobile_no_decks':
@@ -664304,8 +663982,6 @@ extension on _StringsZhHk {
         return '輸入要查的詞';
       case 'floating_ball_notification':
         return '懸浮球運行中';
-      case 'floating_ball_notification_tap_hint':
-        return '點按即可查詢剪貼簿中的文字';
       case 'floating_ball_ocr_close':
         return '關閉';
       case 'floating_ball_ocr_empty':
@@ -664350,10 +664026,6 @@ extension on _StringsZhHk {
         return '切到其他應用後懸浮球仍留在螢幕上，需要「顯示在其他應用上層」權限';
       case 'floating_ball_system_hint_desktop':
         return '切到其他程式後懸浮球仍浮在最上層';
-      case 'floating_ball_tap_clipboard':
-        return '點球查剪貼簿';
-      case 'floating_ball_tap_clipboard_hint':
-        return '應用外點按懸浮球直接查詢複製的文字，長按懸浮球展開按鈕';
       case 'floating_dict_close':
         return '關閉';
       case 'floating_dict_title':
@@ -672735,10 +672407,21 @@ extension on _StringsZhHk {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -672814,14 +672497,6 @@ extension on _StringsZhHk {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -676504,10 +676179,6 @@ extension on _StringsZhHk {
         return '按作品';
       case 'video_source_grouping_series_hint':
         return '從檔案名稱識別作品及集數，再配對中繼資料。';
-      case 'video_source_restore_grouping_action':
-        return 'Restore automatic grouping';
-      case 'video_source_restore_grouping_confirm':
-        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return '刮削此來源';
       case 'video_source_scrape_ai_identify':
