@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152065 (8945 per locale)
+/// Strings: 152541 (8973 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -842,6 +842,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_duplicate_scope_deck_root => 'Root deck (all subdecks)';
   String get anki_duplicate_scope_hint =>
       'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
   String get anki_error_ankimobile_no_decks =>
@@ -8841,6 +8843,28 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_anki_migrate_scanning => 'Looking for Anki…';
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  String get srs_anki_migrate_setup_title => 'Migration settings';
   String get srs_anki_migrate_start => 'Migrate';
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
@@ -9304,6 +9328,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   String srs_import_report_media_missing({required Object n}) =>
@@ -9323,6 +9351,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} fields or templates deleted in the source are kept here';
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
   String srs_import_report_reviews_skipped({required Object n}) =>
@@ -9344,8 +9374,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_task_cancelled({required Object name}) =>
       'Cancelled import of ${name}';
   String get srs_import_task_dismiss => 'Dismiss';
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
   String srs_import_task_queued({required Object name}) =>
@@ -9693,8 +9729,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   String get srs_settings_rwkv_model_hint =>
       'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
@@ -9705,7 +9742,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object total,
   }) => 'Replaying review history… ${done}/${total}';
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  String get srs_settings_rwkv_queue => 'RWKV queue';
   String get srs_settings_rwkv_ready => 'Ready';
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
   String get srs_settings_save => 'Save';
@@ -12196,6 +12242,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_grouping_series => 'By work';
   String get video_source_grouping_series_hint =>
       'Recognize works and episodes from filenames, then match metadata.';
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   String get video_source_scrape_action => 'Scrape this source';
   String get video_source_scrape_ai_identify => 'Identify with AI';
   String video_source_scrape_ai_suggested({required Object percent}) =>
@@ -14052,6 +14102,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'أي الرزم يتم البحث فيها عند التحقق من وجود بطاقة مسبقاً. لـ AnkiConnect فقط؛ AnkiDroid يبحث دائماً في المجموعة بأكملها.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid غير مثبّت (أو أن واجهته البرمجية معطّلة)، لذا لا يمكن منح الوصول إلى البطاقات. ثبّت AnkiDroid وفعّل واجهته البرمجية، أو بدّل إلى AnkiConnect.';
@@ -27642,6 +27695,42 @@ class _StringsAr extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -28446,6 +28535,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -28472,6 +28567,9 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -28506,8 +28604,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -29103,8 +29207,10 @@ class _StringsAr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -29122,7 +29228,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -33420,6 +33542,12 @@ class _StringsAr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'جلب بيانات هذا المصدر';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -35780,6 +35908,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Welche Decks durchsucht werden, um zu prüfen, ob eine Karte bereits existiert. Nur AnkiConnect; AnkiDroid durchsucht immer die gesamte Sammlung.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid ist nicht installiert (oder seine API ist deaktiviert), daher kann der Kartenzugriff nicht gewährt werden. Installiere AnkiDroid und aktiviere die API oder wechsle zu AnkiConnect.';
@@ -49653,6 +49784,42 @@ class _StringsDe extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -50457,6 +50624,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -50483,6 +50656,9 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -50517,8 +50693,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -51114,8 +51296,10 @@ class _StringsDe extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -51133,7 +51317,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -55501,6 +55701,12 @@ class _StringsDe extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Diese Quelle abrufen';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -57886,6 +58092,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Qué mazos se buscan al verificar si una tarjeta ya existe. Solo AnkiConnect; AnkiDroid siempre busca en toda la colección.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid no está instalado (o su API está desactivada), por lo que no se puede conceder el acceso a las tarjetas. Instala AnkiDroid y activa su API, o cambia a AnkiConnect.';
@@ -71788,6 +71997,42 @@ class _StringsEs extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -72592,6 +72837,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -72618,6 +72869,9 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -72652,8 +72906,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -73249,8 +73509,10 @@ class _StringsEs extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -73268,7 +73530,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -77656,6 +77934,12 @@ class _StringsEs extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Obtener metadatos de esta fuente';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -80050,6 +80334,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quels paquets sont recherchés pour vérifier si une carte existe déjà. AnkiConnect uniquement ; AnkiDroid recherche toujours dans toute la collection.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid n\'est pas installé (ou son API est désactivée) : l\'accès aux cartes ne peut donc pas être accordé. Installez AnkiDroid et activez son API, ou passez à AnkiConnect.';
@@ -94011,6 +94298,42 @@ class _StringsFr extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -94815,6 +95138,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -94841,6 +95170,9 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -94875,8 +95207,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -95472,8 +95810,10 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -95491,7 +95831,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -99888,6 +100244,12 @@ class _StringsFr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Récupérer cette source';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -102286,6 +102648,9 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Dek mana yang dicari saat memeriksa apakah kartu sudah ada. Hanya AnkiConnect; AnkiDroid selalu mencari seluruh koleksi.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid tidak terpasang (atau API-nya dinonaktifkan), sehingga akses kartu tidak dapat diberikan. Pasang AnkiDroid dan aktifkan API-nya, atau beralih ke AnkiConnect.';
@@ -115998,6 +116363,42 @@ class _StringsId extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -116802,6 +117203,12 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -116828,6 +117235,9 @@ class _StringsId extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -116862,8 +117272,14 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -117459,8 +117875,10 @@ class _StringsId extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -117478,7 +117896,23 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -121813,6 +122247,12 @@ class _StringsId extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Scrape sumber ini';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -124189,6 +124629,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quali mazzi vengono cercati per verificare se una carta esiste già. Solo AnkiConnect; AnkiDroid cerca sempre nell\'intera collezione.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid non è installato (o la sua API è disattivata), quindi non è possibile concedere l\'accesso alle carte. Installa AnkiDroid e attiva la sua API, oppure passa ad AnkiConnect.';
@@ -138027,6 +138470,42 @@ class _StringsIt extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -138831,6 +139310,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -138857,6 +139342,9 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -138891,8 +139379,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -139488,8 +139982,10 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -139507,7 +140003,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -143864,6 +144376,12 @@ class _StringsIt extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Scrape questa fonte';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -146198,6 +146716,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'カードが既に存在するかチェックする際に検索するデッキの範囲。AnkiConnect のみ。AnkiDroid は常にコレクション全体を検索します。';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid がインストールされていない（または API が無効）ため、カードへのアクセスを許可できません。AnkiDroid をインストールして API を有効にするか、AnkiConnect に切り替えてください。';
@@ -159349,6 +159870,42 @@ class _StringsJa extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -160153,6 +160710,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -160179,6 +160742,9 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -160213,8 +160779,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -160810,8 +161382,10 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -160829,7 +161403,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -164965,6 +165555,12 @@ class _StringsJa extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'このソースをスクレイプ';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -167219,6 +167815,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '카드가 이미 존재하는지 확인할 때 검색할 덱. AnkiConnect 전용; AnkiDroid는 항상 전체 컬렉션을 검색합니다.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid가 설치되어 있지 않거나 API가 비활성화되어 있어 카드 접근 권한을 부여할 수 없습니다. AnkiDroid를 설치하고 API를 활성화하거나 AnkiConnect로 전환하세요.';
@@ -180398,6 +180997,42 @@ class _StringsKo extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -181202,6 +181837,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -181228,6 +181869,9 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -181262,8 +181906,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -181859,8 +182509,10 @@ class _StringsKo extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -181878,7 +182530,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -186035,6 +186703,12 @@ class _StringsKo extends _StringsEn {
   String get video_source_grouping_series_hint =>
       '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => '이 소스 스크래핑';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -188363,6 +189037,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Welke dekken worden doorzocht bij het controleren of een kaart al bestaat. Alleen AnkiConnect; AnkiDroid doorzoekt altijd de gehele collectie.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid is niet geïnstalleerd (of de API is uitgeschakeld), dus er kan geen toegang tot kaarten worden verleend. Installeer AnkiDroid en schakel de API in, of schakel over naar AnkiConnect.';
@@ -202155,6 +202832,42 @@ class _StringsNl extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -202959,6 +203672,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -202985,6 +203704,9 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -203019,8 +203741,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -203616,8 +204344,10 @@ class _StringsNl extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -203635,7 +204365,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -207990,6 +208736,12 @@ class _StringsNl extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Deze bron scrapen';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -210374,6 +211126,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Quais baralhos são verificados ao checar se um cartão já existe. Apenas AnkiConnect; o AnkiDroid sempre busca na coleção inteira.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'O AnkiDroid não está instalado (ou sua API está desativada), então o acesso aos cartões não pôde ser concedido. Instale o AnkiDroid e ative a API dele, ou mude para o AnkiConnect.';
@@ -224214,6 +224969,42 @@ class _StringsPtBr extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -225018,6 +225809,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -225044,6 +225841,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -225078,8 +225878,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -225675,8 +226481,10 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -225694,7 +226502,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -230062,6 +230886,12 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Buscar metadados desta fonte';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -232447,6 +233277,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'В каких колодах искать при проверке, существует ли карточка. Только для AnkiConnect; AnkiDroid всегда ищет по всей коллекции.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid не установлен (или его API отключён), поэтому доступ к карточкам не может быть предоставлен. Установите AnkiDroid и включите его API либо переключитесь на AnkiConnect.';
@@ -246252,6 +247085,42 @@ class _StringsRu extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -247056,6 +247925,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -247082,6 +247957,9 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -247116,8 +247994,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -247713,8 +248597,10 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -247732,7 +248618,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -252084,6 +252986,12 @@ class _StringsRu extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action =>
       'Получить метаданные для этого источника';
   @override
@@ -254458,6 +255366,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'กำหนดว่าจะค้นหาสำรับใดเมื่อตรวจสอบว่าบัตรมีอยู่แล้วหรือไม่ เฉพาะ AnkiConnect เท่านั้น; AnkiDroid จะค้นหาทั้งคอลเลกชันเสมอ';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'ไม่ได้ติดตั้ง AnkiDroid (หรือ API ถูกปิดอยู่) จึงให้สิทธิ์เข้าถึงการ์ดไม่ได้ ติดตั้ง AnkiDroid และเปิดใช้ API หรือเปลี่ยนไปใช้ AnkiConnect';
@@ -268041,6 +268952,42 @@ class _StringsTh extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -268845,6 +269792,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -268871,6 +269824,9 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -268905,8 +269861,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -269502,8 +270464,10 @@ class _StringsTh extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -269521,7 +270485,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -273809,6 +274789,12 @@ class _StringsTh extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'ดึงข้อมูลแหล่งนี้';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -276173,6 +277159,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Bir kartın zaten var olup olmadığı kontrol edilirken hangi destelerin arandığını belirler. Yalnızca AnkiConnect; AnkiDroid her zaman tüm koleksiyonu arar.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid yüklü değil (ya da API\'si devre dışı), bu yüzden kart erişimi verilemiyor. AnkiDroid\'i yükleyip API\'sini etkinleştirin veya AnkiConnect\'e geçin.';
@@ -289895,6 +290884,42 @@ class _StringsTr extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -290699,6 +291724,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -290725,6 +291756,9 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -290759,8 +291793,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -291356,8 +292396,10 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -291375,7 +292417,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -295706,6 +296764,12 @@ class _StringsTr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Bu kaynağı tara';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -298074,6 +299138,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       'Những bộ thẻ nào được tìm kiếm khi kiểm tra thẻ đã tồn tại. Chỉ AnkiConnect; AnkiDroid luôn tìm trong toàn bộ bộ sưu tập.';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       'AnkiDroid chưa được cài đặt (hoặc API của nó đã bị tắt) nên không thể cấp quyền truy cập thẻ. Hãy cài AnkiDroid và bật API, hoặc chuyển sang AnkiConnect.';
@@ -311745,6 +312812,42 @@ class _StringsVi extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -312549,6 +313652,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -312575,6 +313684,9 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -312609,8 +313721,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -313206,8 +314324,10 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -313225,7 +314345,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -317544,6 +318680,12 @@ class _StringsVi extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Quét nguồn này';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -319809,6 +320951,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '查询「这个词是否已经有卡」时搜索哪些卡组。仅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始终整库查重。';
+  @override
+  String get anki_error_all_fields_empty =>
+      '这张卡的所有字段都是空的，通常是所选笔记类型还没有配置字段映射。请在 Anki 设置里给它的字段配置映射。';
   @override
   String get anki_error_ankidroid_unavailable =>
       '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
@@ -332318,6 +333463,41 @@ class _StringsZhCn extends _StringsEn {
   String get srs_anki_migrate_scope =>
       '会迁移：牌组、笔记、笔记类型与模板、卡片排程、复习记录、牌组选项和媒体。不会迁移：插件、筛选牌组（卡片回到原牌组）以及 Anki 自身的偏好设置。';
   @override
+  String get srs_anki_migrate_setup_algorithm => '迁移过来的牌组使用';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      '沿用 Anki 里的 FSRS，迁移 FSRS 参数时带上训练好的参数。没有参数的牌组使用 FSRS-7，按你的复习记录自动优化。';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV 是 Fushi 的默认算法：直接用你的全部复习记录预测记忆，不需要训练参数。FSRS 参数照样保留，之后可以在牌组设置里切回 FSRS。';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis => '导入后把旧 Lapis 迁到 Fushi 卡片';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi 卡片是 Lapis 模板的新版：字段按含义对应，复习记录随卡片一起迁移；新模板里没有位置的字段内容仍留在笔记上。会处理本机全部旧 Lapis 笔记（含这次导入的）。不勾选的话，以后也可以在「笔记类型」页迁移。';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      '迁移在后台进行，可以离开本页；进度和完整报告在牌组列表顶部的任务条里。';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      '如需撤回，可以在「备份」里选一份迁移前的备份「恢复到此时间点」。';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      '迁移是合并：Fushi 里已有的卡片会保留，Anki 里的数据不会被改动；重复迁移不会产生重复。';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      '之前导入过、后来在 Fushi 里删掉的笔记会恢复，卡片回到原来的牌组。';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => '排程算法';
+  @override
+  String get srs_anki_migrate_setup_section_notices => '开始前请知悉';
+  @override
+  String get srs_anki_migrate_setup_section_progress => '学习进度';
+  @override
+  String get srs_anki_migrate_setup_section_templates => '卡片模板';
+  @override
+  String get srs_anki_migrate_setup_title => '迁移设置';
+  @override
   String get srs_anki_migrate_start => '开始迁移';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -333063,6 +334243,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => '继续用 FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      '旧 Lapis 迁到 Fushi 卡片失败。导入本身已完成，可以到「笔记类型」页重试。';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      '已迁到 Fushi 卡片：${n} 条笔记';
+  @override
   String srs_import_report_media({required Object n}) => '存入媒体文件：${n} 个';
   @override
   String srs_import_report_media_missing({required Object n}) =>
@@ -333088,6 +334274,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       '作为新卡导入（不含学习进度）：${n} 张';
+  @override
+  String srs_import_report_restored({required Object n}) => '恢复之前删除的笔记：${n} 条';
   @override
   String srs_import_report_reviews({required Object n}) => '导入复习记录：${n} 条';
   @override
@@ -333119,8 +334307,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_task_dismiss => '关闭';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      '已导入 ${name}：新增 ${n} 条笔记';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      '已导入 ${name}：新增 ${added}，恢复 ${restored}，更新 ${updated}，未改动 ${skipped} 条笔记';
   @override
   String srs_import_task_failed({required Object name}) =>
       '导入 ${name} 失败，点按查看原因。';
@@ -333667,8 +334861,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV 用神经网络根据整个复习历史估计每张卡此刻的回忆率；复习卡在估计回忆率降到目标保留率时出现，不看到期日。稳定性、难度与存下的到期日仍由 FSRS-7 维护。';
   @override
-  String get srs_settings_rwkv_license_small =>
-      '小模型从作者的 GitHub 发布页下载；作者尚未声明它的许可。';
+  String get srs_settings_rwkv_min_reviews => '每天最少复习数';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      '今天在这个牌组复习过的卡不到这个数时，即使回忆率高于目标保留率，也按回忆率从低到高补足。0 = 不启用。';
   @override
   String get srs_settings_rwkv_model => 'RWKV 模型（本机）';
   @override
@@ -333686,7 +334882,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => '正在准备…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV 出卡';
+  @override
   String get srs_settings_rwkv_ready => '已就绪';
+  @override
+  String get srs_settings_rwkv_rebuild => '重建 RWKV 状态';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      '按全部复习记录重新回放一遍。平时会自动更新；只有把卡片换到别的牌组、或改了牌组继承参数的方式之后才需要。';
+  @override
+  String get srs_settings_rwkv_repeat => '同日重复';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      '今天答过的卡，要等这些牌组里别的卡又答过这么多次、并且过了这么多秒，才会再出。';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => '间隔至少几次作答';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => '间隔至少几秒';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV 估计的回忆率从你的整体通过率附近开始，而不是从 100% 开始：目标保留率高于这个通过率时卡片几乎马上又会出现，远低于它时复习会很少。';
@@ -337607,6 +338819,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_grouping_series_hint => '按文件名识别作品与分集，再匹配作品资料。';
   @override
+  String get video_source_restore_grouping_action => '恢复自动分组';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      '你解散过的系列会按文件名重新归组，和首次扫描的分组方式一样。你自己建的合集不受影响。';
+  @override
   String get video_source_scrape_action => '刮削此来源';
   @override
   String get video_source_scrape_ai_identify => 'AI 识别';
@@ -339762,6 +340979,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_duplicate_scope_hint =>
       '查詢「這個詞是否已經有卡」時搜索哪些卡組。僅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始終整庫查重。';
+  @override
+  String get anki_error_all_fields_empty =>
+      'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
   @override
   String get anki_error_ankidroid_unavailable =>
       '未安裝 AnkiDroid（或其 API 被停用），無法授予卡片訪問權限。請安裝 AnkiDroid 並啟用其 API，或改用 AnkiConnect。';
@@ -352528,6 +353748,42 @@ class _StringsZhHk extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -353332,6 +354588,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -353358,6 +354620,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -353392,8 +354657,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -353989,8 +355260,10 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
-  String get srs_settings_rwkv_license_small =>
-      'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
@@ -354008,7 +355281,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -358022,6 +359311,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_grouping_series_hint => '從檔案名稱識別作品及集數，再配對中繼資料。';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => '刮削此來源';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -360082,6 +361377,8 @@ extension on _StringsEn {
         return 'Root deck (all subdecks)';
       case 'anki_duplicate_scope_hint':
         return 'Which decks are searched when checking whether a card already exists. AnkiConnect only; AnkiDroid always searches the whole collection.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid is not installed (or its API is disabled), so card access cannot be granted. Install AnkiDroid and enable its API, or switch to AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -371732,6 +373029,34 @@ extension on _StringsEn {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -372443,6 +373768,10 @@ extension on _StringsEn {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -372468,6 +373797,9 @@ extension on _StringsEn {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -372496,9 +373828,15 @@ extension on _StringsEn {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -373014,8 +374352,10 @@ extension on _StringsEn {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -373029,8 +374369,22 @@ extension on _StringsEn {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -376727,6 +378081,10 @@ extension on _StringsEn {
         return 'By work';
       case 'video_source_grouping_series_hint':
         return 'Recognize works and episodes from filenames, then match metadata.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape this source';
       case 'video_source_scrape_ai_identify':
@@ -378675,6 +380033,8 @@ extension on _StringsAr {
         return 'الرزمة الجذرية (جميع الفرعية)';
       case 'anki_duplicate_scope_hint':
         return 'أي الرزم يتم البحث فيها عند التحقق من وجود بطاقة مسبقاً. لـ AnkiConnect فقط؛ AnkiDroid يبحث دائماً في المجموعة بأكملها.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid غير مثبّت (أو أن واجهته البرمجية معطّلة)، لذا لا يمكن منح الوصول إلى البطاقات. ثبّت AnkiDroid وفعّل واجهته البرمجية، أو بدّل إلى AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -390322,6 +391682,34 @@ extension on _StringsAr {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -391033,6 +392421,10 @@ extension on _StringsAr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -391058,6 +392450,9 @@ extension on _StringsAr {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -391086,9 +392481,15 @@ extension on _StringsAr {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -391604,8 +393005,10 @@ extension on _StringsAr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -391619,8 +393022,22 @@ extension on _StringsAr {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -395314,6 +396731,10 @@ extension on _StringsAr {
         return 'حسب العمل';
       case 'video_source_grouping_series_hint':
         return 'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'جلب بيانات هذا المصدر';
       case 'video_source_scrape_ai_identify':
@@ -397267,6 +398688,8 @@ extension on _StringsDe {
         return 'Stammdeck (alle Unterdecks)';
       case 'anki_duplicate_scope_hint':
         return 'Welche Decks durchsucht werden, um zu prüfen, ob eine Karte bereits existiert. Nur AnkiConnect; AnkiDroid durchsucht immer die gesamte Sammlung.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid ist nicht installiert (oder seine API ist deaktiviert), daher kann der Kartenzugriff nicht gewährt werden. Installiere AnkiDroid und aktiviere die API oder wechsle zu AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -408968,6 +410391,34 @@ extension on _StringsDe {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -409679,6 +411130,10 @@ extension on _StringsDe {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -409704,6 +411159,9 @@ extension on _StringsDe {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -409732,9 +411190,15 @@ extension on _StringsDe {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -410250,8 +411714,10 @@ extension on _StringsDe {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -410265,8 +411731,22 @@ extension on _StringsDe {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -413976,6 +415456,10 @@ extension on _StringsDe {
         return 'Nach Werk';
       case 'video_source_grouping_series_hint':
         return 'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Diese Quelle abrufen';
       case 'video_source_scrape_ai_identify':
@@ -415929,6 +417413,8 @@ extension on _StringsEs {
         return 'Mazo raíz (todos los submazos)';
       case 'anki_duplicate_scope_hint':
         return 'Qué mazos se buscan al verificar si una tarjeta ya existe. Solo AnkiConnect; AnkiDroid siempre busca en toda la colección.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid no está instalado (o su API está desactivada), por lo que no se puede conceder el acceso a las tarjetas. Instala AnkiDroid y activa su API, o cambia a AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -427618,6 +429104,34 @@ extension on _StringsEs {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -428329,6 +429843,10 @@ extension on _StringsEs {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -428354,6 +429872,9 @@ extension on _StringsEs {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -428382,9 +429903,15 @@ extension on _StringsEs {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -428900,8 +430427,10 @@ extension on _StringsEs {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -428915,8 +430444,22 @@ extension on _StringsEs {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -432623,6 +434166,10 @@ extension on _StringsEs {
         return 'Por obra';
       case 'video_source_grouping_series_hint':
         return 'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Obtener metadatos de esta fuente';
       case 'video_source_scrape_ai_identify':
@@ -434578,6 +436125,8 @@ extension on _StringsFr {
         return 'Paquet racine (tous les sous-paquets)';
       case 'anki_duplicate_scope_hint':
         return 'Quels paquets sont recherchés pour vérifier si une carte existe déjà. AnkiConnect uniquement ; AnkiDroid recherche toujours dans toute la collection.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid n\'est pas installé (ou son API est désactivée) : l\'accès aux cartes ne peut donc pas être accordé. Installez AnkiDroid et activez son API, ou passez à AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -446279,6 +447828,34 @@ extension on _StringsFr {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -446990,6 +448567,10 @@ extension on _StringsFr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -447015,6 +448596,9 @@ extension on _StringsFr {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -447043,9 +448627,15 @@ extension on _StringsFr {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -447561,8 +449151,10 @@ extension on _StringsFr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -447576,8 +449168,22 @@ extension on _StringsFr {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -451287,6 +452893,10 @@ extension on _StringsFr {
         return 'Par œuvre';
       case 'video_source_grouping_series_hint':
         return 'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Récupérer cette source';
       case 'video_source_scrape_ai_identify':
@@ -453239,6 +454849,8 @@ extension on _StringsId {
         return 'Dek utama (semua sub-dek)';
       case 'anki_duplicate_scope_hint':
         return 'Dek mana yang dicari saat memeriksa apakah kartu sudah ada. Hanya AnkiConnect; AnkiDroid selalu mencari seluruh koleksi.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid tidak terpasang (atau API-nya dinonaktifkan), sehingga akses kartu tidak dapat diberikan. Pasang AnkiDroid dan aktifkan API-nya, atau beralih ke AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -464900,6 +466512,34 @@ extension on _StringsId {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -465611,6 +467251,10 @@ extension on _StringsId {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -465636,6 +467280,9 @@ extension on _StringsId {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -465664,9 +467311,15 @@ extension on _StringsId {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -466182,8 +467835,10 @@ extension on _StringsId {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -466197,8 +467852,22 @@ extension on _StringsId {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -469896,6 +471565,10 @@ extension on _StringsId {
         return 'Berdasarkan karya';
       case 'video_source_grouping_series_hint':
         return 'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape sumber ini';
       case 'video_source_scrape_ai_identify':
@@ -471848,6 +473521,8 @@ extension on _StringsIt {
         return 'Mazzo radice (tutti i sottogruppi)';
       case 'anki_duplicate_scope_hint':
         return 'Quali mazzi vengono cercati per verificare se una carta esiste già. Solo AnkiConnect; AnkiDroid cerca sempre nell\'intera collezione.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid non è installato (o la sua API è disattivata), quindi non è possibile concedere l\'accesso alle carte. Installa AnkiDroid e attiva la sua API, oppure passa ad AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -483530,6 +485205,34 @@ extension on _StringsIt {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -484241,6 +485944,10 @@ extension on _StringsIt {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -484266,6 +485973,9 @@ extension on _StringsIt {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -484294,9 +486004,15 @@ extension on _StringsIt {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -484812,8 +486528,10 @@ extension on _StringsIt {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -484827,8 +486545,22 @@ extension on _StringsIt {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -488538,6 +490270,10 @@ extension on _StringsIt {
         return 'Per opera';
       case 'video_source_grouping_series_hint':
         return 'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape questa fonte';
       case 'video_source_scrape_ai_identify':
@@ -490483,6 +492219,8 @@ extension on _StringsJa {
         return 'ルートデッキ（すべてのサブデッキ）';
       case 'anki_duplicate_scope_hint':
         return 'カードが既に存在するかチェックする際に検索するデッキの範囲。AnkiConnect のみ。AnkiDroid は常にコレクション全体を検索します。';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid がインストールされていない（または API が無効）ため、カードへのアクセスを許可できません。AnkiDroid をインストールして API を有効にするか、AnkiConnect に切り替えてください。';
       case 'anki_error_ankimobile_no_decks':
@@ -502094,6 +503832,34 @@ extension on _StringsJa {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -502805,6 +504571,10 @@ extension on _StringsJa {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -502830,6 +504600,9 @@ extension on _StringsJa {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -502858,9 +504631,15 @@ extension on _StringsJa {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -503376,8 +505155,10 @@ extension on _StringsJa {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -503391,8 +505172,22 @@ extension on _StringsJa {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -507062,6 +508857,10 @@ extension on _StringsJa {
         return '作品別';
       case 'video_source_grouping_series_hint':
         return 'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'このソースをスクレイプ';
       case 'video_source_scrape_ai_identify':
@@ -508991,6 +510790,8 @@ extension on _StringsKo {
         return '최상위 덱 (모든 하위 덱)';
       case 'anki_duplicate_scope_hint':
         return '카드가 이미 존재하는지 확인할 때 검색할 덱. AnkiConnect 전용; AnkiDroid는 항상 전체 컬렉션을 검색합니다.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid가 설치되어 있지 않거나 API가 비활성화되어 있어 카드 접근 권한을 부여할 수 없습니다. AnkiDroid를 설치하고 API를 활성화하거나 AnkiConnect로 전환하세요.';
       case 'anki_error_ankimobile_no_decks':
@@ -520607,6 +522408,34 @@ extension on _StringsKo {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -521318,6 +523147,10 @@ extension on _StringsKo {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -521343,6 +523176,9 @@ extension on _StringsKo {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -521371,9 +523207,15 @@ extension on _StringsKo {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -521889,8 +523731,10 @@ extension on _StringsKo {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -521904,8 +523748,22 @@ extension on _StringsKo {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -525581,6 +527439,10 @@ extension on _StringsKo {
         return '작품별';
       case 'video_source_grouping_series_hint':
         return '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return '이 소스 스크래핑';
       case 'video_source_scrape_ai_identify':
@@ -527527,6 +529389,8 @@ extension on _StringsNl {
         return 'Hoofddeck (alle subdekken)';
       case 'anki_duplicate_scope_hint':
         return 'Welke dekken worden doorzocht bij het controleren of een kaart al bestaat. Alleen AnkiConnect; AnkiDroid doorzoekt altijd de gehele collectie.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid is niet geïnstalleerd (of de API is uitgeschakeld), dus er kan geen toegang tot kaarten worden verleend. Installeer AnkiDroid en schakel de API in, of schakel over naar AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -539210,6 +541074,34 @@ extension on _StringsNl {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -539921,6 +541813,10 @@ extension on _StringsNl {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -539946,6 +541842,9 @@ extension on _StringsNl {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -539974,9 +541873,15 @@ extension on _StringsNl {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -540492,8 +542397,10 @@ extension on _StringsNl {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -540507,8 +542414,22 @@ extension on _StringsNl {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -544211,6 +546132,10 @@ extension on _StringsNl {
         return 'Op werk';
       case 'video_source_grouping_series_hint':
         return 'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Deze bron scrapen';
       case 'video_source_scrape_ai_identify':
@@ -546165,6 +548090,8 @@ extension on _StringsPtBr {
         return 'Baralho raiz (todos os sub-baralhos)';
       case 'anki_duplicate_scope_hint':
         return 'Quais baralhos são verificados ao checar se um cartão já existe. Apenas AnkiConnect; o AnkiDroid sempre busca na coleção inteira.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'O AnkiDroid não está instalado (ou sua API está desativada), então o acesso aos cartões não pôde ser concedido. Instale o AnkiDroid e ative a API dele, ou mude para o AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -557844,6 +559771,34 @@ extension on _StringsPtBr {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -558555,6 +560510,10 @@ extension on _StringsPtBr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -558580,6 +560539,9 @@ extension on _StringsPtBr {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -558608,9 +560570,15 @@ extension on _StringsPtBr {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -559126,8 +561094,10 @@ extension on _StringsPtBr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -559141,8 +561111,22 @@ extension on _StringsPtBr {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -562843,6 +564827,10 @@ extension on _StringsPtBr {
         return 'Por obra';
       case 'video_source_grouping_series_hint':
         return 'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Buscar metadados desta fonte';
       case 'video_source_scrape_ai_identify':
@@ -564795,6 +566783,8 @@ extension on _StringsRu {
         return 'Корневая колода (все подколоды)';
       case 'anki_duplicate_scope_hint':
         return 'В каких колодах искать при проверке, существует ли карточка. Только для AnkiConnect; AnkiDroid всегда ищет по всей коллекции.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid не установлен (или его API отключён), поэтому доступ к карточкам не может быть предоставлен. Установите AnkiDroid и включите его API либо переключитесь на AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -576482,6 +578472,34 @@ extension on _StringsRu {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -577193,6 +579211,10 @@ extension on _StringsRu {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -577218,6 +579240,9 @@ extension on _StringsRu {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -577246,9 +579271,15 @@ extension on _StringsRu {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -577764,8 +579795,10 @@ extension on _StringsRu {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -577779,8 +579812,22 @@ extension on _StringsRu {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -581480,6 +583527,10 @@ extension on _StringsRu {
         return 'По произведениям';
       case 'video_source_grouping_series_hint':
         return 'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Получить метаданные для этого источника';
       case 'video_source_scrape_ai_identify':
@@ -583428,6 +585479,8 @@ extension on _StringsTh {
         return 'สำรับหลัก (ทุกสำรับย่อย)';
       case 'anki_duplicate_scope_hint':
         return 'กำหนดว่าจะค้นหาสำรับใดเมื่อตรวจสอบว่าบัตรมีอยู่แล้วหรือไม่ เฉพาะ AnkiConnect เท่านั้น; AnkiDroid จะค้นหาทั้งคอลเลกชันเสมอ';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'ไม่ได้ติดตั้ง AnkiDroid (หรือ API ถูกปิดอยู่) จึงให้สิทธิ์เข้าถึงการ์ดไม่ได้ ติดตั้ง AnkiDroid และเปิดใช้ API หรือเปลี่ยนไปใช้ AnkiConnect';
       case 'anki_error_ankimobile_no_decks':
@@ -595080,6 +597133,34 @@ extension on _StringsTh {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -595791,6 +597872,10 @@ extension on _StringsTh {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -595816,6 +597901,9 @@ extension on _StringsTh {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -595844,9 +597932,15 @@ extension on _StringsTh {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -596362,8 +598456,10 @@ extension on _StringsTh {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -596377,8 +598473,22 @@ extension on _StringsTh {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -600073,6 +602183,10 @@ extension on _StringsTh {
         return 'ตามผลงาน';
       case 'video_source_grouping_series_hint':
         return 'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'ดึงข้อมูลแหล่งนี้';
       case 'video_source_scrape_ai_identify':
@@ -602024,6 +604138,8 @@ extension on _StringsTr {
         return 'Kök deste (tüm alt desteler)';
       case 'anki_duplicate_scope_hint':
         return 'Bir kartın zaten var olup olmadığı kontrol edilirken hangi destelerin arandığını belirler. Yalnızca AnkiConnect; AnkiDroid her zaman tüm koleksiyonu arar.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid yüklü değil (ya da API\'si devre dışı), bu yüzden kart erişimi verilemiyor. AnkiDroid\'i yükleyip API\'sini etkinleştirin veya AnkiConnect\'e geçin.';
       case 'anki_error_ankimobile_no_decks':
@@ -613696,6 +615812,34 @@ extension on _StringsTr {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -614407,6 +616551,10 @@ extension on _StringsTr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -614432,6 +616580,9 @@ extension on _StringsTr {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -614460,9 +616611,15 @@ extension on _StringsTr {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -614978,8 +617135,10 @@ extension on _StringsTr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -614993,8 +617152,22 @@ extension on _StringsTr {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -618695,6 +620868,10 @@ extension on _StringsTr {
         return 'Esere göre';
       case 'video_source_grouping_series_hint':
         return 'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Bu kaynağı tara';
       case 'video_source_scrape_ai_identify':
@@ -620646,6 +622823,8 @@ extension on _StringsVi {
         return 'Bộ thẻ gốc (tất cả bộ con)';
       case 'anki_duplicate_scope_hint':
         return 'Những bộ thẻ nào được tìm kiếm khi kiểm tra thẻ đã tồn tại. Chỉ AnkiConnect; AnkiDroid luôn tìm trong toàn bộ bộ sưu tập.';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return 'AnkiDroid chưa được cài đặt (hoặc API của nó đã bị tắt) nên không thể cấp quyền truy cập thẻ. Hãy cài AnkiDroid và bật API, hoặc chuyển sang AnkiConnect.';
       case 'anki_error_ankimobile_no_decks':
@@ -632307,6 +634486,34 @@ extension on _StringsVi {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -633018,6 +635225,10 @@ extension on _StringsVi {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -633043,6 +635254,9 @@ extension on _StringsVi {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -633071,9 +635285,15 @@ extension on _StringsVi {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -633589,8 +635809,10 @@ extension on _StringsVi {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -633604,8 +635826,22 @@ extension on _StringsVi {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -637303,6 +639539,10 @@ extension on _StringsVi {
         return 'Theo tác phẩm';
       case 'video_source_grouping_series_hint':
         return 'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Quét nguồn này';
       case 'video_source_scrape_ai_identify':
@@ -639226,6 +641466,8 @@ extension on _StringsZhCn {
         return '根卡组（含全部子卡组）';
       case 'anki_duplicate_scope_hint':
         return '查询「这个词是否已经有卡」时搜索哪些卡组。仅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始终整库查重。';
+      case 'anki_error_all_fields_empty':
+        return '这张卡的所有字段都是空的，通常是所选笔记类型还没有配置字段映射。请在 Anki 设置里给它的字段配置映射。';
       case 'anki_error_ankidroid_unavailable':
         return '未安装 AnkiDroid（或其 API 被禁用），无法授予卡片访问权限。请安装 AnkiDroid 并启用其 API，或改用 AnkiConnect。';
       case 'anki_error_ankimobile_no_decks':
@@ -650773,6 +653015,34 @@ extension on _StringsZhCn {
         return '正在查找 Anki…';
       case 'srs_anki_migrate_scope':
         return '会迁移：牌组、笔记、笔记类型与模板、卡片排程、复习记录、牌组选项和媒体。不会迁移：插件、筛选牌组（卡片回到原牌组）以及 Anki 自身的偏好设置。';
+      case 'srs_anki_migrate_setup_algorithm':
+        return '迁移过来的牌组使用';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return '沿用 Anki 里的 FSRS，迁移 FSRS 参数时带上训练好的参数。没有参数的牌组使用 FSRS-7，按你的复习记录自动优化。';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV 是 Fushi 的默认算法：直接用你的全部复习记录预测记忆，不需要训练参数。FSRS 参数照样保留，之后可以在牌组设置里切回 FSRS。';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return '导入后把旧 Lapis 迁到 Fushi 卡片';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi 卡片是 Lapis 模板的新版：字段按含义对应，复习记录随卡片一起迁移；新模板里没有位置的字段内容仍留在笔记上。会处理本机全部旧 Lapis 笔记（含这次导入的）。不勾选的话，以后也可以在「笔记类型」页迁移。';
+      case 'srs_anki_migrate_setup_notice_background':
+        return '迁移在后台进行，可以离开本页；进度和完整报告在牌组列表顶部的任务条里。';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return '如需撤回，可以在「备份」里选一份迁移前的备份「恢复到此时间点」。';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return '迁移是合并：Fushi 里已有的卡片会保留，Anki 里的数据不会被改动；重复迁移不会产生重复。';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return '之前导入过、后来在 Fushi 里删掉的笔记会恢复，卡片回到原来的牌组。';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return '排程算法';
+      case 'srs_anki_migrate_setup_section_notices':
+        return '开始前请知悉';
+      case 'srs_anki_migrate_setup_section_progress':
+        return '学习进度';
+      case 'srs_anki_migrate_setup_section_templates':
+        return '卡片模板';
+      case 'srs_anki_migrate_setup_title':
+        return '迁移设置';
       case 'srs_anki_migrate_start':
         return '开始迁移';
       case 'srs_anki_migrate_unreadable':
@@ -651470,6 +653740,10 @@ extension on _StringsZhCn {
         return ({required Object preset}) => '预设「${preset}」的参数无效，未导入';
       case 'srs_import_report_keep_fsrs':
         return '继续用 FSRS';
+      case 'srs_import_report_lapis_failed':
+        return '旧 Lapis 迁到 Fushi 卡片失败。导入本身已完成，可以到「笔记类型」页重试。';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => '已迁到 Fushi 卡片：${n} 条笔记';
       case 'srs_import_report_media':
         return ({required Object n}) => '存入媒体文件：${n} 个';
       case 'srs_import_report_media_missing':
@@ -651490,6 +653764,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '来源里删掉的 ${n} 个字段 / 模板在本机保留';
       case 'srs_import_report_reset_new':
         return ({required Object n}) => '作为新卡导入（不含学习进度）：${n} 张';
+      case 'srs_import_report_restored':
+        return ({required Object n}) => '恢复之前删除的笔记：${n} 条';
       case 'srs_import_report_reviews':
         return ({required Object n}) => '导入复习记录：${n} 条';
       case 'srs_import_report_reviews_skipped':
@@ -651517,9 +653793,15 @@ extension on _StringsZhCn {
         return ({required Object name}) => '已取消导入 ${name}';
       case 'srs_import_task_dismiss':
         return '关闭';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            '已导入 ${name}：新增 ${n} 条笔记';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            '已导入 ${name}：新增 ${added}，恢复 ${restored}，更新 ${updated}，未改动 ${skipped} 条笔记';
       case 'srs_import_task_failed':
         return ({required Object name}) => '导入 ${name} 失败，点按查看原因。';
       case 'srs_import_task_queued':
@@ -652029,8 +654311,10 @@ extension on _StringsZhCn {
             'RWKV 不可用：${error}。在此之前复习按 FSRS-7 存下的到期日排队。';
       case 'srs_settings_rwkv_hint':
         return 'RWKV 用神经网络根据整个复习历史估计每张卡此刻的回忆率；复习卡在估计回忆率降到目标保留率时出现，不看到期日。稳定性、难度与存下的到期日仍由 FSRS-7 维护。';
-      case 'srs_settings_rwkv_license_small':
-        return '小模型从作者的 GitHub 发布页下载；作者尚未声明它的许可。';
+      case 'srs_settings_rwkv_min_reviews':
+        return '每天最少复习数';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return '今天在这个牌组复习过的卡不到这个数时，即使回忆率高于目标保留率，也按回忆率从低到高补足。0 = 不启用。';
       case 'srs_settings_rwkv_model':
         return 'RWKV 模型（本机）';
       case 'srs_settings_rwkv_model_hint':
@@ -652044,8 +654328,22 @@ extension on _StringsZhCn {
             '正在回放复习历史… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return '正在准备…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV 出卡';
       case 'srs_settings_rwkv_ready':
         return '已就绪';
+      case 'srs_settings_rwkv_rebuild':
+        return '重建 RWKV 状态';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return '按全部复习记录重新回放一遍。平时会自动更新；只有把卡片换到别的牌组、或改了牌组继承参数的方式之后才需要。';
+      case 'srs_settings_rwkv_repeat':
+        return '同日重复';
+      case 'srs_settings_rwkv_repeat_hint':
+        return '今天答过的卡，要等这些牌组里别的卡又答过这么多次、并且过了这么多秒，才会再出。';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return '间隔至少几次作答';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return '间隔至少几秒';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV 估计的回忆率从你的整体通过率附近开始，而不是从 100% 开始：目标保留率高于这个通过率时卡片几乎马上又会出现，远低于它时复习会很少。';
       case 'srs_settings_save':
@@ -655703,6 +658001,10 @@ extension on _StringsZhCn {
         return '按作品';
       case 'video_source_grouping_series_hint':
         return '按文件名识别作品与分集，再匹配作品资料。';
+      case 'video_source_restore_grouping_action':
+        return '恢复自动分组';
+      case 'video_source_restore_grouping_confirm':
+        return '你解散过的系列会按文件名重新归组，和首次扫描的分组方式一样。你自己建的合集不受影响。';
       case 'video_source_scrape_action':
         return '刮削此来源';
       case 'video_source_scrape_ai_identify':
@@ -657601,6 +659903,8 @@ extension on _StringsZhHk {
         return '根卡組（含全部子卡組）';
       case 'anki_duplicate_scope_hint':
         return '查詢「這個詞是否已經有卡」時搜索哪些卡組。僅 AnkiConnect（桌面 Anki）生效；AnkiDroid 始終整庫查重。';
+      case 'anki_error_all_fields_empty':
+        return 'Every field of this card came out empty — usually the selected note type has no field mappings yet. Map its fields in Anki settings.';
       case 'anki_error_ankidroid_unavailable':
         return '未安裝 AnkiDroid（或其 API 被停用），無法授予卡片訪問權限。請安裝 AnkiDroid 並啟用其 API，或改用 AnkiConnect。';
       case 'anki_error_ankimobile_no_decks':
@@ -669184,6 +671488,34 @@ extension on _StringsZhHk {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -669894,6 +672226,10 @@ extension on _StringsZhHk {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -669919,6 +672255,9 @@ extension on _StringsZhHk {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -669947,9 +672286,15 @@ extension on _StringsZhHk {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -670465,8 +672810,10 @@ extension on _StringsZhHk {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
-      case 'srs_settings_rwkv_license_small':
-        return 'The small model is downloaded from its author\'s GitHub release; its license has not been declared yet.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -670480,8 +672827,22 @@ extension on _StringsZhHk {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -674143,6 +676504,10 @@ extension on _StringsZhHk {
         return '按作品';
       case 'video_source_grouping_series_hint':
         return '從檔案名稱識別作品及集數，再配對中繼資料。';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return '刮削此來源';
       case 'video_source_scrape_ai_identify':
