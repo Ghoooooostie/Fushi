@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152286 (8958 per locale)
+/// Strings: 152439 (8967 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9722,6 +9722,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   String get srs_settings_rwkv_model_hint =>
       'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
@@ -9732,7 +9735,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object total,
   }) => 'Replaying review history… ${done}/${total}';
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
+  String get srs_settings_rwkv_queue => 'RWKV queue';
   String get srs_settings_rwkv_ready => 'Ready';
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
   String get srs_settings_save => 'Save';
@@ -29173,6 +29185,11 @@ class _StringsAr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -29189,7 +29206,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -51224,6 +51257,11 @@ class _StringsDe extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -51240,7 +51278,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -73399,6 +73453,11 @@ class _StringsEs extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -73415,7 +73474,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -95662,6 +95737,11 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -95678,7 +95758,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -117689,6 +117785,11 @@ class _StringsId extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -117705,7 +117806,23 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -139758,6 +139875,11 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -139774,7 +139896,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -161121,6 +161259,11 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -161137,7 +161280,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -182210,6 +182369,11 @@ class _StringsKo extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -182226,7 +182390,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -204007,6 +204187,11 @@ class _StringsNl extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -204023,7 +204208,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -226106,6 +226307,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -226122,7 +226328,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -248184,6 +248406,11 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -248200,7 +248427,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -270013,6 +270256,11 @@ class _StringsTh extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -270029,7 +270277,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -291907,6 +292171,11 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -291923,7 +292192,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -313797,6 +314082,11 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -313813,7 +314103,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -334298,6 +334604,11 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV 用神经网络根据整个复习历史估计每张卡此刻的回忆率；复习卡在估计回忆率降到目标保留率时出现，不看到期日。稳定性、难度与存下的到期日仍由 FSRS-7 维护。';
   @override
+  String get srs_settings_rwkv_min_reviews => '每天最少复习数';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      '今天在这个牌组复习过的卡不到这个数时，即使回忆率高于目标保留率，也按回忆率从低到高补足。0 = 不启用。';
+  @override
   String get srs_settings_rwkv_model => 'RWKV 模型（本机）';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -334314,7 +334625,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => '正在准备…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV 出卡';
+  @override
   String get srs_settings_rwkv_ready => '已就绪';
+  @override
+  String get srs_settings_rwkv_rebuild => '重建 RWKV 状态';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      '按全部复习记录重新回放一遍。平时会自动更新；只有把卡片换到别的牌组、或改了牌组继承参数的方式之后才需要。';
+  @override
+  String get srs_settings_rwkv_repeat => '同日重复';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      '今天答过的卡，要等这些牌组里别的卡又答过这么多次、并且过了这么多秒，才会再出。';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => '间隔至少几次作答';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => '间隔至少几秒';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV 估计的回忆率从你的整体通过率附近开始，而不是从 100% 开始：目标保留率高于这个通过率时卡片几乎马上又会出现，远低于它时复习会很少。';
@@ -354662,6 +354989,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_rwkv_hint =>
       'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
   @override
+  String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
+  @override
+  String get srs_settings_rwkv_min_reviews_hint =>
+      'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
+  @override
   String get srs_settings_rwkv_model => 'RWKV model (this device)';
   @override
   String get srs_settings_rwkv_model_hint =>
@@ -354678,7 +355010,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_rwkv_preparing_start => 'Preparing…';
   @override
+  String get srs_settings_rwkv_queue => 'RWKV queue';
+  @override
   String get srs_settings_rwkv_ready => 'Ready';
+  @override
+  String get srs_settings_rwkv_rebuild => 'Rebuild RWKV state';
+  @override
+  String get srs_settings_rwkv_rebuild_hint =>
+      'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+  @override
+  String get srs_settings_rwkv_repeat => 'Same-day repeats';
+  @override
+  String get srs_settings_rwkv_repeat_hint =>
+      'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+  @override
+  String get srs_settings_rwkv_repeat_reviews => 'Minimum answers in between';
+  @override
+  String get srs_settings_rwkv_repeat_seconds => 'Minimum seconds in between';
   @override
   String get srs_settings_rwkv_retention_note =>
       'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
@@ -373719,6 +374067,10 @@ extension on _StringsEn {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -373732,8 +374084,22 @@ extension on _StringsEn {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -392342,6 +392708,10 @@ extension on _StringsAr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -392355,8 +392725,22 @@ extension on _StringsAr {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -411021,6 +411405,10 @@ extension on _StringsDe {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -411034,8 +411422,22 @@ extension on _StringsDe {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -429704,6 +430106,10 @@ extension on _StringsEs {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -429717,8 +430123,22 @@ extension on _StringsEs {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -448398,6 +448818,10 @@ extension on _StringsFr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -448411,8 +448835,22 @@ extension on _StringsFr {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -467052,6 +467490,10 @@ extension on _StringsId {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -467065,8 +467507,22 @@ extension on _StringsId {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -485715,6 +486171,10 @@ extension on _StringsIt {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -485728,8 +486188,22 @@ extension on _StringsIt {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -504312,6 +504786,10 @@ extension on _StringsJa {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -504325,8 +504803,22 @@ extension on _StringsJa {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -522858,6 +523350,10 @@ extension on _StringsKo {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -522871,8 +523367,22 @@ extension on _StringsKo {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -541494,6 +542004,10 @@ extension on _StringsNl {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -541507,8 +542021,22 @@ extension on _StringsNl {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -560161,6 +560689,10 @@ extension on _StringsPtBr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -560174,8 +560706,22 @@ extension on _StringsPtBr {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -578832,6 +579378,10 @@ extension on _StringsRu {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -578845,8 +579395,22 @@ extension on _StringsRu {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -597463,6 +598027,10 @@ extension on _StringsTh {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -597476,8 +598044,22 @@ extension on _StringsTh {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -616112,6 +616694,10 @@ extension on _StringsTr {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -616125,8 +616711,22 @@ extension on _StringsTr {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -634756,6 +635356,10 @@ extension on _StringsVi {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -634769,8 +635373,22 @@ extension on _StringsVi {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
@@ -653228,6 +653846,10 @@ extension on _StringsZhCn {
             'RWKV 不可用：${error}。在此之前复习按 FSRS-7 存下的到期日排队。';
       case 'srs_settings_rwkv_hint':
         return 'RWKV 用神经网络根据整个复习历史估计每张卡此刻的回忆率；复习卡在估计回忆率降到目标保留率时出现，不看到期日。稳定性、难度与存下的到期日仍由 FSRS-7 维护。';
+      case 'srs_settings_rwkv_min_reviews':
+        return '每天最少复习数';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return '今天在这个牌组复习过的卡不到这个数时，即使回忆率高于目标保留率，也按回忆率从低到高补足。0 = 不启用。';
       case 'srs_settings_rwkv_model':
         return 'RWKV 模型（本机）';
       case 'srs_settings_rwkv_model_hint':
@@ -653241,8 +653863,22 @@ extension on _StringsZhCn {
             '正在回放复习历史… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return '正在准备…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV 出卡';
       case 'srs_settings_rwkv_ready':
         return '已就绪';
+      case 'srs_settings_rwkv_rebuild':
+        return '重建 RWKV 状态';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return '按全部复习记录重新回放一遍。平时会自动更新；只有把卡片换到别的牌组、或改了牌组继承参数的方式之后才需要。';
+      case 'srs_settings_rwkv_repeat':
+        return '同日重复';
+      case 'srs_settings_rwkv_repeat_hint':
+        return '今天答过的卡，要等这些牌组里别的卡又答过这么多次、并且过了这么多秒，才会再出。';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return '间隔至少几次作答';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return '间隔至少几秒';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV 估计的回忆率从你的整体通过率附近开始，而不是从 100% 开始：目标保留率高于这个通过率时卡片几乎马上又会出现，远低于它时复习会很少。';
       case 'srs_settings_save':
@@ -671697,6 +672333,10 @@ extension on _StringsZhHk {
             'RWKV is unavailable: ${error}. Reviews follow the due dates stored by FSRS-7 until this is fixed.';
       case 'srs_settings_rwkv_hint':
         return 'RWKV estimates each card\'s recall right now from your whole review history with a neural network; a review card is shown once its estimated recall drops to the desired retention, whatever its due date. Stability, difficulty and the stored due date are still tracked with FSRS-7.';
+      case 'srs_settings_rwkv_min_reviews':
+        return 'Minimum reviews per day';
+      case 'srs_settings_rwkv_min_reviews_hint':
+        return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
       case 'srs_settings_rwkv_model':
         return 'RWKV model (this device)';
       case 'srs_settings_rwkv_model_hint':
@@ -671710,8 +672350,22 @@ extension on _StringsZhHk {
             'Replaying review history… ${done}/${total}';
       case 'srs_settings_rwkv_preparing_start':
         return 'Preparing…';
+      case 'srs_settings_rwkv_queue':
+        return 'RWKV queue';
       case 'srs_settings_rwkv_ready':
         return 'Ready';
+      case 'srs_settings_rwkv_rebuild':
+        return 'Rebuild RWKV state';
+      case 'srs_settings_rwkv_rebuild_hint':
+        return 'Replays your whole review history again. RWKV keeps itself up to date otherwise; this is only needed after moving cards to another deck or changing how a deck inherits its settings.';
+      case 'srs_settings_rwkv_repeat':
+        return 'Same-day repeats';
+      case 'srs_settings_rwkv_repeat_hint':
+        return 'A card answered today comes back only after both: this many answers to other cards in these decks, and this many seconds.';
+      case 'srs_settings_rwkv_repeat_reviews':
+        return 'Minimum answers in between';
+      case 'srs_settings_rwkv_repeat_seconds':
+        return 'Minimum seconds in between';
       case 'srs_settings_rwkv_retention_note':
         return 'RWKV\'s recall estimate starts near your overall pass rate rather than at 100%: a desired retention above that rate brings cards back almost right away, and one well below it shows few reviews.';
       case 'srs_settings_save':
