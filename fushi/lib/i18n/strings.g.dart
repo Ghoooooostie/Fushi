@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152575 (8975 per locale)
+/// Strings: 152609 (8977 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9657,6 +9657,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   String get srs_review_layout_title => 'Review options';
+  String get srs_review_layout_volume => 'Audio volume';
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   String get srs_review_pending_decision => 'Needs your decision';
   String get srs_review_replay_audio => 'Replay audio';
   String get srs_review_rwkv_unavailable =>
@@ -29095,6 +29098,11 @@ class _StringsAr extends _StringsEn {
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
   String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -51195,6 +51203,11 @@ class _StringsDe extends _StringsEn {
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
   String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -73419,6 +73432,11 @@ class _StringsEs extends _StringsEn {
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
   String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -95732,6 +95750,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_review_layout_title => 'Review options';
   @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -117807,6 +117830,11 @@ class _StringsId extends _StringsEn {
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
   String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -139926,6 +139954,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_review_layout_title => 'Review options';
   @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -161338,6 +161371,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_review_layout_title => 'Review options';
   @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -182475,6 +182513,11 @@ class _StringsKo extends _StringsEn {
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
   String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -204321,6 +204364,11 @@ class _StringsNl extends _StringsEn {
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
   String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -226470,6 +226518,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_review_layout_title => 'Review options';
   @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -248597,6 +248650,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_review_layout_title => 'Review options';
   @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -270474,6 +270532,11 @@ class _StringsTh extends _StringsEn {
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
   String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -292418,6 +292481,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_review_layout_title => 'Review options';
   @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -314357,6 +314425,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_review_layout_title => 'Review options';
   @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -334919,6 +334992,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_layout_title => '复习选项';
   @override
+  String get srs_review_layout_volume => '音频音量';
+  @override
+  String get srs_review_layout_volume_hint => '卡面音频的音量，点播和自动播放都按它';
+  @override
   String get srs_review_pending_decision => '待你决定';
   @override
   String get srs_review_replay_audio => '重播音频';
@@ -355314,6 +355391,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_review_layout_title => 'Review options';
   @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
+  @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
@@ -374437,6 +374519,10 @@ extension on _StringsEn {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -393095,6 +393181,10 @@ extension on _StringsAr {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -411809,6 +411899,10 @@ extension on _StringsDe {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -430527,6 +430621,10 @@ extension on _StringsEs {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -449256,6 +449354,10 @@ extension on _StringsFr {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -467945,6 +468047,10 @@ extension on _StringsId {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -486643,6 +486749,10 @@ extension on _StringsIt {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -505275,6 +505385,10 @@ extension on _StringsJa {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -523856,6 +523970,10 @@ extension on _StringsKo {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -542527,6 +542645,10 @@ extension on _StringsNl {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -561229,6 +561351,10 @@ extension on _StringsPtBr {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -579935,6 +580061,10 @@ extension on _StringsRu {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -598601,6 +598731,10 @@ extension on _StringsTh {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -617285,6 +617419,10 @@ extension on _StringsTr {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -635964,6 +636102,10 @@ extension on _StringsVi {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -654473,6 +654615,10 @@ extension on _StringsZhCn {
         return '评价下方的小字，误按或排程异常一眼可见';
       case 'srs_review_layout_title':
         return '复习选项';
+      case 'srs_review_layout_volume':
+        return '音频音量';
+      case 'srs_review_layout_volume_hint':
+        return '卡面音频的音量，点播和自动播放都按它';
       case 'srs_review_pending_decision':
         return '待你决定';
       case 'srs_review_replay_audio':
@@ -672975,6 +673121,10 @@ extension on _StringsZhHk {
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
         return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
