@@ -66,41 +66,6 @@ extension _ReaderMining on _ReaderFushiPageState {
     return (range: covers ? composed : null, untrusted: !covers);
   }
 
-  /// TEMP-取证：把卡片句子与将要裁剪的朗读单元并排打进 logcat（锚 `[mine-audio]`）。
-  /// 取证完连同调用点一起删。
-  void _debugSentenceAudioTrace({
-    required AudioPlaybackRange clip,
-    required String cardSentence,
-  }) {
-    final TtsReadAlong? readAlong = TtsReadAlong.forController(
-      _audiobookController,
-    );
-    String unit = 'unit=<no-tts-session>';
-    if (readAlong != null) {
-      final int i = clip.audioFileIndex;
-      if (i >= 0 && i < readAlong.plan.length) {
-        final TtsPlanSentence s = readAlong.plan.sentences[i];
-        unit =
-            'unit[$i]="${_debugTextPreview(s.text)}" '
-            'match=[${s.matchStart},${s.matchEnd}) '
-            'section=${s.section} spokenLen=${s.spokenText.length}';
-      } else {
-        unit = 'unit=<idx-out-of-range:$i/${readAlong.plan.length}>';
-      }
-    }
-    final ({int offset, int length})? span = _miningSpanRange();
-    debugPrint(
-      '[mine-audio] idx=${clip.audioFileIndex} ms=[${clip.startMs},${clip.endMs}) '
-      'section=${_lookupSectionIndex} span=[${span?.offset},${span?.length}] '
-      'card="${_debugTextPreview(cardSentence)}" $unit',
-    );
-  }
-
-  static String _debugTextPreview(String value) {
-    final String flat = value.replaceAll('\n', ' ').trim();
-    return flat.length > 40 ? '${flat.substring(0, 40)}…' : flat;
-  }
-
   /// TODO-270 D：reader 制卡/覆盖共用的「构造制卡上下文」。返回构造好的
   /// [AnkiMiningContext] 与一个 `cleanup` 闭包（清理句子音频临时目录，调用方在 mine/
   /// update 完成后必须调用）。当句子音频导出失败（已弹 toast）时返回 `context: null`，
@@ -270,9 +235,6 @@ extension _ReaderMining on _ReaderFushiPageState {
               index: clip.audioFileIndex,
               fallbackPath: inputFile.path,
             );
-        // TEMP-取证（用户报「制卡的原句和音频不一致，音频是另一句」）：把「卡片句子」
-        // 与「这次真要裁的那个朗读单元」并排打出来，一眼看出定位对不对。取证完删。
-        _debugSentenceAudioTrace(clip: clip, cardSentence: sentence);
         if (ready == null) {
           ErrorLogService.instance.log(
             'ReaderFushi.mineEntry.sentenceAudioUnavailable',

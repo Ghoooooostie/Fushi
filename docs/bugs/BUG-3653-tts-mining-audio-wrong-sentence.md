@@ -56,7 +56,16 @@
     `TtsPlanSentence` 记合并前的子句边界，再用 Edge 的**词边界**
     （`TtsCachedAudio.boundaries`，`TtsTimingGranularity.word`）把区间裁到子句。
     用户当前报的是「换了句子」，本条先解这个。
-  - 取证日志 `_debugSentenceAudioTrace`（锚 `[mine-audio]`）随包装机用于复测，**验证完要删**。
-  - 待真机复测：制卡后卡上音频必须念的就是卡片那句；日志里 `card="…"` 与 `unit[i]="…"`
-    应一致（不必逐字相同，但应是同一句）。若弹「已制卡但没有句子音频」，说明文本定位也没
-    命中，把 `[mine-audio]` 那行贴给我。
+- **真机复测结论（已通过）**：装修复包后制卡，取证日志变成
+  ```
+  [mine-audio] idx=10556 ms=[0,5436) section=25 span=[1162,26]
+  card="地面は固く、少しだけ掘ってみるとパラパラとした土になる。"
+  unit[10556]="地面は固く、少しだけ掘ってみるとパラパラとした土になる。" match=[1049,1075)
+  ```
+  card 与 unit **同一句** ✓；且 span `[1162,26]` 与 match `[1049,1075)` 已不再重合
+  （漂移约 113 字）——正是坐标那把「尺子」偏掉的量化证据，文本定位把它拉回正确的一句。
+  取证日志 `_debugSentenceAudioTrace` 已删除（提交见本分支）。
+- **备注（另一现象，与本条无关）**：装机后头两次开书报 `reader_content_timeout`
+  （`navigation.part.dart:45` 的 8s 兜底，JS `onRestoreComplete` 未回），第三次起正常
+  （open-perf total=695ms）。线索是冷启动在 served 三个超大自定义字体
+  （9.5 / 13.5 / 17.7 MB）。与制卡改动无关，未在本条处理。
