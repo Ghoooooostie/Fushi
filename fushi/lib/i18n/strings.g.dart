@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152541 (8973 per locale)
+/// Strings: 152660 (8980 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1086,7 +1086,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
   String get anki_reposition_auto_hint =>
-      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      'Reposition new cards by frequency about 30 seconds after the last card is mined.';
   String get anki_reposition_auto_title => 'Auto-reposition after mining';
   String get anki_reposition_cancelled =>
       'Reorder cancelled; nothing was written.';
@@ -2391,17 +2391,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reviewing card clip · Watch progress is preserved';
   String get card_source_review_video_watching =>
       'Watching normally · Watch progress is being saved';
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  String get card_target_anki_title => 'Send to Anki';
-  String get card_target_current => 'Current';
   String get card_target_srs_enable => 'Turn on Fushi review';
   String get card_target_srs_enable_confirm =>
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  String get card_target_srs_title => 'Send to Fushi review';
   String get change_source => 'Change source';
   String get changelog_empty =>
       'No changelog found. Check your network or proxy settings.';
@@ -8858,6 +8853,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
   String get srs_anki_migrate_setup_section_progress => 'Study progress';
@@ -9066,6 +9065,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_reset_confirm =>
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   String get srs_card_suspend => 'Suspend';
+  String get srs_card_video_pause => 'Pause clip';
+  String get srs_card_video_play => 'Play clip';
+  String get srs_card_video_replay => 'Replay clip from the start';
   String get srs_change_type_apply => 'Change';
   String get srs_change_type_cloze_hint =>
       'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
@@ -9326,6 +9328,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
   String srs_import_report_lapis_migrated({required Object n}) =>
@@ -9640,17 +9644,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_review_done_detail({required Object n}) =>
       'Reviewed ${n} cards in this session';
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   String get srs_review_layout_replay_button_hint =>
       'Within thumb reach when reviewing on a phone; the top bar keeps its replay';
   String get srs_review_layout_replay_end => 'Right';
   String get srs_review_layout_replay_off => 'Off';
   String get srs_review_layout_replay_start => 'Left';
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  String get srs_review_layout_volume => 'Audio volume';
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   String get srs_review_pending_decision => 'Needs your decision';
   String get srs_review_replay_audio => 'Replay audio';
   String get srs_review_rwkv_unavailable =>
@@ -9660,9 +9672,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This card was already reviewed on another device, so this step can\'t be undone';
   String get srs_settings_advanced => 'Advanced';
   String get srs_settings_algorithm => 'Scheduling algorithm';
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   String get srs_settings_audio => 'Audio';
@@ -14519,7 +14531,7 @@ class _StringsAr extends _StringsEn {
       'فشلت إعادة الترتيب التلقائي لـ ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'إعادة ترتيب البطاقات الجديدة حسب التكرار بعد نحو 30 ثانية من استخراج آخر بطاقة. مع AnkiConnect فقط.';
+      'إعادة ترتيب البطاقات الجديدة حسب التكرار بعد نحو 30 ثانية من استخراج آخر بطاقة.';
   @override
   String get anki_reposition_auto_title =>
       'إعادة الترتيب التلقائي بعد الاستخراج';
@@ -16658,14 +16670,7 @@ class _StringsAr extends _StringsEn {
   String get card_source_review_video_watching =>
       'مشاهدة عادية · يتم حفظ تقدّم المشاهدة';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -16674,8 +16679,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'تغيير المصدر';
   @override
@@ -27721,6 +27724,12 @@ class _StringsAr extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -28099,6 +28108,12 @@ class _StringsAr extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -28534,6 +28549,9 @@ class _StringsAr extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -29063,6 +29081,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -29074,13 +29095,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -29098,10 +29129,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -36338,7 +36369,7 @@ class _StringsDe extends _StringsEn {
       'Automatische Neupositionierung für ${deck} fehlgeschlagen';
   @override
   String get anki_reposition_auto_hint =>
-      'Neue Karten etwa 30 Sekunden nach der zuletzt erstellten Karte nach Frequenz neu positionieren. Nur AnkiConnect.';
+      'Neue Karten etwa 30 Sekunden nach der zuletzt erstellten Karte nach Frequenz neu positionieren.';
   @override
   String get anki_reposition_auto_title =>
       'Nach dem Mining automatisch neu positionieren';
@@ -38508,14 +38539,7 @@ class _StringsDe extends _StringsEn {
   String get card_source_review_video_watching =>
       'Normale Wiedergabe · Fortschritt wird gespeichert';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -38524,8 +38548,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Quelle ändern';
   @override
@@ -49813,6 +49835,12 @@ class _StringsDe extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -50191,6 +50219,12 @@ class _StringsDe extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -50626,6 +50660,9 @@ class _StringsDe extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -51155,6 +51192,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -51166,13 +51206,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -51190,10 +51240,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -58529,7 +58579,7 @@ class _StringsEs extends _StringsEn {
       'Error al reposicionar automáticamente ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Reposiciona las tarjetas nuevas por frecuencia unos 30 segundos después de crear la última tarjeta. Solo con AnkiConnect.';
+      'Reposiciona las tarjetas nuevas por frecuencia unos 30 segundos después de crear la última tarjeta.';
   @override
   String get anki_reposition_auto_title =>
       'Reposicionar automáticamente tras crear tarjetas';
@@ -60704,14 +60754,7 @@ class _StringsEs extends _StringsEn {
   String get card_source_review_video_watching =>
       'Viendo con normalidad · Se está guardando el progreso de visionado';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -60720,8 +60763,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Cambiar fuente';
   @override
@@ -72029,6 +72070,12 @@ class _StringsEs extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -72407,6 +72454,12 @@ class _StringsEs extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -72842,6 +72895,9 @@ class _StringsEs extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -73371,6 +73427,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -73382,13 +73441,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -73406,10 +73475,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -80773,7 +80842,7 @@ class _StringsFr extends _StringsEn {
       'Échec du repositionnement automatique pour ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Repositionne les nouvelles cartes par fréquence environ 30 secondes après la création de la dernière carte. AnkiConnect uniquement.';
+      'Repositionne les nouvelles cartes par fréquence environ 30 secondes après la création de la dernière carte.';
   @override
   String get anki_reposition_auto_title =>
       'Repositionnement automatique après la création';
@@ -82963,14 +83032,7 @@ class _StringsFr extends _StringsEn {
   String get card_source_review_video_watching =>
       'Lecture normale · La progression de visionnage est enregistrée';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -82979,8 +83041,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Changer de source';
   @override
@@ -94333,6 +94393,12 @@ class _StringsFr extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -94711,6 +94777,12 @@ class _StringsFr extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -95146,6 +95218,9 @@ class _StringsFr extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -95675,6 +95750,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -95686,13 +95764,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -95710,10 +95798,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -103081,7 +103169,7 @@ class _StringsId extends _StringsEn {
       'Reposisi otomatis gagal untuk ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Posisikan ulang kartu baru berdasarkan frekuensi sekitar 30 detik setelah kartu terakhir dibuat. Hanya AnkiConnect.';
+      'Posisikan ulang kartu baru berdasarkan frekuensi sekitar 30 detik setelah kartu terakhir dibuat.';
   @override
   String get anki_reposition_auto_title =>
       'Posisikan ulang otomatis setelah mining';
@@ -105231,14 +105319,7 @@ class _StringsId extends _StringsEn {
   String get card_source_review_video_watching =>
       'Menonton normal · Progres menonton sedang disimpan';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -105247,8 +105328,6 @@ class _StringsId extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Ubah Sumber';
   @override
@@ -116401,6 +116480,12 @@ class _StringsId extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -116779,6 +116864,12 @@ class _StringsId extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -117214,6 +117305,9 @@ class _StringsId extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -117743,6 +117837,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -117754,13 +117851,23 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -117778,10 +117885,10 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -125068,7 +125175,7 @@ class _StringsIt extends _StringsEn {
       'Riposizionamento automatico non riuscito per ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Riposiziona le carte nuove per frequenza circa 30 secondi dopo l\'ultima carta creata. Solo AnkiConnect.';
+      'Riposiziona le carte nuove per frequenza circa 30 secondi dopo l\'ultima carta creata.';
   @override
   String get anki_reposition_auto_title =>
       'Riposiziona automaticamente dopo il mining';
@@ -127235,14 +127342,7 @@ class _StringsIt extends _StringsEn {
   String get card_source_review_video_watching =>
       'Visione normale — L\'avanzamento di visione viene salvato';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -127251,8 +127351,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Cambia sorgente';
   @override
@@ -138511,6 +138609,12 @@ class _StringsIt extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -138889,6 +138993,12 @@ class _StringsIt extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -139324,6 +139434,9 @@ class _StringsIt extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -139853,6 +139966,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -139864,13 +139980,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -139888,10 +140014,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -147140,7 +147266,7 @@ class _StringsJa extends _StringsEn {
       '「${deck}」の自動並べ替えに失敗しました';
   @override
   String get anki_reposition_auto_hint =>
-      '最後のカードを作成してから約 30 秒後に、頻度順で新規カードを並べ替えます。AnkiConnect のみ。';
+      '最後のカードを作成してから約 30 秒後に、頻度順で新規カードを並べ替えます。';
   @override
   String get anki_reposition_auto_title => 'カード作成後に自動で並べ替え';
   @override
@@ -149231,14 +149357,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get card_source_review_video_watching => '通常どおり視聴中 · 視聴の進捗を記録しています';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -149247,8 +149366,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'ソースを変更';
   @override
@@ -159915,6 +160032,12 @@ class _StringsJa extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -160293,6 +160416,12 @@ class _StringsJa extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -160728,6 +160857,9 @@ class _StringsJa extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -161257,6 +161389,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => '「Hard」と「Easy」ボタンを隠す';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -161268,13 +161403,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -161292,10 +161437,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -168240,7 +168385,7 @@ class _StringsKo extends _StringsEn {
       '${deck}의 자동 순서 변경에 실패했습니다';
   @override
   String get anki_reposition_auto_hint =>
-      '마지막 카드를 마이닝하고 약 30초 후에 새 카드를 빈도순으로 재배치합니다. AnkiConnect에서만 지원됩니다.';
+      '마지막 카드를 마이닝하고 약 30초 후에 새 카드를 빈도순으로 재배치합니다.';
   @override
   String get anki_reposition_auto_title => '마이닝 후 자동 순서 변경';
   @override
@@ -170331,14 +170476,7 @@ class _StringsKo extends _StringsEn {
   String get card_source_review_video_watching =>
       '일반 시청 중 · 시청 진행 상황이 저장되고 있습니다';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -170347,8 +170485,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => '소스 변경';
   @override
@@ -181045,6 +181181,12 @@ class _StringsKo extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -181423,6 +181565,12 @@ class _StringsKo extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -181858,6 +182006,9 @@ class _StringsKo extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -182387,6 +182538,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -182398,13 +182552,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -182422,10 +182586,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -189481,7 +189645,7 @@ class _StringsNl extends _StringsEn {
       'Automatisch herpositioneren mislukt voor ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Herpositioneer nieuwe kaarten op frequentie ongeveer 30 seconden nadat de laatste kaart is gemaakt. Alleen AnkiConnect.';
+      'Herpositioneer nieuwe kaarten op frequentie ongeveer 30 seconden nadat de laatste kaart is gemaakt.';
   @override
   String get anki_reposition_auto_title =>
       'Automatisch herpositioneren na het maken van kaarten';
@@ -191647,14 +191811,7 @@ class _StringsNl extends _StringsEn {
   String get card_source_review_video_watching =>
       'Normaal kijken · Kijkvoortgang wordt opgeslagen';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -191663,8 +191820,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Bron wijzigen';
   @override
@@ -202883,6 +203038,12 @@ class _StringsNl extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -203261,6 +203422,12 @@ class _StringsNl extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -203696,6 +203863,9 @@ class _StringsNl extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -204225,6 +204395,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -204236,13 +204409,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -204260,10 +204443,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -211584,7 +211767,7 @@ class _StringsPtBr extends _StringsEn {
       'Falha no reposicionamento automático de ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Reposiciona os cartões novos por frequência cerca de 30 segundos após o último cartão ser minerado. Somente AnkiConnect.';
+      'Reposiciona os cartões novos por frequência cerca de 30 segundos após o último cartão ser minerado.';
   @override
   String get anki_reposition_auto_title =>
       'Reposicionar automaticamente após minerar';
@@ -213751,14 +213934,7 @@ class _StringsPtBr extends _StringsEn {
   String get card_source_review_video_watching =>
       'Assistindo normalmente — o progresso de exibição está sendo salvo';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -213767,8 +213943,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Alterar Fonte';
   @override
@@ -225023,6 +225197,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -225401,6 +225581,12 @@ class _StringsPtBr extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -225836,6 +226022,9 @@ class _StringsPtBr extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -226365,6 +226554,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -226376,13 +226568,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -226400,10 +226602,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -233731,7 +233933,7 @@ class _StringsRu extends _StringsEn {
       'Не удалось автоматически переупорядочить колоду ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Переупорядочивать новые карточки по частоте примерно через 30 секунд после создания последней карточки. Только AnkiConnect.';
+      'Переупорядочивать новые карточки по частоте примерно через 30 секунд после создания последней карточки.';
   @override
   String get anki_reposition_auto_title =>
       'Автоматически переупорядочивать после создания карточек';
@@ -235896,14 +236098,7 @@ class _StringsRu extends _StringsEn {
   String get card_source_review_video_watching =>
       'Обычный просмотр · прогресс просмотра сохраняется';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -235912,8 +236107,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Сменить источник';
   @override
@@ -247142,6 +247335,12 @@ class _StringsRu extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -247520,6 +247719,12 @@ class _StringsRu extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -247955,6 +248160,9 @@ class _StringsRu extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -248484,6 +248692,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -248495,13 +248706,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -248519,10 +248740,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -255813,7 +256034,7 @@ class _StringsTh extends _StringsEn {
       'จัดตำแหน่งอัตโนมัติสำหรับ ${deck} ไม่สำเร็จ';
   @override
   String get anki_reposition_auto_hint =>
-      'จัดตำแหน่งการ์ดใหม่ตามความถี่ประมาณ 30 วินาทีหลังสร้างการ์ดใบสุดท้าย เฉพาะ AnkiConnect';
+      'จัดตำแหน่งการ์ดใหม่ตามความถี่ประมาณ 30 วินาทีหลังสร้างการ์ดใบสุดท้าย';
   @override
   String get anki_reposition_auto_title =>
       'จัดตำแหน่งใหม่อัตโนมัติหลังสร้างการ์ด';
@@ -257949,14 +258170,7 @@ class _StringsTh extends _StringsEn {
   String get card_source_review_video_watching =>
       'กำลังดูตามปกติ · กำลังบันทึกความคืบหน้าการดู';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -257965,8 +258179,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'เปลี่ยนแหล่งข้อมูล';
   @override
@@ -269012,6 +269224,12 @@ class _StringsTh extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -269390,6 +269608,12 @@ class _StringsTh extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -269825,6 +270049,9 @@ class _StringsTh extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -270354,6 +270581,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -270365,13 +270595,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -270389,10 +270629,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -277615,7 +277855,7 @@ class _StringsTr extends _StringsEn {
       '${deck} için otomatik yeniden konumlandırma başarısız oldu';
   @override
   String get anki_reposition_auto_hint =>
-      'Son kart oluşturulduktan yaklaşık 30 saniye sonra yeni kartları sıklığa göre yeniden konumlandırır. Yalnızca AnkiConnect.';
+      'Son kart oluşturulduktan yaklaşık 30 saniye sonra yeni kartları sıklığa göre yeniden konumlandırır.';
   @override
   String get anki_reposition_auto_title =>
       'Kart oluşturduktan sonra otomatik yeniden konumlandır';
@@ -279766,14 +280006,7 @@ class _StringsTr extends _StringsEn {
   String get card_source_review_video_watching =>
       'Normal izleniyor · İzleme ilerlemesi kaydediliyor';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -279782,8 +280015,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Kaynağı değiştir';
   @override
@@ -290947,6 +291178,12 @@ class _StringsTr extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -291325,6 +291562,12 @@ class _StringsTr extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -291760,6 +292003,9 @@ class _StringsTr extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -292289,6 +292535,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -292300,13 +292549,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -292324,10 +292583,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -299596,7 +299855,7 @@ class _StringsVi extends _StringsEn {
       'Tự động sắp xếp lại thất bại cho ${deck}';
   @override
   String get anki_reposition_auto_hint =>
-      'Sắp xếp lại các thẻ mới theo tần suất khoảng 30 giây sau khi tạo thẻ cuối cùng. Chỉ với AnkiConnect.';
+      'Sắp xếp lại các thẻ mới theo tần suất khoảng 30 giây sau khi tạo thẻ cuối cùng.';
   @override
   String get anki_reposition_auto_title =>
       'Tự động sắp xếp lại sau khi tạo thẻ';
@@ -301743,14 +302002,7 @@ class _StringsVi extends _StringsEn {
   String get card_source_review_video_watching =>
       'Đang xem bình thường · Tiến độ xem đang được lưu';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -301759,8 +302011,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => 'Đổi nguồn';
   @override
@@ -312878,6 +313128,12 @@ class _StringsVi extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -313256,6 +313512,12 @@ class _StringsVi extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -313691,6 +313953,9 @@ class _StringsVi extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -314220,6 +314485,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -314231,13 +314499,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -314255,10 +314533,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -321382,8 +321660,7 @@ class _StringsZhCn extends _StringsEn {
   String anki_reposition_auto_failed({required Object deck}) =>
       '「${deck}」自动重排失败';
   @override
-  String get anki_reposition_auto_hint =>
-      '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
+  String get anki_reposition_auto_hint => '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。';
   @override
   String get anki_reposition_auto_title => '制卡后自动重排';
   @override
@@ -323320,13 +323597,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get card_source_review_video_watching => '正在正常观看 · 会记录观看进度';
   @override
-  String get card_target_anki_current_note => '当前发往 Anki，相关设置在下方「Anki」分组。';
-  @override
   String get card_target_anki_hint => 'AnkiDroid / AnkiConnect / AnkiWeb';
-  @override
-  String get card_target_anki_title => '发往 Anki';
-  @override
-  String get card_target_current => '当前';
   @override
   String get card_target_srs_enable => '开启 Fushi 复习';
   @override
@@ -323334,8 +323605,6 @@ class _StringsZhCn extends _StringsEn {
       '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
   @override
   String get card_target_srs_hint => '内置间隔复习，无需安装 Anki';
-  @override
-  String get card_target_srs_title => '发往 Fushi 复习';
   @override
   String get change_source => '切换来源';
   @override
@@ -333532,6 +333801,12 @@ class _StringsZhCn extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       '之前导入过、后来在 Fushi 里删掉的笔记会恢复，卡片回到原来的牌组。';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      '牌组名里的 Lapis 改成 Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      '把牌组名里的「Lapis」换成「Fushi Card」（如 Lapis::Mining 改成 Fushi Card::Mining）。处理本机全部牌组；改名后与同级牌组重名的保持原名。只在迁移旧 Lapis 笔记时生效。';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => '排程算法';
   @override
   String get srs_anki_migrate_setup_section_notices => '开始前请知悉';
@@ -333894,6 +334169,12 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_reset_confirm => '清除这张卡的进度、当作新卡重新学？之后可以马上撤销。';
   @override
   String get srs_card_suspend => '暂停';
+  @override
+  String get srs_card_video_pause => '暂停片段';
+  @override
+  String get srs_card_video_play => '播放片段';
+  @override
+  String get srs_card_video_replay => '从头重播片段';
   @override
   String get srs_change_type_apply => '更改';
   @override
@@ -334286,6 +334567,9 @@ class _StringsZhCn extends _StringsEn {
       '预设「${preset}」的参数无效，未导入';
   @override
   String get srs_import_report_keep_fsrs => '继续用 FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      '已改名为 Fushi Card：${n} 个牌组';
   @override
   String get srs_import_report_lapis_failed =>
       '旧 Lapis 迁到 Fushi 卡片失败。导入本身已完成，可以到「笔记类型」页重试。';
@@ -334779,6 +335063,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => '隐藏「困难」和「简单」按钮';
   @override
+  String get srs_review_hide_hard_easy_hint => '键盘 2 / 4 仍可评「困难」「简单」';
+  @override
   String get srs_review_layout_replay_button => '底部重播键';
   @override
   String get srs_review_layout_replay_button_hint => '手机刷卡时拇指够得到；顶栏的重播照旧保留';
@@ -334789,11 +335075,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => '左侧';
   @override
+  String get srs_review_layout_show_counts => '显示剩余卡片数量';
+  @override
+  String get srs_review_layout_show_counts_hint => '在牌组名下方显示新卡 · 学习 · 复习的剩余数量';
+  @override
   String get srs_review_layout_show_intervals => '评分按钮显示下次间隔';
   @override
   String get srs_review_layout_show_intervals_hint => '评价下方的小字，误按或排程异常一眼可见';
   @override
-  String get srs_review_layout_title => '复习布局';
+  String get srs_review_layout_title => '复习选项';
+  @override
+  String get srs_review_layout_volume => '音频音量';
+  @override
+  String get srs_review_layout_volume_hint => '卡面音频的音量，点播和自动播放都按它';
   @override
   String get srs_review_pending_decision => '待你决定';
   @override
@@ -334810,10 +335104,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_algorithm => '排程算法';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7（推荐）';
-  @override
   String get srs_settings_algorithm_hint =>
       '新算法从下一次复习起生效，已排好的到期日不变；要立即生效请用「立即重排整组」。';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV（推荐）';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       '此牌组的算法来自更新版本，本机暂用 ${alg}';
@@ -341415,8 +341709,7 @@ class _StringsZhHk extends _StringsEn {
   String anki_reposition_auto_failed({required Object deck}) =>
       '「${deck}」自動重排失敗';
   @override
-  String get anki_reposition_auto_hint =>
-      '最後一張卡制好約 30 秒後，自動按詞頻重排該牌組的新卡。僅 AnkiConnect 可用。';
+  String get anki_reposition_auto_hint => '最後一張卡制好約 30 秒後，自動按詞頻重排該牌組的新卡。';
   @override
   String get anki_reposition_auto_title => '制卡後自動重排';
   @override
@@ -343458,14 +343751,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get card_source_review_video_watching => '正在正常觀看 · 會記錄觀看進度';
   @override
-  String get card_target_anki_current_note =>
-      'Cards currently go to Anki. Its settings are in the Anki group below.';
-  @override
   String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
-  @override
-  String get card_target_anki_title => 'Send to Anki';
-  @override
-  String get card_target_current => 'Current';
   @override
   String get card_target_srs_enable => 'Turn on Fushi review';
   @override
@@ -343474,8 +343760,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get card_target_srs_hint =>
       'Built-in spaced repetition, no Anki needed';
-  @override
-  String get card_target_srs_title => 'Send to Fushi review';
   @override
   String get change_source => '切換來源';
   @override
@@ -353822,6 +354106,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_anki_migrate_setup_notice_restore =>
       'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
   @override
+  String get srs_anki_migrate_setup_rename_lapis_decks =>
+      'Rename Lapis decks to Fushi Card';
+  @override
+  String get srs_anki_migrate_setup_rename_lapis_decks_desc =>
+      'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
+  @override
   String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
   @override
   String get srs_anki_migrate_setup_section_notices => 'Before you start';
@@ -354200,6 +354490,12 @@ class _StringsZhHk extends _StringsEn {
       'Forget this card\'s progress and treat it as new? You can undo right after.';
   @override
   String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_video_pause => 'Pause clip';
+  @override
+  String get srs_card_video_play => 'Play clip';
+  @override
+  String get srs_card_video_replay => 'Replay clip from the start';
   @override
   String get srs_change_type_apply => 'Change';
   @override
@@ -354635,6 +354931,9 @@ class _StringsZhHk extends _StringsEn {
       'Preset "${preset}": its parameters were invalid and were not imported';
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  @override
+  String srs_import_report_lapis_decks_renamed({required Object n}) =>
+      'Renamed to Fushi Card: ${n} decks';
   @override
   String get srs_import_report_lapis_failed =>
       'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
@@ -355164,6 +355463,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   @override
+  String get srs_review_hide_hard_easy_hint =>
+      'Keys 2 and 4 still rate Hard and Easy';
+  @override
   String get srs_review_layout_replay_button => 'Replay button at the bottom';
   @override
   String get srs_review_layout_replay_button_hint =>
@@ -355175,13 +355477,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_review_layout_replay_start => 'Left';
   @override
+  String get srs_review_layout_show_counts => 'Show remaining card counts';
+  @override
+  String get srs_review_layout_show_counts_hint =>
+      'New · learning · review counts under the deck name';
+  @override
   String get srs_review_layout_show_intervals =>
       'Show next interval on rating buttons';
   @override
   String get srs_review_layout_show_intervals_hint =>
       'A small label under each rating, so a mis-tap or an odd schedule stands out';
   @override
-  String get srs_review_layout_title => 'Review layout';
+  String get srs_review_layout_title => 'Review options';
+  @override
+  String get srs_review_layout_volume => 'Audio volume';
+  @override
+  String get srs_review_layout_volume_hint =>
+      'Volume of card audio, both when tapped and when played automatically';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
@@ -355199,10 +355511,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_algorithm => 'Scheduling algorithm';
   @override
-  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
-  @override
   String get srs_settings_algorithm_hint =>
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String get srs_settings_algorithm_rwkv_recommended => 'RWKV (recommended)';
   @override
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -361777,7 +362089,7 @@ extension on _StringsEn {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined.';
       case 'anki_reposition_auto_title':
         return 'Auto-reposition after mining';
       case 'anki_reposition_cancelled':
@@ -363543,22 +363855,14 @@ extension on _StringsEn {
         return 'Reviewing card clip · Watch progress is preserved';
       case 'card_source_review_video_watching':
         return 'Watching normally · Watch progress is being saved';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Change source';
       case 'changelog_empty':
@@ -373099,6 +373403,10 @@ extension on _StringsEn {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -373453,6 +373761,12 @@ extension on _StringsEn {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -373820,6 +374134,8 @@ extension on _StringsEn {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -374286,6 +374602,8 @@ extension on _StringsEn {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -374296,12 +374614,20 @@ extension on _StringsEn {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -374316,10 +374642,10 @@ extension on _StringsEn {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -380435,7 +380761,7 @@ extension on _StringsAr {
         return ({required Object deck}) =>
             'فشلت إعادة الترتيب التلقائي لـ ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'إعادة ترتيب البطاقات الجديدة حسب التكرار بعد نحو 30 ثانية من استخراج آخر بطاقة. مع AnkiConnect فقط.';
+        return 'إعادة ترتيب البطاقات الجديدة حسب التكرار بعد نحو 30 ثانية من استخراج آخر بطاقة.';
       case 'anki_reposition_auto_title':
         return 'إعادة الترتيب التلقائي بعد الاستخراج';
       case 'anki_reposition_cancelled':
@@ -382202,22 +382528,14 @@ extension on _StringsAr {
         return 'مراجعة مقطع البطاقة · يُحفظ تقدّم المشاهدة';
       case 'card_source_review_video_watching':
         return 'مشاهدة عادية · يتم حفظ تقدّم المشاهدة';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'تغيير المصدر';
       case 'changelog_empty':
@@ -391753,6 +392071,10 @@ extension on _StringsAr {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -392107,6 +392429,12 @@ extension on _StringsAr {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -392474,6 +392802,8 @@ extension on _StringsAr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -392940,6 +393270,8 @@ extension on _StringsAr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -392950,12 +393282,20 @@ extension on _StringsAr {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -392970,10 +393310,10 @@ extension on _StringsAr {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -399096,7 +399436,7 @@ extension on _StringsDe {
         return ({required Object deck}) =>
             'Automatische Neupositionierung für ${deck} fehlgeschlagen';
       case 'anki_reposition_auto_hint':
-        return 'Neue Karten etwa 30 Sekunden nach der zuletzt erstellten Karte nach Frequenz neu positionieren. Nur AnkiConnect.';
+        return 'Neue Karten etwa 30 Sekunden nach der zuletzt erstellten Karte nach Frequenz neu positionieren.';
       case 'anki_reposition_auto_title':
         return 'Nach dem Mining automatisch neu positionieren';
       case 'anki_reposition_cancelled':
@@ -400875,22 +401215,14 @@ extension on _StringsDe {
         return 'Kartenclip wird geprüft · Fortschritt bleibt erhalten';
       case 'card_source_review_video_watching':
         return 'Normale Wiedergabe · Fortschritt wird gespeichert';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Quelle ändern';
       case 'changelog_empty':
@@ -410463,6 +410795,10 @@ extension on _StringsDe {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -410817,6 +411153,12 @@ extension on _StringsDe {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -411184,6 +411526,8 @@ extension on _StringsDe {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -411650,6 +411994,8 @@ extension on _StringsDe {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -411660,12 +412006,20 @@ extension on _StringsDe {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -411680,10 +412034,10 @@ extension on _StringsDe {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -417819,7 +418173,7 @@ extension on _StringsEs {
         return ({required Object deck}) =>
             'Error al reposicionar automáticamente ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Reposiciona las tarjetas nuevas por frecuencia unos 30 segundos después de crear la última tarjeta. Solo con AnkiConnect.';
+        return 'Reposiciona las tarjetas nuevas por frecuencia unos 30 segundos después de crear la última tarjeta.';
       case 'anki_reposition_auto_title':
         return 'Reposicionar automáticamente tras crear tarjetas';
       case 'anki_reposition_cancelled':
@@ -419598,22 +419952,14 @@ extension on _StringsEs {
         return 'Revisando el clip de la tarjeta · Se conserva el progreso de visionado';
       case 'card_source_review_video_watching':
         return 'Viendo con normalidad · Se está guardando el progreso de visionado';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Cambiar fuente';
       case 'changelog_empty':
@@ -429177,6 +429523,10 @@ extension on _StringsEs {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -429531,6 +429881,12 @@ extension on _StringsEs {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -429898,6 +430254,8 @@ extension on _StringsEs {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -430364,6 +430722,8 @@ extension on _StringsEs {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -430374,12 +430734,20 @@ extension on _StringsEs {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -430394,10 +430762,10 @@ extension on _StringsEs {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -436532,7 +436900,7 @@ extension on _StringsFr {
         return ({required Object deck}) =>
             'Échec du repositionnement automatique pour ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Repositionne les nouvelles cartes par fréquence environ 30 secondes après la création de la dernière carte. AnkiConnect uniquement.';
+        return 'Repositionne les nouvelles cartes par fréquence environ 30 secondes après la création de la dernière carte.';
       case 'anki_reposition_auto_title':
         return 'Repositionnement automatique après la création';
       case 'anki_reposition_cancelled':
@@ -438313,22 +438681,14 @@ extension on _StringsFr {
         return 'Révision de l\'extrait de la carte · La progression de visionnage est préservée';
       case 'card_source_review_video_watching':
         return 'Lecture normale · La progression de visionnage est enregistrée';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Changer de source';
       case 'changelog_empty':
@@ -447902,6 +448262,10 @@ extension on _StringsFr {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -448256,6 +448620,12 @@ extension on _StringsFr {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -448623,6 +448993,8 @@ extension on _StringsFr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -449089,6 +449461,8 @@ extension on _StringsFr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -449099,12 +449473,20 @@ extension on _StringsFr {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -449119,10 +449501,10 @@ extension on _StringsFr {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -455256,7 +455638,7 @@ extension on _StringsId {
         return ({required Object deck}) =>
             'Reposisi otomatis gagal untuk ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Posisikan ulang kartu baru berdasarkan frekuensi sekitar 30 detik setelah kartu terakhir dibuat. Hanya AnkiConnect.';
+        return 'Posisikan ulang kartu baru berdasarkan frekuensi sekitar 30 detik setelah kartu terakhir dibuat.';
       case 'anki_reposition_auto_title':
         return 'Posisikan ulang otomatis setelah mining';
       case 'anki_reposition_cancelled':
@@ -457027,22 +457409,14 @@ extension on _StringsId {
         return 'Meninjau klip kartu · Progres menonton dipertahankan';
       case 'card_source_review_video_watching':
         return 'Menonton normal · Progres menonton sedang disimpan';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Ubah Sumber';
       case 'changelog_empty':
@@ -466587,6 +466961,10 @@ extension on _StringsId {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -466941,6 +467319,12 @@ extension on _StringsId {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -467308,6 +467692,8 @@ extension on _StringsId {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -467774,6 +468160,8 @@ extension on _StringsId {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -467784,12 +468172,20 @@ extension on _StringsId {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -467804,10 +468200,10 @@ extension on _StringsId {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -473930,7 +474326,7 @@ extension on _StringsIt {
         return ({required Object deck}) =>
             'Riposizionamento automatico non riuscito per ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Riposiziona le carte nuove per frequenza circa 30 secondi dopo l\'ultima carta creata. Solo AnkiConnect.';
+        return 'Riposiziona le carte nuove per frequenza circa 30 secondi dopo l\'ultima carta creata.';
       case 'anki_reposition_auto_title':
         return 'Riposiziona automaticamente dopo il mining';
       case 'anki_reposition_cancelled':
@@ -475705,22 +476101,14 @@ extension on _StringsIt {
         return 'Revisione della clip della carta — L\'avanzamento di visione viene mantenuto';
       case 'card_source_review_video_watching':
         return 'Visione normale — L\'avanzamento di visione viene salvato';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Cambia sorgente';
       case 'changelog_empty':
@@ -485281,6 +485669,10 @@ extension on _StringsIt {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -485635,6 +486027,12 @@ extension on _StringsIt {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -486002,6 +486400,8 @@ extension on _StringsIt {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -486468,6 +486868,8 @@ extension on _StringsIt {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -486478,12 +486880,20 @@ extension on _StringsIt {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -486498,10 +486908,10 @@ extension on _StringsIt {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -492626,7 +493036,7 @@ extension on _StringsJa {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '「${deck}」の自動並べ替えに失敗しました';
       case 'anki_reposition_auto_hint':
-        return '最後のカードを作成してから約 30 秒後に、頻度順で新規カードを並べ替えます。AnkiConnect のみ。';
+        return '最後のカードを作成してから約 30 秒後に、頻度順で新規カードを並べ替えます。';
       case 'anki_reposition_auto_title':
         return 'カード作成後に自動で並べ替え';
       case 'anki_reposition_cancelled':
@@ -494383,22 +494793,14 @@ extension on _StringsJa {
         return 'カードのクリップを確認中 · 視聴の進捗は保持されます';
       case 'card_source_review_video_watching':
         return '通常どおり視聴中 · 視聴の進捗を記録しています';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'ソースを変更';
       case 'changelog_empty':
@@ -503909,6 +504311,10 @@ extension on _StringsJa {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -504263,6 +504669,12 @@ extension on _StringsJa {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -504630,6 +505042,8 @@ extension on _StringsJa {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -505096,6 +505510,8 @@ extension on _StringsJa {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return '「Hard」と「Easy」ボタンを隠す';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -505106,12 +505522,20 @@ extension on _StringsJa {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -505126,10 +505550,10 @@ extension on _StringsJa {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -511198,7 +511622,7 @@ extension on _StringsKo {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '${deck}의 자동 순서 변경에 실패했습니다';
       case 'anki_reposition_auto_hint':
-        return '마지막 카드를 마이닝하고 약 30초 후에 새 카드를 빈도순으로 재배치합니다. AnkiConnect에서만 지원됩니다.';
+        return '마지막 카드를 마이닝하고 약 30초 후에 새 카드를 빈도순으로 재배치합니다.';
       case 'anki_reposition_auto_title':
         return '마이닝 후 자동 순서 변경';
       case 'anki_reposition_cancelled':
@@ -512956,22 +513380,14 @@ extension on _StringsKo {
         return '카드 클립 검토 중 · 시청 진행 상황은 유지됩니다';
       case 'card_source_review_video_watching':
         return '일반 시청 중 · 시청 진행 상황이 저장되고 있습니다';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return '소스 변경';
       case 'changelog_empty':
@@ -522486,6 +522902,10 @@ extension on _StringsKo {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -522840,6 +523260,12 @@ extension on _StringsKo {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -523207,6 +523633,8 @@ extension on _StringsKo {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -523673,6 +524101,8 @@ extension on _StringsKo {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -523683,12 +524113,20 @@ extension on _StringsKo {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -523703,10 +524141,10 @@ extension on _StringsKo {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -529801,7 +530239,7 @@ extension on _StringsNl {
         return ({required Object deck}) =>
             'Automatisch herpositioneren mislukt voor ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Herpositioneer nieuwe kaarten op frequentie ongeveer 30 seconden nadat de laatste kaart is gemaakt. Alleen AnkiConnect.';
+        return 'Herpositioneer nieuwe kaarten op frequentie ongeveer 30 seconden nadat de laatste kaart is gemaakt.';
       case 'anki_reposition_auto_title':
         return 'Automatisch herpositioneren na het maken van kaarten';
       case 'anki_reposition_cancelled':
@@ -531573,22 +532011,14 @@ extension on _StringsNl {
         return 'Kaartfragment bekijken · Kijkvoortgang blijft behouden';
       case 'card_source_review_video_watching':
         return 'Normaal kijken · Kijkvoortgang wordt opgeslagen';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Bron wijzigen';
       case 'changelog_empty':
@@ -541153,6 +541583,10 @@ extension on _StringsNl {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -541507,6 +541941,12 @@ extension on _StringsNl {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -541874,6 +542314,8 @@ extension on _StringsNl {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -542340,6 +542782,8 @@ extension on _StringsNl {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -542350,12 +542794,20 @@ extension on _StringsNl {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -542370,10 +542822,10 @@ extension on _StringsNl {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -548503,7 +548955,7 @@ extension on _StringsPtBr {
         return ({required Object deck}) =>
             'Falha no reposicionamento automático de ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Reposiciona os cartões novos por frequência cerca de 30 segundos após o último cartão ser minerado. Somente AnkiConnect.';
+        return 'Reposiciona os cartões novos por frequência cerca de 30 segundos após o último cartão ser minerado.';
       case 'anki_reposition_auto_title':
         return 'Reposicionar automaticamente após minerar';
       case 'anki_reposition_cancelled':
@@ -550278,22 +550730,14 @@ extension on _StringsPtBr {
         return 'Revisando o clipe do cartão — o progresso de exibição é preservado';
       case 'card_source_review_video_watching':
         return 'Assistindo normalmente — o progresso de exibição está sendo salvo';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Alterar Fonte';
       case 'changelog_empty':
@@ -559851,6 +560295,10 @@ extension on _StringsPtBr {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -560205,6 +560653,12 @@ extension on _StringsPtBr {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -560572,6 +561026,8 @@ extension on _StringsPtBr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -561038,6 +561494,8 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -561048,12 +561506,20 @@ extension on _StringsPtBr {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -561068,10 +561534,10 @@ extension on _StringsPtBr {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -567198,7 +567664,7 @@ extension on _StringsRu {
         return ({required Object deck}) =>
             'Не удалось автоматически переупорядочить колоду ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Переупорядочивать новые карточки по частоте примерно через 30 секунд после создания последней карточки. Только AnkiConnect.';
+        return 'Переупорядочивать новые карточки по частоте примерно через 30 секунд после создания последней карточки.';
       case 'anki_reposition_auto_title':
         return 'Автоматически переупорядочивать после создания карточек';
       case 'anki_reposition_cancelled':
@@ -568977,22 +569443,14 @@ extension on _StringsRu {
         return 'Просмотр клипа карточки · прогресс просмотра сохраняется';
       case 'card_source_review_video_watching':
         return 'Обычный просмотр · прогресс просмотра сохраняется';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Сменить источник';
       case 'changelog_empty':
@@ -578553,6 +579011,10 @@ extension on _StringsRu {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -578907,6 +579369,12 @@ extension on _StringsRu {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -579274,6 +579742,8 @@ extension on _StringsRu {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -579740,6 +580210,8 @@ extension on _StringsRu {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -579750,12 +580222,20 @@ extension on _StringsRu {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -579770,10 +580250,10 @@ extension on _StringsRu {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -585892,7 +586372,7 @@ extension on _StringsTh {
         return ({required Object deck}) =>
             'จัดตำแหน่งอัตโนมัติสำหรับ ${deck} ไม่สำเร็จ';
       case 'anki_reposition_auto_hint':
-        return 'จัดตำแหน่งการ์ดใหม่ตามความถี่ประมาณ 30 วินาทีหลังสร้างการ์ดใบสุดท้าย เฉพาะ AnkiConnect';
+        return 'จัดตำแหน่งการ์ดใหม่ตามความถี่ประมาณ 30 วินาทีหลังสร้างการ์ดใบสุดท้าย';
       case 'anki_reposition_auto_title':
         return 'จัดตำแหน่งใหม่อัตโนมัติหลังสร้างการ์ด';
       case 'anki_reposition_cancelled':
@@ -587659,22 +588139,14 @@ extension on _StringsTh {
         return 'กำลังตรวจสอบคลิปของการ์ด · เก็บความคืบหน้าการดูไว้';
       case 'card_source_review_video_watching':
         return 'กำลังดูตามปกติ · กำลังบันทึกความคืบหน้าการดู';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'เปลี่ยนแหล่งข้อมูล';
       case 'changelog_empty':
@@ -597215,6 +597687,10 @@ extension on _StringsTh {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -597569,6 +598045,12 @@ extension on _StringsTh {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -597936,6 +598418,8 @@ extension on _StringsTh {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -598402,6 +598886,8 @@ extension on _StringsTh {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -598412,12 +598898,20 @@ extension on _StringsTh {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -598432,10 +598926,10 @@ extension on _StringsTh {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -604553,7 +605047,7 @@ extension on _StringsTr {
         return ({required Object deck}) =>
             '${deck} için otomatik yeniden konumlandırma başarısız oldu';
       case 'anki_reposition_auto_hint':
-        return 'Son kart oluşturulduktan yaklaşık 30 saniye sonra yeni kartları sıklığa göre yeniden konumlandırır. Yalnızca AnkiConnect.';
+        return 'Son kart oluşturulduktan yaklaşık 30 saniye sonra yeni kartları sıklığa göre yeniden konumlandırır.';
       case 'anki_reposition_auto_title':
         return 'Kart oluşturduktan sonra otomatik yeniden konumlandır';
       case 'anki_reposition_cancelled':
@@ -606330,22 +606824,14 @@ extension on _StringsTr {
         return 'Kart klibi inceleniyor · İzleme ilerlemesi korunur';
       case 'card_source_review_video_watching':
         return 'Normal izleniyor · İzleme ilerlemesi kaydediliyor';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Kaynağı değiştir';
       case 'changelog_empty':
@@ -615895,6 +616381,10 @@ extension on _StringsTr {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -616249,6 +616739,12 @@ extension on _StringsTr {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -616616,6 +617112,8 @@ extension on _StringsTr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -617082,6 +617580,8 @@ extension on _StringsTr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -617092,12 +617592,20 @@ extension on _StringsTr {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -617112,10 +617620,10 @@ extension on _StringsTr {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -623238,7 +623746,7 @@ extension on _StringsVi {
         return ({required Object deck}) =>
             'Tự động sắp xếp lại thất bại cho ${deck}';
       case 'anki_reposition_auto_hint':
-        return 'Sắp xếp lại các thẻ mới theo tần suất khoảng 30 giây sau khi tạo thẻ cuối cùng. Chỉ với AnkiConnect.';
+        return 'Sắp xếp lại các thẻ mới theo tần suất khoảng 30 giây sau khi tạo thẻ cuối cùng.';
       case 'anki_reposition_auto_title':
         return 'Tự động sắp xếp lại sau khi tạo thẻ';
       case 'anki_reposition_cancelled':
@@ -625008,22 +625516,14 @@ extension on _StringsVi {
         return 'Đang xem lại clip thẻ · Tiến độ xem được giữ nguyên';
       case 'card_source_review_video_watching':
         return 'Đang xem bình thường · Tiến độ xem đang được lưu';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return 'Đổi nguồn';
       case 'changelog_empty':
@@ -634570,6 +635070,10 @@ extension on _StringsVi {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -634924,6 +635428,12 @@ extension on _StringsVi {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -635291,6 +635801,8 @@ extension on _StringsVi {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -635757,6 +636269,8 @@ extension on _StringsVi {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -635767,12 +636281,20 @@ extension on _StringsVi {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -635787,10 +636309,10 @@ extension on _StringsVi {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
@@ -641881,7 +642403,7 @@ extension on _StringsZhCn {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '「${deck}」自动重排失败';
       case 'anki_reposition_auto_hint':
-        return '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
+        return '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。';
       case 'anki_reposition_auto_title':
         return '制卡后自动重排';
       case 'anki_reposition_cancelled':
@@ -643624,22 +644146,14 @@ extension on _StringsZhCn {
         return '正在回看卡片片段 · 不影响观看进度';
       case 'card_source_review_video_watching':
         return '正在正常观看 · 会记录观看进度';
-      case 'card_target_anki_current_note':
-        return '当前发往 Anki，相关设置在下方「Anki」分组。';
       case 'card_target_anki_hint':
         return 'AnkiDroid / AnkiConnect / AnkiWeb';
-      case 'card_target_anki_title':
-        return '发往 Anki';
-      case 'card_target_current':
-        return '当前';
       case 'card_target_srs_enable':
         return '开启 Fushi 复习';
       case 'card_target_srs_enable_confirm':
         return '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
       case 'card_target_srs_hint':
         return '内置间隔复习，无需安装 Anki';
-      case 'card_target_srs_title':
-        return '发往 Fushi 复习';
       case 'change_source':
         return '切换来源';
       case 'changelog_empty':
@@ -653100,6 +653614,10 @@ extension on _StringsZhCn {
         return '迁移是合并：Fushi 里已有的卡片会保留，Anki 里的数据不会被改动；重复迁移不会产生重复。';
       case 'srs_anki_migrate_setup_notice_restore':
         return '之前导入过、后来在 Fushi 里删掉的笔记会恢复，卡片回到原来的牌组。';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return '牌组名里的 Lapis 改成 Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return '把牌组名里的「Lapis」换成「Fushi Card」（如 Lapis::Mining 改成 Fushi Card::Mining）。处理本机全部牌组；改名后与同级牌组重名的保持原名。只在迁移旧 Lapis 笔记时生效。';
       case 'srs_anki_migrate_setup_section_algorithm':
         return '排程算法';
       case 'srs_anki_migrate_setup_section_notices':
@@ -653449,6 +653967,12 @@ extension on _StringsZhCn {
         return '清除这张卡的进度、当作新卡重新学？之后可以马上撤销。';
       case 'srs_card_suspend':
         return '暂停';
+      case 'srs_card_video_pause':
+        return '暂停片段';
+      case 'srs_card_video_play':
+        return '播放片段';
+      case 'srs_card_video_replay':
+        return '从头重播片段';
       case 'srs_change_type_apply':
         return '更改';
       case 'srs_change_type_cloze_hint':
@@ -653807,6 +654331,8 @@ extension on _StringsZhCn {
         return ({required Object preset}) => '预设「${preset}」的参数无效，未导入';
       case 'srs_import_report_keep_fsrs':
         return '继续用 FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => '已改名为 Fushi Card：${n} 个牌组';
       case 'srs_import_report_lapis_failed':
         return '旧 Lapis 迁到 Fushi 卡片失败。导入本身已完成，可以到「笔记类型」页重试。';
       case 'srs_import_report_lapis_migrated':
@@ -654262,6 +654788,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '本次复习了 ${n} 张';
       case 'srs_review_hide_hard_easy':
         return '隐藏「困难」和「简单」按钮';
+      case 'srs_review_hide_hard_easy_hint':
+        return '键盘 2 / 4 仍可评「困难」「简单」';
       case 'srs_review_layout_replay_button':
         return '底部重播键';
       case 'srs_review_layout_replay_button_hint':
@@ -654272,12 +654800,20 @@ extension on _StringsZhCn {
         return '不放';
       case 'srs_review_layout_replay_start':
         return '左侧';
+      case 'srs_review_layout_show_counts':
+        return '显示剩余卡片数量';
+      case 'srs_review_layout_show_counts_hint':
+        return '在牌组名下方显示新卡 · 学习 · 复习的剩余数量';
       case 'srs_review_layout_show_intervals':
         return '评分按钮显示下次间隔';
       case 'srs_review_layout_show_intervals_hint':
         return '评价下方的小字，误按或排程异常一眼可见';
       case 'srs_review_layout_title':
-        return '复习布局';
+        return '复习选项';
+      case 'srs_review_layout_volume':
+        return '音频音量';
+      case 'srs_review_layout_volume_hint':
+        return '卡面音频的音量，点播和自动播放都按它';
       case 'srs_review_pending_decision':
         return '待你决定';
       case 'srs_review_replay_audio':
@@ -654292,10 +654828,10 @@ extension on _StringsZhCn {
         return '高级';
       case 'srs_settings_algorithm':
         return '排程算法';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7（推荐）';
       case 'srs_settings_algorithm_hint':
         return '新算法从下一次复习起生效，已排好的到期日不变；要立即生效请用「立即重排整组」。';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV（推荐）';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) => '此牌组的算法来自更新版本，本机暂用 ${alg}';
       case 'srs_settings_audio':
@@ -660319,7 +660855,7 @@ extension on _StringsZhHk {
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '「${deck}」自動重排失敗';
       case 'anki_reposition_auto_hint':
-        return '最後一張卡制好約 30 秒後，自動按詞頻重排該牌組的新卡。僅 AnkiConnect 可用。';
+        return '最後一張卡制好約 30 秒後，自動按詞頻重排該牌組的新卡。';
       case 'anki_reposition_auto_title':
         return '制卡後自動重排';
       case 'anki_reposition_cancelled':
@@ -662069,22 +662605,14 @@ extension on _StringsZhHk {
         return '正在回看卡片片段 · 不影響觀看進度';
       case 'card_source_review_video_watching':
         return '正在正常觀看 · 會記錄觀看進度';
-      case 'card_target_anki_current_note':
-        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
       case 'card_target_anki_hint':
         return 'AnkiDroid, AnkiConnect or AnkiWeb';
-      case 'card_target_anki_title':
-        return 'Send to Anki';
-      case 'card_target_current':
-        return 'Current';
       case 'card_target_srs_enable':
         return 'Turn on Fushi review';
       case 'card_target_srs_enable_confirm':
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_target_srs_hint':
         return 'Built-in spaced repetition, no Anki needed';
-      case 'card_target_srs_title':
-        return 'Send to Fushi review';
       case 'change_source':
         return '切換來源';
       case 'changelog_empty':
@@ -671574,6 +672102,10 @@ extension on _StringsZhHk {
         return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
       case 'srs_anki_migrate_setup_notice_restore':
         return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_rename_lapis_decks':
+        return 'Rename Lapis decks to Fushi Card';
+      case 'srs_anki_migrate_setup_rename_lapis_decks_desc':
+        return 'Replaces "Lapis" in deck names with "Fushi Card" (e.g. Lapis::Mining becomes Fushi Card::Mining). Covers every deck on this device; a deck whose new name already exists next to it is left as is. Only applies when converting old Lapis notes.';
       case 'srs_anki_migrate_setup_section_algorithm':
         return 'Scheduler';
       case 'srs_anki_migrate_setup_section_notices':
@@ -671928,6 +672460,12 @@ extension on _StringsZhHk {
         return 'Forget this card\'s progress and treat it as new? You can undo right after.';
       case 'srs_card_suspend':
         return 'Suspend';
+      case 'srs_card_video_pause':
+        return 'Pause clip';
+      case 'srs_card_video_play':
+        return 'Play clip';
+      case 'srs_card_video_replay':
+        return 'Replay clip from the start';
       case 'srs_change_type_apply':
         return 'Change';
       case 'srs_change_type_cloze_hint':
@@ -672294,6 +672832,8 @@ extension on _StringsZhHk {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_decks_renamed':
+        return ({required Object n}) => 'Renamed to Fushi Card: ${n} decks';
       case 'srs_import_report_lapis_failed':
         return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
       case 'srs_import_report_lapis_migrated':
@@ -672760,6 +673300,8 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'srs_review_hide_hard_easy_hint':
+        return 'Keys 2 and 4 still rate Hard and Easy';
       case 'srs_review_layout_replay_button':
         return 'Replay button at the bottom';
       case 'srs_review_layout_replay_button_hint':
@@ -672770,12 +673312,20 @@ extension on _StringsZhHk {
         return 'Off';
       case 'srs_review_layout_replay_start':
         return 'Left';
+      case 'srs_review_layout_show_counts':
+        return 'Show remaining card counts';
+      case 'srs_review_layout_show_counts_hint':
+        return 'New · learning · review counts under the deck name';
       case 'srs_review_layout_show_intervals':
         return 'Show next interval on rating buttons';
       case 'srs_review_layout_show_intervals_hint':
         return 'A small label under each rating, so a mis-tap or an odd schedule stands out';
       case 'srs_review_layout_title':
-        return 'Review layout';
+        return 'Review options';
+      case 'srs_review_layout_volume':
+        return 'Audio volume';
+      case 'srs_review_layout_volume_hint':
+        return 'Volume of card audio, both when tapped and when played automatically';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
       case 'srs_review_replay_audio':
@@ -672790,10 +673340,10 @@ extension on _StringsZhHk {
         return 'Advanced';
       case 'srs_settings_algorithm':
         return 'Scheduling algorithm';
-      case 'srs_settings_algorithm_fsrs7':
-        return 'FSRS-7 (recommended)';
       case 'srs_settings_algorithm_hint':
         return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_rwkv_recommended':
+        return 'RWKV (recommended)';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
