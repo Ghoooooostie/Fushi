@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152541 (8973 per locale)
+/// Strings: 152524 (8972 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3940,8 +3940,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A draggable ball on every Fushi page. Tap it to expand the buttons picked below for the current page';
   String get floating_ball_lookup_hint => 'Enter a word';
   String get floating_ball_notification => 'Floating ball is active';
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   String get floating_ball_ocr_close => 'Close';
   String get floating_ball_ocr_empty => 'No text recognized';
   String get floating_ball_ocr_failed => 'Screen OCR failed';
@@ -19313,9 +19311,6 @@ class _StringsAr extends _StringsEn {
   String get floating_ball_lookup_hint => 'أدخل كلمة';
   @override
   String get floating_ball_notification => 'الكرة العائمة نشطة';
-  @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   @override
   String get floating_ball_ocr_close => 'Close';
   @override
@@ -41209,9 +41204,6 @@ class _StringsDe extends _StringsEn {
   String get floating_ball_lookup_hint => 'Wort eingeben';
   @override
   String get floating_ball_notification => 'Schwebende Kugel ist aktiv';
-  @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   @override
   String get floating_ball_ocr_close => 'Close';
   @override
@@ -63408,9 +63400,6 @@ class _StringsEs extends _StringsEn {
   String get floating_ball_lookup_hint => 'Introduce una palabra';
   @override
   String get floating_ball_notification => 'La bola flotante está activa';
-  @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   @override
   String get floating_ball_ocr_close => 'Close';
   @override
@@ -85675,9 +85664,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get floating_ball_notification => 'La bulle flottante est active';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Aucun texte reconnu';
@@ -107893,9 +107879,6 @@ class _StringsId extends _StringsEn {
   @override
   String get floating_ball_notification => 'Bola mengambang aktif';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Tidak ada teks dikenali';
@@ -129915,9 +129898,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get floating_ball_notification => 'Il pulsante flottante è attivo';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Nessun testo riconosciuto';
@@ -151781,8 +151761,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get floating_ball_notification => 'フローティングボールが有効です';
   @override
-  String get floating_ball_notification_tap_hint => 'タップしてコピーしたテキストを調べる';
-  @override
   String get floating_ball_ocr_close => '閉じる';
   @override
   String get floating_ball_ocr_empty => 'テキストを認識できませんでした';
@@ -172889,9 +172867,6 @@ class _StringsKo extends _StringsEn {
   String get floating_ball_lookup_hint => '단어를 입력하세요';
   @override
   String get floating_ball_notification => '플로팅 볼이 활성화되어 있습니다';
-  @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   @override
   String get floating_ball_ocr_close => 'Close';
   @override
@@ -194311,9 +194286,6 @@ class _StringsNl extends _StringsEn {
   String get floating_ball_lookup_hint => 'Voer een woord in';
   @override
   String get floating_ball_notification => 'Zwevende knop is actief';
-  @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   @override
   String get floating_ball_ocr_close => 'Close';
   @override
@@ -216420,9 +216392,6 @@ class _StringsPtBr extends _StringsEn {
   String get floating_ball_lookup_hint => 'Digite uma palavra';
   @override
   String get floating_ball_notification => 'A bola flutuante está ativa';
-  @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   @override
   String get floating_ball_ocr_close => 'Close';
   @override
@@ -238548,9 +238517,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get floating_ball_notification => 'Плавающая кнопка активна';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Текст не распознан';
@@ -260570,9 +260536,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get floating_ball_notification => 'ปุ่มลอยกำลังทำงาน';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'ไม่พบข้อความ';
@@ -282410,9 +282373,6 @@ class _StringsTr extends _StringsEn {
   String get floating_ball_lookup_hint => 'Bir kelime girin';
   @override
   String get floating_ball_notification => 'Yüzen top etkin';
-  @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
   @override
   String get floating_ball_ocr_close => 'Close';
   @override
@@ -304378,9 +304338,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get floating_ball_notification => 'Bóng nổi đang hoạt động';
   @override
-  String get floating_ball_notification_tap_hint =>
-      'Tap to look up copied text';
-  @override
   String get floating_ball_ocr_close => 'Close';
   @override
   String get floating_ball_ocr_empty => 'Không nhận dạng được văn bản';
@@ -325752,8 +325709,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_notification => '悬浮球运行中';
   @override
-  String get floating_ball_notification_tap_hint => '点按即可查剪贴板里的文字';
-  @override
   String get floating_ball_ocr_close => '关闭';
   @override
   String get floating_ball_ocr_empty => '没有识别到文字';
@@ -345924,8 +345879,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_notification => '懸浮球運行中';
   @override
-  String get floating_ball_notification_tap_hint => '點按即可查詢剪貼簿中的文字';
-  @override
   String get floating_ball_ocr_close => '關閉';
   @override
   String get floating_ball_ocr_empty => '沒有識別到文字';
@@ -365813,8 +365766,6 @@ extension on _StringsEn {
         return 'Enter a word';
       case 'floating_ball_notification':
         return 'Floating ball is active';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -384470,8 +384421,6 @@ extension on _StringsAr {
         return 'أدخل كلمة';
       case 'floating_ball_notification':
         return 'الكرة العائمة نشطة';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -403153,8 +403102,6 @@ extension on _StringsDe {
         return 'Wort eingeben';
       case 'floating_ball_notification':
         return 'Schwebende Kugel ist aktiv';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -421870,8 +421817,6 @@ extension on _StringsEs {
         return 'Introduce una palabra';
       case 'floating_ball_notification':
         return 'La bola flotante está activa';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -440592,8 +440537,6 @@ extension on _StringsFr {
         return 'Saisissez un mot';
       case 'floating_ball_notification':
         return 'La bulle flottante est active';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -459295,8 +459238,6 @@ extension on _StringsId {
         return 'Masukkan kata';
       case 'floating_ball_notification':
         return 'Bola mengambang aktif';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -477976,8 +477917,6 @@ extension on _StringsIt {
         return 'Inserisci una parola';
       case 'floating_ball_notification':
         return 'Il pulsante flottante è attivo';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -496638,8 +496577,6 @@ extension on _StringsJa {
         return '単語を入力';
       case 'floating_ball_notification':
         return 'フローティングボールが有効です';
-      case 'floating_ball_notification_tap_hint':
-        return 'タップしてコピーしたテキストを調べる';
       case 'floating_ball_ocr_close':
         return '閉じる';
       case 'floating_ball_ocr_empty':
@@ -515214,8 +515151,6 @@ extension on _StringsKo {
         return '단어를 입력하세요';
       case 'floating_ball_notification':
         return '플로팅 볼이 활성화되어 있습니다';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -533841,8 +533776,6 @@ extension on _StringsNl {
         return 'Voer een woord in';
       case 'floating_ball_notification':
         return 'Zwevende knop is actief';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -552542,8 +552475,6 @@ extension on _StringsPtBr {
         return 'Digite uma palavra';
       case 'floating_ball_notification':
         return 'A bola flutuante está ativa';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -571243,8 +571174,6 @@ extension on _StringsRu {
         return 'Введите слово';
       case 'floating_ball_notification':
         return 'Плавающая кнопка активна';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -589918,8 +589847,6 @@ extension on _StringsTh {
         return 'ป้อนคำ';
       case 'floating_ball_notification':
         return 'ปุ่มลอยกำลังทำงาน';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -608590,8 +608517,6 @@ extension on _StringsTr {
         return 'Bir kelime girin';
       case 'floating_ball_notification':
         return 'Yüzen top etkin';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -627269,8 +627194,6 @@ extension on _StringsVi {
         return 'Nhập một từ';
       case 'floating_ball_notification':
         return 'Bóng nổi đang hoạt động';
-      case 'floating_ball_notification_tap_hint':
-        return 'Tap to look up copied text';
       case 'floating_ball_ocr_close':
         return 'Close';
       case 'floating_ball_ocr_empty':
@@ -645844,8 +645767,6 @@ extension on _StringsZhCn {
         return '输入要查的词';
       case 'floating_ball_notification':
         return '悬浮球运行中';
-      case 'floating_ball_notification_tap_hint':
-        return '点按即可查剪贴板里的文字';
       case 'floating_ball_ocr_close':
         return '关闭';
       case 'floating_ball_ocr_empty':
@@ -664304,8 +664225,6 @@ extension on _StringsZhHk {
         return '輸入要查的詞';
       case 'floating_ball_notification':
         return '懸浮球運行中';
-      case 'floating_ball_notification_tap_hint':
-        return '點按即可查詢剪貼簿中的文字';
       case 'floating_ball_ocr_close':
         return '關閉';
       case 'floating_ball_ocr_empty':
