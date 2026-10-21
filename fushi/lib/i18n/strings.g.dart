@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 151997 (8941 per locale)
+/// Strings: 152286 (8958 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8836,6 +8836,28 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_anki_migrate_scanning => 'Looking for Anki…';
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  String get srs_anki_migrate_setup_title => 'Migration settings';
   String get srs_anki_migrate_start => 'Migrate';
   String srs_anki_migrate_unreadable({required Object paths}) =>
       'Some folders couldn\'t be read: ${paths}';
@@ -9299,6 +9321,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_report_invalid_params({required Object preset}) =>
       'Preset "${preset}": its parameters were invalid and were not imported';
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   String srs_import_report_media_missing({required Object n}) =>
@@ -9318,6 +9344,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} fields or templates deleted in the source are kept here';
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
   String srs_import_report_reviews_skipped({required Object n}) =>
@@ -9339,8 +9367,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_import_task_cancelled({required Object name}) =>
       'Cancelled import of ${name}';
   String get srs_import_task_dismiss => 'Dismiss';
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
   String srs_import_task_queued({required Object name}) =>
@@ -27627,6 +27661,42 @@ class _StringsAr extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -28431,6 +28501,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -28457,6 +28533,9 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -28491,8 +28570,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -49627,6 +49712,42 @@ class _StringsDe extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -50431,6 +50552,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -50457,6 +50584,9 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -50491,8 +50621,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -71751,6 +71887,42 @@ class _StringsEs extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -72555,6 +72727,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -72581,6 +72759,9 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -72615,8 +72796,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -93963,6 +94150,42 @@ class _StringsFr extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -94767,6 +94990,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -94793,6 +95022,9 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -94827,8 +95059,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -115939,6 +116177,42 @@ class _StringsId extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -116743,6 +117017,12 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -116769,6 +117049,9 @@ class _StringsId extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -116803,8 +117086,14 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -137957,6 +138246,42 @@ class _StringsIt extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -138761,6 +139086,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -138787,6 +139118,9 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -138821,8 +139155,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -159269,6 +159609,42 @@ class _StringsJa extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -160073,6 +160449,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -160099,6 +160481,9 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -160133,8 +160518,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -180307,6 +180698,42 @@ class _StringsKo extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -181111,6 +181538,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -181137,6 +181570,9 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -181171,8 +181607,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -202053,6 +202495,42 @@ class _StringsNl extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -202857,6 +203335,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -202883,6 +203367,9 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -202917,8 +203404,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -224101,6 +224594,42 @@ class _StringsPtBr extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -224905,6 +225434,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -224931,6 +225466,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -224965,8 +225503,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -246128,6 +246672,42 @@ class _StringsRu extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -246932,6 +247512,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -246958,6 +247544,9 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -246992,8 +247581,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -267906,6 +268501,42 @@ class _StringsTh extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -268710,6 +269341,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -268736,6 +269373,9 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -268770,8 +269410,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -289749,6 +290395,42 @@ class _StringsTr extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -290553,6 +291235,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -290579,6 +291267,9 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -290613,8 +291304,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -311588,6 +312285,42 @@ class _StringsVi extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -312392,6 +313125,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -312418,6 +313157,9 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -312452,8 +313194,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -332152,6 +332900,41 @@ class _StringsZhCn extends _StringsEn {
   String get srs_anki_migrate_scope =>
       '会迁移：牌组、笔记、笔记类型与模板、卡片排程、复习记录、牌组选项和媒体。不会迁移：插件、筛选牌组（卡片回到原牌组）以及 Anki 自身的偏好设置。';
   @override
+  String get srs_anki_migrate_setup_algorithm => '迁移过来的牌组使用';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      '沿用 Anki 里的 FSRS，迁移 FSRS 参数时带上训练好的参数。没有参数的牌组使用 FSRS-7，按你的复习记录自动优化。';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV 是 Fushi 的默认算法：直接用你的全部复习记录预测记忆，不需要训练参数。FSRS 参数照样保留，之后可以在牌组设置里切回 FSRS。';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis => '导入后把旧 Lapis 迁到 Fushi 卡片';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi 卡片是 Lapis 模板的新版：字段按含义对应，复习记录随卡片一起迁移；新模板里没有位置的字段内容仍留在笔记上。会处理本机全部旧 Lapis 笔记（含这次导入的）。不勾选的话，以后也可以在「笔记类型」页迁移。';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      '迁移在后台进行，可以离开本页；进度和完整报告在牌组列表顶部的任务条里。';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      '如需撤回，可以在「备份」里选一份迁移前的备份「恢复到此时间点」。';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      '迁移是合并：Fushi 里已有的卡片会保留，Anki 里的数据不会被改动；重复迁移不会产生重复。';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      '之前导入过、后来在 Fushi 里删掉的笔记会恢复，卡片回到原来的牌组。';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => '排程算法';
+  @override
+  String get srs_anki_migrate_setup_section_notices => '开始前请知悉';
+  @override
+  String get srs_anki_migrate_setup_section_progress => '学习进度';
+  @override
+  String get srs_anki_migrate_setup_section_templates => '卡片模板';
+  @override
+  String get srs_anki_migrate_setup_title => '迁移设置';
+  @override
   String get srs_anki_migrate_start => '开始迁移';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -332897,6 +333680,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => '继续用 FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      '旧 Lapis 迁到 Fushi 卡片失败。导入本身已完成，可以到「笔记类型」页重试。';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      '已迁到 Fushi 卡片：${n} 条笔记';
+  @override
   String srs_import_report_media({required Object n}) => '存入媒体文件：${n} 个';
   @override
   String srs_import_report_media_missing({required Object n}) =>
@@ -332922,6 +333711,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       '作为新卡导入（不含学习进度）：${n} 张';
+  @override
+  String srs_import_report_restored({required Object n}) => '恢复之前删除的笔记：${n} 条';
   @override
   String srs_import_report_reviews({required Object n}) => '导入复习记录：${n} 条';
   @override
@@ -332953,8 +333744,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_task_dismiss => '关闭';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      '已导入 ${name}：新增 ${n} 条笔记';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      '已导入 ${name}：新增 ${added}，恢复 ${restored}，更新 ${updated}，未改动 ${skipped} 条笔记';
   @override
   String srs_import_task_failed({required Object name}) =>
       '导入 ${name} 失败，点按查看原因。';
@@ -352353,6 +353150,42 @@ class _StringsZhHk extends _StringsEn {
   String get srs_anki_migrate_scope =>
       'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
   @override
+  String get srs_anki_migrate_setup_algorithm => 'Scheduler for migrated decks';
+  @override
+  String get srs_anki_migrate_setup_algorithm_fsrs_desc =>
+      'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+  @override
+  String get srs_anki_migrate_setup_algorithm_rwkv_desc =>
+      'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis =>
+      'Convert old Lapis notes to Fushi card';
+  @override
+  String get srs_anki_migrate_setup_convert_lapis_desc =>
+      'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+  @override
+  String get srs_anki_migrate_setup_notice_background =>
+      'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+  @override
+  String get srs_anki_migrate_setup_notice_backup =>
+      'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+  @override
+  String get srs_anki_migrate_setup_notice_merge =>
+      'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+  @override
+  String get srs_anki_migrate_setup_notice_restore =>
+      'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+  @override
+  String get srs_anki_migrate_setup_section_algorithm => 'Scheduler';
+  @override
+  String get srs_anki_migrate_setup_section_notices => 'Before you start';
+  @override
+  String get srs_anki_migrate_setup_section_progress => 'Study progress';
+  @override
+  String get srs_anki_migrate_setup_section_templates => 'Card templates';
+  @override
+  String get srs_anki_migrate_setup_title => 'Migration settings';
+  @override
   String get srs_anki_migrate_start => 'Migrate';
   @override
   String srs_anki_migrate_unreadable({required Object paths}) =>
@@ -353157,6 +353990,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_report_keep_fsrs => 'Keep FSRS';
   @override
+  String get srs_import_report_lapis_failed =>
+      'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+  @override
+  String srs_import_report_lapis_migrated({required Object n}) =>
+      'Converted to Fushi card: ${n} notes';
+  @override
   String srs_import_report_media({required Object n}) =>
       'Media files stored: ${n}';
   @override
@@ -353183,6 +354022,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_import_report_reset_new({required Object n}) =>
       'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_restored({required Object n}) =>
+      'Restored previously deleted notes: ${n}';
   @override
   String srs_import_report_reviews({required Object n}) =>
       'Review history imported: ${n} entries';
@@ -353217,8 +354059,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_task_dismiss => 'Dismiss';
   @override
-  String srs_import_task_done({required Object name, required Object n}) =>
-      'Imported ${name}: ${n} notes added';
+  String srs_import_task_done_summary({
+    required Object name,
+    required Object added,
+    required Object restored,
+    required Object updated,
+    required Object skipped,
+  }) =>
+      'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
   @override
   String srs_import_task_failed({required Object name}) =>
       'Couldn\'t import ${name}. Tap for details.';
@@ -371548,6 +372396,34 @@ extension on _StringsEn {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -372259,6 +373135,10 @@ extension on _StringsEn {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -372284,6 +373164,9 @@ extension on _StringsEn {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -372312,9 +373195,15 @@ extension on _StringsEn {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -390130,6 +391019,34 @@ extension on _StringsAr {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -390841,6 +391758,10 @@ extension on _StringsAr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -390866,6 +391787,9 @@ extension on _StringsAr {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -390894,9 +391818,15 @@ extension on _StringsAr {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -408768,6 +409698,34 @@ extension on _StringsDe {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -409479,6 +410437,10 @@ extension on _StringsDe {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -409504,6 +410466,9 @@ extension on _StringsDe {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -409532,9 +410497,15 @@ extension on _StringsDe {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -427410,6 +428381,34 @@ extension on _StringsEs {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -428121,6 +429120,10 @@ extension on _StringsEs {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -428146,6 +429149,9 @@ extension on _StringsEs {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -428174,9 +429180,15 @@ extension on _StringsEs {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -446063,6 +447075,34 @@ extension on _StringsFr {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -446774,6 +447814,10 @@ extension on _StringsFr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -446799,6 +447843,9 @@ extension on _StringsFr {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -446827,9 +447874,15 @@ extension on _StringsFr {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -464676,6 +465729,34 @@ extension on _StringsId {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -465387,6 +466468,10 @@ extension on _StringsId {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -465412,6 +466497,9 @@ extension on _StringsId {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -465440,9 +466528,15 @@ extension on _StringsId {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -483298,6 +484392,34 @@ extension on _StringsIt {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -484009,6 +485131,10 @@ extension on _StringsIt {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -484034,6 +485160,9 @@ extension on _StringsIt {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -484062,9 +485191,15 @@ extension on _StringsIt {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -501854,6 +502989,34 @@ extension on _StringsJa {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -502565,6 +503728,10 @@ extension on _StringsJa {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -502590,6 +503757,9 @@ extension on _StringsJa {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -502618,9 +503788,15 @@ extension on _StringsJa {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -520359,6 +521535,34 @@ extension on _StringsKo {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -521070,6 +522274,10 @@ extension on _StringsKo {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -521095,6 +522303,9 @@ extension on _StringsKo {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -521123,9 +522334,15 @@ extension on _StringsKo {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -538954,6 +540171,34 @@ extension on _StringsNl {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -539665,6 +540910,10 @@ extension on _StringsNl {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -539690,6 +540939,9 @@ extension on _StringsNl {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -539718,9 +540970,15 @@ extension on _StringsNl {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -557580,6 +558838,34 @@ extension on _StringsPtBr {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -558291,6 +559577,10 @@ extension on _StringsPtBr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -558316,6 +559606,9 @@ extension on _StringsPtBr {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -558344,9 +559637,15 @@ extension on _StringsPtBr {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -576210,6 +577509,34 @@ extension on _StringsRu {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -576921,6 +578248,10 @@ extension on _StringsRu {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -576946,6 +578277,9 @@ extension on _StringsRu {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -576974,9 +578308,15 @@ extension on _StringsRu {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -594800,6 +596140,34 @@ extension on _StringsTh {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -595511,6 +596879,10 @@ extension on _StringsTh {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -595536,6 +596908,9 @@ extension on _StringsTh {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -595564,9 +596939,15 @@ extension on _StringsTh {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -613408,6 +614789,34 @@ extension on _StringsTr {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -614119,6 +615528,10 @@ extension on _StringsTr {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -614144,6 +615557,9 @@ extension on _StringsTr {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -614172,9 +615588,15 @@ extension on _StringsTr {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -632011,6 +633433,34 @@ extension on _StringsVi {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -632722,6 +634172,10 @@ extension on _StringsVi {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -632747,6 +634201,9 @@ extension on _StringsVi {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -632775,9 +634232,15 @@ extension on _StringsVi {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
@@ -650469,6 +651932,34 @@ extension on _StringsZhCn {
         return '正在查找 Anki…';
       case 'srs_anki_migrate_scope':
         return '会迁移：牌组、笔记、笔记类型与模板、卡片排程、复习记录、牌组选项和媒体。不会迁移：插件、筛选牌组（卡片回到原牌组）以及 Anki 自身的偏好设置。';
+      case 'srs_anki_migrate_setup_algorithm':
+        return '迁移过来的牌组使用';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return '沿用 Anki 里的 FSRS，迁移 FSRS 参数时带上训练好的参数。没有参数的牌组使用 FSRS-7，按你的复习记录自动优化。';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV 是 Fushi 的默认算法：直接用你的全部复习记录预测记忆，不需要训练参数。FSRS 参数照样保留，之后可以在牌组设置里切回 FSRS。';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return '导入后把旧 Lapis 迁到 Fushi 卡片';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi 卡片是 Lapis 模板的新版：字段按含义对应，复习记录随卡片一起迁移；新模板里没有位置的字段内容仍留在笔记上。会处理本机全部旧 Lapis 笔记（含这次导入的）。不勾选的话，以后也可以在「笔记类型」页迁移。';
+      case 'srs_anki_migrate_setup_notice_background':
+        return '迁移在后台进行，可以离开本页；进度和完整报告在牌组列表顶部的任务条里。';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return '如需撤回，可以在「备份」里选一份迁移前的备份「恢复到此时间点」。';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return '迁移是合并：Fushi 里已有的卡片会保留，Anki 里的数据不会被改动；重复迁移不会产生重复。';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return '之前导入过、后来在 Fushi 里删掉的笔记会恢复，卡片回到原来的牌组。';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return '排程算法';
+      case 'srs_anki_migrate_setup_section_notices':
+        return '开始前请知悉';
+      case 'srs_anki_migrate_setup_section_progress':
+        return '学习进度';
+      case 'srs_anki_migrate_setup_section_templates':
+        return '卡片模板';
+      case 'srs_anki_migrate_setup_title':
+        return '迁移设置';
       case 'srs_anki_migrate_start':
         return '开始迁移';
       case 'srs_anki_migrate_unreadable':
@@ -651166,6 +652657,10 @@ extension on _StringsZhCn {
         return ({required Object preset}) => '预设「${preset}」的参数无效，未导入';
       case 'srs_import_report_keep_fsrs':
         return '继续用 FSRS';
+      case 'srs_import_report_lapis_failed':
+        return '旧 Lapis 迁到 Fushi 卡片失败。导入本身已完成，可以到「笔记类型」页重试。';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => '已迁到 Fushi 卡片：${n} 条笔记';
       case 'srs_import_report_media':
         return ({required Object n}) => '存入媒体文件：${n} 个';
       case 'srs_import_report_media_missing':
@@ -651186,6 +652681,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '来源里删掉的 ${n} 个字段 / 模板在本机保留';
       case 'srs_import_report_reset_new':
         return ({required Object n}) => '作为新卡导入（不含学习进度）：${n} 张';
+      case 'srs_import_report_restored':
+        return ({required Object n}) => '恢复之前删除的笔记：${n} 条';
       case 'srs_import_report_reviews':
         return ({required Object n}) => '导入复习记录：${n} 条';
       case 'srs_import_report_reviews_skipped':
@@ -651213,9 +652710,15 @@ extension on _StringsZhCn {
         return ({required Object name}) => '已取消导入 ${name}';
       case 'srs_import_task_dismiss':
         return '关闭';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            '已导入 ${name}：新增 ${n} 条笔记';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            '已导入 ${name}：新增 ${added}，恢复 ${restored}，更新 ${updated}，未改动 ${skipped} 条笔记';
       case 'srs_import_task_failed':
         return ({required Object name}) => '导入 ${name} 失败，点按查看原因。';
       case 'srs_import_task_queued':
@@ -668872,6 +670375,34 @@ extension on _StringsZhHk {
         return 'Looking for Anki…';
       case 'srs_anki_migrate_scope':
         return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_setup_algorithm':
+        return 'Scheduler for migrated decks';
+      case 'srs_anki_migrate_setup_algorithm_fsrs_desc':
+        return 'Keep FSRS as in Anki, with your trained parameters when you migrate them. Decks without parameters use FSRS-7, optimized from your reviews.';
+      case 'srs_anki_migrate_setup_algorithm_rwkv_desc':
+        return 'RWKV is Fushi\'s default. It predicts memory from your whole review history and needs no trained parameters. Your FSRS parameters are kept, and you can switch any deck back to FSRS in its settings.';
+      case 'srs_anki_migrate_setup_convert_lapis':
+        return 'Convert old Lapis notes to Fushi card';
+      case 'srs_anki_migrate_setup_convert_lapis_desc':
+        return 'Fushi card is the successor of the Lapis template. Fields are mapped by meaning and review history moves with the cards; field content with no place in the new template stays on the note. Applies to every Lapis note on this device, including the ones imported now. You can also do this later from Note types.';
+      case 'srs_anki_migrate_setup_notice_background':
+        return 'Migration runs in the background, so you can leave this page. Progress and the full report appear in the task bar at the top of the deck list.';
+      case 'srs_anki_migrate_setup_notice_backup':
+        return 'To undo a migration, open Backups and use Restore to this point on a backup made before it.';
+      case 'srs_anki_migrate_setup_notice_merge':
+        return 'Migration merges into Fushi: existing cards are kept and nothing in Anki is changed. Migrating again does not create duplicates.';
+      case 'srs_anki_migrate_setup_notice_restore':
+        return 'Notes you imported before and later deleted in Fushi are restored, and their cards return to their original decks.';
+      case 'srs_anki_migrate_setup_section_algorithm':
+        return 'Scheduler';
+      case 'srs_anki_migrate_setup_section_notices':
+        return 'Before you start';
+      case 'srs_anki_migrate_setup_section_progress':
+        return 'Study progress';
+      case 'srs_anki_migrate_setup_section_templates':
+        return 'Card templates';
+      case 'srs_anki_migrate_setup_title':
+        return 'Migration settings';
       case 'srs_anki_migrate_start':
         return 'Migrate';
       case 'srs_anki_migrate_unreadable':
@@ -669582,6 +671113,10 @@ extension on _StringsZhHk {
             'Preset "${preset}": its parameters were invalid and were not imported';
       case 'srs_import_report_keep_fsrs':
         return 'Keep FSRS';
+      case 'srs_import_report_lapis_failed':
+        return 'Converting old Lapis notes to Fushi card failed. The import itself is complete; you can retry from Note types.';
+      case 'srs_import_report_lapis_migrated':
+        return ({required Object n}) => 'Converted to Fushi card: ${n} notes';
       case 'srs_import_report_media':
         return ({required Object n}) => 'Media files stored: ${n}';
       case 'srs_import_report_media_missing':
@@ -669607,6 +671142,9 @@ extension on _StringsZhHk {
       case 'srs_import_report_reset_new':
         return ({required Object n}) =>
             'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_restored':
+        return ({required Object n}) =>
+            'Restored previously deleted notes: ${n}';
       case 'srs_import_report_reviews':
         return ({required Object n}) => 'Review history imported: ${n} entries';
       case 'srs_import_report_reviews_skipped':
@@ -669635,9 +671173,15 @@ extension on _StringsZhHk {
         return ({required Object name}) => 'Cancelled import of ${name}';
       case 'srs_import_task_dismiss':
         return 'Dismiss';
-      case 'srs_import_task_done':
-        return ({required Object name, required Object n}) =>
-            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_done_summary':
+        return ({
+          required Object name,
+          required Object added,
+          required Object restored,
+          required Object updated,
+          required Object skipped,
+        }) =>
+            'Imported ${name}: ${added} new, ${restored} restored, ${updated} updated, ${skipped} unchanged';
       case 'srs_import_task_failed':
         return ({required Object name}) =>
             'Couldn\'t import ${name}. Tap for details.';
