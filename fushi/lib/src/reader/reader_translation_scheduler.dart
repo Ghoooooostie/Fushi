@@ -76,7 +76,22 @@ class ReaderTranslationScheduler {
   }
 
   final ReaderTranslationEval _evaluate;
-  final TranslationClient _client;
+
+  /// 出站翻译客户端。**故意做成可变**：阅读器的每次「文档就绪」
+  /// （开书、翻章、切卷、重分页、宽变、设置热更）都会走阅读器页的
+  /// `_ensureTranslation` 重建一个新 `TranslationClient` 并 **关闭**旧的
+  /// （`_translationClient?.close()`）。而这个调度器是**跨章复用**的
+  /// （`_translation ?? ReaderTranslationScheduler(...)`），若仍持有那个已被关闭的
+  /// 旧客户端，下一次 `translate()` 必失败——表现为「第一卷能译，翻到第二卷 /
+  /// 下一章之后整屏空白，重试也救不回来」。
+  /// 复用时由 [attachClient] 把客户端同步成当前这一份（新建时两者本就一致），
+  /// 保证翻译永远打到「还活着」的客户端上。
+  TranslationClient _client;
+
+  /// 复用已有调度器时，把它的出站客户端同步成当前这一份。见 [_client] 的注释。
+  void attachClient(TranslationClient client) {
+    _client = client;
+  }
 
   final Duration debounce;
   final int aheadPx;

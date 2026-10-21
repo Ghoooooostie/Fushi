@@ -451,6 +451,11 @@ extension _ReaderNavigation on _ReaderFushiPageState {
           client: client,
         );
     _translation = scheduler;
+    // 复用已有调度器时（翻章 / 切卷 / 重分页后「文档就绪」再次走这里），把它的出站
+    // 客户端同步成当前这一份——上面刚刚关掉了旧的、新建了 client。否则调度器仍持有
+    // 那个已关闭的客户端，下一次 translate() 必失败，表现为「第一卷能译，翻到第二卷
+    // / 下一章后整屏空白」（见 [attachClient] 的注释）。
+    scheduler.attachClient(client);
     scheduler.applySettings(
       enabled: settings.translationEnabled,
       engineId: TranslationEngineId.fromStorage(settings.translationEngineId),
