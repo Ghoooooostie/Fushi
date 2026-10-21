@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152014 (8942 per locale)
+/// Strings: 152048 (8944 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12191,6 +12191,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_grouping_series => 'By work';
   String get video_source_grouping_series_hint =>
       'Recognize works and episodes from filenames, then match metadata.';
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   String get video_source_scrape_action => 'Scrape this source';
   String get video_source_scrape_ai_identify => 'Identify with AI';
   String video_source_scrape_ai_suggested({required Object percent}) =>
@@ -33406,6 +33410,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_grouping_series_hint =>
       'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
+  @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   @override
   String get video_source_scrape_action => 'جلب بيانات هذا المصدر';
   @override
@@ -55479,6 +55489,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_grouping_series_hint =>
       'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
+  @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   @override
   String get video_source_scrape_action => 'Diese Quelle abrufen';
   @override
@@ -77626,6 +77642,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_grouping_series_hint =>
       'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
+  @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   @override
   String get video_source_scrape_action => 'Obtener metadatos de esta fuente';
   @override
@@ -99851,6 +99873,12 @@ class _StringsFr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Récupérer cette source';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -121767,6 +121795,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_grouping_series_hint =>
       'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
+  @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   @override
   String get video_source_scrape_action => 'Scrape sumber ini';
   @override
@@ -143811,6 +143845,12 @@ class _StringsIt extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Scrape questa fonte';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -164905,6 +164945,12 @@ class _StringsJa extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'このソースをスクレイプ';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -185966,6 +186012,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_grouping_series_hint =>
       '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
+  @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   @override
   String get video_source_scrape_action => '이 소스 스크래핑';
   @override
@@ -207913,6 +207965,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_grouping_series_hint =>
       'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
+  @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   @override
   String get video_source_scrape_action => 'Deze bron scrapen';
   @override
@@ -229978,6 +230036,12 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Buscar metadados desta fonte';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -251992,6 +252056,12 @@ class _StringsRu extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action =>
       'Получить метаданные для этого источника';
   @override
@@ -273708,6 +273778,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_grouping_series_hint =>
       'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
+  @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
   @override
   String get video_source_scrape_action => 'ดึงข้อมูลแหล่งนี้';
   @override
@@ -295598,6 +295674,12 @@ class _StringsTr extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Bu kaynağı tara';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -317428,6 +317510,12 @@ class _StringsVi extends _StringsEn {
   String get video_source_grouping_series_hint =>
       'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => 'Quét nguồn này';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -337484,6 +337572,11 @@ class _StringsZhCn extends _StringsEn {
   String get video_source_grouping_series => '按作品';
   @override
   String get video_source_grouping_series_hint => '按文件名识别作品与分集，再匹配作品资料。';
+  @override
+  String get video_source_restore_grouping_action => '恢复自动分组';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      '你解散过的系列会按文件名重新归组，和首次扫描的分组方式一样。你自己建的合集不受影响。';
   @override
   String get video_source_scrape_action => '刮削此来源';
   @override
@@ -357894,6 +357987,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_grouping_series_hint => '從檔案名稱識別作品及集數，再配對中繼資料。';
   @override
+  String get video_source_restore_grouping_action =>
+      'Restore automatic grouping';
+  @override
+  String get video_source_restore_grouping_confirm =>
+      'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
+  @override
   String get video_source_scrape_action => '刮削此來源';
   @override
   String get video_source_scrape_ai_identify => 'Identify with AI';
@@ -376593,6 +376692,10 @@ extension on _StringsEn {
         return 'By work';
       case 'video_source_grouping_series_hint':
         return 'Recognize works and episodes from filenames, then match metadata.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape this source';
       case 'video_source_scrape_ai_identify':
@@ -395174,6 +395277,10 @@ extension on _StringsAr {
         return 'حسب العمل';
       case 'video_source_grouping_series_hint':
         return 'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'جلب بيانات هذا المصدر';
       case 'video_source_scrape_ai_identify':
@@ -413830,6 +413937,10 @@ extension on _StringsDe {
         return 'Nach Werk';
       case 'video_source_grouping_series_hint':
         return 'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Diese Quelle abrufen';
       case 'video_source_scrape_ai_identify':
@@ -432471,6 +432582,10 @@ extension on _StringsEs {
         return 'Por obra';
       case 'video_source_grouping_series_hint':
         return 'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Obtener metadatos de esta fuente';
       case 'video_source_scrape_ai_identify':
@@ -451129,6 +451244,10 @@ extension on _StringsFr {
         return 'Par œuvre';
       case 'video_source_grouping_series_hint':
         return 'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Récupérer cette source';
       case 'video_source_scrape_ai_identify':
@@ -469732,6 +469851,10 @@ extension on _StringsId {
         return 'Berdasarkan karya';
       case 'video_source_grouping_series_hint':
         return 'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape sumber ini';
       case 'video_source_scrape_ai_identify':
@@ -488368,6 +488491,10 @@ extension on _StringsIt {
         return 'Per opera';
       case 'video_source_grouping_series_hint':
         return 'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Scrape questa fonte';
       case 'video_source_scrape_ai_identify':
@@ -506886,6 +507013,10 @@ extension on _StringsJa {
         return '作品別';
       case 'video_source_grouping_series_hint':
         return 'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'このソースをスクレイプ';
       case 'video_source_scrape_ai_identify':
@@ -525399,6 +525530,10 @@ extension on _StringsKo {
         return '작품별';
       case 'video_source_grouping_series_hint':
         return '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return '이 소스 스크래핑';
       case 'video_source_scrape_ai_identify':
@@ -544023,6 +544158,10 @@ extension on _StringsNl {
         return 'Op werk';
       case 'video_source_grouping_series_hint':
         return 'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Deze bron scrapen';
       case 'video_source_scrape_ai_identify':
@@ -562649,6 +562788,10 @@ extension on _StringsPtBr {
         return 'Por obra';
       case 'video_source_grouping_series_hint':
         return 'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Buscar metadados desta fonte';
       case 'video_source_scrape_ai_identify':
@@ -581280,6 +581423,10 @@ extension on _StringsRu {
         return 'По произведениям';
       case 'video_source_grouping_series_hint':
         return 'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Получить метаданные для этого источника';
       case 'video_source_scrape_ai_identify':
@@ -599867,6 +600014,10 @@ extension on _StringsTh {
         return 'ตามผลงาน';
       case 'video_source_grouping_series_hint':
         return 'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'ดึงข้อมูลแหล่งนี้';
       case 'video_source_scrape_ai_identify':
@@ -618483,6 +618634,10 @@ extension on _StringsTr {
         return 'Esere göre';
       case 'video_source_grouping_series_hint':
         return 'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Bu kaynağı tara';
       case 'video_source_scrape_ai_identify':
@@ -637085,6 +637240,10 @@ extension on _StringsVi {
         return 'Theo tác phẩm';
       case 'video_source_grouping_series_hint':
         return 'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return 'Quét nguồn này';
       case 'video_source_scrape_ai_identify':
@@ -655479,6 +655638,10 @@ extension on _StringsZhCn {
         return '按作品';
       case 'video_source_grouping_series_hint':
         return '按文件名识别作品与分集，再匹配作品资料。';
+      case 'video_source_restore_grouping_action':
+        return '恢复自动分组';
+      case 'video_source_restore_grouping_confirm':
+        return '你解散过的系列会按文件名重新归组，和首次扫描的分组方式一样。你自己建的合集不受影响。';
       case 'video_source_scrape_action':
         return '刮削此来源';
       case 'video_source_scrape_ai_identify':
@@ -673913,6 +674076,10 @@ extension on _StringsZhHk {
         return '按作品';
       case 'video_source_grouping_series_hint':
         return '從檔案名稱識別作品及集數，再配對中繼資料。';
+      case 'video_source_restore_grouping_action':
+        return 'Restore automatic grouping';
+      case 'video_source_restore_grouping_confirm':
+        return 'Series you dissolved will be grouped again by file name, the same way a fresh scan groups them. Collections you made yourself are not changed.';
       case 'video_source_scrape_action':
         return '刮削此來源';
       case 'video_source_scrape_ai_identify':
