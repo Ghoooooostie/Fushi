@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 145911 (8583 per locale)
+/// Strings: 146013 (8589 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5255,6 +5255,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_nav_more => 'More';
   String get home_nav_rail_collapse => 'Collapse navigation';
   String get home_nav_rail_expand => 'Expand navigation';
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  String get home_onboarding_card_start => 'Continue setup';
   String get home_panel_mode_auto => 'Auto';
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_mode_shown => 'Show';
@@ -7474,6 +7478,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_sample_sentence_hint =>
       'Tap to open it in the lookup page, then tap any word.';
   String get onboarding_sample_sentence_label => 'Practice sentence';
+  String get onboarding_skip_confirm_action => 'Skip';
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   String get onboarding_srs_action => 'Open decks';
   String get onboarding_srs_action_desc =>
       'Add your first card from the deck list';
@@ -20942,6 +20950,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'تلقائي';
   @override
   String get home_panel_mode_hidden => 'إخفاء';
@@ -24677,6 +24692,13 @@ class _StringsAr extends _StringsEn {
       'انقر لفتحها في صفحة البحث، ثم انقر على أي كلمة.';
   @override
   String get onboarding_sample_sentence_label => 'جملة التدريب';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -41895,6 +41917,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
   String get home_panel_mode_hidden => 'Ausblenden';
@@ -45715,6 +45744,13 @@ class _StringsDe extends _StringsEn {
       'Tippen, um ihn auf der Nachschlageseite zu öffnen, dann auf ein beliebiges Wort tippen.';
   @override
   String get onboarding_sample_sentence_label => 'Übungssatz';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -63086,6 +63122,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Automático';
   @override
   String get home_panel_mode_hidden => 'Ocultar';
@@ -66915,6 +66958,13 @@ class _StringsEs extends _StringsEn {
       'Toque para abrirla en la página de consulta y luego toque cualquier palabra.';
   @override
   String get onboarding_sample_sentence_label => 'Frase de práctica';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -84351,6 +84401,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Automatique';
   @override
   String get home_panel_mode_hidden => 'Masquer';
@@ -88199,6 +88256,13 @@ class _StringsFr extends _StringsEn {
       'Touchez pour l\'ouvrir dans la page de recherche, puis touchez n\'importe quel mot.';
   @override
   String get onboarding_sample_sentence_label => 'Phrase d\'entraînement';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -105522,6 +105586,13 @@ class _StringsId extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Otomatis';
   @override
   String get home_panel_mode_hidden => 'Sembunyikan';
@@ -109296,6 +109367,13 @@ class _StringsId extends _StringsEn {
       'Ketuk untuk membukanya di halaman pencarian, lalu ketuk kata mana pun.';
   @override
   String get onboarding_sample_sentence_label => 'Kalimat latihan';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -126557,6 +126635,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Automatico';
   @override
   String get home_panel_mode_hidden => 'Nascondi';
@@ -130369,6 +130454,13 @@ class _StringsIt extends _StringsEn {
       'Tocca per aprirla nella pagina di ricerca, poi tocca una parola qualsiasi.';
   @override
   String get onboarding_sample_sentence_label => 'Frase di esercizio';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -147279,6 +147371,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => '自動';
   @override
   String get home_panel_mode_hidden => '非表示';
@@ -150875,6 +150974,13 @@ class _StringsJa extends _StringsEn {
       'タップすると辞書ページで開きます。その後、好きな単語をタップしてください。';
   @override
   String get onboarding_sample_sentence_label => '練習用の文';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -167383,6 +167489,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => '자동';
   @override
   String get home_panel_mode_hidden => '숨기기';
@@ -170997,6 +171110,13 @@ class _StringsKo extends _StringsEn {
       '탭하면 단어 찾기 페이지에서 열립니다. 그다음 아무 단어나 탭하세요.';
   @override
   String get onboarding_sample_sentence_label => '연습 문장';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -187922,6 +188042,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Automatisch';
   @override
   String get home_panel_mode_hidden => 'Verbergen';
@@ -191721,6 +191848,13 @@ class _StringsNl extends _StringsEn {
       'Tik om hem in de opzoekpagina te openen en tik daarna op een willekeurig woord.';
   @override
   String get onboarding_sample_sentence_label => 'Oefenzin';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -209040,6 +209174,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Automático';
   @override
   String get home_panel_mode_hidden => 'Ocultar';
@@ -212847,6 +212988,13 @@ class _StringsPtBr extends _StringsEn {
       'Toque para abri-la na página de consulta e depois toque em qualquer palavra.';
   @override
   String get onboarding_sample_sentence_label => 'Frase de prática';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -230150,6 +230298,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Авто';
   @override
   String get home_panel_mode_hidden => 'Скрыть';
@@ -233954,6 +234109,13 @@ class _StringsRu extends _StringsEn {
       'Нажмите, чтобы открыть его на странице поиска, затем нажмите на любое слово.';
   @override
   String get onboarding_sample_sentence_label => 'Тренировочное предложение';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -251114,6 +251276,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'อัตโนมัติ';
   @override
   String get home_panel_mode_hidden => 'ซ่อน';
@@ -254851,6 +255020,13 @@ class _StringsTh extends _StringsEn {
       'แตะเพื่อเปิดในหน้าค้นคำ แล้วแตะคำใดก็ได้';
   @override
   String get onboarding_sample_sentence_label => 'ประโยคฝึก';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -271987,6 +272163,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Otomatik';
   @override
   String get home_panel_mode_hidden => 'Gizle';
@@ -275761,6 +275944,13 @@ class _StringsTr extends _StringsEn {
       'Arama sayfasında açmak için dokunun, sonra herhangi bir kelimeye dokunun.';
   @override
   String get onboarding_sample_sentence_label => 'Alıştırma cümlesi';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -292936,6 +293126,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => 'Tự động';
   @override
   String get home_panel_mode_hidden => 'Ẩn';
@@ -296689,6 +296886,13 @@ class _StringsVi extends _StringsEn {
       'Chạm để mở trong trang tra từ, rồi chạm vào một từ bất kỳ.';
   @override
   String get onboarding_sample_sentence_label => 'Câu luyện tập';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -313086,6 +313290,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_nav_rail_expand => '展开导航栏';
   @override
+  String get home_onboarding_card_desc => '几分钟配好词典、导入第一本书、做出第一张卡片。';
+  @override
+  String get home_onboarding_card_dismiss => '不再显示';
+  @override
+  String get home_onboarding_card_start => '继续新手引导';
+  @override
   String get home_panel_mode_auto => '自动';
   @override
   String get home_panel_mode_hidden => '隐藏';
@@ -316520,6 +316730,13 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_sample_sentence_hint => '点一下在查词页打开，再点其中任意一个词。';
   @override
   String get onboarding_sample_sentence_label => '练习句子';
+  @override
+  String get onboarding_skip_confirm_action => '跳过';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      '词典、第一本书和制卡都在引导里配置。跳过后可以随时从首页的引导卡片或「设置 › 系统」重新打开。';
+  @override
+  String get onboarding_skip_confirm_title => '确定跳过新手引导？';
   @override
   String get onboarding_srs_action => '打开牌组';
   @override
@@ -332353,6 +332570,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_nav_rail_expand => 'Expand navigation';
   @override
+  String get home_onboarding_card_desc =>
+      'Set up dictionaries, import your first book and make your first card in a few minutes.';
+  @override
+  String get home_onboarding_card_dismiss => 'Don\'t show again';
+  @override
+  String get home_onboarding_card_start => 'Continue setup';
+  @override
   String get home_panel_mode_auto => '自動';
   @override
   String get home_panel_mode_hidden => '隱藏';
@@ -335832,6 +336056,13 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_sample_sentence_hint => '點一下就會在查詞頁打開，再點其中任何一個詞。';
   @override
   String get onboarding_sample_sentence_label => '練習句子';
+  @override
+  String get onboarding_skip_confirm_action => 'Skip';
+  @override
+  String get onboarding_skip_confirm_desc =>
+      'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+  @override
+  String get onboarding_skip_confirm_title => 'Skip the getting started guide?';
   @override
   String get onboarding_srs_action => 'Open decks';
   @override
@@ -351088,6 +351319,12 @@ extension on _StringsEn {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Auto';
       case 'home_panel_mode_hidden':
@@ -354275,6 +354512,12 @@ extension on _StringsEn {
         return 'Tap to open it in the lookup page, then tap any word.';
       case 'onboarding_sample_sentence_label':
         return 'Practice sentence';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -368916,6 +369159,12 @@ extension on _StringsAr {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'تلقائي';
       case 'home_panel_mode_hidden':
@@ -372100,6 +372349,12 @@ extension on _StringsAr {
         return 'انقر لفتحها في صفحة البحث، ثم انقر على أي كلمة.';
       case 'onboarding_sample_sentence_label':
         return 'جملة التدريب';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -386773,6 +387028,12 @@ extension on _StringsDe {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -389979,6 +390240,12 @@ extension on _StringsDe {
         return 'Tippen, um ihn auf der Nachschlageseite zu öffnen, dann auf ein beliebiges Wort tippen.';
       case 'onboarding_sample_sentence_label':
         return 'Übungssatz';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -404662,6 +404929,12 @@ extension on _StringsEs {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -407862,6 +408135,12 @@ extension on _StringsEs {
         return 'Toque para abrirla en la página de consulta y luego toque cualquier palabra.';
       case 'onboarding_sample_sentence_label':
         return 'Frase de práctica';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -422557,6 +422836,12 @@ extension on _StringsFr {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Automatique';
       case 'home_panel_mode_hidden':
@@ -425759,6 +426044,12 @@ extension on _StringsFr {
         return 'Touchez pour l\'ouvrir dans la page de recherche, puis touchez n\'importe quel mot.';
       case 'onboarding_sample_sentence_label':
         return 'Phrase d\'entraînement';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -440430,6 +440721,12 @@ extension on _StringsId {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Otomatis';
       case 'home_panel_mode_hidden':
@@ -443618,6 +443915,12 @@ extension on _StringsId {
         return 'Ketuk untuk membukanya di halaman pencarian, lalu ketuk kata mana pun.';
       case 'onboarding_sample_sentence_label':
         return 'Kalimat latihan';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -458284,6 +458587,12 @@ extension on _StringsIt {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Automatico';
       case 'home_panel_mode_hidden':
@@ -461481,6 +461790,12 @@ extension on _StringsIt {
         return 'Tocca per aprirla nella pagina di ricerca, poi tocca una parola qualsiasi.';
       case 'onboarding_sample_sentence_label':
         return 'Frase di esercizio';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -476117,6 +476432,12 @@ extension on _StringsJa {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -479284,6 +479605,12 @@ extension on _StringsJa {
         return 'タップすると辞書ページで開きます。その後、好きな単語をタップしてください。';
       case 'onboarding_sample_sentence_label':
         return '練習用の文';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -493864,6 +494191,12 @@ extension on _StringsKo {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return '자동';
       case 'home_panel_mode_hidden':
@@ -497031,6 +497364,12 @@ extension on _StringsKo {
         return '탭하면 단어 찾기 페이지에서 열립니다. 그다음 아무 단어나 탭하세요.';
       case 'onboarding_sample_sentence_label':
         return '연습 문장';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -511664,6 +512003,12 @@ extension on _StringsNl {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Automatisch';
       case 'home_panel_mode_hidden':
@@ -514866,6 +515211,12 @@ extension on _StringsNl {
         return 'Tik om hem in de opzoekpagina te openen en tik daarna op een willekeurig woord.';
       case 'onboarding_sample_sentence_label':
         return 'Oefenzin';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -529537,6 +529888,12 @@ extension on _StringsPtBr {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Automático';
       case 'home_panel_mode_hidden':
@@ -532735,6 +533092,12 @@ extension on _StringsPtBr {
         return 'Toque para abri-la na página de consulta e depois toque em qualquer palavra.';
       case 'onboarding_sample_sentence_label':
         return 'Frase de prática';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -547410,6 +547773,12 @@ extension on _StringsRu {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Авто';
       case 'home_panel_mode_hidden':
@@ -550608,6 +550977,12 @@ extension on _StringsRu {
         return 'Нажмите, чтобы открыть его на странице поиска, затем нажмите на любое слово.';
       case 'onboarding_sample_sentence_label':
         return 'Тренировочное предложение';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -565257,6 +565632,12 @@ extension on _StringsTh {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'อัตโนมัติ';
       case 'home_panel_mode_hidden':
@@ -568443,6 +568824,12 @@ extension on _StringsTh {
         return 'แตะเพื่อเปิดในหน้าค้นคำ แล้วแตะคำใดก็ได้';
       case 'onboarding_sample_sentence_label':
         return 'ประโยคฝึก';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -583102,6 +583489,12 @@ extension on _StringsTr {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Otomatik';
       case 'home_panel_mode_hidden':
@@ -586294,6 +586687,12 @@ extension on _StringsTr {
         return 'Arama sayfasında açmak için dokunun, sonra herhangi bir kelimeye dokunun.';
       case 'onboarding_sample_sentence_label':
         return 'Alıştırma cümlesi';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -600952,6 +601351,12 @@ extension on _StringsVi {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return 'Tự động';
       case 'home_panel_mode_hidden':
@@ -604138,6 +604543,12 @@ extension on _StringsVi {
         return 'Chạm để mở trong trang tra từ, rồi chạm vào một từ bất kỳ.';
       case 'onboarding_sample_sentence_label':
         return 'Câu luyện tập';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
@@ -618698,6 +619109,12 @@ extension on _StringsZhCn {
         return '收起导航栏';
       case 'home_nav_rail_expand':
         return '展开导航栏';
+      case 'home_onboarding_card_desc':
+        return '几分钟配好词典、导入第一本书、做出第一张卡片。';
+      case 'home_onboarding_card_dismiss':
+        return '不再显示';
+      case 'home_onboarding_card_start':
+        return '继续新手引导';
       case 'home_panel_mode_auto':
         return '自动';
       case 'home_panel_mode_hidden':
@@ -621851,6 +622268,12 @@ extension on _StringsZhCn {
         return '点一下在查词页打开，再点其中任意一个词。';
       case 'onboarding_sample_sentence_label':
         return '练习句子';
+      case 'onboarding_skip_confirm_action':
+        return '跳过';
+      case 'onboarding_skip_confirm_desc':
+        return '词典、第一本书和制卡都在引导里配置。跳过后可以随时从首页的引导卡片或「设置 › 系统」重新打开。';
+      case 'onboarding_skip_confirm_title':
+        return '确定跳过新手引导？';
       case 'onboarding_srs_action':
         return '打开牌组';
       case 'onboarding_srs_action_desc':
@@ -636343,6 +636766,12 @@ extension on _StringsZhHk {
         return 'Collapse navigation';
       case 'home_nav_rail_expand':
         return 'Expand navigation';
+      case 'home_onboarding_card_desc':
+        return 'Set up dictionaries, import your first book and make your first card in a few minutes.';
+      case 'home_onboarding_card_dismiss':
+        return 'Don\'t show again';
+      case 'home_onboarding_card_start':
+        return 'Continue setup';
       case 'home_panel_mode_auto':
         return '自動';
       case 'home_panel_mode_hidden':
@@ -639502,6 +639931,12 @@ extension on _StringsZhHk {
         return '點一下就會在查詞頁打開，再點其中任何一個詞。';
       case 'onboarding_sample_sentence_label':
         return '練習句子';
+      case 'onboarding_skip_confirm_action':
+        return 'Skip';
+      case 'onboarding_skip_confirm_desc':
+        return 'The guide sets up dictionaries, your first book and card mining. You can reopen it any time from the home page card or Settings › System.';
+      case 'onboarding_skip_confirm_title':
+        return 'Skip the getting started guide?';
       case 'onboarding_srs_action':
         return 'Open decks';
       case 'onboarding_srs_action_desc':
