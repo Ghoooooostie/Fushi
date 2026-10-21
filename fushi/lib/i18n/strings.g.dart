@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152439 (8967 per locale)
+/// Strings: 152456 (8968 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9664,9 +9664,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_auto_optimize => 'Optimize automatically';
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
   String srs_settings_inherited_from({required Object name}) =>
@@ -9725,11 +9735,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_rwkv_min_reviews => 'Minimum reviews per day';
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  String get srs_settings_rwkv_model_large => 'Large';
-  String get srs_settings_rwkv_model_small => 'Small';
   String srs_settings_rwkv_preparing({
     required Object done,
     required Object total,
@@ -29091,10 +29096,25 @@ class _StringsAr extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -29189,15 +29209,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -51163,10 +51174,25 @@ class _StringsDe extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -51261,15 +51287,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -73359,10 +73376,25 @@ class _StringsEs extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -73457,15 +73489,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -95643,10 +95666,25 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -95741,15 +95779,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -117691,10 +117720,25 @@ class _StringsId extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -117789,15 +117833,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -139781,10 +139816,25 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -139879,15 +139929,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -161165,10 +161206,25 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -161263,15 +161319,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -182275,10 +182322,25 @@ class _StringsKo extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -182373,15 +182435,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -204093,10 +204146,25 @@ class _StringsNl extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -204191,15 +204259,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -226213,10 +226272,25 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -226311,15 +226385,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -248312,10 +248377,25 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -248410,15 +248490,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -270162,10 +270233,25 @@ class _StringsTh extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -270260,15 +270346,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -292077,10 +292154,25 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -292175,15 +292267,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -313988,10 +314071,25 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -314086,15 +314184,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -334523,10 +334612,25 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_auto_optimize_hint => '定期按你自己的复习记录调整排程参数';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'RWKV 牌组优化的是底下 FSRS-7 的参数：答题按钮上显示的间隔、存下的到期日（RWKV 没准备好时按它排队）和导出到 Anki 的到期日都用它。app 空闲时会自动跑，不用手动点「立即优化」。';
+  @override
   String get srs_settings_autoplay_audio => '自动播放音频';
   @override
   String get srs_settings_autoplay_audio_hint =>
       '显示问题面或答案面时自动播放卡上的音频；答案面不重播从正面带过来的音频。';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      '让子牌组都继承这里（${n} 个）';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      '把本组下 ${n} 个「单独设置」的子牌组改成「继承上级」？之后它们的目标记忆率、排程算法、参数与自动优化都跟随本组；各自的步长与每日上限不变。';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '已让 ${n} 个子牌组继承本组设置';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      '下面有子牌组用的是「单独设置」（从 Anki 导入时常见），这里改的记忆率、算法与参数不会作用到它们。';
   @override
   String get srs_settings_conflict_replaced => '已被另一台设备的修改替换';
   @override
@@ -334608,15 +334712,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       '今天在这个牌组复习过的卡不到这个数时，即使回忆率高于目标保留率，也按回忆率从低到高补足。0 = 不启用。';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV 模型（本机）';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      '小模型（推荐）：每张卡约占 2.9 KB 内存，在真实复习记录上实测也略准一些。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
-  @override
-  String get srs_settings_rwkv_model_large => '大模型';
-  @override
-  String get srs_settings_rwkv_model_small => '小模型';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -354895,10 +354990,25 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
   @override
+  String get srs_settings_auto_optimize_rwkv_hint =>
+      'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
+  @override
   String get srs_settings_autoplay_audio => 'Autoplay audio';
   @override
   String get srs_settings_autoplay_audio_hint =>
       'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+  @override
+  String srs_settings_children_inherit({required Object n}) =>
+      'Make sub-decks follow this one (${n})';
+  @override
+  String srs_settings_children_inherit_confirm({required Object n}) =>
+      'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+  @override
+  String srs_settings_children_inherit_done({required Object n}) =>
+      '${n} sub-decks now follow this deck';
+  @override
+  String get srs_settings_children_inherit_hint =>
+      'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -354993,15 +355103,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_settings_rwkv_min_reviews_hint =>
       'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-  @override
-  String get srs_settings_rwkv_model => 'RWKV model (this device)';
-  @override
-  String get srs_settings_rwkv_model_hint =>
-      'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-  @override
-  String get srs_settings_rwkv_model_large => 'Large';
-  @override
-  String get srs_settings_rwkv_model_small => 'Small';
   @override
   String srs_settings_rwkv_preparing({
     required Object done,
@@ -373992,10 +374093,21 @@ extension on _StringsEn {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -374071,14 +374183,6 @@ extension on _StringsEn {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -392633,10 +392737,21 @@ extension on _StringsAr {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -392712,14 +392827,6 @@ extension on _StringsAr {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -411330,10 +411437,21 @@ extension on _StringsDe {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -411409,14 +411527,6 @@ extension on _StringsDe {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -430031,10 +430141,21 @@ extension on _StringsEs {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -430110,14 +430231,6 @@ extension on _StringsEs {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -448743,10 +448856,21 @@ extension on _StringsFr {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -448822,14 +448946,6 @@ extension on _StringsFr {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -467415,10 +467531,21 @@ extension on _StringsId {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -467494,14 +467621,6 @@ extension on _StringsId {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -486096,10 +486215,21 @@ extension on _StringsIt {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -486175,14 +486305,6 @@ extension on _StringsIt {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -504711,10 +504833,21 @@ extension on _StringsJa {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -504790,14 +504923,6 @@ extension on _StringsJa {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -523275,10 +523400,21 @@ extension on _StringsKo {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -523354,14 +523490,6 @@ extension on _StringsKo {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -541929,10 +542057,21 @@ extension on _StringsNl {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -542008,14 +542147,6 @@ extension on _StringsNl {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -560614,10 +560745,21 @@ extension on _StringsPtBr {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -560693,14 +560835,6 @@ extension on _StringsPtBr {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -579303,10 +579437,21 @@ extension on _StringsRu {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -579382,14 +579527,6 @@ extension on _StringsRu {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -597952,10 +598089,21 @@ extension on _StringsTh {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -598031,14 +598179,6 @@ extension on _StringsTh {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -616619,10 +616759,21 @@ extension on _StringsTr {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -616698,14 +616849,6 @@ extension on _StringsTr {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -635281,10 +635424,21 @@ extension on _StringsVi {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -635360,14 +635514,6 @@ extension on _StringsVi {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
@@ -653772,10 +653918,21 @@ extension on _StringsZhCn {
         return '自动优化';
       case 'srs_settings_auto_optimize_hint':
         return '定期按你自己的复习记录调整排程参数';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'RWKV 牌组优化的是底下 FSRS-7 的参数：答题按钮上显示的间隔、存下的到期日（RWKV 没准备好时按它排队）和导出到 Anki 的到期日都用它。app 空闲时会自动跑，不用手动点「立即优化」。';
       case 'srs_settings_autoplay_audio':
         return '自动播放音频';
       case 'srs_settings_autoplay_audio_hint':
         return '显示问题面或答案面时自动播放卡上的音频；答案面不重播从正面带过来的音频。';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => '让子牌组都继承这里（${n} 个）';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            '把本组下 ${n} 个「单独设置」的子牌组改成「继承上级」？之后它们的目标记忆率、排程算法、参数与自动优化都跟随本组；各自的步长与每日上限不变。';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '已让 ${n} 个子牌组继承本组设置';
+      case 'srs_settings_children_inherit_hint':
+        return '下面有子牌组用的是「单独设置」（从 Anki 导入时常见），这里改的记忆率、算法与参数不会作用到它们。';
       case 'srs_settings_conflict_replaced':
         return '已被另一台设备的修改替换';
       case 'srs_settings_inherited_from':
@@ -653850,14 +654007,6 @@ extension on _StringsZhCn {
         return '每天最少复习数';
       case 'srs_settings_rwkv_min_reviews_hint':
         return '今天在这个牌组复习过的卡不到这个数时，即使回忆率高于目标保留率，也按回忆率从低到高补足。0 = 不启用。';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV 模型（本机）';
-      case 'srs_settings_rwkv_model_hint':
-        return '小模型（推荐）：每张卡约占 2.9 KB 内存，在真实复习记录上实测也略准一些。大模型：每张卡约 25.7 KB，准备也更慢。对本机所有 RWKV 牌组生效。';
-      case 'srs_settings_rwkv_model_large':
-        return '大模型';
-      case 'srs_settings_rwkv_model_small':
-        return '小模型';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             '正在回放复习历史… ${done}/${total}';
@@ -672258,10 +672407,21 @@ extension on _StringsZhHk {
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_auto_optimize_rwkv_hint':
+        return 'For RWKV decks this fits the FSRS-7 parameters running underneath. They set the intervals shown on the answer buttons, the stored due dates (used for queueing while RWKV isn\'t ready) and the due dates exported to Anki. Runs by itself while the app is idle; there\'s no need to press Optimize now.';
       case 'srs_settings_autoplay_audio':
         return 'Autoplay audio';
       case 'srs_settings_autoplay_audio_hint':
         return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
+      case 'srs_settings_children_inherit':
+        return ({required Object n}) => 'Make sub-decks follow this one (${n})';
+      case 'srs_settings_children_inherit_confirm':
+        return ({required Object n}) =>
+            'Switch the ${n} sub-decks under this deck that have their own settings to "Same as parent"? Their target retention, algorithm, parameters and automatic optimization will then follow this deck. Their own steps and daily limits stay as they are.';
+      case 'srs_settings_children_inherit_done':
+        return ({required Object n}) => '${n} sub-decks now follow this deck';
+      case 'srs_settings_children_inherit_hint':
+        return 'Some sub-decks below have their own scheduling settings (common after importing from Anki), so changes made here don\'t reach them.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -672337,14 +672497,6 @@ extension on _StringsZhHk {
         return 'Minimum reviews per day';
       case 'srs_settings_rwkv_min_reviews_hint':
         return 'If fewer cards than this have been reviewed in this deck today, top up with the cards RWKV is least sure you remember, even above the desired retention. 0 turns it off.';
-      case 'srs_settings_rwkv_model':
-        return 'RWKV model (this device)';
-      case 'srs_settings_rwkv_model_hint':
-        return 'Small (recommended): about 2.9 KB of memory per card, and slightly more accurate in tests on real review histories. Large: about 25.7 KB per card and slower to prepare. Applies to every RWKV deck on this device.';
-      case 'srs_settings_rwkv_model_large':
-        return 'Large';
-      case 'srs_settings_rwkv_model_small':
-        return 'Small';
       case 'srs_settings_rwkv_preparing':
         return ({required Object done, required Object total}) =>
             'Replaying review history… ${done}/${total}';
