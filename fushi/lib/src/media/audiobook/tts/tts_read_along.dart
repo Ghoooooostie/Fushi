@@ -30,6 +30,18 @@ import 'package:fushi/src/media/audiobook/tts/tts_sentence_audio_source.dart';
 import 'package:fushi/src/media/audiobook/tts/tts_services.dart';
 import 'package:fushi/src/utils/misc/error_log_service.dart';
 
+/// [TtsReadAlong.ensureSentenceAudio] 的结果：真实路径 + **真实时长**。
+///
+/// 时长必须与路径一起给：cue 上的时长在未合成时是按字数估的（[TtsReadAlong
+/// .estimateDurationMs]），真实值要等事件异步写回，而制卡的裁剪区间是在
+/// `ensure` 返回时就定下来的。
+class TtsSentenceAudio {
+  const TtsSentenceAudio({required this.path, required this.durationMs});
+
+  final String path;
+  final int durationMs;
+}
+
 /// 朗读从哪里开始。
 sealed class TtsStartPoint {
   const TtsStartPoint();
@@ -409,16 +421,22 @@ class TtsReadAlong extends ChangeNotifier {
   /// `input audio file does not exist` 早退，并连带整张卡中止（制卡把句子音频缺失
   /// 当成致命错误）——用户看到的是「导出卡片失败」而不是「这句还没合成」。
   ///
-  /// 这里走调度器按需合成（已就绪 / 命中缓存则立即返回），合成完返回真实路径；
-  /// 会话已释放、调度已因失败停下、越界、超时一律返回 null（调用方据此降级为无
-  /// 句子音频出卡，既不当成功也不把整张卡判死）。
-  Future<String?> ensureSentenceAudio(
+  /// 这里走调度器按需合成（已就绪 / 命中缓存则立即返回），合成完返回**真实路径与
+  /// 真实时长**；会话已释放、调度已因失败停下、越界、超时一律返回 null（调用方据此
+  /// 降级为无句子音频出卡，既不当成功也不把整张卡判死）。
+  ///
+  /// 时长必须一起带出来：未合成句在 cue 上的时长是按字数估的
+  /// （[estimateDurationMs]），真实时长要等 [TtsSegmentReady] 事件异步写回 cue，
+  /// 制卡的裁剪区间却是在这儿定的——只给路径会让卡片裁到估算长度（截断 / 多裁）。
+  Future<TtsSentenceAudio?> ensureSentenceAudio(
     int index, {
     Duration timeout = kSentenceAudioEnsureTimeout,
   }) async {
     if (_released || index < 0 || index >= plan.length) return null;
     final TtsCachedAudio? ready = _scheduler.readyAudio(index);
-    if (ready != null) return ready.path;
+    if (ready != null) {
+      return TtsSentenceAudio(path: ready.path, durationMs: ready.durationMs);
+    }
     // 调度已因失败停下：此后不会再发起新合成，等下去只会空等到超时。
     final TtsFailure? failure = _scheduler.failure;
     if (failure != null) {
@@ -434,7 +452,7 @@ class TtsReadAlong extends ChangeNotifier {
       final TtsCachedAudio audio = await _scheduler
           .ensure(index)
           .timeout(timeout);
-      return audio.path;
+      return TtsSentenceAudio(path: audio.path, durationMs: audio.durationMs);
     } on TimeoutException catch (_) {
       ErrorLogService.instance.log(
         'TtsReadAlong.ensureSentenceAudio',
@@ -451,6 +469,74 @@ class TtsReadAlong extends ChangeNotifier {
       return null;
     }
   }
+
+  /// 制卡用：按**正文文本**给这一句定位朗读单元（返回该单元整段的区间）。
+  ///
+  /// 为什么不能只用坐标：阅读器 WebView 的 matchable 坐标与本会话分句用的
+  /// [AudioTextNormalizer] 归一化不是同一套（ruby / 图注 / 空白的处理不同），坐标会
+  /// 随章内位置漂移。真机实测（`無職転生` 第 25 章）：卡片句
+  /// 「こんな土地に閉じ込められれば…」的 span `[1269,28]` 与某个单元的
+  /// match `[1269,1297)` **完全重合**，但那个单元念的是
+  /// 「ルイジェルドは走りだしてから…」——按坐标定位会稳定地拿到**另一句**的音频。
+  /// 正文文本是两边唯一的同源锚点，所以这里按文本定位，坐标只在「同一句在书里
+  /// 出现多次」时用来消歧（取离得最近的那个）。
+  ///
+  /// [sectionIndex] 为 null 时全书范围内找（歌词 / 无章节锚点的回退）。
+  /// 找不到（例如阅读器分句与朗读分句完全不一致）返回 null，调用方降级不带音频，
+  /// 绝不用坐标硬凑出一个「看起来合法」却念别的句子的区间。
+  AudioPlaybackRange? sentenceRangeByText({
+    required String sentence,
+    int? sectionIndex,
+    int? normCharOffset,
+  }) {
+    final String target = _matchText(sentence);
+    if (target.isEmpty) return null;
+    int? exactIndex;
+    int? exactDistance;
+    int? coveredIndex;
+    int? coveredDistance;
+    for (int i = 0; i < plan.length; i++) {
+      final TtsPlanSentence s = plan.sentences[i];
+      if (sectionIndex != null && s.section != sectionIndex) continue;
+      final String text = _matchText(s.text);
+      final int distance = normCharOffset == null
+          ? 0
+          : (s.matchStart - normCharOffset).abs();
+      if (text == target) {
+        if (exactDistance == null || distance < exactDistance) {
+          exactIndex = i;
+          exactDistance = distance;
+        }
+      } else if (text.contains(target)) {
+        if (coveredDistance == null || distance < coveredDistance) {
+          coveredIndex = i;
+          coveredDistance = distance;
+        }
+      }
+    }
+    final int? index = exactIndex ?? coveredIndex;
+    if (index == null || index >= cues.length) return null;
+    return AudioPlaybackRange(
+      audioFileIndex: index,
+      startMs: 0,
+      endMs: cues[index].endMs,
+    );
+  }
+
+  /// 坐标定位出来的第 [index] 个单元，其文本是否真的包含 [sentence]（信任校验）。
+  /// 文本定位没命中、坐标又落在一个念别的句子的单元上时，调用方据此拒绝这段音频，
+  /// 而不是把「另一句」的音频塞进卡片。
+  bool unitCoversSentence({required int index, required String sentence}) {
+    if (index < 0 || index >= plan.length) return false;
+    final String target = _matchText(sentence);
+    if (target.isEmpty) return false;
+    final String text = _matchText(plan.sentences[index].text);
+    return text == target || text.contains(target);
+  }
+
+  /// 文本比较用：去掉所有空白（阅读器选区常带换行 / 缩进，朗读单元文本是拼接的）。
+  static String _matchText(String value) =>
+      value.replaceAll(RegExp(r'\s+'), '');
 
   /// 现有分句里最长的一句（朗读用文本）。新引擎的单次长度上限比它小时本会话
   /// 换不了声音（那一句会被引擎拒掉），只能按新上限重新分句。

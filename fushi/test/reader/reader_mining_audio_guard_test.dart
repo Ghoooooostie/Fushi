@@ -147,6 +147,72 @@ void main() {
       );
     });
 
+    test('makes the TTS sentence audio really exist before cutting it', () {
+      final String source = readReaderPageSource();
+
+      // 朗读会话的 audioFiles[i] 是「合成后才会存在」的缓存路径，制卡必须先让它就绪
+      // （BUG-3652：否则 ffmpeg 早退成 input audio file does not exist，整张卡判死）。
+      expect(
+        source,
+        contains('ensureTtsSentenceSynthesized(clip.audioFileIndex)'),
+        reason: '制卡抽段前必须先让 TTS 那一句真正合成。',
+      );
+      expect(
+        source,
+        contains('tts.ensureSentenceAudio(index)'),
+        reason: 'TTS 会话里必须走调度器按需合成那一句，再拿真实路径去裁。',
+      );
+      // 取输入一律走 trackInputFor（本机=路径 / 远端=地址+现取鉴权头），
+      // 绝不能直接读 audioFiles[i].path（占位文件不存在）。
+      expect(
+        source,
+        contains('.trackInputFor(clip.audioFileIndex)'),
+        reason: '句子音频输入必须过 trackInputFor，不能直接读 audioFiles[i].path。',
+      );
+      // TTS 的 cue.endMs 在合成前是按字数估的，必须用真实时长收口：估短了后半句没声、
+      // 估长了多裁空白——正是「音频和句子对不上」的观感。
+      expect(
+        source,
+        contains('realDurationMs'),
+        reason: '必须用 ensure 拿到的真实时长收口裁剪终点。',
+      );
+      // 拿不到音频时不能留下「有音频区间却没有音频」的不一致（回放会去要不存在的音频）。
+      expect(
+        source,
+        contains('dropSentenceAudioLink()'),
+        reason: '拿不到句子音频时必须把链接上的音频区间一并去掉。',
+      );
+    });
+
+    test('locates the TTS sentence audio by body text, not by drifting '
+        'coordinates', () {
+      final String source = readReaderPageSource();
+
+      // 真机实测：阅读器坐标与朗读分句归一化不同源，坐标区间完全重合却是另一句
+      // （card「こんな土地に…」→ 单元「ルイジェルドは…」）。定位必须落到正文文本上。
+      expect(
+        source,
+        contains('readAlong.sentenceRangeByText('),
+        reason: 'TTS 会话里必须按正文文本定位句子音频，坐标只用来给重复句消歧。',
+      );
+      expect(
+        source,
+        contains('readAlong.unitCoversSentence('),
+        reason: '文本也定位不到时必须校验坐标结果，不能拿一个念别的句子的单元凑数。',
+      );
+      expect(
+        source,
+        contains('sentenceAudioUntrusted'),
+        reason: '确认不可信后必须走「不带音频出卡」的降级，而不是照裁。',
+      );
+      expect(
+        source,
+        contains('ReaderFushi.mineEntry.sentenceAudioMismatch'),
+        reason: '被拒绝的错配要落日志，可查为什么这张卡没有句子音频。',
+      );
+    });
+
+>>>>>>> 739a926cf9 (fix(reader): TTS 制卡句子音频按正文文本定位，不再落到另一句（BUG-3653）)
     test('aborts mining when requested sentence-audio export fails', () {
       final String source = readReaderPageSource();
 
