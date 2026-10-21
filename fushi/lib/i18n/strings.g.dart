@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152660 (8980 per locale)
+/// Strings: 152694 (8982 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9058,6 +9058,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_flag => 'Flag';
   String get srs_card_label_all_definitions => 'All definitions';
   String get srs_card_label_frequency => 'Frequency';
+  String get srs_card_label_main_dictionary => 'Main';
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
   String get srs_card_label_show_more => 'Show more';
   String get srs_card_label_source => 'Source';
   String get srs_card_move => 'Move to deck';
@@ -28095,6 +28097,10 @@ class _StringsAr extends _StringsEn {
   String get srs_card_label_all_definitions => 'All definitions';
   @override
   String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
   @override
   String get srs_card_label_show_more => 'Show more';
   @override
@@ -50206,6 +50212,10 @@ class _StringsDe extends _StringsEn {
   String get srs_card_label_all_definitions => 'All definitions';
   @override
   String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
   @override
   String get srs_card_label_show_more => 'Show more';
   @override
@@ -72441,6 +72451,10 @@ class _StringsEs extends _StringsEn {
   String get srs_card_label_all_definitions => 'All definitions';
   @override
   String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
   @override
   String get srs_card_label_show_more => 'Show more';
   @override
@@ -94765,6 +94779,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_label_frequency => 'Frequency';
   @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
+  @override
   String get srs_card_label_show_more => 'Show more';
   @override
   String get srs_card_label_source => 'Source';
@@ -116851,6 +116869,10 @@ class _StringsId extends _StringsEn {
   String get srs_card_label_all_definitions => 'All definitions';
   @override
   String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
   @override
   String get srs_card_label_show_more => 'Show more';
   @override
@@ -138981,6 +139003,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_label_frequency => 'Frequency';
   @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
+  @override
   String get srs_card_label_show_more => 'Show more';
   @override
   String get srs_card_label_source => 'Source';
@@ -160404,6 +160430,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_label_frequency => 'Frequency';
   @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
+  @override
   String get srs_card_label_show_more => 'Show more';
   @override
   String get srs_card_label_source => 'Source';
@@ -181552,6 +181582,10 @@ class _StringsKo extends _StringsEn {
   String get srs_card_label_all_definitions => 'All definitions';
   @override
   String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
   @override
   String get srs_card_label_show_more => 'Show more';
   @override
@@ -203409,6 +203443,10 @@ class _StringsNl extends _StringsEn {
   String get srs_card_label_all_definitions => 'All definitions';
   @override
   String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
   @override
   String get srs_card_label_show_more => 'Show more';
   @override
@@ -225569,6 +225607,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_label_frequency => 'Frequency';
   @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
+  @override
   String get srs_card_label_show_more => 'Show more';
   @override
   String get srs_card_label_source => 'Source';
@@ -247707,6 +247749,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_label_frequency => 'Frequency';
   @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
+  @override
   String get srs_card_label_show_more => 'Show more';
   @override
   String get srs_card_label_source => 'Source';
@@ -269595,6 +269641,10 @@ class _StringsTh extends _StringsEn {
   String get srs_card_label_all_definitions => 'All definitions';
   @override
   String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
   @override
   String get srs_card_label_show_more => 'Show more';
   @override
@@ -291550,6 +291600,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_label_frequency => 'Frequency';
   @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
+  @override
   String get srs_card_label_show_more => 'Show more';
   @override
   String get srs_card_label_source => 'Source';
@@ -313500,6 +313554,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_label_frequency => 'Frequency';
   @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
+  @override
   String get srs_card_label_show_more => 'Show more';
   @override
   String get srs_card_label_source => 'Source';
@@ -334158,6 +334216,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_label_frequency => '词频';
   @override
+  String get srs_card_label_main_dictionary => '主词典';
+  @override
+  String get srs_card_label_other_dictionaries => '其他词典';
+  @override
   String get srs_card_label_show_more => '展开全文';
   @override
   String get srs_card_label_source => '来源';
@@ -354478,6 +354540,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_label_frequency => 'Frequency';
   @override
+  String get srs_card_label_main_dictionary => 'Main';
+  @override
+  String get srs_card_label_other_dictionaries => 'Other dictionaries';
+  @override
   String get srs_card_label_show_more => 'Show more';
   @override
   String get srs_card_label_source => 'Source';
@@ -373749,6 +373815,10 @@ extension on _StringsEn {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -392417,6 +392487,10 @@ extension on _StringsAr {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -411141,6 +411215,10 @@ extension on _StringsDe {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -429869,6 +429947,10 @@ extension on _StringsEs {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -448608,6 +448690,10 @@ extension on _StringsFr {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -467307,6 +467393,10 @@ extension on _StringsId {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -486015,6 +486105,10 @@ extension on _StringsIt {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -504657,6 +504751,10 @@ extension on _StringsJa {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -523248,6 +523346,10 @@ extension on _StringsKo {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -541929,6 +542031,10 @@ extension on _StringsNl {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -560641,6 +560747,10 @@ extension on _StringsPtBr {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -579357,6 +579467,10 @@ extension on _StringsRu {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -598033,6 +598147,10 @@ extension on _StringsTh {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -616727,6 +616845,10 @@ extension on _StringsTr {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -635416,6 +635538,10 @@ extension on _StringsVi {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
@@ -653955,6 +654081,10 @@ extension on _StringsZhCn {
         return '全部释义';
       case 'srs_card_label_frequency':
         return '词频';
+      case 'srs_card_label_main_dictionary':
+        return '主词典';
+      case 'srs_card_label_other_dictionaries':
+        return '其他词典';
       case 'srs_card_label_show_more':
         return '展开全文';
       case 'srs_card_label_source':
@@ -672448,6 +672578,10 @@ extension on _StringsZhHk {
         return 'All definitions';
       case 'srs_card_label_frequency':
         return 'Frequency';
+      case 'srs_card_label_main_dictionary':
+        return 'Main';
+      case 'srs_card_label_other_dictionaries':
+        return 'Other dictionaries';
       case 'srs_card_label_show_more':
         return 'Show more';
       case 'srs_card_label_source':
