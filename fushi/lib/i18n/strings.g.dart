@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153000 (9000 per locale)
+/// Strings: 153017 (9001 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2646,6 +2646,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get custom_fonts_archive_error => 'Failed to extract archive';
   String get custom_fonts_catalog_title => 'Font library';
   String get custom_fonts_download_failed => 'Download failed';
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   String get custom_fonts_downloading => 'Downloading...';
   String get custom_fonts_drag_hint => 'Drag to reorder font priority';
   String get custom_fonts_empty => 'No custom fonts added';
@@ -17156,6 +17158,9 @@ class _StringsAr extends _StringsEn {
   String get custom_fonts_catalog_title => 'مكتبة الخطوط';
   @override
   String get custom_fonts_download_failed => 'فشل التنزيل';
+  @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'جارٍ التنزيل...';
   @override
@@ -39076,6 +39081,9 @@ class _StringsDe extends _StringsEn {
   String get custom_fonts_catalog_title => 'Schriftbibliothek';
   @override
   String get custom_fonts_download_failed => 'Download fehlgeschlagen';
+  @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Wird heruntergeladen...';
   @override
@@ -61339,6 +61347,9 @@ class _StringsEs extends _StringsEn {
   String get custom_fonts_catalog_title => 'Biblioteca de fuentes';
   @override
   String get custom_fonts_download_failed => 'Error en la descarga';
+  @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Descargando...';
   @override
@@ -83671,6 +83682,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Échec du téléchargement';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Téléchargement...';
   @override
   String get custom_fonts_drag_hint =>
@@ -105997,6 +106011,9 @@ class _StringsId extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Unduhan gagal';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Mengunduh…';
   @override
   String get custom_fonts_drag_hint =>
@@ -128071,6 +128088,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Scaricamento fallito';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Scaricamento...';
   @override
   String get custom_fonts_drag_hint =>
@@ -150112,6 +150132,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'ダウンロード失敗';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'ダウンロード中…';
   @override
   String get custom_fonts_drag_hint => 'ドラッグしてフォントの優先順位を変更';
@@ -171280,6 +171303,9 @@ class _StringsKo extends _StringsEn {
   String get custom_fonts_catalog_title => '글꼴 라이브러리';
   @override
   String get custom_fonts_download_failed => '다운로드 실패';
+  @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => '다운로드 중…';
   @override
@@ -192682,6 +192708,9 @@ class _StringsNl extends _StringsEn {
   String get custom_fonts_catalog_title => 'Lettertypebibliotheek';
   @override
   String get custom_fonts_download_failed => 'Download mislukt';
+  @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Downloaden...';
   @override
@@ -214851,6 +214880,9 @@ class _StringsPtBr extends _StringsEn {
   String get custom_fonts_catalog_title => 'Biblioteca de fontes';
   @override
   String get custom_fonts_download_failed => 'Falha no download';
+  @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'Baixando...';
   @override
@@ -237063,6 +237095,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Ошибка загрузки';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Загрузка…';
   @override
   String get custom_fonts_drag_hint =>
@@ -259178,6 +259213,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'ดาวน์โหลดล้มเหลว';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'กำลังดาวน์โหลด…';
   @override
   String get custom_fonts_drag_hint => 'ลากเพื่อจัดเรียงลำดับฟอนต์';
@@ -281064,6 +281102,9 @@ class _StringsTr extends _StringsEn {
   String get custom_fonts_catalog_title => 'Yazı tipi kitaplığı';
   @override
   String get custom_fonts_download_failed => 'İndirme başarısız';
+  @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   @override
   String get custom_fonts_downloading => 'İndiriliyor…';
   @override
@@ -303106,6 +303147,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Tải xuống thất bại';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Đang tải…';
   @override
   String get custom_fonts_drag_hint =>
@@ -324726,6 +324770,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get custom_fonts_download_failed => '下载失败';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      '连不上字体下载源。可在设置里的「网络代理」配置代理后重试，或直接导入已有的字体文件。';
+  @override
   String get custom_fonts_downloading => '正在下载…';
   @override
   String get custom_fonts_drag_hint => '拖拽排列字体优先级';
@@ -344924,6 +344971,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get custom_fonts_download_failed => '下載失敗';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => '正在下載…';
   @override
   String get custom_fonts_drag_hint => '拖曳以調整字型優先順序';
@@ -365052,6 +365102,8 @@ extension on _StringsEn {
         return 'Font library';
       case 'custom_fonts_download_failed':
         return 'Download failed';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Downloading...';
       case 'custom_fonts_drag_hint':
@@ -383765,6 +383817,8 @@ extension on _StringsAr {
         return 'مكتبة الخطوط';
       case 'custom_fonts_download_failed':
         return 'فشل التنزيل';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'جارٍ التنزيل...';
       case 'custom_fonts_drag_hint':
@@ -402492,6 +402546,8 @@ extension on _StringsDe {
         return 'Schriftbibliothek';
       case 'custom_fonts_download_failed':
         return 'Download fehlgeschlagen';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Wird heruntergeladen...';
       case 'custom_fonts_drag_hint':
@@ -421269,6 +421325,8 @@ extension on _StringsEs {
         return 'Biblioteca de fuentes';
       case 'custom_fonts_download_failed':
         return 'Error en la descarga';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Descargando...';
       case 'custom_fonts_drag_hint':
@@ -440038,6 +440096,8 @@ extension on _StringsFr {
         return 'Bibliothèque de polices';
       case 'custom_fonts_download_failed':
         return 'Échec du téléchargement';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Téléchargement...';
       case 'custom_fonts_drag_hint':
@@ -458806,6 +458866,8 @@ extension on _StringsId {
         return 'Pustaka font';
       case 'custom_fonts_download_failed':
         return 'Unduhan gagal';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Mengunduh…';
       case 'custom_fonts_drag_hint':
@@ -477538,6 +477600,8 @@ extension on _StringsIt {
         return 'Libreria di caratteri';
       case 'custom_fonts_download_failed':
         return 'Scaricamento fallito';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Scaricamento...';
       case 'custom_fonts_drag_hint':
@@ -496270,6 +496334,8 @@ extension on _StringsJa {
         return 'フォントライブラリ';
       case 'custom_fonts_download_failed':
         return 'ダウンロード失敗';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'ダウンロード中…';
       case 'custom_fonts_drag_hint':
@@ -514897,6 +514963,8 @@ extension on _StringsKo {
         return '글꼴 라이브러리';
       case 'custom_fonts_download_failed':
         return '다운로드 실패';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return '다운로드 중…';
       case 'custom_fonts_drag_hint':
@@ -533568,6 +533636,8 @@ extension on _StringsNl {
         return 'Lettertypebibliotheek';
       case 'custom_fonts_download_failed':
         return 'Download mislukt';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Downloaden...';
       case 'custom_fonts_drag_hint':
@@ -552327,6 +552397,8 @@ extension on _StringsPtBr {
         return 'Biblioteca de fontes';
       case 'custom_fonts_download_failed':
         return 'Falha no download';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Baixando...';
       case 'custom_fonts_drag_hint':
@@ -571080,6 +571152,8 @@ extension on _StringsRu {
         return 'Библиотека шрифтов';
       case 'custom_fonts_download_failed':
         return 'Ошибка загрузки';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Загрузка…';
       case 'custom_fonts_drag_hint':
@@ -589816,6 +589890,8 @@ extension on _StringsTh {
         return 'คลังฟอนต์';
       case 'custom_fonts_download_failed':
         return 'ดาวน์โหลดล้มเหลว';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'กำลังดาวน์โหลด…';
       case 'custom_fonts_drag_hint':
@@ -608542,6 +608618,8 @@ extension on _StringsTr {
         return 'Yazı tipi kitaplığı';
       case 'custom_fonts_download_failed':
         return 'İndirme başarısız';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'İndiriliyor…';
       case 'custom_fonts_drag_hint':
@@ -627273,6 +627351,8 @@ extension on _StringsVi {
         return 'Thư viện phông';
       case 'custom_fonts_download_failed':
         return 'Tải xuống thất bại';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Đang tải…';
       case 'custom_fonts_drag_hint':
@@ -645941,6 +646021,8 @@ extension on _StringsZhCn {
         return '字体库';
       case 'custom_fonts_download_failed':
         return '下载失败';
+      case 'custom_fonts_download_unreachable_hint':
+        return '连不上字体下载源。可在设置里的「网络代理」配置代理后重试，或直接导入已有的字体文件。';
       case 'custom_fonts_downloading':
         return '正在下载…';
       case 'custom_fonts_drag_hint':
@@ -664441,6 +664523,8 @@ extension on _StringsZhHk {
         return '字型庫';
       case 'custom_fonts_download_failed':
         return '下載失敗';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return '正在下載…';
       case 'custom_fonts_drag_hint':
