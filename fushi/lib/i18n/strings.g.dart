@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154343 (9079 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11107,10 +11107,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_notify_section => 'Update notifications';
   String get updates_notify_video_episode => 'Notify about new anime episodes';
   String get updates_notify_video_episode_hint =>
-      'Alert when a subscribed series finishes downloading a new episode.';
+      'Alert when a subscribed series finishes downloading a new episode, or a show in your video library gets new episodes.';
   String get updates_system_notifications => 'System notifications';
   String get updates_system_notifications_hint =>
       'Also send a system notification. Turning this off keeps the in-app badge.';
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
   String get url => 'URL';
   String get usage_stats_enabled => 'Share usage statistics';
   String get usage_stats_enabled_hint =>
@@ -11596,6 +11600,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_loading_connecting => 'Connecting to stream…';
   String get video_loading_preparing => 'Preparing…';
   String get video_loading_subtitle => 'Downloading subtitles…';
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   String get video_menu_fullscreen => 'Toggle fullscreen';
   String get video_menu_lock => 'Immersive / lock mode';
   String get video_menu_play_pause => 'Play / pause';
@@ -31778,6 +31784,12 @@ class _StringsAr extends _StringsEn {
   String get updates_system_notifications_hint =>
       'إرسال إشعار نظام أيضًا. تعطيله يُبقي الشارة داخل التطبيق.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'الرابط';
   @override
   String get usage_stats_enabled => 'مشاركة إحصاءات الاستخدام';
@@ -32599,6 +32611,9 @@ class _StringsAr extends _StringsEn {
   String get video_loading_preparing => 'جارٍ التحضير…';
   @override
   String get video_loading_subtitle => 'جارٍ تحميل الترجمات…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'تبديل ملء الشاشة';
   @override
@@ -54167,6 +54182,12 @@ class _StringsDe extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Zusätzlich eine Systembenachrichtigung senden. Wenn ausgeschaltet, bleibt das Badge in der App erhalten.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Nutzungsstatistiken teilen';
@@ -55002,6 +55023,9 @@ class _StringsDe extends _StringsEn {
   String get video_loading_preparing => 'Wird vorbereitet…';
   @override
   String get video_loading_subtitle => 'Untertitel werden heruntergeladen…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Vollbild umschalten';
   @override
@@ -76661,6 +76685,12 @@ class _StringsEs extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Envía también una notificación del sistema. Si lo desactivas, se mantiene la insignia dentro de la app.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Compartir estadísticas de uso';
@@ -77498,6 +77528,9 @@ class _StringsEs extends _StringsEn {
   String get video_loading_preparing => 'Preparando…';
   @override
   String get video_loading_subtitle => 'Descargando subtítulos…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Alternar pantalla completa';
   @override
@@ -99230,6 +99263,12 @@ class _StringsFr extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Envoie aussi une notification système. La désactiver conserve le badge dans l\'application.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Partager les statistiques d’utilisation';
@@ -100071,6 +100110,9 @@ class _StringsFr extends _StringsEn {
   String get video_loading_preparing => 'Préparation…';
   @override
   String get video_loading_subtitle => 'Téléchargement des sous-titres…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Basculer en plein écran';
   @override
@@ -121539,6 +121581,12 @@ class _StringsId extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Juga kirim notifikasi sistem. Mematikan ini mempertahankan lencana dalam aplikasi.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Bagikan statistik penggunaan';
@@ -122371,6 +122419,9 @@ class _StringsId extends _StringsEn {
   String get video_loading_preparing => 'Mempersiapkan…';
   @override
   String get video_loading_subtitle => 'Mengunduh subtitle…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Alihkan layar penuh';
   @override
@@ -143927,6 +143978,12 @@ class _StringsIt extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Invia anche una notifica di sistema. Disattivandola resta il badge nell\'app.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Condividi statistiche di utilizzo';
@@ -144758,6 +144815,9 @@ class _StringsIt extends _StringsEn {
   String get video_loading_preparing => 'Preparazione…';
   @override
   String get video_loading_subtitle => 'Download sottotitoli…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Attiva/disattiva schermo intero';
   @override
@@ -165503,6 +165563,12 @@ class _StringsJa extends _StringsEn {
   String get updates_system_notifications_hint =>
       'システム通知も送信します。オフにしてもアプリ内のバッジは残ります。';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => '利用統計を送信';
@@ -166291,6 +166357,9 @@ class _StringsJa extends _StringsEn {
   String get video_loading_preparing => '準備中…';
   @override
   String get video_loading_subtitle => '字幕をダウンロード中…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => '全画面の切り替え';
   @override
@@ -186901,6 +186970,12 @@ class _StringsKo extends _StringsEn {
   String get updates_system_notifications_hint =>
       '시스템 알림도 함께 보냅니다. 끄면 앱 내 배지는 유지됩니다.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => '사용 통계 보내기';
@@ -187690,6 +187765,9 @@ class _StringsKo extends _StringsEn {
   String get video_loading_preparing => '준비 중…';
   @override
   String get video_loading_subtitle => '자막 다운로드 중…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => '전체 화면 전환';
   @override
@@ -209101,6 +209179,12 @@ class _StringsNl extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Stuur ook een systeemmelding. Als je dit uitzet, blijft de badge in de app behouden.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Gebruiksstatistieken delen';
@@ -209930,6 +210014,9 @@ class _StringsNl extends _StringsEn {
   String get video_loading_preparing => 'Voorbereiden…';
   @override
   String get video_loading_subtitle => 'Ondertitels downloaden…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Volledig scherm in-/uitschakelen';
   @override
@@ -231505,6 +231592,12 @@ class _StringsPtBr extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Também envia uma notificação do sistema. Desativar mantém o selo dentro do app.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Compartilhar estatísticas de uso';
@@ -232341,6 +232434,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_loading_preparing => 'Preparando…';
   @override
   String get video_loading_subtitle => 'Baixando legendas…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Alternar tela cheia';
   @override
@@ -253883,6 +253979,12 @@ class _StringsRu extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Дополнительно отправлять системное уведомление. При отключении значок в приложении сохраняется.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Отправлять статистику использования';
@@ -254715,6 +254817,9 @@ class _StringsRu extends _StringsEn {
   String get video_loading_preparing => 'Подготовка…';
   @override
   String get video_loading_subtitle => 'Загрузка субтитров…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Полноэкранный режим';
   @override
@@ -276001,6 +276106,12 @@ class _StringsTh extends _StringsEn {
   String get updates_system_notifications_hint =>
       'ส่งการแจ้งเตือนของระบบด้วย การปิดตัวเลือกนี้ยังคงเก็บป้ายในแอปไว้';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'ส่งสถิติการใช้งาน';
@@ -276820,6 +276931,9 @@ class _StringsTh extends _StringsEn {
   String get video_loading_preparing => 'กำลังเตรียม…';
   @override
   String get video_loading_subtitle => 'กำลังดาวน์โหลดคำบรรยาย…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'สลับเต็มจอ';
   @override
@@ -298220,6 +298334,12 @@ class _StringsTr extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Ayrıca bir sistem bildirimi gönder. Bunu kapatmak uygulama içi rozeti korur.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Kullanım istatistiklerini paylaş';
@@ -299042,6 +299162,9 @@ class _StringsTr extends _StringsEn {
   String get video_loading_preparing => 'Hazırlanıyor…';
   @override
   String get video_loading_subtitle => 'Altyazılar indiriliyor…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Tam ekranı aç/kapat';
   @override
@@ -320409,6 +320532,12 @@ class _StringsVi extends _StringsEn {
   String get updates_system_notifications_hint =>
       'Gửi thêm thông báo hệ thống. Tắt mục này vẫn giữ huy hiệu trong ứng dụng.';
   @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
+  @override
   String get url => 'URL';
   @override
   String get usage_stats_enabled => 'Chia sẻ thống kê sử dụng';
@@ -321233,6 +321362,9 @@ class _StringsVi extends _StringsEn {
   String get video_loading_preparing => 'Đang chuẩn bị…';
   @override
   String get video_loading_subtitle => 'Đang tải phụ đề…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => 'Bật/tắt toàn màn hình';
   @override
@@ -341013,11 +341145,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get updates_notify_video_episode => '番剧新集提醒';
   @override
-  String get updates_notify_video_episode_hint => '订阅的番剧下载好新集时提醒。';
+  String get updates_notify_video_episode_hint =>
+      '订阅的番剧下载好新集、或媒体库里的在线作品出新集时提醒。';
   @override
   String get updates_system_notifications => '系统通知';
   @override
   String get updates_system_notifications_hint => '同时发送系统通知。关掉后仍保留应用内红点。';
+  @override
+  String get updates_video_library_auto_update => '自动补齐媒体库新集';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Fushi 开着时每隔几小时检查一次你加入媒体库的在线源作品与媒体服务器剧集，把新出的集补进来。要不要提醒由「番剧新集提醒」开关决定。';
   @override
   String get url => '网址';
   @override
@@ -341764,6 +341902,9 @@ class _StringsZhCn extends _StringsEn {
   String get video_loading_preparing => '正在准备…';
   @override
   String get video_loading_subtitle => '正在下载字幕…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
   @override
   String get video_menu_fullscreen => '切换全屏';
   @override
@@ -361712,11 +361853,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get updates_notify_video_episode => '番劇新集提醒';
   @override
-  String get updates_notify_video_episode_hint => '訂閱的番劇下載好新集時提醒。';
+  String get updates_notify_video_episode_hint =>
+      '訂閱的番劇下載好新集、或媒體庫裡的線上作品出新集時提醒。';
   @override
   String get updates_system_notifications => '系統通知';
   @override
   String get updates_system_notifications_hint => '同時發送系統通知。關掉後仍保留應用內紅點。';
+  @override
+  String get updates_video_library_auto_update =>
+      'Auto-add new episodes to the video library';
+  @override
+  String get updates_video_library_auto_update_hint =>
+      'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
   @override
   String get url => '網址';
   @override
@@ -362476,6 +362624,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_loading_preparing => '正在準備…';
   @override
   String get video_loading_subtitle => '正在下載字幕…';
+  @override
+  String get video_media_server_launch_unavailable =>
+      'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
   @override
   String get video_menu_fullscreen => '切換全螢幕';
   @override
@@ -380898,11 +381049,15 @@ extension on _StringsEn {
       case 'updates_notify_video_episode':
         return 'Notify about new anime episodes';
       case 'updates_notify_video_episode_hint':
-        return 'Alert when a subscribed series finishes downloading a new episode.';
+        return 'Alert when a subscribed series finishes downloading a new episode, or a show in your video library gets new episodes.';
       case 'updates_system_notifications':
         return 'System notifications';
       case 'updates_system_notifications_hint':
         return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -381591,6 +381746,8 @@ extension on _StringsEn {
         return 'Preparing…';
       case 'video_loading_subtitle':
         return 'Downloading subtitles…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Toggle fullscreen';
       case 'video_menu_lock':
@@ -399769,6 +399926,10 @@ extension on _StringsAr {
         return 'إشعارات النظام';
       case 'updates_system_notifications_hint':
         return 'إرسال إشعار نظام أيضًا. تعطيله يُبقي الشارة داخل التطبيق.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'الرابط';
       case 'usage_stats_enabled':
@@ -400458,6 +400619,8 @@ extension on _StringsAr {
         return 'جارٍ التحضير…';
       case 'video_loading_subtitle':
         return 'جارٍ تحميل الترجمات…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'تبديل ملء الشاشة';
       case 'video_menu_lock':
@@ -418706,6 +418869,10 @@ extension on _StringsDe {
         return 'Systembenachrichtigungen';
       case 'updates_system_notifications_hint':
         return 'Zusätzlich eine Systembenachrichtigung senden. Wenn ausgeschaltet, bleibt das Badge in der App erhalten.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -419398,6 +419565,8 @@ extension on _StringsDe {
         return 'Wird vorbereitet…';
       case 'video_loading_subtitle':
         return 'Untertitel werden heruntergeladen…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Vollbild umschalten';
       case 'video_menu_lock':
@@ -437634,6 +437803,10 @@ extension on _StringsEs {
         return 'Notificaciones del sistema';
       case 'updates_system_notifications_hint':
         return 'Envía también una notificación del sistema. Si lo desactivas, se mantiene la insignia dentro de la app.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -438326,6 +438499,8 @@ extension on _StringsEs {
         return 'Preparando…';
       case 'video_loading_subtitle':
         return 'Descargando subtítulos…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Alternar pantalla completa';
       case 'video_menu_lock':
@@ -456576,6 +456751,10 @@ extension on _StringsFr {
         return 'Notifications système';
       case 'updates_system_notifications_hint':
         return 'Envoie aussi une notification système. La désactiver conserve le badge dans l\'application.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -457269,6 +457448,8 @@ extension on _StringsFr {
         return 'Préparation…';
       case 'video_loading_subtitle':
         return 'Téléchargement des sous-titres…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Basculer en plein écran';
       case 'video_menu_lock':
@@ -475471,6 +475652,10 @@ extension on _StringsId {
         return 'Notifikasi sistem';
       case 'updates_system_notifications_hint':
         return 'Juga kirim notifikasi sistem. Mematikan ini mempertahankan lencana dalam aplikasi.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -476160,6 +476345,8 @@ extension on _StringsId {
         return 'Mempersiapkan…';
       case 'video_loading_subtitle':
         return 'Mengunduh subtitle…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Alihkan layar penuh';
       case 'video_menu_lock':
@@ -494390,6 +494577,10 @@ extension on _StringsIt {
         return 'Notifiche di sistema';
       case 'updates_system_notifications_hint':
         return 'Invia anche una notifica di sistema. Disattivandola resta il badge nell\'app.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -495082,6 +495273,8 @@ extension on _StringsIt {
         return 'Preparazione…';
       case 'video_loading_subtitle':
         return 'Download sottotitoli…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Attiva/disattiva schermo intero';
       case 'video_menu_lock':
@@ -513209,6 +513402,10 @@ extension on _StringsJa {
         return 'システム通知';
       case 'updates_system_notifications_hint':
         return 'システム通知も送信します。オフにしてもアプリ内のバッジは残ります。';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -513892,6 +514089,8 @@ extension on _StringsJa {
         return '準備中…';
       case 'video_loading_subtitle':
         return '字幕をダウンロード中…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return '全画面の切り替え';
       case 'video_menu_lock':
@@ -532004,6 +532203,10 @@ extension on _StringsKo {
         return '시스템 알림';
       case 'updates_system_notifications_hint':
         return '시스템 알림도 함께 보냅니다. 끄면 앱 내 배지는 유지됩니다.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -532689,6 +532892,8 @@ extension on _StringsKo {
         return '준비 중…';
       case 'video_loading_subtitle':
         return '자막 다운로드 중…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return '전체 화면 전환';
       case 'video_menu_lock':
@@ -550902,6 +551107,10 @@ extension on _StringsNl {
         return 'Systeemmeldingen';
       case 'updates_system_notifications_hint':
         return 'Stuur ook een systeemmelding. Als je dit uitzet, blijft de badge in de app behouden.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -551593,6 +551802,8 @@ extension on _StringsNl {
         return 'Voorbereiden…';
       case 'video_loading_subtitle':
         return 'Ondertitels downloaden…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Volledig scherm in-/uitschakelen';
       case 'video_menu_lock':
@@ -569814,6 +570025,10 @@ extension on _StringsPtBr {
         return 'Notificações do sistema';
       case 'updates_system_notifications_hint':
         return 'Também envia uma notificação do sistema. Desativar mantém o selo dentro do app.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -570506,6 +570721,8 @@ extension on _StringsPtBr {
         return 'Preparando…';
       case 'video_loading_subtitle':
         return 'Baixando legendas…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Alternar tela cheia';
       case 'video_menu_lock':
@@ -588733,6 +588950,10 @@ extension on _StringsRu {
         return 'Системные уведомления';
       case 'updates_system_notifications_hint':
         return 'Дополнительно отправлять системное уведомление. При отключении значок в приложении сохраняется.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -589424,6 +589645,8 @@ extension on _StringsRu {
         return 'Подготовка…';
       case 'video_loading_subtitle':
         return 'Загрузка субтитров…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Полноэкранный режим';
       case 'video_menu_lock':
@@ -607609,6 +607832,10 @@ extension on _StringsTh {
         return 'การแจ้งเตือนของระบบ';
       case 'updates_system_notifications_hint':
         return 'ส่งการแจ้งเตือนของระบบด้วย การปิดตัวเลือกนี้ยังคงเก็บป้ายในแอปไว้';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -608299,6 +608526,8 @@ extension on _StringsTh {
         return 'กำลังเตรียม…';
       case 'video_loading_subtitle':
         return 'กำลังดาวน์โหลดคำบรรยาย…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'สลับเต็มจอ';
       case 'video_menu_lock':
@@ -626507,6 +626736,10 @@ extension on _StringsTr {
         return 'Sistem bildirimleri';
       case 'updates_system_notifications_hint':
         return 'Ayrıca bir sistem bildirimi gönder. Bunu kapatmak uygulama içi rozeti korur.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -627198,6 +627431,8 @@ extension on _StringsTr {
         return 'Hazırlanıyor…';
       case 'video_loading_subtitle':
         return 'Altyazılar indiriliyor…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Tam ekranı aç/kapat';
       case 'video_menu_lock':
@@ -645399,6 +645634,10 @@ extension on _StringsVi {
         return 'Thông báo hệ thống';
       case 'updates_system_notifications_hint':
         return 'Gửi thêm thông báo hệ thống. Tắt mục này vẫn giữ huy hiệu trong ứng dụng.';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return 'URL';
       case 'usage_stats_enabled':
@@ -646088,6 +646327,8 @@ extension on _StringsVi {
         return 'Đang chuẩn bị…';
       case 'video_loading_subtitle':
         return 'Đang tải phụ đề…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return 'Bật/tắt toàn màn hình';
       case 'video_menu_lock':
@@ -664084,11 +664325,15 @@ extension on _StringsZhCn {
       case 'updates_notify_video_episode':
         return '番剧新集提醒';
       case 'updates_notify_video_episode_hint':
-        return '订阅的番剧下载好新集时提醒。';
+        return '订阅的番剧下载好新集、或媒体库里的在线作品出新集时提醒。';
       case 'updates_system_notifications':
         return '系统通知';
       case 'updates_system_notifications_hint':
         return '同时发送系统通知。关掉后仍保留应用内红点。';
+      case 'updates_video_library_auto_update':
+        return '自动补齐媒体库新集';
+      case 'updates_video_library_auto_update_hint':
+        return 'Fushi 开着时每隔几小时检查一次你加入媒体库的在线源作品与媒体服务器剧集，把新出的集补进来。要不要提醒由「番剧新集提醒」开关决定。';
       case 'url':
         return '网址';
       case 'usage_stats_enabled':
@@ -664771,6 +665016,8 @@ extension on _StringsZhCn {
         return '正在准备…';
       case 'video_loading_subtitle':
         return '正在下载字幕…';
+      case 'video_media_server_launch_unavailable':
+        return '这台媒体服务器已不在登录列表中，请到「设置 › 服务」重新登录后再试。';
       case 'video_menu_fullscreen':
         return '切换全屏';
       case 'video_menu_lock':
@@ -682803,11 +683050,15 @@ extension on _StringsZhHk {
       case 'updates_notify_video_episode':
         return '番劇新集提醒';
       case 'updates_notify_video_episode_hint':
-        return '訂閱的番劇下載好新集時提醒。';
+        return '訂閱的番劇下載好新集、或媒體庫裡的線上作品出新集時提醒。';
       case 'updates_system_notifications':
         return '系統通知';
       case 'updates_system_notifications_hint':
         return '同時發送系統通知。關掉後仍保留應用內紅點。';
+      case 'updates_video_library_auto_update':
+        return 'Auto-add new episodes to the video library';
+      case 'updates_video_library_auto_update_hint':
+        return 'Every few hours while Fushi is open, check online-source shows and media-server series you added to the video library for new episodes and add them. Whether you get notified is controlled by the new-episode notification switch.';
       case 'url':
         return '網址';
       case 'usage_stats_enabled':
@@ -683490,6 +683741,8 @@ extension on _StringsZhHk {
         return '正在準備…';
       case 'video_loading_subtitle':
         return '正在下載字幕…';
+      case 'video_media_server_launch_unavailable':
+        return 'This media server is no longer signed in. Sign in again in Settings › Services, then try again.';
       case 'video_menu_fullscreen':
         return '切換全螢幕';
       case 'video_menu_lock':
