@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 152983 (8999 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3663,6 +3663,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_center_empty => 'You haven\'t sent any feedback yet.';
   String get feedback_compose_add_image => 'Add image';
   String get feedback_compose_add_video => 'Add video';
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
   String get feedback_compose_attach_device => 'Attach device info';
   String get feedback_compose_attach_device_hint =>
       'App version, system version, device model, language and window size';
@@ -7320,6 +7321,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_action_badge_recommended => 'Recommended';
   String get onboarding_action_badge_required => 'Required';
   String get onboarding_action_next => 'Next';
+  String get onboarding_action_scroll_more => 'Scroll down';
   String get onboarding_action_skip => 'Skip for now';
   String get onboarding_action_start => 'Start using Fushi';
   String get onboarding_actions_more => 'Other ways';
@@ -18881,6 +18883,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -25086,6 +25090,8 @@ class _StringsAr extends _StringsEn {
   String get onboarding_action_badge_required => 'مطلوب';
   @override
   String get onboarding_action_next => 'التالي';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'تخطّي الآن';
   @override
@@ -40836,6 +40842,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -47181,6 +47189,8 @@ class _StringsDe extends _StringsEn {
   String get onboarding_action_badge_required => 'Erforderlich';
   @override
   String get onboarding_action_next => 'Weiter';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Vorerst überspringen';
   @override
@@ -63100,6 +63110,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -69451,6 +69463,8 @@ class _StringsEs extends _StringsEn {
   String get onboarding_action_badge_required => 'Obligatorio';
   @override
   String get onboarding_action_next => 'Siguiente';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Omitir por ahora';
   @override
@@ -85428,6 +85442,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -91801,6 +91817,8 @@ class _StringsFr extends _StringsEn {
   String get onboarding_action_badge_required => 'Requis';
   @override
   String get onboarding_action_next => 'Suivant';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Passer pour le moment';
   @override
@@ -107711,6 +107729,8 @@ class _StringsId extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -113984,6 +114004,8 @@ class _StringsId extends _StringsEn {
   String get onboarding_action_badge_required => 'Wajib';
   @override
   String get onboarding_action_next => 'Berikutnya';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Lewati untuk sekarang';
   @override
@@ -129794,6 +129816,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -136121,6 +136145,8 @@ class _StringsIt extends _StringsEn {
   String get onboarding_action_badge_required => 'Obbligatorio';
   @override
   String get onboarding_action_next => 'Avanti';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Salta per ora';
   @override
@@ -151742,6 +151768,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => '開いた時の画面を添付';
+  @override
   String get feedback_compose_attach_device => '端末情報を添付';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -157729,6 +157757,8 @@ class _StringsJa extends _StringsEn {
   String get onboarding_action_badge_required => '必須';
   @override
   String get onboarding_action_next => '次へ';
+  @override
+  String get onboarding_action_scroll_more => '下にスクロール';
   @override
   String get onboarding_action_skip => '今はスキップ';
   @override
@@ -172898,6 +172928,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -178916,6 +178948,8 @@ class _StringsKo extends _StringsEn {
   String get onboarding_action_badge_required => '필수';
   @override
   String get onboarding_action_next => '다음';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => '나중에 하기';
   @override
@@ -194381,6 +194415,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -200677,6 +200713,8 @@ class _StringsNl extends _StringsEn {
   String get onboarding_action_badge_required => 'Verplicht';
   @override
   String get onboarding_action_next => 'Volgende';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Later';
   @override
@@ -216551,6 +216589,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -222877,6 +222917,8 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_action_badge_required => 'Obrigatório';
   @override
   String get onboarding_action_next => 'Próximo';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Pular por enquanto';
   @override
@@ -238743,6 +238785,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -245052,6 +245096,8 @@ class _StringsRu extends _StringsEn {
   String get onboarding_action_badge_required => 'Обязательно';
   @override
   String get onboarding_action_next => 'Далее';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Пропустить';
   @override
@@ -260829,6 +260875,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -267033,6 +267081,8 @@ class _StringsTh extends _StringsEn {
   String get onboarding_action_badge_required => 'จำเป็น';
   @override
   String get onboarding_action_next => 'ถัดไป';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'ข้ามไปก่อน';
   @override
@@ -282731,6 +282781,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -289005,6 +289057,8 @@ class _StringsTr extends _StringsEn {
   String get onboarding_action_badge_required => 'Zorunlu';
   @override
   String get onboarding_action_next => 'İleri';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Şimdilik atla';
   @override
@@ -304761,6 +304815,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => 'Add screen at open';
+  @override
   String get feedback_compose_attach_device => 'Attach device info';
   @override
   String get feedback_compose_attach_device_hint =>
@@ -311011,6 +311067,8 @@ class _StringsVi extends _StringsEn {
   String get onboarding_action_badge_required => 'Bắt buộc';
   @override
   String get onboarding_action_next => 'Tiếp theo';
+  @override
+  String get onboarding_action_scroll_more => 'Scroll down';
   @override
   String get onboarding_action_skip => 'Bỏ qua';
   @override
@@ -326237,6 +326295,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_compose_add_video => '添加视频';
   @override
+  String get feedback_compose_attach_auto_shot => '附上当时画面';
+  @override
   String get feedback_compose_attach_device => '附带设备信息';
   @override
   String get feedback_compose_attach_device_hint => 'App 版本、系统版本、机型、界面语言与窗口尺寸';
@@ -331945,6 +332005,8 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_action_badge_required => '必做';
   @override
   String get onboarding_action_next => '下一步';
+  @override
+  String get onboarding_action_scroll_more => '往下看';
   @override
   String get onboarding_action_skip => '暂时跳过';
   @override
@@ -346444,6 +346506,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_compose_add_video => 'Add video';
   @override
+  String get feedback_compose_attach_auto_shot => '附上當時畫面';
+  @override
   String get feedback_compose_attach_device => '附帶裝置資訊';
   @override
   String get feedback_compose_attach_device_hint => 'App 版本、系統版本、機型、介面語言與視窗尺寸';
@@ -352233,6 +352297,8 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_action_badge_required => '必做';
   @override
   String get onboarding_action_next => '下一步';
+  @override
+  String get onboarding_action_scroll_more => '往下看';
   @override
   String get onboarding_action_skip => '暫時跳過';
   @override
@@ -366437,6 +366503,8 @@ extension on _StringsEn {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -371766,6 +371834,8 @@ extension on _StringsEn {
         return 'Required';
       case 'onboarding_action_next':
         return 'Next';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Skip for now';
       case 'onboarding_action_start':
@@ -385143,6 +385213,8 @@ extension on _StringsAr {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -390467,6 +390539,8 @@ extension on _StringsAr {
         return 'مطلوب';
       case 'onboarding_action_next':
         return 'التالي';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'تخطّي الآن';
       case 'onboarding_action_start':
@@ -403875,6 +403949,8 @@ extension on _StringsDe {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -409221,6 +409297,8 @@ extension on _StringsDe {
         return 'Erforderlich';
       case 'onboarding_action_next':
         return 'Weiter';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Vorerst überspringen';
       case 'onboarding_action_start':
@@ -422641,6 +422719,8 @@ extension on _StringsEs {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -427982,6 +428062,8 @@ extension on _StringsEs {
         return 'Obligatorio';
       case 'onboarding_action_next':
         return 'Siguiente';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Omitir por ahora';
       case 'onboarding_action_start':
@@ -441412,6 +441494,8 @@ extension on _StringsFr {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -446755,6 +446839,8 @@ extension on _StringsFr {
         return 'Requis';
       case 'onboarding_action_next':
         return 'Suivant';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Passer pour le moment';
       case 'onboarding_action_start':
@@ -460164,6 +460250,8 @@ extension on _StringsId {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -465494,6 +465582,8 @@ extension on _StringsId {
         return 'Wajib';
       case 'onboarding_action_next':
         return 'Berikutnya';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Lewati untuk sekarang';
       case 'onboarding_action_start':
@@ -478894,6 +478984,8 @@ extension on _StringsIt {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -484233,6 +484325,8 @@ extension on _StringsIt {
         return 'Obbligatorio';
       case 'onboarding_action_next':
         return 'Avanti';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Salta per ora';
       case 'onboarding_action_start':
@@ -497607,6 +497701,8 @@ extension on _StringsJa {
         return '画像を追加';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return '開いた時の画面を添付';
       case 'feedback_compose_attach_device':
         return '端末情報を添付';
       case 'feedback_compose_attach_device_hint':
@@ -502915,6 +503011,8 @@ extension on _StringsJa {
         return '必須';
       case 'onboarding_action_next':
         return '次へ';
+      case 'onboarding_action_scroll_more':
+        return '下にスクロール';
       case 'onboarding_action_skip':
         return '今はスキップ';
       case 'onboarding_action_start':
@@ -516230,6 +516328,8 @@ extension on _StringsKo {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -521539,6 +521639,8 @@ extension on _StringsKo {
         return '필수';
       case 'onboarding_action_next':
         return '다음';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return '나중에 하기';
       case 'onboarding_action_start':
@@ -534906,6 +535008,8 @@ extension on _StringsNl {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -540249,6 +540353,8 @@ extension on _StringsNl {
         return 'Verplicht';
       case 'onboarding_action_next':
         return 'Volgende';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Later';
       case 'onboarding_action_start':
@@ -553656,6 +553762,8 @@ extension on _StringsPtBr {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -558995,6 +559103,8 @@ extension on _StringsPtBr {
         return 'Obrigatório';
       case 'onboarding_action_next':
         return 'Próximo';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Pular por enquanto';
       case 'onboarding_action_start':
@@ -572406,6 +572516,8 @@ extension on _StringsRu {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -577745,6 +577857,8 @@ extension on _StringsRu {
         return 'Обязательно';
       case 'onboarding_action_next':
         return 'Далее';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Пропустить';
       case 'onboarding_action_start':
@@ -591130,6 +591244,8 @@ extension on _StringsTh {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -596458,6 +596574,8 @@ extension on _StringsTh {
         return 'จำเป็น';
       case 'onboarding_action_next':
         return 'ถัดไป';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'ข้ามไปก่อน';
       case 'onboarding_action_start':
@@ -609851,6 +609969,8 @@ extension on _StringsTr {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -615186,6 +615306,8 @@ extension on _StringsTr {
         return 'Zorunlu';
       case 'onboarding_action_next':
         return 'İleri';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Şimdilik atla';
       case 'onboarding_action_start':
@@ -628579,6 +628701,8 @@ extension on _StringsVi {
         return 'Add image';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return 'Add screen at open';
       case 'feedback_compose_attach_device':
         return 'Attach device info';
       case 'feedback_compose_attach_device_hint':
@@ -633906,6 +634030,8 @@ extension on _StringsVi {
         return 'Bắt buộc';
       case 'onboarding_action_next':
         return 'Tiếp theo';
+      case 'onboarding_action_scroll_more':
+        return 'Scroll down';
       case 'onboarding_action_skip':
         return 'Bỏ qua';
       case 'onboarding_action_start':
@@ -647216,6 +647342,8 @@ extension on _StringsZhCn {
         return '添加图片';
       case 'feedback_compose_add_video':
         return '添加视频';
+      case 'feedback_compose_attach_auto_shot':
+        return '附上当时画面';
       case 'feedback_compose_attach_device':
         return '附带设备信息';
       case 'feedback_compose_attach_device_hint':
@@ -652494,6 +652622,8 @@ extension on _StringsZhCn {
         return '必做';
       case 'onboarding_action_next':
         return '下一步';
+      case 'onboarding_action_scroll_more':
+        return '往下看';
       case 'onboarding_action_skip':
         return '暂时跳过';
       case 'onboarding_action_start':
@@ -665715,6 +665845,8 @@ extension on _StringsZhHk {
         return '加入圖片';
       case 'feedback_compose_add_video':
         return 'Add video';
+      case 'feedback_compose_attach_auto_shot':
+        return '附上當時畫面';
       case 'feedback_compose_attach_device':
         return '附帶裝置資訊';
       case 'feedback_compose_attach_device_hint':
@@ -671013,6 +671145,8 @@ extension on _StringsZhHk {
         return '必做';
       case 'onboarding_action_next':
         return '下一步';
+      case 'onboarding_action_scroll_more':
+        return '往下看';
       case 'onboarding_action_skip':
         return '暫時跳過';
       case 'onboarding_action_start':
