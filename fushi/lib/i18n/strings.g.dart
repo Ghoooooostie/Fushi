@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154207 (9071 per locale)
+/// Strings: 154292 (9076 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5488,11 +5488,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String init_error_message({required Object error}) =>
       'Initialization failed: ${error}';
   String get initialization_failed => 'Initialisation failed';
-  String get interconnect_auto_sync_entry => 'When to sync';
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync => 'Auto sync';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   String get interconnect_backup_backend =>
       'Use interconnect as the backup backend';
   String get interconnect_backup_backend_active =>
@@ -10429,6 +10427,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String sync_auth_error({required Object message}) =>
       'Authentication failed: ${message}';
   String get sync_auto_sync => 'Auto sync';
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
   String get sync_backend => 'Storage backend';
   String get sync_backend_dropbox => 'Dropbox';
   String get sync_backend_ftp => 'FTP';
@@ -10911,6 +10911,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get torrent_upload_intro_enable => 'Enable upload / seeding';
   String get torrent_upload_intro_keep_off => 'Keep off';
   String get torrent_upload_intro_title => 'Upload / seeding';
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  String get tts_system_language_default => 'the system default language';
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   String get undo => 'Undo';
   String get unit_kbps => 'kbps';
   String get unit_milliseconds => 'ms';
@@ -22100,13 +22109,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get initialization_failed => 'فشل التهيئة';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'استخدام الترابط كواجهة النسخ الاحتياطي';
@@ -30593,6 +30599,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_auto_sync => 'مزامنة تلقائية';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'خادم التخزين';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -31445,6 +31454,20 @@ class _StringsAr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'الإبقاء معطلاً';
   @override
   String get torrent_upload_intro_title => 'الرفع / البذر';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'تراجع';
   @override
@@ -44318,13 +44341,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get initialization_failed => 'Initialisierung fehlgeschlagen';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Interconnect als Sicherungs-Backend verwenden';
@@ -52945,6 +52965,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_auto_sync => 'Auto-Sync';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Speicher-Backend';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -53814,6 +53837,20 @@ class _StringsDe extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Deaktiviert lassen';
   @override
   String get torrent_upload_intro_title => 'Upload / Seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Rückgängig';
   @override
@@ -66774,13 +66811,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get initialization_failed => 'Error de inicialización';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Usar Interconnect como backend de copia de seguridad';
@@ -75417,6 +75451,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_auto_sync => 'Sincronización automática';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Backend de almacenamiento';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -76292,6 +76329,20 @@ class _StringsEs extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Mantener apagado';
   @override
   String get torrent_upload_intro_title => 'Subida / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Deshacer';
   @override
@@ -89303,13 +89354,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get initialization_failed => 'Échec de l\'initialisation';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Utiliser l\'interconnexion comme support de sauvegarde';
@@ -97970,6 +98018,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_auto_sync => 'Sync auto';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Backend de stockage';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -98846,6 +98897,20 @@ class _StringsFr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Garder désactivé';
   @override
   String get torrent_upload_intro_title => 'Envoi / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Annuler';
   @override
@@ -111735,13 +111800,10 @@ class _StringsId extends _StringsEn {
   @override
   String get initialization_failed => 'Inisialisasi gagal';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Gunakan interconnect sebagai backend cadangan';
@@ -120286,6 +120348,9 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_auto_sync => 'Sinkronisasi Otomatis';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Backend penyimpanan';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -121146,6 +121211,20 @@ class _StringsId extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Tetap matikan';
   @override
   String get torrent_upload_intro_title => 'Unggah / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Urungkan';
   @override
@@ -134034,13 +134113,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get initialization_failed => 'Inizializzazione fallita';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Usa interconnect come backend di backup';
@@ -142650,6 +142726,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_auto_sync => 'Sincronizzazione automatica';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Backend di archiviazione';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -143517,6 +143596,20 @@ class _StringsIt extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Mantieni disattivato';
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Annulla';
   @override
@@ -156008,13 +156101,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get initialization_failed => '初期化に失敗しました';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend => 'バックアップバックエンド';
   @override
@@ -164280,6 +164370,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_auto_sync => '自動同期';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'ストレージバックエンド';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -165091,6 +165184,20 @@ class _StringsJa extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'オフのまま';
   @override
   String get torrent_upload_intro_title => 'アップロード/シード';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => '元に戻す';
   @override
@@ -177370,13 +177477,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get initialization_failed => '초기화 실패';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend => '인터커넥트를 백업 백엔드로 사용';
   @override
@@ -185663,6 +185767,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_auto_sync => '자동 동기화';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => '저장소 백엔드';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -186477,6 +186584,20 @@ class _StringsKo extends _StringsEn {
   String get torrent_upload_intro_keep_off => '끈 상태 유지';
   @override
   String get torrent_upload_intro_title => '업로드 / 시딩';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => '되돌리기';
   @override
@@ -199183,13 +199304,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get initialization_failed => 'Initialisatie mislukt';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Interconnect als back-upbackend gebruiken';
@@ -207780,6 +207898,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_auto_sync => 'Automatisch synchroniseren';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Opslagbackend';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -208650,6 +208771,20 @@ class _StringsNl extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Uit laten';
   @override
   String get torrent_upload_intro_title => 'Uploaden / seeden';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Ongedaan maken';
   @override
@@ -221565,13 +221700,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get initialization_failed => 'Falha na inicialização';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Usar interconexão como backend de backup';
@@ -230173,6 +230305,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_auto_sync => 'Sincronização automática';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Backend de armazenamento';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -231039,6 +231174,20 @@ class _StringsPtBr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Manter desligado';
   @override
   String get torrent_upload_intro_title => 'Envio / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Desfazer';
   @override
@@ -243937,13 +244086,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get initialization_failed => 'Ошибка инициализации';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Использовать взаимосвязь как бэкенд резервного копирования';
@@ -252543,6 +252689,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_auto_sync => 'Автосинхронизация';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Хранилище';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -253405,6 +253554,20 @@ class _StringsRu extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Оставить выключенным';
   @override
   String get torrent_upload_intro_title => 'Раздача / сидирование';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Отменить';
   @override
@@ -266162,13 +266325,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get initialization_failed => 'เริ่มต้นล้มเหลว';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'ใช้การเชื่อมต่ออุปกรณ์เป็นแบ็กเอนด์สำรองข้อมูล';
@@ -274658,6 +274818,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_auto_sync => 'ซิงค์อัตโนมัติ';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'แบ็กเอนด์จัดเก็บข้อมูล';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -275513,6 +275676,20 @@ class _StringsTh extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'ปิดไว้';
   @override
   String get torrent_upload_intro_title => 'อัปโหลด / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'เลิกทำ';
   @override
@@ -288300,13 +288477,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get initialization_failed => 'Başlatma başarısız';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Yedekleme arka ucu olarak bağlantıyı kullan';
@@ -296853,6 +297027,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_auto_sync => 'Otomatik Eşitleme';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Depolama arka ucu';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -297714,6 +297891,20 @@ class _StringsTr extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Kapalı tut';
   @override
   String get torrent_upload_intro_title => 'Yükleme / paylaşma';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Geri al';
   @override
@@ -310511,13 +310702,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get initialization_failed => 'Khởi tạo thất bại';
   @override
-  String get interconnect_auto_sync_entry => 'When to sync';
+  String get interconnect_auto_sync => 'Auto sync';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+  String get interconnect_auto_sync_hint =>
+      'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
   @override
   String get interconnect_backup_backend =>
       'Dùng kết nối liên thiết bị làm backend sao lưu';
@@ -319037,6 +319225,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_auto_sync => 'Tự động đồng bộ';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
+  @override
   String get sync_backend => 'Phương thức lưu trữ';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -319892,6 +320083,20 @@ class _StringsVi extends _StringsEn {
   String get torrent_upload_intro_keep_off => 'Giữ tắt';
   @override
   String get torrent_upload_intro_title => 'Tải lên / seeding';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => 'Hoàn tác';
   @override
@@ -331893,13 +332098,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get initialization_failed => '初始化失败';
   @override
-  String get interconnect_auto_sync_entry => '同步时机';
+  String get interconnect_auto_sync => '自动同步';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      '自动同步已关闭：上面这些内容只在点「立即同步」时才与对端合并。点此去开启';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      '自动同步已开启：打开应用、切到后台时以及运行中定期与对端合并上面这些内容';
+  String get interconnect_auto_sync_hint =>
+      '打开应用、切到后台时以及运行中定期与已配对设备合并进度、统计、收藏夹与合集。与云同步的自动同步互不影响';
   @override
   String get interconnect_backup_backend => '用互联做备份后端';
   @override
@@ -339744,6 +339946,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_auto_sync => '自动同步';
   @override
+  String get sync_auto_sync_cloud_hint => '只管云同步。Fushi 互联的自动同步在「Fushi 互联」页单独设置';
+  @override
   String get sync_backend => '存储后端';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -340514,6 +340718,18 @@ class _StringsZhCn extends _StringsEn {
   String get torrent_upload_intro_keep_off => '保持关闭';
   @override
   String get torrent_upload_intro_title => '上传 / 做种';
+  @override
+  String get tts_system_engine_unavailable => '本机没有可用的系统语音引擎，可在设置里换一个 TTS 声音。';
+  @override
+  String get tts_system_language_default => '系统默认语言';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      '系统语音没有安装${language}的语音数据，可在系统「文字转语音」设置里下载，或在设置里换一个 TTS 声音。';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      '系统语音不支持${language}，可在设置里换一个 TTS 声音，或在系统里装支持该语言的语音引擎。';
+  @override
+  String get tts_system_synthesis_failed => '系统语音合成失败。';
   @override
   String get undo => '撤销';
   @override
@@ -352321,13 +352537,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get initialization_failed => '初始化失敗';
   @override
-  String get interconnect_auto_sync_entry => '同步時機';
+  String get interconnect_auto_sync => '自動同步';
   @override
-  String get interconnect_auto_sync_entry_off =>
-      '自動同步已關閉：上面這些內容只在點「立即同步」時才與對端合併。點此去開啟';
-  @override
-  String get interconnect_auto_sync_entry_on =>
-      '自動同步已開啟：開啟應用、切到背景時以及運行中定期與對端合併上面這些內容';
+  String get interconnect_auto_sync_hint =>
+      '開啟應用、切到背景時以及運行中定期與已配對裝置合併進度、統計、收藏夾與合集。與雲端同步的自動同步互不影響';
   @override
   String get interconnect_backup_backend => '用互聯做備份後端';
   @override
@@ -360414,6 +360627,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_auto_sync => '自動同步';
   @override
+  String get sync_auto_sync_cloud_hint =>
+      '只管雲端同步。Fushi 互聯的自動同步在「Fushi 互聯」頁單獨設定';
+  @override
   String get sync_backend => '儲存後端';
   @override
   String get sync_backend_dropbox => 'Dropbox';
@@ -361196,6 +361412,20 @@ class _StringsZhHk extends _StringsEn {
   String get torrent_upload_intro_keep_off => '保持關閉';
   @override
   String get torrent_upload_intro_title => '上傳 / 做種';
+  @override
+  String get tts_system_engine_unavailable =>
+      'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+  @override
+  String get tts_system_language_default => 'the system default language';
+  @override
+  String tts_system_language_missing_data({required Object language}) =>
+      'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+  @override
+  String tts_system_language_unsupported({required Object language}) =>
+      'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+  @override
+  String get tts_system_synthesis_failed =>
+      'The system voice failed to generate audio.';
   @override
   String get undo => '復原';
   @override
@@ -372266,12 +372496,10 @@ extension on _StringsEn {
         return ({required Object error}) => 'Initialization failed: ${error}';
       case 'initialization_failed':
         return 'Initialisation failed';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Use interconnect as the backup backend';
       case 'interconnect_backup_backend_active':
@@ -379657,6 +379885,8 @@ extension on _StringsEn {
             'Authentication failed: ${message}';
       case 'sync_auto_sync':
         return 'Auto sync';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Storage backend';
       case 'sync_backend_dropbox':
@@ -380405,6 +380635,18 @@ extension on _StringsEn {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Undo';
       case 'unit_kbps':
@@ -391126,12 +391368,10 @@ extension on _StringsAr {
         return ({required Object error}) => 'فشلت التهيئة: ${error}';
       case 'initialization_failed':
         return 'فشل التهيئة';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'استخدام الترابط كواجهة النسخ الاحتياطي';
       case 'interconnect_backup_backend_active':
@@ -398510,6 +398750,8 @@ extension on _StringsAr {
         return ({required Object message}) => 'فشلت المصادقة: ${message}';
       case 'sync_auto_sync':
         return 'مزامنة تلقائية';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'خادم التخزين';
       case 'sync_backend_dropbox':
@@ -399260,6 +399502,18 @@ extension on _StringsAr {
         return 'الإبقاء معطلاً';
       case 'torrent_upload_intro_title':
         return 'الرفع / البذر';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'تراجع';
       case 'unit_kbps':
@@ -410020,12 +410274,10 @@ extension on _StringsDe {
             'Initialisierung fehlgeschlagen: ${error}';
       case 'initialization_failed':
         return 'Initialisierung fehlgeschlagen';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Interconnect als Sicherungs-Backend verwenden';
       case 'interconnect_backup_backend_active':
@@ -417430,6 +417682,8 @@ extension on _StringsDe {
             'Authentifizierung fehlgeschlagen: ${message}';
       case 'sync_auto_sync':
         return 'Auto-Sync';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Speicher-Backend';
       case 'sync_backend_dropbox':
@@ -418183,6 +418437,18 @@ extension on _StringsDe {
         return 'Deaktiviert lassen';
       case 'torrent_upload_intro_title':
         return 'Upload / Seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Rückgängig';
       case 'unit_kbps':
@@ -428941,12 +429207,10 @@ extension on _StringsEs {
         return ({required Object error}) => 'Error de inicialización: ${error}';
       case 'initialization_failed':
         return 'Error de inicialización';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Usar Interconnect como backend de copia de seguridad';
       case 'interconnect_backup_backend_active':
@@ -436347,6 +436611,8 @@ extension on _StringsEs {
             'Error de autenticación: ${message}';
       case 'sync_auto_sync':
         return 'Sincronización automática';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Backend de almacenamiento';
       case 'sync_backend_dropbox':
@@ -437098,6 +437364,18 @@ extension on _StringsEs {
         return 'Mantener apagado';
       case 'torrent_upload_intro_title':
         return 'Subida / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Deshacer';
       case 'unit_kbps':
@@ -447870,12 +448148,10 @@ extension on _StringsFr {
             'Échec de l\'initialisation : ${error}';
       case 'initialization_failed':
         return 'Échec de l\'initialisation';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Utiliser l\'interconnexion comme support de sauvegarde';
       case 'interconnect_backup_backend_active':
@@ -455274,6 +455550,8 @@ extension on _StringsFr {
             'Échec de l\'authentification : ${message}';
       case 'sync_auto_sync':
         return 'Sync auto';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Backend de stockage';
       case 'sync_backend_dropbox':
@@ -456027,6 +456305,18 @@ extension on _StringsFr {
         return 'Garder désactivé';
       case 'torrent_upload_intro_title':
         return 'Envoi / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Annuler';
       case 'unit_kbps':
@@ -466774,12 +467064,10 @@ extension on _StringsId {
         return ({required Object error}) => 'Inisialisasi gagal: ${error}';
       case 'initialization_failed':
         return 'Inisialisasi gagal';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Gunakan interconnect sebagai backend cadangan';
       case 'interconnect_backup_backend_active':
@@ -474164,6 +474452,8 @@ extension on _StringsId {
         return ({required Object message}) => 'Autentikasi gagal: ${message}';
       case 'sync_auto_sync':
         return 'Sinkronisasi Otomatis';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Backend penyimpanan';
       case 'sync_backend_dropbox':
@@ -474914,6 +475204,18 @@ extension on _StringsId {
         return 'Tetap matikan';
       case 'torrent_upload_intro_title':
         return 'Unggah / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Urungkan';
       case 'unit_kbps':
@@ -485662,12 +485964,10 @@ extension on _StringsIt {
             'Inizializzazione fallita: ${error}';
       case 'initialization_failed':
         return 'Inizializzazione fallita';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Usa interconnect come backend di backup';
       case 'interconnect_backup_backend_active':
@@ -493063,6 +493363,8 @@ extension on _StringsIt {
             'Autenticazione fallita: ${message}';
       case 'sync_auto_sync':
         return 'Sincronizzazione automatica';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Backend di archiviazione';
       case 'sync_backend_dropbox':
@@ -493816,6 +494118,18 @@ extension on _StringsIt {
         return 'Mantieni disattivato';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Annulla';
       case 'unit_kbps':
@@ -504521,12 +504835,10 @@ extension on _StringsJa {
         return ({required Object error}) => '初期化に失敗しました：${error}';
       case 'initialization_failed':
         return '初期化に失敗しました';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'バックアップバックエンド';
       case 'interconnect_backup_backend_active':
@@ -511886,6 +512198,8 @@ extension on _StringsJa {
         return ({required Object message}) => '認証失敗：${message}';
       case 'sync_auto_sync':
         return '自動同期';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'ストレージバックエンド';
       case 'sync_backend_dropbox':
@@ -512631,6 +512945,18 @@ extension on _StringsJa {
         return 'オフのまま';
       case 'torrent_upload_intro_title':
         return 'アップロード/シード';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return '元に戻す';
       case 'unit_kbps':
@@ -523302,12 +523628,10 @@ extension on _StringsKo {
         return ({required Object error}) => '초기화 실패: ${error}';
       case 'initialization_failed':
         return '초기화 실패';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return '인터커넥트를 백업 백엔드로 사용';
       case 'interconnect_backup_backend_active':
@@ -530668,6 +530992,8 @@ extension on _StringsKo {
         return ({required Object message}) => '인증 실패: ${message}';
       case 'sync_auto_sync':
         return '자동 동기화';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return '저장소 백엔드';
       case 'sync_backend_dropbox':
@@ -531413,6 +531739,18 @@ extension on _StringsKo {
         return '끈 상태 유지';
       case 'torrent_upload_intro_title':
         return '업로드 / 시딩';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return '되돌리기';
       case 'unit_kbps':
@@ -542141,12 +542479,10 @@ extension on _StringsNl {
         return ({required Object error}) => 'Initialisatie mislukt: ${error}';
       case 'initialization_failed':
         return 'Initialisatie mislukt';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Interconnect als back-upbackend gebruiken';
       case 'interconnect_backup_backend_active':
@@ -549547,6 +549883,8 @@ extension on _StringsNl {
             'Authenticatie mislukt: ${message}';
       case 'sync_auto_sync':
         return 'Automatisch synchroniseren';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Opslagbackend';
       case 'sync_backend_dropbox':
@@ -550296,6 +550634,18 @@ extension on _StringsNl {
         return 'Uit laten';
       case 'torrent_upload_intro_title':
         return 'Uploaden / seeden';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Ongedaan maken';
       case 'unit_kbps':
@@ -561047,12 +561397,10 @@ extension on _StringsPtBr {
         return ({required Object error}) => 'Falha na inicialização: ${error}';
       case 'initialization_failed':
         return 'Falha na inicialização';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Usar interconexão como backend de backup';
       case 'interconnect_backup_backend_active':
@@ -568447,6 +568795,8 @@ extension on _StringsPtBr {
             'Falha na autenticação: ${message}';
       case 'sync_auto_sync':
         return 'Sincronização automática';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Backend de armazenamento';
       case 'sync_backend_dropbox':
@@ -569195,6 +569545,18 @@ extension on _StringsPtBr {
         return 'Manter desligado';
       case 'torrent_upload_intro_title':
         return 'Envio / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Desfazer';
       case 'unit_kbps':
@@ -579953,12 +580315,10 @@ extension on _StringsRu {
         return ({required Object error}) => 'Ошибка инициализации: ${error}';
       case 'initialization_failed':
         return 'Ошибка инициализации';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Использовать взаимосвязь как бэкенд резервного копирования';
       case 'interconnect_backup_backend_active':
@@ -587353,6 +587713,8 @@ extension on _StringsRu {
             'Ошибка аутентификации: ${message}';
       case 'sync_auto_sync':
         return 'Автосинхронизация';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Хранилище';
       case 'sync_backend_dropbox':
@@ -588102,6 +588464,18 @@ extension on _StringsRu {
         return 'Оставить выключенным';
       case 'torrent_upload_intro_title':
         return 'Раздача / сидирование';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Отменить';
       case 'unit_kbps':
@@ -598831,12 +599205,10 @@ extension on _StringsTh {
         return ({required Object error}) => 'เริ่มต้นล้มเหลว: ${error}';
       case 'initialization_failed':
         return 'เริ่มต้นล้มเหลว';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'ใช้การเชื่อมต่ออุปกรณ์เป็นแบ็กเอนด์สำรองข้อมูล';
       case 'interconnect_backup_backend_active':
@@ -606219,6 +606591,8 @@ extension on _StringsTh {
             'การยืนยันตัวตนล้มเหลว: ${message}';
       case 'sync_auto_sync':
         return 'ซิงค์อัตโนมัติ';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'แบ็กเอนด์จัดเก็บข้อมูล';
       case 'sync_backend_dropbox':
@@ -606968,6 +607342,18 @@ extension on _StringsTh {
         return 'ปิดไว้';
       case 'torrent_upload_intro_title':
         return 'อัปโหลด / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'เลิกทำ';
       case 'unit_kbps':
@@ -617709,12 +618095,10 @@ extension on _StringsTr {
         return ({required Object error}) => 'Başlatma başarısız: ${error}';
       case 'initialization_failed':
         return 'Başlatma başarısız';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Yedekleme arka ucu olarak bağlantıyı kullan';
       case 'interconnect_backup_backend_active':
@@ -625102,6 +625486,8 @@ extension on _StringsTr {
             'Kimlik doğrulama başarısız: ${message}';
       case 'sync_auto_sync':
         return 'Otomatik Eşitleme';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Depolama arka ucu';
       case 'sync_backend_dropbox':
@@ -625852,6 +626238,18 @@ extension on _StringsTr {
         return 'Kapalı tut';
       case 'torrent_upload_intro_title':
         return 'Yükleme / paylaşma';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Geri al';
       case 'unit_kbps':
@@ -636592,12 +636990,10 @@ extension on _StringsVi {
         return ({required Object error}) => 'Khởi tạo thất bại: ${error}';
       case 'initialization_failed':
         return 'Khởi tạo thất bại';
-      case 'interconnect_auto_sync_entry':
-        return 'When to sync';
-      case 'interconnect_auto_sync_entry_off':
-        return 'Auto sync is off: these only merge when you tap Sync now. Tap to turn it on';
-      case 'interconnect_auto_sync_entry_on':
-        return 'Auto sync is on: these merge with the paired device when the app opens, goes to the background, and periodically while it runs';
+      case 'interconnect_auto_sync':
+        return 'Auto sync';
+      case 'interconnect_auto_sync_hint':
+        return 'Merge progress, statistics, favorites and collections with the paired device when the app opens, goes to the background, and periodically while it runs. Separate from cloud sync\'s auto sync';
       case 'interconnect_backup_backend':
         return 'Dùng kết nối liên thiết bị làm backend sao lưu';
       case 'interconnect_backup_backend_active':
@@ -643983,6 +644379,8 @@ extension on _StringsVi {
         return ({required Object message}) => 'Xác thực thất bại: ${message}';
       case 'sync_auto_sync':
         return 'Tự động đồng bộ';
+      case 'sync_auto_sync_cloud_hint':
+        return 'Cloud sync only. Fushi Interconnect has its own auto sync switch on the Interconnect page';
       case 'sync_backend':
         return 'Phương thức lưu trữ';
       case 'sync_backend_dropbox':
@@ -644732,6 +645130,18 @@ extension on _StringsVi {
         return 'Giữ tắt';
       case 'torrent_upload_intro_title':
         return 'Tải lên / seeding';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return 'Hoàn tác';
       case 'unit_kbps':
@@ -655361,12 +655771,10 @@ extension on _StringsZhCn {
         return ({required Object error}) => '初始化失败：${error}';
       case 'initialization_failed':
         return '初始化失败';
-      case 'interconnect_auto_sync_entry':
-        return '同步时机';
-      case 'interconnect_auto_sync_entry_off':
-        return '自动同步已关闭：上面这些内容只在点「立即同步」时才与对端合并。点此去开启';
-      case 'interconnect_auto_sync_entry_on':
-        return '自动同步已开启：打开应用、切到后台时以及运行中定期与对端合并上面这些内容';
+      case 'interconnect_auto_sync':
+        return '自动同步';
+      case 'interconnect_auto_sync_hint':
+        return '打开应用、切到后台时以及运行中定期与已配对设备合并进度、统计、收藏夹与合集。与云同步的自动同步互不影响';
       case 'interconnect_backup_backend':
         return '用互联做备份后端';
       case 'interconnect_backup_backend_active':
@@ -662675,6 +663083,8 @@ extension on _StringsZhCn {
         return ({required Object message}) => '认证失败：${message}';
       case 'sync_auto_sync':
         return '自动同步';
+      case 'sync_auto_sync_cloud_hint':
+        return '只管云同步。Fushi 互联的自动同步在「Fushi 互联」页单独设置';
       case 'sync_backend':
         return '存储后端';
       case 'sync_backend_dropbox':
@@ -663417,6 +663827,18 @@ extension on _StringsZhCn {
         return '保持关闭';
       case 'torrent_upload_intro_title':
         return '上传 / 做种';
+      case 'tts_system_engine_unavailable':
+        return '本机没有可用的系统语音引擎，可在设置里换一个 TTS 声音。';
+      case 'tts_system_language_default':
+        return '系统默认语言';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            '系统语音没有安装${language}的语音数据，可在系统「文字转语音」设置里下载，或在设置里换一个 TTS 声音。';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            '系统语音不支持${language}，可在设置里换一个 TTS 声音，或在系统里装支持该语言的语音引擎。';
+      case 'tts_system_synthesis_failed':
+        return '系统语音合成失败。';
       case 'undo':
         return '撤销';
       case 'unit_kbps':
@@ -674026,12 +674448,10 @@ extension on _StringsZhHk {
         return ({required Object error}) => '初始化失敗：${error}';
       case 'initialization_failed':
         return '初始化失敗';
-      case 'interconnect_auto_sync_entry':
-        return '同步時機';
-      case 'interconnect_auto_sync_entry_off':
-        return '自動同步已關閉：上面這些內容只在點「立即同步」時才與對端合併。點此去開啟';
-      case 'interconnect_auto_sync_entry_on':
-        return '自動同步已開啟：開啟應用、切到背景時以及運行中定期與對端合併上面這些內容';
+      case 'interconnect_auto_sync':
+        return '自動同步';
+      case 'interconnect_auto_sync_hint':
+        return '開啟應用、切到背景時以及運行中定期與已配對裝置合併進度、統計、收藏夾與合集。與雲端同步的自動同步互不影響';
       case 'interconnect_backup_backend':
         return '用互聯做備份後端';
       case 'interconnect_backup_backend_active':
@@ -681381,6 +681801,8 @@ extension on _StringsZhHk {
         return ({required Object message}) => '認證失敗：${message}';
       case 'sync_auto_sync':
         return '自動同步';
+      case 'sync_auto_sync_cloud_hint':
+        return '只管雲端同步。Fushi 互聯的自動同步在「Fushi 互聯」頁單獨設定';
       case 'sync_backend':
         return '儲存後端';
       case 'sync_backend_dropbox':
@@ -682124,6 +682546,18 @@ extension on _StringsZhHk {
         return '保持關閉';
       case 'torrent_upload_intro_title':
         return '上傳 / 做種';
+      case 'tts_system_engine_unavailable':
+        return 'No system text-to-speech engine is available on this device. Pick another TTS voice in settings.';
+      case 'tts_system_language_default':
+        return 'the system default language';
+      case 'tts_system_language_missing_data':
+        return ({required Object language}) =>
+            'The system voice has no voice data for ${language}. Download it in the system text-to-speech settings, or pick another TTS voice in settings.';
+      case 'tts_system_language_unsupported':
+        return ({required Object language}) =>
+            'The system voice cannot speak ${language}. Pick another TTS voice in settings, or install a speech engine that supports this language.';
+      case 'tts_system_synthesis_failed':
+        return 'The system voice failed to generate audio.';
       case 'undo':
         return '復原';
       case 'unit_kbps':
