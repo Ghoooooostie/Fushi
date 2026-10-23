@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153952 (9056 per locale)
+/// Strings: 154105 (9065 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4018,9 +4018,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Keep the ball on screen after switching to other apps. Needs the display-over-other-apps permission';
   String get floating_ball_system_hint_desktop =>
       'Keeps floating above other programs after you switch away from Fushi';
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action => 'Tap the ball to';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   String get floating_dict_close => 'Close';
   String get floating_dict_title => 'Dictionary';
   String get floating_lyric_appearance_section =>
@@ -8469,6 +8470,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not get a valid response from the cover source. Check your network and retry.';
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  String get screen_ocr_session_stop => 'Stop';
   String get search => 'Search';
   String get search_ellipsis => 'Search...';
   String get search_view_recent_remove => 'Remove from history';
@@ -8662,6 +8674,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'App-external lookup shortcut';
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
   String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
   String get shortcut_action_global_scroll_page_down =>
@@ -19571,10 +19585,12 @@ class _StringsAr extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'تبقى عائمة فوق البرامج الأخرى بعد التبديل بعيدًا عن Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'إغلاق';
   @override
@@ -27140,6 +27156,24 @@ class _StringsAr extends _StringsEn {
   String get scrape_reason_server =>
       'أرجع مصدر الغلاف خطأً. حاول لاحقاً أو اختر مرشحاً آخر.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'بحث';
   @override
   String get search_ellipsis => 'بحث...';
@@ -27497,6 +27531,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'إحضار إلى الواجهة وفتح صفحة البحث';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'التمرير لأسفل خطوة واحدة';
@@ -41685,10 +41722,12 @@ class _StringsDe extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Bleibt über anderen Programmen schweben, nachdem du von Fushi weggewechselt bist';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Schließen';
   @override
@@ -49429,6 +49468,24 @@ class _StringsDe extends _StringsEn {
   String get scrape_reason_server =>
       'Die Cover-Quelle hat einen Fehler zurückgegeben. Versuchen Sie es später erneut oder wählen Sie einen anderen Kandidaten.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Suchen';
   @override
   String get search_ellipsis => 'Suchen...';
@@ -49793,6 +49850,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'In den Vordergrund holen und Nachschlageseite öffnen';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Einen Schritt nach unten scrollen';
@@ -64100,10 +64160,12 @@ class _StringsEs extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Sigue flotando sobre otros programas cuando sales de Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Cerrar';
   @override
@@ -71850,6 +71912,24 @@ class _StringsEs extends _StringsEn {
   String get scrape_reason_server =>
       'La fuente de portadas devolvió un error. Inténtelo más tarde o elija otro candidato.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Buscar';
   @override
   String get search_ellipsis => 'Buscar...';
@@ -72218,6 +72298,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Traer al frente y abrir la página de consulta';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Desplazar un paso hacia abajo';
@@ -86585,10 +86668,12 @@ class _StringsFr extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Reste flottant au-dessus des autres programmes quand vous quittez Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Fermer';
   @override
@@ -94369,6 +94454,24 @@ class _StringsFr extends _StringsEn {
   String get scrape_reason_server =>
       'La source de couverture a renvoyé une erreur. Réessayez plus tard ou choisissez un autre candidat.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Rechercher';
   @override
   String get search_ellipsis => 'Rechercher...';
@@ -94736,6 +94839,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Mettre au premier plan et ouvrir la page de recherche';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Défiler d\'un cran vers le bas';
@@ -109018,10 +109124,12 @@ class _StringsId extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Tetap mengambang di atas program lain setelah Anda beralih dari Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Tutup';
   @override
@@ -116673,6 +116781,24 @@ class _StringsId extends _StringsEn {
   String get scrape_reason_server =>
       'Sumber sampul mengembalikan error. Coba lagi nanti atau pilih kandidat lain.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Cari';
   @override
   String get search_ellipsis => 'Cari...';
@@ -117033,6 +117159,9 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Bawa ke depan dan buka halaman pencarian';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Gulir turun satu langkah';
@@ -131257,10 +131386,12 @@ class _StringsIt extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Resta sopra gli altri programmi dopo che esci da Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Chiudi';
   @override
@@ -138974,6 +139105,24 @@ class _StringsIt extends _StringsEn {
   String get scrape_reason_server =>
       'La fonte della copertina ha restituito un errore. Riprova più tardi o scegli un altro candidato.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Cerca';
   @override
   String get search_ellipsis => 'Cerca...';
@@ -139342,6 +139491,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Porta in primo piano e apri la pagina di ricerca';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Scorri in basso di un passo';
@@ -153338,10 +153490,12 @@ class _StringsJa extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Fushi から切り替えた後も、他のプログラムの上に浮かんだままになります';
   @override
-  String get floating_ball_tap_clipboard => 'タップでクリップボードを検索';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'アプリ外でフローティングボールをタップするとコピーしたテキストをすぐに調べます。長押しでボタンを表示します';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => '閉じる';
   @override
@@ -160647,6 +160801,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get scrape_reason_server => 'カバーソースがエラーを返しました。後で再試行するか、別の候補を選択してください。';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => '検索';
   @override
   String get search_ellipsis => '検索...';
@@ -160995,6 +161167,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       '前面に出して辞書検索ページを開く';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => '1行下にスクロール';
   @override
@@ -174662,10 +174837,12 @@ class _StringsKo extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Fushi에서 다른 곳으로 전환한 뒤에도 다른 프로그램 위에 떠 있습니다';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => '닫기';
   @override
@@ -181989,6 +182166,24 @@ class _StringsKo extends _StringsEn {
   String get scrape_reason_server =>
       '커버 소스에서 오류를 반환했습니다. 나중에 다시 시도하거나 다른 후보를 선택하세요.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => '검색';
   @override
   String get search_ellipsis => '검색...';
@@ -182337,6 +182532,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       '앞으로 가져와 검색 페이지 열기';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => '한 단계 아래로 스크롤';
   @override
@@ -196301,10 +196499,12 @@ class _StringsNl extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Blijft boven andere programma\'s zweven nadat je van Fushi bent weggeschakeld';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Sluiten';
   @override
@@ -203996,6 +204196,24 @@ class _StringsNl extends _StringsEn {
   String get scrape_reason_server =>
       'De omslagbron gaf een fout terug. Probeer het later opnieuw of kies een andere kandidaat.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Zoeken';
   @override
   String get search_ellipsis => 'Zoeken...';
@@ -204358,6 +204576,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Naar voren halen en opzoekpagina openen';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Één stap omlaag scrollen';
@@ -218628,10 +218849,12 @@ class _StringsPtBr extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Continua flutuando sobre outros programas depois que você sai do Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Fechar';
   @override
@@ -226346,6 +226569,24 @@ class _StringsPtBr extends _StringsEn {
   String get scrape_reason_server =>
       'A fonte de capas retornou um erro. Tente novamente mais tarde ou escolha outro candidato.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Buscar';
   @override
   String get search_ellipsis => 'Buscar...';
@@ -226712,6 +226953,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Trazer para frente e abrir a página de consulta';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Rolar uma etapa para baixo';
@@ -240972,10 +241216,12 @@ class _StringsRu extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Остаётся поверх других программ после переключения из Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Закрыть';
   @override
@@ -248678,6 +248924,24 @@ class _StringsRu extends _StringsEn {
   String get scrape_reason_server =>
       'Источник обложки вернул ошибку. Попробуйте позже или выберите другой вариант.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Поиск';
   @override
   String get search_ellipsis => 'Поиск...';
@@ -249043,6 +249307,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Вывести на передний план и открыть страницу поиска';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down =>
       'Прокрутить вниз на один шаг';
@@ -263210,10 +263477,12 @@ class _StringsTh extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'ลอยเหนือโปรแกรมอื่นต่อไปหลังคุณสลับออกจาก Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'ปิด';
   @override
@@ -270780,6 +271049,24 @@ class _StringsTh extends _StringsEn {
   String get scrape_reason_server =>
       'แหล่งปกส่งกลับข้อผิดพลาด ลองใหม่ภายหลังหรือเลือกตัวเลือกอื่น';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'ค้นหา';
   @override
   String get search_ellipsis => 'ค้นหา...';
@@ -271139,6 +271426,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'นำมาไว้ด้านหน้าและเปิดหน้าค้นหา';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => 'เลื่อนลงหนึ่งขั้น';
   @override
@@ -285267,10 +285557,12 @@ class _StringsTr extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Fushi\'den ayrıldıktan sonra diğer programların üzerinde yüzer kalır';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Kapat';
   @override
@@ -292922,6 +293214,24 @@ class _StringsTr extends _StringsEn {
   String get scrape_reason_server =>
       'Kapak kaynağı bir hata döndürdü. Daha sonra tekrar deneyin veya başka bir aday seçin.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Ara';
   @override
   String get search_ellipsis => 'Ara...';
@@ -293283,6 +293593,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Öne getir ve arama sayfasını aç';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => 'Bir adım aşağı kaydır';
   @override
@@ -307451,10 +307764,12 @@ class _StringsVi extends _StringsEn {
   String get floating_ball_system_hint_desktop =>
       'Giữ nổi trên các chương trình khác sau khi bạn chuyển khỏi Fushi';
   @override
-  String get floating_ball_tap_clipboard => 'Tap ball to look up copied text';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint =>
-      'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => 'Đóng';
   @override
@@ -315071,6 +315386,24 @@ class _StringsVi extends _StringsEn {
   String get scrape_reason_server =>
       'Nguồn ảnh bìa trả về lỗi. Thử lại sau hoặc chọn ứng viên khác.';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => 'Tìm kiếm';
   @override
   String get search_ellipsis => 'Tìm kiếm…';
@@ -315430,6 +315763,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page =>
       'Đưa lên trước và mở trang tra từ';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => 'Cuộn xuống một bước';
   @override
@@ -329031,9 +329367,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop => '切到其他程序后悬浮球仍浮在最上层';
   @override
-  String get floating_ball_tap_clipboard => '点球查剪贴板';
+  String get floating_ball_tap_action => '点按悬浮球';
   @override
-  String get floating_ball_tap_clipboard_hint => '应用外点按悬浮球直接查询复制的文字，长按悬浮球展开按钮';
+  String get floating_ball_tap_action_expand => '展开按钮';
+  @override
+  String get floating_ball_tap_action_hint => '应用外点按收起的悬浮球直接执行所选功能，长按悬浮球展开按钮';
   @override
   String get floating_dict_close => '关闭';
   @override
@@ -335989,6 +336327,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get scrape_reason_server => '封面源返回了错误，请稍后重试或换一个候选。';
   @override
+  String get screen_ocr_card_image => '截屏识字制卡带截图';
+  @override
+  String get screen_ocr_card_image_hint =>
+      '截屏识字和拍照查词制卡时，把所点文字所在的文本块（带一点留白）放进卡片的图片字段，清晰度跟随制卡图片质量';
+  @override
+  String get screen_ocr_keep_session => '保持截屏会话';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      '同意一次录屏后，之后截屏识字不再每次弹出系统确认框。保持期间通知栏有说明；点「停止」或系统结束共享后，下次截屏识字会重新询问';
+  @override
+  String get screen_ocr_session_hint => '点「停止」或系统结束共享之前，截屏识字不会再弹出确认框';
+  @override
+  String get screen_ocr_session_notification => '截屏识字：截屏会话保持中';
+  @override
+  String get screen_ocr_session_stop => '停止';
+  @override
   String get search => '搜索';
   @override
   String get search_ellipsis => '搜索…';
@@ -336326,6 +336680,8 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_global_external_lookup => '应用外查词快捷键';
   @override
   String get shortcut_action_global_external_open_lookup_page => '唤起主窗并打开查词页';
+  @override
+  String get shortcut_action_global_external_screen_ocr => '截屏识字（全局）';
   @override
   String get shortcut_action_global_scroll_line_down => '向下滚动一行';
   @override
@@ -349402,9 +349758,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get floating_ball_system_hint_desktop => '切到其他程式後懸浮球仍浮在最上層';
   @override
-  String get floating_ball_tap_clipboard => '點球查剪貼簿';
+  String get floating_ball_tap_action => 'Tap the ball to';
   @override
-  String get floating_ball_tap_clipboard_hint => '應用外點按懸浮球直接查詢複製的文字，長按懸浮球展開按鈕';
+  String get floating_ball_tap_action_expand => 'Open buttons';
+  @override
+  String get floating_ball_tap_action_hint =>
+      'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
   @override
   String get floating_dict_close => '關閉';
   @override
@@ -356455,6 +356814,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get scrape_reason_server => '封面源返回了錯誤，請稍後重試或換一個候選。';
   @override
+  String get screen_ocr_card_image => 'Add screenshot to cards';
+  @override
+  String get screen_ocr_card_image_hint =>
+      'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+  @override
+  String get screen_ocr_keep_session => 'Keep screen capture session';
+  @override
+  String get screen_ocr_keep_session_hint =>
+      'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+  @override
+  String get screen_ocr_session_hint =>
+      'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+  @override
+  String get screen_ocr_session_notification =>
+      'Screen capture session kept for Screen OCR';
+  @override
+  String get screen_ocr_session_stop => 'Stop';
+  @override
   String get search => '搜尋';
   @override
   String get search_ellipsis => '搜尋…';
@@ -356797,6 +357174,9 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_global_external_lookup => '應用外查詞快捷鍵';
   @override
   String get shortcut_action_global_external_open_lookup_page => '喚起主視窗並開啟查詞頁';
+  @override
+  String get shortcut_action_global_external_screen_ocr =>
+      'Screen OCR (anywhere)';
   @override
   String get shortcut_action_global_scroll_line_down => '向下滾動一行';
   @override
@@ -369479,10 +369859,12 @@ extension on _StringsEn {
         return 'Keep the ball on screen after switching to other apps. Needs the display-over-other-apps permission';
       case 'floating_ball_system_hint_desktop':
         return 'Keeps floating above other programs after you switch away from Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Close';
       case 'floating_dict_title':
@@ -375963,6 +376345,20 @@ extension on _StringsEn {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Search';
       case 'search_ellipsis':
@@ -376295,6 +376691,8 @@ extension on _StringsEn {
         return 'App-external lookup shortcut';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scroll down one step';
       case 'shortcut_action_global_scroll_line_up':
@@ -388308,10 +388706,12 @@ extension on _StringsAr {
         return 'أبقِ الكرة على الشاشة بعد التبديل إلى تطبيقات أخرى. تحتاج إلى إذن العرض فوق التطبيقات الأخرى';
       case 'floating_ball_system_hint_desktop':
         return 'تبقى عائمة فوق البرامج الأخرى بعد التبديل بعيدًا عن Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'إغلاق';
       case 'floating_dict_title':
@@ -394788,6 +395188,20 @@ extension on _StringsAr {
         return 'تعذر الحصول على استجابة صالحة من مصدر الغلاف. تحقق من اتصالك بالشبكة وأعد المحاولة.';
       case 'scrape_reason_server':
         return 'أرجع مصدر الغلاف خطأً. حاول لاحقاً أو اختر مرشحاً آخر.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'بحث';
       case 'search_ellipsis':
@@ -395120,6 +395534,8 @@ extension on _StringsAr {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'إحضار إلى الواجهة وفتح صفحة البحث';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'التمرير لأسفل خطوة واحدة';
       case 'shortcut_action_global_scroll_line_up':
@@ -407163,10 +407579,12 @@ extension on _StringsDe {
         return 'Die Kugel nach dem Wechsel zu anderen Apps auf dem Bildschirm behalten. Benötigt die Berechtigung zum Anzeigen über anderen Apps';
       case 'floating_ball_system_hint_desktop':
         return 'Bleibt über anderen Programmen schweben, nachdem du von Fushi weggewechselt bist';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Schließen';
       case 'floating_dict_title':
@@ -413669,6 +414087,20 @@ extension on _StringsDe {
         return 'Es konnte keine gültige Antwort von der Cover-Quelle erhalten werden. Prüfen Sie Ihr Netzwerk und versuchen Sie es erneut.';
       case 'scrape_reason_server':
         return 'Die Cover-Quelle hat einen Fehler zurückgegeben. Versuchen Sie es später erneut oder wählen Sie einen anderen Kandidaten.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Suchen';
       case 'search_ellipsis':
@@ -414001,6 +414433,8 @@ extension on _StringsDe {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'In den Vordergrund holen und Nachschlageseite öffnen';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Einen Schritt nach unten scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -426052,10 +426486,12 @@ extension on _StringsEs {
         return 'Mantiene la bola en pantalla al cambiar a otras apps. Requiere el permiso de mostrar sobre otras apps';
       case 'floating_ball_system_hint_desktop':
         return 'Sigue flotando sobre otros programas cuando sales de Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Cerrar';
       case 'floating_dict_title':
@@ -432554,6 +432990,20 @@ extension on _StringsEs {
         return 'No se pudo obtener una respuesta válida de la fuente de portadas. Verifique su red y reintente.';
       case 'scrape_reason_server':
         return 'La fuente de portadas devolvió un error. Inténtelo más tarde o elija otro candidato.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Buscar';
       case 'search_ellipsis':
@@ -432886,6 +433336,8 @@ extension on _StringsEs {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Traer al frente y abrir la página de consulta';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Desplazar un paso hacia abajo';
       case 'shortcut_action_global_scroll_line_up':
@@ -444946,10 +445398,12 @@ extension on _StringsFr {
         return 'Garde la bulle à l\'écran après être passé à d\'autres applications. Nécessite l\'autorisation d\'affichage par-dessus d\'autres applications';
       case 'floating_ball_system_hint_desktop':
         return 'Reste flottant au-dessus des autres programmes quand vous quittez Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Fermer';
       case 'floating_dict_title':
@@ -451450,6 +451904,20 @@ extension on _StringsFr {
         return 'Impossible d\'obtenir une réponse valide de la source de couverture. Vérifiez votre réseau et réessayez.';
       case 'scrape_reason_server':
         return 'La source de couverture a renvoyé une erreur. Réessayez plus tard ou choisissez un autre candidat.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Rechercher';
       case 'search_ellipsis':
@@ -451782,6 +452250,8 @@ extension on _StringsFr {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Mettre au premier plan et ouvrir la page de recherche';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Défiler d\'un cran vers le bas';
       case 'shortcut_action_global_scroll_line_up':
@@ -463821,10 +464291,12 @@ extension on _StringsId {
         return 'Pertahankan bola di layar setelah beralih ke aplikasi lain. Memerlukan izin tampil di atas aplikasi lain';
       case 'floating_ball_system_hint_desktop':
         return 'Tetap mengambang di atas program lain setelah Anda beralih dari Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Tutup';
       case 'floating_dict_title':
@@ -470306,6 +470778,20 @@ extension on _StringsId {
         return 'Tidak bisa mendapatkan respons yang valid dari sumber sampul. Periksa jaringan Anda dan coba lagi.';
       case 'scrape_reason_server':
         return 'Sumber sampul mengembalikan error. Coba lagi nanti atau pilih kandidat lain.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Cari';
       case 'search_ellipsis':
@@ -470638,6 +471124,8 @@ extension on _StringsId {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bawa ke depan dan buka halaman pencarian';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Gulir turun satu langkah';
       case 'shortcut_action_global_scroll_line_up':
@@ -482674,10 +483162,12 @@ extension on _StringsIt {
         return 'Mantiene il pulsante sullo schermo dopo il passaggio ad altre app. Richiede il permesso di visualizzazione sopra altre app';
       case 'floating_ball_system_hint_desktop':
         return 'Resta sopra gli altri programmi dopo che esci da Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Chiudi';
       case 'floating_dict_title':
@@ -489171,6 +489661,20 @@ extension on _StringsIt {
         return 'Impossibile ottenere una risposta valida dalla fonte della copertina. Controlla la rete e riprova.';
       case 'scrape_reason_server':
         return 'La fonte della copertina ha restituito un errore. Riprova più tardi o scegli un altro candidato.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Cerca';
       case 'search_ellipsis':
@@ -489503,6 +490007,8 @@ extension on _StringsIt {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Porta in primo piano e apri la pagina di ricerca';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Scorri in basso di un passo';
       case 'shortcut_action_global_scroll_line_up':
@@ -501508,10 +502014,12 @@ extension on _StringsJa {
         return '他のアプリに切り替えた後も、ボールを画面に残します。他のアプリの上に重ねて表示する権限が必要です';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi から切り替えた後も、他のプログラムの上に浮かんだままになります';
-      case 'floating_ball_tap_clipboard':
-        return 'タップでクリップボードを検索';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'アプリ外でフローティングボールをタップするとコピーしたテキストをすぐに調べます。長押しでボタンを表示します';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return '閉じる';
       case 'floating_dict_title':
@@ -507970,6 +508478,20 @@ extension on _StringsJa {
         return 'カバーソースから有効な応答を取得できませんでした。ネットワークを確認して再試行してください。';
       case 'scrape_reason_server':
         return 'カバーソースがエラーを返しました。後で再試行するか、別の候補を選択してください。';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return '検索';
       case 'search_ellipsis':
@@ -508302,6 +508824,8 @@ extension on _StringsJa {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return '前面に出して辞書検索ページを開く';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return '1行下にスクロール';
       case 'shortcut_action_global_scroll_line_up':
@@ -520256,10 +520780,12 @@ extension on _StringsKo {
         return '다른 앱으로 전환한 뒤에도 볼을 화면에 유지합니다. 다른 앱 위에 표시 권한이 필요합니다';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi에서 다른 곳으로 전환한 뒤에도 다른 프로그램 위에 떠 있습니다';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return '닫기';
       case 'floating_dict_title':
@@ -526718,6 +527244,20 @@ extension on _StringsKo {
         return '커버 소스에서 유효한 응답을 받을 수 없습니다. 네트워크를 확인하고 다시 시도하세요.';
       case 'scrape_reason_server':
         return '커버 소스에서 오류를 반환했습니다. 나중에 다시 시도하거나 다른 후보를 선택하세요.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return '검색';
       case 'search_ellipsis':
@@ -527050,6 +527590,8 @@ extension on _StringsKo {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return '앞으로 가져와 검색 페이지 열기';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return '한 단계 아래로 스크롤';
       case 'shortcut_action_global_scroll_line_up':
@@ -539055,10 +539597,12 @@ extension on _StringsNl {
         return 'Houd de knop op het scherm nadat je naar andere apps bent overgeschakeld. Vereist de toestemming om over andere apps te tekenen';
       case 'floating_ball_system_hint_desktop':
         return 'Blijft boven andere programma\'s zweven nadat je van Fushi bent weggeschakeld';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Sluiten';
       case 'floating_dict_title':
@@ -545556,6 +546100,20 @@ extension on _StringsNl {
         return 'Kon geen geldig antwoord krijgen van de omslagbron. Controleer je netwerk en probeer opnieuw.';
       case 'scrape_reason_server':
         return 'De omslagbron gaf een fout terug. Probeer het later opnieuw of kies een andere kandidaat.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Zoeken';
       case 'search_ellipsis':
@@ -545888,6 +546446,8 @@ extension on _StringsNl {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Naar voren halen en opzoekpagina openen';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Één stap omlaag scrollen';
       case 'shortcut_action_global_scroll_line_up':
@@ -557928,10 +558488,12 @@ extension on _StringsPtBr {
         return 'Mantém a bola na tela depois de mudar para outros apps. Requer a permissão de exibir sobre outros apps';
       case 'floating_ball_system_hint_desktop':
         return 'Continua flutuando sobre outros programas depois que você sai do Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Fechar';
       case 'floating_dict_title':
@@ -564425,6 +564987,20 @@ extension on _StringsPtBr {
         return 'Não foi possível obter uma resposta válida da fonte de capas. Verifique sua rede e tente novamente.';
       case 'scrape_reason_server':
         return 'A fonte de capas retornou um erro. Tente novamente mais tarde ou escolha outro candidato.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Buscar';
       case 'search_ellipsis':
@@ -564757,6 +565333,8 @@ extension on _StringsPtBr {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Trazer para frente e abrir a página de consulta';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Rolar uma etapa para baixo';
       case 'shortcut_action_global_scroll_line_up':
@@ -576801,10 +577379,12 @@ extension on _StringsRu {
         return 'Оставлять кнопку на экране после переключения на другие приложения. Нужно разрешение на отображение поверх других приложений';
       case 'floating_ball_system_hint_desktop':
         return 'Остаётся поверх других программ после переключения из Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Закрыть';
       case 'floating_dict_title':
@@ -583298,6 +583878,20 @@ extension on _StringsRu {
         return 'Не удалось получить корректный ответ от источника обложки. Проверьте сеть и повторите.';
       case 'scrape_reason_server':
         return 'Источник обложки вернул ошибку. Попробуйте позже или выберите другой вариант.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Поиск';
       case 'search_ellipsis':
@@ -583630,6 +584224,8 @@ extension on _StringsRu {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Вывести на передний план и открыть страницу поиска';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Прокрутить вниз на один шаг';
       case 'shortcut_action_global_scroll_line_up':
@@ -595648,10 +596244,12 @@ extension on _StringsTh {
         return 'คงปุ่มไว้บนหน้าจอหลังสลับไปแอปอื่น ต้องใช้สิทธิ์แสดงเหนือแอปอื่น';
       case 'floating_ball_system_hint_desktop':
         return 'ลอยเหนือโปรแกรมอื่นต่อไปหลังคุณสลับออกจาก Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'ปิด';
       case 'floating_dict_title':
@@ -602131,6 +602729,20 @@ extension on _StringsTh {
         return 'ไม่สามารถรับการตอบกลับที่ถูกต้องจากแหล่งปก ตรวจสอบเครือข่ายแล้วลองใหม่';
       case 'scrape_reason_server':
         return 'แหล่งปกส่งกลับข้อผิดพลาด ลองใหม่ภายหลังหรือเลือกตัวเลือกอื่น';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'ค้นหา';
       case 'search_ellipsis':
@@ -602463,6 +603075,8 @@ extension on _StringsTh {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'นำมาไว้ด้านหน้าและเปิดหน้าค้นหา';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'เลื่อนลงหนึ่งขั้น';
       case 'shortcut_action_global_scroll_line_up':
@@ -614492,10 +615106,12 @@ extension on _StringsTr {
         return 'Başka uygulamalara geçtikten sonra topu ekranda tut. Diğer uygulamaların üzerinde görüntüleme izni gerekir';
       case 'floating_ball_system_hint_desktop':
         return 'Fushi\'den ayrıldıktan sonra diğer programların üzerinde yüzer kalır';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Kapat';
       case 'floating_dict_title':
@@ -620982,6 +621598,20 @@ extension on _StringsTr {
         return 'Kapak kaynağından geçerli bir yanıt alınamadı. Ağ bağlantınızı kontrol edip tekrar deneyin.';
       case 'scrape_reason_server':
         return 'Kapak kaynağı bir hata döndürdü. Daha sonra tekrar deneyin veya başka bir aday seçin.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Ara';
       case 'search_ellipsis':
@@ -621314,6 +621944,8 @@ extension on _StringsTr {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Öne getir ve arama sayfasını aç';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Bir adım aşağı kaydır';
       case 'shortcut_action_global_scroll_line_up':
@@ -633343,10 +633975,12 @@ extension on _StringsVi {
         return 'Giữ bóng trên màn hình sau khi chuyển sang ứng dụng khác. Cần quyền hiển thị trên các ứng dụng khác';
       case 'floating_ball_system_hint_desktop':
         return 'Giữ nổi trên các chương trình khác sau khi bạn chuyển khỏi Fushi';
-      case 'floating_ball_tap_clipboard':
-        return 'Tap ball to look up copied text';
-      case 'floating_ball_tap_clipboard_hint':
-        return 'Outside the app, tapping the floating ball looks up the copied text right away; long-press it to open the buttons';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return 'Đóng';
       case 'floating_dict_title':
@@ -639828,6 +640462,20 @@ extension on _StringsVi {
         return 'Không nhận được phản hồi hợp lệ từ nguồn ảnh bìa. Kiểm tra mạng và thử lại.';
       case 'scrape_reason_server':
         return 'Nguồn ảnh bìa trả về lỗi. Thử lại sau hoặc chọn ứng viên khác.';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return 'Tìm kiếm';
       case 'search_ellipsis':
@@ -640160,6 +640808,8 @@ extension on _StringsVi {
         return 'App-external lookup hotkey';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Đưa lên trước và mở trang tra từ';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return 'Cuộn xuống một bước';
       case 'shortcut_action_global_scroll_line_up':
@@ -652088,10 +652738,12 @@ extension on _StringsZhCn {
         return '切到其他应用后悬浮球仍留在屏幕上，需要「显示在其他应用上层」权限';
       case 'floating_ball_system_hint_desktop':
         return '切到其他程序后悬浮球仍浮在最上层';
-      case 'floating_ball_tap_clipboard':
-        return '点球查剪贴板';
-      case 'floating_ball_tap_clipboard_hint':
-        return '应用外点按悬浮球直接查询复制的文字，长按悬浮球展开按钮';
+      case 'floating_ball_tap_action':
+        return '点按悬浮球';
+      case 'floating_ball_tap_action_expand':
+        return '展开按钮';
+      case 'floating_ball_tap_action_hint':
+        return '应用外点按收起的悬浮球直接执行所选功能，长按悬浮球展开按钮';
       case 'floating_dict_close':
         return '关闭';
       case 'floating_dict_title':
@@ -658528,6 +659180,20 @@ extension on _StringsZhCn {
         return '没能从封面源取到有效响应，请检查网络后重试。';
       case 'scrape_reason_server':
         return '封面源返回了错误，请稍后重试或换一个候选。';
+      case 'screen_ocr_card_image':
+        return '截屏识字制卡带截图';
+      case 'screen_ocr_card_image_hint':
+        return '截屏识字和拍照查词制卡时，把所点文字所在的文本块（带一点留白）放进卡片的图片字段，清晰度跟随制卡图片质量';
+      case 'screen_ocr_keep_session':
+        return '保持截屏会话';
+      case 'screen_ocr_keep_session_hint':
+        return '同意一次录屏后，之后截屏识字不再每次弹出系统确认框。保持期间通知栏有说明；点「停止」或系统结束共享后，下次截屏识字会重新询问';
+      case 'screen_ocr_session_hint':
+        return '点「停止」或系统结束共享之前，截屏识字不会再弹出确认框';
+      case 'screen_ocr_session_notification':
+        return '截屏识字：截屏会话保持中';
+      case 'screen_ocr_session_stop':
+        return '停止';
       case 'search':
         return '搜索';
       case 'search_ellipsis':
@@ -658860,6 +659526,8 @@ extension on _StringsZhCn {
         return '应用外查词快捷键';
       case 'shortcut_action_global_external_open_lookup_page':
         return '唤起主窗并打开查词页';
+      case 'shortcut_action_global_external_screen_ocr':
+        return '截屏识字（全局）';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滚动一行';
       case 'shortcut_action_global_scroll_line_up':
@@ -670720,10 +671388,12 @@ extension on _StringsZhHk {
         return '切到其他應用後懸浮球仍留在螢幕上，需要「顯示在其他應用上層」權限';
       case 'floating_ball_system_hint_desktop':
         return '切到其他程式後懸浮球仍浮在最上層';
-      case 'floating_ball_tap_clipboard':
-        return '點球查剪貼簿';
-      case 'floating_ball_tap_clipboard_hint':
-        return '應用外點按懸浮球直接查詢複製的文字，長按懸浮球展開按鈕';
+      case 'floating_ball_tap_action':
+        return 'Tap the ball to';
+      case 'floating_ball_tap_action_expand':
+        return 'Open buttons';
+      case 'floating_ball_tap_action_hint':
+        return 'Outside the app, tapping the collapsed ball runs the chosen action right away; long-press it to open the buttons';
       case 'floating_dict_close':
         return '關閉';
       case 'floating_dict_title':
@@ -677173,6 +677843,20 @@ extension on _StringsZhHk {
         return '沒能從封面源取到有效響應，請檢查網路後重試。';
       case 'scrape_reason_server':
         return '封面源返回了錯誤，請稍後重試或換一個候選。';
+      case 'screen_ocr_card_image':
+        return 'Add screenshot to cards';
+      case 'screen_ocr_card_image_hint':
+        return 'When mining from Screen OCR or camera lookup, put the text block you tapped (with a little margin) into the card\'s picture field. Sharpness follows the card image quality setting';
+      case 'screen_ocr_keep_session':
+        return 'Keep screen capture session';
+      case 'screen_ocr_keep_session_hint':
+        return 'After you allow screen capture once, Screen OCR stops asking every time. A notification stays while the session is kept; it ends when you tap Stop or the system ends the sharing, and the next Screen OCR asks again';
+      case 'screen_ocr_session_hint':
+        return 'Screen OCR won\'t ask for permission again until you tap Stop or the system ends the sharing';
+      case 'screen_ocr_session_notification':
+        return 'Screen capture session kept for Screen OCR';
+      case 'screen_ocr_session_stop':
+        return 'Stop';
       case 'search':
         return '搜尋';
       case 'search_ellipsis':
@@ -677505,6 +678189,8 @@ extension on _StringsZhHk {
         return '應用外查詞快捷鍵';
       case 'shortcut_action_global_external_open_lookup_page':
         return '喚起主視窗並開啟查詞頁';
+      case 'shortcut_action_global_external_screen_ocr':
+        return 'Screen OCR (anywhere)';
       case 'shortcut_action_global_scroll_line_down':
         return '向下滾動一行';
       case 'shortcut_action_global_scroll_line_up':
