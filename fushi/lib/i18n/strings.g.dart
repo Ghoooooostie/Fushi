@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154547 (9091 per locale)
+/// Strings: 154530 (9090 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11323,7 +11323,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_disc_continue_at({required Object time}) =>
       'Continue watching ${time}';
   String get video_disc_exit => 'Exit disc';
-  String get video_disc_exit_fullscreen => 'Exit full screen';
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   String get video_disc_hold_to_exit => 'Hold to exit the disc';
@@ -32159,8 +32158,6 @@ class _StringsAr extends _StringsEn {
       'Continue watching ${time}';
   @override
   String get video_disc_exit => 'Exit disc';
-  @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
   @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
@@ -54589,8 +54586,6 @@ class _StringsDe extends _StringsEn {
       'Continue watching ${time}';
   @override
   String get video_disc_exit => 'Exit disc';
-  @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
   @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
@@ -77126,8 +77121,6 @@ class _StringsEs extends _StringsEn {
       'Continue watching ${time}';
   @override
   String get video_disc_exit => 'Exit disc';
-  @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
   @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
@@ -99732,8 +99725,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_disc_exit => 'Exit disc';
   @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
-  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
@@ -122078,8 +122069,6 @@ class _StringsId extends _StringsEn {
       'Continue watching ${time}';
   @override
   String get video_disc_exit => 'Exit disc';
-  @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
   @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
@@ -144504,8 +144493,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_disc_exit => 'Exit disc';
   @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
-  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
@@ -166097,8 +166084,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_disc_exit => 'Exit disc';
   @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
-  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
@@ -187534,8 +187519,6 @@ class _StringsKo extends _StringsEn {
       'Continue watching ${time}';
   @override
   String get video_disc_exit => 'Exit disc';
-  @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
   @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
@@ -209790,8 +209773,6 @@ class _StringsNl extends _StringsEn {
       'Continue watching ${time}';
   @override
   String get video_disc_exit => 'Exit disc';
-  @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
   @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
@@ -232235,8 +232216,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_disc_exit => 'Exit disc';
   @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
-  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
@@ -254647,8 +254626,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_disc_exit => 'Exit disc';
   @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
-  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
@@ -276800,8 +276777,6 @@ class _StringsTh extends _StringsEn {
       'Continue watching ${time}';
   @override
   String get video_disc_exit => 'Exit disc';
-  @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
   @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
@@ -299056,8 +299031,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_disc_exit => 'Exit disc';
   @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
-  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
@@ -321285,8 +321258,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_disc_exit => 'Exit disc';
   @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
-  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
@@ -341897,8 +341868,6 @@ class _StringsZhCn extends _StringsEn {
   String video_disc_continue_at({required Object time}) => '继续观看 ${time}';
   @override
   String get video_disc_exit => '退出原盘';
-  @override
-  String get video_disc_exit_fullscreen => '退出全屏';
   @override
   String get video_disc_extraction_unavailable =>
       '此标题可经原盘解码播放，但加密源无法用于字幕提取或制卡。';
@@ -362637,8 +362606,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_disc_exit => 'Exit disc';
   @override
-  String get video_disc_exit_fullscreen => 'Exit full screen';
-  @override
   String get video_disc_extraction_unavailable =>
       'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
   @override
@@ -381825,8 +381792,6 @@ extension on _StringsEn {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -400722,8 +400687,6 @@ extension on _StringsAr {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -419690,8 +419653,6 @@ extension on _StringsDe {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -438649,8 +438610,6 @@ extension on _StringsEs {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -457621,8 +457580,6 @@ extension on _StringsFr {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -476544,8 +476501,6 @@ extension on _StringsId {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -495495,8 +495450,6 @@ extension on _StringsIt {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -514339,8 +514292,6 @@ extension on _StringsJa {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -533164,8 +533115,6 @@ extension on _StringsKo {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -552096,8 +552045,6 @@ extension on _StringsNl {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -571038,8 +570985,6 @@ extension on _StringsPtBr {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -589988,8 +589933,6 @@ extension on _StringsRu {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -608893,8 +608836,6 @@ extension on _StringsTh {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -627822,8 +627763,6 @@ extension on _StringsTr {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -646742,8 +646681,6 @@ extension on _StringsVi {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
@@ -665458,8 +665395,6 @@ extension on _StringsZhCn {
         return ({required Object time}) => '继续观看 ${time}';
       case 'video_disc_exit':
         return '退出原盘';
-      case 'video_disc_exit_fullscreen':
-        return '退出全屏';
       case 'video_disc_extraction_unavailable':
         return '此标题可经原盘解码播放，但加密源无法用于字幕提取或制卡。';
       case 'video_disc_hold_to_exit':
@@ -684207,8 +684142,6 @@ extension on _StringsZhHk {
         return ({required Object time}) => 'Continue watching ${time}';
       case 'video_disc_exit':
         return 'Exit disc';
-      case 'video_disc_exit_fullscreen':
-        return 'Exit full screen';
       case 'video_disc_extraction_unavailable':
         return 'This title plays through the disc decoder, but its encrypted source cannot be extracted for subtitles or cards.';
       case 'video_disc_hold_to_exit':
