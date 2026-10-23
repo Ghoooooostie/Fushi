@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 153017 (9001 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2646,6 +2646,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get custom_fonts_archive_error => 'Failed to extract archive';
   String get custom_fonts_catalog_title => 'Font library';
   String get custom_fonts_download_failed => 'Download failed';
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
   String get custom_fonts_downloading => 'Downloading...';
   String get custom_fonts_drag_hint => 'Drag to reorder font priority';
   String get custom_fonts_empty => 'No custom fonts added';
@@ -6135,6 +6137,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lyrics_blur => 'Blur lyrics';
   String get lyrics_blur_hint =>
       'Blur the current line for listening immersion; hover or tap to reveal';
+  String get lyrics_exit_to_library => 'Close and return to library';
   String get lyrics_font_size => 'Lyrics font size';
   String get lyrics_font_size_hint =>
       'Lyrics font size is independent of book mode';
@@ -9996,6 +9999,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_visual_tone_muted => 'Muted';
   String get srs_visual_tone_normal => 'Normal';
   String get srt_audio_unresolved => 'Audio file not found — please re-attach';
+  String get srt_book_attach_epub => 'Add book file';
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   String get srt_book_reimport => 'Re-import';
   String get srt_book_reimport_body_rebuilt =>
       'Book text rebuilt — reopen the book to read it';
@@ -17153,6 +17159,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'فشل التنزيل';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'جارٍ التنزيل...';
   @override
   String get custom_fonts_drag_hint => 'اسحب لإعادة ترتيب أولوية الخطوط';
@@ -23050,6 +23059,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'حجم خط كلمات الأغاني';
   @override
@@ -29719,6 +29730,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'لم يتم العثور على ملف الصوت — يرجى إعادة الإرفاق';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'إعادة الاستيراد';
   @override
@@ -39066,6 +39082,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Download fehlgeschlagen';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Wird heruntergeladen...';
   @override
   String get custom_fonts_drag_hint => 'Ziehen, um Schriftpriorität zu ändern';
@@ -45098,6 +45117,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Liedtext-Schriftgröße';
   @override
@@ -51871,6 +51892,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Audiodatei nicht gefunden — bitte erneut anhängen';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Erneut importieren';
   @override
@@ -61322,6 +61348,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Error en la descarga';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Descargando...';
   @override
   String get custom_fonts_drag_hint =>
@@ -67366,6 +67395,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamaño de fuente de letras';
   @override
@@ -74147,6 +74178,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Archivo de audio no encontrado — por favor vuelve a adjuntarlo';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Reimportar';
   @override
@@ -83646,6 +83682,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Échec du téléchargement';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Téléchargement...';
   @override
   String get custom_fonts_drag_hint =>
@@ -89705,6 +89744,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Taille de police des paroles';
   @override
@@ -96511,6 +96552,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Fichier audio introuvable — veuillez le rattacher';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Réimporter';
   @override
@@ -105965,6 +106011,9 @@ class _StringsId extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Unduhan gagal';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Mengunduh…';
   @override
   String get custom_fonts_drag_hint =>
@@ -111926,6 +111975,8 @@ class _StringsId extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Ukuran Font Lirik';
   @override
@@ -118639,6 +118690,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'File audio tidak ditemukan — silakan lampirkan ulang';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Impor ulang';
   @override
@@ -128032,6 +128088,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Scaricamento fallito';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Scaricamento...';
   @override
   String get custom_fonts_drag_hint =>
@@ -134036,6 +134095,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Dimensione carattere testi';
   @override
@@ -140807,6 +140868,11 @@ class _StringsIt extends _StringsEn {
   String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => 'File audio non trovato — ricollegare';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Reimporta';
   @override
@@ -150066,6 +150132,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'ダウンロード失敗';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'ダウンロード中…';
   @override
   String get custom_fonts_drag_hint => 'ドラッグしてフォントの優先順位を変更';
@@ -155758,6 +155827,8 @@ class _StringsJa extends _StringsEn {
   String get lyrics_blur => '歌詞をぼかす';
   @override
   String get lyrics_blur_hint => 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '歌詞フォントサイズ';
   @override
@@ -162270,6 +162341,11 @@ class _StringsJa extends _StringsEn {
   String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => '音声ファイルが見つかりません。再紐付けしてください';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => '再インポート';
   @override
@@ -171228,6 +171304,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get custom_fonts_download_failed => '다운로드 실패';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => '다운로드 중…';
   @override
   String get custom_fonts_drag_hint => '드래그하여 글꼴 우선순위 변경';
@@ -176930,6 +177009,8 @@ class _StringsKo extends _StringsEn {
   String get lyrics_blur => '가사 흐리게';
   @override
   String get lyrics_blur_hint => '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '가사 글꼴 크기';
   @override
@@ -183459,6 +183540,11 @@ class _StringsKo extends _StringsEn {
   String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => '오디오 파일을 찾을 수 없습니다 — 다시 연결하세요';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => '다시 가져오기';
   @override
@@ -192623,6 +192709,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Download mislukt';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Downloaden...';
   @override
   String get custom_fonts_drag_hint =>
@@ -198609,6 +198698,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Lettergrootte songtekst';
   @override
@@ -205359,6 +205450,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Audiobestand niet gevonden — koppel opnieuw';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Opnieuw importeren';
   @override
@@ -214785,6 +214881,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Falha no download';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Baixando...';
   @override
   String get custom_fonts_drag_hint =>
@@ -220802,6 +220901,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Tamanho da fonte das letras';
   @override
@@ -227559,6 +227660,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Arquivo de áudio não encontrado — reanexe-o';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Reimportar';
   @override
@@ -236989,6 +237095,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Ошибка загрузки';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Загрузка…';
   @override
   String get custom_fonts_drag_hint =>
@@ -242979,6 +243088,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Размер шрифта текста песен';
   @override
@@ -249736,6 +249847,11 @@ class _StringsRu extends _StringsEn {
   String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => 'Аудиофайл не найден — привяжите заново';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Повторный импорт';
   @override
@@ -259097,6 +259213,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'ดาวน์โหลดล้มเหลว';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'กำลังดาวน์โหลด…';
   @override
   String get custom_fonts_drag_hint => 'ลากเพื่อจัดเรียงลำดับฟอนต์';
@@ -264991,6 +265110,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'ขนาดตัวอักษรเนื้อเพลง';
   @override
@@ -271665,6 +271786,11 @@ class _StringsTh extends _StringsEn {
   String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => 'ไม่พบไฟล์เสียง กรุณาแนบใหม่';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'นำเข้าใหม่';
   @override
@@ -280977,6 +281103,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'İndirme başarısız';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'İndiriliyor…';
   @override
   String get custom_fonts_drag_hint =>
@@ -286946,6 +287075,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Şarkı Sözü Yazı Boyutu';
   @override
@@ -293661,6 +293792,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Ses dosyası bulunamadı — lütfen yeniden bağlayın';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Yeniden içe aktar';
   @override
@@ -303011,6 +303147,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get custom_fonts_download_failed => 'Tải xuống thất bại';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => 'Đang tải…';
   @override
   String get custom_fonts_drag_hint =>
@@ -308961,6 +309100,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get lyrics_blur_hint =>
       'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => 'Cỡ chữ lời bài hát';
   @override
@@ -315652,6 +315793,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srt_audio_unresolved =>
       'Không tìm thấy tệp âm thanh — vui lòng gắn lại';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => 'Nhập lại';
   @override
@@ -324624,6 +324770,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get custom_fonts_download_failed => '下载失败';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      '连不上字体下载源。可在设置里的「网络代理」配置代理后重试，或直接导入已有的字体文件。';
+  @override
   String get custom_fonts_downloading => '正在下载…';
   @override
   String get custom_fonts_drag_hint => '拖拽排列字体优先级';
@@ -330051,6 +330200,8 @@ class _StringsZhCn extends _StringsEn {
   String get lyrics_blur => '模糊歌词';
   @override
   String get lyrics_blur_hint => '听力沉浸：模糊当前句，悬停或点击显形';
+  @override
+  String get lyrics_exit_to_library => '关闭并返回书架';
   @override
   String get lyrics_font_size => '歌词字号';
   @override
@@ -336221,6 +336372,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_visual_tone_normal => '正常';
   @override
   String get srt_audio_unresolved => '未找到音频文件 — 请重新附加';
+  @override
+  String get srt_book_attach_epub => '添加书籍文件';
+  @override
+  String get srt_book_attach_epub_remove_old_hint => '已用书籍正文生成新的有声书，原来的字幕书可以删除';
   @override
   String get srt_book_reimport => '重新导入';
   @override
@@ -344816,6 +344971,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get custom_fonts_download_failed => '下載失敗';
   @override
+  String get custom_fonts_download_unreachable_hint =>
+      'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
+  @override
   String get custom_fonts_downloading => '正在下載…';
   @override
   String get custom_fonts_drag_hint => '拖曳以調整字型優先順序';
@@ -350317,6 +350475,8 @@ class _StringsZhHk extends _StringsEn {
   String get lyrics_blur => '模糊歌詞';
   @override
   String get lyrics_blur_hint => '聽力沉浸：模糊當前句，懸停或點擊顯形';
+  @override
+  String get lyrics_exit_to_library => 'Close and return to library';
   @override
   String get lyrics_font_size => '歌詞字體大小';
   @override
@@ -356700,6 +356860,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_visual_tone_normal => 'Normal';
   @override
   String get srt_audio_unresolved => '未找到音訊檔案 — 請重新附加';
+  @override
+  String get srt_book_attach_epub => 'Add book file';
+  @override
+  String get srt_book_attach_epub_remove_old_hint =>
+      'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
   @override
   String get srt_book_reimport => '重新導入';
   @override
@@ -364937,6 +365102,8 @@ extension on _StringsEn {
         return 'Font library';
       case 'custom_fonts_download_failed':
         return 'Download failed';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Downloading...';
       case 'custom_fonts_drag_hint':
@@ -369970,6 +370137,8 @@ extension on _StringsEn {
         return 'Blur lyrics';
       case 'lyrics_blur_hint':
         return 'Blur the current line for listening immersion; hover or tap to reveal';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Lyrics font size';
       case 'lyrics_font_size_hint':
@@ -375808,6 +375977,10 @@ extension on _StringsEn {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audio file not found — please re-attach';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Re-import';
       case 'srt_book_reimport_body_rebuilt':
@@ -383644,6 +383817,8 @@ extension on _StringsAr {
         return 'مكتبة الخطوط';
       case 'custom_fonts_download_failed':
         return 'فشل التنزيل';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'جارٍ التنزيل...';
       case 'custom_fonts_drag_hint':
@@ -388671,6 +388846,8 @@ extension on _StringsAr {
         return 'تمويه كلمات الأغاني';
       case 'lyrics_blur_hint':
         return 'تمويه السطر الحالي للانغماس في الاستماع؛ مرر المؤشر أو انقر للكشف';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'حجم خط كلمات الأغاني';
       case 'lyrics_font_size_hint':
@@ -394510,6 +394687,10 @@ extension on _StringsAr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'لم يتم العثور على ملف الصوت — يرجى إعادة الإرفاق';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'إعادة الاستيراد';
       case 'srt_book_reimport_body_rebuilt':
@@ -402365,6 +402546,8 @@ extension on _StringsDe {
         return 'Schriftbibliothek';
       case 'custom_fonts_download_failed':
         return 'Download fehlgeschlagen';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Wird heruntergeladen...';
       case 'custom_fonts_drag_hint':
@@ -407413,6 +407596,8 @@ extension on _StringsDe {
         return 'Liedtext unscharf';
       case 'lyrics_blur_hint':
         return 'Die aktuelle Zeile für Hörimmersion unscharf stellen; darüber fahren oder tippen zum Aufdecken';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Liedtext-Schriftgröße';
       case 'lyrics_font_size_hint':
@@ -413268,6 +413453,10 @@ extension on _StringsDe {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audiodatei nicht gefunden — bitte erneut anhängen';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Erneut importieren';
       case 'srt_book_reimport_body_rebuilt':
@@ -421136,6 +421325,8 @@ extension on _StringsEs {
         return 'Biblioteca de fuentes';
       case 'custom_fonts_download_failed':
         return 'Error en la descarga';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Descargando...';
       case 'custom_fonts_drag_hint':
@@ -426176,6 +426367,8 @@ extension on _StringsEs {
         return 'Difuminar letras';
       case 'lyrics_blur_hint':
         return 'Difumina la línea actual para inmersión auditiva; pase el cursor o toque para revelar';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Tamaño de fuente de letras';
       case 'lyrics_font_size_hint':
@@ -432030,6 +432223,10 @@ extension on _StringsEs {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Archivo de audio no encontrado — por favor vuelve a adjuntarlo';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimportar';
       case 'srt_book_reimport_body_rebuilt':
@@ -439899,6 +440096,8 @@ extension on _StringsFr {
         return 'Bibliothèque de polices';
       case 'custom_fonts_download_failed':
         return 'Échec du téléchargement';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Téléchargement...';
       case 'custom_fonts_drag_hint':
@@ -444949,6 +445148,8 @@ extension on _StringsFr {
         return 'Flouter les paroles';
       case 'lyrics_blur_hint':
         return 'Flouter la ligne actuelle pour l\'immersion à l\'écoute ; survolez ou appuyez pour révéler';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Taille de police des paroles';
       case 'lyrics_font_size_hint':
@@ -450803,6 +451004,10 @@ extension on _StringsFr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Fichier audio introuvable — veuillez le rattacher';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Réimporter';
       case 'srt_book_reimport_body_rebuilt':
@@ -458661,6 +458866,8 @@ extension on _StringsId {
         return 'Pustaka font';
       case 'custom_fonts_download_failed':
         return 'Unduhan gagal';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Mengunduh…';
       case 'custom_fonts_drag_hint':
@@ -463697,6 +463904,8 @@ extension on _StringsId {
         return 'Buramkan lirik';
       case 'lyrics_blur_hint':
         return 'Buramkan baris saat ini untuk imersi mendengarkan; arahkan kursor atau ketuk untuk menampilkan';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Ukuran Font Lirik';
       case 'lyrics_font_size_hint':
@@ -469536,6 +469745,10 @@ extension on _StringsId {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'File audio tidak ditemukan — silakan lampirkan ulang';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Impor ulang';
       case 'srt_book_reimport_body_rebuilt':
@@ -477387,6 +477600,8 @@ extension on _StringsIt {
         return 'Libreria di caratteri';
       case 'custom_fonts_download_failed':
         return 'Scaricamento fallito';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Scaricamento...';
       case 'custom_fonts_drag_hint':
@@ -482429,6 +482644,8 @@ extension on _StringsIt {
         return 'Sfoca testi';
       case 'lyrics_blur_hint':
         return 'Sfoca la riga corrente per immersione nell\'ascolto; passa sopra o tocca per rivelare';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Dimensione carattere testi';
       case 'lyrics_font_size_hint':
@@ -488278,6 +488495,10 @@ extension on _StringsIt {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'File audio non trovato — ricollegare';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimporta';
       case 'srt_book_reimport_body_rebuilt':
@@ -496113,6 +496334,8 @@ extension on _StringsJa {
         return 'フォントライブラリ';
       case 'custom_fonts_download_failed':
         return 'ダウンロード失敗';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'ダウンロード中…';
       case 'custom_fonts_drag_hint':
@@ -501125,6 +501348,8 @@ extension on _StringsJa {
         return '歌詞をぼかす';
       case 'lyrics_blur_hint':
         return 'リスニングに集中するため現在の行をぼかします。ホバーまたはタップで表示';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return '歌詞フォントサイズ';
       case 'lyrics_font_size_hint':
@@ -506954,6 +507179,10 @@ extension on _StringsJa {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '音声ファイルが見つかりません。再紐付けしてください';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '再インポート';
       case 'srt_book_reimport_body_rebuilt':
@@ -514734,6 +514963,8 @@ extension on _StringsKo {
         return '글꼴 라이브러리';
       case 'custom_fonts_download_failed':
         return '다운로드 실패';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return '다운로드 중…';
       case 'custom_fonts_drag_hint':
@@ -519750,6 +519981,8 @@ extension on _StringsKo {
         return '가사 흐리게';
       case 'lyrics_blur_hint':
         return '듣기 몰입을 위해 현재 줄을 흐리게 합니다. 마우스를 올리거나 탭하면 표시됩니다';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return '가사 글꼴 크기';
       case 'lyrics_font_size_hint':
@@ -525579,6 +525812,10 @@ extension on _StringsKo {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '오디오 파일을 찾을 수 없습니다 — 다시 연결하세요';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '다시 가져오기';
       case 'srt_book_reimport_body_rebuilt':
@@ -533399,6 +533636,8 @@ extension on _StringsNl {
         return 'Lettertypebibliotheek';
       case 'custom_fonts_download_failed':
         return 'Download mislukt';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Downloaden...';
       case 'custom_fonts_drag_hint':
@@ -538442,6 +538681,8 @@ extension on _StringsNl {
         return 'Songtekst vervagen';
       case 'lyrics_blur_hint':
         return 'Vervaag de huidige regel voor luisterimmersie; beweeg erover of tik om te onthullen';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Lettergrootte songtekst';
       case 'lyrics_font_size_hint':
@@ -544294,6 +544535,10 @@ extension on _StringsNl {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Audiobestand niet gevonden — koppel opnieuw';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Opnieuw importeren';
       case 'srt_book_reimport_body_rebuilt':
@@ -552152,6 +552397,8 @@ extension on _StringsPtBr {
         return 'Biblioteca de fontes';
       case 'custom_fonts_download_failed':
         return 'Falha no download';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Baixando...';
       case 'custom_fonts_drag_hint':
@@ -557190,6 +557437,8 @@ extension on _StringsPtBr {
         return 'Desfocar letras';
       case 'lyrics_blur_hint':
         return 'Desfoca a linha atual para imersão auditiva; passe o mouse ou toque para revelar';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Tamanho da fonte das letras';
       case 'lyrics_font_size_hint':
@@ -563040,6 +563289,10 @@ extension on _StringsPtBr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Arquivo de áudio não encontrado — reanexe-o';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Reimportar';
       case 'srt_book_reimport_body_rebuilt':
@@ -570899,6 +571152,8 @@ extension on _StringsRu {
         return 'Библиотека шрифтов';
       case 'custom_fonts_download_failed':
         return 'Ошибка загрузки';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Загрузка…';
       case 'custom_fonts_drag_hint':
@@ -575940,6 +576195,8 @@ extension on _StringsRu {
         return 'Размытие текста песен';
       case 'lyrics_blur_hint':
         return 'Размывает текущую строку для погружения в аудирование; наведите курсор или нажмите, чтобы показать';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Размер шрифта текста песен';
       case 'lyrics_font_size_hint':
@@ -581790,6 +582047,10 @@ extension on _StringsRu {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Аудиофайл не найден — привяжите заново';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Повторный импорт';
       case 'srt_book_reimport_body_rebuilt':
@@ -589629,6 +589890,8 @@ extension on _StringsTh {
         return 'คลังฟอนต์';
       case 'custom_fonts_download_failed':
         return 'ดาวน์โหลดล้มเหลว';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'กำลังดาวน์โหลด…';
       case 'custom_fonts_drag_hint':
@@ -594663,6 +594926,8 @@ extension on _StringsTh {
         return 'เบลอเนื้อเพลง';
       case 'lyrics_blur_hint':
         return 'เบลอบรรทัดปัจจุบันเพื่อฝึกการฟัง; เลื่อนเมาส์หรือแตะเพื่อเปิดเผย';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'ขนาดตัวอักษรเนื้อเพลง';
       case 'lyrics_font_size_hint':
@@ -600500,6 +600765,10 @@ extension on _StringsTh {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'ไม่พบไฟล์เสียง กรุณาแนบใหม่';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'นำเข้าใหม่';
       case 'srt_book_reimport_body_rebuilt':
@@ -608349,6 +608618,8 @@ extension on _StringsTr {
         return 'Yazı tipi kitaplığı';
       case 'custom_fonts_download_failed':
         return 'İndirme başarısız';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'İndiriliyor…';
       case 'custom_fonts_drag_hint':
@@ -613386,6 +613657,8 @@ extension on _StringsTr {
         return 'Sözleri bulanıklaştır';
       case 'lyrics_blur_hint':
         return 'Dinleme deneyimi için geçerli satırı bulanıklaştır; görmek için üzerine gelin veya dokunun';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Şarkı Sözü Yazı Boyutu';
       case 'lyrics_font_size_hint':
@@ -619228,6 +619501,10 @@ extension on _StringsTr {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Ses dosyası bulunamadı — lütfen yeniden bağlayın';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Yeniden içe aktar';
       case 'srt_book_reimport_body_rebuilt':
@@ -627074,6 +627351,8 @@ extension on _StringsVi {
         return 'Thư viện phông';
       case 'custom_fonts_download_failed':
         return 'Tải xuống thất bại';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return 'Đang tải…';
       case 'custom_fonts_drag_hint':
@@ -632111,6 +632390,8 @@ extension on _StringsVi {
         return 'Làm mờ lời bài';
       case 'lyrics_blur_hint':
         return 'Làm mờ dòng hiện tại để tập trung nghe; di chuột hoặc chạm để hiển thị';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return 'Cỡ chữ lời bài hát';
       case 'lyrics_font_size_hint':
@@ -637951,6 +638232,10 @@ extension on _StringsVi {
         return 'Normal';
       case 'srt_audio_unresolved':
         return 'Không tìm thấy tệp âm thanh — vui lòng gắn lại';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return 'Nhập lại';
       case 'srt_book_reimport_body_rebuilt':
@@ -645736,6 +646021,8 @@ extension on _StringsZhCn {
         return '字体库';
       case 'custom_fonts_download_failed':
         return '下载失败';
+      case 'custom_fonts_download_unreachable_hint':
+        return '连不上字体下载源。可在设置里的「网络代理」配置代理后重试，或直接导入已有的字体文件。';
       case 'custom_fonts_downloading':
         return '正在下载…';
       case 'custom_fonts_drag_hint':
@@ -650716,6 +651003,8 @@ extension on _StringsZhCn {
         return '模糊歌词';
       case 'lyrics_blur_hint':
         return '听力沉浸：模糊当前句，悬停或点击显形';
+      case 'lyrics_exit_to_library':
+        return '关闭并返回书架';
       case 'lyrics_font_size':
         return '歌词字号';
       case 'lyrics_font_size_hint':
@@ -656500,6 +656789,10 @@ extension on _StringsZhCn {
         return '正常';
       case 'srt_audio_unresolved':
         return '未找到音频文件 — 请重新附加';
+      case 'srt_book_attach_epub':
+        return '添加书籍文件';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return '已用书籍正文生成新的有声书，原来的字幕书可以删除';
       case 'srt_book_reimport':
         return '重新导入';
       case 'srt_book_reimport_body_rebuilt':
@@ -664230,6 +664523,8 @@ extension on _StringsZhHk {
         return '字型庫';
       case 'custom_fonts_download_failed':
         return '下載失敗';
+      case 'custom_fonts_download_unreachable_hint':
+        return 'Couldn\'t reach the font download servers. Set up a network proxy in settings (Network proxy) and try again, or import a font file you already have.';
       case 'custom_fonts_downloading':
         return '正在下載…';
       case 'custom_fonts_drag_hint':
@@ -669228,6 +669523,8 @@ extension on _StringsZhHk {
         return '模糊歌詞';
       case 'lyrics_blur_hint':
         return '聽力沉浸：模糊當前句，懸停或點擊顯形';
+      case 'lyrics_exit_to_library':
+        return 'Close and return to library';
       case 'lyrics_font_size':
         return '歌詞字體大小';
       case 'lyrics_font_size_hint':
@@ -675050,6 +675347,10 @@ extension on _StringsZhHk {
         return 'Normal';
       case 'srt_audio_unresolved':
         return '未找到音訊檔案 — 請重新附加';
+      case 'srt_book_attach_epub':
+        return 'Add book file';
+      case 'srt_book_attach_epub_remove_old_hint':
+        return 'A new audiobook with the book text was created. You can delete the old subtitle-only book.';
       case 'srt_book_reimport':
         return '重新導入';
       case 'srt_book_reimport_body_rebuilt':
