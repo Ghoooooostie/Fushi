@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152949 (8997 per locale)
+/// Strings: 153000 (9000 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12401,6 +12401,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_scrape_queue_remove => 'Remove from queue';
   String get video_source_scrape_queue_submitted => 'Submitted';
   String get video_source_scrape_queue_waiting => 'Queued';
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  String get video_source_scrape_report_pending_open => 'Review';
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
   String get video_source_scrape_rescrape_source => 'Rescrape this source';
   String get video_source_scrape_run_detail_title => 'Scrape result';
   String get video_source_scrape_run_no_issues =>
@@ -33835,6 +33845,19 @@ class _StringsAr extends _StringsEn {
   String get video_source_scrape_queue_submitted => 'تم الإرسال';
   @override
   String get video_source_scrape_queue_waiting => 'في قائمة الانتظار';
+  @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
   @override
   String get video_source_scrape_rescrape_source => 'إعادة كشط هذا المصدر';
   @override
@@ -56063,6 +56086,19 @@ class _StringsDe extends _StringsEn {
   String get video_source_scrape_queue_submitted => 'Übermittelt';
   @override
   String get video_source_scrape_queue_waiting => 'In Warteschlange';
+  @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
   @override
   String get video_source_scrape_rescrape_source =>
       'Diese Quelle erneut scrapen';
@@ -78363,6 +78399,19 @@ class _StringsEs extends _StringsEn {
   String get video_source_scrape_queue_submitted => 'Enviada';
   @override
   String get video_source_scrape_queue_waiting => 'En cola';
+  @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
   @override
   String get video_source_scrape_rescrape_source =>
       'Volver a obtener metadatos de esta fuente';
@@ -100739,6 +100788,19 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_queue_waiting => 'En attente';
   @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
+  @override
   String get video_source_scrape_rescrape_source => 'Rerécupérer cette source';
   @override
   String get video_source_scrape_run_detail_title =>
@@ -122795,6 +122857,19 @@ class _StringsId extends _StringsEn {
   String get video_source_scrape_queue_submitted => 'Dikirim';
   @override
   String get video_source_scrape_queue_waiting => 'Dalam antrean';
+  @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
   @override
   String get video_source_scrape_rescrape_source => 'Scrape ulang sumber ini';
   @override
@@ -144990,6 +145065,19 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_queue_waiting => 'In coda';
   @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
+  @override
   String get video_source_scrape_rescrape_source => 'Ri-scrape questa fonte';
   @override
   String get video_source_scrape_run_detail_title => 'Risultato scrape';
@@ -166217,6 +166305,19 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_queue_waiting => '待機中';
   @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
+  @override
   String get video_source_scrape_rescrape_source => 'このソースを再スクレイプ';
   @override
   String get video_source_scrape_run_detail_title => 'スクレイプ結果';
@@ -187427,6 +187528,19 @@ class _StringsKo extends _StringsEn {
   String get video_source_scrape_queue_submitted => '제출됨';
   @override
   String get video_source_scrape_queue_waiting => '대기 중';
+  @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
   @override
   String get video_source_scrape_rescrape_source => '이 소스 재스크래핑';
   @override
@@ -209538,6 +209652,19 @@ class _StringsNl extends _StringsEn {
   String get video_source_scrape_queue_submitted => 'Verzonden';
   @override
   String get video_source_scrape_queue_waiting => 'In wachtrij';
+  @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
   @override
   String get video_source_scrape_rescrape_source => 'Deze bron opnieuw scrapen';
   @override
@@ -231755,6 +231882,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_queue_waiting => 'Na fila';
   @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
+  @override
   String get video_source_scrape_rescrape_source =>
       'Rebuscar metadados desta fonte';
   @override
@@ -253916,6 +254056,19 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_queue_waiting => 'В очереди';
   @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
+  @override
   String get video_source_scrape_rescrape_source =>
       'Пересканировать этот источник';
   @override
@@ -275775,6 +275928,19 @@ class _StringsTh extends _StringsEn {
   String get video_source_scrape_queue_submitted => 'ส่งแล้ว';
   @override
   String get video_source_scrape_queue_waiting => 'อยู่ในคิว';
+  @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
   @override
   String get video_source_scrape_rescrape_source => 'สแครปแหล่งนี้อีกครั้ง';
   @override
@@ -297816,6 +297982,19 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_queue_waiting => 'Sırada';
   @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
+  @override
   String get video_source_scrape_rescrape_source => 'Bu kaynağı yeniden tara';
   @override
   String get video_source_scrape_run_detail_title => 'Tarama sonucu';
@@ -319792,6 +319971,19 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_queue_waiting => 'Trong hàng đợi';
   @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
+  @override
   String get video_source_scrape_rescrape_source => 'Quét lại nguồn này';
   @override
   String get video_source_scrape_run_detail_title => 'Kết quả quét';
@@ -339968,6 +340160,19 @@ class _StringsZhCn extends _StringsEn {
   String get video_source_scrape_queue_submitted => '已加入队列';
   @override
   String get video_source_scrape_queue_waiting => '排队中';
+  @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '待确认清单里还有 ${n} 部作品等你确认。';
+  @override
+  String get video_source_scrape_report_pending_open => '去确认';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      '完成：已应用 ${applied} 部，本批待确认 ${review} 部，失败 ${failed} 部；受保护未覆盖的文件 ${protected} 个';
   @override
   String get video_source_scrape_rescrape_source => '重新刮削此来源';
   @override
@@ -360520,6 +360725,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_queue_waiting => '排隊中';
   @override
+  String video_source_scrape_report_pending_backlog({required Object n}) =>
+      '${n} works in the pending list still need your confirmation.';
+  @override
+  String get video_source_scrape_report_pending_open => 'Review';
+  @override
+  String video_source_scrape_report_summary({
+    required Object applied,
+    required Object review,
+    required Object failed,
+    required Object protected,
+  }) =>
+      'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
+  @override
   String get video_source_scrape_rescrape_source => '重新刮削此來源';
   @override
   String get video_source_scrape_run_detail_title => '刮削結果';
@@ -379319,6 +379537,19 @@ extension on _StringsEn {
         return 'Submitted';
       case 'video_source_scrape_queue_waiting':
         return 'Queued';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Rescrape this source';
       case 'video_source_scrape_run_detail_title':
@@ -398018,6 +398249,19 @@ extension on _StringsAr {
         return 'تم الإرسال';
       case 'video_source_scrape_queue_waiting':
         return 'في قائمة الانتظار';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'إعادة كشط هذا المصدر';
       case 'video_source_scrape_run_detail_title':
@@ -416792,6 +417036,19 @@ extension on _StringsDe {
         return 'Übermittelt';
       case 'video_source_scrape_queue_waiting':
         return 'In Warteschlange';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Diese Quelle erneut scrapen';
       case 'video_source_scrape_run_detail_title':
@@ -435551,6 +435808,19 @@ extension on _StringsEs {
         return 'Enviada';
       case 'video_source_scrape_queue_waiting':
         return 'En cola';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Volver a obtener metadatos de esta fuente';
       case 'video_source_scrape_run_detail_title':
@@ -454327,6 +454597,19 @@ extension on _StringsFr {
         return 'Envoyée';
       case 'video_source_scrape_queue_waiting':
         return 'En attente';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Rerécupérer cette source';
       case 'video_source_scrape_run_detail_title':
@@ -473048,6 +473331,19 @@ extension on _StringsId {
         return 'Dikirim';
       case 'video_source_scrape_queue_waiting':
         return 'Dalam antrean';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Scrape ulang sumber ini';
       case 'video_source_scrape_run_detail_title':
@@ -491802,6 +492098,19 @@ extension on _StringsIt {
         return 'Inviata';
       case 'video_source_scrape_queue_waiting':
         return 'In coda';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Ri-scrape questa fonte';
       case 'video_source_scrape_run_detail_title':
@@ -510438,6 +510747,19 @@ extension on _StringsJa {
         return '送信済み';
       case 'video_source_scrape_queue_waiting':
         return '待機中';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'このソースを再スクレイプ';
       case 'video_source_scrape_run_detail_title':
@@ -529069,6 +529391,19 @@ extension on _StringsKo {
         return '제출됨';
       case 'video_source_scrape_queue_waiting':
         return '대기 중';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return '이 소스 재스크래핑';
       case 'video_source_scrape_run_detail_title':
@@ -547811,6 +548146,19 @@ extension on _StringsNl {
         return 'Verzonden';
       case 'video_source_scrape_queue_waiting':
         return 'In wachtrij';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Deze bron opnieuw scrapen';
       case 'video_source_scrape_run_detail_title':
@@ -566555,6 +566903,19 @@ extension on _StringsPtBr {
         return 'Enviada';
       case 'video_source_scrape_queue_waiting':
         return 'Na fila';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Rebuscar metadados desta fonte';
       case 'video_source_scrape_run_detail_title':
@@ -585304,6 +585665,19 @@ extension on _StringsRu {
         return 'Отправлено';
       case 'video_source_scrape_queue_waiting':
         return 'В очереди';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Пересканировать этот источник';
       case 'video_source_scrape_run_detail_title':
@@ -604009,6 +604383,19 @@ extension on _StringsTh {
         return 'ส่งแล้ว';
       case 'video_source_scrape_queue_waiting':
         return 'อยู่ในคิว';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'สแครปแหล่งนี้อีกครั้ง';
       case 'video_source_scrape_run_detail_title':
@@ -622743,6 +623130,19 @@ extension on _StringsTr {
         return 'Gönderildi';
       case 'video_source_scrape_queue_waiting':
         return 'Sırada';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Bu kaynağı yeniden tara';
       case 'video_source_scrape_run_detail_title':
@@ -641463,6 +641863,19 @@ extension on _StringsVi {
         return 'Đã gửi';
       case 'video_source_scrape_queue_waiting':
         return 'Trong hàng đợi';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return 'Quét lại nguồn này';
       case 'video_source_scrape_run_detail_title':
@@ -659973,6 +660386,18 @@ extension on _StringsZhCn {
         return '已加入队列';
       case 'video_source_scrape_queue_waiting':
         return '排队中';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) => '待确认清单里还有 ${n} 部作品等你确认。';
+      case 'video_source_scrape_report_pending_open':
+        return '去确认';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            '完成：已应用 ${applied} 部，本批待确认 ${review} 部，失败 ${failed} 部；受保护未覆盖的文件 ${protected} 个';
       case 'video_source_scrape_rescrape_source':
         return '重新刮削此来源';
       case 'video_source_scrape_run_detail_title':
@@ -678525,6 +678950,19 @@ extension on _StringsZhHk {
         return '已提交';
       case 'video_source_scrape_queue_waiting':
         return '排隊中';
+      case 'video_source_scrape_report_pending_backlog':
+        return ({required Object n}) =>
+            '${n} works in the pending list still need your confirmation.';
+      case 'video_source_scrape_report_pending_open':
+        return 'Review';
+      case 'video_source_scrape_report_summary':
+        return ({
+          required Object applied,
+          required Object review,
+          required Object failed,
+          required Object protected,
+        }) =>
+            'Done: ${applied} applied, ${review} awaiting confirmation in this batch, ${failed} failed; ${protected} protected files left untouched';
       case 'video_source_scrape_rescrape_source':
         return '重新刮削此來源';
       case 'video_source_scrape_run_detail_title':
