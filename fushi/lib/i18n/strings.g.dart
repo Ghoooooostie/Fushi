@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153357 (9021 per locale)
+/// Strings: 153391 (9023 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -270,6 +270,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} set individually';
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  String get ai_feature_srs_note_field => 'Review note fields';
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   String get ai_feature_srs_template => 'Review card template';
   String get ai_feature_srs_template_summary =>
       'Let AI lay out review cards from a description and explain fields';
@@ -9150,7 +9153,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Delete "${name}" and its subdecks. What should happen to their cards?';
   String get srs_deck_delete_purge => 'Delete permanently';
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   String get srs_deck_delete_with_cards => 'Delete cards too';
   String get srs_deck_delete_with_cards_hint =>
       'Notes whose cards are all in these decks are deleted; notes that also have cards elsewhere keep them and their cards here move to the parent deck';
@@ -13249,6 +13252,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -28310,7 +28318,7 @@ class _StringsAr extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -35161,6 +35169,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -50517,7 +50530,7 @@ class _StringsDe extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -57463,6 +57476,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -72848,7 +72866,7 @@ class _StringsEs extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -79819,6 +79837,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -95267,7 +95290,7 @@ class _StringsFr extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -102258,6 +102281,11 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -117450,7 +117478,7 @@ class _StringsId extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -124354,6 +124382,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -139674,7 +139707,7 @@ class _StringsIt extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -146602,6 +146635,11 @@ class _StringsJa extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 件を個別に指定';
   @override
   String get ai_feature_overrides_none => 'すべての機能が既定のプロバイダーを使用';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -161192,7 +161230,7 @@ class _StringsJa extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -167822,6 +167860,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -182436,7 +182479,7 @@ class _StringsKo extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -189111,6 +189154,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -204390,7 +204438,7 @@ class _StringsNl extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -211320,6 +211368,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -226645,7 +226698,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -233592,6 +233645,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -248878,7 +248936,7 @@ class _StringsRu extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -255810,6 +255868,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -270862,7 +270925,7 @@ class _StringsTh extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -277710,6 +277773,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -292912,7 +292980,7 @@ class _StringsTr extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -299811,6 +299879,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_feature_overrides_none =>
       'All features use the default provider';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -314958,7 +315031,7 @@ class _StringsVi extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -321824,6 +321897,11 @@ class _StringsZhCn extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 项已单独指定';
   @override
   String get ai_feature_overrides_none => '全部跟随默认提供商';
+  @override
+  String get ai_feature_srs_note_field => '复习笔记字段';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      '让 AI 为笔记字段写释义、翻译或改写（只进草稿，保存才生效）';
   @override
   String get ai_feature_srs_template => '复习卡片模板';
   @override
@@ -335699,7 +335777,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_deck_delete_purge => '永久删除';
   @override
-  String get srs_deck_delete_purge_hint => '连同卡片、复习记录与不再使用的媒体立即删除并释放空间，无法恢复';
+  String get srs_deck_delete_purge_hint =>
+      '连同卡片与不再使用的媒体立即删除并释放空间（复习记录保留给统计），无法恢复';
   @override
   String get srs_deck_delete_with_cards => '连卡片一起删除';
   @override
@@ -341948,6 +342027,11 @@ class _StringsZhHk extends _StringsEn {
   String ai_feature_overrides_count({required Object n}) => '${n} 項已單獨指定';
   @override
   String get ai_feature_overrides_none => '全部跟隨預設提供商';
+  @override
+  String get ai_feature_srs_note_field => 'Review note fields';
+  @override
+  String get ai_feature_srs_note_field_summary =>
+      'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
   @override
   String get ai_feature_srs_template => 'Review card template';
   @override
@@ -356113,7 +356197,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_deck_delete_purge => 'Delete permanently';
   @override
   String get srs_deck_delete_purge_hint =>
-      'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+      'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
   @override
   String get srs_deck_delete_with_cards => 'Delete cards too';
   @override
@@ -362536,6 +362620,10 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -375460,7 +375548,7 @@ extension on _StringsEn {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -381291,6 +381379,10 @@ extension on _StringsAr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -394211,7 +394303,7 @@ extension on _StringsAr {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -400041,6 +400133,10 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -413018,7 +413114,7 @@ extension on _StringsDe {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -418866,6 +418962,10 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -431829,7 +431929,7 @@ extension on _StringsEs {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -437674,6 +437774,10 @@ extension on _StringsFr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -450651,7 +450755,7 @@ extension on _StringsFr {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -456497,6 +456601,10 @@ extension on _StringsId {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -469433,7 +469541,7 @@ extension on _StringsId {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -475267,6 +475375,10 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -488224,7 +488336,7 @@ extension on _StringsIt {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -494070,6 +494182,10 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} 件を個別に指定';
       case 'ai_feature_overrides_none':
         return 'すべての機能が既定のプロバイダーを使用';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -506949,7 +507065,7 @@ extension on _StringsJa {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -512740,6 +512856,10 @@ extension on _StringsKo {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -525623,7 +525743,7 @@ extension on _StringsKo {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -531427,6 +531547,10 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -544387,7 +544511,7 @@ extension on _StringsNl {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -550228,6 +550352,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -563182,7 +563310,7 @@ extension on _StringsPtBr {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -569018,6 +569146,10 @@ extension on _StringsRu {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -581981,7 +582113,7 @@ extension on _StringsRu {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -587816,6 +587948,10 @@ extension on _StringsTh {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -600740,7 +600876,7 @@ extension on _StringsTh {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -606569,6 +606705,10 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -619517,7 +619657,7 @@ extension on _StringsTr {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -625352,6 +625492,10 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} set individually';
       case 'ai_feature_overrides_none':
         return 'All features use the default provider';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -638289,7 +638433,7 @@ extension on _StringsVi {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
@@ -644119,6 +644263,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 项已单独指定';
       case 'ai_feature_overrides_none':
         return '全部跟随默认提供商';
+      case 'ai_feature_srs_note_field':
+        return '复习笔记字段';
+      case 'ai_feature_srs_note_field_summary':
+        return '让 AI 为笔记字段写释义、翻译或改写（只进草稿，保存才生效）';
       case 'ai_feature_srs_template':
         return '复习卡片模板';
       case 'ai_feature_srs_template_summary':
@@ -656908,7 +657056,7 @@ extension on _StringsZhCn {
       case 'srs_deck_delete_purge':
         return '永久删除';
       case 'srs_deck_delete_purge_hint':
-        return '连同卡片、复习记录与不再使用的媒体立即删除并释放空间，无法恢复';
+        return '连同卡片与不再使用的媒体立即删除并释放空间（复习记录保留给统计），无法恢复';
       case 'srs_deck_delete_with_cards':
         return '连卡片一起删除';
       case 'srs_deck_delete_with_cards_hint':
@@ -662652,6 +662800,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 項已單獨指定';
       case 'ai_feature_overrides_none':
         return '全部跟隨預設提供商';
+      case 'ai_feature_srs_note_field':
+        return 'Review note fields';
+      case 'ai_feature_srs_note_field_summary':
+        return 'Let AI write definitions, translations or rewrites for a note field (draft only until you save)';
       case 'ai_feature_srs_template':
         return 'Review card template';
       case 'ai_feature_srs_template_summary':
@@ -675487,7 +675639,7 @@ extension on _StringsZhHk {
       case 'srs_deck_delete_purge':
         return 'Delete permanently';
       case 'srs_deck_delete_purge_hint':
-        return 'Delete the deck and its cards, review history and unused media now to free disk space. This cannot be undone.';
+        return 'Delete the deck, its cards and unused media now to free disk space. Review history is kept for statistics. This cannot be undone.';
       case 'srs_deck_delete_with_cards':
         return 'Delete cards too';
       case 'srs_deck_delete_with_cards_hint':
