@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154343 (9079 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6819,6 +6819,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_import_segment_extensions => 'Extensions';
   String get media_import_segment_sources => 'Sources';
   String get media_import_segment_stores => 'Stores';
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  String get media_jump_history_clear => 'Clear jump history';
   String get media_privacy_action => 'Privacy';
   String get media_privacy_cleared_toast => 'No longer private';
   String get media_privacy_hint =>
@@ -24361,6 +24365,13 @@ class _StringsAr extends _StringsEn {
   String get media_import_segment_sources => 'المصادر';
   @override
   String get media_import_segment_stores => 'المستودعات';
+  @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -46646,6 +46657,13 @@ class _StringsDe extends _StringsEn {
   String get media_import_segment_sources => 'Quellen';
   @override
   String get media_import_segment_stores => 'Repositorys';
+  @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -69126,6 +69144,13 @@ class _StringsEs extends _StringsEn {
   String get media_import_segment_sources => 'Fuentes';
   @override
   String get media_import_segment_stores => 'Repositorios';
+  @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -91678,6 +91703,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Dépôts';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -114080,6 +114112,13 @@ class _StringsId extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositori';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -136416,6 +136455,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repository';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -158285,6 +158331,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_import_segment_stores => 'リポジトリ';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -179670,6 +179723,13 @@ class _StringsKo extends _StringsEn {
   String get media_import_segment_sources => '소스';
   @override
   String get media_import_segment_stores => '저장소';
+  @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -201594,6 +201654,13 @@ class _StringsNl extends _StringsEn {
   String get media_import_segment_sources => 'Bronnen';
   @override
   String get media_import_segment_stores => 'Repository\'s';
+  @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -224000,6 +224067,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Repositórios';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -246380,6 +246454,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Репозитории';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -268580,6 +268661,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_import_segment_stores => 'ที่เก็บ';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -290752,6 +290840,13 @@ class _StringsTr extends _StringsEn {
   String get media_import_segment_sources => 'Kaynaklar';
   @override
   String get media_import_segment_stores => 'Depolar';
+  @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
   @override
   String get media_privacy_action => 'Privacy';
   @override
@@ -312970,6 +313065,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_import_segment_stores => 'Kho';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -334191,6 +334293,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_import_segment_stores => '仓库';
   @override
+  String media_jump_back({required Object position}) => '返回 ${position}';
+  @override
+  String media_jump_forward({required Object position}) => '前进到 ${position}';
+  @override
+  String get media_jump_history_clear => '清除跳转记录';
+  @override
   String get media_privacy_action => '私密';
   @override
   String get media_privacy_cleared_toast => '已取消私密';
@@ -354662,6 +354770,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_import_segment_stores => '倉庫';
   @override
+  String media_jump_back({required Object position}) => 'Back to ${position}';
+  @override
+  String media_jump_forward({required Object position}) =>
+      'Forward to ${position}';
+  @override
+  String get media_jump_history_clear => 'Clear jump history';
+  @override
   String get media_privacy_action => 'Privacy';
   @override
   String get media_privacy_cleared_toast => 'No longer private';
@@ -374426,6 +374541,12 @@ extension on _StringsEn {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Stores';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -393295,6 +393416,12 @@ extension on _StringsAr {
         return 'المصادر';
       case 'media_import_segment_stores':
         return 'المستودعات';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -412211,6 +412338,12 @@ extension on _StringsDe {
         return 'Quellen';
       case 'media_import_segment_stores':
         return 'Repositorys';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -431141,6 +431274,12 @@ extension on _StringsEs {
         return 'Fuentes';
       case 'media_import_segment_stores':
         return 'Repositorios';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -450081,6 +450220,12 @@ extension on _StringsFr {
         return 'Sources';
       case 'media_import_segment_stores':
         return 'Dépôts';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -468994,6 +469139,12 @@ extension on _StringsId {
         return 'Sumber';
       case 'media_import_segment_stores':
         return 'Repositori';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -487896,6 +488047,12 @@ extension on _StringsIt {
         return 'Fonti';
       case 'media_import_segment_stores':
         return 'Repository';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -506756,6 +506913,12 @@ extension on _StringsJa {
         return 'ソース';
       case 'media_import_segment_stores':
         return 'リポジトリ';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -525548,6 +525711,12 @@ extension on _StringsKo {
         return '소스';
       case 'media_import_segment_stores':
         return '저장소';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -544416,6 +544585,12 @@ extension on _StringsNl {
         return 'Bronnen';
       case 'media_import_segment_stores':
         return 'Repository\'s';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -563330,6 +563505,12 @@ extension on _StringsPtBr {
         return 'Fontes';
       case 'media_import_segment_stores':
         return 'Repositórios';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -582248,6 +582429,12 @@ extension on _StringsRu {
         return 'Источники';
       case 'media_import_segment_stores':
         return 'Репозитории';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -601135,6 +601322,12 @@ extension on _StringsTh {
         return 'แหล่งที่มา';
       case 'media_import_segment_stores':
         return 'ที่เก็บ';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -620028,6 +620221,12 @@ extension on _StringsTr {
         return 'Kaynaklar';
       case 'media_import_segment_stores':
         return 'Depolar';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -638919,6 +639118,12 @@ extension on _StringsVi {
         return 'Nguồn';
       case 'media_import_segment_stores':
         return 'Kho';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
@@ -657684,6 +657889,12 @@ extension on _StringsZhCn {
         return '在线源';
       case 'media_import_segment_stores':
         return '仓库';
+      case 'media_jump_back':
+        return ({required Object position}) => '返回 ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => '前进到 ${position}';
+      case 'media_jump_history_clear':
+        return '清除跳转记录';
       case 'media_privacy_action':
         return '私密';
       case 'media_privacy_cleared_toast':
@@ -676365,6 +676576,12 @@ extension on _StringsZhHk {
         return '線上源';
       case 'media_import_segment_stores':
         return '倉庫';
+      case 'media_jump_back':
+        return ({required Object position}) => 'Back to ${position}';
+      case 'media_jump_forward':
+        return ({required Object position}) => 'Forward to ${position}';
+      case 'media_jump_history_clear':
+        return 'Clear jump history';
       case 'media_privacy_action':
         return 'Privacy';
       case 'media_privacy_cleared_toast':
