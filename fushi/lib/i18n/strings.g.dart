@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153017 (9001 per locale)
+/// Strings: 153068 (9004 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11743,6 +11743,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Subtitle downloaded and applied on the computer';
   String get video_remote_subtitles => 'Subtitles';
   String get video_remote_title => 'Video remote';
+  String get video_remote_touchpad => 'Touchpad';
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
   String get video_remote_transcript_empty => 'No subtitles yet';
   String get video_remote_unsupported =>
       'This device does not support video remote control';
@@ -32731,6 +32735,13 @@ class _StringsAr extends _StringsEn {
   String get video_remote_subtitles => 'Subtitles';
   @override
   String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
   @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
@@ -54944,6 +54955,13 @@ class _StringsDe extends _StringsEn {
   String get video_remote_subtitles => 'Subtitles';
   @override
   String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
   @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
@@ -77247,6 +77265,13 @@ class _StringsEs extends _StringsEn {
   String get video_remote_subtitles => 'Subtitles';
   @override
   String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
   @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
@@ -99628,6 +99653,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_title => 'Video remote';
   @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
+  @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
   String get video_remote_unsupported =>
@@ -121728,6 +121760,13 @@ class _StringsId extends _StringsEn {
   String get video_remote_subtitles => 'Subtitles';
   @override
   String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
   @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
@@ -143919,6 +143958,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_title => 'Video remote';
   @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
+  @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
   String get video_remote_unsupported =>
@@ -165237,6 +165283,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_title => 'Video remote';
   @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
+  @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
   String get video_remote_unsupported =>
@@ -186449,6 +186502,13 @@ class _StringsKo extends _StringsEn {
   String get video_remote_subtitles => 'Subtitles';
   @override
   String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
   @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
@@ -208509,6 +208569,13 @@ class _StringsNl extends _StringsEn {
   String get video_remote_subtitles => 'Subtitles';
   @override
   String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
   @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
@@ -230727,6 +230794,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_title => 'Video remote';
   @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
+  @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
   String get video_remote_unsupported =>
@@ -252905,6 +252979,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_title => 'Video remote';
   @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
+  @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
   String get video_remote_unsupported =>
@@ -274807,6 +274888,13 @@ class _StringsTh extends _StringsEn {
   String get video_remote_subtitles => 'Subtitles';
   @override
   String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
   @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
@@ -296839,6 +296927,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_title => 'Video remote';
   @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
+  @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
   String get video_remote_unsupported =>
@@ -318837,6 +318932,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_title => 'Video remote';
   @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
+  @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
   String get video_remote_unsupported =>
@@ -339126,6 +339228,13 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_subtitles => '字幕';
   @override
   String get video_remote_title => '视频遥控器';
+  @override
+  String get video_remote_touchpad => '触控板';
+  @override
+  String get video_remote_touchpad_exit => '返回遥控器';
+  @override
+  String get video_remote_touchpad_hint =>
+      '点按：播放 / 暂停 · 双击：重听这句 · 左滑 / 右滑：下一句 / 上一句 · 上滑 / 下滑：音量';
   @override
   String get video_remote_transcript_empty => '暂无字幕';
   @override
@@ -359678,6 +359787,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_title => 'Video remote';
   @override
+  String get video_remote_touchpad => 'Touchpad';
+  @override
+  String get video_remote_touchpad_exit => 'Back to the remote';
+  @override
+  String get video_remote_touchpad_hint =>
+      'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
+  @override
   String get video_remote_transcript_empty => 'No subtitles yet';
   @override
   String get video_remote_unsupported =>
@@ -378583,6 +378699,12 @@ extension on _StringsEn {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -397289,6 +397411,12 @@ extension on _StringsAr {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -416071,6 +416199,12 @@ extension on _StringsDe {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -434838,6 +434972,12 @@ extension on _StringsEs {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -453621,6 +453761,12 @@ extension on _StringsFr {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -472352,6 +472498,12 @@ extension on _StringsId {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -491113,6 +491265,12 @@ extension on _StringsIt {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -509759,6 +509917,12 @@ extension on _StringsJa {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -528399,6 +528563,12 @@ extension on _StringsKo {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -547145,6 +547315,12 @@ extension on _StringsNl {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -565898,6 +566074,12 @@ extension on _StringsPtBr {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -584655,6 +584837,12 @@ extension on _StringsRu {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -603369,6 +603557,12 @@ extension on _StringsTh {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -622109,6 +622303,12 @@ extension on _StringsTr {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -640838,6 +641038,12 @@ extension on _StringsVi {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
@@ -659362,6 +659568,12 @@ extension on _StringsZhCn {
         return '字幕';
       case 'video_remote_title':
         return '视频遥控器';
+      case 'video_remote_touchpad':
+        return '触控板';
+      case 'video_remote_touchpad_exit':
+        return '返回遥控器';
+      case 'video_remote_touchpad_hint':
+        return '点按：播放 / 暂停 · 双击：重听这句 · 左滑 / 右滑：下一句 / 上一句 · 上滑 / 下滑：音量';
       case 'video_remote_transcript_empty':
         return '暂无字幕';
       case 'video_remote_unsupported':
@@ -677921,6 +678133,12 @@ extension on _StringsZhHk {
         return 'Subtitles';
       case 'video_remote_title':
         return 'Video remote';
+      case 'video_remote_touchpad':
+        return 'Touchpad';
+      case 'video_remote_touchpad_exit':
+        return 'Back to the remote';
+      case 'video_remote_touchpad_hint':
+        return 'Tap: play / pause · Double-tap: replay line · Swipe left / right: next / previous line · Swipe up / down: volume';
       case 'video_remote_transcript_empty':
         return 'No subtitles yet';
       case 'video_remote_unsupported':
