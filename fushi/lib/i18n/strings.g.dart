@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153034 (9002 per locale)
+/// Strings: 153102 (9006 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8421,6 +8421,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get section_services_metadata => 'Metadata scraping';
   String get section_services_resources => 'Resource indexers';
   String get section_services_subtitles => 'Subtitle sources';
+  String get section_tabs_order_done => 'Done';
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  String get section_tabs_order_reset => 'Reset order';
+  String get section_tabs_order_title => 'Reorder tabs';
   String get section_typography => 'Typography';
   String get section_update => 'Update settings';
   String get section_video_capture => 'Screenshots and clips';
@@ -26983,6 +26988,15 @@ class _StringsAr extends _StringsEn {
   String get section_services_resources => 'مفهرسات الموارد';
   @override
   String get section_services_subtitles => 'مصادر الترجمة';
+  @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
   @override
   String get section_typography => 'الطباعة';
   @override
@@ -49129,6 +49143,15 @@ class _StringsDe extends _StringsEn {
   String get section_services_resources => 'Ressourcen-Indexer';
   @override
   String get section_services_subtitles => 'Untertitelquellen';
+  @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
   @override
   String get section_typography => 'Typografie';
   @override
@@ -71407,6 +71430,15 @@ class _StringsEs extends _StringsEn {
   String get section_services_resources => 'Indexadores de recursos';
   @override
   String get section_services_subtitles => 'Fuentes de subtítulos';
+  @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
   @override
   String get section_typography => 'Tipografía';
   @override
@@ -93784,6 +93816,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get section_services_subtitles => 'Sources de sous-titres';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Typographie';
   @override
   String get section_update => 'Paramètres de mise à jour';
@@ -115945,6 +115986,15 @@ class _StringsId extends _StringsEn {
   @override
   String get section_services_subtitles => 'Sumber subtitle';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Tipografi';
   @override
   String get section_update => 'Pengaturan Pembaruan';
@@ -138103,6 +138153,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get section_services_subtitles => 'Fonti dei sottotitoli';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Tipografia';
   @override
   String get section_update => 'Impostazioni aggiornamento';
@@ -159633,6 +159692,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get section_services_subtitles => '字幕のソース';
   @override
+  String get section_tabs_order_done => '完了';
+  @override
+  String get section_tabs_order_hint => 'ドラッグか矢印ボタンで並べ替えます。後から増えたタブは末尾に入ります。';
+  @override
+  String get section_tabs_order_reset => '既定の順序に戻す';
+  @override
+  String get section_tabs_order_title => 'タブの並べ替え';
+  @override
   String get section_typography => 'タイポグラフィ';
   @override
   String get section_update => '更新設定';
@@ -180832,6 +180899,15 @@ class _StringsKo extends _StringsEn {
   String get section_services_resources => '리소스 인덱서';
   @override
   String get section_services_subtitles => '자막 소스';
+  @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
   @override
   String get section_typography => '타이포그래피';
   @override
@@ -202696,6 +202772,15 @@ class _StringsNl extends _StringsEn {
   String get section_services_resources => 'Resource-indexers';
   @override
   String get section_services_subtitles => 'Ondertitelbronnen';
+  @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
   @override
   String get section_typography => 'Typografie';
   @override
@@ -224904,6 +224989,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get section_services_subtitles => 'Fontes de legendas';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Tipografia';
   @override
   String get section_update => 'Configurações de atualização';
@@ -247093,6 +247187,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get section_services_subtitles => 'Источники субтитров';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Типографика';
   @override
   String get section_update => 'Настройки обновлений';
@@ -269051,6 +269154,15 @@ class _StringsTh extends _StringsEn {
   String get section_services_resources => 'ตัวจัดทำดัชนีทรัพยากร';
   @override
   String get section_services_subtitles => 'แหล่งคำบรรยาย';
+  @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
   @override
   String get section_typography => 'รูปแบบตัวอักษร';
   @override
@@ -291050,6 +291162,15 @@ class _StringsTr extends _StringsEn {
   String get section_services_resources => 'Kaynak dizinleyicileri';
   @override
   String get section_services_subtitles => 'Altyazı kaynakları';
+  @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
   @override
   String get section_typography => 'Tipografi';
   @override
@@ -313057,6 +313178,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get section_services_subtitles => 'Nguồn phụ đề';
   @override
+  String get section_tabs_order_done => 'Done';
+  @override
+  String get section_tabs_order_hint =>
+      'Drag, or use the arrows. Tabs added later go to the end.';
+  @override
+  String get section_tabs_order_reset => 'Reset order';
+  @override
+  String get section_tabs_order_title => 'Reorder tabs';
+  @override
   String get section_typography => 'Kiểu chữ';
   @override
   String get section_update => 'Cài đặt cập nhật';
@@ -333839,6 +333969,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get section_services_subtitles => '字幕来源';
   @override
+  String get section_tabs_order_done => '完成';
+  @override
+  String get section_tabs_order_hint => '拖动或用上下按钮调整；之后新增的页签排在最后。';
+  @override
+  String get section_tabs_order_reset => '恢复默认顺序';
+  @override
+  String get section_tabs_order_title => '调整页签顺序';
+  @override
   String get section_typography => '排版';
   @override
   String get section_update => '更新设置';
@@ -354170,6 +354308,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get section_services_subtitles => '字幕來源';
   @override
+  String get section_tabs_order_done => '完成';
+  @override
+  String get section_tabs_order_hint => '拖動或用上下按鈕調整；之後新增的頁籤排在最後。';
+  @override
+  String get section_tabs_order_reset => '恢復預設順序';
+  @override
+  String get section_tabs_order_title => '調整頁籤順序';
+  @override
   String get section_typography => '排版';
   @override
   String get section_update => '更新設定';
@@ -373561,6 +373707,14 @@ extension on _StringsEn {
         return 'Resource indexers';
       case 'section_services_subtitles':
         return 'Subtitle sources';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Typography';
       case 'section_update':
@@ -392273,6 +392427,14 @@ extension on _StringsAr {
         return 'مفهرسات الموارد';
       case 'section_services_subtitles':
         return 'مصادر الترجمة';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'الطباعة';
       case 'section_update':
@@ -411041,6 +411203,14 @@ extension on _StringsDe {
         return 'Ressourcen-Indexer';
       case 'section_services_subtitles':
         return 'Untertitelquellen';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Typografie';
       case 'section_update':
@@ -429813,6 +429983,14 @@ extension on _StringsEs {
         return 'Indexadores de recursos';
       case 'section_services_subtitles':
         return 'Fuentes de subtítulos';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografía';
       case 'section_update':
@@ -448596,6 +448774,14 @@ extension on _StringsFr {
         return 'Indexeurs de ressources';
       case 'section_services_subtitles':
         return 'Sources de sous-titres';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Typographie';
       case 'section_update':
@@ -467339,6 +467525,14 @@ extension on _StringsId {
         return 'Pengindeks sumber daya';
       case 'section_services_subtitles':
         return 'Sumber subtitle';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografi';
       case 'section_update':
@@ -486091,6 +486285,14 @@ extension on _StringsIt {
         return 'Indicizzatori di risorse';
       case 'section_services_subtitles':
         return 'Fonti dei sottotitoli';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografia';
       case 'section_update':
@@ -504777,6 +504979,14 @@ extension on _StringsJa {
         return 'リソースインデクサー';
       case 'section_services_subtitles':
         return '字幕のソース';
+      case 'section_tabs_order_done':
+        return '完了';
+      case 'section_tabs_order_hint':
+        return 'ドラッグか矢印ボタンで並べ替えます。後から増えたタブは末尾に入ります。';
+      case 'section_tabs_order_reset':
+        return '既定の順序に戻す';
+      case 'section_tabs_order_title':
+        return 'タブの並べ替え';
       case 'section_typography':
         return 'タイポグラフィ';
       case 'section_update':
@@ -523412,6 +523622,14 @@ extension on _StringsKo {
         return '리소스 인덱서';
       case 'section_services_subtitles':
         return '자막 소스';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return '타이포그래피';
       case 'section_update':
@@ -542137,6 +542355,14 @@ extension on _StringsNl {
         return 'Resource-indexers';
       case 'section_services_subtitles':
         return 'Ondertitelbronnen';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Typografie';
       case 'section_update':
@@ -560893,6 +561119,14 @@ extension on _StringsPtBr {
         return 'Indexadores de recursos';
       case 'section_services_subtitles':
         return 'Fontes de legendas';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografia';
       case 'section_update':
@@ -579653,6 +579887,14 @@ extension on _StringsRu {
         return 'Индексаторы ресурсов';
       case 'section_services_subtitles':
         return 'Источники субтитров';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Типографика';
       case 'section_update':
@@ -598373,6 +598615,14 @@ extension on _StringsTh {
         return 'ตัวจัดทำดัชนีทรัพยากร';
       case 'section_services_subtitles':
         return 'แหล่งคำบรรยาย';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'รูปแบบตัวอักษร';
       case 'section_update':
@@ -617111,6 +617361,14 @@ extension on _StringsTr {
         return 'Kaynak dizinleyicileri';
       case 'section_services_subtitles':
         return 'Altyazı kaynakları';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Tipografi';
       case 'section_update':
@@ -635844,6 +636102,14 @@ extension on _StringsVi {
         return 'Trình lập chỉ mục tài nguyên';
       case 'section_services_subtitles':
         return 'Nguồn phụ đề';
+      case 'section_tabs_order_done':
+        return 'Done';
+      case 'section_tabs_order_hint':
+        return 'Drag, or use the arrows. Tabs added later go to the end.';
+      case 'section_tabs_order_reset':
+        return 'Reset order';
+      case 'section_tabs_order_title':
+        return 'Reorder tabs';
       case 'section_typography':
         return 'Kiểu chữ';
       case 'section_update':
@@ -654433,6 +654699,14 @@ extension on _StringsZhCn {
         return '资源索引器';
       case 'section_services_subtitles':
         return '字幕来源';
+      case 'section_tabs_order_done':
+        return '完成';
+      case 'section_tabs_order_hint':
+        return '拖动或用上下按钮调整；之后新增的页签排在最后。';
+      case 'section_tabs_order_reset':
+        return '恢复默认顺序';
+      case 'section_tabs_order_title':
+        return '调整页签顺序';
       case 'section_typography':
         return '排版';
       case 'section_update':
@@ -672965,6 +673239,14 @@ extension on _StringsZhHk {
         return '資源索引器';
       case 'section_services_subtitles':
         return '字幕來源';
+      case 'section_tabs_order_done':
+        return '完成';
+      case 'section_tabs_order_hint':
+        return '拖動或用上下按鈕調整；之後新增的頁籤排在最後。';
+      case 'section_tabs_order_reset':
+        return '恢復預設順序';
+      case 'section_tabs_order_title':
+        return '調整頁籤順序';
       case 'section_typography':
         return '排版';
       case 'section_update':
