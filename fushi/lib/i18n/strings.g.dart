@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 153068 (9004 per locale)
+/// Strings: 153119 (9007 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1201,7 +1201,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_tag_include_fushi => 'Add "fushi" tag';
   String get anki_tag_include_fushi_hint => 'Mark every card mined by Fushi';
   String get anki_tags => 'Tags';
+  String get anki_tags_global => 'Tags for all profiles';
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
   String get anki_tags_hint => 'Space-separated tags added to every card';
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
   String get anki_video_template_apply => 'Enable / update';
@@ -14746,7 +14751,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_tags => 'الوسوم';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'وسوم مفصولة بمسافات تُضاف لكل بطاقة';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -36648,8 +36661,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_tags => 'Tags';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Leerzeichen-getrennte Tags, die jeder Karte hinzugefügt werden';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -58919,8 +58940,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_tags => 'Etiquetas';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Etiquetas separadas por espacios añadidas a cada tarjeta';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -81244,8 +81273,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_tags => 'Étiquettes';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Étiquettes séparées par des espaces ajoutées à chaque carte';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -103619,8 +103656,16 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_tags => 'Tag';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Tag dipisahkan spasi yang ditambahkan ke setiap kartu';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -125685,7 +125730,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_tags => 'Tag';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'Tag separati da spazi aggiunti a ogni carta';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -147821,7 +147874,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_tags => 'タグ';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'スペース区切りで、すべてのカードに追加されます';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -168997,7 +169058,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_tags => '태그';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => '모든 카드에 추가되는 공백 구분 태그';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -190328,8 +190397,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_tags => 'Tags';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Door spaties gescheiden tags die aan elke kaart worden toegevoegd';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -212508,8 +212585,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_tags => 'Etiquetas';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Tags separadas por espaços adicionadas a cada cartão';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -234733,8 +234818,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_tags => 'Теги';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Теги через пробел, добавляемые к каждой карточке';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -256882,7 +256975,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_tags => 'แท็ก';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'แท็กคั่นด้วยช่องว่างที่จะเพิ่มในทุกการ์ด';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -278763,7 +278864,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_tags => 'Etiketler';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint => 'Her karta eklenen boşlukla ayrılmış etiketler';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -300818,8 +300927,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_tags => 'Thẻ tag';
   @override
+  String get anki_tags_global => 'Tags for all profiles';
+  @override
+  String get anki_tags_global_hint =>
+      'Added to every card, whichever profile is active.';
+  @override
   String get anki_tags_hint =>
       'Các tag cách nhau bằng dấu cách, thêm vào mỗi thẻ';
+  @override
+  String get anki_tags_profile_hint =>
+      'Only for cards mined in this profile. Switching profiles switches these tags.';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -322671,7 +322788,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_tags => '标签';
   @override
+  String get anki_tags_global => '全局标签';
+  @override
+  String get anki_tags_global_hint => '无论当前是哪个配置，每张卡片都会添加。';
+  @override
   String get anki_tags_hint => '空格分隔，每张卡片都会添加';
+  @override
+  String get anki_tags_profile_hint => '只对当前配置制的卡生效，切换配置时随之切换。';
   @override
   String get anki_video_template_applied => '适配已保存，请在复习设备上测试真实视频卡片。';
   @override
@@ -342772,7 +342895,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_tags => '標籤';
   @override
+  String get anki_tags_global => '全域標籤';
+  @override
+  String get anki_tags_global_hint => '無論目前是哪個設定檔，每張卡片都會加上。';
+  @override
   String get anki_tags_hint => '以空格分隔，每張卡片都會加入';
+  @override
+  String get anki_tags_profile_hint => '只對目前設定檔製的卡生效，切換設定檔時隨之切換。';
   @override
   String get anki_video_template_applied =>
       'Adaptation saved. Test a real video card on your review devices.';
@@ -363180,8 +363309,14 @@ extension on _StringsEn {
         return 'Mark every card mined by Fushi';
       case 'anki_tags':
         return 'Tags';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Space-separated tags added to every card';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -381901,8 +382036,14 @@ extension on _StringsAr {
         return 'وسم كل بطاقة أنشأها Fushi';
       case 'anki_tags':
         return 'الوسوم';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'وسوم مفصولة بمسافات تُضاف لكل بطاقة';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -400628,8 +400769,14 @@ extension on _StringsDe {
         return 'Jede von Fushi erstellte Karte kennzeichnen';
       case 'anki_tags':
         return 'Tags';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Leerzeichen-getrennte Tags, die jeder Karte hinzugefügt werden';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -419411,8 +419558,14 @@ extension on _StringsEs {
         return 'Marca todas las tarjetas creadas por Fushi';
       case 'anki_tags':
         return 'Etiquetas';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Etiquetas separadas por espacios añadidas a cada tarjeta';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -438188,8 +438341,14 @@ extension on _StringsFr {
         return 'Marquer chaque carte créée par Fushi';
       case 'anki_tags':
         return 'Étiquettes';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Étiquettes séparées par des espaces ajoutées à chaque carte';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -456971,8 +457130,14 @@ extension on _StringsId {
         return 'Tandai setiap kartu yang dibuat oleh Fushi';
       case 'anki_tags':
         return 'Tag';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Tag dipisahkan spasi yang ditambahkan ke setiap kartu';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -475708,8 +475873,14 @@ extension on _StringsIt {
         return 'Contrassegna ogni carta creata con Fushi';
       case 'anki_tags':
         return 'Tag';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Tag separati da spazi aggiunti a ogni carta';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -494463,8 +494634,14 @@ extension on _StringsJa {
         return 'Fushi で作成したすべてのカードに目印を付けます';
       case 'anki_tags':
         return 'タグ';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'スペース区切りで、すべてのカードに追加されます';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -513097,8 +513274,14 @@ extension on _StringsKo {
         return 'Fushi로 만든 모든 카드에 표시합니다';
       case 'anki_tags':
         return '태그';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return '모든 카드에 추가되는 공백 구분 태그';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -531765,8 +531948,14 @@ extension on _StringsNl {
         return 'Markeer elke kaart die met Fushi is gemaakt';
       case 'anki_tags':
         return 'Tags';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Door spaties gescheiden tags die aan elke kaart worden toegevoegd';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -550529,8 +550718,14 @@ extension on _StringsPtBr {
         return 'Marca todo cartão criado pelo Fushi';
       case 'anki_tags':
         return 'Etiquetas';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Tags separadas por espaços adicionadas a cada cartão';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -569287,8 +569482,14 @@ extension on _StringsRu {
         return 'Помечать каждую карточку, созданную в Fushi';
       case 'anki_tags':
         return 'Теги';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Теги через пробел, добавляемые к каждой карточке';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -588040,8 +588241,14 @@ extension on _StringsTh {
         return 'ทำเครื่องหมายทุกการ์ดที่สร้างโดย Fushi';
       case 'anki_tags':
         return 'แท็ก';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'แท็กคั่นด้วยช่องว่างที่จะเพิ่มในทุกการ์ด';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -606766,8 +606973,14 @@ extension on _StringsTr {
         return 'Fushi ile çıkarılan her kartı işaretle';
       case 'anki_tags':
         return 'Etiketler';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Her karta eklenen boşlukla ayrılmış etiketler';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -625511,8 +625724,14 @@ extension on _StringsVi {
         return 'Đánh dấu mọi thẻ được tạo bởi Fushi';
       case 'anki_tags':
         return 'Thẻ tag';
+      case 'anki_tags_global':
+        return 'Tags for all profiles';
+      case 'anki_tags_global_hint':
+        return 'Added to every card, whichever profile is active.';
       case 'anki_tags_hint':
         return 'Các tag cách nhau bằng dấu cách, thêm vào mỗi thẻ';
+      case 'anki_tags_profile_hint':
+        return 'Only for cards mined in this profile. Switching profiles switches these tags.';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
@@ -644213,8 +644432,14 @@ extension on _StringsZhCn {
         return '为每张 Fushi 制出的卡片打上标记';
       case 'anki_tags':
         return '标签';
+      case 'anki_tags_global':
+        return '全局标签';
+      case 'anki_tags_global_hint':
+        return '无论当前是哪个配置，每张卡片都会添加。';
       case 'anki_tags_hint':
         return '空格分隔，每张卡片都会添加';
+      case 'anki_tags_profile_hint':
+        return '只对当前配置制的卡生效，切换配置时随之切换。';
       case 'anki_video_template_applied':
         return '适配已保存，请在复习设备上测试真实视频卡片。';
       case 'anki_video_template_apply':
@@ -662713,8 +662938,14 @@ extension on _StringsZhHk {
         return '為每張由 Fushi 製作的卡片打上標記';
       case 'anki_tags':
         return '標籤';
+      case 'anki_tags_global':
+        return '全域標籤';
+      case 'anki_tags_global_hint':
+        return '無論目前是哪個設定檔，每張卡片都會加上。';
       case 'anki_tags_hint':
         return '以空格分隔，每張卡片都會加入';
+      case 'anki_tags_profile_hint':
+        return '只對目前設定檔製的卡生效，切換設定檔時隨之切換。';
       case 'anki_video_template_applied':
         return 'Adaptation saved. Test a real video card on your review devices.';
       case 'anki_video_template_apply':
