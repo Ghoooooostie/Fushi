@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 154292 (9076 per locale)
+/// Strings: 154411 (9083 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11436,6 +11436,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_filter_series_standalone_empty_hint =>
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   String get video_filter_source => 'Source';
+  String get video_filter_spec => 'Format';
+  String get video_filter_spec_4k => '4K';
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  String get video_filter_spec_dvd => 'DVD';
+  String get video_filter_spec_hdr => 'HDR';
+  String get video_filter_spec_plain_file => 'Regular file';
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   String get video_filter_watch_status => 'Watch status';
   String get video_filter_watch_status_completed => 'Completed';
   String get video_filter_watch_status_unwatched => 'Unwatched';
@@ -32329,6 +32336,20 @@ class _StringsAr extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'حالة المشاهدة';
   @override
@@ -54725,6 +54746,20 @@ class _StringsDe extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Wiedergabestatus';
   @override
@@ -77225,6 +77260,20 @@ class _StringsEs extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Estado de visualización';
   @override
@@ -99795,6 +99844,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  @override
   String get video_filter_watch_status => 'Statut de visionnage';
   @override
   String get video_filter_watch_status_completed => 'Terminé';
@@ -122098,6 +122161,20 @@ class _StringsId extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Status tontonan';
   @override
@@ -144488,6 +144565,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  @override
   String get video_filter_watch_status => 'Stato di visione';
   @override
   String get video_filter_watch_status_completed => 'Completato';
@@ -166034,6 +166125,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  @override
   String get video_filter_watch_status => '視聴状態';
   @override
   String get video_filter_watch_status_completed => '視聴済み';
@@ -187431,6 +187536,20 @@ class _StringsKo extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => '시청 상태';
   @override
@@ -209658,6 +209777,20 @@ class _StringsNl extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'Kijkstatus';
   @override
@@ -232068,6 +232201,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  @override
   String get video_filter_watch_status => 'Status de visualização';
   @override
   String get video_filter_watch_status_completed => 'Concluído';
@@ -254442,6 +254589,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  @override
   String get video_filter_watch_status => 'Статус просмотра';
   @override
   String get video_filter_watch_status_completed => 'Просмотрено';
@@ -276552,6 +276713,20 @@ class _StringsTh extends _StringsEn {
       'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
   @override
   String get video_filter_source => 'Source';
+  @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
   @override
   String get video_filter_watch_status => 'สถานะการรับชม';
   @override
@@ -298773,6 +298948,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  @override
   String get video_filter_watch_status => 'İzleme durumu';
   @override
   String get video_filter_watch_status_completed => 'Tamamlandı';
@@ -320964,6 +321153,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  @override
   String get video_filter_watch_status => 'Trạng thái xem';
   @override
   String get video_filter_watch_status_completed => 'Đã xem xong';
@@ -341514,6 +341717,20 @@ class _StringsZhCn extends _StringsEn {
       '没有散片。合集里的视频在「系列」页，或把「系列」筛选切到「全部」。';
   @override
   String get video_filter_source => '来源';
+  @override
+  String get video_filter_spec => '规格';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'BD 原盘';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => '普通文件';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD BD';
   @override
   String get video_filter_watch_status => '看完状态';
   @override
@@ -362225,6 +362442,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_filter_source => 'Source';
   @override
+  String get video_filter_spec => 'Format';
+  @override
+  String get video_filter_spec_4k => '4K';
+  @override
+  String get video_filter_spec_bluray => 'Blu-ray disc';
+  @override
+  String get video_filter_spec_dvd => 'DVD';
+  @override
+  String get video_filter_spec_hdr => 'HDR';
+  @override
+  String get video_filter_spec_plain_file => 'Regular file';
+  @override
+  String get video_filter_spec_uhd_bluray => 'UHD Blu-ray';
+  @override
   String get video_filter_watch_status => '看完狀態';
   @override
   String get video_filter_watch_status_completed => '已看完';
@@ -381362,6 +381593,20 @@ extension on _StringsEn {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Watch status';
       case 'video_filter_watch_status_completed':
@@ -400229,6 +400474,20 @@ extension on _StringsAr {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'حالة المشاهدة';
       case 'video_filter_watch_status_completed':
@@ -419167,6 +419426,20 @@ extension on _StringsDe {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Wiedergabestatus';
       case 'video_filter_watch_status_completed':
@@ -438096,6 +438369,20 @@ extension on _StringsEs {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Estado de visualización';
       case 'video_filter_watch_status_completed':
@@ -457038,6 +457325,20 @@ extension on _StringsFr {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Statut de visionnage';
       case 'video_filter_watch_status_completed':
@@ -475931,6 +476232,20 @@ extension on _StringsId {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Status tontonan';
       case 'video_filter_watch_status_completed':
@@ -494852,6 +495167,20 @@ extension on _StringsIt {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Stato di visione';
       case 'video_filter_watch_status_completed':
@@ -513666,6 +513995,20 @@ extension on _StringsJa {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return '視聴状態';
       case 'video_filter_watch_status_completed':
@@ -532461,6 +532804,20 @@ extension on _StringsKo {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return '시청 상태';
       case 'video_filter_watch_status_completed':
@@ -551363,6 +551720,20 @@ extension on _StringsNl {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Kijkstatus';
       case 'video_filter_watch_status_completed':
@@ -570275,6 +570646,20 @@ extension on _StringsPtBr {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Status de visualização';
       case 'video_filter_watch_status_completed':
@@ -589195,6 +589580,20 @@ extension on _StringsRu {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Статус просмотра';
       case 'video_filter_watch_status_completed':
@@ -608070,6 +608469,20 @@ extension on _StringsTh {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'สถานะการรับชม';
       case 'video_filter_watch_status_completed':
@@ -626969,6 +627382,20 @@ extension on _StringsTr {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'İzleme durumu';
       case 'video_filter_watch_status_completed':
@@ -645859,6 +646286,20 @@ extension on _StringsVi {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return 'Trạng thái xem';
       case 'video_filter_watch_status_completed':
@@ -664545,6 +664986,20 @@ extension on _StringsZhCn {
         return '没有散片。合集里的视频在「系列」页，或把「系列」筛选切到「全部」。';
       case 'video_filter_source':
         return '来源';
+      case 'video_filter_spec':
+        return '规格';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'BD 原盘';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return '普通文件';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD BD';
       case 'video_filter_watch_status':
         return '看完状态';
       case 'video_filter_watch_status_completed':
@@ -683264,6 +683719,20 @@ extension on _StringsZhHk {
         return 'No standalone videos. Videos in collections are on the Series tab, or set the Series filter to All.';
       case 'video_filter_source':
         return 'Source';
+      case 'video_filter_spec':
+        return 'Format';
+      case 'video_filter_spec_4k':
+        return '4K';
+      case 'video_filter_spec_bluray':
+        return 'Blu-ray disc';
+      case 'video_filter_spec_dvd':
+        return 'DVD';
+      case 'video_filter_spec_hdr':
+        return 'HDR';
+      case 'video_filter_spec_plain_file':
+        return 'Regular file';
+      case 'video_filter_spec_uhd_bluray':
+        return 'UHD Blu-ray';
       case 'video_filter_watch_status':
         return '看完狀態';
       case 'video_filter_watch_status_completed':
