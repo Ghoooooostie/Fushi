@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 152983 (8999 per locale)
+/// Strings: 153034 (9002 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8650,6 +8650,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_video_next_chapter => 'Next chapter';
   String get shortcut_action_video_next_frame => 'Next frame';
   String get shortcut_action_video_next_subtitle => 'Next subtitle';
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
   String get shortcut_action_video_open_subtitle_align =>
       'Open subtitle waveform align';
   String get shortcut_action_video_pause => 'Pause';
@@ -11140,6 +11142,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_control_favorite_sentence => 'Favorite current sentence';
   String get video_control_fullscreen => 'Fullscreen';
   String get video_control_next_cue => 'Next subtitle';
+  String get video_control_ocr_frame => 'Recognize on-screen text';
   String get video_control_palette_hint =>
       'Drag a button into a slot to add it; a button can sit in several slots.';
   String get video_control_palette_title => 'All buttons';
@@ -11549,6 +11552,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_mining_still_format_hint =>
       'Encoding used when the card image is a still screenshot. JPG is much smaller; PNG is lossless but several times larger. Animated covers are unaffected — they follow the animation format setting.';
   String get video_next_episode => 'Next episode';
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   String get video_online_download_all => 'Download all';
   String get video_online_download_episode => 'Download this episode';
   String get video_online_download_started =>
@@ -27402,6 +27407,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'الترجمة التالية';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'فتح محاذاة موجة الترجمة';
   @override
@@ -31709,6 +31717,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_control_next_cue => 'الترجمة التالية';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'اسحب زرًا إلى موضع لإضافته؛ يمكن أن يكون الزر في عدة مواضع.';
   @override
@@ -32403,6 +32413,9 @@ class _StringsAr extends _StringsEn {
       'الترميز المستخدم عندما تكون صورة البطاقة لقطة ثابتة. JPG أصغر بكثير؛ PNG بدون فقدان لكنها أكبر بعدة مرات. الأغلفة المتحركة لا تتأثر — تتبع إعداد صيغة الحركة.';
   @override
   String get video_next_episode => 'الحلقة التالية';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'تنزيل الكل';
   @override
@@ -49555,6 +49568,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Nächster Untertitel';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Untertitel-Wellenform-Ausrichtung öffnen';
   @override
@@ -53898,6 +53914,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_control_next_cue => 'Nächster Untertitel';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Ziehe eine Taste in einen Platz, um sie hinzuzufügen; eine Taste kann an mehreren Plätzen sitzen.';
   @override
@@ -54606,6 +54624,9 @@ class _StringsDe extends _StringsEn {
       'Kodierung, wenn das Kartenbild ein Standbild ist. JPG ist viel kleiner; PNG ist verlustfrei, aber um ein Vielfaches größer. Animierte Cover sind nicht betroffen – sie folgen der Animations-Formateinstellung.';
   @override
   String get video_next_episode => 'Nächste Folge';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Alle herunterladen';
   @override
@@ -71835,6 +71856,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Subtítulo siguiente';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Abrir alineación de subtítulos con onda';
   @override
@@ -76192,6 +76216,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_control_next_cue => 'Subtítulo siguiente';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Arrastra un botón a una posición para añadirlo; un botón puede estar en varias posiciones.';
   @override
@@ -76903,6 +76929,9 @@ class _StringsEs extends _StringsEn {
       'Codificación usada cuando la imagen de la tarjeta es una captura estática. JPG es mucho más pequeño; PNG es sin pérdida pero varias veces más grande. Las portadas animadas no se afectan — siguen la configuración de formato de animación.';
   @override
   String get video_next_episode => 'Episodio siguiente';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Descargar todo';
   @override
@@ -94204,6 +94233,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Sous-titre suivant';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Ouvrir l\'alignement de forme d\'onde des sous-titres';
   @override
@@ -98558,6 +98590,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_control_next_cue => 'Sous-titre suivant';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Glissez un bouton dans un emplacement pour l\'ajouter ; un bouton peut occuper plusieurs emplacements.';
   @override
@@ -99275,6 +99309,9 @@ class _StringsFr extends _StringsEn {
       'Encodage utilisé quand l\'image de carte est une capture d\'écran fixe. JPG est bien plus petit ; PNG est sans perte mais plusieurs fois plus gros. Les couvertures animées ne sont pas affectées — elles suivent le réglage du format d\'animation.';
   @override
   String get video_next_episode => 'Épisode suivant';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Tout télécharger';
   @override
@@ -116341,6 +116378,9 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Subtitle Berikutnya';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Buka penyelarasan waveform subtitle';
   @override
@@ -120665,6 +120705,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_control_next_cue => 'Subtitle berikutnya';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Seret tombol ke sebuah slot untuk menambahkannya; satu tombol bisa berada di beberapa slot.';
   @override
@@ -121370,6 +121412,9 @@ class _StringsId extends _StringsEn {
       'Encoding yang digunakan saat gambar kartu adalah tangkapan layar diam. JPG jauh lebih kecil; PNG tanpa kehilangan tetapi beberapa kali lebih besar. Sampul animasi tidak terpengaruh — mengikuti pengaturan format animasi.';
   @override
   String get video_next_episode => 'Episode berikutnya';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Unduh semua';
   @override
@@ -138511,6 +138556,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Sottotitolo successivo';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Apri allineamento forma d\'onda sottotitoli';
   @override
@@ -142850,6 +142898,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_control_next_cue => 'Sottotitolo successivo';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Trascina un pulsante in uno slot per aggiungerlo; un pulsante può occupare più slot.';
   @override
@@ -143554,6 +143604,9 @@ class _StringsIt extends _StringsEn {
       'Codifica usata quando l\'immagine della carta è uno screenshot fisso. JPG è molto più piccolo; PNG è senza perdita ma diverse volte più grande. Le copertine animate non sono influenzate — seguono l\'impostazione del formato animazione.';
   @override
   String get video_next_episode => 'Episodio successivo';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Scarica tutto';
   @override
@@ -159998,6 +160051,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => '次の字幕';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align => '字幕波形アラインメントを開く';
   @override
   String get shortcut_action_video_pause => '一時停止';
@@ -164213,6 +164269,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_control_next_cue => '次の字幕';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'ボタンをスロットにドラッグすると追加できます。同じボタンを複数のスロットに置くこともできます。';
   @override
@@ -164877,6 +164935,9 @@ class _StringsJa extends _StringsEn {
       'カード画像が静止スクリーンショットの場合のエンコード形式。JPGはかなり小さく、PNGはロスレスですが数倍大きくなります。アニメーションカバーは影響を受けません。アニメーション形式の設定に従います。';
   @override
   String get video_next_episode => '次のエピソード';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'すべてダウンロード';
   @override
@@ -181193,6 +181254,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => '다음 자막';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align => '자막 파형 정렬 열기';
   @override
   String get shortcut_action_video_pause => '일시정지';
@@ -185410,6 +185474,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_control_next_cue => '다음 자막';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       '버튼을 슬롯으로 드래그하면 추가됩니다. 한 버튼을 여러 슬롯에 둘 수 있습니다.';
   @override
@@ -186078,6 +186144,9 @@ class _StringsKo extends _StringsEn {
       '카드 이미지가 정지 스크린샷일 때 사용되는 인코딩. JPG가 훨씬 작고, PNG는 무손실이지만 몇 배 더 큽니다. 애니메이션 표지는 영향 없음 — 애니메이션 형식 설정을 따릅니다.';
   @override
   String get video_next_episode => '다음 에피소드';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => '모두 다운로드';
   @override
@@ -203078,6 +203147,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Volgende ondertitel';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Ondertitel golfvormuitlijning openen';
   @override
@@ -207420,6 +207492,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_control_next_cue => 'Volgende ondertitel';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Sleep een knop naar een plek om hem toe te voegen; een knop kan op meerdere plekken staan.';
   @override
@@ -208123,6 +208197,9 @@ class _StringsNl extends _StringsEn {
       'Codering wanneer de kaartafbeelding een stilstaande schermafbeelding is. JPG is veel kleiner; PNG is verliesvrij maar meerdere malen groter. Geanimeerde omslagen worden niet beïnvloed — zij volgen de animatieformaatinstelling.';
   @override
   String get video_next_episode => 'Volgende aflevering';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Alles downloaden';
   @override
@@ -225284,6 +225361,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Próxima legenda';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Abrir alinhamento de forma de onda de legendas';
   @override
@@ -229623,6 +229703,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_control_next_cue => 'Próxima legenda';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Arraste um botão até um espaço para adicioná-lo; um botão pode ficar em vários espaços.';
   @override
@@ -230334,6 +230416,9 @@ class _StringsPtBr extends _StringsEn {
       'Codificação usada quando a imagem do cartão é uma captura de tela estática. JPG é muito menor; PNG é sem perda mas várias vezes maior. Capas animadas não são afetadas — seguem a configuração de formato de animação.';
   @override
   String get video_next_episode => 'Próximo episódio';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Baixar tudo';
   @override
@@ -247468,6 +247553,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Следующий субтитр';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Открыть выравнивание субтитров по волне';
   @override
@@ -251796,6 +251884,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_control_next_cue => 'Следующий субтитр';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Перетащите кнопку в ячейку, чтобы добавить; кнопку можно поместить в несколько ячеек.';
   @override
@@ -252504,6 +252594,9 @@ class _StringsRu extends _StringsEn {
       'Формат кодирования для статичного скриншота карточки. JPG значительно меньше; PNG без потерь, но в несколько раз больше. На анимированные обложки не влияет — они следуют настройке формата анимации.';
   @override
   String get video_next_episode => 'Следующая серия';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Скачать все';
   @override
@@ -269404,6 +269497,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'คำบรรยายถัดไป';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'เปิดการจัดแนวคลื่นเสียงคำบรรยาย';
   @override
@@ -273711,6 +273807,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_control_next_cue => 'คำบรรยายถัดไป';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'ลากปุ่มลงในช่องเพื่อเพิ่ม; ปุ่มหนึ่งวางได้หลายช่อง';
   @override
@@ -274403,6 +274501,9 @@ class _StringsTh extends _StringsEn {
       'การเข้ารหัสที่ใช้เมื่อรูปการ์ดเป็นภาพหน้าจอ JPG มีขนาดเล็กกว่ามาก PNG ไม่สูญเสียคุณภาพแต่ใหญ่กว่าหลายเท่า ปกเคลื่อนไหวไม่ได้รับผลกระทบ จะตามการตั้งค่ารูปแบบแอนิเมชัน';
   @override
   String get video_next_episode => 'ตอนถัดไป';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'ดาวน์โหลดทั้งหมด';
   @override
@@ -291400,6 +291501,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Sonraki Altyazı';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Altyazı dalga formu hizalamayı aç';
   @override
@@ -295726,6 +295830,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_control_next_cue => 'Sonraki altyazı';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Eklemek için bir düğmeyi bir yuvaya sürükleyin; bir düğme birden çok yuvada bulunabilir.';
   @override
@@ -296427,6 +296533,9 @@ class _StringsTr extends _StringsEn {
       'Kart görüntüsü durağan ekran görüntüsü olduğunda kullanılan kodlama. JPG çok daha küçüktür; PNG kayıpsızdır ancak birkaç kat daha büyüktür. Animasyonlu kapaklar etkilenmez — animasyon formatı ayarını takip ederler.';
   @override
   String get video_next_episode => 'Sonraki bölüm';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Tümünü indir';
   @override
@@ -313398,6 +313507,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => 'Câu phụ đề sau';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align =>
       'Mở căn chỉnh sóng âm phụ đề';
   @override
@@ -317715,6 +317827,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_control_next_cue => 'Câu phụ đề sau';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint =>
       'Kéo một nút vào ô để thêm; một nút có thể nằm ở nhiều ô.';
   @override
@@ -318415,6 +318529,9 @@ class _StringsVi extends _StringsEn {
       'Mã hóa được sử dụng khi ảnh thẻ là ảnh chụp tĩnh. JPG nhỏ hơn nhiều; PNG không mất dữ liệu nhưng lớn gấp nhiều lần. Bìa hoạt hình không bị ảnh hưởng — chúng theo cài đặt định dạng hoạt hình.';
   @override
   String get video_next_episode => 'Tập sau';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => 'Tải tất cả';
   @override
@@ -334144,6 +334261,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => '下一句字幕';
   @override
+  String get shortcut_action_video_ocr_frame => '识别当前画面文字（OCR）';
+  @override
   String get shortcut_action_video_open_subtitle_align => '打开字幕波形对轴';
   @override
   String get shortcut_action_video_pause => '暂停';
@@ -338118,6 +338237,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_control_next_cue => '下一句字幕';
   @override
+  String get video_control_ocr_frame => '识别画面文字';
+  @override
   String get video_control_palette_hint => '把按钮拖入某个位置即可添加；一个按钮可放在多个位置。';
   @override
   String get video_control_palette_title => '全部按钮';
@@ -338749,6 +338870,8 @@ class _StringsZhCn extends _StringsEn {
       '选「制卡时截图」或「字幕开头截图」时那张图用什么编码。JPG 体积小得多；PNG 无损但大好几倍。动图封面不受影响，它跟随「动图格式」那一项。';
   @override
   String get video_next_episode => '下一集';
+  @override
+  String get video_ocr_frame_web_unsupported => '网页站点视频不支持识别画面文字';
   @override
   String get video_online_download_all => '下载全部';
   @override
@@ -354475,6 +354598,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_next_subtitle => '下一句字幕';
   @override
+  String get shortcut_action_video_ocr_frame =>
+      'Recognize on-screen text (OCR)';
+  @override
   String get shortcut_action_video_open_subtitle_align => '打開字幕波形對軸';
   @override
   String get shortcut_action_video_pause => '暫停';
@@ -358625,6 +358751,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_control_next_cue => '下一句字幕';
   @override
+  String get video_control_ocr_frame => 'Recognize on-screen text';
+  @override
   String get video_control_palette_hint => '把按鈕拖入某個位置即可加入；同一按鈕可放在多個位置。';
   @override
   String get video_control_palette_title => '全部按鈕';
@@ -359264,6 +359392,9 @@ class _StringsZhHk extends _StringsEn {
       '選「製卡時截圖」或「字幕開頭截圖」時那張圖用什麼編碼。JPG 體積小得多；PNG 無損但大好幾倍。動圖封面不受影響，它跟隨「動圖格式」那一項。';
   @override
   String get video_next_episode => '下一集';
+  @override
+  String get video_ocr_frame_web_unsupported =>
+      'On-screen text recognition isn\'t available for site videos';
   @override
   String get video_online_download_all => '全部下載';
   @override
@@ -373847,6 +373978,8 @@ extension on _StringsEn {
         return 'Next frame';
       case 'shortcut_action_video_next_subtitle':
         return 'Next subtitle';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Open subtitle waveform align';
       case 'shortcut_action_video_pause':
@@ -377613,6 +377746,8 @@ extension on _StringsEn {
         return 'Fullscreen';
       case 'video_control_next_cue':
         return 'Next subtitle';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Drag a button into a slot to add it; a button can sit in several slots.';
       case 'video_control_palette_title':
@@ -378204,6 +378339,8 @@ extension on _StringsEn {
         return 'Encoding used when the card image is a still screenshot. JPG is much smaller; PNG is lossless but several times larger. Animated covers are unaffected — they follow the animation format setting.';
       case 'video_next_episode':
         return 'Next episode';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Download all';
       case 'video_online_download_episode':
@@ -392553,6 +392690,8 @@ extension on _StringsAr {
         return 'الإطار التالي';
       case 'shortcut_action_video_next_subtitle':
         return 'الترجمة التالية';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'فتح محاذاة موجة الترجمة';
       case 'shortcut_action_video_pause':
@@ -396316,6 +396455,8 @@ extension on _StringsAr {
         return 'ملء الشاشة';
       case 'video_control_next_cue':
         return 'الترجمة التالية';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'اسحب زرًا إلى موضع لإضافته؛ يمكن أن يكون الزر في عدة مواضع.';
       case 'video_control_palette_title':
@@ -396907,6 +397048,8 @@ extension on _StringsAr {
         return 'الترميز المستخدم عندما تكون صورة البطاقة لقطة ثابتة. JPG أصغر بكثير؛ PNG بدون فقدان لكنها أكبر بعدة مرات. الأغلفة المتحركة لا تتأثر — تتبع إعداد صيغة الحركة.';
       case 'video_next_episode':
         return 'الحلقة التالية';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'تنزيل الكل';
       case 'video_online_download_episode':
@@ -411315,6 +411458,8 @@ extension on _StringsDe {
         return 'Nächstes Bild';
       case 'shortcut_action_video_next_subtitle':
         return 'Nächster Untertitel';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Untertitel-Wellenform-Ausrichtung öffnen';
       case 'shortcut_action_video_pause':
@@ -415090,6 +415235,8 @@ extension on _StringsDe {
         return 'Vollbild';
       case 'video_control_next_cue':
         return 'Nächster Untertitel';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Ziehe eine Taste in einen Platz, um sie hinzuzufügen; eine Taste kann an mehreren Plätzen sitzen.';
       case 'video_control_palette_title':
@@ -415684,6 +415831,8 @@ extension on _StringsDe {
         return 'Kodierung, wenn das Kartenbild ein Standbild ist. JPG ist viel kleiner; PNG ist verlustfrei, aber um ein Vielfaches größer. Animierte Cover sind nicht betroffen – sie folgen der Animations-Formateinstellung.';
       case 'video_next_episode':
         return 'Nächste Folge';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Alle herunterladen';
       case 'video_online_download_episode':
@@ -430081,6 +430230,8 @@ extension on _StringsEs {
         return 'Fotograma siguiente';
       case 'shortcut_action_video_next_subtitle':
         return 'Subtítulo siguiente';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Abrir alineación de subtítulos con onda';
       case 'shortcut_action_video_pause':
@@ -433855,6 +434006,8 @@ extension on _StringsEs {
         return 'Pantalla completa';
       case 'video_control_next_cue':
         return 'Subtítulo siguiente';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Arrastra un botón a una posición para añadirlo; un botón puede estar en varias posiciones.';
       case 'video_control_palette_title':
@@ -434447,6 +434600,8 @@ extension on _StringsEs {
         return 'Codificación usada cuando la imagen de la tarjeta es una captura estática. JPG es mucho más pequeño; PNG es sin pérdida pero varias veces más grande. Las portadas animadas no se afectan — siguen la configuración de formato de animación.';
       case 'video_next_episode':
         return 'Episodio siguiente';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Descargar todo';
       case 'video_online_download_episode':
@@ -448858,6 +449013,8 @@ extension on _StringsFr {
         return 'Image suivante';
       case 'shortcut_action_video_next_subtitle':
         return 'Sous-titre suivant';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Ouvrir l\'alignement de forme d\'onde des sous-titres';
       case 'shortcut_action_video_pause':
@@ -452633,6 +452790,8 @@ extension on _StringsFr {
         return 'Plein écran';
       case 'video_control_next_cue':
         return 'Sous-titre suivant';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Glissez un bouton dans un emplacement pour l\'ajouter ; un bouton peut occuper plusieurs emplacements.';
       case 'video_control_palette_title':
@@ -453226,6 +453385,8 @@ extension on _StringsFr {
         return 'Encodage utilisé quand l\'image de carte est une capture d\'écran fixe. JPG est bien plus petit ; PNG est sans perte mais plusieurs fois plus gros. Les couvertures animées ne sont pas affectées — elles suivent le réglage du format d\'animation.';
       case 'video_next_episode':
         return 'Épisode suivant';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Tout télécharger';
       case 'video_online_download_episode':
@@ -467595,6 +467756,8 @@ extension on _StringsId {
         return 'Frame Berikutnya';
       case 'shortcut_action_video_next_subtitle':
         return 'Subtitle Berikutnya';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Buka penyelarasan waveform subtitle';
       case 'shortcut_action_video_pause':
@@ -471362,6 +471525,8 @@ extension on _StringsId {
         return 'Layar penuh';
       case 'video_control_next_cue':
         return 'Subtitle berikutnya';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Seret tombol ke sebuah slot untuk menambahkannya; satu tombol bisa berada di beberapa slot.';
       case 'video_control_palette_title':
@@ -471953,6 +472118,8 @@ extension on _StringsId {
         return 'Encoding yang digunakan saat gambar kartu adalah tangkapan layar diam. JPG jauh lebih kecil; PNG tanpa kehilangan tetapi beberapa kali lebih besar. Sampul animasi tidak terpengaruh — mengikuti pengaturan format animasi.';
       case 'video_next_episode':
         return 'Episode berikutnya';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Unduh semua';
       case 'video_online_download_episode':
@@ -486341,6 +486508,8 @@ extension on _StringsIt {
         return 'Fotogramma successivo';
       case 'shortcut_action_video_next_subtitle':
         return 'Sottotitolo successivo';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Apri allineamento forma d\'onda sottotitoli';
       case 'shortcut_action_video_pause':
@@ -490119,6 +490288,8 @@ extension on _StringsIt {
         return 'Schermo intero';
       case 'video_control_next_cue':
         return 'Sottotitolo successivo';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Trascina un pulsante in uno slot per aggiungerlo; un pulsante può occupare più slot.';
       case 'video_control_palette_title':
@@ -490711,6 +490882,8 @@ extension on _StringsIt {
         return 'Codifica usata quando l\'immagine della carta è uno screenshot fisso. JPG è molto più piccolo; PNG è senza perdita ma diverse volte più grande. Le copertine animate non sono influenzate — seguono l\'impostazione del formato animazione.';
       case 'video_next_episode':
         return 'Episodio successivo';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Scarica tutto';
       case 'video_online_download_episode':
@@ -505021,6 +505194,8 @@ extension on _StringsJa {
         return '次のフレーム';
       case 'shortcut_action_video_next_subtitle':
         return '次の字幕';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return '字幕波形アラインメントを開く';
       case 'shortcut_action_video_pause':
@@ -508770,6 +508945,8 @@ extension on _StringsJa {
         return '全画面';
       case 'video_control_next_cue':
         return '次の字幕';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'ボタンをスロットにドラッグすると追加できます。同じボタンを複数のスロットに置くこともできます。';
       case 'video_control_palette_title':
@@ -509355,6 +509532,8 @@ extension on _StringsJa {
         return 'カード画像が静止スクリーンショットの場合のエンコード形式。JPGはかなり小さく、PNGはロスレスですが数倍大きくなります。アニメーションカバーは影響を受けません。アニメーション形式の設定に従います。';
       case 'video_next_episode':
         return '次のエピソード';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'すべてダウンロード';
       case 'video_online_download_episode':
@@ -523650,6 +523829,8 @@ extension on _StringsKo {
         return '다음 프레임';
       case 'shortcut_action_video_next_subtitle':
         return '다음 자막';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return '자막 파형 정렬 열기';
       case 'shortcut_action_video_pause':
@@ -527401,6 +527582,8 @@ extension on _StringsKo {
         return '전체 화면';
       case 'video_control_next_cue':
         return '다음 자막';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return '버튼을 슬롯으로 드래그하면 추가됩니다. 한 버튼을 여러 슬롯에 둘 수 있습니다.';
       case 'video_control_palette_title':
@@ -527989,6 +528172,8 @@ extension on _StringsKo {
         return '카드 이미지가 정지 스크린샷일 때 사용되는 인코딩. JPG가 훨씬 작고, PNG는 무손실이지만 몇 배 더 큽니다. 애니메이션 표지는 영향 없음 — 애니메이션 형식 설정을 따릅니다.';
       case 'video_next_episode':
         return '다음 에피소드';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return '모두 다운로드';
       case 'video_online_download_episode':
@@ -542369,6 +542554,8 @@ extension on _StringsNl {
         return 'Volgende frame';
       case 'shortcut_action_video_next_subtitle':
         return 'Volgende ondertitel';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Ondertitel golfvormuitlijning openen';
       case 'shortcut_action_video_pause':
@@ -546138,6 +546325,8 @@ extension on _StringsNl {
         return 'Volledig scherm';
       case 'video_control_next_cue':
         return 'Volgende ondertitel';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Sleep een knop naar een plek om hem toe te voegen; een knop kan op meerdere plekken staan.';
       case 'video_control_palette_title':
@@ -546730,6 +546919,8 @@ extension on _StringsNl {
         return 'Codering wanneer de kaartafbeelding een stilstaande schermafbeelding is. JPG is veel kleiner; PNG is verliesvrij maar meerdere malen groter. Geanimeerde omslagen worden niet beïnvloed — zij volgen de animatieformaatinstelling.';
       case 'video_next_episode':
         return 'Volgende aflevering';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Alles downloaden';
       case 'video_online_download_episode':
@@ -561119,6 +561310,8 @@ extension on _StringsPtBr {
         return 'Próximo quadro';
       case 'shortcut_action_video_next_subtitle':
         return 'Próxima legenda';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Abrir alinhamento de forma de onda de legendas';
       case 'shortcut_action_video_pause':
@@ -564886,6 +565079,8 @@ extension on _StringsPtBr {
         return 'Tela cheia';
       case 'video_control_next_cue':
         return 'Próxima legenda';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Arraste um botão até um espaço para adicioná-lo; um botão pode ficar em vários espaços.';
       case 'video_control_palette_title':
@@ -565479,6 +565674,8 @@ extension on _StringsPtBr {
         return 'Codificação usada quando a imagem do cartão é uma captura de tela estática. JPG é muito menor; PNG é sem perda mas várias vezes maior. Capas animadas não são afetadas — seguem a configuração de formato de animação.';
       case 'video_next_episode':
         return 'Próximo episódio';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Baixar tudo';
       case 'video_online_download_episode':
@@ -579873,6 +580070,8 @@ extension on _StringsRu {
         return 'Следующий кадр';
       case 'shortcut_action_video_next_subtitle':
         return 'Следующий субтитр';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Открыть выравнивание субтитров по волне';
       case 'shortcut_action_video_pause':
@@ -583642,6 +583841,8 @@ extension on _StringsRu {
         return 'Полный экран';
       case 'video_control_next_cue':
         return 'Следующий субтитр';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Перетащите кнопку в ячейку, чтобы добавить; кнопку можно поместить в несколько ячеек.';
       case 'video_control_palette_title':
@@ -584233,6 +584434,8 @@ extension on _StringsRu {
         return 'Формат кодирования для статичного скриншота карточки. JPG значительно меньше; PNG без потерь, но в несколько раз больше. На анимированные обложки не влияет — они следуют настройке формата анимации.';
       case 'video_next_episode':
         return 'Следующая серия';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Скачать все';
       case 'video_online_download_episode':
@@ -598587,6 +598790,8 @@ extension on _StringsTh {
         return 'เฟรมถัดไป';
       case 'shortcut_action_video_next_subtitle':
         return 'คำบรรยายถัดไป';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'เปิดการจัดแนวคลื่นเสียงคำบรรยาย';
       case 'shortcut_action_video_pause':
@@ -602353,6 +602558,8 @@ extension on _StringsTh {
         return 'เต็มจอ';
       case 'video_control_next_cue':
         return 'คำบรรยายถัดไป';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'ลากปุ่มลงในช่องเพื่อเพิ่ม; ปุ่มหนึ่งวางได้หลายช่อง';
       case 'video_control_palette_title':
@@ -602943,6 +603150,8 @@ extension on _StringsTh {
         return 'การเข้ารหัสที่ใช้เมื่อรูปการ์ดเป็นภาพหน้าจอ JPG มีขนาดเล็กกว่ามาก PNG ไม่สูญเสียคุณภาพแต่ใหญ่กว่าหลายเท่า ปกเคลื่อนไหวไม่ได้รับผลกระทบ จะตามการตั้งค่ารูปแบบแอนิเมชัน';
       case 'video_next_episode':
         return 'ตอนถัดไป';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'ดาวน์โหลดทั้งหมด';
       case 'video_online_download_episode':
@@ -617319,6 +617528,8 @@ extension on _StringsTr {
         return 'Sonraki Kare';
       case 'shortcut_action_video_next_subtitle':
         return 'Sonraki Altyazı';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Altyazı dalga formu hizalamayı aç';
       case 'shortcut_action_video_pause':
@@ -621088,6 +621299,8 @@ extension on _StringsTr {
         return 'Tam ekran';
       case 'video_control_next_cue':
         return 'Sonraki altyazı';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Eklemek için bir düğmeyi bir yuvaya sürükleyin; bir düğme birden çok yuvada bulunabilir.';
       case 'video_control_palette_title':
@@ -621679,6 +621892,8 @@ extension on _StringsTr {
         return 'Kart görüntüsü durağan ekran görüntüsü olduğunda kullanılan kodlama. JPG çok daha küçüktür; PNG kayıpsızdır ancak birkaç kat daha büyüktür. Animasyonlu kapaklar etkilenmez — animasyon formatı ayarını takip ederler.';
       case 'video_next_episode':
         return 'Sonraki bölüm';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Tümünü indir';
       case 'video_online_download_episode':
@@ -636046,6 +636261,8 @@ extension on _StringsVi {
         return 'Khung hình sau';
       case 'shortcut_action_video_next_subtitle':
         return 'Câu phụ đề sau';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return 'Mở căn chỉnh sóng âm phụ đề';
       case 'shortcut_action_video_pause':
@@ -639814,6 +640031,8 @@ extension on _StringsVi {
         return 'Toàn màn hình';
       case 'video_control_next_cue':
         return 'Câu phụ đề sau';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return 'Kéo một nút vào ô để thêm; một nút có thể nằm ở nhiều ô.';
       case 'video_control_palette_title':
@@ -640404,6 +640623,8 @@ extension on _StringsVi {
         return 'Mã hóa được sử dụng khi ảnh thẻ là ảnh chụp tĩnh. JPG nhỏ hơn nhiều; PNG không mất dữ liệu nhưng lớn gấp nhiều lần. Bìa hoạt hình không bị ảnh hưởng — chúng theo cài đặt định dạng hoạt hình.';
       case 'video_next_episode':
         return 'Tập sau';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return 'Tải tất cả';
       case 'video_online_download_episode':
@@ -654629,6 +654850,8 @@ extension on _StringsZhCn {
         return '下一帧';
       case 'shortcut_action_video_next_subtitle':
         return '下一句字幕';
+      case 'shortcut_action_video_ocr_frame':
+        return '识别当前画面文字（OCR）';
       case 'shortcut_action_video_open_subtitle_align':
         return '打开字幕波形对轴';
       case 'shortcut_action_video_pause':
@@ -658341,6 +658564,8 @@ extension on _StringsZhCn {
         return '全屏';
       case 'video_control_next_cue':
         return '下一句字幕';
+      case 'video_control_ocr_frame':
+        return '识别画面文字';
       case 'video_control_palette_hint':
         return '把按钮拖入某个位置即可添加；一个按钮可放在多个位置。';
       case 'video_control_palette_title':
@@ -658926,6 +659151,8 @@ extension on _StringsZhCn {
         return '选「制卡时截图」或「字幕开头截图」时那张图用什么编码。JPG 体积小得多；PNG 无损但大好几倍。动图封面不受影响，它跟随「动图格式」那一项。';
       case 'video_next_episode':
         return '下一集';
+      case 'video_ocr_frame_web_unsupported':
+        return '网页站点视频不支持识别画面文字';
       case 'video_online_download_all':
         return '下载全部';
       case 'video_online_download_episode':
@@ -673155,6 +673382,8 @@ extension on _StringsZhHk {
         return '下一幀';
       case 'shortcut_action_video_next_subtitle':
         return '下一句字幕';
+      case 'shortcut_action_video_ocr_frame':
+        return 'Recognize on-screen text (OCR)';
       case 'shortcut_action_video_open_subtitle_align':
         return '打開字幕波形對軸';
       case 'shortcut_action_video_pause':
@@ -676896,6 +677125,8 @@ extension on _StringsZhHk {
         return '全螢幕';
       case 'video_control_next_cue':
         return '下一句字幕';
+      case 'video_control_ocr_frame':
+        return 'Recognize on-screen text';
       case 'video_control_palette_hint':
         return '把按鈕拖入某個位置即可加入；同一按鈕可放在多個位置。';
       case 'video_control_palette_title':
@@ -677481,6 +677712,8 @@ extension on _StringsZhHk {
         return '選「製卡時截圖」或「字幕開頭截圖」時那張圖用什麼編碼。JPG 體積小得多；PNG 無損但大好幾倍。動圖封面不受影響，它跟隨「動圖格式」那一項。';
       case 'video_next_episode':
         return '下一集';
+      case 'video_ocr_frame_web_unsupported':
+        return 'On-screen text recognition isn\'t available for site videos';
       case 'video_online_download_all':
         return '全部下載';
       case 'video_online_download_episode':
